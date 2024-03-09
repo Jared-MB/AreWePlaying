@@ -13,7 +13,7 @@ export default function Home() {
 					}}
 					local={match.isLocal}
 					date={match.date}
-					location={match.location.name}
+					location={match.location}
 					sport={match.sport.name}
 					gender={match.gender}
 				/>

@@ -9,7 +9,8 @@ export const MATCHES: Match[] = [
         gender: 'femenil',
         location: {
             id: '1',
-            name: 'Arena BUAP'
+            name: 'Arena BUAP',
+            url: 'https://maps.app.goo.gl/LrnLgSkbW4jKdSd39'
         },
         isLocal: true,
         sport: {
@@ -30,7 +31,8 @@ export const MATCHES: Match[] = [
         gender: 'varonil',
         location: {
             id: '1',
-            name: 'Arena BUAP'
+            name: 'Arena BUAP',
+            url: 'https://maps.app.goo.gl/LrnLgSkbW4jKdSd39'
         },
         isLocal: true,
         sport: {
@@ -51,7 +53,8 @@ export const MATCHES: Match[] = [
         gender: 'femenil',
         location: {
             id: '2',
-            name: 'UVM Centro'
+            name: 'UVM Centro',
+            url: 'https://maps.app.goo.gl/LrnLgSkbW4jKdSd39'
         },
         isLocal: false,
         sport: {
@@ -72,7 +75,8 @@ export const MATCHES: Match[] = [
         gender: 'varonil',
         location: {
             id: '2',
-            name: 'UVM Centro'
+            name: 'UVM Centro',
+            url: 'https://maps.app.goo.gl/LrnLgSkbW4jKdSd39'
         },
         isLocal: false,
         sport: {
@@ -93,7 +97,8 @@ export const MATCHES: Match[] = [
         isLocal: true,
         location: {
             id: '1',
-            name: 'Arena BUAP'
+            name: 'Arena BUAP',
+            url: 'https://maps.app.goo.gl/LrnLgSkbW4jKdSd39'
         },
         sport: {
             id: '1',

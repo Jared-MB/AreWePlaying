@@ -24,7 +24,7 @@ const SelectTrigger = React.forwardRef<
 	<SelectPrimitive.Trigger
 		ref={ref}
 		className={cn(
-			"flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+			"h-10 w-full flex flex-row items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background text-muted-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
 			className,
 		)}
 		{...props}
@@ -111,7 +111,7 @@ const SelectLabel = React.forwardRef<
 	<SelectPrimitive.Label
 		ref={ref}
 		className={cn(
-			"py-1.5 pl-8 pr-2 text-sm font-semibold text-purple-500",
+			"py-1.5 pl-8 pr-2 text-sm font-semibold text-primary",
 			className,
 		)}
 		{...props}
@@ -121,10 +121,8 @@ SelectLabel.displayName = SelectPrimitive.Label.displayName;
 
 const SelectItem = React.forwardRef<
 	React.ElementRef<typeof SelectPrimitive.Item>,
-	React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item> & {
-		icon?: React.ReactNode;
-	}
->(({ className, children, icon, ...props }, ref) => (
+	React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
+>(({ className, children, ...props }, ref) => (
 	<SelectPrimitive.Item
 		ref={ref}
 		className={cn(
@@ -135,7 +133,7 @@ const SelectItem = React.forwardRef<
 	>
 		<span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
 			<SelectPrimitive.ItemIndicator>
-				{icon ? icon : <Check className="h-4 w-4" />}
+				<Check className="h-4 w-4" />
 			</SelectPrimitive.ItemIndicator>
 		</span>
 

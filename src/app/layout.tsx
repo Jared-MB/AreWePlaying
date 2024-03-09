@@ -29,7 +29,7 @@ export default function RootLayout({
 				)}
 			>
 				<Header />
-				<div className="px-8 fixed top-[5.5rem] w-full">
+				<div className="px-8 fixed top-[5.5rem] w-full z-50">
 					<Separator />
 				</div>
 				{children}
