@@ -1,23 +1,28 @@
-import Match from "@/components/match";
-import { MATCHES } from "@/data/matches";
+import {
+	HydrationBoundary,
+	QueryClient,
+	dehydrate,
+} from "@tanstack/react-query";
 
-export default function Home() {
+import { MatchService } from "@/services/match.service";
+import Matches from "../components/matches";
+import { Suspense } from "react";
+
+export default async function Home() {
+	const queryClient = new QueryClient();
+
+	await queryClient.prefetchQuery({
+		queryKey: ["matches"],
+		queryFn: MatchService.getMatches,
+	});
+
 	return (
 		<main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-16 pb-6 relative top-28">
-			{MATCHES.map((match) => (
-				<Match
-					key={match.id}
-					away={{
-						name: match.university.name,
-						logo: match.university.image.url,
-					}}
-					local={match.isLocal}
-					date={match.date}
-					location={match.location}
-					sport={match.sport.name}
-					gender={match.gender}
-				/>
-			))}
+			<HydrationBoundary state={dehydrate(queryClient)}>
+				<Suspense>
+					<Matches />
+				</Suspense>
+			</HydrationBoundary>
 		</main>
 	);
 }

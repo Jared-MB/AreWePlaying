@@ -16,7 +16,7 @@ import { useEffect, useState } from "react";
 import { InputContainer, InputLabel } from "./ui/input-label";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
-import useSearchParams from "@/hooks/useSearchParams";
+import useSearchParams, { type KeySearchParams } from "@/hooks/useSearchParams";
 
 interface MatchFiltersState {
 	sport: string;
@@ -36,7 +36,7 @@ export default function MatchFilters({
 	const { searchParams, setSearchParams, clearSearchParams } =
 		useSearchParams();
 
-	const onChange = (value: React.Key, key: string) => {
+	const onChange = (value: React.Key, key: KeySearchParams) => {
 		setValues((prev) => ({ ...prev, [key]: value }));
 		setSearchParams(value.toString(), key);
 	};
@@ -112,6 +112,7 @@ export default function MatchFilters({
 					<SelectContent>
 						<SelectGroup>
 							<SelectLabel>Sports</SelectLabel>
+							<SelectItem value="all">Todos</SelectItem>
 							<SelectItem value="basketball">Basketball</SelectItem>
 							<SelectItem value="football">Football</SelectItem>
 							<SelectItem value="soccer">Soccer</SelectItem>

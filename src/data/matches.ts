@@ -15,7 +15,7 @@ export const MATCHES: Match[] = [
         isLocal: true,
         sport: {
             id: '1',
-            name: 'Basketball'
+            name: 'Football'
         },
         university: {
             id: '1',

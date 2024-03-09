@@ -6,6 +6,8 @@ import "./globals.css";
 import { Separator } from "@/components/ui/separator";
 import { Suspense } from "react";
 
+import QueryProvider from "./provider";
+
 export const fontSans = Quicksand({
 	subsets: ["latin"],
 	variable: "--font-sans",
@@ -23,20 +25,22 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={cn(
-					"min-h-screen bg-background font-sans relative antialiased flex flex-col gap-6  ",
-					fontSans.variable,
-				)}
-			>
-				<Suspense>
-					<Header />
-				</Suspense>
-				<div className="px-8 fixed top-[5.5rem] w-full z-50">
-					<Separator />
-				</div>
-				{children}
-			</body>
+			<QueryProvider>
+				<body
+					className={cn(
+						"min-h-screen bg-background font-sans relative antialiased flex flex-col gap-6  ",
+						fontSans.variable,
+					)}
+				>
+					<Suspense>
+						<Header />
+					</Suspense>
+					<div className="px-8 fixed top-[5.5rem] w-full z-50">
+						<Separator />
+					</div>
+					{children}
+				</body>
+			</QueryProvider>
 		</html>
 	);
 }

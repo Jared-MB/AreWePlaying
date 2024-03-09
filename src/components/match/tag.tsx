@@ -1,6 +1,6 @@
 "use client";
 
-import useSearchParams from "@/hooks/useSearchParams";
+import useSearchParams, { type KeySearchParams } from "@/hooks/useSearchParams";
 import { BadgeButton } from "../ui/badge";
 
 export default function Tag({
@@ -11,7 +11,7 @@ export default function Tag({
 }: {
 	children: React.ReactNode;
 	value: string;
-	query: string;
+	query: KeySearchParams;
 	title?: string;
 }) {
 	const { setSearchParams } = useSearchParams();
