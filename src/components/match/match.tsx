@@ -10,6 +10,7 @@ import { MapPin } from "lucide-react";
 
 import Link from "next/link";
 import Tag from "./tag";
+import { Suspense } from "react";
 
 interface MatchProps {
 	away: {
@@ -45,22 +46,24 @@ export default function Match({
 						<AvatarFallback>{away.name}</AvatarFallback>
 					</Avatar>
 				</div>
-				<div className="flex items-center gap-x-2">
-					<Tag
-						value={sport.toLowerCase()}
-						query="sport"
-						title="Filtrar por deporte"
-					>
-						{sport}
-					</Tag>
-					<Tag
-						value={gender.toLowerCase()}
-						query="category"
-						title="Filtrar por genero"
-					>
-						{gender}
-					</Tag>
-				</div>
+				<Suspense>
+					<div className="flex items-center gap-x-2">
+						<Tag
+							value={sport.toLowerCase()}
+							query="sport"
+							title="Filtrar por deporte"
+						>
+							{sport}
+						</Tag>
+						<Tag
+							value={gender.toLowerCase()}
+							query="category"
+							title="Filtrar por genero"
+						>
+							{gender}
+						</Tag>
+					</div>
+				</Suspense>
 			</CardHeader>
 			{/* <Separator /> */}
 			<CardContent className="flex flex-col items-center md:items-start gap-y-2 text-sm text-muted-foreground">

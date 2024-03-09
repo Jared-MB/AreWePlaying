@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
 import { Separator } from "@/components/ui/separator";
+import { Suspense } from "react";
 
 export const fontSans = Quicksand({
 	subsets: ["latin"],
@@ -28,7 +29,9 @@ export default function RootLayout({
 					fontSans.variable,
 				)}
 			>
-				<Header />
+				<Suspense>
+					<Header />
+				</Suspense>
 				<div className="px-8 fixed top-[5.5rem] w-full z-50">
 					<Separator />
 				</div>
