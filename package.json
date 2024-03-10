@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "biome:check": "biome format ./src",
+    "biome:apply": "biome format --write ./src"
   },
   "dependencies": {
     "@formkit/tempo": "0.0.15",
