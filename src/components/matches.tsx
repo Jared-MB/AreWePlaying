@@ -29,7 +29,7 @@ export default function Matches() {
 
 	if (!data) return <div>Loading...</div>;
 
-	if (matches.length === 0)
+	if (initialMatches.length === 0)
 		return (
 			<>
 				{data.map((match) => (
