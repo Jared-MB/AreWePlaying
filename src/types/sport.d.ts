@@ -1,3 +1,3 @@
 import type { Generic } from "./generic";
 
-export interface Sport extends Generic { }
+export interface Sport extends Generic {}

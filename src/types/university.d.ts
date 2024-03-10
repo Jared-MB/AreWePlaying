@@ -1,6 +1,6 @@
-import type { Generic } from "./generic"
-import type { Image } from "./image"
+import type { Generic } from "./generic";
+import type { Image } from "./image";
 
 export interface University extends Generic {
-    image: Image
+	image: Image;
 }

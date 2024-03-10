@@ -1,1 +1,1 @@
-export { default } from './match'
+export { default } from "./match";
