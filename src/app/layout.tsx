@@ -8,6 +8,10 @@ import { Suspense } from "react";
 
 import QueryProvider from "./provider";
 
+import { Github } from "lucide-react";
+import { Button, buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
+
 export const fontSans = Quicksand({
 	subsets: ["latin"],
 	variable: "--font-sans",
@@ -42,7 +46,7 @@ export default function RootLayout({
 			<QueryProvider>
 				<body
 					className={cn(
-						"min-h-screen bg-background font-sans relative antialiased flex flex-col gap-6  ",
+						"bg-background font-sans relative antialiased flex flex-col ",
 						fontSans.variable,
 					)}
 				>
@@ -53,6 +57,25 @@ export default function RootLayout({
 						<Separator />
 					</div>
 					{children}
+					<footer className="relative top-[5.5rem] h-10 mt-6">
+						<Separator />
+						<div className="flex justify-end items-center w-full p-4">
+							<Link
+								href="https://github.com/Jared-MB/AreWePlaying"
+								target="_blank"
+								rel="noopener noreferrer"
+								className={cn(
+									buttonVariants({
+										size: "icon",
+										variant: "ghost",
+									}),
+									"hover:scale-110 transition",
+								)}
+							>
+								<Github className="w-6 h-6" />
+							</Link>
+						</div>
+					</footer>
 				</body>
 			</QueryProvider>
 		</html>
