@@ -27,7 +27,7 @@ export const MATCHES: Match[] = [
         }
     }, {
         id: '2',
-        date: parse('01:00 PM - Marzo 19, 2024', FORMAT_DATE, LOCALE),
+        date: parse('01:00 PM - Marzo 20, 2024', FORMAT_DATE, LOCALE),
         gender: 'varonil',
         location: {
             id: '1',
@@ -49,7 +49,7 @@ export const MATCHES: Match[] = [
         }
     }, {
         id: '3',
-        date: parse('01:00 PM - Marzo 19, 2024', FORMAT_DATE, LOCALE),
+        date: parse('01:00 PM - Marzo 21, 2024', FORMAT_DATE, LOCALE),
         gender: 'femenil',
         location: {
             id: '2',
@@ -71,7 +71,7 @@ export const MATCHES: Match[] = [
         },
     }, {
         id: '4',
-        date: parse('01:00 PM - Marzo 19, 2024', FORMAT_DATE, LOCALE),
+        date: parse('01:00 PM - Marzo 23, 2024', FORMAT_DATE, LOCALE),
         gender: 'varonil',
         location: {
             id: '2',
@@ -93,7 +93,7 @@ export const MATCHES: Match[] = [
         }
     }, {
         id: '5',
-        date: parse('01:00 PM - Marzo 19, 2024', FORMAT_DATE, LOCALE),
+        date: parse('01:00 PM - Marzo 26, 2024', FORMAT_DATE, LOCALE),
         isLocal: true,
         location: {
             id: '1',
@@ -113,5 +113,27 @@ export const MATCHES: Match[] = [
             name: 'UNAM'
         },
         gender: 'femenil'
+    }, {
+        id: '6',
+        date: parse('01:00 PM - Marzo 27, 2024', FORMAT_DATE, LOCALE),
+        isLocal: true,
+        location: {
+            id: '3',
+            name: 'UVM Lomas Verdes',
+            url: 'https://maps.app.goo.gl/LrnLgSkbW4jKdSd39'
+        },
+        sport: {
+            id: '1',
+            name: 'Basketball'
+        },
+        university: {
+            id: '5',
+            image: {
+                id: '6',
+                url: '/next.svg'
+            },
+            name: 'UVM Lomas Verdes'
+        },
+        gender: 'varonil'
     }
 ]
