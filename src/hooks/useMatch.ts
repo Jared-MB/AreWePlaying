@@ -2,6 +2,8 @@ import { useMatchStore } from "@/store/matches.store";
 import { useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 
+import { isBefore, isAfter, sameDay } from "@formkit/tempo";
+
 export default function useMatch() {
 
     const initialMatches = useMatchStore((state) => state.initialMatches);
@@ -18,8 +20,12 @@ export default function useMatch() {
             if (key === 'sport') {
                 matches = matches.filter(match => match.sport.name.toLowerCase() === value.toLowerCase() || value === 'all')
             }
-            if (key === 'category') {
+            else if (key === 'category') {
                 matches = matches.filter(match => match.gender.toLowerCase() === value.toLowerCase() || value === 'all')
+            }
+            else if (key === 'dateRange') {
+                const dateRange = JSON.parse(value);
+                matches = matches.filter(match => (isAfter(match.date, dateRange.from) && isBefore(match.date, dateRange.to)) || sameDay(match.date, dateRange.from) || sameDay(match.date, dateRange.to))
             }
         })
 

@@ -18,6 +18,7 @@ export default function useSearchParams() {
     ) => {
         const params = new URLSearchParams(searchParams.toString());
         value && params.set(key, value.toString());
+        value === undefined && params.delete(key);
         window.history.pushState({}, "", `?${params.toString()}`);
     };
 
