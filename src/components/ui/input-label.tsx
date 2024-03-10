@@ -10,7 +10,10 @@ export function InputLabel({
 }: ChildrenProps & { className?: string }) {
 	return (
 		<label
-			className={cn("text-sm md:text-xs text-primary font-medium", className)}
+			className={cn(
+				"text-sm md:text-xs text-purple-700 font-medium",
+				className,
+			)}
 		>
 			{children}
 		</label>

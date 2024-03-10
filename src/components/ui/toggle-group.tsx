@@ -48,7 +48,7 @@ const ToggleGroupItem = React.forwardRef<
 					size: context.size || size,
 				}),
 				className,
-				"bg-accent data-[state=on]:bg-purple-500 data-[state=on]:text-white transition duration-150",
+				"bg-accent data-[state=on]:bg-primary data-[state=on]:text-white transition duration-150",
 			)}
 			{...props}
 		>
