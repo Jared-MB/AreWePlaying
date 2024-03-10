@@ -1,6 +1,6 @@
 import { FORMAT_DATE, LOCALE } from "@/constants/date";
 import type { Match } from "@/types";
-import { format, parse } from "@formkit/tempo";
+import { parse } from "@formkit/tempo";
 
 export const MATCHES: Match[] = [
     {
@@ -135,5 +135,71 @@ export const MATCHES: Match[] = [
             name: 'UVM Lomas Verdes'
         },
         gender: 'varonil'
+    }, {
+        id: '7',
+        date: parse('01:00 PM - Marzo 28, 2024', FORMAT_DATE, LOCALE),
+        isLocal: true,
+        location: {
+            id: '3',
+            name: 'UVM Lomas Verdes',
+            url: 'https://maps.app.goo.gl/LrnLgSkbW4jKdSd39'
+        },
+        sport: {
+            id: '1',
+            name: 'Basketball'
+        },
+        university: {
+            id: '5',
+            image: {
+                id: '7',
+                url: '/next.svg'
+            },
+            name: 'UVM Lomas Verdes'
+        },
+        gender: 'femenil'
+    }, {
+        id: '8',
+        date: parse('01:00 PM - Marzo 29, 2024', FORMAT_DATE, LOCALE),
+        isLocal: true,
+        location: {
+            id: '3',
+            name: 'UVM Lomas Verdes',
+            url: 'https://maps.app.goo.gl/LrnLgSkbW4jKdSd39'
+        },
+        sport: {
+            id: '1',
+            name: 'Basketball'
+        },
+        university: {
+            id: '5',
+            image: {
+                id: '8',
+                url: '/next.svg'
+            },
+            name: 'UVM Lomas Verdes'
+        },
+        gender: 'varonil'
+    }, {
+        id: '9',
+        date: parse('01:00 PM - Marzo 30, 2024', FORMAT_DATE, LOCALE),
+        isLocal: true,
+        location: {
+            id: '3',
+            name: 'UVM Lomas Verdes',
+            url: 'https://maps.app.goo.gl/LrnLgSkbW4jKdSd39'
+        },
+        sport: {
+            id: '1',
+            name: 'Basketball'
+        },
+        university: {
+            id: '5',
+            image: {
+                id: '9',
+                url: '/next.svg'
+            },
+            name: 'UVM Lomas Verdes'
+        },
+        gender: 'femenil'
     }
 ]
