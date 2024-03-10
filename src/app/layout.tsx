@@ -1,6 +1,6 @@
 import Header from "@/components/header";
 import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
 import { Separator } from "@/components/ui/separator";
@@ -13,9 +13,23 @@ export const fontSans = Quicksand({
 	variable: "--font-sans",
 });
 
+export const viewport: Viewport = {
+	width: "device-width",
+};
+
 export const metadata: Metadata = {
 	title: "AreWePlaying?",
-	description: "Calendario de partidos deportivos de la BUAP.",
+	description: "Calendario de partidos y eventos deportivos de la BUAP.",
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+		},
+	},
+	keywords: "BUAP, partidos, deportes, calendario",
+	category: "Sports",
 };
 
 export default function RootLayout({
