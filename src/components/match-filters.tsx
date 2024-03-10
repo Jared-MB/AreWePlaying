@@ -36,14 +36,16 @@ export default function MatchFilters({
 	const { searchParams, setSearchParams, clearSearchParams } =
 		useSearchParams();
 
-	const onChange = (value: React.Key, key: KeySearchParams) => {
+	const onChange = (
+		value: React.Key | DateRange | undefined,
+		key: KeySearchParams,
+	) => {
 		setValues((prev) => ({ ...prev, [key]: value }));
-		setSearchParams(value.toString(), key);
-	};
-
-	const onDayChange = (value: DateRange | undefined) => {
-		setValues((prev) => ({ ...prev, dateRange: value }));
-		setSearchParams(JSON.stringify(value), "dateRange");
+		let formattedValue = value;
+		if (typeof value === "object") {
+			formattedValue = JSON.stringify(value);
+		}
+		setSearchParams(formattedValue, key);
 	};
 
 	const clearFilters = () => {
@@ -62,8 +64,8 @@ export default function MatchFilters({
 
 		setValues((prev) => ({
 			...prev,
-			sport: sport || "",
-			category: category || "",
+			sport: sport ?? "",
+			category: category ?? "",
 			dateRange: dateRange ? JSON.parse(dateRange) : undefined,
 		}));
 	}, [searchParams]);
@@ -72,27 +74,13 @@ export default function MatchFilters({
 		<div className="flex flex-col md:flex-row items-end justify-between md:justify-start gap-x-8 gap-y-5 md:gap-y-0 py-6 w-full ">
 			<h4
 				className={cn(
-					"w-full text-start text-2xl font-medium text-purple-500",
+					"w-full text-start text-2xl font-medium text-primary",
 					isDesktop && "hidden",
 				)}
 			>
 				Filtrar
 			</h4>
 			<Separator className={cn(isDesktop && "hidden")} />
-			{/* 
-				// * THIS MAY NOT BE NEEDED FOR THE DATE RANGE PICKER
-			*/}
-			{/* <nav className={cn("w-full md:w-fit", isDesktop && "hidden md:flex")}>
-				<ToggleGroup
-					type="single"
-					onValueChange={(value) => onChange(value, "definedDate")}
-					className="gap-x-2 justify-between md:justify-center"
-				>
-					<ToggleGroupItem value="day">DIA</ToggleGroupItem>
-					<ToggleGroupItem value="week">SEMANA</ToggleGroupItem>
-					<ToggleGroupItem value="month">MES</ToggleGroupItem>
-				</ToggleGroup>
-			</nav> */}
 			<InputContainer>
 				<InputLabel className={cn(isDesktop && "hidden md:inline-block")}>
 					Deporte
@@ -102,6 +90,7 @@ export default function MatchFilters({
 					onValueChange={(value) => onChange(value, "sport")}
 				>
 					<SelectTrigger
+						aria-label="Click para desplegar las opciones y seleccionar un deporte"
 						className={cn(
 							"w-full md:w-[220px]",
 							isDesktop && "hidden md:flex ",
@@ -130,6 +119,7 @@ export default function MatchFilters({
 					onValueChange={(value) => onChange(value, "category")}
 				>
 					<SelectTrigger
+						aria-label="Click para desplegar las opciones y seleccionar una categoría"
 						className={cn(
 							"w-full md:w-[220px]",
 							isDesktop && "hidden md:flex ",
@@ -152,7 +142,7 @@ export default function MatchFilters({
 					Fecha
 				</InputLabel>
 				<DatePickerWithRange
-					onValueChange={onDayChange}
+					onValueChange={(value) => onChange(value, "dateRange")}
 					date={values.dateRange}
 					className={cn(isDesktop && "hidden md:flex ")}
 				/>
