@@ -37,12 +37,20 @@ export default function Match({
 			<CardHeader className="flex flex-col gap-y-6 md:gap-y-0 md:flex-row justify-between items-center md:items-start">
 				<div className="flex flex-row items-center gap-x-4">
 					<Avatar className="w-16 h-16">
-						<AvatarImage src="/img/lobos-buap.webp" />
+						<AvatarImage
+							alt="Logo de los Lobos BUAP"
+							src="/img/lobos-buap.webp"
+							className="object-contain"
+						/>
 						<AvatarFallback>BUAP</AvatarFallback>
 					</Avatar>
 					vs.
 					<Avatar className="border  w-16 h-16">
-						<AvatarImage src={away.logo} />
+						<AvatarImage
+							alt={`Logo de la universidad ${away.name}`}
+							src={away.logo}
+							className="object-contain"
+						/>
 						<AvatarFallback>{away.name}</AvatarFallback>
 					</Avatar>
 				</div>
@@ -67,7 +75,7 @@ export default function Match({
 			</CardHeader>
 			{/* <Separator /> */}
 			<CardContent className="flex flex-col items-center md:items-start gap-y-2 text-sm text-muted-foreground">
-				<div className="text-purple-500 text-xl font-semibold flex gap-x-2 items-center justify-center w-fit">
+				<div className="text-primary text-xl font-semibold flex gap-x-2 items-center justify-center w-fit">
 					<span>BUAP</span>
 					<span>vs.</span>
 					<span className="w-fit text-wrap">{away.name}</span>
