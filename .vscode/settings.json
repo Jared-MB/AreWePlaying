@@ -1,10 +1,17 @@
 {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "quickfix.biome": "explicit"
+        "quickfix.biome": "explicit",
+        "source.fixAll": "always"
     },
     "cSpell.words": [
         "BUAP",
         "UDLAP"
-    ]
+    ],
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    }
 }
