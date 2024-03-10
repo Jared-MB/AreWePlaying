@@ -1,8 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AreWePlayingYet?
+
+AreWePlaying? is an open source web app that helps you discover the upcoming matches for BUAP teams, across all the sports offered by the university. It provides information on the time, date, location of the game, and the opposing team.
 
 ## Getting Started
 
-First, run the development server:
+### For the developers
+
+First, clone the repo, install dependencies and run the development server:
 
 ```bash
 npm run dev
@@ -29,8 +33,26 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [![Next.js][nextjs-badge]][nextjs-url] - The React Framework for Production.
+- [![Typescript][typescript-badge]][typescript-url] - JavaScript with syntax for types.
+- [![Tailwind CSS][tailwind-badge]][tailwind-url] - A utility-first CSS framework for rapidly building custom designs.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### UI Components
+
+- [![Shadcn/UI][shadcn-badge]][shadcn-url] - A collection of Tailwind CSS components.
+
+## License
+
+This project is licensed under the GNU General Public License v2 - see the [LICENSE](LICENSE) file for details.
+
+[typescript-url]: https://www.typescriptlang.org/
+[tailwind-url]: https://tailwindcss.com/
+[nextjs-url]: https://nextjs.org/
+[shadcn-url]: https://ui.shadcn.com/
+
+[shadcn-badge]: https://img.shields.io/badge/Shadcn/UI-000000?style=for-the-badge&logo=shadcn/ui&logoColor=fff
+[nextjs-badge]: https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white
+[typescript-badge]: https://img.shields.io/badge/Typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&color=blue
+[tailwind-badge]: https://img.shields.io/badge/Tailwind-ffffff?style=for-the-badge&logo=tailwindcss&logoColor=38bdf8
