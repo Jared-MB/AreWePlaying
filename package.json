@@ -1,14 +1,17 @@
 {
   "name": "are-we-playing-public",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "biome:check": "biome format ./src",
-    "biome:apply": "biome format --write ./src"
+    "biome:apply": "biome format --write ./src",
+    "test": "vitest",
+    "test:e2e": "npx playwright test",
+    "test:e2e:ui": "npx playwright test --ui",
+    "test:generator": "npx playwright codegen http://localhost:3000"
   },
   "dependencies": {
     "@formkit/tempo": "0.0.15",
@@ -36,12 +39,17 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.0",
+    "@playwright/test": "^1.42.1",
+    "@testing-library/react": "^14.2.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.0.1",
+    "jsdom": "^24.0.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^1.3.1"
   }
 }
