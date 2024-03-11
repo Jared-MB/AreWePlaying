@@ -41,15 +41,24 @@ To learn more about Next.js, take a look at the following resources:
 
 - [![Shadcn/UI][shadcn-badge]][shadcn-url] - A collection of Tailwind CSS components.
 
+### Testing
+
+- [![Vitest][vitest-badge]][vitest-url] - A next-generation front-end tooling.
+- [![Playwright][playwright-badge]][playwright-url] - A browser automation library.
+
 ## License
 
 This project is licensed under the GNU General Public License v2 - see the [LICENSE](LICENSE) file for details.
 
+[vitest-url]: https://vitejs.dev/
+[playwright-url]: https://playwright.dev/
 [typescript-url]: https://www.typescriptlang.org/
 [tailwind-url]: https://tailwindcss.com/
 [nextjs-url]: https://nextjs.org/
 [shadcn-url]: https://ui.shadcn.com/
 
+[vitest-badge]: https://img.shields.io/badge/Vitest-78a826?style=for-the-badge&logo=vitest&logoColor=f9b44e
+[playwright-badge]: https://img.shields.io/badge/Playwright-1b1b1d?style=for-the-badge&logo=playwright
 [shadcn-badge]: https://img.shields.io/badge/Shadcn/UI-000000?style=for-the-badge&logo=shadcn/ui&logoColor=fff
 [nextjs-badge]: https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white
 [typescript-badge]: https://img.shields.io/badge/Typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&color=blue
