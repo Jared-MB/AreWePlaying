@@ -64,6 +64,7 @@ export default function RootLayout({
 								href="https://github.com/Jared-MB/AreWePlaying"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label="Ir al repositorio de AreWePlaying? en GitHub."
 								className={cn(
 									buttonVariants({
 										size: "icon",
