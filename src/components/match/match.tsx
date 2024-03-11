@@ -33,7 +33,7 @@ export default function Match({
 	gender,
 }: MatchProps) {
 	return (
-		<Card className="h-fit">
+		<Card className="h-fit" role="article">
 			<CardHeader className="flex flex-col gap-y-6 md:gap-y-0 md:flex-row justify-between items-center md:items-start">
 				<div className="flex flex-row items-center gap-x-4">
 					<Avatar className="w-16 h-16">
