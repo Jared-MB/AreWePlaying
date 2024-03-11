@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   lint:
@@ -61,16 +64,12 @@ jobs:
           node-version: 18.18.2
           cache: "pnpm"
       - name: Install dependencies
-        run: pnpm install -P
+        run: pnpm install
       - uses: actions/download-artifact@v4
         with:
           name: next
           path: .next
-      - name: Install start-server-and-test
-        run: pnpm add -D start-server-and-test
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Start server and run tests
         run: npx start-server-and-test start http://localhost:3000 'npx playwright test'
-      - name: Run Playwright tests
-        run: npx playwright test
