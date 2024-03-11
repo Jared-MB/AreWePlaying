@@ -46,6 +46,10 @@ To learn more about Next.js, take a look at the following resources:
 - [![Vitest][vitest-badge]][vitest-url] - A next-generation front-end tooling.
 - [![Playwright][playwright-badge]][playwright-url] - A browser automation library.
 
+### Linter
+
+- [![Biome.js][biome-badge]][biome-url] - Format, lint, and more in a fraction of a second.
+
 ## License
 
 This project is licensed under the GNU General Public License v2 - see the [LICENSE](LICENSE) file for details.
@@ -56,7 +60,9 @@ This project is licensed under the GNU General Public License v2 - see the [LICE
 [tailwind-url]: https://tailwindcss.com/
 [nextjs-url]: https://nextjs.org/
 [shadcn-url]: https://ui.shadcn.com/
+[biome-url]: https://biomejs.dev/
 
+[biome-badge]: https://img.shields.io/badge/Biome.js-212121?style=for-the-badge&logo=biome&logoColor=60a5fa
 [vitest-badge]: https://img.shields.io/badge/Vitest-78a826?style=for-the-badge&logo=vitest&logoColor=f9b44e
 [playwright-badge]: https://img.shields.io/badge/Playwright-1b1b1d?style=for-the-badge&logo=playwright
 [shadcn-badge]: https://img.shields.io/badge/Shadcn/UI-000000?style=for-the-badge&logo=shadcn/ui&logoColor=fff
