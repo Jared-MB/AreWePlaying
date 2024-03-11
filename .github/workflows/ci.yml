@@ -66,9 +66,11 @@ jobs:
         with:
           name: next
           path: .next
-      - name: Start server
-        run: pnpm start
+      - name: Install start-server-and-test
+        run: pnpm add -D start-server-and-test
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
+      - name: Start server and run tests
+        run: npx start-server-and-test start http://localhost:3000 'npx playwright test'
       - name: Run Playwright tests
         run: npx playwright test
