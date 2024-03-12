@@ -1,4 +1,4 @@
-8# AreWePlayingYet?
+# AreWePlayingYet?
 
 AreWePlaying? is an open source web app that helps you discover the upcoming matches for BUAP teams, across all the sports offered by the university. It provides information on the time, date, location of the game, and the opposing team.
 
