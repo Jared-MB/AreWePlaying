@@ -26,6 +26,7 @@ export default function Matches() {
 	useEffect(() => {
 		changeMatches();
 	}, [initialMatches]);
+	
 
 	if (!data) return <div>Loading...</div>;
 
