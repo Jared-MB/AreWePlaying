@@ -50,7 +50,7 @@ bun test:e2e
 
 ### Testing
 
-- [![Vitest][vitest-badge]][vitest-url] - A next-generation front-end tooling.
+- [![Vitest][vitest-badge]][vitest-url] - Next Generation Testing Framework
 - [![Playwright][playwright-badge]][playwright-url] - A browser automation library.
 
 ### Linter
@@ -68,7 +68,7 @@ To learn more about Next.js, take a look at the following resources:
 
 This project is licensed under the GNU General Public License v2 - see the [LICENSE](LICENSE) file for details.
 
-[vitest-url]: https://vitejs.dev/
+[vitest-url]: https://vitest.dev/
 [playwright-url]: https://playwright.dev/
 [typescript-url]: https://www.typescriptlang.org/
 [tailwind-url]: https://tailwindcss.com/
