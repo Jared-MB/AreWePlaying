@@ -1,10 +1,10 @@
-# AreWePlayingYet?
+8# AreWePlayingYet?
 
 AreWePlaying? is an open source web app that helps you discover the upcoming matches for BUAP teams, across all the sports offered by the university. It provides information on the time, date, location of the game, and the opposing team.
 
 ## Getting Started
 
-### For the developers
+### For developers
 
 First, clone the repo, install dependencies and run the development server:
 
@@ -24,12 +24,19 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Testing
 
-To learn more about Next.js, take a look at the following resources:
+We use [Playwright](https://playwright.dev/) to execute e2e testing. To run the tests run the command:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run test:e2e
+# or
+yarn test:e2e
+# or
+pnpm test:e2e
+# or
+bun test:e2e
+```
 
 ## Tech Stack
 
@@ -49,6 +56,13 @@ To learn more about Next.js, take a look at the following resources:
 ### Linter
 
 - [![Biome.js][biome-badge]][biome-url] - Format, lint, and more in a fraction of a second.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 ## License
 
