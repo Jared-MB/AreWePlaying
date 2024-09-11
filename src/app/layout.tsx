@@ -2,6 +2,7 @@ import { quicksand } from "@/core/config";
 import { cn } from "@/core/utils";
 
 import "./globals.css";
+import Header from "@/components/ui/header";
 
 export default function RootLayout({
 	children,
@@ -15,6 +16,7 @@ export default function RootLayout({
 					quicksand.variable,
 				)}
 			>
+				<Header />
 				{children}
 			</body>
 		</html>
