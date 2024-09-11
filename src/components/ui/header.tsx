@@ -1,6 +1,7 @@
 import { PickerFecha } from "../functional/pickerFecha";
 import { SelectCategoria } from "../functional/selectCategoria";
 import { SelectDeporte } from "../functional/selectDeporte";
+import SearchBar from "../sports-filter";
 
 export default function Header() {
 	return (
@@ -14,7 +15,7 @@ export default function Header() {
 						<SelectCategoria />
 					</li>
 					<li>
-						<SelectDeporte />
+						<SearchBar />
 					</li>
 					<li>
 						<PickerFecha />
