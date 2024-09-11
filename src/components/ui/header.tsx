@@ -1,6 +1,6 @@
-import { PickerFecha } from "./pickerFecha";
-import { SelectCategoria } from "./selectCategoria";
-import { SelectDeporte } from "./selectDeporte";
+import { PickerFecha } from "../functional/pickerFecha";
+import { SelectCategoria } from "../functional/selectCategoria";
+import { SelectDeporte } from "../functional/selectDeporte";
 
 export default function Header() {
 	return (
