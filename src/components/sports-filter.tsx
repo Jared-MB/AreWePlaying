@@ -31,8 +31,10 @@ export default function SearchBar() {
 			</SelectTrigger>
 
 			<SelectContent>
-				<SelectItem value="futbol">futbol</SelectItem>
+				<SelectItem value="futbol">Futbol</SelectItem>
 				<SelectItem value="basquetbol">basquetbol</SelectItem>
+				<SelectItem value="voleybol">Voleybol</SelectItem>
+				<SelectItem value="americano">Futbol Americano</SelectItem>
 			</SelectContent>
 		</Select>
 	);

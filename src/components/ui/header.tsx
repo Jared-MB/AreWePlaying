@@ -3,6 +3,7 @@ import { PickerFecha } from "../functional/pickerFecha";
 import { SelectCategoria } from "../functional/selectCategoria";
 import SearchBar from "../sports-filter";
 
+
 export default function Header() {
 	return (
 		<header className="flex items-center justify-between gap-x-8 py-6 px-16 fixed h-[5.5rem] w-full z-50 bg-white">
