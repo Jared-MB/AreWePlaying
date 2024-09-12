@@ -6,7 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "biome check src/"
+		"lint": "biome check src/",
+		"format:safe": "biome check src/ --write"
 	},
 	"dependencies": {
 		"@radix-ui/react-dropdown-menu": "^2.1.1",
