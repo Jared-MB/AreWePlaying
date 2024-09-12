@@ -1,6 +1,6 @@
 import Link from "next/link";
+import CategoryFilter from "../category-Filter";
 import { PickerFecha } from "../functional/pickerFecha";
-import { SelectCategoria } from "../functional/selectCategoria";
 import SearchBar from "../sports-filter";
 
 
@@ -14,7 +14,7 @@ export default function Header() {
 			</h1>
 			<ul className="flex gap-x-4">
 				<li>
-					<SelectCategoria />
+					<CategoryFilter />
 				</li>
 				<li>
 					<SearchBar />
