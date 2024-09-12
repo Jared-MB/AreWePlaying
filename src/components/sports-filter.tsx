@@ -1,5 +1,4 @@
 "use client";
-import {} from "@/components/ui/select";
 import {
 	Select,
 	SelectContent,
@@ -8,14 +7,9 @@ import {
 	SelectValue,
 } from "@/components/ui/select";
 import { useRouter } from "next/navigation"; // O next/router en versiones anteriores
-import { useSearchParams } from "next/navigation";
 
 export default function SearchBar() {
-	const searchParams = useSearchParams();
-	const search = searchParams.get("search");
 	const router = useRouter();
-
-	const deporteActual = searchParams.get("deporte") || "";
 
 	const handleSportChange = (value: string) => {
 		const selectedSport = value;
