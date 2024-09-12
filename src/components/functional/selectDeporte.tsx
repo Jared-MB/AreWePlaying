@@ -20,7 +20,7 @@ export function SelectDeporte() {
 					<SelectItem value="futbol">Futbol</SelectItem>
 					<SelectItem value="basquetbol">Basquetbol</SelectItem>
 					<SelectItem value="voleybol">Voleybol</SelectItem>
-				    <SelectItem value="americano">Futbol Americano</SelectItem>
+					<SelectItem value="americano">Futbol Americano</SelectItem>
 				</SelectGroup>
 			</SelectContent>
 		</Select>
