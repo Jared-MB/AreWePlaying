@@ -6,23 +6,25 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function CategoryFilter() {
 	const router = useRouter();
+	const searchParams = useSearchParams();
+	const selectCategory = searchParams.get("categoria") || "";
 
 	const handleCategoryChange = (value: string) => {
 		const params = new URLSearchParams(window.location.search);
 		if (value) {
-			params.set("categoria", value); // Actualiza el filtro de categorías
+			params.set("categoria", value); // Agrega el parámetro a la URL pero no actualiza la página
 		} else {
 			params.delete("categoria");
 		}
-		router.push(`?${params.toString()}`); // Actualiza la URL
+		router.push(`?${params.toString()}`); // Actualiza la página con el nuevo parámetro
 	};
 
 	return (
-		<Select onValueChange={handleCategoryChange}>
+		<Select value={selectCategory} onValueChange={handleCategoryChange}>
 			<SelectTrigger className="w-[180px]">
 				<SelectValue placeholder="Categoría" />
 			</SelectTrigger>

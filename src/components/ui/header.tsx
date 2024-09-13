@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { BtnCleanFilters } from "../btn-clean";
 import CategoryFilter from "../category-Filter";
-import { PickerFecha } from "../functional/pickerFecha";
-import SearchBar from "../sports-filter";
+import { DateFilter } from "../date-filter";
+import SportFilter from "../sports-filter";
 
 export default function Header() {
 	return (
@@ -16,10 +17,13 @@ export default function Header() {
 					<CategoryFilter />
 				</li>
 				<li>
-					<SearchBar />
+					<SportFilter />
 				</li>
 				<li>
-					<PickerFecha />
+					<DateFilter />
+				</li>
+				<li>
+					<BtnCleanFilters />
 				</li>
 			</ul>
 			<span>Menu</span>
