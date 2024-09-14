@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { BtnCleanFilters } from "../btn-clean";
 import CategoryFilter from "../category-Filter";
 import { DateFilter } from "../date-filter";
@@ -12,20 +13,22 @@ export default function Header() {
 					AreWePlaying?
 				</Link>
 			</h1>
-			<ul className="flex gap-x-4">
-				<li>
-					<CategoryFilter />
-				</li>
-				<li>
-					<SportFilter />
-				</li>
-				<li>
-					<DateFilter />
-				</li>
-				<li>
-					<BtnCleanFilters />
-				</li>
-			</ul>
+			<Suspense>
+				<ul className="flex gap-x-4">
+					<li>
+						<CategoryFilter />
+					</li>
+					<li>
+						<SportFilter />
+					</li>
+					<li>
+						<DateFilter />
+					</li>
+					<li>
+						<BtnCleanFilters />
+					</li>
+				</ul>
+			</Suspense>
 			<span>Menu</span>
 		</header>
 	);

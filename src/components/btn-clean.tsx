@@ -13,5 +13,9 @@ export function BtnCleanFilters() {
 		params.delete("deporte");
 		router.push(`?${params.toString()}`);
 	};
-	return <Button onClick={handleCleanFilters}>Limpiar</Button>;
+	return (
+		<Button onClick={handleCleanFilters} className="text-white">
+			Limpiar
+		</Button>
+	);
 }
