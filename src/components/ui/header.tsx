@@ -4,6 +4,7 @@ import { BtnCleanFilters } from "../btn-clean";
 import CategoryFilter from "../category-Filter";
 import { DateFilter } from "../date-filter";
 import SportFilter from "../sports-filter";
+import { UserMenu } from "../userMenu";
 
 export default function Header() {
 	return (
@@ -29,7 +30,7 @@ export default function Header() {
 					</li>
 				</ul>
 			</Suspense>
-			<span>Menu</span>
+			<UserMenu />
 		</header>
 	);
 }
