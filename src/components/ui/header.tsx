@@ -1,7 +1,10 @@
 import Link from "next/link";
-import { PickerFecha } from "../functional/pickerFecha";
-import { SelectCategoria } from "../functional/selectCategoria";
-import SearchBar from "../sports-filter";
+import { Suspense } from "react";
+import { BtnCleanFilters } from "../btn-clean";
+import CategoryFilter from "../category-Filter";
+import { DateFilter } from "../date-filter";
+import SportFilter from "../sports-filter";
+import { UserMenu } from "../userMenu";
 
 export default function Header() {
 	return (
@@ -11,18 +14,23 @@ export default function Header() {
 					AreWePlaying?
 				</Link>
 			</h1>
-			<ul className="flex gap-x-4">
-				<li>
-					<SelectCategoria />
-				</li>
-				<li>
-					<SearchBar />
-				</li>
-				<li>
-					<PickerFecha />
-				</li>
-			</ul>
-			<span>Menu</span>
+			<Suspense>
+				<ul className="flex gap-x-4">
+					<li>
+						<CategoryFilter />
+					</li>
+					<li>
+						<SportFilter />
+					</li>
+					<li>
+						<DateFilter />
+					</li>
+					<li>
+						<BtnCleanFilters />
+					</li>
+				</ul>
+			</Suspense>
+			<UserMenu />
 		</header>
 	);
 }

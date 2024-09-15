@@ -6,12 +6,10 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
-import { useRouter, useSearchParams } from "next/navigation"; // O next/router en versiones anteriores
+import { useRouter } from "next/navigation"; // O next/router en versiones anteriores
 
-export default function SportFilter() {
+export default function SearchBar() {
 	const router = useRouter();
-	const searchParams = useSearchParams();
-	const selectedSport = searchParams.get("deporte") || "";
 
 	const handleSportChange = (value: string) => {
 		const selectedSport = value;
@@ -27,7 +25,7 @@ export default function SportFilter() {
 	};
 
 	return (
-		<Select value={selectedSport} onValueChange={handleSportChange}>
+		<Select onValueChange={handleSportChange}>
 			<SelectTrigger className="w-[180px]">
 				<SelectValue placeholder="Deporte" />
 			</SelectTrigger>

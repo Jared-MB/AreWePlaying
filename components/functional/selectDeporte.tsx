@@ -19,6 +19,8 @@ export function SelectDeporte() {
 					<SelectLabel>Deporte</SelectLabel>
 					<SelectItem value="futbol">Futbol</SelectItem>
 					<SelectItem value="basquetbol">Basquetbol</SelectItem>
+					<SelectItem value="voleybol">Voleybol</SelectItem>
+					<SelectItem value="americano">Futbol Americano</SelectItem>
 				</SelectGroup>
 			</SelectContent>
 		</Select>
