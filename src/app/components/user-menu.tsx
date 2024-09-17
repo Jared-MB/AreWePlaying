@@ -1,5 +1,7 @@
 import { LogOut, User } from "lucide-react";
 
+import { AvatarProfile } from "@/components/avatar";
+import { DropdownThemeSwitch } from "@/components/toggle-theme";
 import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
@@ -11,12 +13,11 @@ import {
 	DropdownMenuShortcut,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { AvatarProfile } from "./avatar";
 
 export function UserMenu() {
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger asChild>
+			<DropdownMenuTrigger asChild className="md:flex hidden">
 				<Button className="bg-white">
 					<AvatarProfile />
 				</Button>
@@ -30,6 +31,7 @@ export function UserMenu() {
 						<span>Profile</span>
 						<DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
 					</DropdownMenuItem>
+					<DropdownThemeSwitch />
 				</DropdownMenuGroup>
 				<DropdownMenuSeparator />
 				<DropdownMenuItem>
