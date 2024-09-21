@@ -1,4 +1,4 @@
-import CardWrapper from "@/components/ui/cards";
+import CardWrapper from "@/components/ui/CardWeapper";
 
 export default function Page() {
 	return (
