@@ -1,9 +1,9 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export function AvatarProfile() {
+export function AvatarEquipo({ src }: { src: string }) {
 	return (
-		<Avatar>
-			<AvatarImage src="" alt="Avatar" />
+		<Avatar className="h-20 w-20 mx-4">
+			<AvatarImage src={src} alt="Avatar" />
 			<AvatarFallback>CN</AvatarFallback>
 		</Avatar>
 	);
