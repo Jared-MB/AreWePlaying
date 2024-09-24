@@ -11,7 +11,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 export default function CategoryFilter() {
 	const router = useRouter();
 	const searchParams = useSearchParams();
-	const selectCategory = searchParams.get("categoria") || "";
+	const selectCategory = searchParams.get("categoria") || ""; // Obtiene el valor del parámetro "categoria" de la URL o un string vacío
 
 	const handleCategoryChange = (value: string) => {
 		const params = new URLSearchParams(window.location.search);
