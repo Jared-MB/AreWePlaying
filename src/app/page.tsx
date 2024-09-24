@@ -1,7 +1,11 @@
+import CardWrapper from "@/components/ui/CardWeapper";
+
 export default function Page() {
 	return (
 		<div>
-			<h1>My Page</h1>
+			<CardWrapper/>
 		</div>
+
 	);
 }
+ 
