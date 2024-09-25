@@ -27,7 +27,7 @@ export default function SportFilter() {
 	};
 
 	return (
-		<Select value={selectedSport} onValueChange={handleSportChange}>
+		<Select defaultValue={selectedSport} onValueChange={handleSportChange}>
 			<SelectTrigger className="w-[180px]">
 				<SelectValue placeholder="Deporte" />
 			</SelectTrigger>

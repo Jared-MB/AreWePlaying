@@ -2,7 +2,6 @@ import { LogOut, User } from "lucide-react";
 
 import { AvatarProfile } from "@/components/avatar";
 import { DropdownThemeSwitch } from "@/components/toggle-theme";
-import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -17,10 +16,8 @@ import {
 export function UserMenu() {
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger asChild className="md:flex hidden">
-				<Button className="bg-white">
-					<AvatarProfile />
-				</Button>
+			<DropdownMenuTrigger className="xl:flex hidden">
+				<AvatarProfile />
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className="w-56">
 				<DropdownMenuLabel>My Account</DropdownMenuLabel>

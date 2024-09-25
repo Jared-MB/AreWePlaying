@@ -11,7 +11,7 @@ import Filters from "./filters/filters";
 export default function MobileHeader() {
 	return (
 		<Sheet>
-			<SheetTrigger className="flex md:hidden">
+			<SheetTrigger className="flex xl:hidden">
 				<AvatarProfile />
 			</SheetTrigger>
 			<SheetContent className="w-[400px] sm:w-[540px] bg-zinc-50 dark:bg-background">
