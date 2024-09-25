@@ -8,6 +8,7 @@ import {
 import { GiSoccerBall } from "react-icons/gi";
 import { AvatarEquipo } from "../avatarEquipo";
 
+import Link from "next/link";
 import { Badge } from "./badge";
 
 const iconMap = {
@@ -44,7 +45,7 @@ export function Card({
 	const Icon = iconMap[deporte];
 
 	return (
-		<div className="rounded-xl bg-gray-50 p-4 shadow-sm relative ">
+		<div className="rounded-xl p-5 dark:bg-zinc-700/10 shadow relative ">
 			<Badge
 				className="absolute top-4 right-4 inline-flex items-center text-white cursor-pointer"
 				value={categoria} // Llama a la función pasando el valor de categoria
@@ -66,22 +67,19 @@ export function Card({
 				</h1>
 			</div>
 
-			<div className="flex flex-col sm:flex-row justify-between text-gray-500 ">
-				<div className="flex-grow ">
-					<p>
-						{hora} {fecha}
-					</p>
-				</div>
-				<div className="flex flex-col max-w-[150px]">
-					<a
-						href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ubicacion)}`}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="no-underline hover:text-purple-600"
-					>
-						{ubicacion} - {sede}
-					</a>
-				</div>
+			<div className="grid grid-cols-2 text-gray-500 ">
+				<small>
+					{hora} {fecha}
+				</small>
+				<Link
+					href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ubicacion)}`}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="hover:text-purple-700 flex gap-x-1 justify-end text-sm"
+				>
+					<span className="truncate max-w-xs">{ubicacion}</span> -{" "}
+					<span className="truncate">{sede}</span>
+				</Link>
 			</div>
 		</div>
 	);
