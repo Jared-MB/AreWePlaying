@@ -1,3 +1,7 @@
+/**
+ * (c) 2024 Kristall
+ */
+
 "use server";
 
 type Url = `/${string}`;
