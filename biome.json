@@ -10,6 +10,9 @@
 			"correctness": {
 				"noUnusedVariables": "error",
 				"noUnusedImports": "error"
+			},
+			"style": {
+				"useNodejsImportProtocol": "off"
 			}
 		}
 	},
