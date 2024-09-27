@@ -1,6 +1,6 @@
 "use server";
 
-import { randomUUID } from "node:crypto";
+import { randomUUID } from "crypto";
 import { uploadImageService } from "./services/image.services";
 
 export const uploadImage = async (_prevState: unknown, data: FormData) => {

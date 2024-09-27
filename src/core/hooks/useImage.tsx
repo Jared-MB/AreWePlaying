@@ -1,4 +1,4 @@
-import { type UUID, randomUUID } from "node:crypto";
+import { type UUID, randomUUID } from "crypto";
 
 import { useState } from "react";
 
