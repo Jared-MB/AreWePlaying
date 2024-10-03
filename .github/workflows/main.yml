@@ -41,6 +41,8 @@ jobs:
           cache: "pnpm"
       - name: Install dependencies
         run: pnpm install
+      - name: Temporarily remove .next from .gitignore
+        run: sed -i '/^\.next$/d' .gitignore
       - name: Build
         run: pnpm build
       - name: List directory contents
@@ -48,7 +50,11 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: next
-          path: "**/.next"
+          path: .next
+      - name: Restore .gitignore
+        run: git checkout -- .gitignore
+      - name: List .next directory contents
+        run: ls -la .next
   test:
     needs: [build, lint]
     timeout-minutes: 60
@@ -70,7 +76,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: next
-          path: "**/.next"
+          path: .next
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Start server and run tests
