@@ -41,37 +41,28 @@ jobs:
           cache: "pnpm"
       - name: Install dependencies
         run: pnpm install
-      - name: Print working directory
-        run: pwd
-      - name: List directory contents before build
-        run: ls -la
       - name: Build
         run: pnpm build
-      - name: List directory contents after build
-        run: ls -la
-      - name: Check for .next directory
+      - name: List .next directory
         run: |
-          if [ -d ".next" ]; then
-            echo ".next directory exists"
-            ls -la .next
-          else
-            echo ".next directory does not exist"
-            echo "Contents of current directory:"
-            ls -la
-          fi
-      - name: Upload artifact
+          echo "Contents of .next directory:"
+          ls -la .next
+          echo "Total size of .next directory:"
+          du -sh .next
+      - name: Upload .next directory
         uses: actions/upload-artifact@v4
         with:
-          name: next
-          path: .next
+          name: next-artifact
+          path: ${{ github.workspace }}/.next
           if-no-files-found: error
-      - name: List .next directory contents
+      - name: Upload entire workspace (for debugging)
         if: failure()
-        run: |
-          echo "Listing contents of the current directory:"
-          ls -la
-          echo "Attempting to list contents of .next directory:"
-          ls -la .next || echo ".next directory not found"
+        uses: actions/upload-artifact@v4
+        with:
+          name: workspace
+          path: ${{ github.workspace }}
+          if-no-files-found: warn
+
   test:
     needs: [build, lint]
     timeout-minutes: 60
@@ -92,8 +83,12 @@ jobs:
         run: pnpm install
       - uses: actions/download-artifact@v4
         with:
-          name: next
+          name: next-artifact
           path: .next
+      - name: List downloaded .next directory
+        run: |
+          echo "Contents of downloaded .next directory:"
+          ls -la .next
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Start server and run tests
