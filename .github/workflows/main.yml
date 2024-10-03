@@ -25,6 +25,7 @@ jobs:
         run: pnpm install
       - name: Lint
         run: pnpm lint
+
   build:
     runs-on: ubuntu-20.04
     steps:
@@ -43,25 +44,18 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm build
-      - name: List .next directory
+      - name: List dist directory
         run: |
-          echo "Contents of .next directory:"
-          ls -la .next
-          echo "Total size of .next directory:"
-          du -sh .next
-      - name: Upload .next directory
+          echo "Contents of dist directory:"
+          ls -la dist
+          echo "Total size of dist directory:"
+          du -sh dist
+      - name: Upload dist directory
         uses: actions/upload-artifact@v4
         with:
-          name: next-artifact
-          path: ${{ github.workspace }}/.next
+          name: dist-artifact
+          path: ${{ github.workspace }}/dist
           if-no-files-found: error
-      - name: Upload entire workspace (for debugging)
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: workspace
-          path: ${{ github.workspace }}
-          if-no-files-found: warn
 
   test:
     needs: [build, lint]
@@ -83,12 +77,12 @@ jobs:
         run: pnpm install
       - uses: actions/download-artifact@v4
         with:
-          name: next-artifact
-          path: .next
-      - name: List downloaded .next directory
+          name: dist-artifact
+          path: dist
+      - name: List downloaded dist directory
         run: |
-          echo "Contents of downloaded .next directory:"
-          ls -la .next
+          echo "Contents of downloaded dist directory:"
+          ls -la dist
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Start server and run tests
