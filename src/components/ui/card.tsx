@@ -1,86 +1,86 @@
-"use client";
+import * as React from "react";
 
-import {
-	FaBasketballBall,
-	FaFootballBall,
-	FaVolleyballBall,
-} from "react-icons/fa";
-import { GiSoccerBall } from "react-icons/gi";
-import { AvatarEquipo } from "../avatarEquipo";
+import { cn } from "@/core/utils";
 
-import Link from "next/link";
-import { Badge } from "./badge";
+const Card = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+	<div
+		ref={ref}
+		className={cn(
+			"rounded-lg border bg-card text-card-foreground shadow-sm",
+			className,
+		)}
+		{...props}
+	/>
+));
+Card.displayName = "Card";
 
-const iconMap = {
-	basquetbol: FaBasketballBall,
-	futbol: GiSoccerBall,
-	voleibol: FaVolleyballBall,
-	futbol_americano: FaFootballBall,
+const CardHeader = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+	<div
+		ref={ref}
+		className={cn("flex flex-col space-y-1.5 p-6", className)}
+		{...props}
+	/>
+));
+CardHeader.displayName = "CardHeader";
+
+const CardTitle = React.forwardRef<
+	HTMLParagraphElement,
+	React.HTMLAttributes<HTMLHeadingElement>
+>(({ className, ...props }, ref) => (
+	<h3
+		ref={ref}
+		className={cn(
+			"text-2xl font-semibold leading-none tracking-tight",
+			className,
+		)}
+		{...props}
+	/>
+));
+CardTitle.displayName = "CardTitle";
+
+const CardDescription = React.forwardRef<
+	HTMLParagraphElement,
+	React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => (
+	<p
+		ref={ref}
+		className={cn("text-sm text-muted-foreground", className)}
+		{...props}
+	/>
+));
+CardDescription.displayName = "CardDescription";
+
+const CardContent = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+	<div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+));
+CardContent.displayName = "CardContent";
+
+const CardFooter = React.forwardRef<
+	HTMLDivElement,
+	React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+	<div
+		ref={ref}
+		className={cn("flex items-center p-6 pt-0", className)}
+		{...props}
+	/>
+));
+CardFooter.displayName = "CardFooter";
+
+export {
+	Card,
+	CardHeader,
+	CardFooter,
+	CardTitle,
+	CardDescription,
+	CardContent,
 };
-
-export function Card({
-	equipo1Img,
-	equipo2Img,
-	equipo1,
-	equipo2,
-	categoria,
-	deporte,
-	fecha,
-	hora,
-	ubicacion,
-	sede,
-}: {
-	equipo1Img: string;
-	equipo2Img: string;
-	equipo1: string;
-	equipo2: string;
-	categoria: "varonil" | "femenil"; // Asegúrate de que estos valores sean exactos
-	deporte: "futbol" | "basquetbol" | "voleibol" | "futbol_americano";
-	fecha: string;
-	hora: string;
-	ubicacion: string;
-	sede: string;
-}) {
-	//obtenemos icono
-	const Icon = iconMap[deporte];
-
-	return (
-		<div className="rounded-xl p-5 dark:bg-zinc-700/10 shadow relative ">
-			<Badge
-				className="absolute top-4 right-4 inline-flex items-center text-white cursor-pointer"
-				value={categoria} // Llama a la función pasando el valor de categoria
-			>
-				#{categoria.charAt(0).toUpperCase() + categoria.slice(1)}
-			</Badge>
-
-			{/* Imagenes de los equipos */}
-			<div className="flex items-center mb-2 grid-cols-6">
-				<AvatarEquipo src={equipo1Img} /> VS <AvatarEquipo src={equipo2Img} />
-			</div>
-
-			<div className="flex items-center mb-2 grid-cols-6">
-				{Icon ? <Icon className="h-5 w-5 text-purple-600" /> : null}
-				<h1 className="ml-2 text-purple-600 font-semibold">
-					{" "}
-					<span className="cursor-pointer">{equipo1}</span> vs{" "}
-					<span className="cursor-pointer">{equipo2}</span>
-				</h1>
-			</div>
-
-			<div className="grid grid-cols-2 text-gray-500 ">
-				<small>
-					{hora} {fecha}
-				</small>
-				<Link
-					href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ubicacion)}`}
-					target="_blank"
-					rel="noopener noreferrer"
-					className="hover:text-purple-700 flex gap-x-1 justify-end text-sm"
-				>
-					<span className="truncate max-w-xs">{ubicacion}</span> -{" "}
-					<span className="truncate">{sede}</span>
-				</Link>
-			</div>
-		</div>
-	);
-}
