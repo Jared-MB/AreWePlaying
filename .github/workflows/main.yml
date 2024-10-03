@@ -25,6 +25,7 @@ jobs:
         run: pnpm install
       - name: Lint
         run: pnpm lint
+
   build:
     runs-on: ubuntu-20.04
     steps:
@@ -43,12 +44,45 @@ jobs:
         run: pnpm install
       - name: Build
         run: pnpm build
-      - uses: actions/upload-artifact@v4
+      - name: List dist directory
+        run: |
+          echo "Contents of dist directory:"
+          ls -la dist
+          echo "Total size of dist directory:"
+          du -sh dist
+      - name: Upload dist directory
+        uses: actions/upload-artifact@v4
         with:
-          name: next
-          path: dist
+          name: dist-artifact
+          path: ${{ github.workspace }}/dist
+          if-no-files-found: error
+
+  install-browsers:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9.7.0
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.12.2
+          cache: "pnpm"
+      - name: Install Playwright
+        run: pnpm add -D @playwright/test
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Cache Playwright browsers
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-playwright-
+
   test:
-    needs: [build, lint]
+    needs: [build, install-browsers]
     timeout-minutes: 60
     runs-on: ubuntu-20.04
     steps:
@@ -65,11 +99,18 @@ jobs:
           cache: "pnpm"
       - name: Install dependencies
         run: pnpm install
+      - name: Restore Playwright browsers
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/pnpm-lock.yaml') }}
       - uses: actions/download-artifact@v4
         with:
-          name: next
+          name: dist-artifact
           path: dist
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-      - name: Start server and run tests
+      - name: List downloaded dist directory
+        run: |
+          echo "Contents of downloaded dist directory:"
+          ls -la dist
+      - name: Run Playwright tests
         run: pnpm exec playwright test
