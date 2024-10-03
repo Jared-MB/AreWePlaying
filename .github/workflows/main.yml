@@ -41,20 +41,37 @@ jobs:
           cache: "pnpm"
       - name: Install dependencies
         run: pnpm install
-      - name: Temporarily remove .next from .gitignore
-        run: sed -i '/^\.next$/d' .gitignore
+      - name: Print working directory
+        run: pwd
+      - name: List directory contents before build
+        run: ls -la
       - name: Build
         run: pnpm build
-      - name: List directory contents
+      - name: List directory contents after build
         run: ls -la
-      - uses: actions/upload-artifact@v4
+      - name: Check for .next directory
+        run: |
+          if [ -d ".next" ]; then
+            echo ".next directory exists"
+            ls -la .next
+          else
+            echo ".next directory does not exist"
+            echo "Contents of current directory:"
+            ls -la
+          fi
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
           name: next
           path: .next
-      - name: Restore .gitignore
-        run: git checkout -- .gitignore
+          if-no-files-found: error
       - name: List .next directory contents
-        run: ls -la .next
+        if: failure()
+        run: |
+          echo "Listing contents of the current directory:"
+          ls -la
+          echo "Attempting to list contents of .next directory:"
+          ls -la .next || echo ".next directory not found"
   test:
     needs: [build, lint]
     timeout-minutes: 60
