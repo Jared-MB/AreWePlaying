@@ -1,6 +1,6 @@
+// app/layout.tsx
 import { quicksand } from "@/core/config";
 import { cn } from "@/core/utils";
-
 import "./globals.css";
 import Header from "@/app/components/header";
 import { ThemeProvider } from "@/components/providers/theming.provider";
