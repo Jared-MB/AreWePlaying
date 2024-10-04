@@ -4,7 +4,7 @@ export function AvatarProfile() {
 	return (
 		<Avatar>
 			<AvatarImage src="" alt="Avatar" />
-			<AvatarFallback>CN</AvatarFallback>
+			<AvatarFallback>?</AvatarFallback>
 		</Avatar>
 	);
 }
