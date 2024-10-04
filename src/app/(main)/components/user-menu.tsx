@@ -9,9 +9,10 @@ import {
 	DropdownMenuItem,
 	DropdownMenuLabel,
 	DropdownMenuSeparator,
-	DropdownMenuShortcut,
 	DropdownMenuTrigger,
+	dropdownMenuItemClass,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 export function UserMenu() {
 	return (
@@ -20,21 +21,23 @@ export function UserMenu() {
 				<AvatarProfile />
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className="w-56">
-				<DropdownMenuLabel>My Account</DropdownMenuLabel>
+				<DropdownMenuLabel>¿Quién eres?</DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				<DropdownMenuGroup>
 					<DropdownMenuItem>
 						<User className="mr-2 h-4 w-4" />
 						<span>Profile</span>
-						<DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+						{/* <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut> */}
 					</DropdownMenuItem>
 					<DropdownThemeSwitch />
 				</DropdownMenuGroup>
 				<DropdownMenuSeparator />
-				<DropdownMenuItem>
-					<LogOut className="mr-2 h-4 w-4" />
-					<span>Log out</span>
-					<DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+				<DropdownMenuItem asChild>
+					<Link className={dropdownMenuItemClass} href="/login">
+						<LogOut className="mr-2 h-4 w-4" />
+						<span>Inicia sesión</span>
+						{/* <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut> */}
+					</Link>
 				</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>
