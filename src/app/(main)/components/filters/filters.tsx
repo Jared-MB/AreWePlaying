@@ -1,5 +1,5 @@
+import { BtnCleanFilters } from "@/components/btn-clean";
 import { Suspense } from "react";
-import { BtnCleanFilters } from "../../../components/btn-clean";
 import CategoryFilter from "./category-filter";
 import { DateFilter } from "./date-filter";
 import SportFilter from "./sports-filter";
