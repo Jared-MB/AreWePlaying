@@ -1,11 +1,7 @@
 "use client";
-import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { Input, InputContainer } from "@/components/ui/input";
-import { Calendar as CalendarIcon } from "lucide-react";
-import { cn } from "@/core/utils";
-import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
+import { Input, InputContainer } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
 	Popover,
@@ -20,16 +16,21 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
-import Link from "next/link";
+import { cn } from "@/core/utils";
+import { format } from "date-fns";
+import { Calendar as CalendarIcon } from "lucide-react";
+import { useState } from "react";
 
 export default function MatchCreationPage() {
-	const [date, setDate] = React.useState<Date>();
+	const [date, setDate] = useState<Date>();
 
 	return (
 		<main className="w-screen flex justify-center items-center h-dvh overflow-y-auto">
 			<section className="w-full px-20 lg:w-auto lg:mx-auto flex flex-col gap-8">
 				<header className="flex flex-col items-center lg:items-start w-full justify-center relative">
-					<h2 className="text-4xl text-purple-500 font-medium text-start">Registro de Partido Nuevo</h2>
+					<h2 className="text-4xl text-purple-500 font-medium text-start">
+						Registro de Partido Nuevo
+					</h2>
 				</header>
 				<form className="grid grid-cols-2 gap-4 sm:grid-cols-none">
 					<InputContainer>
@@ -38,7 +39,11 @@ export default function MatchCreationPage() {
 					</InputContainer>
 					<InputContainer>
 						<Label htmlFor="visitor">Equipo Visitante</Label>
-						<Input type="text" id="visitor" placeholder="Nombre del visitante" />
+						<Input
+							type="text"
+							id="visitor"
+							placeholder="Nombre del visitante"
+						/>
 					</InputContainer>
 					<InputContainer>
 						<Label htmlFor="date">Fecha</Label>
@@ -52,7 +57,11 @@ export default function MatchCreationPage() {
 									)}
 								>
 									<CalendarIcon className="mr-2" />
-									{date ? format(date, "PPP") : <span>Seleccione una fecha</span>}
+									{date ? (
+										format(date, "PPP")
+									) : (
+										<span>Seleccione una fecha</span>
+									)}
 								</Button>
 							</PopoverTrigger>
 							<PopoverContent className="w-auto p-0">
@@ -71,7 +80,11 @@ export default function MatchCreationPage() {
 					</InputContainer>
 					<InputContainer>
 						<Label htmlFor="location">Ubicación</Label>
-						<Input type="text" id="location" placeholder="Ubicación del partido" />
+						<Input
+							type="text"
+							id="location"
+							placeholder="Ubicación del partido"
+						/>
 					</InputContainer>
 					<InputContainer>
 						<Label htmlFor="gender">Género</Label>
@@ -98,7 +111,9 @@ export default function MatchCreationPage() {
 									<SelectItem value="futbol">Fútbol</SelectItem>
 									<SelectItem value="basquetbol">Básquetbol</SelectItem>
 									<SelectItem value="voleybol">Voleybol</SelectItem>
-									<SelectItem value="futbol-americano">Fútbol Americano</SelectItem>
+									<SelectItem value="futbol-americano">
+										Fútbol Americano
+									</SelectItem>
 								</SelectGroup>
 							</SelectContent>
 						</Select>

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Fans from "./components/fans";
 
 export default function AuthLayout({
 	children,
