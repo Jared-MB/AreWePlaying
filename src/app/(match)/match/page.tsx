@@ -1,7 +1,9 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-import { Input, InputContainer } from "@/components/ui/input";
+import { InputContainer } from "@/components/ui/input";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
 	Popover,
@@ -19,10 +21,46 @@ import {
 import { cn } from "@/core/utils";
 import { format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+// Simulated team type
+type Team = {
+	id: string;
+	name: string;
+};
 
 export default function MatchCreationPage() {
 	const [date, setDate] = useState<Date>();
+	const [teams, setTeams] = useState<Team[]>([]);
+	const [localTeam, setLocalTeam] = useState<string>("");
+	const [visitorTeam, setVisitorTeam] = useState<string>("");
+
+	// Simulated function to fetch teams from the database
+	const fetchTeams = async () => {
+		// This would be replaced with an actual API call
+		const mockTeams: Team[] = [
+			{ id: "1", name: "Equipo A" },
+			{ id: "2", name: "Equipo B" },
+			{ id: "3", name: "Equipo C" },
+			{ id: "4", name: "Equipo D" },
+		];
+		setTeams(mockTeams);
+	};
+
+	useEffect(() => {
+		fetchTeams();
+	}, []);
+
+	const handleSubmit = (e: React.FormEvent) => {
+		e.preventDefault();
+		console.log("Form submitted:", {
+			localTeam,
+			visitorTeam,
+			date,
+			// Add other form fields here
+		});
+		// Handle form submission
+	};
 
 	return (
 		<main className="w-screen flex justify-center items-center h-dvh overflow-y-auto">
@@ -32,18 +70,43 @@ export default function MatchCreationPage() {
 						Registro de Partido Nuevo
 					</h2>
 				</header>
-				<form className="grid grid-cols-2 gap-4 sm:grid-cols-none">
+				<form
+					onSubmit={handleSubmit}
+					className="grid grid-cols-2 gap-4 sm:grid-cols-none"
+				>
 					<InputContainer>
 						<Label htmlFor="local">Equipo Local</Label>
-						<Input type="text" id="local" placeholder="Nombre del local" />
+						<Select value={localTeam} onValueChange={setLocalTeam}>
+							<SelectTrigger id="local">
+								<SelectValue placeholder="Selecciona el equipo local" />
+							</SelectTrigger>
+							<SelectContent>
+								<SelectGroup>
+									{teams.map((team) => (
+										<SelectItem key={team.id} value={team.id}>
+											{team.name}
+										</SelectItem>
+									))}
+								</SelectGroup>
+							</SelectContent>
+						</Select>
 					</InputContainer>
 					<InputContainer>
 						<Label htmlFor="visitor">Equipo Visitante</Label>
-						<Input
-							type="text"
-							id="visitor"
-							placeholder="Nombre del visitante"
-						/>
+						<Select value={visitorTeam} onValueChange={setVisitorTeam}>
+							<SelectTrigger id="visitor">
+								<SelectValue placeholder="Selecciona el equipo visitante" />
+							</SelectTrigger>
+							<SelectContent>
+								<SelectGroup>
+									{teams.map((team) => (
+										<SelectItem key={team.id} value={team.id}>
+											{team.name}
+										</SelectItem>
+									))}
+								</SelectGroup>
+							</SelectContent>
+						</Select>
 					</InputContainer>
 					<InputContainer>
 						<Label htmlFor="date">Fecha</Label>
@@ -118,7 +181,9 @@ export default function MatchCreationPage() {
 							</SelectContent>
 						</Select>
 					</InputContainer>
-					<Button className="col-span-2">Registrar Partido</Button>
+					<Button type="submit" className="col-span-2">
+						Registrar Partido
+					</Button>
 				</form>
 			</section>
 		</main>

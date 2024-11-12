@@ -40,7 +40,7 @@ export default function ImagePreview({
 		<>
 			<Avatar
 				className={cn(
-					"w-96 h-auto aspect-video cursor-pointer rounded-none",
+					"w-36 h-36 aspect-square cursor-pointer rounded-full",
 					classNames?.container,
 				)}
 				title="Click para cambiar la imagen"
