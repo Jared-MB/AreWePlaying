@@ -12,16 +12,19 @@ import {
 	DropdownMenuTrigger,
 	dropdownMenuItemClass,
 } from "@/components/ui/dropdown-menu";
+import { getUsername } from "@/core/modules/user/adapters/user.adapter";
 import Link from "next/link";
 
-export function UserMenu() {
+export async function UserMenu() {
+	const username = await getUsername();
+	console.log(username);
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger className="xl:flex hidden">
 				<AvatarProfile />
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className="w-56">
-				<DropdownMenuLabel>¿Quién eres?</DropdownMenuLabel>
+				<DropdownMenuLabel>{username ?? "¿Quién eres?"}</DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				<DropdownMenuGroup>
 					<DropdownMenuItem>
