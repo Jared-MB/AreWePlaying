@@ -15,6 +15,7 @@ export default function LoginPage() {
 			toast.error(error);
 		}
 	}, [error]);
+
 	return (
 		<main className="w-screen flex justify-center items-center lg:basis-1/2 h-dvh overflow-y-auto">
 			<section className="w-full px-32 lg:w-auto lg:mx-auto flex gap-8 flex-col">

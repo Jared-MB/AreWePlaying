@@ -2,15 +2,20 @@
 
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { loginService } from "../services/auth.service";
-import { LoginSchema } from "../validators/auth.validator";
 
-export const login = async (_prevState: unknown, payload: FormData) => {
+import { loginService, registerService } from "../services";
+import { LoginSchema, RegisterSchema } from "../validators";
+
+export const login = async (
+	_prevState: unknown,
+	payload: FormData,
+	{ redirectQuery }: { redirectQuery: URLSearchParams } = {
+		redirectQuery: new URLSearchParams(),
+	},
+) => {
 	const { username, password } = Object.fromEntries(payload.entries());
 	const safeParse = LoginSchema.safeParse({ username, password });
-	console.log(safeParse);
 	if (!safeParse.success) {
-		console.log(safeParse.error.flatten().fieldErrors);
 		return safeParse.error.flatten().fieldErrors;
 	}
 	const response = await loginService(safeParse.data);
@@ -24,6 +29,30 @@ export const login = async (_prevState: unknown, payload: FormData) => {
 		path: "/",
 	});
 
-	redirect("/");
-	console.log(response);
+	redirect(`/?${redirectQuery.toString()}`);
+};
+
+export const register = async (_prevState: unknown, payload: FormData) => {
+	const { username, password, email, name } = Object.fromEntries(
+		payload.entries(),
+	);
+	const safeParse = RegisterSchema.safeParse({
+		username,
+		password,
+		email,
+		name,
+	});
+	if (!safeParse.success) {
+		return safeParse.error.flatten().fieldErrors;
+	}
+
+	const response = await registerService(safeParse.data);
+	if (response?.id) {
+		const query = new URLSearchParams();
+		query.set("login", "true");
+		query.set("from", "register");
+		return await login(undefined, payload, {
+			redirectQuery: query,
+		});
+	}
 };

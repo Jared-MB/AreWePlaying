@@ -12,7 +12,7 @@ import { environment } from "@/constants/environment";
 import { getCookie } from "@/core/utils/cookies";
 import { ServerError } from "@/core/utils/errors";
 
-const createHeaders = async (): Promise<HeadersInit> => {
+export const createHeaders = async (): Promise<HeadersInit> => {
 	const access_token = await getCookie("session");
 	return {
 		Authorization: `Bearer ${access_token}`,
