@@ -17,7 +17,6 @@ import Link from "next/link";
 
 export async function UserMenu() {
 	const username = await getUsername();
-	console.log(username);
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger className="xl:flex hidden">
@@ -38,7 +37,7 @@ export async function UserMenu() {
 				<DropdownMenuItem asChild>
 					<Link className={dropdownMenuItemClass} href="/login">
 						<LogOut className="mr-2 h-4 w-4" />
-						<span>Inicia sesión</span>
+						<span>{username ? "Cerrar sesión" : "Inicia sesión"}</span>
 						{/* <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut> */}
 					</Link>
 				</DropdownMenuItem>
