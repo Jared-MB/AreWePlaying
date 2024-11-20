@@ -24,12 +24,10 @@ Input.displayName = "Input";
 
 export function InputContainer({
 	children,
-	classNames,
-}: { children: React.ReactNode; classNames?: { container?: string } }) {
+	className,
+}: { children: React.ReactNode; className?: string }) {
 	return (
-		<div
-			className={cn("grid w-full items-center gap-2", classNames?.container)}
-		>
+		<div className={cn("grid w-full items-center gap-2", className)}>
 			{children}
 		</div>
 	);
