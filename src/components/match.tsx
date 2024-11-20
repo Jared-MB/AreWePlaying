@@ -17,7 +17,8 @@ const iconMap = {
 	futbol: GiSoccerBall,
 	voleibol: FaVolleyballBall,
 	futbol_americano: FaFootballBall,
-};
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+} as any;
 
 export function Card({
 	date,
@@ -29,6 +30,7 @@ export function Card({
 	location,
 }: Match) {
 	//obtenemos icono
+
 	const Icon = iconMap[sportName];
 
 	return (
