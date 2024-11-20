@@ -1,6 +1,4 @@
 "use client";
-
-import ImagePreview from "@/components/image-preview";
 import { Button } from "@/components/ui/button";
 import {} from "@/components/ui/card";
 import {
@@ -83,10 +81,10 @@ export default function AddTeam({
 								</Select>
 							</InputContainer>
 						</div>
-						<Separator orientation="vertical" />
+						{/* <Separator orientation="vertical" />
 						<div className="grid place-content-center p-4">
 							<ImagePreview fallback={"K"} />
-						</div>
+						</div> */}
 					</div>
 					<Separator />
 					<DialogFooter className="mt-6">
