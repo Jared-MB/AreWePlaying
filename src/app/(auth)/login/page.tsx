@@ -1,5 +1,5 @@
 "use client";
-import SubmitButton from "@/components/submit-button";
+import { Button } from "@/components/ui/button";
 import { Input, InputContainer } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { login } from "@/core/modules/auth/adapters/auth.adapter";
@@ -49,7 +49,7 @@ export default function LoginPage() {
 							<small className="text-rose-500">{error.password}</small>
 						)}
 					</InputContainer>
-					<SubmitButton />
+					<Button type="submit">Iniciar sesión</Button>
 					<Link
 						href="/register"
 						className="text-center text-sm text-purple-500 font-medium hover:underline"
