@@ -32,6 +32,11 @@ export const login = async (
 	redirect(`/?${redirectQuery.toString()}`);
 };
 
+export const logout = async () => {
+	"use server";
+	cookies().delete("session");
+};
+
 export const register = async (_prevState: unknown, payload: FormData) => {
 	const { username, password, email, name } = Object.fromEntries(
 		payload.entries(),

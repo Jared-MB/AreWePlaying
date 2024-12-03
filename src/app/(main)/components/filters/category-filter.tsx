@@ -11,16 +11,16 @@ import { useRouter, useSearchParams } from "next/navigation";
 export default function CategoryFilter() {
 	const router = useRouter();
 	const searchParams = useSearchParams();
-	const selectCategory = searchParams.get("categoria") || ""; // Obtiene el valor del parámetro "categoria" de la URL o un string vacío
+	const selectCategory = searchParams.get("categoria") || "";
 
 	const handleCategoryChange = (value: string) => {
 		const params = new URLSearchParams(window.location.search);
 		if (value) {
-			params.set("categoria", value); // Agrega el parámetro a la URL pero no actualiza la página
+			params.set("categoria", value);
 		} else {
 			params.delete("categoria");
 		}
-		router.push(`?${params.toString()}`); // Actualiza la página con el nuevo parámetro
+		router.replace(`?${params.toString()}`);
 	};
 
 	return (

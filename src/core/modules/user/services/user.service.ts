@@ -14,6 +14,9 @@ export async function getUsernameService() {
 			"Content-Type": "application/json",
 			Authorization: `Bearer ${value}`,
 		},
+		next: {
+			tags: ["user"],
+		},
 	});
 	return response.json();
 }

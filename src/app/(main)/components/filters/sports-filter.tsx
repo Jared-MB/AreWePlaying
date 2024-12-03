@@ -6,9 +6,10 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/select";
-import { useRouter, useSearchParams } from "next/navigation"; // O next/router en versiones anteriores
+import type { Sport } from "@/core/modules/sport/interfaces";
+import { useRouter, useSearchParams } from "next/navigation";
 
-export default function SportFilter() {
+export default function SportFilter({ sports }: { sports: Sport[] }) {
 	const router = useRouter();
 	const searchParams = useSearchParams();
 	const selectedSport = searchParams.get("deporte") || "";
@@ -16,14 +17,13 @@ export default function SportFilter() {
 	const handleSportChange = (value: string) => {
 		const selectedSport = value;
 
-		// Actualizamos los searchParams
 		const params = new URLSearchParams(window.location.search);
-		if (selectedSport) {
-			params.set("deporte", selectedSport); // Añadimos o actualizamos el deporte seleccionado
+		if (selectedSport && selectedSport !== "all") {
+			params.set("deporte", selectedSport);
 		} else {
-			params.delete("deporte"); // Si no hay selección, eliminamos el parámetro 'deporte'
+			params.delete("deporte");
 		}
-		router.push(`?${params.toString()}`); // Actualizamos la URL sin recargar la página
+		router.replace(`?${params.toString()}`);
 	};
 
 	return (
@@ -31,16 +31,14 @@ export default function SportFilter() {
 			<SelectTrigger className="w-[180px]">
 				<SelectValue placeholder="Deporte" />
 			</SelectTrigger>
-
 			<SelectContent>
-				<SelectItem value="futbol">Futbol</SelectItem>
-				<SelectItem value="basquetbol">basquetbol</SelectItem>
-				<SelectItem value="voleybol">Voleybol</SelectItem>
-				<SelectItem value="americano">Futbol Americano</SelectItem>
+				<SelectItem value="all">Todos</SelectItem>
+				{sports.map((sport) => (
+					<SelectItem key={sport.id} value={String(sport.id)}>
+						{sport.name}
+					</SelectItem>
+				))}
 			</SelectContent>
 		</Select>
 	);
 }
-
-// URL -> `/dashboard?search=my-project`
-// `search` -> 'my-project'

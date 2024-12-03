@@ -9,7 +9,10 @@ import { GiSoccerBall } from "react-icons/gi";
 import { AvatarEquipo } from "./avatarEquipo";
 
 import type { Match } from "@/core/modules/matches/interfaces";
+import { notification } from "@/core/modules/notification";
+import { Bell, BellOff } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 import { Badge } from "./ui/badge";
 
 const iconMap = {
@@ -28,21 +31,46 @@ export function Card({
 	sport: { name: sportName },
 	visitorTeam,
 	location,
-}: Match) {
-	//obtenemos icono
-
+	id,
+	notificationActive,
+}: Match & {
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	notificationActive: any;
+}) {
 	const Icon = iconMap[sportName];
+
+	const [disabled, setDisabled] = useState(false);
 
 	return (
 		<div className="rounded-xl p-5 dark:bg-zinc-700/10 shadow relative ">
-			<Badge
-				className="absolute top-4 right-4 inline-flex items-center text-white cursor-pointer"
-				value={gender} // Llama a la función pasando el valor de gender
-			>
-				#{gender.charAt(0).toUpperCase() + gender.slice(1)}
-			</Badge>
-
-			{/* Imagenes de los equipos */}
+			<div className="absolute top-4 right-4 flex flex-row items-center gap-x-2">
+				<Badge
+					className="inline-flex items-center text-white cursor-pointer capitalize"
+					value={gender}
+				>
+					#{gender}
+				</Badge>
+				<button
+					type="button"
+					disabled={disabled}
+					onClick={async () => {
+						setDisabled(true);
+						if (notificationActive) {
+							await notification.deleteNotification(id, notificationActive.id);
+						} else {
+							await notification.createNotification(id);
+						}
+						setDisabled(false);
+					}}
+					className="hover:bg-zinc-800 active:bg-zinc-800/50 p-2 rounded-md duration-300 disabled:opacity-50"
+				>
+					{notificationActive ? (
+						<BellOff className="w-5 h-5 text-purple-500" />
+					) : (
+						<Bell className="w-5 h-5" />
+					)}
+				</button>
+			</div>
 			<div className="flex items-center mb-2 grid-cols-6">
 				<AvatarEquipo src={localTeam.logo} /> VS{" "}
 				<AvatarEquipo src={visitorTeam.logo} />

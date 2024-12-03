@@ -1,9 +1,17 @@
 import { getUsernameService } from "../services/user.service";
 
 export async function getUsername() {
-	const username = await getUsernameService();
-	if (!username) {
+	const user = await getUsernameService();
+	if (!user) {
 		return null;
 	}
-	return username.username;
+	return user.username;
 }
+
+export const getUser = async () => {
+	const user = await getUsernameService();
+	if (!user) {
+		return null;
+	}
+	return user;
+};

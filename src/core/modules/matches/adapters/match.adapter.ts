@@ -8,8 +8,11 @@ import {
 } from "../services/match.service";
 import { MatchSchema } from "../validators/match.validator";
 
-export const getMatches = async (): Promise<Match[]> => {
-	const response = await getMatchesService();
+export const getMatches = async (
+	searchParams: URLSearchParams,
+): Promise<Match[]> => {
+	const query = new URLSearchParams(searchParams);
+	const response = await getMatchesService(query.toString());
 	return response;
 };
 
@@ -25,7 +28,7 @@ export const uploadMatch = async (
 		return parsedData.error.flatten().fieldErrors;
 	}
 
-	const response = await uploadMatchService({
+	await uploadMatchService({
 		...parsedData.data,
 		localTeamId: Number(data.localTeamId.toString()),
 		visitorTeamId: Number(data.visitorTeamId.toString()),

@@ -1,65 +1,40 @@
 "use client";
-import { format, parse } from "date-fns";
-import { Calendar as CalendarIcon } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import {
-	Popover,
-	PopoverContent,
-	PopoverTrigger,
-} from "@/components/ui/popover";
-import { cn } from "@/core/utils";
+import { DatePickerWithRange } from "@/components/ui/date-range-picker";
+import {} from "@/components/ui/popover";
+import {} from "date-fns";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import type { DateRange } from "react-day-picker";
 
 export function DateFilter() {
 	const router = useRouter();
 	const searchParams = useSearchParams();
 
-	// Obtener la fecha de los parámetros de búsqueda
-	const fecha = searchParams.get("fecha");
-	const initialDate = fecha
-		? parse(fecha, "dd-MM-yyyy", new Date())
-		: undefined; // Parsea la fecha en el formato correcto
+	const [dateRange, setDateRange] = useState<DateRange | undefined>(
+		JSON.parse(searchParams.get("fecha") || "null") || undefined,
+	);
 
-	const handleDateChange = (selectedDate: Date | undefined) => {
-		const params = new URLSearchParams(window.location.search);
+	const handleDateChange = (selectedDate: DateRange | undefined) => {
+		setDateRange(selectedDate);
+		const params = new URLSearchParams(searchParams);
 		if (selectedDate) {
-			params.set("fecha", format(selectedDate, "dd-MM-yyyy")); // Formato de fecha
+			params.set("fecha", JSON.stringify(selectedDate));
 		} else {
 			params.delete("fecha");
 		}
-		router.push(`?${params.toString()}`); // Actualiza la URL sin recargar la página
+		router.replace(`?${params.toString()}`);
 	};
 
+	useEffect(() => {
+		if (!searchParams.get("fecha")) {
+			setDateRange(undefined);
+		}
+	}, [searchParams]);
+
 	return (
-		<Popover>
-			<PopoverTrigger asChild>
-				<Button
-					variant={"outline"}
-					className={cn(
-						"w-[280px] justify-start text-left font-normal",
-						!initialDate && "text-muted-foreground",
-					)}
-				>
-					<CalendarIcon className="mr-2 h-4 w-4" />
-					{initialDate ? (
-						format(initialDate, "PPP")
-					) : (
-						<span>Selecciona una fecha</span>
-					)}
-				</Button>
-			</PopoverTrigger>
-			<PopoverContent className="w-auto p-0">
-				<Calendar
-					mode="single"
-					selected={initialDate}
-					onSelect={(newDate) => {
-						handleDateChange(newDate);
-					}}
-					initialFocus
-				/>
-			</PopoverContent>
-		</Popover>
+		<DatePickerWithRange
+			onValueChange={(value) => handleDateChange(value)}
+			date={dateRange}
+		/>
 	);
 }
