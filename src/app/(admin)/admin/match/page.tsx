@@ -15,7 +15,7 @@ import AddMatch from "./components/add-match";
 export default async function Match() {
 	const teams = await team.getTeams();
 	const sports = await sport.getSports();
-	const matches = await match.getMatches();
+	const matches = await match.getMatches(new URLSearchParams());
 
 	return (
 		<main className="flex flex-col gap-y-4 p-4">
