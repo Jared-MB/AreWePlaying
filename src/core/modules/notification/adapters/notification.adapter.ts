@@ -17,6 +17,9 @@ export const getNotifications = async (): Promise<Notification[]> => {
 		return [];
 	}
 	const notifications = await getNotificationsService();
+	if (notifications.statusCode) {
+		return [];
+	}
 	return notifications;
 };
 
@@ -25,7 +28,10 @@ export const createNotification = async (matchId: number) => {
 	if (!token) {
 		redirect("/login");
 	}
-	await createNotificationService(matchId);
+	const response = await createNotificationService(matchId);
+	if (response.statusCode) {
+		redirect("/profile");
+	}
 	revalidateTag("notification");
 };
 
@@ -40,10 +46,13 @@ export const toggleActiveNotification = async ({
 	if (!token) {
 		redirect("/login");
 	}
-	await updateNotificationService({
+	const response = await updateNotificationService({
 		id: notificationId,
 		isActive: !notificationActive,
 	});
+	if (response.statusCode) {
+		redirect("/profile");
+	}
 	revalidateTag("notification");
 };
 
@@ -55,6 +64,9 @@ export const deleteNotification = async (
 	if (!token) {
 		redirect("/login");
 	}
-	await deleteNotificationService(matchId, notificationId);
+	const response = await deleteNotificationService(matchId, notificationId);
+	if (response.statusCode) {
+		redirect("/profile");
+	}
 	revalidateTag("notification");
 };

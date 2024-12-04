@@ -2,7 +2,7 @@ import { getUsernameService } from "../services/user.service";
 
 export async function getUsername() {
 	const user = await getUsernameService();
-	if (!user) {
+	if (!user || user.statusCode >= 400) {
 		return null;
 	}
 	return user.username;
@@ -10,7 +10,7 @@ export async function getUsername() {
 
 export const getUser = async () => {
 	const user = await getUsernameService();
-	if (!user) {
+	if (!user || user.statusCode >= 400) {
 		return null;
 	}
 	return user;
