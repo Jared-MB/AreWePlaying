@@ -43,7 +43,7 @@ export function Card({
 
 	return (
 		<div className="rounded-xl p-5 dark:bg-zinc-700/10 shadow relative ">
-			<div className="absolute top-4 right-4 flex flex-row items-center gap-x-2">
+			<div className="absolute top-4 right-4 flex flex-col md:flex-row items-end md:items-center gap-2">
 				<Badge
 					className="inline-flex items-center text-white cursor-pointer capitalize"
 					value={gender}

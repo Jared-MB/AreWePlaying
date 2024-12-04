@@ -6,10 +6,17 @@ import { cn } from "@/core/utils";
 import { LogOut } from "lucide-react";
 import Link from "next/link";
 
-export default function Logout({ username }: { username?: string }) {
+export default function Logout({
+	username,
+	className,
+}: { username?: string; className?: string }) {
 	return (
 		<Link
-			className={cn(dropdownMenuItemClass, "cursor-pointer hover:bg-accent")}
+			className={cn(
+				dropdownMenuItemClass,
+				"cursor-pointer hover:bg-accent",
+				className,
+			)}
 			href="/login"
 			onClick={() => logout()}
 		>

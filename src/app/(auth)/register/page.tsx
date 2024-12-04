@@ -21,11 +21,14 @@ export default function RegisterPage() {
 
 	return (
 		<main className="w-screen flex justify-center items-center lg:basis-1/2 h-dvh overflow-y-auto">
-			<section className="w-full px-32 lg:w-auto lg:mx-auto flex gap-8 flex-col">
+			<section className="w-full lg:px-32 lg:w-auto lg:mx-auto flex gap-8 flex-col">
 				<header className="flex flex-col items-center lg:items-start w-full justify-center relative">
 					<h2 className="text-4xl text-purple-500 font-medium">Registro</h2>
 				</header>
-				<form action={dispatch} className="flex flex-col gap-y-4 w-96">
+				<form
+					action={dispatch}
+					className="flex flex-col gap-y-4 lg:w-96 px-12 lg:px-0"
+				>
 					<InputContainer>
 						<Label htmlFor="name">Nombre</Label>
 						<Input type="text" id="name" name="name" placeholder="John Doe" />

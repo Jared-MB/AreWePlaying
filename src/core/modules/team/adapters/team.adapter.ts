@@ -13,14 +13,16 @@ export const getTeams = async (): Promise<Team[]> => {
 export const uploadTeam = async (_prevState: unknown, payload: FormData) => {
 	const { name, universityId } = Object.fromEntries(payload.entries());
 
-	const imageResponse = await image.uploadImage(payload);
-	if (!imageResponse || typeof imageResponse === "string") {
-		return;
+	let imageResponse = await image.uploadImage(payload);
+
+	if (typeof imageResponse === "string") {
+		imageResponse = null;
 	}
+
 	await uploadTeamService({
 		name: name.toString(),
 		universityId: Number(universityId.toString()),
-		logo: imageResponse.url,
+		logo: imageResponse?.url ?? "",
 	});
 
 	revalidateTag("teams");
