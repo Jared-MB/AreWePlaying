@@ -1,7 +1,7 @@
 "use server";
 
 import { randomUUID } from "crypto";
-import { uploadImageService } from "../services/image.services";
+import { uploadImageService } from "../services/image.service";
 
 export const uploadImage = async (data: FormData) => {
 	const image = data.get("image") as File;

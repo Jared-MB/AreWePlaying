@@ -1,18 +1,17 @@
 import {
 	Card,
-	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { notification } from "@/core/modules/notification";
 import { getUser } from "@/core/modules/user/adapters/user.adapter";
-import { cn } from "@/core/utils";
-import { Bell } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
 import { UserMenu } from "../components/user-menu";
-import NotificationActions from "./components/notification-actions";
+import Notifications, {
+	NotificationsSkeleton,
+} from "./components/notifications";
 
 export default async function ProfilePage() {
 	const user = await getUser();
@@ -20,8 +19,6 @@ export default async function ProfilePage() {
 	if (!user) {
 		redirect("/");
 	}
-
-	const notifications = await notification.getNotifications();
 
 	return (
 		<div>
@@ -44,45 +41,9 @@ export default async function ProfilePage() {
 							Administra tus notificaciones de los partidos que te interesan
 						</CardDescription>
 					</CardHeader>
-					<CardContent>
-						{notifications.map((sub) => (
-							<article
-								key={sub.id}
-								className="flex items-center justify-between py-2 border-b last:border-b-0"
-							>
-								<div
-									className={cn(
-										"flex items-center space-x-4 duration-300",
-										!sub.isActive && "opacity-50",
-									)}
-								>
-									<Bell
-										className={
-											sub.id ? "text-primary" : "text-muted-foreground"
-										}
-									/>
-									<div>
-										<p className="font-medium">
-											{sub.match.localTeam.name} vs {sub.match.visitorTeam.name}
-										</p>
-										<div className="text-muted-foreground">
-											<small className="capitalize">
-												{sub.match.sport.name}
-											</small>
-											<span className="px-1">-</span>
-											<small className="capitalize">{sub.match.gender}</small>
-										</div>
-									</div>
-								</div>
-								<NotificationActions
-									id={sub.id}
-									isActive={sub.isActive}
-									matchId={sub.match.id}
-									ariaLabel={`${sub.match.localTeam.name} vs ${sub.match.visitorTeam.name}`}
-								/>
-							</article>
-						))}
-					</CardContent>
+					<Suspense fallback={<NotificationsSkeleton />}>
+						<Notifications />
+					</Suspense>
 				</Card>
 			</main>
 		</div>

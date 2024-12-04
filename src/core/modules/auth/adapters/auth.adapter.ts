@@ -3,6 +3,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
+import { setCookie } from "@/core/utils/cookies";
 import { loginService, registerService, verifyTokenService } from "../services";
 import { LoginSchema, RegisterSchema } from "../validators";
 
@@ -22,12 +23,8 @@ export const login = async (
 	if (!response.access_token) {
 		return "El nombre de usuario o la contraseña son incorrectas.";
 	}
-	cookies().set("session", response.access_token, {
-		httpOnly: true,
-		secure: process.env.NODE_ENV === "production",
-		maxAge: 60 * 60 * 24,
-		path: "/",
-	});
+
+	setCookie("session", response.access_token);
 
 	redirect(`/?${redirectQuery.toString()}`);
 };

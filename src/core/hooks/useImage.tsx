@@ -3,7 +3,7 @@ import { type UUID, randomUUID } from "crypto";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { uploadImageService } from "@/core/modules/images/services/image.services";
+import { uploadImageService } from "@/core/modules/images/services/image.service";
 import Link from "next/link";
 import { toast } from "sonner";
 

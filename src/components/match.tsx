@@ -17,9 +17,9 @@ import { Badge } from "./ui/badge";
 
 const iconMap = {
 	Basketball: FaBasketballBall,
-	futbol: GiSoccerBall,
-	voleibol: FaVolleyballBall,
-	futbol_americano: FaFootballBall,
+	Fútbol: GiSoccerBall,
+	Volleyball: FaVolleyballBall,
+	"Fútbol Americano": FaFootballBall,
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 } as any;
 

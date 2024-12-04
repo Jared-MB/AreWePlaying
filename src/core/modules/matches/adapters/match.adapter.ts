@@ -2,10 +2,7 @@
 
 import { revalidateTag } from "next/cache";
 import type { Match } from "../interfaces";
-import {
-	getMatchesService,
-	uploadMatchService,
-} from "../services/match.service";
+import { getMatchesService, uploadMatchService } from "../services";
 import { MatchSchema } from "../validators/match.validator";
 
 export const getMatches = async (
