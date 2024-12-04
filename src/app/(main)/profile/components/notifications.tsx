@@ -5,13 +5,6 @@ import Notification, { NotificationSkeleton } from "./notification";
 export default async function Notifications() {
 	const notifications = await notification.getNotifications();
 
-	// WAIT 1000 SECONDS TO VERIFY FALLBACK
-	const timeOut = async () => {
-		await new Promise((resolve) => setTimeout(resolve, 1000));
-	};
-
-	await timeOut();
-
 	return (
 		<CardContent>
 			{notifications.map((sub) => (
