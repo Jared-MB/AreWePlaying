@@ -3,7 +3,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { loginService, registerService } from "../services";
+import { loginService, registerService, verifyTokenService } from "../services";
 import { LoginSchema, RegisterSchema } from "../validators";
 
 export const login = async (
@@ -60,4 +60,12 @@ export const register = async (_prevState: unknown, payload: FormData) => {
 			redirectQuery: query,
 		});
 	}
+};
+
+export const verifyToken = async () => {
+	const response = await verifyTokenService();
+	if (response.statusCode) {
+		return false;
+	}
+	return response;
 };

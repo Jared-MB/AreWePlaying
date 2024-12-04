@@ -1,5 +1,5 @@
 "use server";
-
+import { createHeaders } from "../../http";
 import type { Login } from "../interfaces";
 
 export async function loginService(payload: Login) {
@@ -23,3 +23,11 @@ export async function registerService(payload: Login) {
 	});
 	return response.json();
 }
+
+export const verifyTokenService = async () => {
+	const response = await fetch(`${process.env.SERVER_API}/verify-token`, {
+		method: "GET",
+		headers: await createHeaders(),
+	});
+	return response.json();
+};
