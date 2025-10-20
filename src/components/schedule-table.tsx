@@ -1,5 +1,8 @@
 import type { Match } from "@/types/match";
+import type { Route } from "next";
+
 import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 export function ScheduleTable({ matches }: { matches: Match[] }) {
 	return (
@@ -108,9 +111,14 @@ export function ScheduleTable({ matches }: { matches: Match[] }) {
 							<div className="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
 								Lugar
 							</div>
-							<div className="text-sm font-bold uppercase tracking-wide">
+							<Link
+								href={game?.locationUrl as Route}
+								target="_blank"
+								rel="noreferrer noopener"
+								className="text-sm font-bold uppercase tracking-wide"
+							>
 								{game.location}
-							</div>
+							</Link>
 						</div>
 
 						{/* Status */}
