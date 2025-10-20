@@ -1,4 +1,4 @@
-import { ScheduleFiltersSkeletonRaw } from "@/components/schedule-filters";
+import { ScheduleFiltersSkeleton } from "@/components/schedule-filters";
 import { HyperText } from "@/components/ui/hyper-text";
 
 export default function loading() {
@@ -9,7 +9,7 @@ export default function loading() {
 					Are We Playing?
 				</HyperText>
 			</h1>
-			<ScheduleFiltersSkeletonRaw />
+			<ScheduleFiltersSkeleton />
 		</main>
 	);
 }

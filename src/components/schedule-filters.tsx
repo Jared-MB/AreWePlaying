@@ -3,19 +3,30 @@
 import type { MatchDay } from "@/types/match-day";
 
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { isAfter, parse } from "date-fns";
 
-export function ScheduleFilters({
-	weeks,
-	currentWeek,
-}: {
-	weeks: MatchDay[];
-	currentWeek?: string;
-}) {
+export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
+	const currentWeek = useMemo(() => {
+		const currentDate = new Date();
+
+		for (const matchDay of weeks) {
+			if (
+				isAfter(parse(matchDay.date, "dd/MM/yyyy", new Date()), currentDate)
+			) {
+				const index = weeks.indexOf(matchDay);
+				return weeks[index - 1];
+			}
+		}
+	}, [weeks]);
+
+	const params = useSearchParams();
+
 	const [selectedWeek, setSelectedWeek] = useState<string>(
-		currentWeek ?? "all",
+		params.get("week") ?? currentWeek?.id ?? "all",
 	);
+
 	const [selectedLeague, setSelectedLeague] = useState<string>("all");
 
 	const router = useRouter();
@@ -102,66 +113,7 @@ export function ScheduleFilters({
 	);
 }
 
-export function ScheduleFiltersSkeleton({ weeks }: { weeks: MatchDay[] }) {
-	return (
-		<div className="mb-12 space-y-6">
-			<div className="flex flex-wrap items-center gap-3">
-				<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-					Rama:
-				</span>
-				<div className="flex flex-wrap gap-2">
-					<Button
-						size="sm"
-						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
-					>
-						Ambas
-					</Button>
-					<Button
-						size="sm"
-						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
-					>
-						Varonil
-					</Button>
-					<Button
-						size="sm"
-						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
-					>
-						Femenil
-					</Button>
-				</div>
-			</div>
-
-			{/* Divider */}
-			<div className="h-[2px] bg-foreground" />
-
-			{/* Week and Team Filters - Side by Side */}
-			<div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
-				{/* Week Filter */}
-				<div className="flex flex-wrap items-center gap-3">
-					<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-						Semana:
-					</span>
-					<div className="flex flex-wrap gap-2">
-						{weeks.map((week) => (
-							<Button
-								key={week.id}
-								size="sm"
-								className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
-							>
-								{week.week}
-							</Button>
-						))}
-					</div>
-				</div>
-			</div>
-
-			{/* Bottom Divider */}
-			<div className="h-[4px] bg-foreground" />
-		</div>
-	);
-}
-
-export function ScheduleFiltersSkeletonRaw() {
+export function ScheduleFiltersSkeleton() {
 	return (
 		<div className="mb-12 space-y-6">
 			<div className="flex flex-wrap items-center gap-3">

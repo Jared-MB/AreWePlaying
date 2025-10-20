@@ -1,80 +1,7 @@
+import type { Match } from "@/types/match";
 import { Card } from "@/components/ui/card";
-import { getMatchesByWeek } from "@/use-cases/get-matches-by-week";
 
-const games = [
-	{
-		time: "7:00 PM - 9:00 PM",
-		date: "NOV 15, 2024",
-		week: "Week 1",
-		league: "varonil",
-		homeTeam: "DUKE BLUE DEVILS",
-		awayTeam: "KENTUCKY WILDCATS",
-		venue: "CAMERON INDOOR STADIUM",
-		status: "COMPLETED",
-		homeScore: 88,
-		awayScore: 76,
-	},
-	{
-		time: "8:30 PM - 10:30 PM",
-		date: "NOV 16, 2024",
-		week: "Week 1",
-		league: "femenil",
-		homeTeam: "KANSAS JAYHAWKS",
-		awayTeam: "NORTH CAROLINA TAR HEELS",
-		venue: "ALLEN FIELDHOUSE",
-		status: "COMPLETED",
-		homeScore: 92,
-		awayScore: 89,
-	},
-	{
-		time: "6:00 PM - 8:00 PM",
-		date: "NOV 17, 2024",
-		week: "Week 2",
-		league: "varonil",
-		homeTeam: "GONZAGA BULLDOGS",
-		awayTeam: "UCLA BRUINS",
-		venue: "MCCARTHEY ATHLETIC CENTER",
-		status: "LIVE",
-		homeScore: 45,
-		awayScore: 42,
-	},
-	{
-		time: "9:00 PM - 11:00 PM",
-		date: "NOV 18, 2024",
-		week: "Week 2",
-		league: "femenil",
-		homeTeam: "VILLANOVA WILDCATS",
-		awayTeam: "UCONN HUSKIES",
-		venue: "FINNERAN PAVILION",
-		status: "UPCOMING",
-	},
-	{
-		time: "7:30 PM - 9:30 PM",
-		date: "NOV 19, 2024",
-		week: "Week 3",
-		league: "varonil",
-		homeTeam: "MICHIGAN STATE SPARTANS",
-		awayTeam: "PURDUE BOILERMAKERS",
-		venue: "BRESLIN CENTER",
-		status: "UPCOMING",
-	},
-	{
-		time: "8:00 PM - 10:00 PM",
-		date: "NOV 20, 2024",
-		week: "Week 3",
-		league: "femenil",
-		homeTeam: "DUKE BLUE DEVILS",
-		awayTeam: "GONZAGA BULLDOGS",
-		venue: "CAMERON INDOOR STADIUM",
-		status: "COMPLETED",
-		homeScore: 78,
-		awayScore: 84,
-	},
-];
-
-export async function ScheduleTable({ week }: { week?: string }) {
-	const matches = await getMatchesByWeek(week);
-
+export function ScheduleTable({ matches }: { matches: Match[] }) {
 	return (
 		<div className="space-y-4">
 			{/* Desktop Table Header */}
@@ -94,7 +21,7 @@ export async function ScheduleTable({ week }: { week?: string }) {
 			</div>
 
 			{/* Games List */}
-			{matches.map((game, index) => (
+			{matches.map((game) => (
 				<Card
 					key={game.matchId}
 					className="border-2 border-foreground bg-card p-0 shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
@@ -142,7 +69,7 @@ export async function ScheduleTable({ week }: { week?: string }) {
 										{game.started === 0 || game.live === 0 ? (
 											<div
 												className={`border-2 border-foreground px-4 py-1 text-2xl font-bold ${
-													game.localTeamPoints! > (game.visitingTeamPoints || 0)
+													game.localTeamPoints > (game.visitingTeamPoints || 0)
 														? "bg-primary text-primary-foreground"
 														: "bg-muted text-muted-foreground"
 												}`}
@@ -163,7 +90,7 @@ export async function ScheduleTable({ week }: { week?: string }) {
 										{game.started === 0 || game.live === 0 ? (
 											<div
 												className={`border-2 border-foreground px-4 py-1 text-2xl font-bold ${
-													game.visitingTeamPoints! > (game.localTeamPoints || 0)
+													game.visitingTeamPoints > (game.localTeamPoints || 0)
 														? "bg-primary text-primary-foreground"
 														: "bg-muted text-muted-foreground"
 												}`}
