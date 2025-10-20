@@ -92,6 +92,11 @@ Tips:
 - Deploy on Vercel for a streamlined Next.js workflow.
 - Ensure scripts have been run and JSON assets are up to date if your UI depends on them.
 
+## Design
+
+- Design using [v0.app](https://v0.app), you can find the design [here](https://v0.app/chat/app-design-with-tailwind-miKE3pwM3zM).
+- Tailwind/Shadcn styling first approach created using [tweackcn.com](https://tweakcn.com/), you can find the theme [here](https://tweakcn.com/themes/cmgyji7c8000604lacuih1zvu)
+
 ## Contributing
 
 This is a non‑profit, open‑source project. Contributions are welcome!
