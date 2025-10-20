@@ -7,6 +7,7 @@ import { GithubIcon } from "lucide-react";
 import { ScheduleHeader } from "@/components/schedule-header";
 import { ViewTransition } from "react";
 import { DevDropdown } from "suspense-fallback-debugger";
+import { Providers } from "./providers";
 
 const spaceMono = Space_Mono({
 	weight: ["400", "700"],
@@ -40,22 +41,37 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="es">
-			<body className={`${spaceMono.variable} font-sans antialiased`}>
-				<DevDropdown />
-				<main className="min-h-screen bg-background">
-					<ScheduleHeader />
-					<ViewTransition>{children}</ViewTransition>
-				</main>
-				<footer className="border-t-2 border-foreground bg-background py-4 px-6 flex w-full justify-end">
-					<Link
-						href="https://github.com/Jared-MB/AreWePlaying"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<GithubIcon />
-					</Link>
-				</footer>
-			</body>
+			<Providers>
+				<body className={`${spaceMono.variable} font-sans antialiased`}>
+					<DevDropdown />
+					<main className="min-h-screen bg-background">
+						<ScheduleHeader />
+						<ViewTransition>{children}</ViewTransition>
+					</main>
+					<footer className="border-t-2 border-foreground bg-background py-4 px-6 flex w-full items-center justify-between">
+						<span className="text-muted-foreground text-xs text-pretty max-w-[75dvw]">
+							Los datos pueden estar desactualizados o incompletos. Para obtener
+							información más precisa, visite el sitio oficial de la{" "}
+							<Link
+								className="text-primary hover:underline"
+								href="https://www.abemexico.org/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Liga ABE
+							</Link>
+							.
+						</span>
+						<Link
+							href="https://github.com/Jared-MB/AreWePlaying"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<GithubIcon />
+						</Link>
+					</footer>
+				</body>
+			</Providers>
 		</html>
 	);
 }
