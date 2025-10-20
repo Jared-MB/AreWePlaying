@@ -24,7 +24,7 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 
 	const params = useSearchParams();
 
-	const selectedWeek = params.get("week") ?? currentWeek?.id ?? "all";
+	const selectedWeek = params.get("week") ?? currentWeek?.id;
 
 	const [selectedLeague, setSelectedLeague] = useState<string>("all");
 
