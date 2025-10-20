@@ -1,10 +1,22 @@
+"use client";
+
 import type { Match } from "@/types/match";
 import type { Route } from "next";
+import type { MatchDay } from "@/types/match-day";
 
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import { useUniversity } from "@/hooks/use-university";
 
-export function ScheduleTable({ matches }: { matches: Match[] }) {
+export function ScheduleTable({
+	matches,
+	week,
+}: {
+	matches: Match[];
+	week?: MatchDay;
+}) {
+	const university = useUniversity((state) => state.university);
+
 	return (
 		<div className="space-y-4">
 			{/* Desktop Table Header */}
@@ -27,7 +39,11 @@ export function ScheduleTable({ matches }: { matches: Match[] }) {
 			{matches.map((game) => (
 				<Card
 					key={game.matchId}
-					className="border-2 border-foreground bg-card p-0 shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
+					className={`
+					${game.localTeamId === university || game.visitingTeamId === university ? " border-3" : "border-2"}
+					${game.localTeamId === university || game.visitingTeamId === university ? "border-primary" : "border-foreground"}
+					${game.localTeamId === university || game.visitingTeamId === university ? "bg-primary/20" : "bg-card"}
+					 p-0 shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none`}
 				>
 					<div className="grid gap-4 p-6 md:grid-cols-12 md:items-center">
 						{/* Time */}
@@ -41,7 +57,7 @@ export function ScheduleTable({ matches }: { matches: Match[] }) {
 							</div>
 							<div className="mt-2 flex flex-wrap gap-2">
 								<div className="inline-block border border-foreground bg-muted px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-									[SEMANA]
+									{week?.week}
 								</div>
 								{/* <div
 									className={`inline-block border border-foreground px-2 py-0.5 text-xs font-bold uppercase tracking-wider ${
@@ -62,13 +78,16 @@ export function ScheduleTable({ matches }: { matches: Match[] }) {
 							</div>
 							<div className="space-y-2">
 								<div className="flex items-center gap-3">
-									<div className="flex h-10 w-10 items-center justify-center border-2 border-foreground bg-primary text-xs font-bold text-primary-foreground">
+									<div className="flex size-10 items-center justify-center border-2 border-foreground bg-primary text-xs font-bold text-primary-foreground">
 										{game.localTeam.split(" ")[0].substring(0, 3)}
 									</div>
 									<div className="flex flex-1 items-center justify-between">
-										<div className="font-bold uppercase tracking-wide">
+										<Link
+											href={`/teams/${game.localTeamId}`}
+											className="font-bold uppercase tracking-wide"
+										>
 											{game.localTeam}
-										</div>
+										</Link>
 										{game.started === 0 || game.live === 0 ? (
 											<div
 												className={`border-2 border-foreground px-4 py-1 text-2xl font-bold ${
@@ -87,9 +106,12 @@ export function ScheduleTable({ matches }: { matches: Match[] }) {
 										{game.visitingTeam.split(" ")[0].substring(0, 3)}
 									</div>
 									<div className="flex flex-1 items-center justify-between">
-										<div className="font-bold uppercase tracking-wide">
+										<Link
+											href={`/teams/${game.visitingTeamId}`}
+											className="font-bold uppercase tracking-wide"
+										>
 											{game.visitingTeam}
-										</div>
+										</Link>
 										{game.started === 0 || game.live === 0 ? (
 											<div
 												className={`border-2 border-foreground px-4 py-1 text-2xl font-bold ${
@@ -111,14 +133,20 @@ export function ScheduleTable({ matches }: { matches: Match[] }) {
 							<div className="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
 								Lugar
 							</div>
-							<Link
-								href={game?.locationUrl as Route}
-								target="_blank"
-								rel="noreferrer noopener"
-								className="text-sm font-bold uppercase tracking-wide"
-							>
-								{game.location}
-							</Link>
+							{game?.locationUrl !== "-" ? (
+								<Link
+									href={game?.locationUrl as Route}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-sm font-bold uppercase tracking-wide"
+								>
+									{game.location}
+								</Link>
+							) : (
+								<span className="text-sm font-bold uppercase tracking-wide">
+									-
+								</span>
+							)}
 						</div>
 
 						{/* Status */}
