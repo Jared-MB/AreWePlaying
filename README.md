@@ -33,7 +33,7 @@ We fetch match day and match data from third‑party endpoints and persist JSON 
 
 Scripts and outputs:
 
-- `src/scripts/search-matchdays.ts` → writes `src/assets/match-days.json`
+- `src/scripts/search-match-days.ts` → writes `src/assets/match-days.json`
 - `src/scripts/search-matches.ts` → reads `src/assets/match-days.json` and writes `src/assets/matches.json`
 
 These files act as a local cache for development and testing.
@@ -99,6 +99,12 @@ This is a non‑profit, open‑source project. Contributions are welcome!
 - Open issues for bugs, enhancements, or data corrections.
 - Submit PRs with clear descriptions and minimal scope.
 - Keep changes consistent with the existing style and tooling.
+
+## Acknowledgments
+
+This project wouldn't be possible without:
+
+- **ScoreTDI 2025 Team** - Primary data source for match days and match information. 
 
 ## Disclaimer
 
