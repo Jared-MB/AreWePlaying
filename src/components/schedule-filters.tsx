@@ -3,28 +3,18 @@
 import type { MatchDay } from "@/types/match-day";
 
 import { Button } from "@/components/ui/button";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { isAfter, parse } from "date-fns";
 import { PrefetchLink } from "./prefetch-link";
+import { SelectUniversity } from "./select-university";
+import { useCurrentWeek } from "@/hooks/use-current-week";
 
 export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
-	const currentWeek = useMemo(() => {
-		const currentDate = new Date();
-
-		for (const matchDay of weeks) {
-			if (
-				isAfter(parse(matchDay.date, "dd/MM/yyyy", new Date()), currentDate)
-			) {
-				const index = weeks.indexOf(matchDay);
-				return weeks[index - 1];
-			}
-		}
-	}, [weeks]);
+	const week = useCurrentWeek(weeks);
 
 	const params = useSearchParams();
 
-	const selectedWeek = params.get("week") ?? currentWeek?.id;
+	const selectedWeek = params.get("week") ?? week.currentWeek?.id;
 
 	const [selectedLeague, setSelectedLeague] = useState<string>("femenil");
 
@@ -37,12 +27,13 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 	return (
 		<div className="mb-12 space-y-6">
 			{/* League Filter - Horizontal Pills */}
-			<div className="flex flex-wrap items-center gap-3">
-				<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-					Rama:
-				</span>
-				<div className="flex flex-wrap gap-2">
-					{/* <Button
+			<div className="flex items-center justify-between">
+				<div className="flex flex-wrap items-center gap-3">
+					<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+						Rama:
+					</span>
+					<div className="flex flex-wrap gap-2">
+						{/* <Button
 						onClick={() => setSelectedLeague("all")}
 						size="sm"
 						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
@@ -64,17 +55,21 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 					>
 						Varonil
 					</Button> */}
-					<Button
-						onClick={() => setSelectedLeague("femenil")}
-						size="sm"
-						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
-							selectedLeague === "femenil"
-								? "bg-primary text-primary-foreground"
-								: "bg-background text-foreground"
-						}`}
-					>
-						Femenil
-					</Button>
+						<Button
+							onClick={() => setSelectedLeague("femenil")}
+							size="sm"
+							className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
+								selectedLeague === "femenil"
+									? "bg-primary text-primary-foreground"
+									: "bg-background text-foreground"
+							}`}
+						>
+							Femenil
+						</Button>
+					</div>
+				</div>
+				<div className="inline-block md:hidden">
+					<SelectUniversity />
 				</div>
 			</div>
 
