@@ -26,7 +26,7 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 
 	const selectedWeek = params.get("week") ?? currentWeek?.id;
 
-	const [selectedLeague, setSelectedLeague] = useState<string>("all");
+	const [selectedLeague, setSelectedLeague] = useState<string>("femenil");
 
 	const router = useRouter();
 
@@ -42,7 +42,7 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 					Rama:
 				</span>
 				<div className="flex flex-wrap gap-2">
-					<Button
+					{/* <Button
 						onClick={() => setSelectedLeague("all")}
 						size="sm"
 						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
@@ -63,7 +63,7 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 						}`}
 					>
 						Varonil
-					</Button>
+					</Button> */}
 					<Button
 						onClick={() => setSelectedLeague("femenil")}
 						size="sm"
@@ -84,28 +84,24 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 			{/* Week and Team Filters - Side by Side */}
 			<div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
 				{/* Week Filter */}
-				<div className="flex flex-wrap items-center gap-3">
-					<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+				<div className="flex flex-wrap gap-2">
+					<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1">
 						Semana:
 					</span>
-					<div className="flex flex-wrap gap-2">
-						{weeks.map((week) => (
-							<Button
-								key={week.id}
-								size="sm"
-								asChild
-								className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
-									selectedWeek === week.id
-										? "bg-foreground text-background"
-										: "bg-background text-foreground"
-								}`}
-							>
-								<PrefetchLink href={`?week=${week.id}`}>
-									{week.week}
-								</PrefetchLink>
-							</Button>
-						))}
-					</div>
+					{weeks.map((week) => (
+						<Button
+							key={week.id}
+							size="sm"
+							asChild
+							className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
+								selectedWeek === week.id
+									? "bg-foreground text-background"
+									: "bg-background text-foreground"
+							}`}
+						>
+							<PrefetchLink href={`?week=${week.id}`}>{week.week}</PrefetchLink>
+						</Button>
+					))}
 				</div>
 			</div>
 
@@ -122,7 +118,7 @@ export function ScheduleFiltersSkeleton() {
 					Rama:
 				</span>
 				<div className="flex flex-wrap gap-2">
-					<Button
+					{/* <Button
 						size="sm"
 						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
 					>
@@ -133,10 +129,10 @@ export function ScheduleFiltersSkeleton() {
 						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
 					>
 						Varonil
-					</Button>
+					</Button> */}
 					<Button
 						size="sm"
-						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-primary text-primary-foreground"}`}
 					>
 						Femenil
 					</Button>
@@ -149,25 +145,23 @@ export function ScheduleFiltersSkeleton() {
 			{/* Week and Team Filters - Side by Side */}
 			<div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
 				{/* Week Filter */}
-				<div className="flex flex-wrap items-center gap-3">
-					<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+				<div className="flex flex-wrap gap-2">
+					<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1">
 						Semana:
 					</span>
-					<div className="flex flex-wrap gap-2">
-						{Array.from({ length: 13 }, (_, i) => ({
-							id: i + 1,
-							week: `Week ${i + 1}`,
-						})).map((week, i) => (
-							<Button
-								key={week.id}
-								size="sm"
-								style={{
-									width: `${144 * (i % 2 === 0 ? 1 : 0.75)}px`,
-								}}
-								className={`w-36 hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
-							></Button>
-						))}
-					</div>
+					{Array.from({ length: 13 }, (_, i) => ({
+						id: i + 1,
+						week: `Week ${i + 1}`,
+					})).map((week, i) => (
+						<Button
+							key={week.id}
+							size="sm"
+							style={{
+								width: `${144 * (i % 2 === 0 ? 1 : 0.75)}px`,
+							}}
+							className={`w-36 hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+						></Button>
+					))}
 				</div>
 			</div>
 
