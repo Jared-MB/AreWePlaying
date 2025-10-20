@@ -1,13 +1,8 @@
 import fs from "node:fs/promises";
-
-/**
- * Please don't sue me 🙏
- */
-const API_URL =
-	"https://scoretdi2025-eta.vercel.app/api/jornadas?torneoID=066CC7C9-E88C-4595-8CF5-D5AAADF0AA33";
+import { API_URLS } from "../constants/apiUrl";
 
 async function fetchMatchDays() {
-	const response = await fetch(API_URL);
+	const response = await fetch(API_URLS.MATCH_DAYS);
 	const matchDays = (await response.json()) as {
 		mensaje: "Tabla";
 		data: string;
@@ -33,6 +28,8 @@ async function fetchMatchDays() {
 		"./src/assets/match-days.json",
 		JSON.stringify(parsedMatchDays, null, 2),
 	);
+
+	process.exit(0);
 }
 
 fetchMatchDays();

@@ -1,0 +1,225 @@
+"use client";
+
+import type { MatchDay } from "@/types/match-day";
+
+import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+
+export function ScheduleFilters({
+	weeks,
+	currentWeek,
+}: {
+	weeks: MatchDay[];
+	currentWeek?: string;
+}) {
+	const [selectedWeek, setSelectedWeek] = useState<string>(
+		currentWeek ?? "all",
+	);
+	const [selectedLeague, setSelectedLeague] = useState<string>("all");
+
+	const router = useRouter();
+
+	useEffect(() => {
+		router.replace(`?week=${selectedWeek}`);
+	}, [selectedWeek]);
+
+	return (
+		<div className="mb-12 space-y-6">
+			{/* League Filter - Horizontal Pills */}
+			<div className="flex flex-wrap items-center gap-3">
+				<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+					Rama:
+				</span>
+				<div className="flex flex-wrap gap-2">
+					<Button
+						onClick={() => setSelectedLeague("all")}
+						size="sm"
+						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
+							selectedLeague === "all"
+								? "bg-primary text-primary-foreground"
+								: "bg-background text-foreground"
+						}`}
+					>
+						Ambas
+					</Button>
+					<Button
+						onClick={() => setSelectedLeague("varonil")}
+						size="sm"
+						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
+							selectedLeague === "varonil"
+								? "bg-primary text-primary-foreground"
+								: "bg-background text-foreground"
+						}`}
+					>
+						Varonil
+					</Button>
+					<Button
+						onClick={() => setSelectedLeague("femenil")}
+						size="sm"
+						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
+							selectedLeague === "femenil"
+								? "bg-primary text-primary-foreground"
+								: "bg-background text-foreground"
+						}`}
+					>
+						Femenil
+					</Button>
+				</div>
+			</div>
+
+			{/* Divider */}
+			<div className="h-[2px] bg-foreground" />
+
+			{/* Week and Team Filters - Side by Side */}
+			<div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
+				{/* Week Filter */}
+				<div className="flex flex-wrap items-center gap-3">
+					<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+						Semana:
+					</span>
+					<div className="flex flex-wrap gap-2">
+						{weeks.map((week) => (
+							<Button
+								key={week.id}
+								onClick={() => setSelectedWeek(week.id)}
+								size="sm"
+								className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
+									selectedWeek === week.id
+										? "bg-foreground text-background"
+										: "bg-background text-foreground"
+								}`}
+							>
+								{week.week}
+							</Button>
+						))}
+					</div>
+				</div>
+			</div>
+
+			<div className="h-[4px] bg-foreground" />
+		</div>
+	);
+}
+
+export function ScheduleFiltersSkeleton({ weeks }: { weeks: MatchDay[] }) {
+	return (
+		<div className="mb-12 space-y-6">
+			<div className="flex flex-wrap items-center gap-3">
+				<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+					Rama:
+				</span>
+				<div className="flex flex-wrap gap-2">
+					<Button
+						size="sm"
+						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+					>
+						Ambas
+					</Button>
+					<Button
+						size="sm"
+						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+					>
+						Varonil
+					</Button>
+					<Button
+						size="sm"
+						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+					>
+						Femenil
+					</Button>
+				</div>
+			</div>
+
+			{/* Divider */}
+			<div className="h-[2px] bg-foreground" />
+
+			{/* Week and Team Filters - Side by Side */}
+			<div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
+				{/* Week Filter */}
+				<div className="flex flex-wrap items-center gap-3">
+					<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+						Semana:
+					</span>
+					<div className="flex flex-wrap gap-2">
+						{weeks.map((week) => (
+							<Button
+								key={week.id}
+								size="sm"
+								className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+							>
+								{week.week}
+							</Button>
+						))}
+					</div>
+				</div>
+			</div>
+
+			{/* Bottom Divider */}
+			<div className="h-[4px] bg-foreground" />
+		</div>
+	);
+}
+
+export function ScheduleFiltersSkeletonRaw() {
+	return (
+		<div className="mb-12 space-y-6">
+			<div className="flex flex-wrap items-center gap-3">
+				<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+					Rama:
+				</span>
+				<div className="flex flex-wrap gap-2">
+					<Button
+						size="sm"
+						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+					>
+						Ambas
+					</Button>
+					<Button
+						size="sm"
+						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+					>
+						Varonil
+					</Button>
+					<Button
+						size="sm"
+						className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+					>
+						Femenil
+					</Button>
+				</div>
+			</div>
+
+			{/* Divider */}
+			<div className="h-[2px] bg-foreground" />
+
+			{/* Week and Team Filters - Side by Side */}
+			<div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
+				{/* Week Filter */}
+				<div className="flex flex-wrap items-center gap-3">
+					<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+						Semana:
+					</span>
+					<div className="flex flex-wrap gap-2">
+						{Array.from({ length: 13 }, (_, i) => ({
+							id: i + 1,
+							week: `Week ${i + 1}`,
+						})).map((week, i) => (
+							<Button
+								key={week.id}
+								size="sm"
+								style={{
+									width: `${144 * (i % 2 === 0 ? 1 : 0.75)}px`,
+								}}
+								className={`w-36 hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+							></Button>
+						))}
+					</div>
+				</div>
+			</div>
+
+			{/* Bottom Divider */}
+			<div className="h-[4px] bg-foreground" />
+		</div>
+	);
+}
