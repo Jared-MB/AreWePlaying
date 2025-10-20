@@ -3,8 +3,8 @@
 import type { MatchDay } from "@/types/match-day";
 
 import { Button } from "@/components/ui/button";
-import { useEffect, useMemo, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { isAfter, parse } from "date-fns";
 import { PrefetchLink } from "./prefetch-link";
 
@@ -25,14 +25,7 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 	const params = useSearchParams();
 
 	const selectedWeek = params.get("week") ?? currentWeek?.id;
-
 	const [selectedLeague, setSelectedLeague] = useState<string>("all");
-
-	const router = useRouter();
-
-	useEffect(() => {
-		router.replace(`?week=${selectedWeek}`);
-	}, [selectedWeek]);
 
 	return (
 		<div className="mb-12 space-y-6">
