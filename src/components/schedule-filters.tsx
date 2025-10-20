@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { isAfter, parse } from "date-fns";
+import { PrefetchLink } from "./prefetch-link";
 
 export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 	const currentWeek = useMemo(() => {
@@ -23,9 +24,7 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 
 	const params = useSearchParams();
 
-	const [selectedWeek, setSelectedWeek] = useState<string>(
-		params.get("week") ?? currentWeek?.id ?? "all",
-	);
+	const selectedWeek = params.get("week") ?? currentWeek?.id ?? "all";
 
 	const [selectedLeague, setSelectedLeague] = useState<string>("all");
 
@@ -93,15 +92,17 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 						{weeks.map((week) => (
 							<Button
 								key={week.id}
-								onClick={() => setSelectedWeek(week.id)}
 								size="sm"
+								asChild
 								className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
 									selectedWeek === week.id
 										? "bg-foreground text-background"
 										: "bg-background text-foreground"
 								}`}
 							>
-								{week.week}
+								<PrefetchLink href={`?week=${week.id}`}>
+									{week.week}
+								</PrefetchLink>
 							</Button>
 						))}
 					</div>
