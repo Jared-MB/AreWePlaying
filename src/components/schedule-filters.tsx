@@ -144,18 +144,17 @@ export function ScheduleFiltersSkeleton() {
 					<span className="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1">
 						Semana:
 					</span>
-					{Array.from({ length: 13 }, (_, i) => ({
+					{Array.from({ length: 18 }, (_, i) => ({
 						id: i + 1,
 						week: `Week ${i + 1}`,
-					})).map((week, i) => (
+					})).map((week) => (
 						<Button
 							key={week.id}
 							size="sm"
-							style={{
-								width: `${144 * (i % 2 === 0 ? 1 : 0.75)}px`,
-							}}
-							className={`w-36 hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
-						></Button>
+							className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+						>
+							Semana {week.id}
+						</Button>
 					))}
 				</div>
 			</div>
