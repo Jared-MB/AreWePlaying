@@ -31,7 +31,9 @@ export default function Home({
 						Are We Playing?
 					</HyperText>
 				</h1>
-				<AreWePlaying />
+				<Suspense>
+					<AreWePlaying />
+				</Suspense>
 			</header>
 			<Suspense fallback={<ScheduleFiltersSkeleton />}>
 				<ScheduleFilterWrapper />
