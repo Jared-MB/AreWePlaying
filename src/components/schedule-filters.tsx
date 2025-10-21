@@ -21,8 +21,10 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 	const router = useRouter();
 
 	useEffect(() => {
-		router.replace(`?week=${selectedWeek}`);
-	}, []);
+		if (!params.get("week")) {
+			router.replace(`?week=${selectedWeek}`);
+		}
+	}, [params]);
 
 	return (
 		<div className="mb-12 space-y-6">
