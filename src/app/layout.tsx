@@ -62,6 +62,7 @@ export default function RootLayout({
 								href="https://www.abemexico.org/"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label="Ver sitio oficial de la Liga ABE"
 							>
 								Liga ABE
 							</Link>

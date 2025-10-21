@@ -14,14 +14,18 @@ export function ScheduleHeader() {
 							className="text-sm font-bold uppercase tracking-wider hover:!bg-primary hover:text-primary-foreground"
 							asChild
 						>
-							<Link href="/">Horarios</Link>
+							<Link href="/" aria-label="Ver horarios">
+								Horarios
+							</Link>
 						</Button>
 						<Button
 							variant="ghost"
 							className="text-sm font-bold uppercase tracking-wider hover:!bg-primary hover:text-primary-foreground"
 							asChild
 						>
-							<Link href="/teams">Equipos</Link>
+							<Link href="/teams" aria-label="Ver equipos">
+								Equipos
+							</Link>
 						</Button>
 						{/* <Button
 							variant="ghost"

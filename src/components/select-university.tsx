@@ -26,7 +26,11 @@ export function SelectUniversity() {
 
 	return (
 		<Select value={selectedUniversity} onValueChange={setSelectedUniversity}>
-			<SelectTrigger className="w-[164px] md:w-[240px]">
+			<SelectTrigger
+				className="w-[164px] md:w-[240px]"
+				name="SelectUniversity"
+				aria-label="Selecciona tu universidad"
+			>
 				<SelectValue placeholder="Selecciona tu equipo" />
 			</SelectTrigger>
 			<SelectContent>
