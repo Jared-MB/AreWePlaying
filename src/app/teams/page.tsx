@@ -2,7 +2,6 @@ import { ViewTransition } from "react";
 import Link from "next/link";
 
 import { getTeamsTable } from "@/use-cases/get-teams-table";
-import { cn } from "@/lib/utils";
 import { TeamCard } from "@/components/team-card";
 
 export default async function TeamsPage() {
