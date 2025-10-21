@@ -5,7 +5,6 @@ import "./globals.css";
 import Link from "next/link";
 import { GithubIcon } from "lucide-react";
 import { ScheduleHeader } from "@/components/schedule-header";
-import { ViewTransition } from "react";
 import { DevDropdown } from "suspense-fallback-debugger";
 import { Providers } from "./providers";
 
@@ -46,7 +45,7 @@ export default function RootLayout({
 					<DevDropdown />
 					<main className="min-h-screen bg-background">
 						<ScheduleHeader />
-						<ViewTransition>{children}</ViewTransition>
+						{children}
 					</main>
 					<footer className="border-t-2 border-foreground bg-background py-4 px-6 flex w-full items-center justify-between">
 						<span className="text-muted-foreground text-xs text-pretty max-w-[75dvw]">
