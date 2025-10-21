@@ -40,6 +40,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="es">
+			<head>
+				<meta
+					name="google-site-verification"
+					content="vhnEvLSZ4cAdbDdRlkwQdS8jq2PFCV1C3j1HWywmR6o"
+				/>
+			</head>
 			<Providers>
 				<body className={`${spaceMono.variable} font-sans antialiased`}>
 					<DevDropdown />
