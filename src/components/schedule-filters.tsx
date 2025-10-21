@@ -151,7 +151,7 @@ export function ScheduleFiltersSkeleton() {
 						<Button
 							key={week.id}
 							size="sm"
-							className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${"bg-background text-foreground"}`}
+							className="duration-300 hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-background text-foreground"
 						>
 							Semana {week.id}
 						</Button>
