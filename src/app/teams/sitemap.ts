@@ -2,11 +2,9 @@ import type { MetadataRoute } from "next";
 import teams from "@/assets/teams.json";
 
 export async function generateSitemaps() {
-	return teams.map((team) => [
-		{
-			id: team.id,
-		},
-	]);
+	return teams.map((team) => ({
+		id: team.id,
+	}));
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
