@@ -9,17 +9,13 @@ export function useCurrentWeek(weeks: MatchDay[]) {
 	const currentWeek = useMemo(() => {
 		const currentDate = new Date();
 
-		for (const matchDay of weeks) {
-			if (
-				isAfter(parse(matchDay.date, "dd/MM/yyyy", new Date()), currentDate)
-			) {
-				const index = weeks.indexOf(matchDay);
-				return { currentWeek: weeks[index - 1], today: currentDate };
-			}
-		}
+		const matchDay = weeks.findLast((day) => {
+			const dayDate = parse(day.date, "dd/MM/yyyy", new Date());
+			return !isAfter(dayDate, currentDate);
+		});
 
 		return {
-			currentWeek: undefined,
+			currentWeek: matchDay,
 			today: currentDate,
 		};
 	}, [weeks]);
