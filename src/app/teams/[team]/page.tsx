@@ -6,6 +6,8 @@ import { getTeams } from "@/use-cases/get-teams";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { ViewTransition } from "react";
+import { PastMatches } from "./past-matches";
+import { UpcomingMatches } from "./upcoming-matches";
 
 export async function generateStaticParams() {
 	const teams = await getTeams();
@@ -65,7 +67,6 @@ export async function generateMetadata(
 
 export default async function TeamPage({ params }: PageProps<"/teams/[team]">) {
 	const teamId = (await params).team;
-
 	const team = await getTeamPosition(teamId);
 
 	if (!team) {
@@ -73,7 +74,7 @@ export default async function TeamPage({ params }: PageProps<"/teams/[team]">) {
 	}
 
 	return (
-		<div className="p-4 md:p-8">
+		<main className="p-4 md:p-8">
 			<div className="mx-auto max-w-7xl">
 				{/* Back Link */}
 				<Link
@@ -84,19 +85,18 @@ export default async function TeamPage({ params }: PageProps<"/teams/[team]">) {
 				</Link>
 
 				{/* Team Header */}
-				<div className="mb-8 border-b-4 border-foreground pb-6">
+				<header className="mb-8 border-b-4 border-foreground pb-6">
 					<div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-						<div className="flex items-start gap-4">
-							<div className="flex h-24 w-24 items-center justify-center border-4 border-foreground bg-primary text-3xl font-bold text-primary-foreground">
+						<div className="grid grid-cols-[auto_1fr] gap-4 max-w-[75%]">
+							<div className="flex size-20 items-center justify-center border-4 border-foreground bg-primary text-3xl font-bold text-primary-foreground">
 								{team.shortName.split(" ")[0].substring(0, 3)}
 							</div>
-							<div>
-								<h1 className="font-mono text-4xl font-bold uppercase tracking-wider md:text-6xl">
-									<ViewTransition name={`team-${teamId}`}>
-										<span>{team.shortName}</span>
-									</ViewTransition>
-								</h1>
-								{/*<div
+							<h1 className="font-mono text-4xl font-bold uppercase tracking-wider md:text-6xl">
+								<ViewTransition name={`team-${teamId}`}>
+									<span className="text-balance">{team.shortName}</span>
+								</ViewTransition>
+							</h1>
+							{/*<div
 									className={`mt-2 inline-block border border-foreground px-3 py-1 text-sm font-bold uppercase tracking-wider ${
 										team.league === "varonil"
 											? "bg-primary text-primary-foreground"
@@ -105,30 +105,29 @@ export default async function TeamPage({ params }: PageProps<"/teams/[team]">) {
 								>
 									{team.league}
 								</div>*/}
-							</div>
 						</div>
 
 						{/* Team Stats */}
-						<div className="flex gap-4">
-							<div className="border-2 border-foreground bg-card p-4 text-center">
+						<section className="flex gap-4">
+							<article className="border-2 border-foreground bg-card p-4 text-center">
 								<div className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
 									Record
 								</div>
 								<div className="mt-1 font-mono text-2xl font-bold">
 									{team.wins}W - {team.losses}L
 								</div>
-							</div>
-							<div className="border-2 border-foreground bg-card p-4 text-center">
+							</article>
+							<article className="border-2 border-foreground bg-card p-4 text-center">
 								<div className="text-sm font-bold uppercase tracking-wider text-muted-foreground">
 									Win Rate
 								</div>
 								<div className="mt-1 font-mono text-3xl font-bold text-primary">
-									{team.wr}%
+									{team.percentage}%
 								</div>
-							</div>
-						</div>
+							</article>
+						</section>
 					</div>
-				</div>
+				</header>
 
 				{/* Players Section */}
 				{/*<div className="mb-8">
@@ -190,97 +189,24 @@ export default async function TeamPage({ params }: PageProps<"/teams/[team]">) {
 				</div>*/}
 
 				{/* Matches Section */}
-				<div className="grid gap-8 md:grid-cols-2">
+				<section className="grid gap-8 md:grid-cols-2">
 					{/* Past Matches */}
-					{/*<div>
+					<article>
 						<h2 className="mb-4 border-b-2 border-foreground pb-2 font-mono text-3xl font-bold uppercase tracking-wider">
-							PAST MATCHES
+							PARTIDOS PASADOS
 						</h2>
-						{team.pastMatches.length > 0 ? (
-							<div className="space-y-3">
-								{team.pastMatches.map((match, index) => (
-									<Card
-										key={index}
-										className="border-2 border-foreground bg-card p-0 shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)]"
-									>
-										<div className="p-4">
-											<div className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-												{match.date}
-											</div>
-											<div className="mb-2 flex items-center gap-2">
-												<div
-													className={`border-2 border-foreground px-3 py-1 font-mono text-lg font-bold ${
-														match.result === "W"
-															? "bg-primary text-primary-foreground"
-															: "bg-destructive text-destructive-foreground"
-													}`}
-												>
-													{match.result}
-												</div>
-												<div className="font-mono text-2xl font-bold">
-													{match.score}
-												</div>
-											</div>
-											<div className="font-mono text-sm font-bold uppercase tracking-wide">
-												vs {match.opponent}
-											</div>
-											<div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
-												{match.venue}
-											</div>
-										</div>
-									</Card>
-								))}
-							</div>
-						) : (
-							<div className="border-2 border-foreground bg-muted p-6 text-center">
-								<p className="font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground">
-									NO PAST MATCHES
-								</p>
-							</div>
-						)}
-					</div>*/}
+						<PastMatches teamId={teamId} />
+					</article>
 
 					{/* Upcoming Matches */}
-					{/*<div>
+					<article>
 						<h2 className="mb-4 border-b-2 border-foreground pb-2 font-mono text-3xl font-bold uppercase tracking-wider">
-							UPCOMING MATCHES
+							PARTIDOS FUTUROS
 						</h2>
-						{team.upcomingMatches.length > 0 ? (
-							<div className="space-y-3">
-								{team.upcomingMatches.map((match, index) => (
-									<Card
-										key={index}
-										className="border-2 border-foreground bg-card p-0 shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)]"
-									>
-										<div className="p-4">
-											<div className="mb-2 flex items-center justify-between">
-												<div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-													{match.date}
-												</div>
-												<div className="font-mono text-sm font-bold">
-													{match.time}
-												</div>
-											</div>
-											<div className="mb-2 font-mono text-lg font-bold uppercase tracking-wide">
-												vs {match.opponent}
-											</div>
-											<div className="text-xs uppercase tracking-wider text-muted-foreground">
-												{match.venue}
-											</div>
-										</div>
-									</Card>
-								))}
-							</div>
-						) : (
-							<div className="border-2 border-foreground bg-muted p-6 text-center">
-								<p className="font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground">
-									NO UPCOMING MATCHES
-								</p>
-							</div>
-						)}
-					</div>*/}
-				</div>
+						<UpcomingMatches teamId={teamId} />
+					</article>
+				</section>
 			</div>
-		</div>
+		</main>
 	);
 }

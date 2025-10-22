@@ -12,10 +12,10 @@ export default async function TeamsPage() {
 	const otherTeams = sortedTeams.slice(1);
 
 	return (
-		<div className="min-h-screen bg-background">
+		<main className="min-h-screen bg-background">
 			<div className="p-4 md:p-8">
 				<div className="mx-auto max-w-7xl">
-					<div className="mb-12 border-8 border-foreground bg-foreground p-8 text-background shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+					<header className="mb-12 border-8 border-foreground bg-foreground p-8 text-background shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
 						<h1 className="font-mono text-7xl font-bold uppercase leading-none tracking-tighter md:text-9xl">
 							TEAMS
 						</h1>
@@ -45,7 +45,7 @@ export default async function TeamsPage() {
 								</div>
 							</div>*/}
 						</div>
-					</div>
+					</header>
 
 					<Link href={`/teams/${topTeam.id}`} className="group mb-8 block">
 						<div className="border-4 border-foreground bg-primary shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -98,13 +98,13 @@ export default async function TeamsPage() {
 						</div>
 					</Link>
 
-					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6">
+					<section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6">
 						{otherTeams.map((team) => (
 							<TeamCard key={team.id} team={team} />
 						))}
-					</div>
+					</section>
 				</div>
 			</div>
-		</div>
+		</main>
 	);
 }

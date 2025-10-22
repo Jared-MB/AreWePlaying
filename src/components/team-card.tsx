@@ -34,9 +34,9 @@ export function TeamCard({ team }: { team: TeamPosition }) {
 
 				<div className="p-6">
 					<div className="mb-4 flex items-start justify-between gap-4">
-						<div className="flex h-16 w-16 shrink-0 items-center justify-center border-2 border-foreground bg-foreground text-lg font-bold text-background">
+						<span className="flex h-16 w-16 shrink-0 items-center justify-center border-2 border-foreground bg-foreground text-lg font-bold text-background">
 							{team.shortName.split(" ")[0].substring(0, 3)}
-						</div>
+						</span>
 
 						{/*<div
 												className={`border border-foreground px-2 py-1 text-xs font-bold uppercase tracking-wider ${
