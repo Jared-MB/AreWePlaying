@@ -7,6 +7,7 @@ import { ViewTransition } from "react";
 
 import { cn } from "@/lib/utils";
 import { useUniversity } from "@/hooks/use-university";
+import { Skeleton } from "./ui/skeleton";
 
 export function TeamCard({ team }: { team: TeamPosition }) {
 	const university = useUniversity((state) => state.university);
@@ -15,7 +16,7 @@ export function TeamCard({ team }: { team: TeamPosition }) {
 		<Link
 			key={team.id}
 			href={`/teams/${team.id}`}
-			className={cn("group block basis-1/3")}
+			className="group block basis-1/3"
 		>
 			<div
 				className={cn(
@@ -84,5 +85,47 @@ export function TeamCard({ team }: { team: TeamPosition }) {
 				</div>
 			</div>
 		</Link>
+	);
+}
+
+export function TeamCardSkeleton() {
+	return (
+		<div className="group block basis-1/3">
+			<div className="h-full border-4 border-foreground bg-card transition-all hover:translate-x-[2px] hover:translate-y-[2px] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+				<div className="relative h-3 border-b-4 border-foreground bg-muted"></div>
+
+				<div className="p-6">
+					<div className="mb-4 flex items-start justify-between gap-4">
+						<span className="flex h-16 w-16 shrink-0 items-center justify-center border-2 border-foreground bg-foreground text-lg font-bold text-background"></span>
+
+						{/*<div
+											className={`border border-foreground px-2 py-1 text-xs font-bold uppercase tracking-wider ${
+												team.league === "varonil"
+													? "bg-primary text-primary-foreground"
+													: "bg-secondary text-secondary-foreground"
+											}`}
+										>
+											{team.league}
+										</div>*/}
+						<div className="font-mono font-bold text-lg size-10 bg-primary text-primary-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] grid place-items-center"></div>
+					</div>
+
+					<h2 className="mb-4 font-mono text-xl font-bold uppercase leading-tight tracking-tight">
+						<Skeleton className="h-6 w-32" />
+					</h2>
+
+					<div className="flex items-end justify-between border-t-4 border-foreground pt-5">
+						<div>
+							<Skeleton className="h-7 w-24" />
+							<Skeleton className="h-3 w-16 mt-2" />
+						</div>
+						<div className="flex items-end flex-col">
+							<Skeleton className="h-7 w-24" />
+							<Skeleton className="h-3 w-16 mt-2" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	);
 }
