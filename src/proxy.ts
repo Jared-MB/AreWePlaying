@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import matchDaysData from "@/assets/match-days.json";
 import { isAfter, parse } from "date-fns";
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
 	const searchParams = request.nextUrl.searchParams;
 	const week = searchParams.get("week");
 
