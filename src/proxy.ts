@@ -1,12 +1,17 @@
 import { type NextRequest, NextResponse } from "next/server";
 import matchDaysData from "@/assets/match-days.json";
 import { isAfter, parse } from "date-fns";
+import { match } from "path-to-regexp";
+
+const weekFn = match("/week/:id");
 
 export async function proxy(request: NextRequest) {
-	const searchParams = request.nextUrl.searchParams;
-	const week = searchParams.get("week");
+	console.log("Proxying request");
 
-	if (week) {
+	const pathname = request.nextUrl.pathname;
+	const result = weekFn(pathname);
+
+	if (result) {
 		return NextResponse.next();
 	}
 
@@ -19,9 +24,13 @@ export async function proxy(request: NextRequest) {
 
 	const matchDayId = matchDay?.id;
 
-	return NextResponse.redirect(new URL(`?week=${matchDayId}`, request.url));
+	if (request.nextUrl.pathname === "/week") {
+		return NextResponse.redirect(new URL(`/week/${matchDayId}`, request.url));
+	}
+
+	return NextResponse.rewrite(new URL(`/week/${matchDayId}`, request.url));
 }
 
 export const config = {
-	matcher: "/",
+	matcher: ["/", "/week"],
 };

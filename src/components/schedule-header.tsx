@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { SelectUniversity } from "./select-university";
+import { GoToMain } from "./go-to-main";
 
 export function ScheduleHeader() {
 	return (
@@ -14,9 +15,7 @@ export function ScheduleHeader() {
 							className="text-sm font-bold uppercase tracking-wider hover:!bg-primary hover:text-primary-foreground"
 							asChild
 						>
-							<Link href="/" aria-label="Ver horarios">
-								Horarios
-							</Link>
+							<GoToMain />
 						</Button>
 						<Button
 							variant="ghost"

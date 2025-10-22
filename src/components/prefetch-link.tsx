@@ -1,18 +1,14 @@
 "use client";
 
-import type { Route } from "next";
 import Link from "next/link";
-import { useState } from "react";
+import { type ComponentProps, useState } from "react";
 
 export function PrefetchLink({
 	href,
 	children,
 	className,
-}: {
-	href: Route;
-	children: React.ReactNode;
-	className?: string;
-}) {
+	...props
+}: ComponentProps<typeof Link>) {
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (
@@ -22,6 +18,7 @@ export function PrefetchLink({
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
 			prefetch={isHovered}
+			{...props}
 		>
 			{children}
 		</Link>

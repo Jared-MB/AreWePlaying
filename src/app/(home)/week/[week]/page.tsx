@@ -1,5 +1,3 @@
-import type { ReadonlyURLSearchParams } from "next/navigation";
-
 import { Suspense } from "suspense-fallback-debugger";
 
 import {
@@ -18,11 +16,15 @@ import { getWeekById } from "@/use-cases/get-week-by-id";
 import { HyperText } from "@/components/ui/hyper-text";
 import { AreWePlaying } from "@/components/are-we-playing";
 
-export default function Home({
-	searchParams,
-}: {
-	searchParams: Promise<ReadonlyURLSearchParams>;
-}) {
+export async function generateStaticParams() {
+	const weeks = await getMatchDays();
+
+	return weeks.map((week) => ({
+		week: week.id,
+	}));
+}
+
+export default function WeekPage({ params }: PageProps<"/week/[week]">) {
 	return (
 		<main
 			className="container mx-auto px-4 py-8 md:py-12"
@@ -58,7 +60,7 @@ export default function Home({
 					</div>
 				</header>
 				<Suspense fallback={<ScheduleTableSkeleton />}>
-					<ScheduleTableWrapper searchParams={searchParams} />
+					<ScheduleTableWrapper params={params} />
 				</Suspense>
 			</section>
 		</main>
@@ -66,22 +68,23 @@ export default function Home({
 }
 
 async function ScheduleTableWrapper({
-	searchParams,
+	params,
 }: {
-	searchParams: Promise<ReadonlyURLSearchParams>;
+	params: Promise<{ week: string }>;
 }) {
-	const params = new URLSearchParams(await searchParams);
-	const currentWeekParam = params.get("week") ?? undefined;
+	"use cache";
+	const { week: weekId } = await params;
 
 	const [matches, week] = await Promise.all([
-		getMatchesByWeek(currentWeekParam),
-		getWeekById(currentWeekParam),
+		getMatchesByWeek(weekId),
+		getWeekById(weekId),
 	]);
 
 	return <ScheduleTable matches={matches} week={week} />;
 }
 
 async function ScheduleFilterWrapper() {
+	"use cache";
 	const matchDays = await getMatchDays();
 
 	return <ScheduleFilters weeks={matchDays} />;

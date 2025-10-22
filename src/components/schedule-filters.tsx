@@ -1,20 +1,21 @@
 "use client";
 
 import type { MatchDay } from "@/types/match-day";
+import type { Route } from "next";
 
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { PrefetchLink } from "./prefetch-link";
 import { SelectUniversity } from "./select-university";
 import { useCurrentWeek } from "@/hooks/use-current-week";
+import { useParams } from "next/navigation";
 
 export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 	const week = useCurrentWeek(weeks);
 
-	const params = useSearchParams();
+	const params = useParams();
 
-	const selectedWeek = params.get("week") ?? week.currentWeek?.id;
+	const selectedWeek = params?.week ?? week.currentWeek?.id;
 
 	const [selectedLeague, setSelectedLeague] = useState<string>("femenil");
 
@@ -88,7 +89,9 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 									: "bg-background text-foreground"
 							}`}
 						>
-							<PrefetchLink href={`?week=${week.id}`}>{week.week}</PrefetchLink>
+							<PrefetchLink href={`/week/${week.id}` as Route}>
+								{week.week}
+							</PrefetchLink>
 						</Button>
 					))}
 				</div>
