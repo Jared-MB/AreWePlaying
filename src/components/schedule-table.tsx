@@ -177,7 +177,7 @@ export function ScheduleTableSkeleton() {
 								<div className="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
 									Fecha
 								</div>
-								<Skeleton className="h-5 w-24" />
+								<Skeleton className="h-5 w-24 mt-2 md:mt-0" />
 								<Skeleton className="h-4 w-22 mt-1" />
 								<div className="mt-3 flex flex-wrap gap-2">
 									<Skeleton className="h-5 w-20" />
@@ -229,7 +229,7 @@ export function ScheduleTableSkeleton() {
 							</div>
 
 							{/* Status */}
-							<div className="col-span-12 md:col-span-2 flex">
+							<div className="col-span-12 md:col-span-2">
 								<div className="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
 									Estatus
 								</div>
