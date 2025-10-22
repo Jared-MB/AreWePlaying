@@ -6,8 +6,6 @@ import { match } from "path-to-regexp";
 const weekFn = match("/week/:id");
 
 export async function proxy(request: NextRequest) {
-	console.log("Proxying request");
-
 	const pathname = request.nextUrl.pathname;
 	const result = weekFn(pathname);
 
