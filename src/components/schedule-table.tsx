@@ -7,6 +7,7 @@ import type { MatchDay } from "@/types/match-day";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { useUniversity } from "@/hooks/use-university";
+import { Skeleton } from "./ui/skeleton";
 
 export function ScheduleTable({
 	matches,
@@ -19,33 +20,16 @@ export function ScheduleTable({
 
 	return (
 		<div className="space-y-4">
-			{/* Desktop Table Header */}
-			<div className="hidden border-b-2 border-foreground pb-4 md:grid md:grid-cols-12 md:gap-4">
-				<div className="col-span-2 text-sm font-bold uppercase tracking-wider text-muted-foreground">
-					Fecha
-				</div>
-				<div className="col-span-5 text-sm font-bold uppercase tracking-wider text-muted-foreground">
-					Equipos
-				</div>
-				<div className="col-span-3 text-sm font-bold uppercase tracking-wider text-muted-foreground">
-					Lugar
-				</div>
-				<div className="col-span-2 text-sm font-bold uppercase tracking-wider text-muted-foreground">
-					Estatus
-				</div>
-			</div>
-
-			{/* Games List */}
 			{matches.map((game) => (
 				<Card
 					key={game.matchId}
 					className={`
-					${game.localTeamId === university || game.visitingTeamId === university ? " border-3" : "border-2"}
-					${game.localTeamId === university || game.visitingTeamId === university ? "border-primary" : "border-foreground"}
-					${game.localTeamId === university || game.visitingTeamId === university ? "bg-primary/20" : "bg-card"}
-					 p-0 shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none`}
+							${game.localTeamId === university || game.visitingTeamId === university ? " border-3" : "border-2"}
+							${game.localTeamId === university || game.visitingTeamId === university ? "border-primary" : "border-foreground"}
+							${game.localTeamId === university || game.visitingTeamId === university ? "bg-primary/20" : "bg-card"}
+							 p-0 shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none rounded-none`}
 				>
-					<div className="grid gap-4 p-6 md:grid-cols-12 md:items-center">
+					<article className="grid gap-4 p-6 md:grid-cols-12 md:items-center">
 						{/* Time */}
 						<div className="col-span-12 md:col-span-2">
 							<div className="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
@@ -60,14 +44,14 @@ export function ScheduleTable({
 									{week?.week}
 								</div>
 								{/* <div
-									className={`inline-block border border-foreground px-2 py-0.5 text-xs font-bold uppercase tracking-wider ${
-										game.league === "varonil"
-											? "bg-primary text-primary-foreground"
-											: "bg-secondary text-secondary-foreground"
-									}`}
-								>
-									{game.league}
-								</div> */}
+											className={`inline-block border border-foreground px-2 py-0.5 text-xs font-bold uppercase tracking-wider ${
+												game.league === "varonil"
+													? "bg-primary text-primary-foreground"
+													: "bg-secondary text-secondary-foreground"
+											}`}
+										>
+											{game.league}
+										</div> */}
 							</div>
 						</div>
 
@@ -170,9 +154,90 @@ export function ScheduleTable({
 										: "COMPLETADO"}
 							</div>
 						</div>
-					</div>
+					</article>
 				</Card>
 			))}
+		</div>
+	);
+}
+
+export function ScheduleTableSkeleton() {
+	return (
+		<div className="space-y-4">
+			{Array.from({ length: 6 })
+				.fill(0)
+				.map((_, i) => (
+					<Card
+						key={i}
+						className="border-2 border-foreground bg-card p-0 shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)] transition-all hover:translate-x-[2px] rounded-none hover:translate-y-[2px] hover:shadow-none"
+					>
+						<article className="grid gap-4 p-6 md:grid-cols-12 md:items-center">
+							{/* Time */}
+							<div className="col-span-12 md:col-span-2">
+								<div className="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
+									Fecha
+								</div>
+								<Skeleton className="h-5 w-24" />
+								<Skeleton className="h-4 w-22 mt-1" />
+								<div className="mt-3 flex flex-wrap gap-2">
+									<Skeleton className="h-5 w-20" />
+									{/* <div
+											className={`inline-block border border-foreground px-2 py-0.5 text-xs font-bold uppercase tracking-wider ${
+												game.league === "varonil"
+													? "bg-primary text-primary-foreground"
+													: "bg-secondary text-secondary-foreground"
+											}`}
+										>
+											{game.league}
+										</div> */}
+								</div>
+							</div>
+
+							{/* Matchup */}
+							<div className="col-span-12 md:col-span-5">
+								<div className="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
+									Equipos
+								</div>
+								<div className="space-y-2">
+									<div className="flex items-center gap-3">
+										<div className="flex size-10 items-center justify-center border-2 border-foreground bg-primary text-xs font-bold text-primary-foreground"></div>
+										<div className="flex flex-1 items-center justify-between">
+											<Skeleton className="h-5 w-48" />
+											<div className="border-2 border-foreground px-4 py-1 text-2xl font-bold bg-muted text-muted-foreground">
+												-
+											</div>
+										</div>
+									</div>
+									<div className="flex items-center gap-3">
+										<div className="flex h-10 w-10 items-center justify-center border-2 border-foreground bg-secondary text-xs font-bold text-secondary-foreground"></div>
+										<div className="flex flex-1 items-center justify-between">
+											<Skeleton className="h-5 w-40" />
+											<div className="border-2 border-foreground px-4 py-1 text-2xl font-bold bg-muted text-muted-foreground">
+												-
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							{/* Venue */}
+							<div className="col-span-12 md:col-span-3">
+								<div className="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
+									Lugar
+								</div>
+								<Skeleton className="h-5 w-32" />
+							</div>
+
+							{/* Status */}
+							<div className="col-span-12 md:col-span-2 flex">
+								<div className="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
+									Estatus
+								</div>
+								<Skeleton className="h-7 w-30" />
+							</div>
+						</article>
+					</Card>
+				))}
 		</div>
 	);
 }

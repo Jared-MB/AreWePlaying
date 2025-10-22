@@ -2,7 +2,10 @@ import type { ReadonlyURLSearchParams } from "next/navigation";
 
 import { Suspense } from "suspense-fallback-debugger";
 
-import { ScheduleTable } from "@/components/schedule-table";
+import {
+	ScheduleTable,
+	ScheduleTableSkeleton,
+} from "@/components/schedule-table";
 import {
 	ScheduleFilters,
 	ScheduleFiltersSkeleton,
@@ -38,9 +41,26 @@ export default function Home({
 			<Suspense fallback={<ScheduleFiltersSkeleton />}>
 				<ScheduleFilterWrapper />
 			</Suspense>
-			<Suspense>
-				<ScheduleTableWrapper searchParams={searchParams} />
-			</Suspense>
+			<section className="space-y-4">
+				{/* Desktop Table Header */}
+				<header className="hidden border-b-2 border-foreground pb-4 md:grid md:grid-cols-12 md:gap-4">
+					<div className="col-span-2 text-sm font-bold uppercase tracking-wider text-muted-foreground">
+						Fecha
+					</div>
+					<div className="col-span-5 text-sm font-bold uppercase tracking-wider text-muted-foreground">
+						Equipos
+					</div>
+					<div className="col-span-3 text-sm font-bold uppercase tracking-wider text-muted-foreground">
+						Lugar
+					</div>
+					<div className="col-span-2 text-sm font-bold uppercase tracking-wider text-muted-foreground">
+						Estatus
+					</div>
+				</header>
+				<Suspense fallback={<ScheduleTableSkeleton />}>
+					<ScheduleTableWrapper searchParams={searchParams} />
+				</Suspense>
+			</section>
 		</main>
 	);
 }
