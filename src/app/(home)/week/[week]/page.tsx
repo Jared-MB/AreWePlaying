@@ -84,7 +84,6 @@ async function ScheduleTableWrapper({
 }
 
 async function ScheduleFilterWrapper() {
-	"use cache";
 	const matchDays = await getMatchDays();
 
 	return <ScheduleFilters weeks={matchDays} />;
