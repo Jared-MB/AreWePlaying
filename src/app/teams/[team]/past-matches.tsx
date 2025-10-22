@@ -4,6 +4,7 @@ import { PrefetchLink } from "@/components/prefetch-link";
 import { Card } from "@/components/ui/card";
 import { getPastMatches } from "@/use-cases/get-past-matches";
 import Link from "next/link";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export async function PastMatches({ teamId }: { teamId: string }) {
 	const pastMatches = await getPastMatches(teamId);
@@ -42,7 +43,7 @@ export async function PastMatches({ teamId }: { teamId: string }) {
 									</div>
 									<div className="mb-2 flex items-center gap-2">
 										<div
-											className={`border-2 border-foreground px-3 py-1 font-mono text-lg font-bold ${
+											className={`border-2 border-foreground size-10 px-3 py-1 font-mono text-lg font-bold ${
 												isWin
 													? "bg-primary text-primary-foreground"
 													: "bg-destructive text-destructive-foreground"
@@ -87,5 +88,33 @@ export async function PastMatches({ teamId }: { teamId: string }) {
 				</div>
 			)}
 		</>
+	);
+}
+
+export async function PastMatchesSkeleton() {
+	return (
+		<div className="space-y-3">
+			{Array(5)
+				.fill(0)
+				.map((_, index) => (
+					<Card
+						key={index}
+						className="border-2 border-foreground bg-card p-0 shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)]"
+					>
+						<div className="p-4">
+							<div className="mb-2 flex items-center justify-between">
+								<Skeleton className="h-4 w-24 mb-2" />
+								<Skeleton className="h-5 w-24" />
+							</div>
+							<div className="mb-2 flex items-center gap-2">
+								<div className="border-2 size-10 border-foreground px-3 py-1 font-mono text-lg font-bold bg-primary text-primary-foreground"></div>
+								<Skeleton className="h-7 w-42" />
+							</div>
+							<Skeleton className="h-4 w-40 mt-1 mb-3" />
+							<Skeleton className="h-4 w-28" />
+						</div>
+					</Card>
+				))}
+		</div>
 	);
 }

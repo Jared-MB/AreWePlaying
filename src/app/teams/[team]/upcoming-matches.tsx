@@ -1,5 +1,6 @@
 import { PrefetchLink } from "@/components/prefetch-link";
 import { Card } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import { getUpcomingMatches } from "@/use-cases/get-upcoming-matches";
 import type { Route } from "next";
 import Link from "next/link";
@@ -71,5 +72,32 @@ export async function UpcomingMatches({ teamId }: { teamId: string }) {
 				</div>
 			)}
 		</>
+	);
+}
+
+export function UpcomingMatchesSkeleton() {
+	return (
+		<div className="space-y-3">
+			{Array(5)
+				.fill(0)
+				.map((_, index) => (
+					<Card
+						key={index}
+						className="border-2 border-foreground bg-card p-0 shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)]"
+					>
+						<div className="p-4">
+							<div className="mb-2 flex items-center justify-between">
+								<div className="flex flex-col gap-1.5">
+									<Skeleton className="h-4 w-24" />
+									<Skeleton className="h-4 w-24" />
+								</div>
+								<Skeleton className="h-5 w-24" />
+							</div>
+							<Skeleton className="h-6 w-48 mt-4 mb-4" />
+							<Skeleton className="h-3 w-32" />
+						</div>
+					</Card>
+				))}
+		</div>
 	);
 }
