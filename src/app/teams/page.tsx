@@ -5,6 +5,7 @@ import { getTeamsTable } from "@/use-cases/get-teams-table";
 import { TeamCard } from "@/components/team-card";
 
 export default async function TeamsPage() {
+	"use cache";
 	const teams = await getTeamsTable();
 
 	const sortedTeams = teams.toSorted((a, b) => a.position - b.position);
