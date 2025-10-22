@@ -5,10 +5,10 @@ import type { Route } from "next";
 
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { PrefetchLink } from "./prefetch-link";
 import { SelectUniversity } from "./select-university";
 import { useCurrentWeek } from "@/hooks/use-current-week";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 
 export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 	const week = useCurrentWeek(weeks);
@@ -89,9 +89,7 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 									: "bg-background text-foreground"
 							}`}
 						>
-							<PrefetchLink href={`/week/${week.id}` as Route}>
-								{week.week}
-							</PrefetchLink>
+							<Link href={`/week/${week.id}` as Route}>{week.week}</Link>
 						</Button>
 					))}
 				</div>
