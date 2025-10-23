@@ -16,7 +16,8 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
 	title: "Are We Playing?",
-	description: "Horario de partidos de la liga ABE",
+	metadataBase: new URL("https://areweplaying.vercel.app"),
+	description: "Partidos, estadísticas y calendario de la liga ABE",
 	keywords: [
 		"basketball",
 		"Mexico",
@@ -31,6 +32,12 @@ export const metadata: Metadata = {
 		"Horario de partidos ABE basketball",
 		"Partidos basketball",
 	],
+	openGraph: {
+		title: "Are We Playing?",
+		description: "Partidos, estadísticas y calendario de la liga ABE",
+		url: "https://areweplaying.vercel.app",
+		siteName: "Are We Playing?",
+	},
 };
 
 export default function RootLayout({
