@@ -22,16 +22,13 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 
 	const params = useSearchParams();
 
-	const [selectedWeek, setSelectedWeek] = useState<string | undefined>(
-		params.get("week") ?? week.currentWeek?.id,
-	);
+	const selectedWeek = params.get("week") ?? week.currentWeek?.id;
 
 	const [selectedLeague, setSelectedLeague] = useState<string>("femenil");
 
 	const router = useRouter();
 
 	const handleWeekChange = (week: string) => {
-		setSelectedWeek(week);
 		router.push(`?week=${week}`);
 	};
 
@@ -111,7 +108,7 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 							key={week.id}
 							size="sm"
 							asChild
-							className={`hidden md:inline-block duration-300 hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
+							className={`hidden md:grid place-content-center duration-300 hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
 								selectedWeek === week.id
 									? "bg-foreground text-background"
 									: "bg-background text-foreground"
@@ -178,7 +175,7 @@ export function ScheduleFiltersSkeleton() {
 						<Button
 							key={week.id}
 							size="sm"
-							className="hidden md:inline-block duration-300 hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-background text-foreground"
+							className="hidden md:grid place-content-center duration-300 hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-background text-foreground"
 						>
 							Semana {week.id}
 						</Button>
