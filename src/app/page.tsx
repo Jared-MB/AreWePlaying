@@ -28,9 +28,9 @@ export default function Home({
 			className="container mx-auto px-4 py-8 md:py-12"
 			suppressHydrationWarning
 		>
-			<header className="flex flex-col md:flex-row md:items-center md:justify-between gap-x-6">
+			<header className="flex flex-col md:flex-row md:items-center md:justify-between gap-x-6 mb-8">
 				<h1>
-					<HyperText className="mb-8 text-6xl font-bold uppercase md:text-8xl text-balance">
+					<HyperText className="text-6xl font-bold uppercase md:text-8xl text-balance">
 						Are We Playing?
 					</HyperText>
 				</h1>

@@ -57,6 +57,15 @@ export function AreWePlaying() {
 				disableForReducedMotion: true,
 			});
 			setHasThrownConfetti(true);
+
+			const matchId = `match-${university}`;
+			const matchCard = document.getElementById(matchId);
+
+			matchCard &&
+				window.scrollTo({
+					top: matchCard.offsetTop - 200,
+					behavior: "smooth",
+				});
 		}
 	}, [isPlaying]);
 
