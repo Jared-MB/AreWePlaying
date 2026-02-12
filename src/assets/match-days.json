@@ -124,5 +124,12 @@
     "type": "Temporada Regular",
     "id": "d8158055-fb2a-4d86-8b7b-a00706178775",
     "tournamentId": "066cc7c9-e88c-4595-8cf5-d5aaadf0aa33"
+  },
+  {
+    "date": "09/03/2026",
+    "week": "SEMANA 19",
+    "type": "Temporada Regular",
+    "id": "c0175c8f-c0af-4549-8841-338f9a80c048",
+    "tournamentId": "066cc7c9-e88c-4595-8cf5-d5aaadf0aa33"
   }
 ]
