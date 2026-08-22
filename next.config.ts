@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
 	reactCompiler: true,
 	typedRoutes: true,
 	experimental: {
-		viewTransition: true,
 		turbopackFileSystemCacheForDev: true,
 	},
 };
