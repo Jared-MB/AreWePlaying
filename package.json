@@ -6,7 +6,10 @@
 		"dev": "next dev --turbopack",
 		"build": "next build --turbopack",
 		"start": "next start",
-		"lint": "eslint"
+		"lint": "eslint",
+		"populate": "uv run src/scripts/populate.py",
+		"py:lint": "uv run ruff check src/scripts",
+		"py:format": "uv run ruff check --fix src/scripts && uv run ruff format src/scripts"
 	},
 	"dependencies": {
 		"@radix-ui/react-select": "2.2.6",
