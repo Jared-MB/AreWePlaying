@@ -5,6 +5,14 @@
 {
   "format_on_save": "on",
   "languages": {
+    "Python": {
+      "language_servers": ["ruff", "!pyright"],
+      "formatter": { "language_server": { "name": "ruff" } },
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+        "source.fixAll.ruff": true
+      }
+    },
     "JavaScript": {
       "formatter": { "language_server": { "name": "biome" } },
       "code_actions_on_format": {

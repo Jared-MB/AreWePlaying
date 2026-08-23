@@ -1,6 +1,8 @@
 {
     "recommendations": [
-        "biomejs.biome"
+        "biomejs.biome",
+        "charliermarsh.ruff",
+        "ms-python.python"
     ],
     "unwantedRecommendations": [
         "esbenp.prettier-vscode",
