@@ -31,11 +31,6 @@ We fetch match day and match data from third‑party endpoints and persist JSON 
 - Match days: `https://scoretdi2025-eta.vercel.app/api/jornadas?torneoID=066CC7C9-E88C-4595-8CF5-D5AAADF0AA33`
 - Matches by match day: `https://scoretdi2025-eta.vercel.app/api/partidos?jornadaID=<MATCH_DAY_ID>`
 
-Scripts and outputs:
-
-- `src/scripts/search-match-days.ts` → writes `src/assets/match-days.json`
-- `src/scripts/search-matches.ts` → reads `src/assets/match-days.json` and writes `src/assets/matches.json`
-
 These files act as a local cache for development and testing.
 
 ## Project Structure
@@ -51,7 +46,7 @@ These files act as a local cache for development and testing.
 │   │   ├── page.tsx    # Home page (UI entry)
 │   │   └── globals.css # Tailwind + theme variables
 │   ├── assets/         # Generated JSON data (match days, matches)
-│   └── scripts/        # TypeScript scripts to fetch/prepare data
+│   └── scripts/        # Python scripts to fetch/prepare data
 └── ...
 ```
 
@@ -61,6 +56,11 @@ These files act as a local cache for development and testing.
 
 - Node.js `>= 18`
 - Package manager: `pnpm` (recommended), or `npm`/`yarn`
+
+Only needed to run the data scripts (`pnpm populate`):
+
+- Python `>= 3.13`
+- [`uv`](https://docs.astral.sh/uv/getting-started/installation/) — install with `curl -LsSf https://astral.sh/uv/install.sh | sh`
 
 ### Install
 
@@ -79,13 +79,15 @@ These files act as a local cache for development and testing.
 
 To refresh local JSON snapshots:
 
-- Fetch match days: `pnpm tsx src/scripts/search-match-days.ts`
-- Fetch matches for all match days: `pnpm tsx src/scripts/search-matches.ts`
+- `pnpm populate` → runs `uv run src/scripts/populate.py`
+
+This script is written in Python, so it requires Python `>= 3.13` and `uv`. You don't need to create a virtualenv or install anything by hand: `uv` reads `pyproject.toml` and resolves the Python version and dependencies on the first run.
 
 Tips:
 
 - Be mindful of third‑party rate limits and availability.
 - Re‑run these scripts when the league schedule updates.
+- Lint/format the Python scripts with `pnpm py:lint` and `pnpm py:format`.
 
 ## Deployment
 
