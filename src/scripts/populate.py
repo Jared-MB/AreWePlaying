@@ -90,13 +90,6 @@ def get_match_day(match_day):
 
     return week_matches
 
-
-LOGO_DIR = Path.cwd() / "public" / "logos"
-
-DATA_URL_RE = re.compile(r"^data:image/[a-zA-Z]+;base64,")
-HTTP_URL_RE = re.compile(r"^https?://")
-
-
 class ApiTeam(TypedDict):
     EquipoID: str
     Nombre: str
@@ -171,72 +164,24 @@ class TeamTableEntry(TypedDict):
     localPoints: int
     awayPoints: int
 
-
-def is_data_url(s: str) -> bool:
-    return bool(DATA_URL_RE.match(s))
-
-
-def is_http_url(s: str) -> bool:
-    return bool(HTTP_URL_RE.match(s))
-
-
-async def logo_to_buffer(session: aiohttp.ClientSession, logo: str) -> bytes:
-    if is_data_url(logo):
-        base64_part = logo.split(",", 1)[1] if "," in logo else ""
-        return base64.b64decode(base64_part)
-
-    if is_http_url(logo):
-        async with session.get(logo) as res:
-            return await res.read()
-
-    return base64.b64decode(logo)
-
-
-def ensure_logo_dir() -> None:
-    LOGO_DIR.mkdir(parents=True, exist_ok=True)
-
-
-def convert_to_avif(buffer: bytes, out_file_path: Path) -> None:
-    image = Image.open(io.BytesIO(buffer))
-    image.save(out_file_path, format="AVIF")
-
-
-async def process_team(session: aiohttp.ClientSession, team: ApiTeam) -> Team:
-    logo_out: str | None = None
-
-    if team.get("Logo"):
-        try:
-            buffer = await logo_to_buffer(session, team["Logo"])
-            file_name = f"{team['EquipoID']}.avif"
-            out_path = LOGO_DIR / file_name
-            convert_to_avif(buffer, out_path)
-            logo_out = f"/logos/{file_name}"
-        except Exception as err:
-            print(
-                f"Failed to process logo for team {team['NombreCorte']} "
-                f"({team['EquipoID']}): {err}",
-                file=sys.stderr,
-            )
-            logo_out = None
-
+async def process_team(team: ApiTeam) -> Team:
     return {
         "id": team["EquipoID"],
         "name": team["Nombre"],
         "shortName": team["NombreCorte"],
-        "logo": logo_out,
+        "logo": None,
     }
 
 
 async def fetch_teams(session: aiohttp.ClientSession) -> list[Team]:
-    """Fetch teams, process logos, persist to disk, and return the data."""
-    ensure_logo_dir()
+    """Fetch teams, persist to disk, and return the data."""
 
     async with session.get(API + "equipos?torneoID=" + TOURNAMENT_ID) as response:
         teams_response = await response.json()
         teams_data: list[ApiTeam] = json.loads(teams_response["data"])
 
     mapped_data = await asyncio.gather(
-        *(process_team(session, team) for team in teams_data)
+        *(process_team(team) for team in teams_data)
     )
     mapped_data = list(mapped_data)
 
