@@ -1,16 +1,11 @@
 import asyncio
-import base64
-import io
 import json
-import re
 import sys
 from pathlib import Path
 from typing import TypedDict
 
 import aiohttp
-import pillow_avif  # noqa: F401  (registra el plugin AVIF en Pillow)
 import requests
-from PIL import Image
 
 TOURNAMENT_ID = "066CC7C9-E88C-4595-8CF5-D5AAADF0AA33"
 API = "https://scoretdi2025-eta.vercel.app/api/"
@@ -90,6 +85,7 @@ def get_match_day(match_day):
 
     return week_matches
 
+
 class ApiTeam(TypedDict):
     EquipoID: str
     Nombre: str
@@ -164,6 +160,7 @@ class TeamTableEntry(TypedDict):
     localPoints: int
     awayPoints: int
 
+
 async def process_team(team: ApiTeam) -> Team:
     return {
         "id": team["EquipoID"],
@@ -180,9 +177,7 @@ async def fetch_teams(session: aiohttp.ClientSession) -> list[Team]:
         teams_response = await response.json()
         teams_data: list[ApiTeam] = json.loads(teams_response["data"])
 
-    mapped_data = await asyncio.gather(
-        *(process_team(team) for team in teams_data)
-    )
+    mapped_data = await asyncio.gather(*(process_team(team) for team in teams_data))
     mapped_data = list(mapped_data)
 
     Path("./src/assets/teams.json").write_text(
