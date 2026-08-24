@@ -3,10 +3,14 @@ import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getUpcomingMatches } from "@/use-cases/get-upcoming-matches";
 import type { Route } from "next";
+import { cacheLife } from "next/cache";
 import Link from "next/link";
 
 export async function UpcomingMatches({ teamId }: { teamId: string }) {
-	const upcomingMatches = await getUpcomingMatches(teamId);
+	"use cache";
+	cacheLife("days");
+
+	const upcomingMatches = getUpcomingMatches(teamId);
 
 	return (
 		<>

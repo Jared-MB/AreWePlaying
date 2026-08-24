@@ -1,7 +1,7 @@
 export interface Team {
 	id: string;
 	name: string;
-	logo?: string;
+	logo: string | null;
 	shortName: string;
 }
 
@@ -14,7 +14,7 @@ export interface TeamPosition {
 	localMatches: number;
 	awayMatches: number;
 	percentage: number;
-	wr: number;
+	wr: string;
 	wins: number;
 	losses: number;
 	localWins: number;

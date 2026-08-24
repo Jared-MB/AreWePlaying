@@ -1,22 +1,13 @@
-"use server";
-
 import type { Match } from "@/types/match";
 import { isAfter, parse } from "date-fns";
-import { cacheLife, cacheTag } from "next/cache";
-import fs from "node:fs/promises";
+import matchesData from "@/assets/matches.json";
 
-export async function getUpcomingMatches(teamId: string): Promise<Match[]> {
-	"use cache";
-	cacheLife("hours");
-	cacheTag(`upcoming-matches-${teamId}`);
+const matches = matchesData as { data: Match[]; id: string }[];
 
-	const matchesFile = await fs.readFile("./src/assets/matches.json", "utf8");
-
-	const matches = JSON.parse(matchesFile) as { data: Match[]; id: string }[];
-
+export function getUpcomingMatches(teamId: string): Match[] {
 	const today = new Date();
 
-	const pastMatches = matches.flatMap((matchObj) =>
+	const upcomingMatches = matches.flatMap((matchObj) =>
 		matchObj.data.filter(
 			(match) =>
 				(match.localTeamId === teamId || match.visitingTeamId === teamId) &&
@@ -27,5 +18,5 @@ export async function getUpcomingMatches(teamId: string): Promise<Match[]> {
 		),
 	);
 
-	return pastMatches;
+	return upcomingMatches;
 }

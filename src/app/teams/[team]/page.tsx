@@ -11,7 +11,7 @@ import { UpcomingMatches, UpcomingMatchesSkeleton } from "./upcoming-matches";
 import { Suspense } from "suspense-fallback-debugger";
 
 export async function generateStaticParams() {
-	const teams = await getTeams();
+	const teams = getTeams();
 	return teams.map((team) => ({
 		team: team.id,
 	}));
@@ -23,7 +23,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 	const { team: teamId } = await params;
 
-	const team = await getTeamPosition(teamId);
+	const team = getTeamPosition(teamId);
 
 	const previousImages = (await parent).openGraph?.images || [];
 
@@ -68,7 +68,7 @@ export async function generateMetadata(
 
 export default async function TeamPage({ params }: PageProps<"/teams/[team]">) {
 	const teamId = (await params).team;
-	const team = await getTeamPosition(teamId);
+	const team = getTeamPosition(teamId);
 
 	if (!team) {
 		redirect("/teams");

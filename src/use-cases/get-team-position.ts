@@ -1,25 +1,9 @@
-"use server";
-
 import type { TeamPosition } from "@/types/team";
-import { cacheLife, cacheTag } from "next/cache";
-import fs from "node:fs/promises";
+import positions from "@/assets/teams-table.json";
 
-export async function getTeamPosition(
-	teamId: string,
-): Promise<TeamPosition | undefined> {
-	"use cache";
-	cacheLife("days");
-	cacheTag(`team-position-${teamId}`);
-
-	const positionsFile = await fs.readFile(
-		"./src/assets/teams-table.json",
-		"utf8",
-	);
-
-	const positions = JSON.parse(positionsFile);
-
-	const position = positions.find(
-		(position: TeamPosition) => position.id === teamId,
+export function getTeamPosition(teamId: string): TeamPosition | undefined {
+	const position = (positions as TeamPosition[]).find(
+		(position) => position.id === teamId,
 	);
 
 	return position;

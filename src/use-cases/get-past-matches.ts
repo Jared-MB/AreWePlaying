@@ -1,19 +1,10 @@
-"use server";
-
 import type { Match } from "@/types/match";
 import { isBefore, parse } from "date-fns";
-import { cacheLife, cacheTag } from "next/cache";
-import fs from "node:fs/promises";
+import matchesData from "@/assets/matches.json";
 
-export async function getPastMatches(teamId: string): Promise<Match[]> {
-	"use cache";
-	cacheLife("hours");
-	cacheTag(`past-matches-${teamId}`);
+const matches = matchesData as { data: Match[]; id: string }[];
 
-	const matchesFile = await fs.readFile("./src/assets/matches.json", "utf8");
-
-	const matches = JSON.parse(matchesFile) as { data: Match[]; id: string }[];
-
+export function getPastMatches(teamId: string): Match[] {
 	const today = new Date();
 
 	const pastMatches = matches.flatMap((matchObj) =>

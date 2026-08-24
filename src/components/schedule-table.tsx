@@ -50,15 +50,6 @@ export function ScheduleTable({
 									<div className="inline-block border border-foreground bg-muted px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
 										{week?.week}
 									</div>
-									{/* <div
-											className={`inline-block border border-foreground px-2 py-0.5 text-xs font-bold uppercase tracking-wider ${
-												game.league === "varonil"
-													? "bg-primary text-primary-foreground"
-													: "bg-secondary text-secondary-foreground"
-											}`}
-										>
-											{game.league}
-										</div> */}
 								</div>
 							</div>
 
@@ -82,8 +73,8 @@ export function ScheduleTable({
 											{game.started === 0 || game.live === 0 ? (
 												<div
 													className={`border-2 border-foreground px-4 py-1 text-2xl font-bold ${
-														game.localTeamPoints >
-														(game.visitingTeamPoints || 0)
+														Number(game.localTeamPoints) >
+														Number(game.visitingTeamPoints || 0)
 															? "bg-primary text-primary-foreground"
 															: "bg-muted text-muted-foreground"
 													}`}
@@ -107,8 +98,8 @@ export function ScheduleTable({
 											{game.started === 0 || game.live === 0 ? (
 												<div
 													className={`border-2 border-foreground px-4 py-1 text-2xl font-bold ${
-														game.visitingTeamPoints >
-														(game.localTeamPoints || 0)
+														Number(game.visitingTeamPoints) >
+														Number(game.localTeamPoints || 0)
 															? "bg-primary text-primary-foreground"
 															: "bg-muted text-muted-foreground"
 													}`}
@@ -192,15 +183,6 @@ export function ScheduleTableSkeleton() {
 								<Skeleton className="h-4 w-22 mt-1" />
 								<div className="mt-3 flex flex-wrap gap-2">
 									<Skeleton className="h-5 w-20" />
-									{/* <div
-											className={`inline-block border border-foreground px-2 py-0.5 text-xs font-bold uppercase tracking-wider ${
-												game.league === "varonil"
-													? "bg-primary text-primary-foreground"
-													: "bg-secondary text-secondary-foreground"
-											}`}
-										>
-											{game.league}
-										</div> */}
 								</div>
 							</div>
 

@@ -1,18 +1,6 @@
-"use server";
-
 import type { TeamPosition } from "@/types/team";
-import { cacheLife, cacheTag } from "next/cache";
-import fs from "node:fs/promises";
+import teamsTable from "@/assets/teams-table.json";
 
-export async function getTeamsTable() {
-	"use cache";
-	cacheTag("teams-table");
-	cacheLife("days");
-
-	const teamsTableRaw = await fs.readFile(
-		"./src/assets/teams-table.json",
-		"utf8",
-	);
-	const teamsTable = JSON.parse(teamsTableRaw) as TeamPosition[];
-	return teamsTable;
+export function getTeamsTable() {
+	return teamsTable as TeamPosition[];
 }

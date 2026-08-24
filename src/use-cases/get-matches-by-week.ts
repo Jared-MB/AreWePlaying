@@ -1,19 +1,13 @@
-"use server";
-
 import type { Match } from "@/types/match";
-import { cacheLife, cacheTag } from "next/cache";
-import fs from "node:fs/promises";
+import matchesByWeek from "@/assets/matches.json";
 
-export async function getMatchesByWeek(weekId?: string) {
-	"use cache";
-	cacheTag(`matches-by-week-${weekId}`);
-	cacheLife("days");
-
+export function getMatchesByWeek(weekId?: string) {
 	if (!weekId) {
 		return [];
 	}
-
-	const matches = await fs.readFile("./src/assets/matches.json", "utf-8");
-	const matchesByWeek = JSON.parse(matches) as { data: Match[]; id: string }[];
-	return matchesByWeek.find((match) => match.id === weekId)?.data || [];
+	return (
+		(matchesByWeek as { data: Match[]; id: string }[]).find(
+			(match) => match.id === weekId,
+		)?.data || []
+	);
 }

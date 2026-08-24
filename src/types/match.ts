@@ -1,6 +1,6 @@
 export interface Match {
 	matchId: string;
-	matchNumber: string;
+	matchNumber: number;
 	localTeam: string;
 	localTeamId: string;
 	visitingTeam: string;
@@ -8,8 +8,8 @@ export interface Match {
 	date: string;
 	startTime: string;
 	endTime: string;
-	localTeamPoints: number;
-	visitingTeamPoints: number;
+	localTeamPoints: string;
+	visitingTeamPoints: string;
 	period: string;
 	name: string;
 	started: number;
@@ -17,8 +17,8 @@ export interface Match {
 	locationUrl: string;
 	live: number;
 	url: string;
-	localTeamPosition: number;
-	localTeamWR: number;
-	visitingTeamPosition: number;
-	visitingTeamWR: number;
+	localTeamPosition: string;
+	localTeamWR: string;
+	visitingTeamPosition: string;
+	visitingTeamWR: string;
 }

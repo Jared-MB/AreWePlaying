@@ -5,9 +5,13 @@ import { Card } from "@/components/ui/card";
 import { getPastMatches } from "@/use-cases/get-past-matches";
 import Link from "next/link";
 import { Skeleton } from "@/components/ui/skeleton";
+import { cacheLife } from "next/cache";
 
 export async function PastMatches({ teamId }: { teamId: string }) {
-	const pastMatches = await getPastMatches(teamId);
+	"use cache";
+	cacheLife("days");
+
+	const pastMatches = getPastMatches(teamId);
 
 	return (
 		<>
