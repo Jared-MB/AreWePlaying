@@ -46,8 +46,12 @@ export function SelectUniversity() {
 
 export function SelectUniversitySkeleton() {
 	return (
-		<Select disabled>
-			<SelectTrigger className="w-[164px] md:w-[240px]">
+		<Select value="">
+			<SelectTrigger
+				className="w-[164px] md:w-[240px]"
+				name="SelectUniversity"
+				aria-label="Selecciona tu universidad"
+			>
 				<SelectValue placeholder="Selecciona tu equipo" />
 			</SelectTrigger>
 		</Select>
