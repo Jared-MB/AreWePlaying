@@ -1,5 +1,3 @@
-import type { ReadonlyURLSearchParams } from "next/navigation";
-
 import { Suspense } from "suspense-fallback-debugger";
 
 import {
@@ -18,16 +16,16 @@ import { getWeekById } from "@/use-cases/get-week-by-id";
 import { HyperText } from "@/components/ui/hyper-text";
 import { AreWePlaying } from "@/components/are-we-playing";
 
-export default function Home({
-	searchParams,
-}: {
-	searchParams: Promise<ReadonlyURLSearchParams>;
-}) {
+export async function generateStaticParams() {
+	const weeks = getMatchDays();
+	return weeks.map((week) => ({
+		week: week.id,
+	}));
+}
+
+export default function Home({ params }: PageProps<"/weeks/[week]">) {
 	return (
-		<main
-			className="container mx-auto px-4 py-8 md:py-12"
-			suppressHydrationWarning
-		>
+		<main className="container mx-auto px-4 py-8 md:py-12">
 			<header className="flex flex-col md:flex-row md:items-center md:justify-between gap-x-6 mb-8">
 				<h1>
 					<HyperText className="text-6xl font-bold uppercase md:text-8xl text-balance">
@@ -38,9 +36,7 @@ export default function Home({
 					<AreWePlaying />
 				</Suspense>
 			</header>
-			<Suspense fallback={<ScheduleFiltersSkeleton />}>
-				<ScheduleFilterWrapper />
-			</Suspense>
+			<ScheduleFilterWrapper />
 			<section className="space-y-4">
 				{/* Desktop Table Header */}
 				<header className="hidden border-b-2 border-foreground pb-4 md:grid md:grid-cols-12 md:gap-4">
@@ -58,7 +54,7 @@ export default function Home({
 					</div>
 				</header>
 				<Suspense fallback={<ScheduleTableSkeleton />}>
-					<ScheduleTableWrapper searchParams={searchParams} />
+					<ScheduleTableWrapper params={params} />
 				</Suspense>
 			</section>
 		</main>
@@ -66,12 +62,12 @@ export default function Home({
 }
 
 async function ScheduleTableWrapper({
-	searchParams,
+	params: paramsProps,
 }: {
-	searchParams: Promise<ReadonlyURLSearchParams>;
+	params: PageProps<"/weeks/[week]">["params"];
 }) {
-	const params = new URLSearchParams(await searchParams);
-	const currentWeekParam = params.get("week") ?? undefined;
+	const params = await paramsProps;
+	const currentWeekParam = params.week ?? undefined;
 
 	const [matches, week] = await Promise.all([
 		getMatchesByWeek(currentWeekParam),
@@ -81,8 +77,12 @@ async function ScheduleTableWrapper({
 	return <ScheduleTable matches={matches} week={week} />;
 }
 
-async function ScheduleFilterWrapper() {
-	const matchDays = await getMatchDays();
+function ScheduleFilterWrapper() {
+	const matchDays = getMatchDays();
 
-	return <ScheduleFilters weeks={matchDays} />;
+	return (
+		<Suspense fallback={<ScheduleFiltersSkeleton weeks={matchDays} />}>
+			<ScheduleFilters weeks={matchDays} />
+		</Suspense>
+	);
 }

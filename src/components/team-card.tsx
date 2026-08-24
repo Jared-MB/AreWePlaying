@@ -38,16 +38,6 @@ export function TeamCard({ team }: { team: TeamPosition }) {
 						<span className="flex h-16 w-16 shrink-0 items-center justify-center border-2 border-foreground bg-foreground text-lg font-bold text-background">
 							{team.shortName.split(" ")[0].substring(0, 3)}
 						</span>
-
-						{/*<div
-												className={`border border-foreground px-2 py-1 text-xs font-bold uppercase tracking-wider ${
-													team.league === "varonil"
-														? "bg-primary text-primary-foreground"
-														: "bg-secondary text-secondary-foreground"
-												}`}
-											>
-												{team.league}
-											</div>*/}
 						<div className="font-mono font-bold text-lg size-10 bg-primary text-primary-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] grid place-items-center">
 							{team.position}
 						</div>
@@ -97,16 +87,6 @@ export function TeamCardSkeleton() {
 				<div className="p-6">
 					<div className="mb-4 flex items-start justify-between gap-4">
 						<span className="flex h-16 w-16 shrink-0 items-center justify-center border-2 border-foreground bg-foreground text-lg font-bold text-background"></span>
-
-						{/*<div
-											className={`border border-foreground px-2 py-1 text-xs font-bold uppercase tracking-wider ${
-												team.league === "varonil"
-													? "bg-primary text-primary-foreground"
-													: "bg-secondary text-secondary-foreground"
-											}`}
-										>
-											{team.league}
-										</div>*/}
 						<div className="font-mono font-bold text-lg size-10 bg-primary text-primary-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] grid place-items-center"></div>
 					</div>
 
