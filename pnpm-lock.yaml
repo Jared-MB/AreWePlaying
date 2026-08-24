@@ -15,8 +15,11 @@ importers:
         specifier: 1.2.3
         version: 1.2.3(@types/react@19.2.2)(react@19.2.4)
       '@tanstack/react-query':
-        specifier: 5.90.5
-        version: 5.90.5(react@19.2.4)
+        specifier: 5.102.2
+        version: 5.102.2(react@19.2.4)
+      '@tanstack/react-query-devtools':
+        specifier: 5.102.2
+        version: 5.102.2(@tanstack/react-query@5.102.2(react@19.2.4))(react@19.2.4)
       babel-plugin-react-compiler:
         specifier: 1.0.0
         version: 1.0.0
@@ -1272,11 +1275,20 @@ packages:
   '@tailwindcss/postcss@4.1.14':
     resolution: {integrity: sha512-BdMjIxy7HUNThK87C7BC8I1rE8BVUsfNQSI5siQ4JK3iIa3w0XyVvVL9SXLWO//CtYTcp1v7zci0fYwJOjB+Zg==}
 
-  '@tanstack/query-core@5.90.5':
-    resolution: {integrity: sha512-wLamYp7FaDq6ZnNehypKI5fNvxHPfTYylE0m/ZpuuzJfJqhR5Pxg9gvGBHZx4n7J+V5Rg5mZxHHTlv25Zt5u+w==}
+  '@tanstack/query-core@5.102.2':
+    resolution: {integrity: sha512-zQ5794PXBlV5Wl7N23SR1/Ss+wPE/h2Ye4XlKpm3omN8i8b/Fd4DAdqpLS2AXj5M/RMObt3k5qy3E7kzt/AvBA==}
 
-  '@tanstack/react-query@5.90.5':
-    resolution: {integrity: sha512-pN+8UWpxZkEJ/Rnnj2v2Sxpx1WFlaa9L6a4UO89p6tTQbeo+m0MS8oYDjbggrR8QcTyjKoYWKS3xJQGr3ExT8Q==}
+  '@tanstack/query-devtools@5.102.2':
+    resolution: {integrity: sha512-sbRVlyRWfhKm2z4cnTdHydHiaMYMcH1mCYVNwreE9oR08VmyCsSz97fhy1253gKB4ycMcaRjbfUxQLO0SSLFYw==}
+
+  '@tanstack/react-query-devtools@5.102.2':
+    resolution: {integrity: sha512-5KzH1NAdess98Jgbo8R0sraP0yto49+eGgSGu6umvrLbXPNdsNJ7iOgAiXegBOoWJrHygp6hW01L2U6MvSIT5Q==}
+    peerDependencies:
+      '@tanstack/react-query': ^5.102.2
+      react: ^18 || ^19
+
+  '@tanstack/react-query@5.102.2':
+    resolution: {integrity: sha512-KxU8ZyOEuJ81eTSgXa8GQbk/jO/rz0elYtNKt3VMtM2pRjeO8ADIu7sqqmEjFKJKqco9h2N1ojIDuHs6VfDItQ==}
     peerDependencies:
       react: ^18 || ^19
 
@@ -3899,11 +3911,19 @@ snapshots:
       postcss: 8.5.26
       tailwindcss: 4.1.14
 
-  '@tanstack/query-core@5.90.5': {}
+  '@tanstack/query-core@5.102.2': {}
 
-  '@tanstack/react-query@5.90.5(react@19.2.4)':
+  '@tanstack/query-devtools@5.102.2': {}
+
+  '@tanstack/react-query-devtools@5.102.2(@tanstack/react-query@5.102.2(react@19.2.4))(react@19.2.4)':
     dependencies:
-      '@tanstack/query-core': 5.90.5
+      '@tanstack/query-devtools': 5.102.2
+      '@tanstack/react-query': 5.102.2(react@19.2.4)
+      react: 19.2.4
+
+  '@tanstack/react-query@5.102.2(react@19.2.4)':
+    dependencies:
+      '@tanstack/query-core': 5.102.2
       react: 19.2.4
 
   '@tybys/wasm-util@0.10.3':

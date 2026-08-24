@@ -3,3 +3,8 @@ allowBuilds:
   esbuild: false
   sharp: false
   unrs-resolver: false
+minimumReleaseAgeExclude:
+  - '@tanstack/query-core@5.102.2'
+  - '@tanstack/query-devtools@5.102.2'
+  - '@tanstack/react-query-devtools@5.102.2'
+  - '@tanstack/react-query@5.102.2'
