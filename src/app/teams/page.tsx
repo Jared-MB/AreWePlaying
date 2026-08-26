@@ -70,7 +70,7 @@ export default function TeamsPage() {
 											<span>{topTeam.shortName}</span>
 										</ViewTransition>
 									</h2>
-									<div className="flex gap-8">
+									<div className="flex flex-col md:flex-row gap-2 md:gap-12">
 										<div>
 											<div className="font-mono text-5xl font-bold text-background md:text-7xl">
 												{topTeam.percentage}%
