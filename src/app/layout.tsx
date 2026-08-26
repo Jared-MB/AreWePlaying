@@ -5,7 +5,6 @@ import "./globals.css";
 import Link from "next/link";
 import { GithubIcon } from "lucide-react";
 import { ScheduleHeader } from "@/components/schedule-header";
-import { DevDropdown } from "suspense-fallback-debugger";
 import { Providers } from "./providers";
 
 const spaceMono = Space_Mono({
@@ -55,7 +54,6 @@ export default function RootLayout({
 			</head>
 			<Providers>
 				<body className={`${spaceMono.variable} font-sans antialiased`}>
-					<DevDropdown />
 					<main className="min-h-screen bg-background">
 						<ScheduleHeader />
 						{children}

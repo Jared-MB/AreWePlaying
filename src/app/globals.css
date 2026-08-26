@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@source "../../node_modules/suspense-fallback-debugger"
-
 @custom-variant dark (&:is(.dark *));
 
 :root {

@@ -5,10 +5,9 @@ import { getTeamPosition } from "@/use-cases/get-team-position";
 import { getTeams } from "@/use-cases/get-teams";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { ViewTransition } from "react";
+import { ViewTransition, Suspense } from "react";
 import { PastMatches, PastMatchesSkeleton } from "./past-matches";
 import { UpcomingMatches, UpcomingMatchesSkeleton } from "./upcoming-matches";
-import { Suspense } from "suspense-fallback-debugger";
 
 export async function generateStaticParams() {
 	const teams = getTeams();

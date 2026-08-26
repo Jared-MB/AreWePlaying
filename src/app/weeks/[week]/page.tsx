@@ -1,4 +1,4 @@
-import { Suspense } from "suspense-fallback-debugger";
+import { Suspense } from "react";
 
 import {
 	ScheduleTable,
