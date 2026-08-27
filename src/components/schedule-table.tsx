@@ -2,7 +2,7 @@
 
 import type { Match } from "@/types/match";
 import type { Route } from "next";
-import type { MatchDay } from "@/types/match-day";
+import type { Week } from "@/types/week";
 
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
@@ -14,7 +14,7 @@ export function ScheduleTable({
 	week,
 }: {
 	matches: Match[];
-	week?: MatchDay;
+	week?: Week;
 }) {
 	const university = useUniversity((state) => state.university);
 

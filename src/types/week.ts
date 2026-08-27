@@ -1,7 +1,4 @@
-/**
- * @deprecated Use `Week` instead
- */
-export interface MatchDay {
+export interface Week {
 	date: string;
 	week: string;
 	type: string;

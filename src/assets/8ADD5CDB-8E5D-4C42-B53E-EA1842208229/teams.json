@@ -1,0 +1,128 @@
+[
+  {
+    "id": "91776a12-0c6a-4adb-92ca-5908e412816d",
+    "name": "BENEMERITA UNIVERSIDAD AUTÓNOMA DE PUEBLA",
+    "shortName": "BUAP",
+    "logo": null
+  },
+  {
+    "id": "c38e8042-1bfb-4c0d-83f6-43354df5dd26",
+    "name": "ESCUELA SUPERIOR DE DESARROLLO E INNOVACIÓN EMPRESARIAL",
+    "shortName": "ESDIE",
+    "logo": null
+  },
+  {
+    "id": "17d02e28-9d31-4386-9e38-a02fa31899e0",
+    "name": "INSTITUTO DE ESTUDIOS SUPERIORES DE LA SIERRA",
+    "shortName": "IES UNIVERSIDAD",
+    "logo": null
+  },
+  {
+    "id": "89313927-e83c-46f2-b358-cf4488b9ddde",
+    "name": "INSTITUTO POLITÉCNICO NACIONAL",
+    "shortName": "IPN",
+    "logo": null
+  },
+  {
+    "id": "66293728-bfa6-4520-9442-191d63730037",
+    "name": "UNIVERSIDAD AMERICANA DE PUEBLA",
+    "shortName": "UNIVERSIDAD AMERICANA DE PUEBLA",
+    "logo": null
+  },
+  {
+    "id": "6e247cb0-f7eb-467d-bbd1-7cb750502a10",
+    "name": "UNIVERSIDAD ANÁHUAC CAMPUS PUEBLA",
+    "shortName": "ANÁHUAC PUEBLA",
+    "logo": null
+  },
+  {
+    "id": "39b2a280-b8cb-4e49-9561-43c5e6fcfa11",
+    "name": "UNIVERSIDAD ANÁHUAC MÉXICO NORTE",
+    "shortName": "ANÁHUAC NORTE",
+    "logo": null
+  },
+  {
+    "id": "dcb54516-af3c-400c-8ef4-ec13b97f515f",
+    "name": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+    "shortName": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+    "logo": null
+  },
+  {
+    "id": "c9a882a2-e421-4492-8222-21fec963de45",
+    "name": "UNIVERSIDAD ANÁHUAC VERACRUZ, CAMPUS CÓRDOBA - ORIZABA",
+    "shortName": "UNIVERSIDAD ANÁHUAC ",
+    "logo": null
+  },
+  {
+    "id": "db1bb373-e964-4d34-8f52-12f2c3c3b753",
+    "name": "UNIVERSIDAD AUTÓNOMA DE GUERRERO",
+    "shortName": "UAGRO",
+    "logo": null
+  },
+  {
+    "id": "fb4903ff-db4c-4b60-bfd8-0f3d72ac2af9",
+    "name": "UNIVERSIDAD AUTÓNOMA DEL ESTADO DE MÉXICO",
+    "shortName": "UAEMÉX",
+    "logo": null
+  },
+  {
+    "id": "e92f9b4d-1184-48bf-9095-e8d69d332ba4",
+    "name": "UNIVERSIDAD CUAUHTÉMOC CAMPUS PUEBLA",
+    "shortName": "UC PUEBLA",
+    "logo": null
+  },
+  {
+    "id": "458b349f-ebc9-42c2-a1d7-23b6553e9240",
+    "name": "UNIVERSIDAD DEL VALLE DE MÉXICO CAMPUS CENTRO",
+    "shortName": "UVM CENTRO",
+    "logo": null
+  },
+  {
+    "id": "3f8f3f8b-bcc6-45f2-9b52-83eaa9ed1207",
+    "name": "UNIVERSIDAD DEL VALLE DE MÉXICO CAMPUS LOMAS VERDES",
+    "shortName": "UVM LOMAS VERDES",
+    "logo": null
+  },
+  {
+    "id": "75d38f1f-1213-4019-b259-b26de4fa9830",
+    "name": "UNIVERSIDAD INTERCONTINENTAL",
+    "shortName": "UIC",
+    "logo": null
+  },
+  {
+    "id": "10aeeb27-643d-4b09-9d40-bf5f61595b34",
+    "name": "UNIVERSIDAD LA SALLE MÉXICO",
+    "shortName": "UNIVERSIDAD LA SALLE MÉXICO",
+    "logo": null
+  },
+  {
+    "id": "b6099b28-e05b-49ae-afaf-a9322a020adc",
+    "name": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+    "shortName": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+    "logo": null
+  },
+  {
+    "id": "2970cff2-521b-42d0-a922-0988344224f7",
+    "name": "UNIVERSIDAD MARISTA CAMPUS CIUDAD DE MÉXICO",
+    "shortName": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+    "logo": null
+  },
+  {
+    "id": "6cfd4166-cea9-4f38-b466-263a2d762fe1",
+    "name": "UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO",
+    "shortName": "UNAM",
+    "logo": null
+  },
+  {
+    "id": "b5d92120-1a4e-4e87-b210-32c95a31a1c5",
+    "name": "UNIVERSIDAD POPULAR AUTÓNOMA DE VERACRUZ SEDE TEZIUTLÁN",
+    "shortName": "UPAV TEZIUTLÁN",
+    "logo": null
+  },
+  {
+    "id": "d6c1c913-4b01-4e54-b344-f966de71e632",
+    "name": "UNIVERSIDAD VERACRUZANA",
+    "shortName": "UNIVERSIDAD VERACRUZANA",
+    "logo": null
+  }
+]

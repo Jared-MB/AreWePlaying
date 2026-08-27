@@ -1,9 +1,6 @@
 "use client";
 
-import type { MatchDay } from "@/types/match-day";
-
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 import { useParams } from "next/navigation";
 import { PrefetchLink } from "./prefetch-link";
 import {
@@ -21,20 +18,34 @@ import {
 import { useRouter } from "next/navigation";
 import type { Route } from "next";
 import Link from "next/link";
+import tournaments from "@/assets/tournaments.json";
+import type { Week } from "@/types/week";
 
-export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
+export function ScheduleFilters({ weeks }: { weeks: Week[] }) {
 	const week = useCurrentWeek(weeks);
 
-	const { week: weekParam } = useParams();
+	const { week: weekId, tournament: tournamenId } = useParams();
 
-	const selectedWeek = weekParam?.toString() ?? week.currentWeek?.id;
+	const tournament = tournaments.find((t) => t.id === tournamenId);
+	const tournamentsByConference = tournaments.filter(
+		(t) =>
+			t.conference === tournament?.conference &&
+			t.division === tournament.division,
+	);
 
-	const [selectedLeague, setSelectedLeague] = useState<string>("femenil");
+	const womenTournament = tournamentsByConference.find(
+		(t) => t.category === "women",
+	);
+	const menTournament = tournamentsByConference.find(
+		(t) => t.category === "men",
+	);
+
+	const selectedWeek = weekId?.toString() ?? week.currentWeek?.id;
 
 	const router = useRouter();
 
 	const handleWeekChange = (week: string) => {
-		router.push(`/weeks/${week}`);
+		router.push(`/${tournamenId}/${week}`);
 	};
 
 	return (
@@ -47,15 +58,26 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 					</span>
 					<div className="flex flex-wrap gap-2">
 						<Button
-							onClick={() => setSelectedLeague("femenil")}
 							size="sm"
 							className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
-								selectedLeague === "femenil"
+								tournamenId === womenTournament?.id
 									? "bg-primary text-primary-foreground"
 									: "bg-background text-foreground"
 							}`}
+							asChild
 						>
-							Femenil
+							<Link href={`/${womenTournament?.id}/${weekId}`}>Femenil</Link>
+						</Button>
+						<Button
+							size="sm"
+							className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
+								tournamenId === menTournament?.id
+									? "bg-primary text-primary-foreground"
+									: "bg-background text-foreground"
+							}`}
+							asChild
+						>
+							<Link href={`/${menTournament?.id}/${weekId}`}>Varonil</Link>
 						</Button>
 					</div>
 				</div>
@@ -97,7 +119,7 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 									: "bg-background text-foreground"
 							}`}
 						>
-							<PrefetchLink href={`/weeks/${week.id}` as Route}>
+							<PrefetchLink href={`/${tournamenId}/${week.id}` as Route}>
 								{week.week}
 							</PrefetchLink>
 						</Button>
@@ -109,7 +131,7 @@ export function ScheduleFilters({ weeks }: { weeks: MatchDay[] }) {
 	);
 }
 
-export function ScheduleFiltersSkeleton({ weeks }: { weeks: MatchDay[] }) {
+export function ScheduleFiltersSkeleton({ weeks }: { weeks: Week[] }) {
 	return (
 		<div className="mb-12 space-y-6">
 			{/* League Filter - Horizontal Pills */}
@@ -121,9 +143,15 @@ export function ScheduleFiltersSkeleton({ weeks }: { weeks: MatchDay[] }) {
 					<div className="flex flex-wrap gap-2">
 						<Button
 							size="sm"
-							className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-primary text-primary-foreground`}
+							className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-background text-foreground`}
 						>
 							Femenil
+						</Button>
+						<Button
+							size="sm"
+							className={`hover:text-primary-foreground border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-background text-foreground`}
+						>
+							Varonil
 						</Button>
 					</div>
 				</div>

@@ -8,6 +8,7 @@ import { ViewTransition } from "react";
 import { cn } from "@/lib/utils";
 import { useUniversity } from "@/hooks/use-university";
 import { Skeleton } from "./ui/skeleton";
+import { CardBold } from "./ui/card";
 
 export function TeamCard({ team }: { team: TeamPosition }) {
 	const university = useUniversity((state) => state.university);
@@ -18,13 +19,14 @@ export function TeamCard({ team }: { team: TeamPosition }) {
 			href={`/teams/${team.id}`}
 			className="group block basis-1/3"
 		>
-			<div
-				className={cn(
+			<CardBold
+				isActive={university === team.id}
+				/* className={cn(
 					"h-full border-4 border-foreground bg-card transition-all hover:translate-x-[2px] hover:translate-y-[2px] ",
 					university === team.id
 						? "shadow-[6px_6px_0px_0px_rgba(107,33,168,1)] hover:shadow-[2px_2px_0px_0px_rgba(107,33,168,1)]"
 						: "shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]",
-				)}
+				)} */
 			>
 				<div className="relative h-3 border-b-4 border-foreground bg-muted">
 					<div
@@ -73,7 +75,7 @@ export function TeamCard({ team }: { team: TeamPosition }) {
 						</div>
 					</div>
 				</div>
-			</div>
+			</CardBold>
 		</Link>
 	);
 }

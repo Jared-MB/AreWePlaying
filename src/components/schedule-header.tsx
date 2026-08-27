@@ -14,6 +14,15 @@ export function ScheduleHeader() {
 							className="text-sm font-bold uppercase tracking-wider hover:!bg-primary hover:text-primary-foreground"
 							asChild
 						>
+							<Link href="/" aria-label="Ver torneos">
+								Torneos
+							</Link>
+						</Button>
+						<Button
+							variant="ghost"
+							className="text-sm font-bold uppercase tracking-wider hover:!bg-primary hover:text-primary-foreground"
+							asChild
+						>
 							<Link href="/weeks" aria-label="Ver horarios">
 								Horarios
 							</Link>

@@ -7,9 +7,9 @@
 		"build": "next build --turbopack",
 		"start": "next start",
 		"lint": "eslint",
-		"populate": "uv run src/scripts/populate.py",
-		"py:lint": "uv run ruff check src/scripts",
-		"py:format": "uv run ruff check --fix src/scripts && uv run ruff format src/scripts"
+		"populate": "uv run scripts/populate.py",
+		"py:lint": "uv run ruff check scripts",
+		"py:format": "uv run ruff check --fix scripts && uv run ruff format scripts"
 	},
 	"dependencies": {
 		"@radix-ui/react-select": "2.2.6",
@@ -27,6 +27,7 @@
 		"react": "19.2.4",
 		"react-dom": "19.2.4",
 		"tailwind-merge": "3.3.1",
+		"zod": "4.4.3",
 		"zustand": "5.0.8"
 	},
 	"devDependencies": {

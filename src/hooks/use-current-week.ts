@@ -1,11 +1,10 @@
 "use client";
 
-import type { MatchDay } from "@/types/match-day";
-
+import type { Week } from "@/types/week";
 import { isAfter, parse } from "date-fns";
 import { useMemo } from "react";
 
-export function useCurrentWeek(weeks: MatchDay[]) {
+export function useCurrentWeek(weeks: Week[]) {
 	const currentWeek = useMemo(() => {
 		const currentDate = new Date();
 
