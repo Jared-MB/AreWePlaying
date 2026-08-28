@@ -1,14 +1,28 @@
 [
 	{
+		"id": "1A38224C-1577-43EB-B69E-158D80024029",
+		"division": "I",
+		"category": "Varonil",
+		"updated_at": "2026-08-28T04:12:39.700725+00:00"
+	},
+	{
+		"id": "49F7D44A-6362-434C-A1E5-03FB72F076AF",
+		"division": "I",
+		"category": "Femenil",
+		"updated_at": "2026-08-28T04:12:41.897284+00:00"
+	},
+	{
 		"id": "066CC7C9-E88C-4595-8CF5-D5AAADF0AA33",
 		"division": "II",
-		"category": "women",
-		"conference": "Centro"
+		"category": "Femenil",
+		"conference": "Centro",
+		"updated_at": "2026-08-28T04:12:35.037940+00:00"
 	},
 	{
 		"id": "8ADD5CDB-8E5D-4C42-B53E-EA1842208229",
 		"division": "II",
-		"category": "men",
-		"conference": "Centro"
+		"category": "Varonil",
+		"conference": "Centro",
+		"updated_at": "2026-08-28T04:12:37.408798+00:00"
 	}
 ]

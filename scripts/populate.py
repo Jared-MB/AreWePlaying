@@ -1,6 +1,7 @@
 import asyncio
 import json
 import sys
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import TypedDict
 
@@ -9,22 +10,26 @@ import requests
 
 API = "https://scoretdi2025-eta.vercel.app/api/"
 
+
 def get_tournaments():
-    with open("./src/assets/tournaments.json", "r", encoding="utf-8") as f:
+    with open("./src/assets/tournaments.json", encoding="utf-8") as f:
         data = json.load(f)
 
     return data
 
+
 def save_json_as_file(path: str, data):
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
 
 def ensure_folder(path: str):
     folder = Path(path)
     folder.mkdir(parents=True, exist_ok=True)
 
+
 def get_tournament_data(tournament_id: str):
-    ensure_folder("./src/assets/"+tournament_id)
+    ensure_folder("./src/assets/" + tournament_id)
 
     def get_match_days():
         response = requests.get(API + "jornadas?torneoID=" + tournament_id)
@@ -50,7 +55,6 @@ def get_tournament_data(tournament_id: str):
 
         return match_days
 
-
     async def get_matches(match_days):
         tasks = [asyncio.to_thread(get_match_day, md) for md in match_days]
         results = await asyncio.gather(*tasks)
@@ -58,7 +62,6 @@ def get_tournament_data(tournament_id: str):
             {"data": data, "id": md["id"]}
             for data, md in zip(results, match_days, strict=False)
         ]
-
 
     def get_match_day(match_day):
         response = requests.get(API + "partidos?jornadaID=" + match_day["id"])
@@ -100,20 +103,17 @@ def get_tournament_data(tournament_id: str):
 
         return week_matches
 
-
     class ApiTeam(TypedDict):
         EquipoID: str
         Nombre: str
         NombreCorte: str
         Logo: str | None
 
-
     class Team(TypedDict):
         id: str
         name: str
         shortName: str
         logo: str | None
-
 
     class TeamPositionRaw(TypedDict):
         Posicion: int
@@ -145,7 +145,6 @@ def get_tournament_data(tournament_id: str):
         PuntosLocal: int
         PuntosVisita: int
 
-
     class TeamTableEntry(TypedDict):
         id: str
         position: int
@@ -175,7 +174,6 @@ def get_tournament_data(tournament_id: str):
         localPoints: int
         awayPoints: int
 
-
     async def process_team(team: ApiTeam) -> Team:
         return {
             "id": team["EquipoID"],
@@ -183,7 +181,6 @@ def get_tournament_data(tournament_id: str):
             "shortName": team["NombreCorte"],
             "logo": None,
         }
-
 
     async def fetch_teams(session: aiohttp.ClientSession) -> list[Team]:
         """Fetch teams, persist to disk, and return the data."""
@@ -195,15 +192,16 @@ def get_tournament_data(tournament_id: str):
         mapped_data = await asyncio.gather(*(process_team(team) for team in teams_data))
         mapped_data = list(mapped_data)
 
-        save_json_as_file("./src/assets/"+tournament_id+"/teams.json", mapped_data)
+        save_json_as_file("./src/assets/" + tournament_id + "/teams.json", mapped_data)
 
         return mapped_data
-
 
     async def fetch_teams_table(
         session: aiohttp.ClientSession, teams: list[Team]
     ) -> list[TeamTableEntry]:
-        async with session.get(API + "tablaResumen?torneoID=" + tournament_id) as response:
+        async with session.get(
+            API + "tablaResumen?torneoID=" + tournament_id
+        ) as response:
             data = await response.json()
             teams_position_raw: list[TeamPositionRaw] = json.loads(data["data"])
 
@@ -248,26 +246,42 @@ def get_tournament_data(tournament_id: str):
                 }
             )
 
-        save_json_as_file("./src/assets/"+tournament_id+"/teams-table.json", teams_position)
+        save_json_as_file(
+            "./src/assets/" + tournament_id + "/teams-table.json", teams_position
+        )
 
         return teams_position
-
 
     async def get_teams_data() -> None:
         async with aiohttp.ClientSession() as session:
             teams = await fetch_teams(session)
             await fetch_teams_table(session, teams)
 
-
     match_days = get_match_days()
     matches = asyncio.run(get_matches(match_days))
 
-    save_json_as_file("./src/assets/"+tournament_id+"/weeks.json", match_days)
-    save_json_as_file("./src/assets/"+tournament_id+"/matches.json", matches)
+    save_json_as_file("./src/assets/" + tournament_id + "/weeks.json", match_days)
+    save_json_as_file("./src/assets/" + tournament_id + "/matches.json", matches)
 
     asyncio.run(get_teams_data())
 
+    def update_tournament(tournament):
+        if tournament.get("id") == tournament_id:
+            return {**tournament, "updated_at": datetime.now(UTC).isoformat()}
+        return tournament
+
+    updated_tournaments = list(map(update_tournament, get_tournaments()))
+    save_json_as_file("./src/assets/tournaments.json", updated_tournaments)
+
+
 for tournament in get_tournaments():
-    get_tournament_data(tournament.get("id"))
+    updated_at = datetime.fromisoformat(tournament.get("updated_at"))
+    now = datetime.now(UTC)
+    difference = now - updated_at
+
+    if difference > timedelta(hours=24):
+        get_tournament_data(tournament.get("id"))
+    else:
+        print("Haven't pass 24 hours, skipping " + tournament.get("id"))
 
 print("JSON's populated correctly")

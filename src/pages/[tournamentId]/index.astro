@@ -1,0 +1,23 @@
+---
+import { getCurrentWeek } from "@/utils/get-current-week";
+import { getTournaments } from "@/utils/get-tournaments";
+import { getWeeks } from "@/utils/get-weeks";
+
+export async function getStaticPaths() {
+  const tournaments = await getTournaments();
+  return tournaments.flatMap((dir) => [
+    {
+      params: {
+        tournamentId: dir,
+      },
+    },
+  ]);
+}
+
+const { tournamentId } = Astro.params;
+
+const weeks = await getWeeks(tournamentId);
+const currentWeek = getCurrentWeek(weeks);
+
+return Astro.redirect(`/${tournamentId}/${currentWeek?.id}`);
+---

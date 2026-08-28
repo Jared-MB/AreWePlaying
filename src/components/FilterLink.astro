@@ -1,0 +1,25 @@
+---
+interface Props {
+  href: string;
+  "aria-label"?: string;
+  isActive?: boolean;
+}
+
+const { href, isActive, ...props } = Astro.props;
+---
+
+<a
+  href={href}
+  aria-label={props["aria-label"]}
+  class:list={[
+    "cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+    "bg-primary text-primary-foreground hover:bg-foreground!",
+    "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
+    "hidden md:grid place-content-center duration-300 hover:text-primary-foreground! border-2 border-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-none",
+    isActive
+      ? "bg-primary/90! text-background!"
+      : "bg-background! text-foreground!",
+  ]}
+>
+  <slot />
+</a>

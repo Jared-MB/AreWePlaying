@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.5.10/schema.json",
 	"vcs": {
 		"enabled": false,
 		"clientKind": "git",
@@ -14,14 +14,6 @@
 			"!**/dist/**",
 			"!**/.next/**",
 			"!**/public/**"
-		],
-		"experimentalScannerIgnores": [
-			".git",
-			"dist",
-			"node_modules",
-			"pnpm-lock.yaml",
-			"public",
-			".next"
 		]
 	},
 	"formatter": {
@@ -31,7 +23,7 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true,
+			"preset": "recommended",
 			"correctness": {
 				"useExhaustiveDependencies": "off",
 				"useUniqueElementIds": "off"
@@ -50,5 +42,8 @@
 				"organizeImports": "off"
 			}
 		}
+	},
+	"html": {
+		"experimentalFullSupportEnabled": true
 	}
 }
