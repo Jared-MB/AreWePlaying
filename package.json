@@ -1,11 +1,12 @@
 {
 	"name": "are-we-playing-v2",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"private": true,
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
+		"lint": "eslint",
 		"populate": "uv run scripts/populate.py",
 		"py:lint": "uv run ruff check scripts",
 		"py:format": "uv run ruff check --fix scripts && uv run ruff format scripts"
@@ -20,6 +21,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.10",
+		"@tailwindcss/postcss": "4.1.14",
 		"@types/canvas-confetti": "1.9.0",
 		"@types/node": "20.19.22",
 		"tailwindcss": "4.3.3",
