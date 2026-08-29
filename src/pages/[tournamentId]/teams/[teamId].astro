@@ -56,7 +56,9 @@ if (!team) {
             <h1
               class="font-mono text-4xl font-bold uppercase tracking-wider md:text-6xl"
             >
-              <span class="text-balance">{team.shortName}</span>
+              <span class="text-balance" transition:name={team.shortName}
+                >{team.shortName}</span
+              >
             </h1>
             {
               /*<div
