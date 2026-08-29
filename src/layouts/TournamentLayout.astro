@@ -8,9 +8,11 @@ import AreWePlaying from "@/components/AreWePlaying.astro";
 interface Props {
   tournamentId: string;
   weekId?: string;
+  title?: string;
+  description?: string;
 }
 
-const { tournamentId, weekId } = Astro.props;
+const { tournamentId, weekId, description, title } = Astro.props;
 
 const tournament = tournaments.find((t) => t.id === tournamentId.toUpperCase());
 const tournamentsByConference = tournaments.filter((t) =>
@@ -30,7 +32,7 @@ const menTournament = tournamentsByConference.find(
 const weeks = await getWeeks(tournamentId);
 ---
 
-<Layout tournamentId={tournamentId}>
+<Layout tournamentId={tournamentId} title={title} description={description}>
   <AreWePlaying />
   <div class="mb-12 space-y-6">
     <div class="flex items-center justify-between">

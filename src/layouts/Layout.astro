@@ -8,9 +8,11 @@ import tournaments from "@/assets/tournaments.json";
 
 interface Props {
   tournamentId?: string;
+  title?: string;
+  description?: string;
 }
 
-const { tournamentId } = Astro.props;
+const { tournamentId, title = "Are We Playing?", description } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,7 +24,8 @@ const { tournamentId } = Astro.props;
       name="google-site-verification"
       content="vhnEvLSZ4cAdbDdRlkwQdS8jq2PFCV1C3j1HWywmR6o"
     />
-    <title>Document</title>
+    <meta name="description" content={description} />
+    <title>{title}</title>
   </head>
   <body class="font-sans antialiased">
     <div class="min-h-screen bg-background">
