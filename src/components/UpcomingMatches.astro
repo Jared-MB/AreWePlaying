@@ -45,7 +45,7 @@ const matches = await getUpcomingMatches({ teamId, tournamentId });
                 <div class="mb-2 font-mono text-lg font-bold uppercase tracking-wide">
                   vs{" "}
                   <a
-                    href={`/teams/${isHome ? match.visitingTeamId : match.localTeamId}`}
+                    href={`/${tournamentId}/teams/${isHome ? match.visitingTeamId : match.localTeamId}`}
                   >
                     {isHome ? match.visitingTeam : match.localTeam}
                   </a>

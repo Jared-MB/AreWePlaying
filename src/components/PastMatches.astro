@@ -59,7 +59,7 @@ const matches = await getPastMatches({ teamId, tournamentId });
                 <div class="font-mono text-sm font-bold uppercase tracking-wide">
                   vs{" "}
                   <a
-                    href={`/teams/${isHome ? match.visitingTeamId : match.localTeamId}`}
+                    href={`/${tournamentId}/teams/${isHome ? match.visitingTeamId : match.localTeamId}`}
                   >
                     {isHome ? match.visitingTeam : match.localTeam}
                   </a>
