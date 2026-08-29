@@ -274,14 +274,19 @@ def get_tournament_data(tournament_id: str):
     save_json_as_file("./src/assets/tournaments.json", updated_tournaments)
 
 
-for tournament in get_tournaments():
-    updated_at = datetime.fromisoformat(tournament.get("updated_at"))
-    now = datetime.now(UTC)
-    difference = now - updated_at
+def main():
+    for tournament in get_tournaments():
+        updated_at = datetime.fromisoformat(tournament.get("updated_at"))
+        now = datetime.now(UTC)
+        difference = now - updated_at
 
-    if difference > timedelta(hours=24):
-        get_tournament_data(tournament.get("id"))
-    else:
-        print("Haven't pass 24 hours, skipping " + tournament.get("id"))
+        if difference > timedelta(hours=24):
+            get_tournament_data(tournament.get("id"))
+        else:
+            print("Haven't pass 24 hours, skipping " + tournament.get("id"))
 
-print("JSON's populated correctly")
+    print("JSON's populated correctly")
+
+
+if __name__ == "__main__":
+    main()

@@ -17,8 +17,7 @@
 		"@tailwindcss/vite": "^4.3.3",
 		"astro": "7.2.7",
 		"canvas-confetti": "1.9.3",
-		"date-fns": "4.1.0",
-		"wrangler": "4.127.1"
+		"date-fns": "4.1.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.10",
