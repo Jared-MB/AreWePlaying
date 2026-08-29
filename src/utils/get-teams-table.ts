@@ -3,7 +3,7 @@ import { assetsDir } from "./assets-dir";
 import path from "node:path";
 import type { TeamPosition } from "@/types/team";
 
-export async function getTeams(tournamentId: string) {
+export async function getTeamsTable(tournamentId: string) {
 	const rawTeams = await readFile(
 		path.join(assetsDir, tournamentId.toUpperCase(), "teams-table.json"),
 		"utf-8",

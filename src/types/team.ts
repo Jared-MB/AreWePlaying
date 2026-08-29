@@ -27,3 +27,10 @@ export interface TeamPosition {
 	localPoints: number;
 	awayPoints: number;
 }
+
+export interface Team {
+	id: string;
+	name: string;
+	logo: string | null;
+	shortName: string;
+}

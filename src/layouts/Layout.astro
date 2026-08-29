@@ -105,7 +105,7 @@ const { tournamentId, title = "Are We Playing?", description } = Astro.props;
     const isTeam = path[2] && path[2] === "teams";
 
     if (isTeam) {
-      const newPath = path.join("/");
+      const newPath = path.slice(0, 3).join("/");
       window.location.href = newPath;
       return;
     }

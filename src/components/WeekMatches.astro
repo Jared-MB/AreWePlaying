@@ -7,9 +7,10 @@ import type { Week } from "@/types/week";
 interface Props {
   matches: Match[];
   week?: Week;
+  tournamentId: string;
 }
 
-const { matches, week } = Astro.props;
+const { matches, week, tournamentId } = Astro.props;
 ---
 
 {
@@ -23,7 +24,6 @@ const { matches, week } = Astro.props;
     matches.map((game) => (
       <MatchCard>
         <article class="grid gap-4 p-6 md:grid-cols-12 md:items-center">
-          {/* Time */}
           <div class="col-span-12 md:col-span-2">
             <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
               Fecha
@@ -39,7 +39,6 @@ const { matches, week } = Astro.props;
             </div>
           </div>
 
-          {/* Matchup */}
           <div class="col-span-12 md:col-span-5">
             <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
               Equipos
@@ -51,7 +50,7 @@ const { matches, week } = Astro.props;
                 </div>
                 <div class="flex flex-1 items-center justify-between">
                   <a
-                    href={`/teams/${game.localTeamId}`}
+                    href={`/${tournamentId}/teams/${game.localTeamId}`}
                     class="font-bold uppercase tracking-wide"
                   >
                     {game.localTeam}

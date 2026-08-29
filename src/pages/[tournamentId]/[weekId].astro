@@ -35,5 +35,5 @@ const weekMatches = matches.find((m) => m.id === weekId)?.data ?? [];
 ---
 
 <TournamentLayout tournamentId={tournamentId} weekId={weekId}>
-  <WeekMatches matches={weekMatches} week={week} />
+  <WeekMatches matches={weekMatches} week={week} tournamentId={tournamentId} />
 </TournamentLayout>

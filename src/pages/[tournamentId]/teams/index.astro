@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { getTournaments } from "@/utils/get-tournaments";
-import { getTeams } from "@/utils/get-teams";
+import { getTeamsTable } from "@/utils/get-teams-table";
 import MatchCard from "@/components/MatchCard.astro";
 
 export async function getStaticPaths() {
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 
 const { tournamentId } = Astro.params;
 
-const teams = await getTeams(tournamentId);
+const teams = await getTeamsTable(tournamentId);
 
 const sortedTeams = teams.toSorted((a, b) => a.position - b.position);
 const topTeam = sortedTeams[0];
@@ -116,7 +116,7 @@ const otherTeams = sortedTeams.slice(1);
         <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {
             otherTeams.map((team) => (
-              <a href="/">
+              <a href={`/${tournamentId}/teams/${team.id}`}>
                 <MatchCard>
                   <div class="relative h-3 border-b-4 border-foreground bg-muted">
                     <div

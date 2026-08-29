@@ -1,0 +1,88 @@
+---
+import { getPastMatches } from "@/utils/get-past-matches";
+import MatchCard from "./MatchCard.astro";
+
+interface Props {
+  teamId: string;
+  tournamentId: string;
+}
+
+const { teamId, tournamentId } = Astro.props;
+
+const matches = await getPastMatches({ teamId, tournamentId });
+---
+
+<>
+  {
+    matches.length > 0 ? (
+      <div class="space-y-3">
+        {matches.map((match) => {
+          const isHome = match.localTeamId === teamId;
+
+          const isWin = isHome
+            ? Number(match.localTeamPoints) > Number(match.visitingTeamPoints)
+            : Number(match.visitingTeamPoints) > Number(match.localTeamPoints);
+
+          return (
+            <MatchCard>
+              <div class="p-4">
+                <div class="mb-2 flex items-center justify-between">
+                  <div class="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                    {match.date}
+                  </div>
+                  <div
+                    class={`border border-foreground px-2 py-0.5 text-xs font-bold uppercase tracking-wider ${
+                      isHome
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-muted text-muted-foreground"
+                    }`}
+                  >
+                    {isHome ? "EN CASA" : "VISITANTE"}
+                  </div>
+                </div>
+                <div class="mb-2 flex items-center gap-2">
+                  <div
+                    class={`border-2 border-foreground size-10 px-3 py-1 font-mono text-lg font-bold ${
+                      isWin
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-destructive text-destructive-foreground"
+                    }`}
+                  >
+                    {isWin ? "W" : "L"}
+                  </div>
+                  <div class="font-mono text-2xl font-bold">
+                    {isHome
+                      ? `${match.localTeamPoints} - ${match.visitingTeamPoints}`
+                      : `${match.visitingTeamPoints} - ${match.localTeamPoints}`}
+                  </div>
+                </div>
+                <div class="font-mono text-sm font-bold uppercase tracking-wide">
+                  vs{" "}
+                  <a
+                    href={`/teams/${isHome ? match.visitingTeamId : match.localTeamId}`}
+                  >
+                    {isHome ? match.visitingTeam : match.localTeam}
+                  </a>
+                </div>
+                <a
+                  href={match.locationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-1 text-xs uppercase tracking-wider text-muted-foreground"
+                >
+                  {match.location}
+                </a>
+              </div>
+            </MatchCard>
+          );
+        })}
+      </div>
+    ) : (
+      <div class="border-2 border-foreground bg-muted p-6 text-center">
+        <p class="font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground">
+          NO HAY PARTIDOS JUGADOS
+        </p>
+      </div>
+    )
+  }
+</>
