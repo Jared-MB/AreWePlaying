@@ -42,7 +42,6 @@ if (!team) {
         ← REGRESAR
       </a>
 
-      {/* Team Header */}
       <header class="mb-8 border-b-4 border-foreground pb-6">
         <div
           class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between"
@@ -60,20 +59,8 @@ if (!team) {
                 >{team.shortName}</span
               >
             </h1>
-            {
-              /*<div
-									class={`mt-2 inline-block border border-foreground px-3 py-1 text-sm font-bold uppercase tracking-wider ${
-										team.league === "varonil"
-											? "bg-primary text-primary-foreground"
-											: "bg-secondary text-secondary-foreground"
-									}`}
-								>
-									{team.league}
-								</div>*/
-            }
           </div>
 
-          {/* Team Stats */}
           <section class="flex gap-4">
             <article class="border-2 border-foreground bg-card p-4 text-center">
               <div
@@ -163,22 +150,22 @@ if (!team) {
       <section class="grid gap-8 md:grid-cols-2">
         <article>
           <h2
-            class="mb-4 border-b-2 border-foreground pb-2 font-mono text-3xl font-bold uppercase tracking-wider"
-          >
-            PARTIDOS PASADOS
-          </h2>
-          <div class="mt-4">
-            <PastMatches teamId={teamId} tournamentId={tournamentId} />
-          </div>
-        </article>
-        <article>
-          <h2
-            class="mb-4 border-b-2 border-foreground pb-2 font-mono text-3xl font-bold uppercase tracking-wider"
+            class="mb-4 pb-2 font-mono text-3xl font-bold uppercase tracking-wider"
           >
             PARTIDOS FUTUROS
           </h2>
           <div class="mt-4">
             <UpcomingMatches teamId={teamId} tournamentId={tournamentId} />
+          </div>
+        </article>
+        <article>
+          <h2
+            class="mb-4 pb-2 font-mono text-3xl font-bold uppercase tracking-wider"
+          >
+            PARTIDOS PASADOS
+          </h2>
+          <div class="mt-4">
+            <PastMatches teamId={teamId} tournamentId={tournamentId} />
           </div>
         </article>
       </section>
