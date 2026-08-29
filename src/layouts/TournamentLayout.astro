@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import tournaments from "@/assets/tournaments.json";
 import { getWeeks } from "@/utils/get-weeks";
 import AreWePlaying from "@/components/AreWePlaying.astro";
+import SelectDivision from "@/components/SelectDivision.astro";
 
 interface Props {
   tournamentId: string;
@@ -35,6 +36,16 @@ const weeks = await getWeeks(tournamentId);
 <Layout tournamentId={tournamentId} title={title} description={description}>
   <AreWePlaying />
   <div class="mb-12 space-y-6">
+    <div class="flex md:hidden flex-wrap items-center gap-3">
+      <label
+        for="division-mobile"
+        class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
+      >
+        Division:
+      </label>
+      <SelectDivision id="division-mobile" defaultSelected={tournamentId} />
+    </div>
+    <div class="md:hidden h-0.5 bg-foreground"></div>
     <div class="flex items-center justify-between">
       <div class="flex flex-wrap items-center gap-3">
         <span
@@ -61,24 +72,12 @@ const weeks = await getWeeks(tournamentId);
     </div>
     <div class="h-0.5 bg-foreground"></div>
     <div class="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
-      <div class="flex flex-wrap gap-2">
+      <div class="hidden md:flex flex-wrap gap-2">
         <span
           class="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1"
         >
           Semana:
         </span>
-        <!-- <Select value={selectedWeek} onValueChange={handleWeekChange}>
-						<SelectTrigger class="md:hidden !bg-primary border-2 [&>svg]:fill-primary-foreground border-foreground text-primary-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-							<SelectValue placeholder="Selecciona una semana" />
-						</SelectTrigger>
-						<SelectContent>
-							{weeks.map((week) => (
-								<SelectItem key={week.id} value={week.id}>
-									{week.week}
-								</SelectItem>
-							))}
-						</SelectContent>
-					</Select> -->
         {
           weeks.map((week) => (
             <FilterLink
@@ -90,8 +89,45 @@ const weeks = await getWeeks(tournamentId);
           ))
         }
       </div>
+      <div class="flex md:hidden flex-wrap gap-2">
+        <label
+          for="week-mobile"
+          class="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1"
+        >
+          Semana:
+        </label>
+        <select
+          id="week-mobile"
+          name="week-mobile"
+          data-week-select
+          class="border-input data-placeholder:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+        >
+          {
+            weeks.map((w) => (
+              <option selected={weekId === w.id} value={w.id}>
+                {w.week}
+              </option>
+            ))
+          }
+        </select>
+      </div>
     </div>
     <div class="h-1 bg-foreground"></div>
     <slot />
   </div>
 </Layout>
+
+<script>
+  // Delegated on `document` so it keeps working after a view transition swaps
+  // the <body> and replaces the select with a fresh element.
+  document.addEventListener("change", (e) => {
+    const $week = (e.target as HTMLElement | null)?.closest<HTMLSelectElement>(
+      "select[data-week-select]",
+    );
+
+    if (!$week) return;
+
+    const [_, currentLocation] = window.location.pathname.split("/");
+    window.location.href = `/${currentLocation}/${$week.value}`;
+  });
+</script>

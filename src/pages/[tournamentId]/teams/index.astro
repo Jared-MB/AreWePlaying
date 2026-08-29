@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { getTournaments } from "@/utils/get-tournaments";
 import { getTeamsTable } from "@/utils/get-teams-table";
 import MatchCard from "@/components/MatchCard.astro";
+import SelectDivision from "@/components/SelectDivision.astro";
 
 export async function getStaticPaths() {
   const tournaments = await getTournaments();
@@ -28,6 +29,9 @@ const otherTeams = sortedTeams.slice(1);
   <main class="min-h-screen bg-background">
     <div class="p-4 md:p-8">
       <div class="mx-auto max-w-7xl">
+        <div class="md:hidden mb-12">
+          <SelectDivision id="division-mobile" defaultSelected={tournamentId} />
+        </div>
         <header
           class="mb-12 border-8 border-foreground bg-foreground p-8 text-background shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
         >
