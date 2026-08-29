@@ -75,7 +75,7 @@ const { matches, week, tournamentId } = Astro.props;
                 </div>
                 <div class="flex flex-1 items-center justify-between">
                   <a
-                    href={`/teams/${game.visitingTeamId}`}
+                    href={`/${tournamentId}/teams/${game.visitingTeamId}`}
                     class="font-bold uppercase tracking-wide"
                   >
                     {game.visitingTeam}
