@@ -1,11 +1,5 @@
-import type { Week } from "@/types/week";
-import { readFile } from "node:fs/promises";
+import { readWeeks } from "./assets";
 
 export async function getWeeks(tournamentId: string) {
-	const rawWeeks = await readFile(
-		`./src/assets/${tournamentId.toUpperCase()}/weeks.json`,
-		"utf-8",
-	);
-
-	return JSON.parse(rawWeeks) as Week[];
+	return readWeeks(tournamentId);
 }

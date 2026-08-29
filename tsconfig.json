@@ -18,5 +18,10 @@
 			"@/*": ["./src/*"]
 		}
 	},
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules", "${configDir}/dist"],
+	"include": [
+		"${configDir}/.astro/types.d.ts",
+		"${configDir}/**/*",
+		"${configDir}/worker-configuration.d.ts"
+	]
 }
