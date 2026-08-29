@@ -1,0 +1,144 @@
+---
+import MatchCard from "@/components/MatchCard.astro";
+
+import type { Match } from "@/types/match";
+import type { Week } from "@/types/week";
+
+interface Props {
+  matches: Match[];
+  week?: Week;
+  tournamentId: string;
+}
+
+const { matches, week, tournamentId } = Astro.props;
+---
+
+{
+  matches.length === 0 ? (
+    <div class="border-2 border-foreground bg-muted p-8 text-center">
+      <p class="font-bold uppercase tracking-wider text-muted-foreground">
+        No hay partidos programados para esta semana
+      </p>
+    </div>
+  ) : (
+    matches.map((game) => (
+      <MatchCard>
+        <article class="grid gap-4 p-6 md:grid-cols-12 md:items-center">
+          <div class="col-span-12 md:col-span-2">
+            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
+              Fecha
+            </div>
+            <div class="font-bold">{game.date.split(" ")[1]} HRS</div>
+            <div class="text-sm text-muted-foreground">
+              {game.date.split(" ")[0]}
+            </div>
+            <div class="mt-2 flex flex-wrap gap-2">
+              <div class="inline-block border border-foreground bg-muted px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                {week?.week}
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-12 md:col-span-5">
+            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
+              Equipos
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center gap-3">
+                <div class="flex size-10 items-center justify-center border-2 border-foreground bg-primary text-xs font-bold text-primary-foreground">
+                  {game.localTeam.split(" ")[0].substring(0, 3)}
+                </div>
+                <div class="flex flex-1 items-center justify-between">
+                  <a
+                    href={`/${tournamentId}/teams/${game.localTeamId}`}
+                    class="font-bold uppercase tracking-wide"
+                  >
+                    {game.localTeam}
+                  </a>
+                  {game.started === 0 || game.live === 0 ? (
+                    <div
+                      class={`border-2 border-foreground px-4 py-1 text-2xl font-bold ${
+                        Number(game.localTeamPoints) >
+                        Number(game.visitingTeamPoints || 0)
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-muted text-muted-foreground"
+                      }`}
+                    >
+                      {game.localTeamPoints}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center border-2 border-foreground bg-secondary text-xs font-bold text-secondary-foreground">
+                  {game.visitingTeam.split(" ")[0].substring(0, 3)}
+                </div>
+                <div class="flex flex-1 items-center justify-between">
+                  <a
+                    href={`/teams/${game.visitingTeamId}`}
+                    class="font-bold uppercase tracking-wide"
+                  >
+                    {game.visitingTeam}
+                  </a>
+                  {game.started === 0 || game.live === 0 ? (
+                    <div
+                      class={`border-2 border-foreground px-4 py-1 text-2xl font-bold ${
+                        Number(game.visitingTeamPoints) >
+                        Number(game.localTeamPoints || 0)
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-muted text-muted-foreground"
+                      }`}
+                    >
+                      {game.visitingTeamPoints}
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Venue */}
+          <div class="col-span-12 md:col-span-3">
+            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
+              Lugar
+            </div>
+            {game?.locationUrl !== "-" ? (
+              <a
+                href={game?.locationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-bold uppercase tracking-wide"
+              >
+                {game.location}
+              </a>
+            ) : (
+              <span class="text-sm font-bold uppercase tracking-wide">-</span>
+            )}
+          </div>
+
+          {/* Status */}
+          <div class="col-span-12 md:col-span-2">
+            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
+              Estatus
+            </div>
+            <div
+              class={`inline-block border-2 border-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider ${
+                game.live === 1
+                  ? "bg-primary text-primary-foreground"
+                  : game.started === 1
+                    ? "bg-muted text-muted-foreground"
+                    : "bg-primary text-primary-foreground"
+              }`}
+            >
+              {game.live === 1
+                ? "EN CURSO"
+                : game.started === 1
+                  ? "NO INICIADO"
+                  : "COMPLETADO"}
+            </div>
+          </div>
+        </article>
+      </MatchCard>
+    ))
+  )
+}

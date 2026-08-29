@@ -1,0 +1,34 @@
+---
+import TournamentLayout from "@/layouts/TournamentLayout.astro";
+import WeekMatches from "@/components/WeekMatches.astro";
+
+import { getCurrentWeek } from "@/utils/get-current-week";
+import { getMatches } from "@/utils/get-matches";
+import { getTournaments } from "@/utils/get-tournaments";
+import { getWeeks } from "@/utils/get-weeks";
+
+export async function getStaticPaths() {
+  const tournaments = await getTournaments();
+  return tournaments.flatMap((dir) => [
+    {
+      params: {
+        tournamentId: dir,
+      },
+    },
+  ]);
+}
+
+const { tournamentId } = Astro.params;
+
+const [matches, weeks] = await Promise.all([
+  getMatches(tournamentId),
+  getWeeks(tournamentId),
+]);
+
+const week = getCurrentWeek(weeks) ?? weeks[0];
+const weekMatches = matches.find((m) => m.id === week?.id)?.data ?? [];
+---
+
+<TournamentLayout tournamentId={tournamentId} weekId={week?.id}>
+  <WeekMatches matches={weekMatches} week={week} tournamentId={tournamentId} />
+</TournamentLayout>

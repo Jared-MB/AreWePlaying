@@ -1,0 +1,97 @@
+---
+import FilterLink from "@/components/FilterLink.astro";
+import Layout from "@/layouts/Layout.astro";
+import tournaments from "@/assets/tournaments.json";
+import { getWeeks } from "@/utils/get-weeks";
+import AreWePlaying from "@/components/AreWePlaying.astro";
+
+interface Props {
+  tournamentId: string;
+  weekId?: string;
+  title?: string;
+  description?: string;
+}
+
+const { tournamentId, weekId, description, title } = Astro.props;
+
+const tournament = tournaments.find((t) => t.id === tournamentId.toUpperCase());
+const tournamentsByConference = tournaments.filter((t) =>
+  tournament?.conference
+    ? t.conference === tournament?.conference &&
+      t.division === tournament.division
+    : t.division === tournament?.division,
+);
+
+const womenTournament = tournamentsByConference.find(
+  (t) => t.category === "Femenil",
+);
+const menTournament = tournamentsByConference.find(
+  (t) => t.category === "Varonil",
+);
+
+const weeks = await getWeeks(tournamentId);
+---
+
+<Layout tournamentId={tournamentId} title={title} description={description}>
+  <AreWePlaying />
+  <div class="mb-12 space-y-6">
+    <div class="flex items-center justify-between">
+      <div class="flex flex-wrap items-center gap-3">
+        <span
+          class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
+        >
+          Rama:
+        </span>
+        <div class="flex flex-wrap gap-2">
+          <FilterLink
+            href={`/${womenTournament?.id.toLowerCase()}`}
+            isActive={womenTournament?.id.toLowerCase() === tournamentId}
+            >Femenil</FilterLink
+          >
+          <FilterLink
+            href={`/${menTournament?.id.toLowerCase()}`}
+            isActive={menTournament?.id.toLowerCase() === tournamentId}
+            >Varonil</FilterLink
+          >
+        </div>
+      </div>
+      <!-- <div class="inline-block md:hidden">
+					<SelectUniversity />
+				</div> -->
+    </div>
+    <div class="h-0.5 bg-foreground"></div>
+    <div class="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
+      <div class="flex flex-wrap gap-2">
+        <span
+          class="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1"
+        >
+          Semana:
+        </span>
+        <!-- <Select value={selectedWeek} onValueChange={handleWeekChange}>
+						<SelectTrigger class="md:hidden !bg-primary border-2 [&>svg]:fill-primary-foreground border-foreground text-primary-foreground font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+							<SelectValue placeholder="Selecciona una semana" />
+						</SelectTrigger>
+						<SelectContent>
+							{weeks.map((week) => (
+								<SelectItem key={week.id} value={week.id}>
+									{week.week}
+								</SelectItem>
+							))}
+						</SelectContent>
+					</Select> -->
+        {
+          weeks.map((week) => (
+            <FilterLink
+              isActive={weekId === week.id}
+              href={`/${tournamentId}/${week.id}`}
+            >
+              {week.week}
+            </FilterLink>
+          ))
+        }
+      </div>
+    </div>
+    <div class="h-1 bg-foreground"></div>
+    <slot />
+  </div>
+</Layout>

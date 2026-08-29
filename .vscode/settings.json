@@ -12,6 +12,9 @@
     "[json]": {
         "editor.defaultFormatter": "biomejs.biome"
     },
+    "[astro]": {
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.codeActionsOnSave": {

@@ -1,0 +1,23 @@
+---
+interface Props {
+  isActive?: boolean;
+}
+
+const { isActive } = Astro.props;
+---
+
+<div
+  class:list={[
+    "h-full border-4 p-6 border-foreground bg-card transition-all hover:translate-x-0.5 hover:translate-y-0.5",
+    {
+      "shadow-[6px_6px_0px_0px_rgba(107,33,168,1)] hover:shadow-[2px_2px_0px_0px_rgba(107,33,168,1)]":
+        isActive,
+    },
+    {
+      "shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]":
+        !isActive,
+    },
+  ]}
+>
+  <slot />
+</div>

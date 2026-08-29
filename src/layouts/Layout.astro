@@ -1,0 +1,115 @@
+---
+import "@fontsource/space-mono";
+import "@/styles/global.css";
+import HeaderLink from "@/components/HeaderLink.astro";
+import Footer from "@/components/Footer.astro";
+
+import tournaments from "@/assets/tournaments.json";
+
+interface Props {
+  tournamentId?: string;
+  title?: string;
+  description?: string;
+}
+
+const { tournamentId, title = "Are We Playing?", description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="vhnEvLSZ4cAdbDdRlkwQdS8jq2PFCV1C3j1HWywmR6o"
+    />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="font-sans antialiased">
+    <div class="min-h-screen bg-background">
+      <header
+        class="border-b-4 border-foreground bg-background sticky top-0 z-10"
+      >
+        <div class="container mx-auto px-4">
+          <div class="flex items-center justify-between py-6">
+            <nav class="flex items-center gap-6 md:gap-8">
+              <HeaderLink href="/" aria-label="Ver torneos">
+                Torneos
+              </HeaderLink>
+
+              {
+                tournamentId ? (
+                  <HeaderLink
+                    href={`/${tournamentId}/teams`}
+                    aria-label="Ver equipos"
+                  >
+                    Equipos
+                  </HeaderLink>
+                ) : null
+              }
+            </nav>
+
+            <div class="flex items-center gap-4">
+              <div class="hidden md:inline-block">
+                {
+                  tournamentId ? (
+                    <select
+                      id="division"
+                      name="division"
+                      class:list={[
+                        "border-input data-placeholder:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+                      ]}
+                    >
+                      {tournaments.map((t) => (
+                        <option
+                          selected={tournamentId === t.id.toLowerCase()}
+                          value={t.id.toLowerCase()}
+                        >
+                          Division {t.division}
+                          {t.conference ? ` - ${t.conference}` : ""} -{" "}
+                          {t.category}
+                        </option>
+                      ))}
+                    </select>
+                  ) : null
+                }
+                <!--<SelectUniversity />-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div
+        class="container mx-auto px-4 py-8 md:py-12 flex flex-col gap-8 md:gap-12"
+      >
+        <slot />
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>
+
+<script>
+  const $division = document.getElementById(
+    "division",
+  ) as HTMLSelectElement | null;
+
+  $division?.addEventListener("change", (e) => {
+    const newTournamentId = (e.target as any).value;
+
+    const path = window.location.pathname.split("/");
+    path[1] = newTournamentId;
+
+    const isTeam = path[2] && path[2] === "teams";
+
+    if (isTeam) {
+      const newPath = path.slice(0, 3).join("/");
+      window.location.href = newPath;
+      return;
+    }
+
+    window.location.href = `/${newTournamentId}`;
+  });
+</script>
