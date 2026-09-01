@@ -1,14 +1,39 @@
+import argparse
 import asyncio
+import base64
+import binascii
 import json
 import sys
 from datetime import UTC, datetime, timedelta
+from io import BytesIO
 from pathlib import Path
 from typing import TypedDict
 
 import aiohttp
 import requests
+from PIL import Image, ImageOps
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "-f", "--force", action="store_true", help="Fuerza la ejecución sin confirmación"
+)
+parser.add_argument(
+    "-s",
+    "--refresh-static",
+    action="store_true",
+    help="Vuelve a descargar los datos estáticos (jornadas y equipos)",
+)
+args = parser.parse_args()
 
 API = "https://scoretdi2025-eta.vercel.app/api/"
+
+LOGOS_FOLDER = Path("./public/logos")
+LOGO_MAX_SIZE = 512
+LOGO_QUALITY = 60
+
+# Margen tras la última jornada antes de dar el torneo por terminado. El API
+# suele agregar las jornadas de playoffs cuando la temporada regular ya acabó.
+FINISHED_GRACE = timedelta(days=14)
 
 
 def get_tournaments():
@@ -16,6 +41,37 @@ def get_tournaments():
         data = json.load(f)
 
     return data
+
+
+def load_json_file(path: str):
+    """Return the cached JSON at path, or None when it's missing or unusable."""
+
+    file = Path(path)
+
+    if not file.exists():
+        return None
+
+    try:
+        data = json.loads(file.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+
+    return data or None
+
+
+def parse_api_date(value: str | None) -> datetime | None:
+    """Parse the DD/MM/YYYY[ HH:MM] dates the API returns."""
+
+    if not value:
+        return None
+
+    for fmt in ("%d/%m/%Y %H:%M", "%d/%m/%Y"):
+        try:
+            return datetime.strptime(value, fmt).replace(tzinfo=UTC)
+        except ValueError:
+            continue
+
+    return None
 
 
 def save_json_as_file(path: str, data):
@@ -28,8 +84,99 @@ def ensure_folder(path: str):
     folder.mkdir(parents=True, exist_ok=True)
 
 
+def decode_base64_image(raw: str) -> bytes:
+    """Decode the base64 image the API returns, with or without data URI prefix."""
+
+    data = raw.strip()
+
+    if data.startswith("data:"):
+        _, _, data = data.partition(",")
+
+    # El API a veces manda el base64 sin el padding final.
+    return base64.b64decode(data + "=" * (-len(data) % 4))
+
+
+def encode_logo_as_avif(raw: str) -> bytes:
+    """Convert a base64 logo into a resized AVIF image."""
+
+    with Image.open(BytesIO(decode_base64_image(raw))) as image:
+        image = ImageOps.exif_transpose(image)
+
+        has_alpha = image.mode in ("RGBA", "LA", "PA") or "transparency" in image.info
+        image = image.convert("RGBA" if has_alpha else "RGB")
+        image.thumbnail((LOGO_MAX_SIZE, LOGO_MAX_SIZE), Image.LANCZOS)
+
+        buffer = BytesIO()
+        image.save(buffer, format="AVIF", quality=LOGO_QUALITY)
+
+    return buffer.getvalue()
+
+
+def save_team_logo(tournament_id: str, team_id: str, raw: str | None) -> str | None:
+    """Store the team logo as AVIF and return its public URL."""
+
+    if not raw:
+        return None
+
+    try:
+        avif = encode_logo_as_avif(raw)
+    except (OSError, ValueError, binascii.Error) as error:
+        print(f"Error processing logo for team {team_id}: {error}")
+        return None
+
+    folder = LOGOS_FOLDER / tournament_id
+    folder.mkdir(parents=True, exist_ok=True)
+
+    logo_path = folder / (team_id + ".avif")
+
+    # Evita reescribir el archivo (y ensuciar el diff) si no cambió.
+    if not logo_path.exists() or logo_path.read_bytes() != avif:
+        logo_path.write_bytes(avif)
+
+    return "/logos/" + tournament_id + "/" + team_id + ".avif"
+
+
+def last_match_day_date(match_days) -> datetime | None:
+    dates = [parse_api_date(match_day.get("date")) for match_day in match_days]
+    dates = [date for date in dates if date is not None]
+
+    return max(dates) if dates else None
+
+
+def is_calendar_complete(match_days) -> bool:
+    """Whether the cached calendar can still grow (playoffs, jornadas extra)."""
+
+    last_date = last_match_day_date(match_days)
+
+    # Mientras queden jornadas por jugar el calendario ya está completo; solo
+    # cuando se agota vale la pena volver a preguntar por jornadas nuevas.
+    return last_date is not None and last_date > datetime.now(UTC)
+
+
+def is_tournament_finished(match_days, matches) -> bool:
+    """A tournament is done once every match ended and the grace period passed."""
+
+    played = [match for match_day in matches for match in match_day["data"]]
+
+    if not played:
+        return False
+
+    if any(not match.get("endTime") for match in played):
+        return False
+
+    last_date = last_match_day_date(match_days)
+
+    if last_date is None:
+        return False
+
+    return datetime.now(UTC) - last_date > FINISHED_GRACE
+
+
 def get_tournament_data(tournament_id: str):
     ensure_folder("./src/assets/" + tournament_id)
+
+    weeks_path = "./src/assets/" + tournament_id + "/weeks.json"
+    teams_path = "./src/assets/" + tournament_id + "/teams.json"
 
     def get_match_days():
         response = requests.get(API + "jornadas?torneoID=" + tournament_id)
@@ -175,11 +322,15 @@ def get_tournament_data(tournament_id: str):
         awayPoints: int
 
     async def process_team(team: ApiTeam) -> Team:
+        logo = await asyncio.to_thread(
+            save_team_logo, tournament_id, team["EquipoID"], team["Logo"]
+        )
+
         return {
             "id": team["EquipoID"],
             "name": team["Nombre"],
             "shortName": team["NombreCorte"],
-            "logo": None,
+            "logo": logo,
         }
 
     async def fetch_teams(session: aiohttp.ClientSession) -> list[Team]:
@@ -192,7 +343,7 @@ def get_tournament_data(tournament_id: str):
         mapped_data = await asyncio.gather(*(process_team(team) for team in teams_data))
         mapped_data = list(mapped_data)
 
-        save_json_as_file("./src/assets/" + tournament_id + "/teams.json", mapped_data)
+        save_json_as_file(teams_path, mapped_data)
 
         return mapped_data
 
@@ -252,38 +403,71 @@ def get_tournament_data(tournament_id: str):
 
         return teams_position
 
-    async def get_teams_data() -> None:
+    async def get_teams_data(cached_teams: list[Team] | None) -> None:
         async with aiohttp.ClientSession() as session:
-            teams = await fetch_teams(session)
+            teams = cached_teams if cached_teams else await fetch_teams(session)
             await fetch_teams_table(session, teams)
 
-    match_days = get_match_days()
-    matches = asyncio.run(get_matches(match_days))
+    # Las jornadas solo cambian cuando el calendario se agota (playoffs), así
+    # que reutilizamos el archivo mientras queden jornadas por jugar.
+    match_days = None if args.refresh_static else load_json_file(weeks_path)
 
-    save_json_as_file("./src/assets/" + tournament_id + "/weeks.json", match_days)
+    if match_days and not is_calendar_complete(match_days):
+        match_days = None
+
+    if match_days is None:
+        match_days = get_match_days()
+        save_json_as_file(weeks_path, match_days)
+    else:
+        print("Reusing cached match days for " + tournament_id)
+
+    matches = asyncio.run(get_matches(match_days))
     save_json_as_file("./src/assets/" + tournament_id + "/matches.json", matches)
 
-    asyncio.run(get_teams_data())
+    # Los equipos (y sus logos) no cambian durante el torneo.
+    cached_teams = None if args.refresh_static else load_json_file(teams_path)
+
+    if cached_teams:
+        print("Reusing cached teams for " + tournament_id)
+
+    asyncio.run(get_teams_data(cached_teams))
+
+    finished = is_tournament_finished(match_days, matches)
 
     def update_tournament(tournament):
         if tournament.get("id") == tournament_id:
-            return {**tournament, "updated_at": datetime.now(UTC).isoformat()}
+            return {
+                **tournament,
+                "finished": finished,
+                "updated_at": datetime.now(UTC).isoformat(),
+            }
         return tournament
 
     updated_tournaments = list(map(update_tournament, get_tournaments()))
     save_json_as_file("./src/assets/tournaments.json", updated_tournaments)
+    print("Fetched " + tournament_id + (" (finished)" if finished else ""))
 
 
 def main():
     for tournament in get_tournaments():
+        tournament_id = tournament.get("id")
+
+        if args.force:
+            get_tournament_data(tournament_id)
+            continue
+
+        if tournament.get("finished"):
+            print("Tournament already finished, skipping " + tournament_id)
+            continue
+
         updated_at = datetime.fromisoformat(tournament.get("updated_at"))
         now = datetime.now(UTC)
         difference = now - updated_at
 
         if difference > timedelta(hours=24):
-            get_tournament_data(tournament.get("id"))
+            get_tournament_data(tournament_id)
         else:
-            print("Haven't pass 24 hours, skipping " + tournament.get("id"))
+            print("Haven't pass 24 hours, skipping " + tournament_id)
 
     print("JSON's populated correctly")
 
