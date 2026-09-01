@@ -3,26 +3,30 @@
     "id": "1A38224C-1577-43EB-B69E-158D80024029",
     "division": "I",
     "category": "Varonil",
-    "updated_at": "2026-08-31T12:47:40.915912+00:00"
+    "updated_at": "2026-09-01T03:23:24.029724+00:00",
+    "finished": true
   },
   {
     "id": "49F7D44A-6362-434C-A1E5-03FB72F076AF",
     "division": "I",
     "category": "Femenil",
-    "updated_at": "2026-08-31T12:47:42.314882+00:00"
+    "updated_at": "2026-09-01T03:23:26.274257+00:00",
+    "finished": true
   },
   {
     "id": "066CC7C9-E88C-4595-8CF5-D5AAADF0AA33",
     "division": "II",
     "category": "Femenil",
     "conference": "Centro",
-    "updated_at": "2026-08-31T12:47:43.786017+00:00"
+    "updated_at": "2026-09-01T03:23:28.091693+00:00",
+    "finished": true
   },
   {
     "id": "8ADD5CDB-8E5D-4C42-B53E-EA1842208229",
     "division": "II",
     "category": "Varonil",
     "conference": "Centro",
-    "updated_at": "2026-08-31T12:47:45.617373+00:00"
+    "updated_at": "2026-09-01T03:23:30.095358+00:00",
+    "finished": true
   }
 ]
