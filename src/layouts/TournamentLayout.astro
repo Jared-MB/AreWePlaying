@@ -33,7 +33,11 @@ const menTournament = tournamentsByConference.find(
 const weeks = await getWeeks(tournamentId);
 ---
 
-<Layout tournamentId={tournamentId} title={title} description={description}>
+<Layout
+  tournamentId={tournamentId}
+  title={title}
+  description={`${description} | División ${tournament?.division} - ${tournament?.category} ${tournament?.conference ? `(${tournament?.conference})` : ""}`}
+>
   <AreWePlaying />
   <div class="mb-12 space-y-6">
     <div class="flex md:hidden flex-wrap items-center gap-3">

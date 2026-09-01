@@ -29,6 +29,10 @@ const week = getCurrentWeek(weeks) ?? weeks[0];
 const weekMatches = matches.find((m) => m.id === week?.id)?.data ?? [];
 ---
 
-<TournamentLayout tournamentId={tournamentId} weekId={week?.id}>
+<TournamentLayout
+  tournamentId={tournamentId}
+  weekId={week?.id}
+  description={`Partidos de la ${week.week.toLowerCase()}`}
+>
   <WeekMatches matches={weekMatches} week={week} tournamentId={tournamentId} />
 </TournamentLayout>
