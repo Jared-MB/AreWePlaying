@@ -32,7 +32,11 @@ if (!team) {
 }
 ---
 
-<Layout tournamentId={tournamentId}>
+<Layout
+  tournamentId={tournamentId}
+  title={team.shortName}
+  description={`Partidos de ${team.shortName}`}
+>
   <main class="p-4 md:p-8">
     <div class="mx-auto max-w-7xl">
       <a
