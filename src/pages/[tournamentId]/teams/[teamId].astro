@@ -5,6 +5,7 @@ import { getTournaments } from "@/utils/get-tournaments";
 import { getTeam } from "@/utils/get-team";
 import PastMatches from "@/components/PastMatches.astro";
 import UpcomingMatches from "@/components/UpcomingMatches.astro";
+import tournaments from "@/assets/tournaments.json" with { type: "json" };
 
 export async function getStaticPaths() {
   const tournaments = await getTournaments();
@@ -30,12 +31,15 @@ const team = await getTeam({ teamId, tournamentId });
 if (!team) {
   return Astro.redirect(`/${tournamentId}/teams`);
 }
+
+const tournament = tournaments.find((t) => t.id.toLowerCase() === tournamentId);
+console.log(tournament);
 ---
 
 <Layout
   tournamentId={tournamentId}
   title={`Calendario | ${team.shortName} | Are We Playing?`}
-  description={`Partidos de ${team.shortName}`}
+  description={`Calendario de partidos de basketball de ${team.shortName} en la liga ABE ${tournament?.category} División ${tournament?.division} ${tournament?.conference ? `(${tournament.conference})` : ""}.`}
   icon={{
     href: `/logos/${tournamentId.toUpperCase()}/${team.id}.avif`,
     type: "image/avif",
