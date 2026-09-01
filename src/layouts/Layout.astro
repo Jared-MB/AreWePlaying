@@ -11,9 +11,21 @@ interface Props {
   tournamentId?: string;
   title?: string;
   description?: string;
+  icon?: {
+    href?: string;
+    type?: string;
+  };
 }
 
-const { tournamentId, title = "Are We Playing?", description } = Astro.props;
+const {
+  tournamentId,
+  title = "Are We Playing?",
+  description,
+  icon = {
+    href: "/favicon.svg",
+    type: "image/svg+xml",
+  },
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -26,6 +38,7 @@ const { tournamentId, title = "Are We Playing?", description } = Astro.props;
       content="vhnEvLSZ4cAdbDdRlkwQdS8jq2PFCV1C3j1HWywmR6o"
     />
     <meta name="description" content={description} />
+    <link rel="icon" type={icon.type} href={icon.href} />
     <title>{title}</title>
     <ClientRouter />
   </head>

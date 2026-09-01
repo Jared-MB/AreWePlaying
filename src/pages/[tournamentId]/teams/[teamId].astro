@@ -36,6 +36,10 @@ if (!team) {
   tournamentId={tournamentId}
   title={team.shortName}
   description={`Partidos de ${team.shortName}`}
+  icon={{
+    href: `/logos/${tournamentId.toUpperCase()}/${team.id}.avif`,
+    type: "image/avif",
+  }}
 >
   <main class="p-4 md:p-8">
     <div class="mx-auto max-w-7xl">
