@@ -1,5 +1,5 @@
 ---
-import MatchCard from "@/components/MatchCard.astro";
+import MatchCard from "@/components/match-card.tsx";
 
 import type { Match } from "@/types/match";
 import type { Week } from "@/types/week";
@@ -22,14 +22,18 @@ const { matches, week, tournamentId } = Astro.props;
     </div>
   ) : (
     matches.map((game) => (
-      <MatchCard>
+      <MatchCard
+        visitingTeamId={game.visitingTeamId}
+        localTeamId={game.localTeamId}
+        client:load
+      >
         <article class="grid gap-4 p-6 md:grid-cols-12 md:items-center">
           <div class="col-span-12 md:col-span-2">
             <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1">
               Fecha
             </div>
             <div class="font-bold">{game.date.split(" ")[1]} HRS</div>
-            <div class="text-sm text-muted-foreground">
+            <div class="group-data-[active=true]:text-primary-foreground/70 text-sm text-muted-foreground">
               {game.date.split(" ")[0]}
             </div>
             <div class="mt-2 flex flex-wrap gap-2">
