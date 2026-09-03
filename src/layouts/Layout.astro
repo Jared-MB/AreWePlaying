@@ -1,9 +1,14 @@
 ---
 import "@fontsource/space-mono";
 import "@/styles/global.css";
+// sonner inyecta su CSS en <head> al evaluarse el módulo; el swap del ClientRouter
+// lo elimina al navegar y nunca se vuelve a inyectar. Importarlo aquí lo deja en el
+// bundle de estilos de la página, donde el swap sí lo preserva.
+import "sonner/dist/styles.css";
 import HeaderLink from "@/components/HeaderLink.astro";
 import Footer from "@/components/Footer.astro";
 import SelectDivision from "@/components/SelectDivision.astro";
+import { Toaster } from "@/components/sonner";
 
 import { ClientRouter } from "astro:transitions";
 
@@ -88,5 +93,6 @@ const {
       </div>
     </div>
     <Footer />
+    <Toaster client:load />
   </body>
 </html>
