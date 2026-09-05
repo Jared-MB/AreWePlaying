@@ -1,3 +1,4 @@
+import { LOCAL_STORAGE_FAVORITES_KEY } from "@/constants/local-storage";
 import confetti from "canvas-confetti";
 import type { ComponentChildren } from "preact";
 import { useEffect, useState } from "preact/hooks";
@@ -14,9 +15,17 @@ export default function MatchCard({
 	const [isFavorite, setIsFavorite] = useState(false);
 
 	useEffect(() => {
+		if (!localTeamId || !visitingTeamId) {
+			return;
+		}
+
 		const favoritesTeams = JSON.parse(
-			window.localStorage.getItem("favorites") || "[]",
+			window.localStorage.getItem(LOCAL_STORAGE_FAVORITES_KEY) || "[]",
 		);
+
+		if (favoritesTeams.length === 0) {
+			return;
+		}
 
 		const isFavorite =
 			favoritesTeams.includes(localTeamId) ||
@@ -24,7 +33,7 @@ export default function MatchCard({
 
 		setIsFavorite(isFavorite);
 
-		isFavorite &&
+		if (isFavorite) {
 			confetti({
 				particleCount: 60,
 				spread: 100,
@@ -33,6 +42,9 @@ export default function MatchCard({
 				gravity: 0.5,
 				disableForReducedMotion: true,
 			});
+			const $areWePlaying = document.getElementById("are-we-playing");
+			$areWePlaying?.setAttribute("data-active", "true");
+		}
 	}, []);
 
 	return (
