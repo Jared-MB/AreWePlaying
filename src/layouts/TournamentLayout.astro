@@ -11,13 +11,14 @@ interface Props {
   weekId?: string;
   title?: string;
   description?: string;
+  image?: string;
   icon?: {
     href?: string;
     type?: string;
   };
 }
 
-const { tournamentId, weekId, description, title, icon } = Astro.props;
+const { tournamentId, weekId, description, title, image, icon } = Astro.props;
 
 const tournament = tournaments.find((t) => t.id === tournamentId.toUpperCase());
 const tournamentsByConference = tournaments.filter((t) =>
@@ -35,12 +36,21 @@ const menTournament = tournamentsByConference.find(
 );
 
 const weeks = await getWeeks(tournamentId);
+
+// Se arma aquí y no en el template para no meter "undefined" en la descripción
+// cuando la página no manda `description` o el torneo no existe.
+const tournamentLabel = tournament
+  ? `División ${tournament.division} - ${tournament.category}${tournament.conference ? ` (${tournament.conference})` : ""}`
+  : undefined;
+const pageDescription =
+  [description, tournamentLabel].filter(Boolean).join(" | ") || undefined;
 ---
 
 <Layout
   tournamentId={tournamentId}
   title={title}
-  description={`${description} | División ${tournament?.division} - ${tournament?.category} ${tournament?.conference ? `(${tournament?.conference})` : ""}`}
+  description={pageDescription}
+  image={image}
   icon={icon}
 >
   <AreWePlaying />
