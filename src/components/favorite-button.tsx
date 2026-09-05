@@ -1,3 +1,4 @@
+import { LOCAL_STORAGE_FAVORITES_KEY } from "@/constants/local-storage";
 import { Star, StarOff } from "lucide-preact";
 import { useEffect, useState } from "preact/hooks";
 import { toast } from "sonner";
@@ -6,7 +7,10 @@ export default function FavoriteButton({ id }: { id: string }) {
 	const [isFavorite, setIsFavorite] = useState(false);
 
 	const setFavorites = (favorites: string[]) => {
-		localStorage.setItem("favorites", JSON.stringify(favorites));
+		localStorage.setItem(
+			LOCAL_STORAGE_FAVORITES_KEY,
+			JSON.stringify(favorites),
+		);
 	};
 
 	const toggleFavorite = () => {
@@ -28,7 +32,7 @@ export default function FavoriteButton({ id }: { id: string }) {
 			return !prev;
 		});
 
-		const favorites = localStorage.getItem("favorites");
+		const favorites = window.localStorage.getItem(LOCAL_STORAGE_FAVORITES_KEY);
 
 		if (!favorites) {
 			setFavorites([id]);
@@ -48,7 +52,7 @@ export default function FavoriteButton({ id }: { id: string }) {
 	};
 
 	useEffect(() => {
-		const favorites = localStorage.getItem("favorites");
+		const favorites = window.localStorage.getItem(LOCAL_STORAGE_FAVORITES_KEY);
 		if (favorites) {
 			setIsFavorite(JSON.parse(favorites).includes(id));
 		}
