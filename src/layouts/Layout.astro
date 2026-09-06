@@ -33,16 +33,13 @@ const {
   title = SITE_NAME,
   description = DEFAULT_DESCRIPTION,
   image = "/og.png",
-  icon = {
-    href: "/favicon.svg",
-    type: "image/svg+xml",
-  },
+  icon,
 } = Astro.props;
 
 // og:* y twitter:* exigen URLs absolutas; los scrapers no resuelven rutas relativas.
 // Astro.site viene de `site` en astro.config.ts.
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
-const socialImageUrl = new URL(image, Astro.site ?? Astro.url);
+const socialImageUrl = new URL(icon?.href ?? image, Astro.site ?? Astro.url);
 ---
 
 <!doctype html>
@@ -55,7 +52,11 @@ const socialImageUrl = new URL(image, Astro.site ?? Astro.url);
       content="vhnEvLSZ4cAdbDdRlkwQdS8jq2PFCV1C3j1HWywmR6o"
     />
     <meta name="description" content={description} />
-    <link rel="icon" type={icon.type} href={icon.href} />
+    <link
+      rel="icon"
+      type={icon?.type ?? "image/svg+xml"}
+      href={icon?.href ?? "/favicon.svg"}
+    />
     <link rel="canonical" href={canonicalUrl} />
     <title>{title}</title>
 
@@ -66,9 +67,17 @@ const socialImageUrl = new URL(image, Astro.site ?? Astro.url);
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={socialImageUrl} />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    {
+      socialImageUrl.pathname.endsWith(".png") ? (
+        <>
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+        </>
+      ) : (
+        <meta property="og:image:type" content="image/svg+xml" />
+      )
+    }
     <meta property="og:image:alt" content={title} />
 
     <meta name="twitter:card" content="summary_large_image" />
