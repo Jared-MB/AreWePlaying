@@ -74,6 +74,21 @@ def parse_api_date(value: str | None) -> datetime | None:
     return None
 
 
+def parse_updated_at(value: str | None) -> datetime | None:
+    """Parse the ISO `updated_at`, tolerating torneos nuevos sin fecha."""
+
+    if not value:
+        return None
+
+    try:
+        parsed = datetime.fromisoformat(value)
+    except (TypeError, ValueError):
+        return None
+
+    # Las fechas viejas (o escritas a mano) pueden venir sin zona horaria.
+    return parsed if parsed.tzinfo else parsed.replace(tzinfo=UTC)
+
+
 def save_json_as_file(path: str, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -460,7 +475,13 @@ def main():
             print("Tournament already finished, skipping " + tournament_id)
             continue
 
-        updated_at = datetime.fromisoformat(tournament.get("updated_at"))
+        updated_at = parse_updated_at(tournament.get("updated_at"))
+
+        if updated_at is None:
+            # Torneo nuevo (o sin fecha válida): toca bajarlo por primera vez.
+            get_tournament_data(tournament_id)
+            continue
+
         now = datetime.now(UTC)
         difference = now - updated_at
 
