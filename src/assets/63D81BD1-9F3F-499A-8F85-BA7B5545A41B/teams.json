@@ -1,0 +1,116 @@
+[
+  {
+    "id": "3cea3736-2c45-470e-bb43-6b2e74ece908",
+    "name": "CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR MEXICALI",
+    "shortName": "CETYS MEXICALI",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/3cea3736-2c45-470e-bb43-6b2e74ece908.avif"
+  },
+  {
+    "id": "53c870d3-0853-40cc-aae0-08ecb9b74dbe",
+    "name": "CENTRO DE ESTUDIOS UNIVERSITARIOS DE MONTERREY",
+    "shortName": "CEU",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/53c870d3-0853-40cc-aae0-08ecb9b74dbe.avif"
+  },
+  {
+    "id": "36f2e012-1398-4ca3-9bf7-11c76a021916",
+    "name": "TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
+    "shortName": "TEC GUADALAJARA",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/36f2e012-1398-4ca3-9bf7-11c76a021916.avif"
+  },
+  {
+    "id": "c12626d8-7b1b-4208-bcb9-9994a2bd7804",
+    "name": "TECNOLÓGICO DE MONTERREY CAMPUS MONTERREY",
+    "shortName": "TEC MONTERREY",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/c12626d8-7b1b-4208-bcb9-9994a2bd7804.avif"
+  },
+  {
+    "id": "1a4e4b05-4a74-47fd-ad9e-6ca20b4b55a5",
+    "name": "TECNOLÓGICO DE MONTERREY CAMPUS PUEBLA",
+    "shortName": "TEC PUEBLA",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/1a4e4b05-4a74-47fd-ad9e-6ca20b4b55a5.avif"
+  },
+  {
+    "id": "7f9c5e76-7b99-4238-bd7c-298e14c0aab9",
+    "name": "TECNOLÓGICO DE MONTERREY CAMPUS SANTA FE",
+    "shortName": "TEC SANTA FE",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/7f9c5e76-7b99-4238-bd7c-298e14c0aab9.avif"
+  },
+  {
+    "id": "87c79814-cd23-4b3c-aec1-1f4ea5b88732",
+    "name": "TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA",
+    "shortName": "TEC TOLUCA",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/87c79814-cd23-4b3c-aec1-1f4ea5b88732.avif"
+  },
+  {
+    "id": "5d20f14f-1ee2-4c7d-af99-64684a921e30",
+    "name": "UNIVERSIDAD AMERICANA DEL NORESTE",
+    "shortName": "UANE",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/5d20f14f-1ee2-4c7d-af99-64684a921e30.avif"
+  },
+  {
+    "id": "e10b86c8-147f-4671-841c-218478e4748c",
+    "name": "UNIVERSIDAD ANÁHUAC CAMPUS QUERÉTARO",
+    "shortName": "ANÁHUAC QUERÉTARO",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/e10b86c8-147f-4671-841c-218478e4748c.avif"
+  },
+  {
+    "id": "2b05d633-6b84-4eec-a18c-037dc97f52d9",
+    "name": "UNIVERSIDAD ANÁHUAC VERACRUZ, CAMPUS XALAPA",
+    "shortName": "ANÁHUAC XALAPA",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/2b05d633-6b84-4eec-a18c-037dc97f52d9.avif"
+  },
+  {
+    "id": "3b828a65-eb52-4eb9-bf2c-107326486041",
+    "name": "UNIVERSIDAD AUTÓNOMA DE CIUDAD JUÁREZ",
+    "shortName": "UACJ",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/3b828a65-eb52-4eb9-bf2c-107326486041.avif"
+  },
+  {
+    "id": "3eb83b32-d302-401b-be3a-93291e4598d5",
+    "name": "UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN",
+    "shortName": "UANL",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/3eb83b32-d302-401b-be3a-93291e4598d5.avif"
+  },
+  {
+    "id": "045136f3-0565-4920-b8f6-8039ecc98900",
+    "name": "UNIVERSIDAD DE LAS AMÉRICAS PUEBLA",
+    "shortName": "UDLAP",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/045136f3-0565-4920-b8f6-8039ecc98900.avif"
+  },
+  {
+    "id": "2ef73679-4232-41ed-b76b-035d79b44d2e",
+    "name": "UNIVERSIDAD INTERAMERICANA DE PUEBLA",
+    "shortName": "INTERAMERICANA",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/2ef73679-4232-41ed-b76b-035d79b44d2e.avif"
+  },
+  {
+    "id": "c1860a21-b86b-41aa-b6f1-2e6f861e5681",
+    "name": "UNIVERSIDAD MADERO",
+    "shortName": "UMAD",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/c1860a21-b86b-41aa-b6f1-2e6f861e5681.avif"
+  },
+  {
+    "id": "487963eb-b28a-4685-9d70-fceac7a58fe5",
+    "name": "UNIVERSIDAD MONTRER",
+    "shortName": "MONTRER",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/487963eb-b28a-4685-9d70-fceac7a58fe5.avif"
+  },
+  {
+    "id": "c356109e-678f-44e5-8b7e-e27d15376a0b",
+    "name": "UNIVERSIDAD PANAMERICANA CAMPUS MÉXICO",
+    "shortName": "UP MÉXICO",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/c356109e-678f-44e5-8b7e-e27d15376a0b.avif"
+  },
+  {
+    "id": "2d61fcb2-ecb4-4228-a656-a13224fd8202",
+    "name": "UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA",
+    "shortName": "UPAEP",
+    "logo": "/logos/63D81BD1-9F3F-499A-8F85-BA7B5545A41B/2d61fcb2-ecb4-4228-a656-a13224fd8202.avif"
+  },
+  {
+    "id": "d6c1c913-4b01-4e54-b344-f966de71e632",
+    "name": "UNIVERSIDAD VERACRUZANA",
+    "shortName": "UV",
+    "logo": null
+  }
+]

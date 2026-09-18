@@ -1,0 +1,170 @@
+[
+  {
+    "date": "14/09/2026",
+    "week": "SEMANA 1",
+    "type": "Temporada Regular",
+    "id": "4129c35c-bfa7-4204-b131-5c08a0df9f86",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "21/09/2026",
+    "week": "SEMANA 2",
+    "type": "Temporada Regular",
+    "id": "c50dd076-8845-4e2b-b6ac-f752e1887281",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "28/09/2026",
+    "week": "SEMANA 3",
+    "type": "Temporada Regular",
+    "id": "0967331e-fa16-4e74-b3f2-e41550d953a3",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "05/10/2026",
+    "week": "SEMANA 4",
+    "type": "Temporada Regular",
+    "id": "09f32e23-1dc6-4192-937f-e47b7dacb252",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "12/10/2026",
+    "week": "SEMANA 5",
+    "type": "Temporada Regular",
+    "id": "58a61353-acc2-44f6-8a7c-011f6988a874",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "19/10/2026",
+    "week": "SEMANA 6",
+    "type": "Temporada Regular",
+    "id": "8f690a20-43fd-4659-972e-e0bb13a03cfa",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "26/10/2026",
+    "week": "SEMANA 7",
+    "type": "Temporada Regular",
+    "id": "ee8c5a54-a36c-49d9-84da-7b5c6c6825d5",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "02/11/2026",
+    "week": "SEMANA 8",
+    "type": "Temporada Regular",
+    "id": "b14c7d9e-3abb-48b8-87f5-b5ec86feab38",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "09/11/2026",
+    "week": "SEMANA 9",
+    "type": "Temporada Regular",
+    "id": "a0e991fe-5b96-48f6-911f-368b2ba75a17",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "16/11/2026",
+    "week": "SEMANA 10",
+    "type": "Temporada Regular",
+    "id": "8808b722-15ed-4308-b0ad-3c6408faf1e2",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "23/11/2026",
+    "week": "SEMANA 11",
+    "type": "Temporada Regular",
+    "id": "add69e01-2f86-4b06-b0d5-33ec6f96383a",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "30/11/2026",
+    "week": "SEMANA 12",
+    "type": "Temporada Regular",
+    "id": "736b9653-9575-431d-9fe0-bdd52daaaa97",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "01/02/2027",
+    "week": "SEMANA 13",
+    "type": "Temporada Regular",
+    "id": "7816ce82-2b55-4a21-9902-a63dca3024cf",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "08/02/2027",
+    "week": "SEMANA 14",
+    "type": "Temporada Regular",
+    "id": "8767f4c8-5fcb-4407-b45f-95109b01b664",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "15/02/2027",
+    "week": "SEMANA 15",
+    "type": "Temporada Regular",
+    "id": "ac522874-d7d3-4009-8a3c-806779cfc887",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "22/02/2027",
+    "week": "SEMANA 16",
+    "type": "Temporada Regular",
+    "id": "067be282-7c35-4f16-bf3d-77b83435b136",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "01/03/2027",
+    "week": "SEMANA 17",
+    "type": "Temporada Regular",
+    "id": "ae95b595-1274-4688-b67a-92951b922fa9",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "08/03/2027",
+    "week": "SEMANA 18",
+    "type": "Temporada Regular",
+    "id": "4eaaf509-21a9-4141-8a7a-3883698998eb",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "15/03/2027",
+    "week": "SEMANA 19",
+    "type": "Temporada Regular",
+    "id": "7641490f-4a86-439e-b821-83994c7c59ce",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "22/03/2027",
+    "week": "SEMANA 20",
+    "type": "Temporada Regular",
+    "id": "0cd76aa6-53c4-4992-91e9-d9fc967e8c59",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "29/03/2027",
+    "week": "SEMANA 21",
+    "type": "Temporada Regular",
+    "id": "83e72b8e-c26e-4141-bce2-f56542198787",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "05/04/2027",
+    "week": "SEMANA 22",
+    "type": "Temporada Regular",
+    "id": "7241e3de-cc72-4db3-8bc7-b51c3cc57bd0",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "12/04/2027",
+    "week": "SEMANA 23",
+    "type": "Temporada Regular",
+    "id": "16564737-4bef-4a8d-84c2-6c5a2cf4ff73",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  },
+  {
+    "date": "19/04/2027",
+    "week": "SEMANA 24",
+    "type": "Temporada Regular",
+    "id": "3e02b921-f197-4916-ac4b-3bf8563c84a2",
+    "tournamentId": "63d81bd1-9f3f-499a-8f85-ba7b5545a41b"
+  }
+]

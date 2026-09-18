@@ -1,0 +1,92 @@
+[
+  {
+    "id": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
+    "name": "CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA",
+    "shortName": "CETYS TIJUANA",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/b1dd64e2-580c-4f27-bff9-fb3cb1394aa7.avif"
+  },
+  {
+    "id": "bea107fe-6c11-4cc0-918f-6b8c1de567a5",
+    "name": "TECNOLÓGICO DE MONTERREY CAMPUS ESTADO DE MÉXICO",
+    "shortName": "TEC CEM",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/bea107fe-6c11-4cc0-918f-6b8c1de567a5.avif"
+  },
+  {
+    "id": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
+    "name": "TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
+    "shortName": "TEC GUADALAJARA",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/b0f81ef1-5e11-4d0d-905c-c5e8438f81c2.avif"
+  },
+  {
+    "id": "cabd406f-5a61-4453-8a54-640766b87506",
+    "name": "TECNOLÓGICO DE MONTERREY CAMPUS HIDALGO",
+    "shortName": "TEC HIDALGO",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/cabd406f-5a61-4453-8a54-640766b87506.avif"
+  },
+  {
+    "id": "9ca7c63c-1626-4848-8ef2-d7c650af99b8",
+    "name": "TECNOLÓGICO DE MONTERREY CAMPUS MONTERREY",
+    "shortName": "TEC MONTERREY",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/9ca7c63c-1626-4848-8ef2-d7c650af99b8.avif"
+  },
+  {
+    "id": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
+    "name": "TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA",
+    "shortName": "TEC TOLUCA",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/3c0f83ea-1cc1-4f99-b3c4-950019d1ecff.avif"
+  },
+  {
+    "id": "1fd01df7-224f-49f1-bede-d7493262cc8f",
+    "name": "UNIVERSIDAD ANÁHUAC MÉXICO NORTE",
+    "shortName": "ANÁHUAC NORTE",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/1fd01df7-224f-49f1-bede-d7493262cc8f.avif"
+  },
+  {
+    "id": "a643f690-adb5-4691-ac34-5d0aae92a199",
+    "name": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+    "shortName": "ANÁHUAC SUR",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/a643f690-adb5-4691-ac34-5d0aae92a199.avif"
+  },
+  {
+    "id": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
+    "name": "UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN",
+    "shortName": "UANL",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9.avif"
+  },
+  {
+    "id": "1a4adb2b-4d18-4dbe-8909-45fd99de06e5",
+    "name": "UNIVERSIDAD DE LAS AMÉRICAS PUEBLA",
+    "shortName": "UDLAP",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/1a4adb2b-4d18-4dbe-8909-45fd99de06e5.avif"
+  },
+  {
+    "id": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
+    "name": "UNIVERSIDAD DE MONTERREY",
+    "shortName": "UDEM",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/17d80011-c03f-41e7-a10a-6d491f2f6b9c.avif"
+  },
+  {
+    "id": "9ea22708-a1af-4f68-97e6-958985ca7803",
+    "name": "UNIVERSIDAD INTERAMERICANA DE PUEBLA",
+    "shortName": "INTERAMERICANA",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/9ea22708-a1af-4f68-97e6-958985ca7803.avif"
+  },
+  {
+    "id": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
+    "name": "UNIVERSIDAD MODELO DE MÉRIDA",
+    "shortName": "MODELO DE MÉRIDA",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/ad606dcd-488d-4d6e-9c0a-3537898aba87.avif"
+  },
+  {
+    "id": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
+    "name": "UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA",
+    "shortName": "UPAEP",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/ffb62e29-86a4-4870-96f4-6c2de75bf143.avif"
+  },
+  {
+    "id": "53456a3c-f31c-44e7-9437-7fb8e8a68b78",
+    "name": "UNIVERSIDAD VASCO DE QUIROGA",
+    "shortName": "UVAQ",
+    "logo": "/logos/16C41251-03EF-4C11-8A31-F2AC8CF305A1/53456a3c-f31c-44e7-9437-7fb8e8a68b78.avif"
+  }
+]
