@@ -7,15 +7,12 @@ import { getMatches } from "@/utils/get-matches";
 import { getTournaments } from "@/utils/get-tournaments";
 import { getWeeks } from "@/utils/get-weeks";
 
-export async function getStaticPaths() {
-  const tournaments = await getTournaments();
-  return tournaments.flatMap((dir) => [
-    {
-      params: {
-        tournamentId: dir,
-      },
+export function getStaticPaths() {
+  return getTournaments().map(({ id }) => ({
+    params: {
+      tournamentId: id.toLowerCase(),
     },
-  ]);
+  }));
 }
 
 const { tournamentId } = Astro.params;

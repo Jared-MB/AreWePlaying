@@ -1,5 +1,5 @@
 ---
-import tournaments from "@/assets/tournaments.json";
+import { getTournaments } from "@/utils/get-tournaments";
 
 interface Props {
   id?: string;
@@ -7,6 +7,8 @@ interface Props {
 }
 
 const { id, defaultSelected } = Astro.props;
+
+const tournaments = getTournaments();
 
 const selectId = id ?? `division-${crypto.randomUUID()}`;
 ---

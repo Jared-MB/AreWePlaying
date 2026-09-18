@@ -5,15 +5,12 @@ import { getTeamsTable } from "@/utils/get-teams-table";
 import MatchCard from "@/components/match-card.tsx";
 import SelectDivision from "@/components/SelectDivision.astro";
 
-export async function getStaticPaths() {
-  const tournaments = await getTournaments();
-  return tournaments.flatMap((dir) => [
-    {
-      params: {
-        tournamentId: dir,
-      },
+export function getStaticPaths() {
+  return getTournaments().map(({ id }) => ({
+    params: {
+      tournamentId: id.toLowerCase(),
     },
-  ]);
+  }));
 }
 
 const { tournamentId } = Astro.params;

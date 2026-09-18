@@ -5,18 +5,16 @@ import { getTournaments } from "@/utils/get-tournaments";
 import { getTeam } from "@/utils/get-team";
 import PastMatches from "@/components/PastMatches.astro";
 import UpcomingMatches from "@/components/UpcomingMatches.astro";
-import tournaments from "@/assets/tournaments.json" with { type: "json" };
 import FavoriteButton from "@/components/favorite-button.tsx";
 
 export async function getStaticPaths() {
-  const tournaments = await getTournaments();
-
-  const params = tournaments.map(async (tournament) => {
-    const teams = await getTeamsTable(tournament);
+  const params = getTournaments().map(async ({ id }) => {
+    const tournamentId = id.toLowerCase();
+    const teams = await getTeamsTable(tournamentId);
 
     return teams.map((t) => ({
       params: {
-        tournamentId: tournament,
+        tournamentId,
         teamId: t.id,
       },
     }));
@@ -33,7 +31,9 @@ if (!team) {
   return Astro.redirect(`/${tournamentId}/teams`);
 }
 
-const tournament = tournaments.find((t) => t.id.toLowerCase() === tournamentId);
+const tournament = getTournaments().find(
+  (t) => t.id.toLowerCase() === tournamentId,
+);
 ---
 
 <Layout

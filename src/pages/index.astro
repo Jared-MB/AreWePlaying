@@ -1,8 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import tournaments from "@/assets/tournaments.json" with { type: "json" };
 import AreWePlaying from "@/components/AreWePlaying.astro";
 import { getTeamsTable } from "@/utils/get-teams-table";
+import { getTournaments } from "@/utils/get-tournaments";
+
+const tournaments = getTournaments();
 
 const topTeamsPromise = tournaments.map(async (t) => {
   const teams = await getTeamsTable(t.id);

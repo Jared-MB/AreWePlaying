@@ -1,7 +1,7 @@
 ---
 import FilterLink from "@/components/FilterLink.astro";
 import Layout from "@/layouts/Layout.astro";
-import tournaments from "@/assets/tournaments.json";
+import { getTournaments } from "@/utils/get-tournaments";
 import { getWeeks } from "@/utils/get-weeks";
 import AreWePlaying from "@/components/AreWePlaying.astro";
 import SelectDivision from "@/components/SelectDivision.astro";
@@ -19,6 +19,8 @@ interface Props {
 }
 
 const { tournamentId, weekId, description, title, image, icon } = Astro.props;
+
+const tournaments = getTournaments();
 
 const tournament = tournaments.find((t) => t.id === tournamentId.toUpperCase());
 const tournamentsByConference = tournaments.filter((t) =>
