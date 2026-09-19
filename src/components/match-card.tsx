@@ -57,7 +57,7 @@ export default function MatchCard({
 		<div
 			ref={$card}
 			data-active={isFavorite}
-			className="bg-zinc-100 shadow-xs mb-6 text-card-foreground flex flex-col gap-6 p-0 transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none rounded-md group data-[active=true]:bg-primary/80 data-[active=true]:text-primary-foreground!"
+			className="bg-zinc-100 group shadow-xs mb-6 text-card-foreground flex flex-col gap-6 p-0 transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none rounded-md group data-[active=true]:bg-primary/90 data-[active=true]:text-primary-foreground!"
 		>
 			{children}
 		</div>
