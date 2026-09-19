@@ -1,70 +1,70 @@
 [
-	{
-		"id": "1A38224C-1577-43EB-B69E-158D80024029",
-		"division": "I",
-		"category": "Varonil",
-		"updated_at": "2026-09-01T03:23:24.029724+00:00",
-		"finished": true,
-		"season": "2025-2026"
-	},
-	{
-		"id": "49F7D44A-6362-434C-A1E5-03FB72F076AF",
-		"division": "I",
-		"category": "Femenil",
-		"updated_at": "2026-09-01T03:23:26.274257+00:00",
-		"finished": true,
-		"season": "2025-2026"
-	},
-	{
-		"id": "066CC7C9-E88C-4595-8CF5-D5AAADF0AA33",
-		"division": "II",
-		"category": "Femenil",
-		"conference": "Centro",
-		"updated_at": "2026-09-01T03:23:28.091693+00:00",
-		"finished": true,
-		"season": "2025-2026"
-	},
-	{
-		"id": "8ADD5CDB-8E5D-4C42-B53E-EA1842208229",
-		"division": "II",
-		"category": "Varonil",
-		"conference": "Centro",
-		"updated_at": "2026-09-01T03:23:30.095358+00:00",
-		"finished": true,
-		"season": "2025-2026"
-	},
-	{
-		"id": "16C41251-03EF-4C11-8A31-F2AC8CF305A1",
-		"division": "I",
-		"category": "Femenil",
-		"finished": false,
-		"updated_at": "2026-09-16T04:41:37.180784+00:00",
-		"season": "2026-2027"
-	},
-	{
-		"id": "63D81BD1-9F3F-499A-8F85-BA7B5545A41B",
-		"division": "I",
-		"category": "Varonil",
-		"finished": false,
-		"updated_at": "2026-09-16T04:41:40.408276+00:00",
-		"season": "2026-2027"
-	},
-	{
-		"id": "2D2DE225-D4C8-48B8-AF6B-343E80DACF6A",
-		"division": "II",
-		"category": "Femenil",
-		"conference": "Centro",
-		"finished": false,
-		"updated_at": "2026-09-15T21:35:36.669111+00:00",
-		"season": "2026-2027"
-	},
-	{
-		"id": "E160F43F-CAE0-43CD-BEE0-B3118AAD8ADD",
-		"division": "II",
-		"category": "Varonil",
-		"conference": "Centro",
-		"finished": false,
-		"updated_at": "2026-09-16T04:41:43.215664+00:00",
-		"season": "2026-2027"
-	}
+  {
+    "id": "1A38224C-1577-43EB-B69E-158D80024029",
+    "division": "I",
+    "category": "Varonil",
+    "updated_at": "2026-09-01T03:23:24.029724+00:00",
+    "finished": true,
+    "season": "2025-2026"
+  },
+  {
+    "id": "49F7D44A-6362-434C-A1E5-03FB72F076AF",
+    "division": "I",
+    "category": "Femenil",
+    "updated_at": "2026-09-01T03:23:26.274257+00:00",
+    "finished": true,
+    "season": "2025-2026"
+  },
+  {
+    "id": "066CC7C9-E88C-4595-8CF5-D5AAADF0AA33",
+    "division": "II",
+    "category": "Femenil",
+    "conference": "Centro",
+    "updated_at": "2026-09-01T03:23:28.091693+00:00",
+    "finished": true,
+    "season": "2025-2026"
+  },
+  {
+    "id": "8ADD5CDB-8E5D-4C42-B53E-EA1842208229",
+    "division": "II",
+    "category": "Varonil",
+    "conference": "Centro",
+    "updated_at": "2026-09-01T03:23:30.095358+00:00",
+    "finished": true,
+    "season": "2025-2026"
+  },
+  {
+    "id": "16C41251-03EF-4C11-8A31-F2AC8CF305A1",
+    "division": "I",
+    "category": "Femenil",
+    "finished": false,
+    "updated_at": "2026-09-19T01:32:33.085500+00:00",
+    "season": "2026-2027"
+  },
+  {
+    "id": "63D81BD1-9F3F-499A-8F85-BA7B5545A41B",
+    "division": "I",
+    "category": "Varonil",
+    "finished": false,
+    "updated_at": "2026-09-19T01:32:34.098897+00:00",
+    "season": "2026-2027"
+  },
+  {
+    "id": "2D2DE225-D4C8-48B8-AF6B-343E80DACF6A",
+    "division": "II",
+    "category": "Femenil",
+    "conference": "Centro",
+    "finished": false,
+    "updated_at": "2026-09-19T01:32:35.109399+00:00",
+    "season": "2026-2027"
+  },
+  {
+    "id": "E160F43F-CAE0-43CD-BEE0-B3118AAD8ADD",
+    "division": "II",
+    "category": "Varonil",
+    "conference": "Centro",
+    "finished": false,
+    "updated_at": "2026-09-19T01:32:36.795197+00:00",
+    "season": "2026-2027"
+  }
 ]
