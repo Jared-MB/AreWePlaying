@@ -50,20 +50,20 @@ const tournament = getTournaments().find(
       <div class="flex justify-between items-center mb-6">
         <a
           href={`/${tournamentId}/teams`}
-          class="bg-zinc-100 rounded-md px-4 py-2 tracking-wider shadow-xs hover:bg-zinc-200/70 focus:scale-95 transition-transform duration-180"
+          class="bg-surface rounded-md px-4 py-2 tracking-wider shadow-xs hover:bg-surface-hover/70 focus:scale-95 transition-transform duration-180"
         >
           ← REGRESAR
         </a>
         <FavoriteButton client:load id={team.id} />
       </div>
 
-      <header class="mb-8 border-b border-b-zinc-400/70 pb-6">
+      <header class="mb-8 border-b border-b-line/70 pb-6">
         <div
           class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between"
         >
           <div class="grid grid-cols-[auto_1fr] items-center gap-4 max-w-[75%]">
             <div
-              class="flex size-20 rounded-full items-center justify-center border border-zinc-400/70 bg-primary text-3xl font-bold text-primary-foreground"
+              class="flex size-20 rounded-full items-center justify-center border border-line/70 bg-primary text-3xl font-bold text-primary-foreground"
             >
               {team.shortName.split(" ")[0].substring(0, 3)}
             </div>
@@ -77,7 +77,7 @@ const tournament = getTournaments().find(
           </div>
 
           <section class="flex gap-4">
-            <article class="rounded-md bg-zinc-100 shadow-xs p-4 text-center">
+            <article class="rounded-md bg-surface shadow-xs p-4 text-center">
               <div
                 class="text-sm font-bold uppercase tracking-wider text-muted-foreground"
               >
@@ -87,7 +87,7 @@ const tournament = getTournaments().find(
                 {team.wins}W - {team.losses}L
               </div>
             </article>
-            <article class="rounded-md bg-zinc-100 shadow-xs p-4 text-center">
+            <article class="rounded-md bg-surface shadow-xs p-4 text-center">
               <div
                 class="text-sm font-bold uppercase tracking-wider text-muted-foreground"
               >

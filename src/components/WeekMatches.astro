@@ -27,29 +27,29 @@ const { matches, week, tournamentId } = Astro.props;
         localTeamId={game.localTeamId}
         client:load
       >
-        <article class="grid gap-4 p-6 md:grid-cols-12 md:items-center group-data-[active=true]:text-zinc-950">
+        <article class="grid gap-4 p-6 md:grid-cols-12 md:items-center group-data-[active=true]:text-highlight-foreground">
           <div class="col-span-12 md:col-span-2">
-            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1 group-data-[active=true]:text-zinc-950/70">
+            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1 group-data-[active=true]:text-highlight-foreground/70">
               Fecha
             </div>
             <div class="font-bold">{game.date.split(" ")[1]} HRS</div>
-            <div class="text-sm text-muted-foreground group-data-[active=true]:text-zinc-950/75">
+            <div class="text-sm text-muted-foreground group-data-[active=true]:text-highlight-foreground/75">
               {game.date.split(" ")[0]}
             </div>
             <div class="mt-2 flex flex-wrap gap-2">
-              <div class="inline-block rounded-md border border-zinc-400 bg-muted px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-muted-foreground group-data-[active=true]:border-zinc-950/20 group-data-[active=true]:bg-white group-data-[active=true]:text-zinc-800">
+              <div class="inline-block rounded-md border border-line bg-muted px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-muted-foreground group-data-[active=true]:border-highlight-foreground/20 group-data-[active=true]:bg-highlight-chip group-data-[active=true]:text-highlight-chip-foreground">
                 {week?.week}
               </div>
             </div>
           </div>
 
           <div class="col-span-12 md:col-span-5">
-            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1 group-data-[active=true]:text-zinc-950/70">
+            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1 group-data-[active=true]:text-highlight-foreground/70">
               Equipos
             </div>
             <div class="space-y-2">
               <div class="flex items-center gap-3">
-                <div class="flex size-10 items-center justify-center rounded-full border border-zinc-400/70 bg-primary text-xs font-bold text-primary-foreground group-data-[active=true]:border-zinc-950/20 group-data-[active=true]:bg-zinc-950 group-data-[active=true]:text-white">
+                <div class="flex size-10 items-center justify-center rounded-full border border-line/70 bg-primary text-xs font-bold text-primary-foreground group-data-[active=true]:border-highlight-foreground/20 group-data-[active=true]:bg-highlight-chip-strong group-data-[active=true]:text-highlight-chip-strong-foreground">
                   {game.localTeam.split(" ")[0].substring(0, 3)}
                 </div>
                 <div class="flex min-w-0 flex-1 items-center justify-between gap-3">
@@ -61,11 +61,11 @@ const { matches, week, tournamentId } = Astro.props;
                   </a>
                   {game.started === 0 || game.live === 0 ? (
                     <div
-                      class={`shrink-0 rounded-md border border-zinc-400/70 px-4 py-1 text-2xl font-bold group-data-[active=true]:border-zinc-950/20 ${
+                      class={`shrink-0 rounded-md border border-line/70 px-4 py-1 text-2xl font-bold group-data-[active=true]:border-highlight-foreground/20 ${
                         Number(game.localTeamPoints) >
                         Number(game.visitingTeamPoints || 0)
-                          ? "bg-primary text-primary-foreground group-data-[active=true]:bg-zinc-950 group-data-[active=true]:text-white"
-                          : "bg-muted text-muted-foreground group-data-[active=true]:bg-white group-data-[active=true]:text-zinc-700"
+                          ? "bg-primary text-primary-foreground group-data-[active=true]:bg-highlight-chip-strong group-data-[active=true]:text-highlight-chip-strong-foreground"
+                          : "bg-muted text-muted-foreground group-data-[active=true]:bg-highlight-chip group-data-[active=true]:text-highlight-chip-muted-foreground"
                       }`}
                     >
                       {game.localTeamPoints}
@@ -74,7 +74,7 @@ const { matches, week, tournamentId } = Astro.props;
                 </div>
               </div>
               <div class="flex items-center gap-3">
-                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-400/70 bg-secondary text-xs font-bold text-secondary-foreground group-data-[active=true]:border-zinc-950/20 group-data-[active=true]:bg-white group-data-[active=true]:text-zinc-950">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-line/70 bg-secondary text-xs font-bold text-secondary-foreground group-data-[active=true]:border-highlight-foreground/20 group-data-[active=true]:bg-highlight-chip group-data-[active=true]:text-highlight-foreground">
                   {game.visitingTeam.split(" ")[0].substring(0, 3)}
                 </div>
                 <div class="flex min-w-0 flex-1 items-center justify-between gap-3">
@@ -86,11 +86,11 @@ const { matches, week, tournamentId } = Astro.props;
                   </a>
                   {game.started === 0 || game.live === 0 ? (
                     <div
-                      class={`shrink-0 rounded-md border border-zinc-400/70 px-4 py-1 text-2xl font-bold group-data-[active=true]:border-zinc-950/20 ${
+                      class={`shrink-0 rounded-md border border-line/70 px-4 py-1 text-2xl font-bold group-data-[active=true]:border-highlight-foreground/20 ${
                         Number(game.visitingTeamPoints) >
                         Number(game.localTeamPoints || 0)
-                          ? "bg-primary text-primary-foreground group-data-[active=true]:bg-zinc-950 group-data-[active=true]:text-white"
-                          : "bg-muted text-muted-foreground group-data-[active=true]:bg-white group-data-[active=true]:text-zinc-700"
+                          ? "bg-primary text-primary-foreground group-data-[active=true]:bg-highlight-chip-strong group-data-[active=true]:text-highlight-chip-strong-foreground"
+                          : "bg-muted text-muted-foreground group-data-[active=true]:bg-highlight-chip group-data-[active=true]:text-highlight-chip-muted-foreground"
                       }`}
                     >
                       {game.visitingTeamPoints}
@@ -103,7 +103,7 @@ const { matches, week, tournamentId } = Astro.props;
 
           {/* Venue */}
           <div class="col-span-12 md:col-span-3">
-            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1 group-data-[active=true]:text-zinc-950/70">
+            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1 group-data-[active=true]:text-highlight-foreground/70">
               Lugar
             </div>
             {game?.locationUrl !== "-" ? (
@@ -122,16 +122,16 @@ const { matches, week, tournamentId } = Astro.props;
 
           {/* Status */}
           <div class="col-span-12 md:col-span-2">
-            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1 group-data-[active=true]:text-zinc-950/70">
+            <div class="text-xs font-bold uppercase tracking-wider text-muted-foreground md:hidden mb-1 group-data-[active=true]:text-highlight-foreground/70">
               Estatus
             </div>
             <div
-              class={`inline-block rounded-md border border-zinc-400/70 px-3 py-1 text-xs font-bold uppercase tracking-wider group-data-[active=true]:border-zinc-950/20 ${
+              class={`inline-block rounded-md border border-line/70 px-3 py-1 text-xs font-bold uppercase tracking-wider group-data-[active=true]:border-highlight-foreground/20 ${
                 game.live === 1
-                  ? "bg-primary text-primary-foreground group-data-[active=true]:bg-zinc-950 group-data-[active=true]:text-white"
+                  ? "bg-primary text-primary-foreground group-data-[active=true]:bg-highlight-chip-strong group-data-[active=true]:text-highlight-chip-strong-foreground"
                   : game.started === 1
-                    ? "bg-muted text-muted-foreground group-data-[active=true]:bg-white group-data-[active=true]:text-zinc-800"
-                    : "bg-primary text-primary-foreground group-data-[active=true]:bg-zinc-950 group-data-[active=true]:text-white"
+                    ? "bg-muted text-muted-foreground group-data-[active=true]:bg-highlight-chip group-data-[active=true]:text-highlight-chip-foreground"
+                    : "bg-primary text-primary-foreground group-data-[active=true]:bg-highlight-chip-strong group-data-[active=true]:text-highlight-chip-strong-foreground"
               }`}
             >
               {game.live === 1

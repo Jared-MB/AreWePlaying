@@ -77,6 +77,26 @@ const socialImageUrl = new URL(icon?.href ?? image, Astro.site ?? Astro.url);
     <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:image:alt" content={title} />
     <ClientRouter />
+    <script is:inline>
+      // Aplica el tema antes del primer pintado para evitar el parpadeo. La clave
+      // debe coincidir con LOCAL_STORAGE_THEME_KEY (los scripts inline no importan).
+      (() => {
+        const applyTheme = () => {
+          let theme = null;
+          try {
+            theme = localStorage.getItem("theme");
+          } catch {}
+          const isDark = theme
+            ? theme === "dark"
+            : matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.classList.toggle("dark", isDark);
+          document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+        };
+        applyTheme();
+        // El ClientRouter reemplaza los atributos de <html> al navegar.
+        document.addEventListener("astro:after-swap", applyTheme);
+      })();
+    </script>
   </head>
   <body class="font-sans antialiased">
     <slot />

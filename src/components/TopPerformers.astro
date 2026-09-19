@@ -18,9 +18,9 @@ const topTeams = await getTopTeams();
       return (
         <section
           aria-labelledby={`top-${tournamentId}`}
-          class="rounded-md bg-zinc-100 shadow-xs"
+          class="rounded-md bg-surface shadow-xs"
         >
-          <header class="flex items-baseline justify-between gap-2 bg-primary rounded-t-md px-4 py-2 text-background">
+          <header class="flex items-baseline justify-between gap-2 bg-primary rounded-t-md px-4 py-2 text-primary-foreground">
             <h3
               id={`top-${tournamentId}`}
               class="min-w-0 font-mono text-sm font-bold uppercase tracking-wider"
@@ -37,9 +37,9 @@ const topTeams = await getTopTeams();
           </header>
 
           {teams.length > 0 ? (
-            <ol class="divide-y-2 divide-zinc-200/70">
+            <ol class="divide-y-2 divide-surface-hover/70">
               {teams.map((team) => (
-                <li class="last:rounded-b-md hover:bg-zinc-200">
+                <li class="last:rounded-b-md hover:bg-surface-hover">
                   <a
                     href={`/${tournamentId}/teams/${team.id}`}
                     class="flex items-center gap-3 px-4 py-3"

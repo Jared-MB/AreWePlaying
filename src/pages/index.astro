@@ -28,7 +28,7 @@ const tournaments = getTournaments();
           tournaments.map((t) => (
             <a
               href={`/${t.id.toLowerCase()}`}
-              class="bg-zinc-100 rounded-md px-4 py-2 shadow-xs hover:bg-zinc-200/70 focus:scale-95 transition-transform duration-180"
+              class="bg-surface rounded-md px-4 py-2 shadow-xs hover:bg-surface-hover/70 focus:scale-95 transition-transform duration-180"
             >
               División {t.division} {t.category}{" "}
               {t.conference ? `· ${t.conference}` : null}
@@ -49,7 +49,7 @@ const tournaments = getTournaments();
               </div>
               {
                 Array.from({ length: 3 }, () => (
-                  <div class="h-32 animate-pulse bg-zinc-100 shadow-xs motion-reduce:animate-none rounded-md" />
+                  <div class="h-32 animate-pulse bg-surface shadow-xs motion-reduce:animate-none rounded-md" />
                 ))
               }
             </div>
