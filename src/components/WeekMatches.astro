@@ -37,7 +37,7 @@ const { matches, week, tournamentId } = Astro.props;
               {game.date.split(" ")[0]}
             </div>
             <div class="mt-2 flex flex-wrap gap-2">
-              <div class="inline-block border border-foreground bg-muted px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              <div class="inline-block rounded-md border border-zinc-400 bg-muted px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">
                 {week?.week}
               </div>
             </div>
@@ -49,19 +49,19 @@ const { matches, week, tournamentId } = Astro.props;
             </div>
             <div class="space-y-2">
               <div class="flex items-center gap-3">
-                <div class="flex size-10 items-center justify-center border-2 border-foreground bg-primary text-xs font-bold text-primary-foreground">
+                <div class="flex size-10 items-center justify-center rounded-full border border-zinc-400/70 bg-primary text-xs font-bold text-primary-foreground">
                   {game.localTeam.split(" ")[0].substring(0, 3)}
                 </div>
-                <div class="flex flex-1 items-center justify-between">
+                <div class="flex min-w-0 flex-1 items-center justify-between gap-3">
                   <a
                     href={`/${tournamentId}/teams/${game.localTeamId}`}
-                    class="font-bold uppercase tracking-wide"
+                    class="min-w-0 wrap-break-word font-bold uppercase tracking-wide"
                   >
                     {game.localTeam}
                   </a>
                   {game.started === 0 || game.live === 0 ? (
                     <div
-                      class={`border-2 border-foreground px-4 py-1 text-2xl font-bold ${
+                      class={`shrink-0 rounded-md border border-zinc-400/70 px-4 py-1 text-2xl font-bold ${
                         Number(game.localTeamPoints) >
                         Number(game.visitingTeamPoints || 0)
                           ? "bg-primary text-primary-foreground"
@@ -74,19 +74,19 @@ const { matches, week, tournamentId } = Astro.props;
                 </div>
               </div>
               <div class="flex items-center gap-3">
-                <div class="flex h-10 w-10 items-center justify-center border-2 border-foreground bg-secondary text-xs font-bold text-secondary-foreground">
+                <div class="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-400/70 bg-secondary text-xs font-bold text-secondary-foreground">
                   {game.visitingTeam.split(" ")[0].substring(0, 3)}
                 </div>
-                <div class="flex flex-1 items-center justify-between">
+                <div class="flex min-w-0 flex-1 items-center justify-between gap-3">
                   <a
                     href={`/${tournamentId}/teams/${game.visitingTeamId}`}
-                    class="font-bold uppercase tracking-wide"
+                    class="min-w-0 wrap-break-word font-bold uppercase tracking-wide"
                   >
                     {game.visitingTeam}
                   </a>
                   {game.started === 0 || game.live === 0 ? (
                     <div
-                      class={`border-2 border-foreground px-4 py-1 text-2xl font-bold ${
+                      class={`shrink-0 rounded-md border border-zinc-400/70 px-4 py-1 text-2xl font-bold ${
                         Number(game.visitingTeamPoints) >
                         Number(game.localTeamPoints || 0)
                           ? "bg-primary text-primary-foreground"
@@ -126,7 +126,7 @@ const { matches, week, tournamentId } = Astro.props;
               Estatus
             </div>
             <div
-              class={`inline-block border-2 border-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider ${
+              class={`inline-block rounded-md border border-zinc-400/70 px-3 py-1 text-xs font-bold uppercase tracking-wider ${
                 game.live === 1
                   ? "bg-primary text-primary-foreground"
                   : game.started === 1

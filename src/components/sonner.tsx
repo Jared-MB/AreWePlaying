@@ -9,8 +9,6 @@ const Toaster = ({ toastOptions, ...props }: ToasterProps) => {
 			toastOptions={{
 				style: {
 					borderRadius: "var(--radius)",
-					borderWidth: "2px",
-					borderColor: "var(--foreground)",
 					backgroundColor: "var(--muted)",
 					fontFamily: "var(--font-mono)",
 				},

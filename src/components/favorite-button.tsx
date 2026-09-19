@@ -64,7 +64,7 @@ export default function FavoriteButton({ id }: { id: string }) {
 			type="button"
 			data-active={isFavorite}
 			title={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
-			class="group cursor-pointer inline-block border-2 border-foreground bg-muted p-2 font-mono text-sm font-bold uppercase tracking-wider shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
+			class="group cursor-pointer inline-block bg-zinc-100 hover:bg-zinc-200 rounded-md p-2 duration-180 text-sm font-bold uppercase tracking-wider shadow-xs transition-transform focus:scale-95"
 		>
 			<Star class="size-5 transition-colors duration-75 fill-background group-data-[active=true]:fill-amber-400" />
 		</button>
