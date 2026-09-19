@@ -1,0 +1,48 @@
+---
+// Envuelve una lista de partidos: si alguno es de un equipo favorito, hace
+// scroll hasta él al cargar la página.
+---
+
+<div data-scroll-to-favorite class="contents">
+  <slot />
+</div>
+
+<script>
+  // Las tarjetas se hidratan por separado, así que se agrupan en un frame y se
+  // elige la que aparece primero en el documento.
+  let pendingCards: HTMLElement[] = [];
+  let hasScrolled = false;
+
+  document.addEventListener("astro:page-load", () => {
+    pendingCards = [];
+    hasScrolled = false;
+  });
+
+  window.addEventListener("favorite-match", (event) => {
+    const $card = (event as CustomEvent<HTMLElement | null>).detail;
+    if (hasScrolled || !$card?.closest("[data-scroll-to-favorite]")) return;
+
+    pendingCards.push($card);
+    if (pendingCards.length > 1) return;
+
+    requestAnimationFrame(() => {
+      const [$first] = pendingCards.toSorted((a, b) =>
+        a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1,
+      );
+      pendingCards = [];
+      hasScrolled = true;
+
+      // No pisar el scroll del usuario ni la posición restaurada al volver atrás.
+      if (!$first || window.scrollY > 0) return;
+
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      // Centrado para que no quede debajo de los encabezados sticky.
+      $first.scrollIntoView({
+        block: "center",
+        behavior: reduceMotion ? "auto" : "smooth",
+      });
+    });
+  });
+</script>

@@ -1,7 +1,7 @@
 import { LOCAL_STORAGE_FAVORITES_KEY } from "@/constants/local-storage";
 import confetti from "canvas-confetti";
 import type { ComponentChildren } from "preact";
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 
 export default function MatchCard({
 	localTeamId,
@@ -13,6 +13,7 @@ export default function MatchCard({
 	children: ComponentChildren;
 }) {
 	const [isFavorite, setIsFavorite] = useState(false);
+	const $card = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		if (!localTeamId || !visitingTeamId) {
@@ -44,13 +45,19 @@ export default function MatchCard({
 			});
 			const $areWePlaying = document.getElementById("are-we-playing");
 			$areWePlaying?.setAttribute("data-active", "true");
+
+			// Avisa a la página para que decida si hace scroll hasta el partido.
+			window.dispatchEvent(
+				new CustomEvent("favorite-match", { detail: $card.current }),
+			);
 		}
 	}, []);
 
 	return (
 		<div
+			ref={$card}
 			data-active={isFavorite}
-			className="mb-6 text-card-foreground flex flex-col gap-6 p-0 shadow-[2px_2px_0px_0px_rgba(107,33,168,0.3)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none rounded-none! border-2 border-foreground group data-[active=true]:bg-primary/80 data-[active=true]:text-primary-foreground!"
+			className="bg-zinc-100 shadow-xs mb-6 text-card-foreground flex flex-col gap-6 p-0 transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none rounded-md group data-[active=true]:bg-primary/80 data-[active=true]:text-primary-foreground!"
 		>
 			{children}
 		</div>
