@@ -1,0 +1,86 @@
+---
+import { getTopTeams } from "@/utils/get-top-teams";
+
+// Se renderiza on-demand como server island; el CDN lo cachea unos minutos.
+Astro.response.headers.set(
+  "Cache-Control",
+  "public, s-maxage=600, stale-while-revalidate=60",
+);
+
+const topTeams = await getTopTeams();
+---
+
+<div class="space-y-8">
+  {
+    topTeams.map(({ tournament, teams }) => {
+      const tournamentId = tournament.id.toLowerCase();
+
+      return (
+        <section
+          aria-labelledby={`top-${tournamentId}`}
+          class="rounded-md bg-zinc-100 shadow-xs"
+        >
+          <header class="flex items-baseline justify-between gap-2 bg-primary rounded-t-md px-4 py-2 text-background">
+            <h3
+              id={`top-${tournamentId}`}
+              class="min-w-0 font-mono text-sm font-bold uppercase tracking-wider"
+            >
+              Div. {tournament.division} {tournament.category}
+              {tournament.conference ? ` · ${tournament.conference}` : null}
+            </h3>
+            <a
+              href={`/${tournamentId}/teams/`}
+              class="shrink-0 text-xs font-bold uppercase tracking-wider opacity-70 hover:opacity-100"
+            >
+              Tabla
+            </a>
+          </header>
+
+          {teams.length > 0 ? (
+            <ol class="divide-y-2 divide-zinc-200/70">
+              {teams.map((team) => (
+                <li class="last:rounded-b-md hover:bg-zinc-200">
+                  <a
+                    href={`/${tournamentId}/teams/${team.id}`}
+                    class="flex items-center gap-3 px-4 py-3"
+                  >
+                    <span class="grid size-8 rounded-full shrink-0 place-items-center bg-primary font-mono text-sm font-bold text-primary-foreground tabular-nums">
+                      {team.position}
+                    </span>
+                    {team.logo ? (
+                      <img
+                        src={team.logo}
+                        alt=""
+                        width="32"
+                        height="32"
+                        loading="lazy"
+                        class="size-8 shrink-0 object-contain"
+                      />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        class="grid size-8 shrink-0 place-items-center border-2 border-foreground text-[10px] font-bold"
+                      >
+                        {team.shortName.split(" ")[0].substring(0, 3)}
+                      </span>
+                    )}
+                    <span class="min-w-0 flex-1 truncate font-bold uppercase tracking-wide">
+                      {team.shortName}
+                    </span>
+                    <span class="shrink-0 font-mono text-sm font-bold tabular-nums">
+                      {team.wins}-{team.losses}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p class="px-4 py-3 text-sm font-bold uppercase tracking-wider text-muted-foreground">
+              Sin tabla disponible
+            </p>
+          )}
+        </section>
+      );
+    })
+  }
+</div>
