@@ -1,5 +1,6 @@
 ---
 import MatchStory from "@/components/match-story.tsx";
+import { SITE_HOST } from "@/constants/site";
 import Layout from "@/layouts/Layout.astro";
 import type { Match } from "@/types/match";
 import type { TeamPosition } from "@/types/team";
@@ -119,7 +120,10 @@ const comparison = [
   { label: "Récord", get: (t: TeamPosition) => `${t.wins}W - ${t.losses}L` },
   { label: "Win rate", get: (t: TeamPosition) => `${t.percentage}%` },
   { label: "Puntos a favor", get: (t: TeamPosition) => String(t.goalsFor) },
-  { label: "Puntos en contra", get: (t: TeamPosition) => String(t.goalsAgainst) },
+  {
+    label: "Puntos en contra",
+    get: (t: TeamPosition) => String(t.goalsAgainst),
+  },
   {
     label: "Diferencia",
     get: (t: TeamPosition) =>
@@ -132,7 +136,8 @@ const tournamentLabel = tournament
   : "Liga ABE";
 
 const hasVenueLink = match.locationUrl && match.locationUrl !== "-";
-const venue = match.location && match.location !== "-" ? match.location : "Por definir";
+const venue =
+  match.location && match.location !== "-" ? match.location : "Por definir";
 
 const slug = (value: string) =>
   value
@@ -171,12 +176,16 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
       <p
         class="mb-2 text-xs font-bold uppercase tracking-widest text-muted-foreground"
       >
-        {tournamentLabel}{week ? ` · ${week.week}` : ""} · Partido {match.matchNumber}
+        {tournamentLabel}{week ? ` · ${week.week}` : ""} · Partido {
+          match.matchNumber
+        }
       </p>
       <h1
         class="font-mono text-3xl font-bold uppercase tracking-wider text-balance md:text-5xl"
       >
-        {match.localTeam} <span class="text-muted-foreground">vs</span> {match.visitingTeam}
+        {match.localTeam}
+        <span class="text-muted-foreground">vs</span>
+        {match.visitingTeam}
       </h1>
       <p class="mt-3 text-sm uppercase tracking-wider text-muted-foreground">
         {longDate}{rawTime ? ` · ${rawTime} hrs` : ""}
@@ -415,7 +424,7 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
         venue={venue}
         weekLabel={week?.week ?? tournamentLabel}
         tournamentLabel={tournamentLabel}
-        siteLabel="are-we-playing.vercel.app"
+        siteLabel={SITE_HOST}
         fileName={`are-we-playing-${slug(match.localTeam)}-vs-${slug(match.visitingTeam)}.png`}
       />
     </section>
