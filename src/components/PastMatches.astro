@@ -42,7 +42,7 @@ const matches = await getPastMatches({ teamId, tournamentId });
                 </div>
                 <div class="mb-2 flex items-center gap-2">
                   <div
-                    class={`border-2 border-foreground size-10 px-3 py-1 font-mono text-lg font-bold ${
+                    class={`rounded-full border border-line/70 size-10 px-3 py-1 font-mono text-lg text-center font-bold ${
                       isWin
                         ? "bg-primary text-primary-foreground"
                         : "bg-destructive text-destructive-foreground"
@@ -78,7 +78,7 @@ const matches = await getPastMatches({ teamId, tournamentId });
         })}
       </div>
     ) : (
-      <div class="border-2 border-foreground bg-muted p-6 text-center">
+      <div class="rounded-md bg-surface shadow-xs p-6 text-center">
         <p class="font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground">
           NO HAY PARTIDOS JUGADOS
         </p>
