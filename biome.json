@@ -29,6 +29,9 @@
 		"enabled": true,
 		"rules": {
 			"preset": "recommended",
+			"a11y": {
+				"useAnchorContent": "off"
+			},
 			"correctness": {
 				"useExhaustiveDependencies": "off",
 				"useUniqueElementIds": "off"

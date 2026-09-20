@@ -28,9 +28,12 @@ export interface NextTeamMatch {
 	label: string;
 	tournament: string;
 	team: string;
+	teamId: string;
 	opponent: string;
+	opponentId: string;
 	isLocal: boolean;
 	location: string;
+	locationUrl: string;
 	week?: string;
 }
 
@@ -144,17 +147,19 @@ export async function getNextMatchByTeam() {
 							id: match.localTeamId,
 							team: match.localTeam,
 							opponent: match.visitingTeam,
+							opponentId: match.visitingTeamId,
 							isLocal: true,
 						},
 						{
 							id: match.visitingTeamId,
 							team: match.visitingTeam,
 							opponent: match.localTeam,
+							opponentId: match.localTeamId,
 							isLocal: false,
 						},
 					];
 
-					for (const { id, team, opponent, isLocal } of sides) {
+					for (const { id, team, opponent, opponentId, isLocal } of sides) {
 						const current = byTeam[id];
 						if (current && current.startsAt <= startsAt) continue;
 
@@ -165,9 +170,12 @@ export async function getNextMatchByTeam() {
 							label: formatLeagueDateTime(startsAt),
 							tournament: tournamentLabel,
 							team,
+							teamId: id,
 							opponent,
+							opponentId,
 							isLocal,
 							location: match.location,
+							locationUrl: match.locationUrl,
 							week,
 						};
 					}

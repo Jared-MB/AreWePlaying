@@ -26,6 +26,11 @@ const matches = await getPastMatches({ teamId, tournamentId });
           return (
             <MatchCard>
               <div class="p-4">
+                <a
+                  class="absolute inset-0 cursor-pointer outline-offset-4 focus-visible:outline-2"
+                  href={`/${tournamentId}/match/${match.matchId}`}
+                  aria-label={`Ver detalle del partido entre ${match.localTeam} contra ${match.visitingTeam}`}
+                />
                 <div class="mb-2 flex items-center justify-between">
                   <div class="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
                     {match.date}
@@ -59,6 +64,7 @@ const matches = await getPastMatches({ teamId, tournamentId });
                 <div class="font-mono text-sm font-bold uppercase tracking-wide">
                   vs{" "}
                   <a
+                    class="relative z-10 touch-hitbox hover:underline"
                     href={`/${tournamentId}/teams/${isHome ? match.visitingTeamId : match.localTeamId}`}
                   >
                     {isHome ? match.visitingTeam : match.localTeam}
@@ -68,15 +74,10 @@ const matches = await getPastMatches({ teamId, tournamentId });
                   href={match.locationUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="mt-1 block text-xs uppercase tracking-wider text-muted-foreground"
+                  class="relative z-10 mt-1 block w-fit touch-hitbox text-xs uppercase tracking-wider text-muted-foreground hover:underline"
                 >
                   {match.location}
-                </a>
-                <a
-                  href={`/${tournamentId}/match/${match.matchId}`}
-                  class="mt-2 inline-block text-xs font-bold uppercase tracking-wider underline underline-offset-4"
-                >
-                  Ver detalle
+                  <span class="sr-only"> (abre en una pestaña nueva)</span>
                 </a>
               </div>
             </MatchCard>

@@ -115,12 +115,22 @@ export default function FavoriteCountdown({
 					return (
 						<article
 							key={match.matchId}
-							class="flex min-w-0 flex-col gap-4 rounded-md bg-surface p-6 shadow-xs"
+							class="flex min-w-0 flex-col gap-4 rounded-md bg-surface p-6 shadow-xs transition-all duration-180 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none has-[a]:active:scale-99 has-[a]:active:shadow-none relative"
 						>
-							<header class="min-w-0">
-								<h3 class="wrap-break-word font-bold uppercase tracking-wide">
-									{match.team} <span class="text-muted-foreground">vs</span>{" "}
-									{match.opponent}
+							<a
+								className="cursor-pointer focus-visible:outline-2 outline-offset-4 absolute inset-0"
+								href={`/${match.tournamentId}/match/${match.matchId}`}
+								aria-label={`Ver detalle del partido entre ${match.team} contra ${match.opponent}`}
+							/>
+							<header class="min-w-0 flex flex-col gap-1">
+								<h3 class="wrap-break-word font-bold uppercase tracking-wide text-xl [&>a]:hover:underline [&>a]:z-10 [&>a]:relative [&>a]:touch-hitbox">
+									<a href={`/${match.tournamentId}/teams/${match.teamId}`}>
+										{match.team}
+									</a>{" "}
+									<span class="text-muted-foreground text-base">vs</span>{" "}
+									<a href={`/${match.tournamentId}/teams/${match.opponentId}`}>
+										{match.opponent}
+									</a>
 								</h3>
 								<p class="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
 									{match.tournament}
@@ -154,24 +164,19 @@ export default function FavoriteCountdown({
 								>
 									{match.label}
 								</time>
-								<a
-									href={`/${match.tournamentId}/match/${match.matchId}`}
-									class="shrink-0 text-xs font-bold uppercase tracking-wider underline underline-offset-4"
-								>
-									Ver detalle
-									<span class="sr-only">
-										{" "}
-										de {match.team} vs {match.opponent}
-									</span>
-								</a>
 							</div>
 
 							{match.location && match.location !== "-" ? (
-								<p class="flex min-w-0 items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+								<a
+									href={match.locationUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="flex min-w-0 w-fit items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted-foreground hover:underline z-10 touch-hitbox"
+								>
 									<MapPin class="size-3.5 shrink-0" aria-hidden="true" />
 									<span class="sr-only">Lugar: </span>
 									<span class="min-w-0 wrap-break-word">{match.location}</span>
-								</p>
+								</a>
 							) : null}
 						</article>
 					);

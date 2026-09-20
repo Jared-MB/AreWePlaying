@@ -53,6 +53,11 @@ const score =
               client:load
             >
               <article aria-label={matchup}>
+                <a
+                  class="absolute inset-0 cursor-pointer outline-offset-4 focus-visible:outline-2"
+                  href={`/${tournamentId}/match/${game.matchId}`}
+                  aria-label={`Ver detalle del partido entre ${game.localTeam} contra ${game.visitingTeam}`}
+                />
                 <dl class="grid gap-4 p-6 md:grid-cols-12 md:items-center group-data-[active=true]:text-highlight-foreground">
                   <div class="col-span-12 md:col-span-2">
                     <dt class={fieldLabel}>Fecha</dt>
@@ -86,7 +91,7 @@ const score =
                         <div class="flex min-w-0 flex-1 items-center justify-between gap-3">
                           <a
                             href={`/${tournamentId}/teams/${game.localTeamId}`}
-                            class="min-w-0 wrap-break-word font-bold uppercase tracking-wide"
+                            class="relative z-10 min-w-0 touch-hitbox wrap-break-word font-bold uppercase tracking-wide hover:underline"
                           >
                             {game.localTeam}
                           </a>
@@ -115,7 +120,7 @@ const score =
                         <div class="flex min-w-0 flex-1 items-center justify-between gap-3">
                           <a
                             href={`/${tournamentId}/teams/${game.visitingTeamId}`}
-                            class="min-w-0 wrap-break-word font-bold uppercase tracking-wide"
+                            class="relative z-10 min-w-0 touch-hitbox wrap-break-word font-bold uppercase tracking-wide hover:underline"
                           >
                             {game.visitingTeam}
                           </a>
@@ -145,6 +150,7 @@ const score =
                           href={game.locationUrl}
                           target="_blank"
                           rel="noopener noreferrer"
+                          class="relative z-10 inline-block touch-hitbox hover:underline"
                         >
                           {game.location}
                           <span class="sr-only">
@@ -173,13 +179,6 @@ const score =
                       >
                         {status}
                       </span>
-                      <a
-                        href={`/${tournamentId}/match/${game.matchId}`}
-                        class="mt-2 block text-xs font-bold uppercase tracking-wider underline underline-offset-4 group-data-[active=true]:text-highlight-foreground"
-                      >
-                        Ver detalle
-                        <span class="sr-only"> de {matchup}</span>
-                      </a>
                     </dd>
                   </div>
                 </dl>
