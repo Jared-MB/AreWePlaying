@@ -6,10 +6,16 @@ import { useEffect, useRef, useState } from "preact/hooks";
 export default function MatchCard({
 	localTeamId,
 	visitingTeamId,
+	celebrate = true,
 	children,
 }: {
 	localTeamId?: string;
 	visitingTeamId?: string;
+	/**
+	 * Confeti, "Yes!!" y auto-scroll al partido del favorito. Se apaga en las
+	 * listas de partidos futuros: resaltarlos sí, celebrarlos todavía no.
+	 */
+	celebrate?: boolean;
 	children: ComponentChildren;
 }) {
 	const [isFavorite, setIsFavorite] = useState(false);
@@ -34,7 +40,7 @@ export default function MatchCard({
 
 		setIsFavorite(isFavorite);
 
-		if (isFavorite) {
+		if (isFavorite && celebrate) {
 			confetti({
 				particleCount: 60,
 				spread: 100,
@@ -57,8 +63,12 @@ export default function MatchCard({
 		<div
 			ref={$card}
 			data-active={isFavorite}
-			className="bg-surface group shadow-xs mb-6 text-card-foreground flex flex-col gap-6 p-0 transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none rounded-md group data-[active=true]:bg-primary/90 data-[active=true]:text-primary-foreground!"
+			className="bg-surface group shadow-xs mb-6 text-card-foreground flex flex-col gap-6 p-0 transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none rounded-md data-[active=true]:bg-primary/90 data-[active=true]:text-primary-foreground!"
 		>
+			{/* El resaltado del favorito es sólo color: esto lo vuelve audible. */}
+			{isFavorite ? (
+				<p className="sr-only">Juega uno de tus equipos favoritos</p>
+			) : null}
 			{children}
 		</div>
 	);

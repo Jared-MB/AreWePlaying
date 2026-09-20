@@ -68,8 +68,12 @@ const pageDescription =
     </div>
     <hr />
     <div class="flex items-center justify-between">
-      <div class="flex flex-wrap items-center gap-3">
+      <nav
+        aria-labelledby="rama-label"
+        class="flex flex-wrap items-center gap-3"
+      >
         <span
+          id="rama-label"
           class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
         >
           Rama:
@@ -86,14 +90,15 @@ const pageDescription =
             >Varonil</FilterLink
           >
         </div>
-      </div>
+      </nav>
       <!-- <div class="inline-block md:hidden">
 					<SelectUniversity />
 				</div> -->
     </div>
     <div class="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
-      <div class="hidden md:flex flex-wrap gap-2">
+      <nav aria-labelledby="semana-label" class="hidden md:flex flex-wrap gap-2">
         <span
+          id="semana-label"
           class="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1"
         >
           Semana:
@@ -108,7 +113,7 @@ const pageDescription =
             </FilterLink>
           ))
         }
-      </div>
+      </nav>
       <div class="flex md:hidden flex-wrap gap-2">
         <label
           for="week-mobile"

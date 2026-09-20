@@ -13,10 +13,42 @@
   let pendingCards: HTMLElement[] = [];
   let hasScrolled = false;
 
+  // La cuenta regresiva de favoritos se monta encima de la lista y la empuja
+  // hacia abajo: hay que esperarla o el scroll deja el partido descentrado.
+  const SETTLE_TIMEOUT = 300;
+  let isCountdownSettled = false;
+  let onCountdownSettled: (() => void) | undefined;
+
   document.addEventListener("astro:page-load", () => {
     pendingCards = [];
     hasScrolled = false;
+    isCountdownSettled = false;
+    onCountdownSettled = undefined;
   });
+
+  window.addEventListener("favorite-countdown-settled", () => {
+    isCountdownSettled = true;
+    onCountdownSettled?.();
+    onCountdownSettled = undefined;
+  });
+
+  /** Ejecuta `run` cuando la cuenta regresiva ya ocupó su lugar (o al vencer el plazo). */
+  function whenSettled(run: () => void) {
+    if (isCountdownSettled) {
+      requestAnimationFrame(run);
+      return;
+    }
+
+    const timeout = window.setTimeout(once, SETTLE_TIMEOUT);
+
+    function once() {
+      window.clearTimeout(timeout);
+      onCountdownSettled = undefined;
+      requestAnimationFrame(run);
+    }
+
+    onCountdownSettled = once;
+  }
 
   window.addEventListener("favorite-match", (event) => {
     const $card = (event as CustomEvent<HTMLElement | null>).detail;
@@ -25,7 +57,7 @@
     pendingCards.push($card);
     if (pendingCards.length > 1) return;
 
-    requestAnimationFrame(() => {
+    whenSettled(() => {
       const [$first] = pendingCards.toSorted((a, b) =>
         a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1,
       );

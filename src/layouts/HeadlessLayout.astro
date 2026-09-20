@@ -99,6 +99,12 @@ const socialImageUrl = new URL(icon?.href ?? image, Astro.site ?? Astro.url);
     </script>
   </head>
   <body class="font-sans antialiased">
+    <a
+      href="#contenido"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:shadow-xs"
+    >
+      Saltar al contenido
+    </a>
     <slot />
   </body>
 </html>

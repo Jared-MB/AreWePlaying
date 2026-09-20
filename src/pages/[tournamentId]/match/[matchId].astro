@@ -152,7 +152,7 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
 ---
 
 <Layout tournamentId={tournamentId} title={title} description={description}>
-  <main class="mx-auto w-full max-w-5xl">
+  <div class="mx-auto w-full max-w-5xl">
     <div class="mb-6 flex items-center justify-between gap-4">
       <a
         href={week ? `/${tournamentId}/${week.id}` : `/${tournamentId}`}
@@ -428,5 +428,5 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
         fileName={`are-we-playing-${slug(match.localTeam)}-vs-${slug(match.visitingTeam)}.png`}
       />
     </section>
-  </main>
+  </div>
 </Layout>

@@ -1,5 +1,6 @@
 import type { Match } from "@/types/match";
 import type { Week } from "@/types/week";
+import { getLeagueToday } from "./league-date";
 import { getTournaments } from "./get-tournaments";
 
 // Los JSON se importan vía glob (y no con readFile) para que queden empaquetados
@@ -11,19 +12,6 @@ const matchesFiles = import.meta.glob<{ data: Match[]; id: string }[]>(
 const weeksFiles = import.meta.glob<Week[]>("/src/assets/*/weeks.json", {
 	import: "default",
 });
-
-// Las fechas de los partidos están en hora local de la liga.
-const LEAGUE_TIME_ZONE = "America/Mexico_City";
-
-/** Fecha de hoy en la zona horaria de la liga, con el formato dd/MM/yyyy de los partidos. */
-export function getLeagueToday(now = new Date()) {
-	return new Intl.DateTimeFormat("es-MX", {
-		timeZone: LEAGUE_TIME_ZONE,
-		day: "2-digit",
-		month: "2-digit",
-		year: "numeric",
-	}).format(now);
-}
 
 export async function getTodayMatches() {
 	const today = getLeagueToday();

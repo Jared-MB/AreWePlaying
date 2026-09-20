@@ -21,21 +21,31 @@ const tournaments = getTournaments();
       </div>
     </div>
     <main
+      id="contenido"
       class="flex flex-col gap-12 container mx-auto px-6 md:px-4 py-8 md:py-12"
     >
-      <section class="flex flex-wrap gap-3 md:gap-6 items-center">
+      <nav
+        id="divisiones"
+        aria-label="Divisiones"
+        class="scroll-mt-(--page-header-h,0px)"
+      >
         {
-          tournaments.map((t) => (
-            <a
-              href={`/${t.id.toLowerCase()}`}
-              class="bg-surface rounded-md px-4 py-2 shadow-xs hover:bg-surface-hover/70 focus:scale-95 transition-transform duration-180"
-            >
-              División {t.division} {t.category}{" "}
-              {t.conference ? `· ${t.conference}` : null}
-            </a>
-          ))
+          // biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista
+          <ul role="list" class="flex flex-wrap gap-3 md:gap-6 items-center">
+            {tournaments.map((t) => (
+              <li>
+                <a
+                  href={`/${t.id.toLowerCase()}`}
+                  class="block bg-surface rounded-md px-4 py-2 shadow-xs hover:bg-surface-hover/70 focus-visible:scale-95 transition-transform duration-180"
+                >
+                  División {t.division} {t.category}{" "}
+                  {t.conference ? `· ${t.conference}` : null}
+                </a>
+              </li>
+            ))}
+          </ul>
         }
-      </section>
+      </nav>
       <div
         class="grid grid-cols-[minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_30%] gap-12 relative"
       >
@@ -55,9 +65,14 @@ const tournaments = getTournaments();
             </div>
           </TodayMatches>
         </ScrollToFavoriteMatch>
-        <div id="top-performers" class="min-w-0">
+        <section
+          id="top-performers"
+          aria-labelledby="top-performers-heading"
+          class="min-w-0"
+        >
           <h2
-            class="mb-6 py-4 font-mono text-3xl md:text-4xl font-bold uppercase tracking-tight"
+            id="top-performers-heading"
+            class="mb-6 py-4 font-mono text-3xl md:text-4xl font-bold uppercase tracking-tight scroll-mt-8"
           >
             Mejores equipos
           </h2>
@@ -71,7 +86,7 @@ const tournaments = getTournaments();
               }
             </div>
           </TopPerformers>
-        </div>
+        </section>
       </div>
     </main>
   </div>
