@@ -60,11 +60,17 @@ const Heading = `h${headingLevel}` as const;
         {subtitle ? ` · ${subtitle}` : null}
       </span>
     </Heading>
-    <a href={`/${tournamentId}/`} class="shrink-0 whitespace-nowrap hover:underline">
+    <a
+      href={`/${tournamentId}/`}
+      class="shrink-0 whitespace-nowrap hover:underline"
+    >
       Ver más
-      {/* Hay un "Ver más" por torneo: el destino tiene que distinguirse fuera de contexto. */}
+      {
+        /* Hay un "Ver más" por torneo: el destino tiene que distinguirse fuera de contexto. */
+      }
       <span class="sr-only">
-        de División {tournament.division} {tournament.category}
+        de División {tournament.division}
+        {tournament.category}
       </span>
     </a>
   </header>

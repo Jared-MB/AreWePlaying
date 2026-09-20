@@ -30,20 +30,22 @@ const tournaments = getTournaments();
         class="scroll-mt-(--page-header-h,0px)"
       >
         {
-          // biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista
-          <ul role="list" class="flex flex-wrap gap-3 md:gap-6 items-center">
-            {tournaments.map((t) => (
-              <li>
-                <a
-                  href={`/${t.id.toLowerCase()}`}
-                  class="block bg-surface rounded-md px-4 py-2 shadow-xs hover:bg-surface-hover/70 focus-visible:scale-95 transition-transform duration-180"
-                >
-                  División {t.division} {t.category}{" "}
-                  {t.conference ? `· ${t.conference}` : null}
-                </a>
-              </li>
-            ))}
-          </ul>
+          (
+            // biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista
+            <ul role="list" class="flex flex-wrap gap-3 md:gap-6 items-center">
+              {tournaments.map((t) => (
+                <li>
+                  <a
+                    href={`/${t.id.toLowerCase()}`}
+                    class="block bg-surface rounded-md px-4 py-2 shadow-xs hover:bg-surface-hover/70 focus-visible:scale-95 transition-transform duration-180"
+                  >
+                    División {t.division} {t.category}{" "}
+                    {t.conference ? `· ${t.conference}` : null}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )
         }
       </nav>
       <div
