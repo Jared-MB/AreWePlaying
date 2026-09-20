@@ -19,9 +19,30 @@ jobs:
       - name: Instalar uv
         uses: astral-sh/setup-uv@v3
 
+      - name: Instalar pnpm
+        uses: pnpm/action-setup@v4   # toma la versión de "packageManager" en package.json
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Instalar dependencias
+        run: pnpm install --frozen-lockfile
+
       - name: Refetch de datos desde la API
         run: uv run scripts/populate.py
-        
+
+      # populate.py ya escribe el JSON con el formato del repo, pero esto lo
+      # garantiza: si el script cambia o alguien edita un JSON a mano, el commit
+      # nocturno no se llena de diferencias de espacios que tapan los datos.
+      - name: Formatear los datos con Biome
+        run: pnpm exec biome format --write src/assets
+
+      - name: Verificar el formato de los datos
+        run: pnpm exec biome check src/assets
+
       - name: Commit y push (solo si hay cambios)
         run: |
           git config user.name "github-actions[bot]"

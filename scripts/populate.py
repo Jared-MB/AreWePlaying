@@ -90,8 +90,11 @@ def parse_updated_at(value: str | None) -> datetime | None:
 
 
 def save_json_as_file(path: str, data):
+    # Tabs y salto de línea final para que salga igual que lo formatea Biome: así
+    # el diff sólo muestra los datos que de verdad cambiaron.
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump(data, f, ensure_ascii=False, indent="\t")
+        f.write("\n")
 
 
 def ensure_folder(path: str):
