@@ -1,0 +1,423 @@
+---
+import MatchStory from "@/components/match-story.tsx";
+import Layout from "@/layouts/Layout.astro";
+import type { Match } from "@/types/match";
+import type { TeamPosition } from "@/types/team";
+import type { Week } from "@/types/week";
+import { getMatchesWithWeek } from "@/utils/get-match";
+import { MATCH_STATUS_LABEL, getMatchStatus } from "@/utils/get-match-status";
+import { getTeamLogo } from "@/utils/get-team-logo";
+import { getTeamsTable } from "@/utils/get-teams-table";
+import { getTournaments } from "@/utils/get-tournaments";
+import { format, isValid, parse } from "date-fns";
+import { es } from "date-fns/locale";
+
+export async function getStaticPaths() {
+  const perTournament = getTournaments().map(async ({ id }) => {
+    const tournamentId = id.toLowerCase();
+
+    const [matches, teams] = await Promise.all([
+      getMatchesWithWeek(tournamentId),
+      getTeamsTable(tournamentId),
+    ]);
+
+    return matches.map(({ match, week }) => ({
+      params: { tournamentId, matchId: match.matchId },
+      props: {
+        match,
+        week,
+        localStats: teams.find((t) => t.id === match.localTeamId),
+        visitingStats: teams.find((t) => t.id === match.visitingTeamId),
+        // Enfrentamientos previos de estos dos equipos dentro del mismo torneo.
+        headToHead: matches
+          .map(({ match: other }) => other)
+          .filter(
+            (other) =>
+              other.matchId !== match.matchId &&
+              [other.localTeamId, other.visitingTeamId].every((teamId) =>
+                [match.localTeamId, match.visitingTeamId].includes(teamId),
+              ),
+          ),
+      },
+    }));
+  });
+
+  return (await Promise.all(perTournament)).flat();
+}
+
+interface Props {
+  match: Match;
+  week?: Week;
+  localStats?: TeamPosition;
+  visitingStats?: TeamPosition;
+  headToHead: Match[];
+}
+
+const { tournamentId } = Astro.params;
+const { match, week, localStats, visitingStats, headToHead } = Astro.props;
+
+const tournament = getTournaments().find(
+  (t) => t.id.toLowerCase() === tournamentId,
+);
+
+const status = getMatchStatus(match);
+const hasScore = status !== "upcoming";
+
+const localPoints = Number(match.localTeamPoints);
+const visitingPoints = Number(match.visitingTeamPoints);
+const localWon = hasScore && localPoints > visitingPoints;
+const visitingWon = hasScore && visitingPoints > localPoints;
+
+const [rawDate, rawTime = ""] = match.date.split(" ");
+const parsedDate = parse(rawDate, "dd/MM/yyyy", new Date());
+const longDate = isValid(parsedDate)
+  ? format(parsedDate, "EEEE d 'de' MMMM 'de' yyyy", { locale: es })
+  : rawDate;
+const shortDate = isValid(parsedDate)
+  ? format(parsedDate, "d MMM yyyy", { locale: es })
+  : rawDate;
+
+const initials = (name: string) => name.split(" ")[0].substring(0, 3);
+
+// En los partidos por jugarse la API manda posición y récord vacíos: se cae a la
+// tabla general para no dejar separadores sueltos ("LOCAL · · ").
+// Un torneo que aún no arranca trae posición 0 y récord 0-0: eso es "sin dato".
+const positionOf = (raw: string, stats?: TeamPosition) =>
+  raw?.trim() || (stats && stats.position > 0 ? `(${stats.position})` : "");
+const recordOf = (raw: string, stats?: TeamPosition) =>
+  raw?.trim() || (stats && stats.matches > 0 ? stats.wr : "");
+
+const teams = [
+  {
+    role: "Local" as const,
+    name: match.localTeam,
+    fullName: localStats?.name ?? match.localTeam,
+    id: match.localTeamId,
+    points: match.localTeamPoints,
+    position: positionOf(match.localTeamPosition, localStats),
+    record: recordOf(match.localTeamWR, localStats),
+    stats: localStats,
+    won: localWon,
+    logo: getTeamLogo({ tournamentId, teamId: match.localTeamId }),
+  },
+  {
+    role: "Visitante" as const,
+    name: match.visitingTeam,
+    fullName: visitingStats?.name ?? match.visitingTeam,
+    id: match.visitingTeamId,
+    points: match.visitingTeamPoints,
+    position: positionOf(match.visitingTeamPosition, visitingStats),
+    record: recordOf(match.visitingTeamWR, visitingStats),
+    stats: visitingStats,
+    won: visitingWon,
+    logo: getTeamLogo({ tournamentId, teamId: match.visitingTeamId }),
+  },
+];
+
+const comparison = [
+  { label: "Posición", get: (t: TeamPosition) => `#${t.position}` },
+  { label: "Récord", get: (t: TeamPosition) => `${t.wins}W - ${t.losses}L` },
+  { label: "Win rate", get: (t: TeamPosition) => `${t.percentage}%` },
+  { label: "Puntos a favor", get: (t: TeamPosition) => String(t.goalsFor) },
+  { label: "Puntos en contra", get: (t: TeamPosition) => String(t.goalsAgainst) },
+  {
+    label: "Diferencia",
+    get: (t: TeamPosition) =>
+      `${t.goalDifference > 0 ? "+" : ""}${t.goalDifference}`,
+  },
+];
+
+const tournamentLabel = tournament
+  ? `División ${tournament.division} · ${tournament.category}${tournament.conference ? ` · ${tournament.conference}` : ""}`
+  : "Liga ABE";
+
+const hasVenueLink = match.locationUrl && match.locationUrl !== "-";
+const venue = match.location && match.location !== "-" ? match.location : "Por definir";
+
+const slug = (value: string) =>
+  value
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-zA-Z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")
+    .toLowerCase();
+
+const title = `${match.localTeam} vs ${match.visitingTeam}${hasScore ? ` ${match.localTeamPoints}-${match.visitingTeamPoints}` : ""} | Are We Playing?`;
+const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}${rawTime ? ` a las ${rawTime}` : ""} · ${venue}. ${tournamentLabel}.`;
+---
+
+<Layout tournamentId={tournamentId} title={title} description={description}>
+  <main class="mx-auto w-full max-w-5xl">
+    <div class="mb-6 flex items-center justify-between gap-4">
+      <a
+        href={week ? `/${tournamentId}/${week.id}` : `/${tournamentId}`}
+        class="rounded-md bg-surface px-4 py-2 text-sm font-bold uppercase tracking-wider shadow-xs transition-transform duration-180 hover:bg-surface-hover/70 focus-visible:scale-95"
+      >
+        ← Regresar
+      </a>
+
+      <span
+        class={`rounded-md border border-line/70 px-3 py-1 text-xs font-bold uppercase tracking-wider ${
+          status === "finished"
+            ? "bg-muted text-muted-foreground"
+            : "bg-primary text-primary-foreground"
+        }`}
+      >
+        {MATCH_STATUS_LABEL[status]}
+      </span>
+    </div>
+
+    <header class="mb-8 border-b border-b-line/70 pb-6">
+      <p
+        class="mb-2 text-xs font-bold uppercase tracking-widest text-muted-foreground"
+      >
+        {tournamentLabel}{week ? ` · ${week.week}` : ""} · Partido {match.matchNumber}
+      </p>
+      <h1
+        class="font-mono text-3xl font-bold uppercase tracking-wider text-balance md:text-5xl"
+      >
+        {match.localTeam} <span class="text-muted-foreground">vs</span> {match.visitingTeam}
+      </h1>
+      <p class="mt-3 text-sm uppercase tracking-wider text-muted-foreground">
+        {longDate}{rawTime ? ` · ${rawTime} hrs` : ""}
+      </p>
+    </header>
+
+    <section
+      aria-label="Marcador"
+      class="mb-8 rounded-md bg-surface p-6 shadow-xs md:p-8"
+    >
+      <div class="flex flex-col gap-6">
+        {
+          teams.map((team) => (
+            <div class="flex items-center gap-4">
+              <div class="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-full border border-line/70 bg-primary md:size-20">
+                {team.logo ? (
+                  <img
+                    src={team.logo}
+                    alt=""
+                    width="80"
+                    height="80"
+                    class="size-full bg-white object-contain p-1.5"
+                    loading="eager"
+                  />
+                ) : (
+                  <span class="text-sm font-bold text-primary-foreground md:text-base">
+                    {initials(team.name)}
+                  </span>
+                )}
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <a
+                  href={`/${tournamentId}/teams/${team.id}`}
+                  class="font-mono text-xl font-bold uppercase tracking-wide wrap-break-word hover:underline md:text-3xl"
+                >
+                  {team.name}
+                </a>
+                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                  {[team.role, team.position, team.record]
+                    .filter(Boolean)
+                    .join(" · ")}
+                </p>
+              </div>
+
+              {hasScore ? (
+                <p
+                  class={`shrink-0 rounded-md border border-line/70 px-4 py-1 font-mono text-3xl font-bold tabular-nums md:text-5xl ${
+                    team.won
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-muted-foreground"
+                  }`}
+                >
+                  {team.points}
+                </p>
+              ) : null}
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section
+      aria-label="Detalles del partido"
+      class="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+    >
+      <article class="rounded-md bg-surface p-4 shadow-xs">
+        <p
+          class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
+        >
+          Fecha
+        </p>
+        <p class="mt-1 font-mono text-lg font-bold uppercase">{shortDate}</p>
+      </article>
+      <article class="rounded-md bg-surface p-4 shadow-xs">
+        <p
+          class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
+        >
+          Hora
+        </p>
+        <p class="mt-1 font-mono text-lg font-bold tabular-nums">
+          {rawTime ? `${rawTime} HRS` : "—"}
+        </p>
+      </article>
+      <article class="rounded-md bg-surface p-4 shadow-xs sm:col-span-2">
+        <p
+          class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
+        >
+          Sede
+        </p>
+        {
+          hasVenueLink ? (
+            <a
+              href={match.locationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-1 block font-mono text-lg font-bold uppercase wrap-break-word hover:underline"
+            >
+              {venue}
+            </a>
+          ) : (
+            <p class="mt-1 font-mono text-lg font-bold uppercase wrap-break-word">
+              {venue}
+            </p>
+          )
+        }
+      </article>
+    </section>
+
+    {
+      localStats && visitingStats ? (
+        <section aria-labelledby="comparativa" class="mb-8">
+          <h2
+            id="comparativa"
+            class="mb-4 font-mono text-2xl font-bold uppercase tracking-wider md:text-3xl"
+          >
+            Comparativa
+          </h2>
+          <div class="overflow-hidden rounded-md bg-surface shadow-xs">
+            <table class="w-full table-fixed border-collapse text-sm">
+              <caption class="sr-only">
+                Estadísticas de temporada de {match.localTeam} y{" "}
+                {match.visitingTeam}
+              </caption>
+              <thead>
+                <tr class="border-b border-line/70">
+                  <th
+                    scope="col"
+                    class="p-3 text-center font-mono text-xs font-bold uppercase tracking-wider wrap-break-word"
+                  >
+                    {match.localTeam}
+                  </th>
+                  <th
+                    scope="col"
+                    class="p-3 text-center text-xs font-bold uppercase tracking-widest text-muted-foreground"
+                  >
+                    Dato
+                  </th>
+                  <th
+                    scope="col"
+                    class="p-3 text-center font-mono text-xs font-bold uppercase tracking-wider wrap-break-word"
+                  >
+                    {match.visitingTeam}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparison.map((row) => (
+                  <tr class="border-b border-line/40 last:border-b-0">
+                    <td class="p-3 text-center font-mono text-base font-bold tabular-nums">
+                      {row.get(localStats)}
+                    </td>
+                    <th
+                      scope="row"
+                      class="p-3 text-center text-xs font-bold uppercase tracking-wider text-muted-foreground"
+                    >
+                      {row.label}
+                    </th>
+                    <td class="p-3 text-center font-mono text-base font-bold tabular-nums">
+                      {row.get(visitingStats)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ) : null
+    }
+
+    {
+      headToHead.length > 0 ? (
+        <section aria-labelledby="historial" class="mb-8">
+          <h2
+            id="historial"
+            class="mb-4 font-mono text-2xl font-bold uppercase tracking-wider md:text-3xl"
+          >
+            Otros enfrentamientos
+          </h2>
+          <ul class="space-y-3">
+            {headToHead.map((other) => {
+              const otherStatus = getMatchStatus(other);
+
+              return (
+                <li>
+                  <a
+                    href={`/${tournamentId}/match/${other.matchId}`}
+                    class="flex items-center justify-between gap-4 rounded-md bg-surface p-4 shadow-xs transition-colors duration-150 hover:bg-surface-hover/70"
+                  >
+                    <span class="min-w-0">
+                      <span class="block text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                        {other.date}
+                      </span>
+                      <span class="block font-mono text-sm font-bold uppercase tracking-wide wrap-break-word">
+                        {other.localTeam} vs {other.visitingTeam}
+                      </span>
+                    </span>
+                    <span class="shrink-0 font-mono text-xl font-bold tabular-nums">
+                      {otherStatus === "upcoming"
+                        ? "—"
+                        : `${other.localTeamPoints} - ${other.visitingTeamPoints}`}
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ) : null
+    }
+
+    <section class="rounded-md bg-surface p-6 shadow-xs">
+      <MatchStory
+        client:load
+        status={status}
+        local={{
+          name: match.localTeam,
+          logo: teams[0].logo,
+          initials: initials(match.localTeam),
+          record: teams[0].record,
+          position: teams[0].position,
+          points: match.localTeamPoints,
+          isWinner: localWon,
+        }}
+        visiting={{
+          name: match.visitingTeam,
+          logo: teams[1].logo,
+          initials: initials(match.visitingTeam),
+          record: teams[1].record,
+          position: teams[1].position,
+          points: match.visitingTeamPoints,
+          isWinner: visitingWon,
+        }}
+        dateLabel={shortDate}
+        timeLabel={rawTime || "—"}
+        venue={venue}
+        weekLabel={week?.week ?? tournamentLabel}
+        tournamentLabel={tournamentLabel}
+        siteLabel="are-we-playing.vercel.app"
+        fileName={`are-we-playing-${slug(match.localTeam)}-vs-${slug(match.visitingTeam)}.png`}
+      />
+    </section>
+  </main>
+</Layout>
