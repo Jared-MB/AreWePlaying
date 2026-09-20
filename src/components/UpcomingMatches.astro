@@ -54,9 +54,15 @@ const matches = await getUpcomingMatches({ teamId, tournamentId });
                   href={match.locationUrl}
                   target="_blank"
                   rel="noreferrer noopener"
-                  class="text-xs uppercase tracking-wider text-muted-foreground"
+                  class="block text-xs uppercase tracking-wider text-muted-foreground"
                 >
                   {match.location}
+                </a>
+                <a
+                  href={`/${tournamentId}/match/${match.matchId}`}
+                  class="mt-2 inline-block text-xs font-bold uppercase tracking-wider underline underline-offset-4"
+                >
+                  Ver detalle
                 </a>
               </div>
             </MatchCard>
