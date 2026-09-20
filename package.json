@@ -6,7 +6,8 @@
 		"dev": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"lint": "eslint",
+		"lint": "biome check",
+		"format": "biome format --write",
 		"populate": "uv run scripts/populate.py",
 		"py:lint": "uv run ruff check scripts",
 		"py:format": "uv run ruff check --fix scripts && uv run ruff format scripts"

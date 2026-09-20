@@ -9,11 +9,16 @@
 		"ignoreUnknown": false,
 		"includes": [
 			"**",
-			"!**/node_modules/**",
+			"!**/node_modules",
 			"!**/pnpm-lock.yaml",
-			"!**/dist/**",
-			"!**/.next/**",
-			"!**/public/**"
+			"!**/dist",
+			"!**/.next",
+			"!**/public",
+			"!.venv",
+			"!.vercel",
+			"!.astro",
+			"!.vscode",
+			"!.claude"
 		]
 	},
 	"formatter": {
@@ -28,6 +33,10 @@
 				"useExhaustiveDependencies": "off",
 				"useUniqueElementIds": "off"
 			}
+		},
+		"domains": {
+			"tailwind": "recommended",
+			"astro": "recommended"
 		}
 	},
 	"javascript": {
@@ -45,5 +54,10 @@
 	},
 	"html": {
 		"experimentalFullSupportEnabled": true
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
 	}
 }
