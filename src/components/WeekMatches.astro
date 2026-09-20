@@ -140,6 +140,12 @@ const { matches, week, tournamentId } = Astro.props;
                   ? "NO INICIADO"
                   : "COMPLETADO"}
             </div>
+            <a
+              href={`/${tournamentId}/match/${game.matchId}`}
+              class="mt-2 block text-xs font-bold uppercase tracking-wider underline underline-offset-4 group-data-[active=true]:text-highlight-foreground"
+            >
+              Ver detalle
+            </a>
           </div>
         </article>
       </MatchCard>

@@ -20,6 +20,7 @@
 		"astro": "7.2.7",
 		"canvas-confetti": "1.9.4",
 		"date-fns": "4.1.0",
+		"html-to-image": "^1.11.13",
 		"lucide-preact": "1.39.0",
 		"preact": "^10.29.8",
 		"react": "npm:@preact/compat",
