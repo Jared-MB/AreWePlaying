@@ -7,7 +7,11 @@ import type { TeamPosition } from "@/types/team";
 import type { Week } from "@/types/week";
 import { getMatchesWithWeek } from "@/utils/get-match";
 import { MATCH_STATUS_LABEL, getMatchStatus } from "@/utils/get-match-status";
-import { getTeamLogo } from "@/utils/get-team-logo";
+import {
+  buildMatchCard,
+  getTournamentLabel,
+  teamInitials,
+} from "@/utils/get-match-card";
 import { getTeamsTable } from "@/utils/get-teams-table";
 import { getTournaments } from "@/utils/get-tournaments";
 import {
@@ -67,65 +71,36 @@ interface Props {
 
 const tournament = requireTournamentBySlug(Astro.params.tournament);
 const tournamentSlug = Astro.params.tournament;
-const tournamentId = tournament.id.toLowerCase();
 
 const { match, week, localStats, visitingStats, headToHead } = Astro.props;
 
-const status = getMatchStatus(match);
-const hasScore = status !== "upcoming";
+const card = buildMatchCard({
+  tournament,
+  match,
+  week,
+  localStats,
+  visitingStats,
+});
 
-const localPoints = Number(match.localTeamPoints);
-const visitingPoints = Number(match.visitingTeamPoints);
-const localWon = hasScore && localPoints > visitingPoints;
-const visitingWon = hasScore && visitingPoints > localPoints;
+const { status } = card;
+const hasScore = status !== "upcoming";
 
 const [rawDate, rawTime = ""] = match.date.split(" ");
 const parsedDate = parse(rawDate, "dd/MM/yyyy", new Date());
 const longDate = isValid(parsedDate)
   ? format(parsedDate, "EEEE d 'de' MMMM 'de' yyyy", { locale: es })
   : rawDate;
-const shortDate = isValid(parsedDate)
-  ? format(parsedDate, "d MMM yyyy", { locale: es })
-  : rawDate;
-
-const initials = (name: string) => name.split(" ")[0].substring(0, 3);
-
-// En los partidos por jugarse la API manda posición y récord vacíos: se cae a la
-// tabla general para no dejar separadores sueltos ("LOCAL · · ").
-// Un torneo que aún no arranca trae posición 0 y récord 0-0: eso es "sin dato".
-const positionOf = (raw: string, stats?: TeamPosition) =>
-  raw?.trim() || (stats && stats.position > 0 ? `(${stats.position})` : "");
-const recordOf = (raw: string, stats?: TeamPosition) =>
-  raw?.trim() || (stats && stats.matches > 0 ? stats.wr : "");
 
 const teams = [
-  {
-    role: "Local" as const,
-    name: match.localTeam,
-    fullName: localStats?.name ?? match.localTeam,
-    id: match.localTeamId,
-    slug: getTeamSlug({ shortName: match.localTeam }),
-    points: match.localTeamPoints,
-    position: positionOf(match.localTeamPosition, localStats),
-    record: recordOf(match.localTeamWR, localStats),
-    stats: localStats,
-    won: localWon,
-    logo: getTeamLogo({ tournamentId, teamId: match.localTeamId }),
-  },
-  {
-    role: "Visitante" as const,
-    name: match.visitingTeam,
-    fullName: visitingStats?.name ?? match.visitingTeam,
-    id: match.visitingTeamId,
-    slug: getTeamSlug({ shortName: match.visitingTeam }),
-    points: match.visitingTeamPoints,
-    position: positionOf(match.visitingTeamPosition, visitingStats),
-    record: recordOf(match.visitingTeamWR, visitingStats),
-    stats: visitingStats,
-    won: visitingWon,
-    logo: getTeamLogo({ tournamentId, teamId: match.visitingTeamId }),
-  },
-];
+  { side: card.local, role: "Local" as const, stats: localStats },
+  { side: card.visiting, role: "Visitante" as const, stats: visitingStats },
+].map(({ side, role, stats }) => ({
+  ...side,
+  role,
+  stats,
+  fullName: stats?.name ?? side.name,
+  slug: getTeamSlug({ shortName: side.name }),
+}));
 
 const comparison = [
   { label: "Posición", get: (t: TeamPosition) => `#${t.position}` },
@@ -143,11 +118,9 @@ const comparison = [
   },
 ];
 
-const tournamentLabel = `División ${tournament.division} · ${tournament.category}${tournament.conference ? ` · ${tournament.conference}` : ""}`;
-
+const tournamentLabel = getTournamentLabel(tournament);
 const hasVenueLink = match.locationUrl && match.locationUrl !== "-";
-const venue =
-  match.location && match.location !== "-" ? match.location : "Por definir";
+const venue = card.venue;
 
 const title = `${match.localTeam} vs ${match.visitingTeam}${hasScore ? ` ${match.localTeamPoints}-${match.visitingTeamPoints}` : ""} | Are We Playing?`;
 const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}${rawTime ? ` a las ${rawTime}` : ""} · ${venue}. ${tournamentLabel}.`;
@@ -222,7 +195,7 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
                   />
                 ) : (
                   <span class="text-sm font-bold text-primary-foreground md:text-base">
-                    {initials(team.name)}
+                    {teamInitials(team.name)}
                   </span>
                 )}
               </div>
@@ -244,7 +217,7 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
               {hasScore ? (
                 <p
                   class={`shrink-0 rounded-md border border-line/70 px-4 py-1 font-mono text-3xl font-bold tabular-nums md:text-5xl ${
-                    team.won
+                    team.isWinner
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted text-muted-foreground"
                   }`}
@@ -268,7 +241,7 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
         >
           Fecha
         </p>
-        <p class="mt-1 font-mono text-lg font-bold uppercase">{shortDate}</p>
+        <p class="mt-1 font-mono text-lg font-bold uppercase">{card.dateLabel}</p>
       </article>
       <article class="rounded-md bg-surface p-4 shadow-xs">
         <p
@@ -410,30 +383,14 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
     <section class="rounded-md bg-surface p-6 shadow-xs">
       <MatchStory
         client:load
-        status={status}
-        local={{
-          name: match.localTeam,
-          logo: teams[0].logo,
-          initials: initials(match.localTeam),
-          record: teams[0].record,
-          position: teams[0].position,
-          points: match.localTeamPoints,
-          isWinner: localWon,
-        }}
-        visiting={{
-          name: match.visitingTeam,
-          logo: teams[1].logo,
-          initials: initials(match.visitingTeam),
-          record: teams[1].record,
-          position: teams[1].position,
-          points: match.visitingTeamPoints,
-          isWinner: visitingWon,
-        }}
-        dateLabel={shortDate}
-        timeLabel={rawTime || "—"}
-        venue={venue}
-        weekLabel={week?.week ?? tournamentLabel}
-        tournamentLabel={tournamentLabel}
+        status={card.status}
+        local={card.local}
+        visiting={card.visiting}
+        dateLabel={card.dateLabel}
+        timeLabel={card.timeLabel}
+        venue={card.venue}
+        weekLabel={card.weekLabel}
+        tournamentLabel={card.tournamentLabel}
         siteLabel={SITE_HOST}
         fileName={`are-we-playing-${slugify(match.localTeam)}-vs-${slugify(match.visitingTeam)}.png`}
       />
