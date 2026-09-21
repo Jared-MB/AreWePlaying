@@ -1,13 +1,8 @@
-import { readFile } from "node:fs/promises";
-import { assetsDir } from "./assets-dir";
-import path from "node:path";
 import type { TeamPosition } from "@/types/team";
+import { assetFiles } from "./asset-files";
+
+const loadTeamsTable = assetFiles<TeamPosition>("teams-table");
 
 export async function getTeamsTable(tournamentId: string) {
-	const rawTeams = await readFile(
-		path.join(assetsDir, tournamentId.toUpperCase(), "teams-table.json"),
-		"utf-8",
-	);
-
-	return JSON.parse(rawTeams) as TeamPosition[];
+	return loadTeamsTable(tournamentId);
 }

@@ -1,26 +1,11 @@
-import type { Match } from "@/types/match";
-import type { TeamPosition } from "@/types/team";
-import type { Week } from "@/types/week";
 import { getMatchSlug } from "./match-slug";
+import { getMatches } from "./get-matches";
 import { getTeamSlug } from "./team-slug";
-import { getTournamentSlug } from "./tournament-slug";
+import { getTeamsTable } from "./get-teams-table";
 import { getTournaments } from "./get-tournaments";
+import { getTournamentSlug } from "./tournament-slug";
+import { getWeeks } from "./get-weeks";
 import { getWeekSlug } from "./week-slug";
-
-// Igual que en get-today-matches: glob en vez de readFile para que los JSON
-// queden empaquetados en la función on-demand. En Vercel la función no tiene
-// acceso a src/assets, así que leer del disco aquí fallaría en producción.
-const teamsTableFiles = import.meta.glob<TeamPosition[]>(
-	"/src/assets/*/teams-table.json",
-	{ import: "default" },
-);
-const weeksFiles = import.meta.glob<Week[]>("/src/assets/*/weeks.json", {
-	import: "default",
-});
-const matchesFiles = import.meta.glob<{ data: Match[]; id: string }[]>(
-	"/src/assets/*/matches.json",
-	{ import: "default" },
-);
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -54,8 +39,7 @@ export async function resolveLegacyPath(
 		if (!third) return `${base}/teams`;
 		if (!UUID.test(third)) return null;
 
-		const teams =
-			(await teamsTableFiles[`/src/assets/${dir}/teams-table.json`]?.()) ?? [];
+		const teams = await getTeamsTable(dir);
 		const team = teams.find((t) => sameId(t.id, third));
 
 		return team ? `${base}/teams/${getTeamSlug(team)}` : null;
@@ -64,9 +48,7 @@ export async function resolveLegacyPath(
 	if (second === "match") {
 		if (!third || !UUID.test(third)) return null;
 
-		const groups =
-			(await matchesFiles[`/src/assets/${dir}/matches.json`]?.()) ?? [];
-		const match = groups
+		const match = (await getMatches(dir))
 			.flatMap((group) => group.data)
 			.find((m) => sameId(m.matchId, third));
 
@@ -76,7 +58,7 @@ export async function resolveLegacyPath(
 	// Lo que queda con esta forma es una jornada: /<torneo>/<semana>.
 	if (third || !UUID.test(second)) return null;
 
-	const weeks = (await weeksFiles[`/src/assets/${dir}/weeks.json`]?.()) ?? [];
+	const weeks = await getWeeks(dir);
 	const week = weeks.find((w) => sameId(w.id, second));
 
 	return week ? `${base}/${getWeekSlug(week)}` : null;

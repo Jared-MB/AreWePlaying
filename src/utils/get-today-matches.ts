@@ -1,17 +1,7 @@
-import type { Match } from "@/types/match";
-import type { Week } from "@/types/week";
 import { getLeagueToday } from "./league-date";
+import { getMatches } from "./get-matches";
 import { getTournaments } from "./get-tournaments";
-
-// Los JSON se importan vía glob (y no con readFile) para que queden empaquetados
-// en la función on-demand que renderiza el server island.
-const matchesFiles = import.meta.glob<{ data: Match[]; id: string }[]>(
-	"/src/assets/*/matches.json",
-	{ import: "default" },
-);
-const weeksFiles = import.meta.glob<Week[]>("/src/assets/*/weeks.json", {
-	import: "default",
-});
+import { getWeeks } from "./get-weeks";
 
 export async function getTodayMatches() {
 	const today = getLeagueToday();
@@ -19,13 +9,10 @@ export async function getTodayMatches() {
 	const results = await Promise.all(
 		getTournaments().map(async (tournament) => {
 			const id = tournament.id.toUpperCase();
-			const loadMatches = matchesFiles[`/src/assets/${id}/matches.json`];
-			const loadWeeks = weeksFiles[`/src/assets/${id}/weeks.json`];
-			if (!loadMatches) return null;
 
 			const [matches, weeks] = await Promise.all([
-				loadMatches(),
-				loadWeeks?.() ?? [],
+				getMatches(id),
+				getWeeks(id),
 			]);
 
 			for (const matchObj of matches) {

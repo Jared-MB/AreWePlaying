@@ -1,15 +1,9 @@
-import type { Team, TeamPosition } from "@/types/team";
+import type { Team } from "@/types/team";
+import { assetFiles } from "./asset-files";
+import { getTeamsTable } from "./get-teams-table";
 import { getTournaments } from "./get-tournaments";
 
-// Igual que en get-today-matches: glob para que los JSON queden empaquetados
-// en la función on-demand del server island.
-const teamsTableFiles = import.meta.glob<TeamPosition[]>(
-	"/src/assets/*/teams-table.json",
-	{ import: "default" },
-);
-const teamsFiles = import.meta.glob<Team[]>("/src/assets/*/teams.json", {
-	import: "default",
-});
+const loadTeams = assetFiles<Team>("teams");
 
 export async function getTopTeams(limit = 3) {
 	return Promise.all(
@@ -17,8 +11,8 @@ export async function getTopTeams(limit = 3) {
 			const id = tournament.id.toUpperCase();
 
 			const [table, teams] = await Promise.all([
-				teamsTableFiles[`/src/assets/${id}/teams-table.json`]?.() ?? [],
-				teamsFiles[`/src/assets/${id}/teams.json`]?.() ?? [],
+				getTeamsTable(id),
+				loadTeams(id),
 			]);
 
 			const topTeams = table

@@ -1,25 +1,15 @@
-import type { Match } from "@/types/match";
-import type { Week } from "@/types/week";
 import {
 	formatLeagueDateTime,
 	getLeagueToday,
 	leagueDateToEpoch,
 	toSortableDay,
 } from "./league-date";
-import { getTournaments } from "./get-tournaments";
-import { getTournamentSlug } from "./tournament-slug";
+import { getMatches } from "./get-matches";
 import { getMatchSlug } from "./match-slug";
 import { getTeamSlug } from "./team-slug";
-
-// Mismo patrón que get-today-matches: glob para que los JSON queden empaquetados
-// en la función on-demand del server island.
-const matchesFiles = import.meta.glob<{ data: Match[]; id: string }[]>(
-	"/src/assets/*/matches.json",
-	{ import: "default" },
-);
-const weeksFiles = import.meta.glob<Week[]>("/src/assets/*/weeks.json", {
-	import: "default",
-});
+import { getTournaments } from "./get-tournaments";
+import { getTournamentSlug } from "./tournament-slug";
+import { getWeeks } from "./get-weeks";
 
 /** Partido de un favorito, con lo mínimo para pintar su tarjeta en el cliente. */
 export interface NextTeamMatch {
@@ -49,14 +39,7 @@ function isFutureDay(day: string, today: string) {
 }
 
 async function loadTournament(id: string) {
-	const loadMatches = matchesFiles[`/src/assets/${id}/matches.json`];
-	const loadWeeks = weeksFiles[`/src/assets/${id}/weeks.json`];
-	if (!loadMatches) return null;
-
-	const [matches, weeks] = await Promise.all([
-		loadMatches(),
-		loadWeeks?.() ?? [],
-	]);
+	const [matches, weeks] = await Promise.all([getMatches(id), getWeeks(id)]);
 
 	return { matches, weeks };
 }
@@ -70,10 +53,9 @@ export async function getNextMatches() {
 
 	const results = await Promise.all(
 		getTournaments().map(async (tournament) => {
-			const loaded = await loadTournament(tournament.id.toUpperCase());
-			if (!loaded) return null;
-
-			const { matches, weeks } = loaded;
+			const { matches, weeks } = await loadTournament(
+				tournament.id.toUpperCase(),
+			);
 
 			let nextDay: string | undefined;
 			let weekId: string | undefined;
@@ -132,10 +114,9 @@ export async function getNextMatchByTeam() {
 			]
 				.filter(Boolean)
 				.join(" · ");
-			const loaded = await loadTournament(tournament.id.toUpperCase());
-			if (!loaded) return;
-
-			const { matches, weeks } = loaded;
+			const { matches, weeks } = await loadTournament(
+				tournament.id.toUpperCase(),
+			);
 
 			for (const matchObj of matches) {
 				const week = weeks.find((w) => w.id === matchObj.id)?.week;
