@@ -3,12 +3,6 @@ import { getTopTeams } from "@/utils/get-top-teams";
 import { getTournamentSlug } from "@/utils/tournament-slug";
 import { getTeamSlug } from "@/utils/team-slug";
 
-// Se renderiza on-demand como server island; el CDN lo cachea unos minutos.
-Astro.response.headers.set(
-  "Cache-Control",
-  "public, s-maxage=600, stale-while-revalidate=60",
-);
-
 const topTeams = await getTopTeams();
 ---
 
