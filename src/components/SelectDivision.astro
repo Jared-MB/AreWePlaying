@@ -1,8 +1,10 @@
 ---
 import { getTournaments } from "@/utils/get-tournaments";
+import { getTournamentSlug } from "@/utils/tournament-slug";
 
 interface Props {
   id?: string;
+  /** Slug del torneo activo, p. ej. "division-ii-femenil-centro". */
   defaultSelected?: string;
 }
 
@@ -23,8 +25,8 @@ const selectId = id ?? `division-${crypto.randomUUID()}`;
   {
     tournaments.map((t) => (
       <option
-        selected={defaultSelected === t.id.toLowerCase()}
-        value={t.id.toLowerCase()}
+        selected={defaultSelected === getTournamentSlug(t)}
+        value={getTournamentSlug(t)}
       >
         Division {t.division}
         {t.conference ? ` - ${t.conference}` : ""} - {t.category}
@@ -43,10 +45,10 @@ const selectId = id ?? `division-${crypto.randomUUID()}`;
 
     if (!$division) return;
 
-    const newTournamentId = $division.value;
+    const newTournamentSlug = $division.value;
 
     const path = window.location.pathname.split("/");
-    path[1] = newTournamentId;
+    path[1] = newTournamentSlug;
 
     const isTeam = path[2] && path[2] === "teams";
 
@@ -56,6 +58,6 @@ const selectId = id ?? `division-${crypto.randomUUID()}`;
       return;
     }
 
-    window.location.href = `/${newTournamentId}`;
+    window.location.href = `/${newTournamentSlug}`;
   });
 </script>

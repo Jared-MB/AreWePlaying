@@ -1,33 +1,39 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { getTournaments } from "@/utils/get-tournaments";
+import {
+  getTournamentSlug,
+  requireTournamentBySlug,
+} from "@/utils/tournament-slug";
 import { getTeamsTable } from "@/utils/get-teams-table";
+import { getTeamSlug } from "@/utils/team-slug";
 import MatchCard from "@/components/match-card.tsx";
 import SelectDivision from "@/components/SelectDivision.astro";
 
 export function getStaticPaths() {
-  return getTournaments().map(({ id }) => ({
+  return getTournaments().map((t) => ({
     params: {
-      tournamentId: id.toLowerCase(),
+      tournament: getTournamentSlug(t),
     },
   }));
 }
 
-const { tournamentId } = Astro.params;
+const tournament = requireTournamentBySlug(Astro.params.tournament);
+const tournamentSlug = Astro.params.tournament;
 
-const teams = await getTeamsTable(tournamentId);
+const teams = await getTeamsTable(tournament.id.toLowerCase());
 
 const sortedTeams = teams.toSorted((a, b) => a.position - b.position);
 const topTeam = sortedTeams[0];
 const otherTeams = sortedTeams.slice(1);
 ---
 
-<Layout tournamentId={tournamentId}>
+<Layout tournamentSlug={tournamentSlug}>
   <div class="min-h-screen bg-background">
     <div class="p-4 md:p-8">
       <div class="mx-auto max-w-7xl">
         <div class="md:hidden mb-12">
-          <SelectDivision id="division-mobile" defaultSelected={tournamentId} />
+          <SelectDivision id="division-mobile" defaultSelected={tournamentSlug} />
         </div>
         <header
           class="mb-12 border-8 border-frame bg-inverse p-8 text-inverse-foreground shadow-[8px_8px_0px_0px_var(--color-hard-shadow)]"
@@ -54,7 +60,7 @@ const otherTeams = sortedTeams.slice(1);
         </header>
 
         <a
-          href={`/${tournamentId}/teams/${topTeam.id}`}
+          href={`/${tournamentSlug}/teams/${getTeamSlug(topTeam)}`}
           class="group mb-8 block"
         >
           <div
@@ -119,7 +125,7 @@ const otherTeams = sortedTeams.slice(1);
         <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {
             otherTeams.map((team) => (
-              <a href={`/${tournamentId}/teams/${team.id}`}>
+              <a href={`/${tournamentSlug}/teams/${getTeamSlug(team)}`}>
                 <MatchCard>
                   <div class="relative h-3 border-b-4 border-frame bg-muted">
                     <div

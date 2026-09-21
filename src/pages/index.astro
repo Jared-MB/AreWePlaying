@@ -5,6 +5,7 @@ import TopPerformers from "@/components/TopPerformers.astro";
 import ScrollToFavoriteMatch from "@/components/ScrollToFavoriteMatch.astro";
 
 import { getTournaments } from "@/utils/get-tournaments";
+import { getTournamentSlug } from "@/utils/tournament-slug";
 import HeadlessLayout from "@/layouts/HeadlessLayout.astro";
 import Footer from "@/components/Footer.astro";
 import { Toaster } from "@/components/sonner";
@@ -36,7 +37,7 @@ const tournaments = getTournaments();
               {tournaments.map((t) => (
                 <li>
                   <a
-                    href={`/${t.id.toLowerCase()}`}
+                    href={`/${getTournamentSlug(t)}`}
                     class="block bg-surface rounded-md px-4 py-2 shadow-xs hover:bg-surface-hover/70 focus-visible:scale-95 transition-transform duration-180"
                   >
                     División {t.division} {t.category}{" "}

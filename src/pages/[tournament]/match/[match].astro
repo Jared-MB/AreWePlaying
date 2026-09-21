@@ -10,12 +10,20 @@ import { MATCH_STATUS_LABEL, getMatchStatus } from "@/utils/get-match-status";
 import { getTeamLogo } from "@/utils/get-team-logo";
 import { getTeamsTable } from "@/utils/get-teams-table";
 import { getTournaments } from "@/utils/get-tournaments";
+import {
+  getTournamentSlug,
+  requireTournamentBySlug,
+} from "@/utils/tournament-slug";
+import { getMatchSlug } from "@/utils/match-slug";
+import { getTeamSlug } from "@/utils/team-slug";
+import { getWeekSlug } from "@/utils/week-slug";
+import { slugify } from "@/utils/slugify";
 import { format, isValid, parse } from "date-fns";
 import { es } from "date-fns/locale";
 
 export async function getStaticPaths() {
-  const perTournament = getTournaments().map(async ({ id }) => {
-    const tournamentId = id.toLowerCase();
+  const perTournament = getTournaments().map(async (t) => {
+    const tournamentId = t.id.toLowerCase();
 
     const [matches, teams] = await Promise.all([
       getMatchesWithWeek(tournamentId),
@@ -23,7 +31,10 @@ export async function getStaticPaths() {
     ]);
 
     return matches.map(({ match, week }) => ({
-      params: { tournamentId, matchId: match.matchId },
+      params: {
+        tournament: getTournamentSlug(t),
+        match: getMatchSlug(match),
+      },
       props: {
         match,
         week,
@@ -54,12 +65,11 @@ interface Props {
   headToHead: Match[];
 }
 
-const { tournamentId } = Astro.params;
-const { match, week, localStats, visitingStats, headToHead } = Astro.props;
+const tournament = requireTournamentBySlug(Astro.params.tournament);
+const tournamentSlug = Astro.params.tournament;
+const tournamentId = tournament.id.toLowerCase();
 
-const tournament = getTournaments().find(
-  (t) => t.id.toLowerCase() === tournamentId,
-);
+const { match, week, localStats, visitingStats, headToHead } = Astro.props;
 
 const status = getMatchStatus(match);
 const hasScore = status !== "upcoming";
@@ -94,6 +104,7 @@ const teams = [
     name: match.localTeam,
     fullName: localStats?.name ?? match.localTeam,
     id: match.localTeamId,
+    slug: getTeamSlug({ shortName: match.localTeam }),
     points: match.localTeamPoints,
     position: positionOf(match.localTeamPosition, localStats),
     record: recordOf(match.localTeamWR, localStats),
@@ -106,6 +117,7 @@ const teams = [
     name: match.visitingTeam,
     fullName: visitingStats?.name ?? match.visitingTeam,
     id: match.visitingTeamId,
+    slug: getTeamSlug({ shortName: match.visitingTeam }),
     points: match.visitingTeamPoints,
     position: positionOf(match.visitingTeamPosition, visitingStats),
     record: recordOf(match.visitingTeamWR, visitingStats),
@@ -131,31 +143,29 @@ const comparison = [
   },
 ];
 
-const tournamentLabel = tournament
-  ? `División ${tournament.division} · ${tournament.category}${tournament.conference ? ` · ${tournament.conference}` : ""}`
-  : "Liga ABE";
+const tournamentLabel = `División ${tournament.division} · ${tournament.category}${tournament.conference ? ` · ${tournament.conference}` : ""}`;
 
 const hasVenueLink = match.locationUrl && match.locationUrl !== "-";
 const venue =
   match.location && match.location !== "-" ? match.location : "Por definir";
 
-const slug = (value: string) =>
-  value
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .replace(/[^a-zA-Z0-9]+/g, "-")
-    .replace(/^-|-$/g, "")
-    .toLowerCase();
-
 const title = `${match.localTeam} vs ${match.visitingTeam}${hasScore ? ` ${match.localTeamPoints}-${match.visitingTeamPoints}` : ""} | Are We Playing?`;
 const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}${rawTime ? ` a las ${rawTime}` : ""} · ${venue}. ${tournamentLabel}.`;
 ---
 
-<Layout tournamentId={tournamentId} title={title} description={description}>
+<Layout
+  tournamentSlug={tournamentSlug}
+  title={title}
+  description={description}
+>
   <div class="mx-auto w-full max-w-5xl">
     <div class="mb-6 flex items-center justify-between gap-4">
       <a
-        href={week ? `/${tournamentId}/${week.id}` : `/${tournamentId}`}
+        href={
+          week
+            ? `/${tournamentSlug}/${getWeekSlug(week)}`
+            : `/${tournamentSlug}`
+        }
         class="rounded-md bg-surface px-4 py-2 text-sm font-bold uppercase tracking-wider shadow-xs transition-transform duration-180 hover:bg-surface-hover/70 focus-visible:scale-95"
       >
         ← Regresar
@@ -219,7 +229,7 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
 
               <div class="min-w-0 flex-1">
                 <a
-                  href={`/${tournamentId}/teams/${team.id}`}
+                  href={`/${tournamentSlug}/teams/${team.slug}`}
                   class="font-mono text-xl font-bold uppercase tracking-wide wrap-break-word hover:underline md:text-3xl"
                 >
                   {team.name}
@@ -372,7 +382,7 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
               return (
                 <li>
                   <a
-                    href={`/${tournamentId}/match/${other.matchId}`}
+                    href={`/${tournamentSlug}/match/${getMatchSlug(other)}`}
                     class="flex items-center justify-between gap-4 rounded-md bg-surface p-4 shadow-xs transition-colors duration-150 hover:bg-surface-hover/70"
                   >
                     <span class="min-w-0">
@@ -425,7 +435,7 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
         weekLabel={week?.week ?? tournamentLabel}
         tournamentLabel={tournamentLabel}
         siteLabel={SITE_HOST}
-        fileName={`are-we-playing-${slug(match.localTeam)}-vs-${slug(match.visitingTeam)}.png`}
+        fileName={`are-we-playing-${slugify(match.localTeam)}-vs-${slugify(match.visitingTeam)}.png`}
       />
     </section>
   </div>

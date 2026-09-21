@@ -5,16 +5,18 @@ import { toISODateTime } from "@/utils/league-date";
 
 import type { Match } from "@/types/match";
 import type { Week } from "@/types/week";
+import { getMatchSlug } from "@/utils/match-slug";
+import { getTeamSlug } from "@/utils/team-slug";
 
 interface Props {
   matches: Match[];
   week?: Week;
-  tournamentId: string;
+  tournamentSlug: string;
   /** Confeti y "Yes!!" al encontrar un favorito; se apaga para partidos futuros. */
   celebrate?: boolean;
 }
 
-const { matches, week, tournamentId, celebrate = true } = Astro.props;
+const { matches, week, tournamentSlug, celebrate = true } = Astro.props;
 
 // En móvil cada campo lleva su etiqueta visible; en escritorio la columna ya se
 // entiende sola, pero la etiqueta sigue en el árbol de accesibilidad (sr-only en
@@ -55,7 +57,7 @@ const score =
               <article aria-label={matchup}>
                 <a
                   class="absolute inset-0 cursor-pointer outline-offset-4 focus-visible:outline-2"
-                  href={`/${tournamentId}/match/${game.matchId}`}
+                  href={`/${tournamentSlug}/match/${getMatchSlug(game)}`}
                   aria-label={`Ver detalle del partido entre ${game.localTeam} contra ${game.visitingTeam}`}
                 />
                 <dl class="grid gap-4 p-6 md:grid-cols-12 md:items-center group-data-[active=true]:text-highlight-foreground">
@@ -90,7 +92,7 @@ const score =
                         </span>
                         <div class="flex min-w-0 flex-1 items-center justify-between gap-3">
                           <a
-                            href={`/${tournamentId}/teams/${game.localTeamId}`}
+                            href={`/${tournamentSlug}/teams/${getTeamSlug({ shortName: game.localTeam })}`}
                             class="relative z-10 min-w-0 touch-hitbox wrap-break-word font-bold uppercase tracking-wide hover:underline"
                           >
                             {game.localTeam}
@@ -119,7 +121,7 @@ const score =
                         </span>
                         <div class="flex min-w-0 flex-1 items-center justify-between gap-3">
                           <a
-                            href={`/${tournamentId}/teams/${game.visitingTeamId}`}
+                            href={`/${tournamentSlug}/teams/${getTeamSlug({ shortName: game.visitingTeam })}`}
                             class="relative z-10 min-w-0 touch-hitbox wrap-break-word font-bold uppercase tracking-wide hover:underline"
                           >
                             {game.visitingTeam}

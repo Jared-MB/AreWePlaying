@@ -23,15 +23,3 @@ export async function getMatchesWithWeek(
 		return group.data.map((match) => ({ match, week }));
 	});
 }
-
-export async function getMatch({
-	tournamentId,
-	matchId,
-}: {
-	tournamentId: string;
-	matchId: string;
-}): Promise<MatchWithWeek | undefined> {
-	const matches = await getMatchesWithWeek(tournamentId);
-
-	return matches.find(({ match }) => match.matchId === matchId);
-}

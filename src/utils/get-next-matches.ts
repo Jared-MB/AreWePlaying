@@ -7,6 +7,9 @@ import {
 	toSortableDay,
 } from "./league-date";
 import { getTournaments } from "./get-tournaments";
+import { getTournamentSlug } from "./tournament-slug";
+import { getMatchSlug } from "./match-slug";
+import { getTeamSlug } from "./team-slug";
 
 // Mismo patrón que get-today-matches: glob para que los JSON queden empaquetados
 // en la función on-demand del server island.
@@ -21,16 +24,20 @@ const weeksFiles = import.meta.glob<Week[]>("/src/assets/*/weeks.json", {
 /** Partido de un favorito, con lo mínimo para pintar su tarjeta en el cliente. */
 export interface NextTeamMatch {
 	matchId: string;
-	tournamentId: string;
+	/** Slugs precalculados: la isla corre en el navegador y no puede resolverlos. */
+	matchSlug: string;
+	tournamentSlug: string;
+	teamSlug: string;
+	opponentSlug: string;
 	/** Instante absoluto del salto inicial, en ms. */
 	startsAt: number;
 	/** Día y hora ya formateados en español, para que la isla no cargue Intl. */
 	label: string;
 	tournament: string;
 	team: string;
+	/** UUID: es la llave con la que se guardan los favoritos en localStorage. */
 	teamId: string;
 	opponent: string;
-	opponentId: string;
 	isLocal: boolean;
 	location: string;
 	locationUrl: string;
@@ -117,7 +124,7 @@ export async function getNextMatchByTeam() {
 
 	await Promise.all(
 		getTournaments().map(async (tournament) => {
-			const tournamentId = tournament.id.toLowerCase();
+			const tournamentSlug = getTournamentSlug(tournament);
 			const tournamentLabel = [
 				`División ${tournament.division}`,
 				tournament.category,
@@ -147,32 +154,32 @@ export async function getNextMatchByTeam() {
 							id: match.localTeamId,
 							team: match.localTeam,
 							opponent: match.visitingTeam,
-							opponentId: match.visitingTeamId,
 							isLocal: true,
 						},
 						{
 							id: match.visitingTeamId,
 							team: match.visitingTeam,
 							opponent: match.localTeam,
-							opponentId: match.localTeamId,
 							isLocal: false,
 						},
 					];
 
-					for (const { id, team, opponent, opponentId, isLocal } of sides) {
+					for (const { id, team, opponent, isLocal } of sides) {
 						const current = byTeam[id];
 						if (current && current.startsAt <= startsAt) continue;
 
 						byTeam[id] = {
 							matchId: match.matchId,
-							tournamentId,
+							matchSlug: getMatchSlug(match),
+							tournamentSlug,
+							teamSlug: getTeamSlug({ shortName: team }),
+							opponentSlug: getTeamSlug({ shortName: opponent }),
 							startsAt,
 							label: formatLeagueDateTime(startsAt),
 							tournament: tournamentLabel,
 							team,
 							teamId: id,
 							opponent,
-							opponentId,
 							isLocal,
 							location: match.location,
 							locationUrl: match.locationUrl,

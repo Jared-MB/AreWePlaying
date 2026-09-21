@@ -11,7 +11,8 @@ import { Toaster } from "@/components/sonner";
 import HeadlessLayout from "./HeadlessLayout.astro";
 
 interface Props {
-  tournamentId?: string;
+  /** Slug del torneo activo, p. ej. "division-ii-femenil-centro". */
+  tournamentSlug?: string;
   title?: string;
   description?: string;
   /** Imagen de la tarjeta social. Ruta relativa al sitio o URL absoluta. */
@@ -22,7 +23,7 @@ interface Props {
   };
 }
 
-const { tournamentId, title, description, image, icon } = Astro.props;
+const { tournamentSlug, title, description, image, icon } = Astro.props;
 ---
 
 <HeadlessLayout
@@ -39,9 +40,9 @@ const { tournamentId, title, description, image, icon } = Astro.props;
             <HeaderLink href="/" aria-label="Ir al inicio"> Inicio </HeaderLink>
 
             {
-              tournamentId ? (
+              tournamentSlug ? (
                 <HeaderLink
-                  href={`/${tournamentId}/teams`}
+                  href={`/${tournamentSlug}/teams`}
                   aria-label="Ver equipos"
                 >
                   Equipos
@@ -53,10 +54,10 @@ const { tournamentId, title, description, image, icon } = Astro.props;
           <div class="flex items-center gap-4">
             <div class="hidden md:inline-block">
               {
-                tournamentId ? (
+                tournamentSlug ? (
                   <SelectDivision
                     id="division-desktop"
-                    defaultSelected={tournamentId}
+                    defaultSelected={tournamentSlug}
                   />
                 ) : null
               }

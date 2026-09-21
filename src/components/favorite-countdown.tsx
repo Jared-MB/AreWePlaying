@@ -119,16 +119,18 @@ export default function FavoriteCountdown({
 						>
 							<a
 								className="cursor-pointer focus-visible:outline-2 outline-offset-4 absolute inset-0"
-								href={`/${match.tournamentId}/match/${match.matchId}`}
+								href={`/${match.tournamentSlug}/match/${match.matchSlug}`}
 								aria-label={`Ver detalle del partido entre ${match.team} contra ${match.opponent}`}
 							/>
 							<header class="min-w-0 flex flex-col gap-1">
 								<h3 class="wrap-break-word font-bold uppercase tracking-wide text-xl [&>a]:hover:underline [&>a]:z-10 [&>a]:relative [&>a]:touch-hitbox">
-									<a href={`/${match.tournamentId}/teams/${match.teamId}`}>
+									<a href={`/${match.tournamentSlug}/teams/${match.teamSlug}`}>
 										{match.team}
 									</a>{" "}
 									<span class="text-muted-foreground text-base">vs</span>{" "}
-									<a href={`/${match.tournamentId}/teams/${match.opponentId}`}>
+									<a
+										href={`/${match.tournamentSlug}/teams/${match.opponentSlug}`}
+									>
 										{match.opponent}
 									</a>
 								</h3>

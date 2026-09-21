@@ -2,13 +2,17 @@
 import FilterLink from "@/components/FilterLink.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getTournaments } from "@/utils/get-tournaments";
+import { getTournamentSlug } from "@/utils/tournament-slug";
 import { getWeeks } from "@/utils/get-weeks";
+import { getWeekSlug } from "@/utils/week-slug";
+import type { Tournament } from "@/types/tournament";
 import AreWePlaying from "@/components/AreWePlaying.astro";
 import SelectDivision from "@/components/SelectDivision.astro";
 
 interface Props {
-  tournamentId: string;
-  weekId?: string;
+  tournament: Tournament;
+  /** Slug de la jornada activa, p. ej. "semana-1". */
+  weekSlug?: string;
   title?: string;
   description?: string;
   image?: string;
@@ -18,16 +22,19 @@ interface Props {
   };
 }
 
-const { tournamentId, weekId, description, title, image, icon } = Astro.props;
+const { tournament, weekSlug, description, title, image, icon } = Astro.props;
+
+// Las URLs usan el slug; los archivos de datos siguen indexados por UUID.
+const tournamentSlug = getTournamentSlug(tournament);
+const tournamentId = tournament.id.toLowerCase();
 
 const tournaments = getTournaments();
 
-const tournament = tournaments.find((t) => t.id === tournamentId.toUpperCase());
 const tournamentsByConference = tournaments.filter((t) =>
-  tournament?.conference
-    ? t.conference === tournament?.conference &&
+  tournament.conference
+    ? t.conference === tournament.conference &&
       t.division === tournament.division
-    : t.division === tournament?.division,
+    : t.division === tournament.division,
 );
 
 const womenTournament = tournamentsByConference.find(
@@ -41,15 +48,13 @@ const weeks = await getWeeks(tournamentId);
 
 // Se arma aquí y no en el template para no meter "undefined" en la descripción
 // cuando la página no manda `description` o el torneo no existe.
-const tournamentLabel = tournament
-  ? `División ${tournament.division} - ${tournament.category}${tournament.conference ? ` (${tournament.conference})` : ""}`
-  : undefined;
+const tournamentLabel = `División ${tournament.division} - ${tournament.category}${tournament.conference ? ` (${tournament.conference})` : ""}`;
 const pageDescription =
   [description, tournamentLabel].filter(Boolean).join(" | ") || undefined;
 ---
 
 <Layout
-  tournamentId={tournamentId}
+  tournamentSlug={tournamentSlug}
   title={title}
   description={pageDescription}
   image={image}
@@ -64,7 +69,7 @@ const pageDescription =
       >
         Division:
       </label>
-      <SelectDivision id="division-mobile" defaultSelected={tournamentId} />
+      <SelectDivision id="division-mobile" defaultSelected={tournamentSlug} />
     </div>
     <hr />
     <div class="flex items-center justify-between">
@@ -79,16 +84,26 @@ const pageDescription =
           Rama:
         </span>
         <div class="flex flex-wrap gap-2">
-          <FilterLink
-            href={`/${womenTournament?.id.toLowerCase()}`}
-            isActive={womenTournament?.id.toLowerCase() === tournamentId}
-            >Femenil</FilterLink
-          >
-          <FilterLink
-            href={`/${menTournament?.id.toLowerCase()}`}
-            isActive={menTournament?.id.toLowerCase() === tournamentId}
-            >Varonil</FilterLink
-          >
+          {
+            womenTournament ? (
+              <FilterLink
+                href={`/${getTournamentSlug(womenTournament)}`}
+                isActive={womenTournament.id === tournament.id}
+              >
+                Femenil
+              </FilterLink>
+            ) : null
+          }
+          {
+            menTournament ? (
+              <FilterLink
+                href={`/${getTournamentSlug(menTournament)}`}
+                isActive={menTournament.id === tournament.id}
+              >
+                Varonil
+              </FilterLink>
+            ) : null
+          }
         </div>
       </nav>
       <!-- <div class="inline-block md:hidden">
@@ -106,8 +121,8 @@ const pageDescription =
         {
           weeks.map((week) => (
             <FilterLink
-              isActive={weekId === week.id}
-              href={`/${tournamentId}/${week.id}`}
+              isActive={weekSlug === getWeekSlug(week)}
+              href={`/${tournamentSlug}/${getWeekSlug(week)}`}
             >
               {week.week}
             </FilterLink>
@@ -129,7 +144,10 @@ const pageDescription =
         >
           {
             weeks.map((w) => (
-              <option selected={weekId === w.id} value={w.id}>
+              <option
+                selected={weekSlug === getWeekSlug(w)}
+                value={getWeekSlug(w)}
+              >
                 {w.week}
               </option>
             ))

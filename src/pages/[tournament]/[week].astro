@@ -1,0 +1,55 @@
+---
+import TournamentLayout from "@/layouts/TournamentLayout.astro";
+import WeekMatches from "@/components/WeekMatches.astro";
+import ScrollToFavoriteMatch from "@/components/ScrollToFavoriteMatch.astro";
+
+import { getTournaments } from "@/utils/get-tournaments";
+import {
+  getTournamentSlug,
+  requireTournamentBySlug,
+} from "@/utils/tournament-slug";
+import { getMatches } from "@/utils/get-matches";
+import { getWeeks } from "@/utils/get-weeks";
+import { getWeekBySlug, getWeekSlug } from "@/utils/week-slug";
+
+export async function getStaticPaths() {
+  const params = getTournaments().map(async (t) => {
+    const weeks = await getWeeks(t.id);
+
+    return weeks.map((week) => ({
+      params: {
+        tournament: getTournamentSlug(t),
+        week: getWeekSlug(week),
+      },
+    }));
+  });
+
+  return (await Promise.all(params)).flat();
+}
+
+const tournament = requireTournamentBySlug(Astro.params.tournament);
+const tournamentSlug = Astro.params.tournament;
+const tournamentId = tournament.id.toLowerCase();
+const weekSlug = Astro.params.week;
+
+const [matches, week] = await Promise.all([
+  getMatches(tournamentId),
+  getWeekBySlug({ tournamentId, slug: weekSlug }),
+]);
+
+const weekMatches = matches.find((m) => m.id === week?.id)?.data ?? [];
+---
+
+<TournamentLayout
+  tournament={tournament}
+  weekSlug={weekSlug}
+  description={week && `Partidos de la ${week.week.toLowerCase()}`}
+>
+  <ScrollToFavoriteMatch>
+    <WeekMatches
+      matches={weekMatches}
+      week={week}
+      tournamentSlug={tournamentSlug}
+    />
+  </ScrollToFavoriteMatch>
+</TournamentLayout>

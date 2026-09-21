@@ -1,5 +1,7 @@
 ---
 import { getTopTeams } from "@/utils/get-top-teams";
+import { getTournamentSlug } from "@/utils/tournament-slug";
+import { getTeamSlug } from "@/utils/team-slug";
 
 // Se renderiza on-demand como server island; el CDN lo cachea unos minutos.
 Astro.response.headers.set(
@@ -13,23 +15,23 @@ const topTeams = await getTopTeams();
 <div class="space-y-8">
   {
     topTeams.map(({ tournament, teams }) => {
-      const tournamentId = tournament.id.toLowerCase();
+      const tournamentSlug = getTournamentSlug(tournament);
 
       return (
         <section
-          aria-labelledby={`top-${tournamentId}`}
+          aria-labelledby={`top-${tournamentSlug}`}
           class="rounded-md bg-surface shadow-xs"
         >
           <header class="flex items-baseline justify-between gap-2 bg-primary rounded-t-md px-4 py-2 text-primary-foreground">
             <h3
-              id={`top-${tournamentId}`}
+              id={`top-${tournamentSlug}`}
               class="min-w-0 font-mono text-sm font-bold uppercase tracking-wider"
             >
               Div. {tournament.division} {tournament.category}
               {tournament.conference ? ` · ${tournament.conference}` : null}
             </h3>
             <a
-              href={`/${tournamentId}/teams/`}
+              href={`/${tournamentSlug}/teams/`}
               class="shrink-0 text-xs font-bold uppercase tracking-wider opacity-70 hover:opacity-100"
             >
               Tabla
@@ -41,7 +43,7 @@ const topTeams = await getTopTeams();
               {teams.map((team) => (
                 <li class="last:rounded-b-md hover:bg-surface-hover">
                   <a
-                    href={`/${tournamentId}/teams/${team.id}`}
+                    href={`/${tournamentSlug}/teams/${getTeamSlug(team)}`}
                     class="flex items-center gap-3 px-4 py-3"
                   >
                     <span class="grid size-8 rounded-full shrink-0 place-items-center bg-primary font-mono text-sm font-bold text-primary-foreground tabular-nums">
