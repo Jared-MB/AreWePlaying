@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import NotFound from "@/components/NotFound.astro";
+import { resolveLegacyPath } from "@/utils/legacy-url";
+
+// On-demand: las URLs viejas son UUIDs, así que no hay forma de prerenderizar
+// una lista que además crece cada noche con cada partido nuevo.
+export const prerender = false;
+
+const target = await resolveLegacyPath(Astro.url.pathname);
+
+if (target) {
+  return Astro.redirect(target, 301);
+}
+
+// Esta ruta captura todo lo que no casó con una página real, así que también
+// le toca responder el 404 (el catch-all tiene prioridad sobre 404.astro).
+Astro.response.status = 404;
+---
+
+<Layout title="Página no encontrada | Are We Playing?">
+  <NotFound />
+</Layout>
