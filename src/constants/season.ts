@@ -18,6 +18,3 @@ export const LATEST_SEASON =
 		.map((t) => t.season)
 		.sort()
 		.at(-1) ?? CURRENT_SEASON;
-
-/** Este despliegue sirve una temporada que ya terminó. */
-export const IS_PAST_SEASON = CURRENT_SEASON !== LATEST_SEASON;

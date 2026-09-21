@@ -28,9 +28,9 @@ const wasmFiles = [
 ].map((file) => path.relative(process.cwd(), file));
 
 export default defineConfig({
-	// Las páginas siguen prerenderizándose; el adaptador sólo hace falta para
-	// servir on-demand los server islands (p. ej. los partidos de hoy en el index)
-	// y la imagen social de cada partido.
+	// Las páginas siguen prerenderizándose; ya no queda ningún server island. El
+	// adaptador sólo hace falta para las dos rutas on-demand: la imagen social de
+	// cada partido y el redirect de las URLs viejas.
 	adapter: vercel({ includeFiles: wasmFiles }),
 	// Base absoluta para las URLs canónicas y de las tarjetas sociales (og/twitter).
 	site: SITE_URL,
