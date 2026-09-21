@@ -167,11 +167,20 @@ This project wouldn't be possible without:
 
 - **ScoreTDI 2025 Team** - Primary data source for match days and match information. 
 
+## License
+
+The **code** is licensed under the [GNU AGPL‑3.0](LICENSE).
+
+The **data** under `src/assets/` and the **logos** under `public/logos/` are not
+ours and are not covered by that license — see [NOTICE.md](NOTICE.md) for what
+that means if you reuse this repo.
+
 ## Disclaimer
 
 - Not affiliated with ABE or any university.
 - Data is provided "as is" and may be incomplete or outdated.
 - Respect third‑party API terms and attribution when applicable.
+- Every request the pipeline makes carries a `User-Agent` identifying the project, its repo, and a contact address, so the API owner always knows who we are.
 
 > [!IMPORTANT]
-> If you are the owner of any API and disagree with this project or its usage, please contact us and we will address it promptly.
+> If you own the upstream API, a logo, or a mark used here and you want it removed (or you want us to stop fetching from your server) email <amunozbaez669@gmail.com> or open an [issue](https://github.com/Jared-MB/AreWePlaying/issues).

@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 
-import { ABE_URL, REPO_URL } from "@/constants/site";
+import { CONTACT_EMAIL, ISSUES_URL, REPO_URL } from "@/constants/site";
 import { getTournaments } from "@/utils/get-tournaments";
 import { getTournamentSlug } from "@/utils/tournament-slug";
 
@@ -134,10 +134,32 @@ const description =
           Ver el proyecto en GitHub
         </a>
       </p>
-      <p class="text-pretty text-sm text-muted-foreground">
-        Si formas parte de la liga, de alguna universidad o de la fuente de
-        datos que usamos, y algo de esto no te parece, escríbenos por ahí y lo
-        atendemos.
+    </section>
+
+    <section class="flex flex-col gap-3">
+      <h2 class="scroll-mt-24 text-2xl font-bold uppercase text-balance">
+        Si quieres que quitemos algo
+      </h2>
+      <p class="text-pretty">
+        Si eres de la liga ABE, de alguna universidad o de la fuente de datos
+        que usamos, y quieres que quitemos algo de aquí (un logo, los datos de
+        un torneo, lo que sea) o que <strong
+          >dejemos de consultar tu servidor</strong
+        >, por favor, contactanos.
+      </p>
+      <p class="text-pretty">
+        <a
+          class="text-primary hover:underline"
+          href={`mailto:${CONTACT_EMAIL}`}
+          translate="no">{CONTACT_EMAIL}</a
+        >
+        <span class="text-muted-foreground"> · </span>
+        <a
+          class="text-primary hover:underline"
+          href={ISSUES_URL}
+          target="_blank"
+          rel="noopener noreferrer">Abrir un issue en GitHub</a
+        >
       </p>
     </section>
 

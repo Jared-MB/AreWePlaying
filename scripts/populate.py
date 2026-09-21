@@ -27,6 +27,16 @@ args = parser.parse_args()
 
 API = "https://scoretdi2025-eta.vercel.app/api/"
 
+# El API es el servidor de alguien más, así que nos identificamos en cada
+# petición: si su dueño ve este tráfico y quiere que paremos, tiene a quién
+# escribirle en lugar de bloquear a ciegas un cliente anónimo.
+HEADERS = {
+    "User-Agent": (
+        "AreWePlaying/1.0 (+https://areweplaying.com; "
+        "https://github.com/Jared-MB/AreWePlaying; amunozbaez669@gmail.com)"
+    )
+}
+
 LOGOS_FOLDER = Path("./public/logos")
 LOGO_MAX_SIZE = 512
 LOGO_QUALITY = 60
@@ -197,7 +207,9 @@ def get_tournament_data(tournament_id: str):
     teams_path = "./src/assets/" + tournament_id + "/teams.json"
 
     def get_match_days():
-        response = requests.get(API + "jornadas?torneoID=" + tournament_id)
+        response = requests.get(
+            API + "jornadas?torneoID=" + tournament_id, headers=HEADERS
+        )
 
         if response.status_code != 200:
             print("Error getting match days")
@@ -229,7 +241,9 @@ def get_tournament_data(tournament_id: str):
         ]
 
     def get_match_day(match_day):
-        response = requests.get(API + "partidos?jornadaID=" + match_day["id"])
+        response = requests.get(
+            API + "partidos?jornadaID=" + match_day["id"], headers=HEADERS
+        )
 
         if response.status_code != 200:
             print("Error getting match day: ", match_day["id"])
@@ -422,7 +436,7 @@ def get_tournament_data(tournament_id: str):
         return teams_position
 
     async def get_teams_data(cached_teams: list[Team] | None) -> None:
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(headers=HEADERS) as session:
             teams = cached_teams if cached_teams else await fetch_teams(session)
             await fetch_teams_table(session, teams)
 

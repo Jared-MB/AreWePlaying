@@ -2,6 +2,7 @@
 	"name": "are-we-playing-v2",
 	"version": "2.0.1",
 	"private": true,
+	"license": "AGPL-3.0-only",
 	"scripts": {
 		"dev": "astro dev",
 		"build": "astro build",
