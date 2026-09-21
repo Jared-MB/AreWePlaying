@@ -68,28 +68,38 @@ const tournaments = getTournaments();
             </div>
           </TodayMatches>
         </ScrollToFavoriteMatch>
-        <section
-          id="top-performers"
-          aria-labelledby="top-performers-heading"
-          class="min-w-0"
-        >
-          <h2
-            id="top-performers-heading"
-            class="mb-6 py-4 font-mono text-3xl md:text-4xl font-bold uppercase tracking-tight scroll-mt-8"
+        <div class="space-y-6">
+          <section
+            id="top-performers"
+            aria-labelledby="top-performers-heading"
+            class="min-w-0"
           >
-            Mejores equipos
-          </h2>
-          <TopPerformers server:defer>
-            <div slot="fallback" class="space-y-8" aria-busy="true">
-              <span class="sr-only">Cargando mejores equipos…</span>
-              {
-                Array.from({ length: 3 }, () => (
-                  <div class="h-40 animate-pulse rounded-md bg-muted motion-reduce:animate-none" />
-                ))
-              }
-            </div>
-          </TopPerformers>
-        </section>
+            <h2
+              id="top-performers-heading"
+              class="mb-6 py-4 font-mono text-3xl md:text-4xl font-bold uppercase tracking-tight scroll-mt-8"
+            >
+              Mejores equipos
+            </h2>
+            <TopPerformers server:defer>
+              <div slot="fallback" class="space-y-8" aria-busy="true">
+                <span class="sr-only">Cargando mejores equipos…</span>
+                {
+                  Array.from({ length: 3 }, () => (
+                    <div class="h-40 animate-pulse rounded-md bg-muted motion-reduce:animate-none" />
+                  ))
+                }
+              </div>
+            </TopPerformers>
+          </section>
+          <div class="flex justify-end">
+            <a
+              href="https://2025-2026.areweplaying.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              class="text-sm hover:underline">Ver temporada anterior</a
+            >
+          </div>
+        </div>
       </div>
     </main>
   </div>
