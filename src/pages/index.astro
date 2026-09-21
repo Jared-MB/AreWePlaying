@@ -79,16 +79,7 @@ const tournaments = getTournaments();
           >
             Mejores equipos
           </h2>
-          <TopPerformers server:defer>
-            <div slot="fallback" class="space-y-8" aria-busy="true">
-              <span class="sr-only">Cargando mejores equipos…</span>
-              {
-                Array.from({ length: 3 }, () => (
-                  <div class="h-40 animate-pulse rounded-md bg-muted motion-reduce:animate-none" />
-                ))
-              }
-            </div>
-          </TopPerformers>
+          <TopPerformers />
         </section>
       </div>
     </main>
