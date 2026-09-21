@@ -26,6 +26,8 @@
 		"preact": "^10.29.8",
 		"react": "npm:@preact/compat",
 		"react-dom": "npm:@preact/compat",
+		"satori": "^0.33.4",
+		"sharp": "^0.35.4",
 		"sonner": "2.0.8"
 	},
 	"devDependencies": {
