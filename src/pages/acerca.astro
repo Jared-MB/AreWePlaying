@@ -1,0 +1,166 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+import { ABE_URL, REPO_URL } from "@/constants/site";
+import { getTournaments } from "@/utils/get-tournaments";
+import { getTournamentSlug } from "@/utils/tournament-slug";
+
+// Página en lenguaje llano: la versión del README para quien llega desde el
+// aviso del footer y sólo quiere saber de qué va el sitio y si puede confiar
+// en los datos.
+const tournaments = getTournaments();
+
+const title = "Acerca del proyecto | Are We Playing?";
+const description =
+  "Qué es Are We Playing?, de dónde salen los datos de la liga ABE, cada cuándo se actualizan y por qué este sitio no es oficial.";
+---
+
+<Layout title={title} description={description}>
+  <article class="flex max-w-5xl mx-auto flex-col gap-10 md:gap-12">
+    <header class="flex flex-col gap-6">
+      <h1
+        class="scroll-mt-24 text-4xl font-bold uppercase text-balance md:text-6xl"
+      >
+        Acerca del proyecto
+      </h1>
+      <p class="text-lg text-pretty md:text-xl">
+        <span transition:name="AreWePlaying" class="font-bold uppercase"
+          >Are We Playing?</span
+        > es una forma más rápida de ver cuándo juega tu equipo de la liga ABE y los
+        resultados de sus partidos.
+      </p>
+    </header>
+
+    <section class="flex flex-col gap-3">
+      <h2 class="scroll-mt-24 text-2xl font-bold uppercase text-balance">
+        Qué es esto
+      </h2>
+      <p class="text-pretty">
+        La información de los partidos de basketball universitario de la liga
+        ABE ya existe, pero encontrarla suele tomar varios clics, no está
+        optimizada para celulares y suele ser bastante caótica. Este sitio toma
+        esos mismos datos y los acomoda para que puedas responder en segundos
+        las preguntas de siempre: ¿a qué hora y dónde jugamos? y <strong
+          >¿ganamos?</strong
+        >
+      </p>
+      <p class="text-pretty">
+        Vas a encontrar el calendario por jornada, los partidos de hoy, la tabla
+        de posiciones y una página por equipo con sus próximos juegos y sus
+        resultados. También puedes marcar tus equipos como favoritos y <strong
+          >compartir los marcadores en tus redes sociales</strong
+        >.
+      </p>
+    </section>
+
+    <section class="flex flex-col gap-3">
+      <h2 class="scroll-mt-24 text-2xl font-bold uppercase text-balance">
+        De dónde salen los datos
+      </h2>
+      <p class="text-pretty">
+        No los capturamos nosotros: los tomamos de una fuente pública de
+        terceros que publica los resultados de la liga, y los guardamos tal cual
+        para mostrarlos aquí. Eso significa que <strong
+          >dependemos completamente de ellos</strong
+        >, cualquier error en lo datos también se refleján acá.
+      </p>
+    </section>
+
+    <section class="flex flex-col gap-3">
+      <h2 class="scroll-mt-24 text-2xl font-bold uppercase text-balance">
+        Cada cuándo se actualizan
+      </h2>
+      <p class="text-pretty">
+        Una vez al día, alrededor de la medianoche, hora de Ciudad de México.
+      </p>
+      <p class="text-pretty">
+        Lo decimos claro porque cambia cómo usar el sitio:{" "}
+        <strong class="font-bold">
+          los marcadores no se mueven en tiempo real
+        </strong>
+        . Si un partido se está jugando ahora, lo que ves aquí es información de anoche;
+        el resultado aparece hasta la siguiente actualización. Para seguir un partido
+        en vivo, recomendamos ver el sitio oficial.
+      </p>
+      <p class="text-pretty">
+        Esto no es un error, lo hacemos así a propósito. Consultamos esa fuente
+        una sola vez al día, en lugar de cada vez que alguien abre el sitio para
+        no hacer uso excesivo de un servidor que no es nuestro. Puedes saber más
+        sobre como hacemos esto <a
+          class="text-primary hover:underline"
+          href="https://github.com/Jared-MB/AreWePlaying#going-easy-on-the-api"
+          target="_blank"
+          rel="noopener noreferrer">aquí</a
+        >.
+      </p>
+    </section>
+
+    <section class="flex flex-col gap-3">
+      <h2 class="scroll-mt-24 text-2xl font-bold uppercase text-balance">
+        Qué no es este sitio
+      </h2>
+      <p class="text-pretty">
+        No es oficial. <strong
+          >No tenemos ninguna relación con la liga ABE ni con ninguna
+          universidad</strong
+        >, y nadie nos pidió hacerlo ni nos revisa lo que publicamos. Es un
+        proyecto independiente, hecho por afición.
+      </p>
+      <p class="text-pretty">
+        Tampoco es un negocio: no hay anuncios, no se cobra nada y <strong
+          >no se vende ni guarda información de nadie</strong
+        >. No hace falta crear una cuenta ni dar tu correo, porque no es
+        necesario. Los partidos que marcas como favoritos se guardan únicamente
+        en tu navegador.
+      </p>
+    </section>
+
+    <section class="flex flex-col gap-3">
+      <h2 class="scroll-mt-24 text-2xl font-bold uppercase text-balance">
+        El código está abierto
+      </h2>
+      <p class="text-pretty">
+        Cualquiera puede revisar cómo funciona, qué datos se guardan y de dónde
+        se sacan. Si encuentras un error o quieres proponer algo, ese es el
+        lugar.
+      </p>
+      <p class="text-pretty">
+        <a
+          class="text-primary hover:underline"
+          href={REPO_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver el proyecto en GitHub
+        </a>
+      </p>
+      <p class="text-pretty text-sm text-muted-foreground">
+        Si formas parte de la liga, de alguna universidad o de la fuente de
+        datos que usamos, y algo de esto no te parece, escríbenos por ahí y lo
+        atendemos.
+      </p>
+    </section>
+
+    <section class="flex flex-col gap-4 border-t border-line/70 pt-8">
+      <h2 class="scroll-mt-24 text-2xl font-bold uppercase text-balance">
+        Ver los partidos
+      </h2>
+      <!-- biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista -->
+      <ul role="list" class="flex flex-wrap items-center gap-3">
+        {
+          tournaments.map((t) => (
+            <li>
+              <a
+                href={`/${getTournamentSlug(t)}`}
+                class="block rounded-md bg-surface px-4 py-2 shadow-xs transition-transform duration-180 hover:bg-surface-hover/70 focus-visible:scale-95"
+              >
+                División {t.division} {t.category}{" "}
+                {t.conference ? `· ${t.conference}` : null}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </article>
+</Layout>

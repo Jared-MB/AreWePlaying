@@ -1,25 +1,40 @@
 ---
 import Moon from "@lucide/astro/icons/moon";
 import Sun from "@lucide/astro/icons/sun";
+
+import { ABE_URL, REPO_URL } from "@/constants/site";
 ---
 
 <footer
   class="border-t border-line/70 bg-background py-4 px-6 flex w-full items-center justify-between"
 >
-  <p class="text-muted-foreground text-xs text-balance max-w-[75dvw]">
-    Los datos pueden estar desactualizados o incompletos. Para obtener
-    información más precisa, visite el sitio oficial de la{" "}
-    <a
-      class="text-primary hover:underline"
-      href="https://www.abemexico.org/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Ver sitio oficial de la Liga ABE"
-    >
-      Liga ABE
-    </a>
-    .
-  </p>
+  <div class="flex flex-col gap-1 max-w-[75dvw]">
+    <p class="text-muted-foreground text-xs text-balance">
+      Los datos pueden estar desactualizados o incompletos. Para obtener
+      información más precisa, visite el sitio oficial de la{" "}
+      <a
+        class="text-primary hover:underline"
+        href={ABE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ver sitio oficial de la Liga ABE"
+      >
+        Liga ABE
+      </a>
+      .
+    </p>
+    <p class="text-muted-foreground text-xs text-balance">
+      Este sitio no es oficial ni está afiliado a la Liga ABE.{" "}
+      <a
+        class="text-primary hover:underline"
+        href="/acerca"
+        aria-label="Conocer más sobre el proyecto Are We Playing?"
+      >
+        Conoce el proyecto
+      </a>
+      .
+    </p>
+  </div>
   <div class="flex items-center gap-4">
     <button
       type="button"
@@ -36,7 +51,7 @@ import Sun from "@lucide/astro/icons/sun";
       </span>
     </button>
     <a
-      href="https://github.com/Jared-MB/AreWePlaying"
+      href={REPO_URL}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Ver código fuente en GitHub"

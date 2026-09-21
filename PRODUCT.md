@@ -24,7 +24,7 @@ Same underlying data as the official ABE site and other score sources, but a muc
 - The snapshots are refreshed once per build and once nightly by a GitHub Action, which commits only when the data actually changed and thereby triggers a redeploy.
 - Built with Astro and deployed on Vercel: pages are prerendered, with server islands (today's matches, top performers), the per-match social cards, and legacy-URL redirects served on demand.
 - Each deployment serves a single season, selected with the `SEASON` environment variable; past seasons live on their own subdomain.
-- Core browsing flows: tournament picker (`/`), match days by week (`/[tournament]`, `/[tournament]/[week]`), standings and team detail with upcoming/past matches (`/[tournament]/teams`, `/[tournament]/teams/[team]`), and match detail (`/[tournament]/match/[match]`) with a countdown and a shareable 9:16 story image.
+- Core browsing flows: tournament picker (`/`), the project explainer (`/acerca`), match days by week (`/[tournament]`, `/[tournament]/[week]`), standings and team detail with upcoming/past matches (`/[tournament]/teams`, `/[tournament]/teams/[team]`), and match detail (`/[tournament]/match/[match]`) with a countdown and a shareable 9:16 story image.
 - Favorites are per-visitor and stored in the browser (`localStorage`); there are no accounts and no server-side user state.
 - Spanish-language UI (`lang="es"`); content, copy, and code comments are in Spanish.
 
@@ -38,7 +38,8 @@ Same underlying data as the official ABE site and other score sources, but a muc
 ## Brand Commitments
 
 - Name: "Are We Playing?" (ABE League Match Days).
-- The unofficial/data-freshness disclaimer must stay prominent in the UI (currently in the site footer, linking to the official ABE site) — future work must keep communicating that data is third-party, may be stale/incomplete, and that the project isn't affiliated with ABE.
+- The unofficial/data-freshness disclaimer must stay prominent in the UI (currently in the site footer, linking to the official ABE site and to `/acerca`) — future work must keep communicating that data is third-party, may be stale/incomplete, and that the project isn't affiliated with ABE.
+- `/acerca` is the plain-language explanation of the project for non-technical visitors: what the site is, where the data comes from, how often it updates, and what the project is not. It must stay readable by someone who doesn't know what an API is, and must keep stating that scores are not live.
 - GitHub repo linked in the footer (open-source transparency).
 - Shared images (social cards, story images) carry the site's own domain and must not be styled to look like official ABE or university material.
 
