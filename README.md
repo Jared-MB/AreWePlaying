@@ -138,6 +138,7 @@ Useful flags (see [Going Easy on the API](#going-easy-on-the-api) for what they 
 - `-s` / `--refresh-static` → re‑download the data that rarely changes (weeks and teams).
 - `--allow-shrink` → save the data even if the API returns fewer weeks, matches, or teams than are already stored. Without it the script stops, since a sudden drop usually means a broken response.
 
+**Running a fork?** Set `POPULATE_USER_AGENT` so the API owner sees your project and contact details instead of ours, e.g. `POPULATE_USER_AGENT="MyFork/1.0 (+https://example.com; you@example.com)" pnpm populate`. In GitHub Actions, add it as a repository variable and pass it to the step with `env: POPULATE_USER_AGENT: ${{ vars.POPULATE_USER_AGENT }}`.
 
 This script is written in Python, so it requires Python `>= 3.13` and `uv`. You don't need to create a virtualenv or install anything by hand: `uv` reads `pyproject.toml` and resolves the Python version and dependencies on the first run.
 

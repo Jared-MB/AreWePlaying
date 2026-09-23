@@ -3,6 +3,7 @@ import asyncio
 import base64
 import binascii
 import json
+import os
 import re
 import sys
 from datetime import UTC, datetime, timedelta
@@ -36,11 +37,16 @@ API = "https://scoretdi2025-eta.vercel.app/api/"
 # El API es el servidor de alguien más, así que nos identificamos en cada
 # petición: si su dueño ve este tráfico y quiere que paremos, tiene a quién
 # escribirle en lugar de bloquear a ciegas un cliente anónimo.
+DEFAULT_USER_AGENT = (
+    "AreWePlaying/1.0 (+https://areweplaying.com; "
+    "https://github.com/Jared-MB/AreWePlaying; amunozbaez669@gmail.com)"
+)
+
+# Un fork debe identificarse con sus propios datos: si no, su tráfico llega al
+# dueño del API a nombre de este proyecto.
 HEADERS = {
-    "User-Agent": (
-        "AreWePlaying/1.0 (+https://areweplaying.com; "
-        "https://github.com/Jared-MB/AreWePlaying; amunozbaez669@gmail.com)"
-    )
+    "User-Agent": os.environ.get("POPULATE_USER_AGENT", "").strip()
+    or DEFAULT_USER_AGENT
 }
 
 # Sin timeout, un API colgado deja el workflow corriendo hasta que GitHub lo mata.
