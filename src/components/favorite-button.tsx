@@ -48,9 +48,12 @@ export default function FavoriteButton({ id }: { id: string }) {
 			type="button"
 			data-active={isFavorite}
 			title={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
-			class="group cursor-pointer inline-block bg-surface hover:bg-surface-hover rounded-md p-2 duration-180 text-sm font-bold uppercase tracking-wider shadow-xs transition-transform focus:scale-95"
+			className="touch-hitbox group cursor-pointer flex justify-center gap-2 bg-surface hover:bg-surface-hover rounded-md p-2 duration-180 text-sm tracking-wider shadow-xs transition-transform focus:scale-95"
 		>
-			<Star class="size-5 transition-colors duration-75 fill-background group-data-[active=true]:fill-favorite" />
+			<Star className="size-5 transition-colors duration-75 fill-background group-data-[active=true]:fill-favorite text-favorite" />
+			<span className="hidden lg:inline-flex">
+				{isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
+			</span>
 		</button>
 	);
 }
