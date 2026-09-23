@@ -42,7 +42,7 @@ function luminance([r, g, b]: Rgb): number {
 	return 0.2126 * rl + 0.7152 * gl + 0.0722 * bl;
 }
 
-export function contrastRatio(a: Rgb, b: Rgb): number {
+function contrastRatio(a: Rgb, b: Rgb): number {
 	const [light, dark] = [luminance(a), luminance(b)].sort((x, y) => y - x);
 
 	return (light + 0.05) / (dark + 0.05);

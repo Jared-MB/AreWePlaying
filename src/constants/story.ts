@@ -9,7 +9,7 @@ import type { MatchStatus } from "@/utils/get-match-status";
 
 export type StoryTheme = "dark" | "light";
 
-export const THEMES = {
+const THEMES = {
 	dark: {
 		bg: "#09090B",
 		surface: "#18181B",

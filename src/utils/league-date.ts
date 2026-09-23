@@ -1,7 +1,7 @@
 // Las fechas de los partidos vienen como "dd/MM/yyyy HH:mm" en hora local de la
 // liga, sin zona horaria. Aquí viven las conversiones para poder compararlas
 // contra "hoy" en el servidor y contra el reloj del visitante en el cliente.
-export const LEAGUE_TIME_ZONE = "America/Mexico_City";
+const LEAGUE_TIME_ZONE = "America/Mexico_City";
 
 // Crear un Intl.DateTimeFormat no es barato y estas fechas se recorren por
 // miles al armar la próxima jornada, así que se reutilizan.

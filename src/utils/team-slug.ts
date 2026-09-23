@@ -27,14 +27,3 @@ export async function getTeamBySlug({
 
 	return (await teamsBySlug(tournamentId)).get(slug);
 }
-
-/** Slug → id, para las rutas que siguen trabajando con el UUID interno. */
-export async function getTeamIdBySlug({
-	tournamentId,
-	slug,
-}: {
-	tournamentId: string;
-	slug?: string;
-}) {
-	return (await getTeamBySlug({ tournamentId, slug }))?.id;
-}
