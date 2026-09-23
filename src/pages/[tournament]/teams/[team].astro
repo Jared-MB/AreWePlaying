@@ -10,6 +10,7 @@ import { getTeamBySlug, getTeamSlug } from "@/utils/team-slug";
 import PastMatches from "@/components/PastMatches.astro";
 import UpcomingMatches from "@/components/UpcomingMatches.astro";
 import FavoriteButton from "@/components/favorite-button.tsx";
+import ShareButton from "@/components/share-button.tsx";
 
 export async function getStaticPaths() {
   const params = getTournaments().map(async (t) => {
@@ -62,7 +63,14 @@ if (!team) {
         >
           ← REGRESAR
         </a>
-        <FavoriteButton client:load id={team.id} />
+        <div class="flex gap-4 lg:gap-2">
+          <FavoriteButton client:load id={team.id} />
+          <ShareButton
+            client:load
+            title={`${team.shortName} | Are We Playing?`}
+            text={`Mira el calendario de partidos de ${team.shortName}`}
+          />
+        </div>
       </div>
 
       <header class="mb-8 border-b border-b-line/70 pb-6">
