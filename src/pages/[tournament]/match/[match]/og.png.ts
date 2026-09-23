@@ -31,6 +31,20 @@ const FONTS = [
 const palette = buildPalette("dark", DEFAULT_ACCENT);
 
 export const GET: APIRoute = async ({ params, request }) => {
+	// El CDN cachea por URL completa: con `?x=1`, `?x=2`… cualquiera forzaría un
+	// render nuevo (satori + sharp) en cada petición. La tarjeta no lee la query,
+	// así que se manda a la URL limpia, que sí queda cacheada.
+	const url = new URL(request.url);
+	if (url.search) {
+		return new Response(null, {
+			status: 301,
+			headers: {
+				Location: url.pathname,
+				"Cache-Control": "public, max-age=0, s-maxage=31536000, immutable",
+			},
+		});
+	}
+
 	const tournament = getTournamentBySlug(params.tournament);
 	if (!tournament) return new Response("Torneo no encontrado", { status: 404 });
 
