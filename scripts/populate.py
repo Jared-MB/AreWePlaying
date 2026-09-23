@@ -3,6 +3,7 @@ import asyncio
 import base64
 import binascii
 import json
+import re
 import sys
 from datetime import UTC, datetime, timedelta
 from io import BytesIO
@@ -23,6 +24,11 @@ parser.add_argument(
     action="store_true",
     help="Vuelve a descargar los datos estáticos (jornadas y equipos)",
 )
+parser.add_argument(
+    "--allow-shrink",
+    action="store_true",
+    help="Guarda los datos aunque el API regrese menos partidos o equipos que antes",
+)
 args = parser.parse_args()
 
 API = "https://scoretdi2025-eta.vercel.app/api/"
@@ -37,6 +43,16 @@ HEADERS = {
     )
 }
 
+# Sin timeout, un API colgado deja el workflow corriendo hasta que GitHub lo mata.
+REQUEST_TIMEOUT = 30
+AIOHTTP_TIMEOUT = aiohttp.ClientTimeout(total=60)
+
+# Los IDs del API terminan en rutas de archivo: sólo se aceptan UUIDs para que
+# uno como "../../algo" no escriba fuera de la carpeta.
+UUID_RE = re.compile(
+    r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$", re.IGNORECASE
+)
+
 LOGOS_FOLDER = Path("./public/logos")
 LOGO_MAX_SIZE = 512
 LOGO_QUALITY = 60
@@ -44,6 +60,58 @@ LOGO_QUALITY = 60
 # Margen tras la última jornada antes de dar el torneo por terminado. El API
 # suele agregar las jornadas de playoffs cuando la temporada regular ya acabó.
 FINISHED_GRACE = timedelta(days=14)
+
+
+def is_uuid(value) -> bool:
+    return isinstance(value, str) and UUID_RE.match(value) is not None
+
+
+def fetch_api_data(endpoint: str, params: dict[str, str]):
+    """GET al API y decodifica su `data`, que viene como JSON dentro de un string.
+
+    Cualquier error (red, status, JSON) revienta el script a propósito: es mejor
+    que el workflow falle y no haga commit a que publique datos a medias.
+    """
+
+    response = requests.get(
+        API + endpoint, params=params, headers=HEADERS, timeout=REQUEST_TIMEOUT
+    )
+    response.raise_for_status()
+
+    return json.loads(response.json()["data"])
+
+
+async def fetch_api_data_async(
+    session: aiohttp.ClientSession, endpoint: str, params: dict[str, str]
+):
+    async with session.get(API + endpoint, params=params) as response:
+        response.raise_for_status()
+        body = await response.json()
+
+    return json.loads(body["data"])
+
+
+def guard_shrink(path: str, label: str, new_count: int, count_cached) -> None:
+    """Aborta si el API regresa menos elementos de los que ya había guardados.
+
+    Los partidos y la tabla sólo crecen durante un torneo; si de pronto bajan, lo
+    más probable es una respuesta rota del API, y el workflow la publicaría.
+    """
+
+    if args.allow_shrink:
+        return
+
+    cached = load_json_file(path)
+    if not cached:
+        return
+
+    old_count = count_cached(cached)
+    if new_count < old_count:
+        print(
+            f"El API regresó {new_count} {label} y había {old_count} guardados en "
+            f"{path}. No se sobrescribe; usa --allow-shrink si es intencional."
+        )
+        sys.exit(1)
 
 
 def get_tournaments():
@@ -146,6 +214,10 @@ def save_team_logo(tournament_id: str, team_id: str, raw: str | None) -> str | N
     if not raw:
         return None
 
+    if not is_uuid(tournament_id) or not is_uuid(team_id):
+        print(f"Skipping logo with unexpected id: {tournament_id!r}/{team_id!r}")
+        return None
+
     try:
         avif = encode_logo_as_avif(raw)
     except (OSError, ValueError, binascii.Error) as error:
@@ -201,23 +273,17 @@ def is_tournament_finished(match_days, matches) -> bool:
 
 
 def get_tournament_data(tournament_id: str):
+    if not is_uuid(tournament_id):
+        print(f"ID de torneo inválido en tournaments.json: {tournament_id!r}")
+        sys.exit(1)
+
     ensure_folder("./src/assets/" + tournament_id)
 
     weeks_path = "./src/assets/" + tournament_id + "/weeks.json"
     teams_path = "./src/assets/" + tournament_id + "/teams.json"
 
     def get_match_days():
-        response = requests.get(
-            API + "jornadas?torneoID=" + tournament_id, headers=HEADERS
-        )
-
-        if response.status_code != 200:
-            print("Error getting match days")
-            sys.exit(1)
-
-        data = response.json()["data"]
-
-        data_json = json.loads(data)
+        data_json = fetch_api_data("jornadas", {"torneoID": tournament_id})
 
         match_days = [
             {
@@ -241,16 +307,7 @@ def get_tournament_data(tournament_id: str):
         ]
 
     def get_match_day(match_day):
-        response = requests.get(
-            API + "partidos?jornadaID=" + match_day["id"], headers=HEADERS
-        )
-
-        if response.status_code != 200:
-            print("Error getting match day: ", match_day["id"])
-
-        data = response.json()["data"]
-
-        data_json = json.loads(data)
+        data_json = fetch_api_data("partidos", {"jornadaID": match_day["id"]})
 
         week_matches = [
             {
@@ -368,13 +425,14 @@ def get_tournament_data(tournament_id: str):
     async def fetch_teams(session: aiohttp.ClientSession) -> list[Team]:
         """Fetch teams, persist to disk, and return the data."""
 
-        async with session.get(API + "equipos?torneoID=" + tournament_id) as response:
-            teams_response = await response.json()
-            teams_data: list[ApiTeam] = json.loads(teams_response["data"])
+        teams_data: list[ApiTeam] = await fetch_api_data_async(
+            session, "equipos", {"torneoID": tournament_id}
+        )
 
         mapped_data = await asyncio.gather(*(process_team(team) for team in teams_data))
         mapped_data = list(mapped_data)
 
+        guard_shrink(teams_path, "equipos", len(mapped_data), len)
         save_json_as_file(teams_path, mapped_data)
 
         return mapped_data
@@ -382,11 +440,9 @@ def get_tournament_data(tournament_id: str):
     async def fetch_teams_table(
         session: aiohttp.ClientSession, teams: list[Team]
     ) -> list[TeamTableEntry]:
-        async with session.get(
-            API + "tablaResumen?torneoID=" + tournament_id
-        ) as response:
-            data = await response.json()
-            teams_position_raw: list[TeamPositionRaw] = json.loads(data["data"])
+        teams_position_raw: list[TeamPositionRaw] = await fetch_api_data_async(
+            session, "tablaResumen", {"torneoID": tournament_id}
+        )
 
         teams_position: list[TeamTableEntry] = []
         for team_position in teams_position_raw:
@@ -429,14 +485,16 @@ def get_tournament_data(tournament_id: str):
                 }
             )
 
-        save_json_as_file(
-            "./src/assets/" + tournament_id + "/teams-table.json", teams_position
-        )
+        table_path = "./src/assets/" + tournament_id + "/teams-table.json"
+        guard_shrink(table_path, "equipos en la tabla", len(teams_position), len)
+        save_json_as_file(table_path, teams_position)
 
         return teams_position
 
     async def get_teams_data(cached_teams: list[Team] | None) -> None:
-        async with aiohttp.ClientSession(headers=HEADERS) as session:
+        async with aiohttp.ClientSession(
+            headers=HEADERS, timeout=AIOHTTP_TIMEOUT
+        ) as session:
             teams = cached_teams if cached_teams else await fetch_teams(session)
             await fetch_teams_table(session, teams)
 
@@ -449,12 +507,19 @@ def get_tournament_data(tournament_id: str):
 
     if match_days is None:
         match_days = get_match_days()
+        guard_shrink(weeks_path, "jornadas", len(match_days), len)
         save_json_as_file(weeks_path, match_days)
     else:
         print("Reusing cached match days for " + tournament_id)
 
     matches = asyncio.run(get_matches(match_days))
-    save_json_as_file("./src/assets/" + tournament_id + "/matches.json", matches)
+
+    def count_matches(days) -> int:
+        return sum(len(day["data"]) for day in days)
+
+    matches_path = "./src/assets/" + tournament_id + "/matches.json"
+    guard_shrink(matches_path, "partidos", count_matches(matches), count_matches)
+    save_json_as_file(matches_path, matches)
 
     # Los equipos (y sus logos) no cambian durante el torneo.
     cached_teams = None if args.refresh_static else load_json_file(teams_path)
