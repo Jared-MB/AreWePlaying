@@ -1,3 +1,4 @@
+import { safeHttpUrl } from "./safe-url";
 import {
 	formatLeagueDateTime,
 	getLeagueToday,
@@ -30,7 +31,8 @@ export interface NextTeamMatch {
 	opponent: string;
 	isLocal: boolean;
 	location: string;
-	locationUrl: string;
+	/** Sólo http(s); null cuando la sede no tiene link. */
+	locationUrl: string | null;
 	week?: string;
 }
 
@@ -163,7 +165,7 @@ export async function getNextMatchByTeam() {
 							opponent,
 							isLocal,
 							location: match.location,
-							locationUrl: match.locationUrl,
+							locationUrl: safeHttpUrl(match.locationUrl),
 							week,
 						};
 					}

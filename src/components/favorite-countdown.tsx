@@ -1,4 +1,4 @@
-import { LOCAL_STORAGE_FAVORITES_KEY } from "@/constants/local-storage";
+import { readFavorites } from "@/utils/favorites";
 import type { NextTeamMatch } from "@/utils/get-next-matches";
 import { MapPin, Star } from "lucide-preact";
 import { useEffect, useState } from "preact/hooks";
@@ -51,16 +51,7 @@ export default function FavoriteCountdown({
 			window.dispatchEvent(new CustomEvent("favorite-countdown-settled"));
 		};
 
-		let favorites: string[] = [];
-
-		try {
-			favorites = JSON.parse(
-				window.localStorage.getItem(LOCAL_STORAGE_FAVORITES_KEY) || "[]",
-			);
-		} catch {
-			settle();
-			return;
-		}
+		const favorites = readFavorites();
 
 		const seen = new Set<string>();
 		const next = favorites
@@ -168,7 +159,7 @@ export default function FavoriteCountdown({
 								</time>
 							</div>
 
-							{match.location && match.location !== "-" ? (
+							{match.location && match.location !== "-" && match.locationUrl ? (
 								<a
 									href={match.locationUrl}
 									target="_blank"
