@@ -3,6 +3,7 @@ import asyncio
 import base64
 import binascii
 import json
+import re
 import sys
 from datetime import UTC, datetime, timedelta
 from io import BytesIO
@@ -27,6 +28,12 @@ args = parser.parse_args()
 
 API = "https://scoretdi2025-eta.vercel.app/api/"
 
+# Los IDs del API terminan en rutas de archivo: sólo se aceptan UUIDs para que
+# uno como "../../algo" no escriba fuera de la carpeta.
+UUID_RE = re.compile(
+    r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$", re.IGNORECASE
+)
+
 LOGOS_FOLDER = Path("./public/logos")
 LOGO_MAX_SIZE = 512
 LOGO_QUALITY = 60
@@ -34,6 +41,10 @@ LOGO_QUALITY = 60
 # Margen tras la última jornada antes de dar el torneo por terminado. El API
 # suele agregar las jornadas de playoffs cuando la temporada regular ya acabó.
 FINISHED_GRACE = timedelta(days=14)
+
+
+def is_uuid(value) -> bool:
+    return isinstance(value, str) and UUID_RE.match(value) is not None
 
 
 def get_tournaments():
@@ -136,6 +147,10 @@ def save_team_logo(tournament_id: str, team_id: str, raw: str | None) -> str | N
     if not raw:
         return None
 
+    if not is_uuid(tournament_id) or not is_uuid(team_id):
+        print(f"Skipping logo with unexpected id: {tournament_id!r}/{team_id!r}")
+        return None
+
     try:
         avif = encode_logo_as_avif(raw)
     except (OSError, ValueError, binascii.Error) as error:
@@ -191,6 +206,10 @@ def is_tournament_finished(match_days, matches) -> bool:
 
 
 def get_tournament_data(tournament_id: str):
+    if not is_uuid(tournament_id):
+        print(f"ID de torneo inválido en tournaments.json: {tournament_id!r}")
+        sys.exit(1)
+
     ensure_folder("./src/assets/" + tournament_id)
 
     weeks_path = "./src/assets/" + tournament_id + "/weeks.json"
