@@ -6,24 +6,32 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch: {}   # te permite correrlo manualmente desde la pestaña "Actions" de GitHub
 
+# Las acciones van fijadas por SHA y no por tag: un tag se puede mover, y este
+# job tiene permiso de escribir en main.
 permissions:
   contents: write         # necesario para poder hacer push desde el workflow
+
+# Si una corrida se traslapa con otra (p. ej. una manual), la segunda espera en
+# vez de empujar encima.
+concurrency:
+  group: update-data
+  cancel-in-progress: false
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout del repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       - name: Instalar uv
-        uses: astral-sh/setup-uv@v3
+        uses: astral-sh/setup-uv@caf0cab7a618c569241d31dcd442f54681755d39 # v3.2.4
 
       - name: Instalar pnpm
-        uses: pnpm/action-setup@v4   # toma la versión de "packageManager" en package.json
+        uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4.3.0 (toma la versión de "packageManager")
 
       - name: Instalar Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 24
           cache: pnpm
@@ -47,7 +55,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
+          # Sólo lo que genera populate.py: nada más entra al commit automático.
+          git add src/assets public/logos
           if git diff --cached --quiet; then
             echo "Sin cambios en los datos, no se hace commit."
           else
