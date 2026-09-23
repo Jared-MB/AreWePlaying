@@ -1,7 +1,7 @@
-import { LOCAL_STORAGE_FAVORITES_KEY } from "@/constants/local-storage";
 import confetti from "canvas-confetti";
 import type { ComponentChildren } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
+import { readFavorites } from "@/utils/favorites";
 
 export default function MatchCard({
 	localTeamId,
@@ -26,9 +26,7 @@ export default function MatchCard({
 			return;
 		}
 
-		const favoritesTeams = JSON.parse(
-			window.localStorage.getItem(LOCAL_STORAGE_FAVORITES_KEY) || "[]",
-		);
+		const favoritesTeams = readFavorites();
 
 		if (favoritesTeams.length === 0) {
 			return;

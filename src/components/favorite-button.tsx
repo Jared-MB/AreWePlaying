@@ -1,4 +1,4 @@
-import { LOCAL_STORAGE_FAVORITES_KEY } from "@/constants/local-storage";
+import { readFavorites, writeFavorites } from "@/utils/favorites";
 import { Star, StarOff } from "lucide-preact";
 import { useEffect, useState } from "preact/hooks";
 import { toast } from "sonner";
@@ -6,56 +6,40 @@ import { toast } from "sonner";
 export default function FavoriteButton({ id }: { id: string }) {
 	const [isFavorite, setIsFavorite] = useState(false);
 
-	const setFavorites = (favorites: string[]) => {
-		localStorage.setItem(
-			LOCAL_STORAGE_FAVORITES_KEY,
-			JSON.stringify(favorites),
+	const toggleFavorite = () => {
+		// Se relee el almacenamiento en vez de confiar en el estado: otra pestaña
+		// pudo haber cambiado la lista.
+		const favorites = readFavorites();
+		const next = !favorites.includes(id);
+
+		const saved = writeFavorites(
+			next ? [...favorites, id] : favorites.filter((f) => f !== id),
+		);
+
+		if (!saved) {
+			toast.error("No se pudo guardar el favorito en este navegador");
+			return;
+		}
+
+		setIsFavorite(next);
+		toast(
+			next ? (
+				<span>Se agregó a favoritos</span>
+			) : (
+				<span>Se quitó de favoritos</span>
+			),
+			{
+				icon: next ? (
+					<Star className="fill-favorite-strong size-4" />
+				) : (
+					<StarOff className="fill-favorite-strong size-4" />
+				),
+			},
 		);
 	};
 
-	const toggleFavorite = () => {
-		setIsFavorite((prev) => {
-			toast(
-				!prev ? (
-					<span>Se agregó a favoritos</span>
-				) : (
-					<span>Se quitó de favoritos</span>
-				),
-				{
-					icon: !prev ? (
-						<Star className="fill-favorite-strong size-4" />
-					) : (
-						<StarOff className="fill-favorite-strong size-4" />
-					),
-				},
-			);
-			return !prev;
-		});
-
-		const favorites = window.localStorage.getItem(LOCAL_STORAGE_FAVORITES_KEY);
-
-		if (!favorites) {
-			setFavorites([id]);
-			return;
-		}
-
-		const parsedFavorites = JSON.parse(favorites);
-
-		if (!parsedFavorites.includes(id)) {
-			parsedFavorites.push(id);
-			setFavorites(parsedFavorites);
-			return;
-		}
-
-		parsedFavorites.splice(parsedFavorites.indexOf(id), 1);
-		setFavorites(parsedFavorites);
-	};
-
 	useEffect(() => {
-		const favorites = window.localStorage.getItem(LOCAL_STORAGE_FAVORITES_KEY);
-		if (favorites) {
-			setIsFavorite(JSON.parse(favorites).includes(id));
-		}
+		setIsFavorite(readFavorites().includes(id));
 	}, []);
 
 	return (
