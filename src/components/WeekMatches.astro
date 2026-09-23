@@ -7,6 +7,7 @@ import type { Match } from "@/types/match";
 import type { Week } from "@/types/week";
 import { getMatchSlug } from "@/utils/match-slug";
 import { getTeamSlug } from "@/utils/team-slug";
+import { safeHttpUrl } from "@/utils/safe-url";
 
 interface Props {
   matches: Match[];
@@ -38,6 +39,7 @@ const score =
       {matches.map((game) => {
         const [day, time] = game.date.split(" ");
         const matchup = `${game.localTeam} vs ${game.visitingTeam}`;
+        const venueUrl = safeHttpUrl(game.locationUrl);
         const hasScore = game.started === 0 || game.live === 0;
         const status =
           game.live === 1
@@ -147,9 +149,9 @@ const score =
                   <div class="col-span-12 md:col-span-3">
                     <dt class={fieldLabel}>Lugar</dt>
                     <dd class="text-sm font-bold uppercase tracking-wide">
-                      {game.locationUrl && game.locationUrl !== "-" ? (
+                      {venueUrl ? (
                         <a
-                          href={game.locationUrl}
+                          href={venueUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           class="relative z-10 inline-block touch-hitbox hover:underline"

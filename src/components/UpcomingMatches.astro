@@ -3,6 +3,7 @@ import { getUpcomingMatches } from "@/utils/get-upcoming-matches";
 import MatchCard from "./match-card.tsx";
 import { getMatchSlug } from "@/utils/match-slug";
 import { getTeamSlug } from "@/utils/team-slug";
+import { safeHttpUrl } from "@/utils/safe-url";
 
 interface Props {
   teamId: string;
@@ -23,6 +24,7 @@ const matches = await getUpcomingMatches({ teamId, tournamentId });
       <div class="space-y-3">
         {matches.map((match) => {
           const isHome = match.localTeamId === teamId;
+          const venueUrl = safeHttpUrl(match.locationUrl);
 
           return (
             <MatchCard>
@@ -61,15 +63,23 @@ const matches = await getUpcomingMatches({ teamId, tournamentId });
                     {isHome ? match.visitingTeam : match.localTeam}
                   </a>
                 </div>
-                <a
-                  href={match.locationUrl}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  class="relative z-10 block w-fit touch-hitbox text-xs uppercase tracking-wider text-muted-foreground hover:underline"
-                >
-                  {match.location}
-                  <span class="sr-only"> (abre en una pestaña nueva)</span>
-                </a>
+                {venueUrl ? (
+                  <a
+                    href={venueUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="relative z-10 block w-fit touch-hitbox text-xs uppercase tracking-wider text-muted-foreground hover:underline"
+                  >
+                    {match.location}
+                    <span class="sr-only"> (abre en una pestaña nueva)</span>
+                  </a>
+                ) : (
+                  <p class="text-xs uppercase tracking-wider text-muted-foreground">
+                    {match.location && match.location !== "-"
+                      ? match.location
+                      : "Sede por definir"}
+                  </p>
+                )}
               </div>
             </MatchCard>
           );

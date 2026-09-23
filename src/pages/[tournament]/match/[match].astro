@@ -13,6 +13,7 @@ import {
   teamInitials,
 } from "@/utils/get-match-card";
 import { getTeamsTable } from "@/utils/get-teams-table";
+import { safeHttpUrl } from "@/utils/safe-url";
 import { getTournaments } from "@/utils/get-tournaments";
 import {
   getTournamentSlug,
@@ -119,7 +120,7 @@ const comparison = [
 ];
 
 const tournamentLabel = getTournamentLabel(tournament);
-const hasVenueLink = match.locationUrl && match.locationUrl !== "-";
+const venueUrl = safeHttpUrl(match.locationUrl);
 const venue = card.venue;
 
 const title = `${match.localTeam} vs ${match.visitingTeam}${hasScore ? ` ${match.localTeamPoints}-${match.visitingTeamPoints}` : ""} | Are We Playing?`;
@@ -261,9 +262,9 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
           Sede
         </p>
         {
-          hasVenueLink ? (
+          venueUrl ? (
             <a
-              href={match.locationUrl}
+              href={venueUrl}
               target="_blank"
               rel="noopener noreferrer"
               class="mt-1 block font-mono text-lg font-bold uppercase wrap-break-word hover:underline"
