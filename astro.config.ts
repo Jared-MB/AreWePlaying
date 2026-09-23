@@ -1,7 +1,7 @@
 import { createRequire } from "node:module";
 import path from "node:path";
 
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -34,6 +34,9 @@ export default defineConfig({
 	adapter: vercel({ includeFiles: wasmFiles }),
 	// Base absoluta para las URLs canónicas y de las tarjetas sociales (og/twitter).
 	site: SITE_URL,
+	// El sitio no usa <Image>, pero con el adaptador `/_image` queda expuesto como
+	// función: sin optimizador no procesa (ni decodifica) imágenes de nadie.
+	image: { service: passthroughImageService() },
 	vite: {
 		plugins: [tailwindcss()],
 	},
