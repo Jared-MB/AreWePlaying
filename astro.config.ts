@@ -39,6 +39,13 @@ export default defineConfig({
 	image: { service: passthroughImageService() },
 	vite: {
 		plugins: [tailwindcss()],
+		// Sólo afecta a `astro dev`. Estas dependencias se descubren tarde (import
+		// dinámico de la story, islas que sólo montan algunas páginas): Vite las
+		// re-optimiza a media sesión y responde 504 "Outdated Optimize Dep", así
+		// que la primera descarga de la story fallaba en dev y en los e2e.
+		optimizeDeps: {
+			include: ["html-to-image", "canvas-confetti"],
+		},
 	},
 	integrations: [preact({ compat: true })],
 });
