@@ -1,0 +1,16 @@
+[
+	{
+		"id": "AAAAAAAA-AAAA-4AAA-8AAA-000000000001",
+		"division": "I",
+		"category": "Varonil",
+		"season": "s",
+		"finished": false,
+		"updated_at": "2026-09-24T06:00:00+00:00"
+	},
+	{
+		"id": "BBBBBBBB-BBBB-4BBB-8BBB-000000000002",
+		"division": "I",
+		"category": "Varonil",
+		"season": "s"
+	}
+]

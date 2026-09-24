@@ -1,0 +1,60 @@
+[
+	{
+		"data": [
+			{
+				"matchId": "a1000000-0000-4000-8000-000000000001",
+				"matchNumber": 1,
+				"localTeam": "UP MÉXICO",
+				"localTeamId": "aaaaaaa1-0000-4000-8000-000000000001",
+				"visitingTeam": "UV",
+				"visitingTeamId": "aaaaaaa2-0000-4000-8000-000000000002",
+				"date": "18/09/2026 14:00",
+				"startTime": "18/09/2026 14:00",
+				"endTime": "18/09/2026 14:00",
+				"localTeamPoints": "76",
+				"visitingTeamPoints": "57",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 1",
+				"started": 0,
+				"location": "CENTRO DEPORTIVO COYOACÁN",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.36,-99.16",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(1)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(2)",
+				"visitingTeamWR": "0-1"
+			}
+		],
+		"id": "a0000000-0000-4000-8000-000000000001"
+	},
+	{
+		"data": [
+			{
+				"matchId": "a1000000-0000-4000-8000-000000000002",
+				"matchNumber": 2,
+				"localTeam": "UV",
+				"localTeamId": "aaaaaaa2-0000-4000-8000-000000000002",
+				"visitingTeam": "UP MÉXICO",
+				"visitingTeamId": "aaaaaaa1-0000-4000-8000-000000000001",
+				"date": "03/10/2026 13:00",
+				"startTime": "",
+				"endTime": "",
+				"localTeamPoints": "0",
+				"visitingTeamPoints": "0",
+				"period": "",
+				"name": "PARTIDO 2",
+				"started": 1,
+				"location": "CENTRO DEPORTIVO COYOACÁN",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.36,-99.16",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "",
+				"localTeamWR": "",
+				"visitingTeamPosition": "",
+				"visitingTeamWR": ""
+			}
+		],
+		"id": "a0000000-0000-4000-8000-000000000002"
+	}
+]

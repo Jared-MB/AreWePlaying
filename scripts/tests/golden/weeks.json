@@ -1,0 +1,16 @@
+[
+	{
+		"date": "14/09/2026",
+		"week": "SEMANA 1",
+		"type": "Temporada Regular",
+		"id": "a0000000-0000-4000-8000-000000000001",
+		"tournamentId": "aaaaaaaa-aaaa-4aaa-8aaa-000000000001"
+	},
+	{
+		"date": "28/09/2026",
+		"week": "SEMANA 2",
+		"type": "Temporada Regular",
+		"id": "a0000000-0000-4000-8000-000000000002",
+		"tournamentId": "aaaaaaaa-aaaa-4aaa-8aaa-000000000001"
+	}
+]
