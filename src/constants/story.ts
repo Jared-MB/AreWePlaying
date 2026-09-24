@@ -36,6 +36,7 @@ export const ACCENT_PRESETS = [
 	{ value: "#C8951B", name: "Oro" },
 	{ value: "#15803D", name: "Verde" },
 	{ value: "#0E7490", name: "Turquesa" },
+	{ value: "#45B1E1", name: "Picton Blue" },
 	{ value: "#1D4ED8", name: "Azul" },
 	{ value: "#0F2A5C", name: "Azul marino" },
 	{ value: "#6D28D9", name: "Morado" },
