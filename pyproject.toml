@@ -11,11 +11,19 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = ["ruff>=0.14.0"]
+dev = [
+    "pytest>=9.1.1",
+    "responses>=0.26.3",
+    "ruff>=0.14.0",
+    "time-machine>=3.5.1",
+]
 
 # Scripts only, nothing to build or install.
 [tool.uv]
 package = false
+
+[tool.pytest.ini_options]
+testpaths = ["scripts/tests"]
 
 [tool.ruff]
 src = ["src/scripts"]

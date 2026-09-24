@@ -18,7 +18,10 @@
 			"!.vercel",
 			"!.astro",
 			"!.vscode",
-			"!.claude"
+			"!.claude",
+			"!playwright-report",
+			"!test-results",
+			"!.pytest_cache"
 		]
 	},
 	"formatter": {
