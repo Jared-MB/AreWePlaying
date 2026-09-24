@@ -16,6 +16,8 @@ export default defineConfig({
 		locale: "es-MX",
 		timezoneId: "America/Mexico_City",
 		trace: "retain-on-failure",
+		// `astro dev` compila cada página en la primera visita; en CI es lento.
+		navigationTimeout: 60_000,
 	},
 	projects: [
 		{ name: "desktop", use: { ...devices["Desktop Chrome"] } },
@@ -30,6 +32,7 @@ export default defineConfig({
 		timeout: 120_000,
 		// Astro manda `astro dev` a segundo plano si detecta un agente de IA (y
 		// entonces rechaza --ignore-lock); con esta variable definida no lo hace.
-		env: { ASTRO_DEV_BACKGROUND: "0" },
+		// E2E apaga la barra de dev de Astro (ver astro.config.ts).
+		env: { ASTRO_DEV_BACKGROUND: "0", E2E: "1" },
 	},
 });

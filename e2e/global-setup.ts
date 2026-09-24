@@ -21,39 +21,56 @@ export default async function globalSetup(config: FullConfig) {
 		"/acerca",
 	].filter(Boolean) as string[];
 
+	const matchPath = match && `/${first.slug}/match/${matchSlug(match)}`;
+
 	const browser = await chromium.launch();
+	const problems: string[] = [];
 	try {
 		for (let attempt = 1; attempt <= 5; attempt++) {
 			const page = await browser.newPage({ baseURL, acceptDownloads: true });
-			let broken = false;
-			page.on("pageerror", () => {
-				broken = true;
+			// La primera pasada compila todo en frío: en CI puede tardar más de 30 s.
+			page.setDefaultTimeout(attempt === 1 ? 120_000 : 30_000);
+			problems.length = 0;
+			page.on("pageerror", (error) => {
+				problems.push(`pageerror en ${page.url()}: ${error.message}`);
 			});
 			page.on("response", (response) => {
-				if (response.status() === 504) broken = true;
+				if (response.status() === 504) problems.push(`504 ${response.url()}`);
 			});
 
 			for (const path of pages) {
-				await page.goto(path, { waitUntil: "networkidle" });
-				await page
-					.waitForFunction(() => !document.querySelector("astro-island[ssr]"), {
-						timeout: 15_000,
-					})
-					.catch(() => {
-						broken = true;
-					});
+				// Un timeout aquí no es fatal: sólo significa que falta otra pasada.
+				// No se usa "networkidle": depende de recursos externos y de CI.
+				try {
+					await page.goto(path, { waitUntil: "load" });
+					await page.waitForFunction(
+						() => !document.querySelector("astro-island[ssr]"),
+						undefined,
+						{ timeout: 15_000 },
+					);
+					// La story carga html-to-image con un import dinámico al exportar.
+					if (path === matchPath) {
+						await Promise.all([
+							page.waitForEvent("download", { timeout: 15_000 }),
+							page
+								.getByRole("button", { name: /Descargar 9:16/ })
+								.click({ timeout: 5_000 }),
+						]);
+					}
+				} catch (error) {
+					problems.push(`${path}: ${(error as Error).message.split("\n")[0]}`);
+				}
 			}
-			// La story carga html-to-image con un import dinámico al exportar.
-			await page
-				.getByRole("button", { name: /Descargar 9:16/ })
-				.click({ timeout: 5_000 })
-				.catch(() => undefined);
-			await page.waitForLoadState("networkidle");
 			await page.close();
 
-			if (!broken) return;
+			if (problems.length === 0) return;
+			console.log(
+				`Calentamiento, pasada ${attempt}:\n  ${problems.join("\n  ")}`,
+			);
 		}
-		throw new Error("El servidor de dev no se estabilizó tras 5 pasadas");
+		throw new Error(
+			`El servidor de dev no se estabilizó tras 5 pasadas:\n  ${problems.join("\n  ")}`,
+		);
 	} finally {
 		await browser.close();
 	}

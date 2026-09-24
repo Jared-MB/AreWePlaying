@@ -37,6 +37,9 @@ export default defineConfig({
 	// El sitio no usa <Image>, pero con el adaptador `/_image` queda expuesto como
 	// función: sin optimizador no procesa (ni decodifica) imágenes de nadie.
 	image: { service: passthroughImageService() },
+	// Los e2e no usan la barra de dev, y tras la re-optimización en frío de Vite
+	// su entrypoint se queda respondiendo 504. Sólo se apaga para Playwright.
+	devToolbar: { enabled: !process.env.E2E },
 	vite: {
 		plugins: [tailwindcss()],
 		// Sólo afecta a `astro dev`. Estas dependencias se descubren tarde (import
