@@ -1,0 +1,4427 @@
+[
+	{
+		"tournament": {
+			"id": "16C41251-03EF-4C11-8A31-F2AC8CF305A1",
+			"division": "I",
+			"category": "Femenil",
+			"season": "2026-2027"
+		},
+		"teams": [
+			"TEC MONTERREY",
+			"UANL",
+			"CETYS TIJUANA",
+			"TEC CEM",
+			"ANÁHUAC NORTE",
+			"INTERAMERICANA",
+			"TEC GUADALAJARA",
+			"UDLAP",
+			"TEC TOLUCA",
+			"UPAEP",
+			"TEC HIDALGO",
+			"ANÁHUAC SUR",
+			"MODELO DE MÉRIDA",
+			"UDEM",
+			"UVAQ"
+		],
+		"weeks": [
+			"SEMANA 1",
+			"SEMANA 2",
+			"SEMANA 3",
+			"SEMANA 4",
+			"SEMANA 5",
+			"SEMANA 6",
+			"SEMANA 7",
+			"SEMANA 8",
+			"SEMANA 9",
+			"SEMANA 10",
+			"SEMANA 11",
+			"SEMANA 12",
+			"SEMANA 13",
+			"SEMANA 14",
+			"SEMANA 15",
+			"SEMANA 16",
+			"SEMANA 17",
+			"SEMANA 18",
+			"SEMANA 19",
+			"SEMANA 20",
+			"SEMANA 21",
+			"SEMANA 22"
+		],
+		"matches": [
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 5
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 7
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 6
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 2
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 1
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 4
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 12
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 13
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 9
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 11
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 10
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 8
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 16
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 18
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 19
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 14
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 17
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 20
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 22
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 23
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 15
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 21
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 29
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 28
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 24
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 30
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 27
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 31
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 37
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 38
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 36
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 35
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "UDEM",
+				"matchNumber": 39
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 34
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UDEM",
+				"matchNumber": 44
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 40
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 42
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 41
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 43
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 48
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 54
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 45
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 46
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 50
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 47
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 53
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 52
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 55
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 51
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 63
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 65
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 62
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 56
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 57
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 60
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 67
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 66
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 58
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "UANL",
+				"matchNumber": 61
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 64
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 59
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 104
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UANL",
+				"matchNumber": 26
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 25
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "UANL",
+				"matchNumber": 32
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 33
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "UDEM",
+				"matchNumber": 3
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 70
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 71
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 73
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 74
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 69
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 68
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 72
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 78
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 79
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 76
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 75
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "UANL",
+				"matchNumber": 77
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 86
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 82
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UDEM",
+				"matchNumber": 84
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 80
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 85
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 88
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "UDEM",
+				"matchNumber": 87
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 83
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 81
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 89
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 90
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "UDEM",
+				"matchNumber": 94
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 91
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 92
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 95
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UDEM",
+				"matchNumber": 99
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 98
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 97
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 93
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 96
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 103
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 100
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UANL",
+				"matchNumber": 102
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 101
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 105
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 118
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UANL",
+				"matchNumber": 109
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 117
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 110
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 107
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 106
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 112
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "UANL",
+				"matchNumber": 116
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 115
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 113
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 114
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 108
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "UANL",
+				"matchNumber": 122
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 123
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 119
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UDEM",
+				"matchNumber": 121
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 124
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 127
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UANL",
+				"matchNumber": 128
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 125
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "UDEM",
+				"matchNumber": 126
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 120
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 131
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 132
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "UDEM",
+				"matchNumber": 129
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 130
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 134
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 133
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 138
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 137
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "UDEM",
+				"matchNumber": 136
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 111
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 49
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "UANL",
+				"matchNumber": 139
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 140
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 142
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 141
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 144
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 147
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "UANL",
+				"matchNumber": 146
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 148
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 145
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 143
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 149
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 154
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"matchNumber": 155
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 152
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 153
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 151
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 150
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 159
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "UDEM",
+				"matchNumber": 156
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 160
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 158
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 157
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 169
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 162
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 167
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 161
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 165
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 168
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 163
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 170
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 166
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 172
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 171
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 164
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 174
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "UDEM",
+				"matchNumber": 177
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 173
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 178
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 179
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 175
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 181
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UDEM",
+				"matchNumber": 182
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 184
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 183
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 180
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 176
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 191
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "UANL",
+				"matchNumber": 190
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "TEC CEM",
+				"matchNumber": 206
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 188
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "TEC HIDALGO",
+				"matchNumber": 185
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 189
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UANL",
+				"matchNumber": 194
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 186
+			},
+			{
+				"localTeam": "CETYS TIJUANA",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 193
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 187
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 192
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 201
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "UANL",
+				"matchNumber": 197
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 196
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 199
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 195
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UVAQ",
+				"matchNumber": 200
+			},
+			{
+				"localTeam": "TEC CEM",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 202
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "ANÁHUAC SUR",
+				"matchNumber": 203
+			},
+			{
+				"localTeam": "MODELO DE MÉRIDA",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 198
+			},
+			{
+				"localTeam": "UDEM",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 204
+			},
+			{
+				"localTeam": "ANÁHUAC SUR",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 208
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 207
+			},
+			{
+				"localTeam": "UVAQ",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 135
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "CETYS TIJUANA",
+				"matchNumber": 210
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 209
+			},
+			{
+				"localTeam": "TEC HIDALGO",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 205
+			}
+		]
+	},
+	{
+		"tournament": {
+			"id": "63D81BD1-9F3F-499A-8F85-BA7B5545A41B",
+			"division": "I",
+			"category": "Varonil",
+			"season": "2026-2027"
+		},
+		"teams": [
+			"UPAEP",
+			"TEC SANTA FE",
+			"CEU",
+			"ANÁHUAC XALAPA",
+			"ANÁHUAC QUERÉTARO",
+			"MONTRER",
+			"TEC PUEBLA",
+			"UP MÉXICO",
+			"TEC MONTERREY",
+			"INTERAMERICANA",
+			"UDLAP",
+			"CETYS MEXICALI",
+			"TEC TOLUCA",
+			"UANE",
+			"UMAD",
+			"UANL",
+			"TEC GUADALAJARA",
+			"UV",
+			"UACJ"
+		],
+		"weeks": [
+			"SEMANA 1",
+			"SEMANA 2",
+			"SEMANA 3",
+			"SEMANA 4",
+			"SEMANA 5",
+			"SEMANA 6",
+			"SEMANA 7",
+			"SEMANA 8",
+			"SEMANA 9",
+			"SEMANA 10",
+			"SEMANA 11",
+			"SEMANA 12",
+			"SEMANA 13",
+			"SEMANA 14",
+			"SEMANA 15",
+			"SEMANA 16",
+			"SEMANA 17",
+			"SEMANA 18",
+			"SEMANA 19",
+			"SEMANA 20",
+			"SEMANA 21",
+			"SEMANA 22",
+			"SEMANA 23",
+			"SEMANA 24"
+		],
+		"matches": [
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "UV",
+				"matchNumber": 2
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "UACJ",
+				"matchNumber": 10
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "CEU",
+				"matchNumber": 3
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 1
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 5
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "UANE",
+				"matchNumber": 4
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 7
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 8
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 6
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 17
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UANE",
+				"matchNumber": 13
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 18
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 12
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 16
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "CEU",
+				"matchNumber": 14
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 15
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "UV",
+				"matchNumber": 11
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "UACJ",
+				"matchNumber": 9
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 20
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 27
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 26
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "UV",
+				"matchNumber": 22
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 21
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 25
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 23
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "UMAD",
+				"matchNumber": 19
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 24
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "UMAD",
+				"matchNumber": 30
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "UV",
+				"matchNumber": 31
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 35
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 32
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 33
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 34
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 36
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 29
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 28
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 39
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 44
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UANL",
+				"matchNumber": 40
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 43
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "UACJ",
+				"matchNumber": 45
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 50
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 41
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 42
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 38
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "UANL",
+				"matchNumber": 49
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 37
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 53
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 54
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UACJ",
+				"matchNumber": 46
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 51
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 47
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 48
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 97
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 79
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 107
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UV",
+				"matchNumber": 58
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 57
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UANE",
+				"matchNumber": 62
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "UMAD",
+				"matchNumber": 59
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 60
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 63
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 56
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "CEU",
+				"matchNumber": 61
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 55
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "UMAD",
+				"matchNumber": 70
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "UV",
+				"matchNumber": 67
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "UANE",
+				"matchNumber": 71
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 68
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "CEU",
+				"matchNumber": 72
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 65
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 66
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 69
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 64
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 86
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 75
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UACJ",
+				"matchNumber": 81
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 74
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 77
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 73
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 85
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 80
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 78
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 87
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "UACJ",
+				"matchNumber": 82
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 83
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 89
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 90
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 88
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 76
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 84
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 98
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "UMAD",
+				"matchNumber": 93
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 94
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 92
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 95
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UMAD",
+				"matchNumber": 104
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "UANL",
+				"matchNumber": 96
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 103
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 91
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "CEU",
+				"matchNumber": 99
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 106
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 102
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 101
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "UANL",
+				"matchNumber": 105
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "UANE",
+				"matchNumber": 100
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 169
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 108
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 152
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "UV",
+				"matchNumber": 146
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 113
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "UACJ",
+				"matchNumber": 118
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "UANL",
+				"matchNumber": 123
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 110
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 111
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UACJ",
+				"matchNumber": 117
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "UV",
+				"matchNumber": 112
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "UANL",
+				"matchNumber": 114
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 109
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 116
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 115
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 122
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 125
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 126
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 120
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 124
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 119
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "UV",
+				"matchNumber": 121
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "UMAD",
+				"matchNumber": 129
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 139
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 128
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "UANE",
+				"matchNumber": 132
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "CEU",
+				"matchNumber": 131
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 135
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 127
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 134
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 130
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 133
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 138
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 140
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 143
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 144
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UANE",
+				"matchNumber": 141
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "CEU",
+				"matchNumber": 142
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 137
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "UV",
+				"matchNumber": 136
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UANE",
+				"matchNumber": 150
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "CEU",
+				"matchNumber": 149
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 151
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 145
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "UACJ",
+				"matchNumber": 153
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 148
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UMAD",
+				"matchNumber": 147
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 157
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "UANE",
+				"matchNumber": 159
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 162
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "CEU",
+				"matchNumber": 160
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "UACJ",
+				"matchNumber": 154
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UV",
+				"matchNumber": 155
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "UMAD",
+				"matchNumber": 158
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 156
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 161
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 170
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 171
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 168
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 165
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "UANE",
+				"matchNumber": 166
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UANL",
+				"matchNumber": 167
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 163
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "UV",
+				"matchNumber": 164
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 178
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 172
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 179
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 183
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 177
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 180
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UANL",
+				"matchNumber": 176
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 174
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "UMAD",
+				"matchNumber": 175
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 182
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 189
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "UMAD",
+				"matchNumber": 184
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 186
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 185
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "UANL",
+				"matchNumber": 187
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 181
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UACJ",
+				"matchNumber": 198
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "UANE",
+				"matchNumber": 192
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "CEU",
+				"matchNumber": 193
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 196
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UANE",
+				"matchNumber": 203
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 190
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 197
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 191
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 195
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "UANL",
+				"matchNumber": 194
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "CEU",
+				"matchNumber": 202
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "UACJ",
+				"matchNumber": 199
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 207
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 204
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 200
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UANL",
+				"matchNumber": 205
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 201
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 206
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "CEU",
+				"matchNumber": 209
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 214
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 216
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 212
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 215
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "UMAD",
+				"matchNumber": 213
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UV",
+				"matchNumber": 210
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "UANE",
+				"matchNumber": 208
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 211
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 225
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "UANE",
+				"matchNumber": 219
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UMAD",
+				"matchNumber": 222
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "UV",
+				"matchNumber": 221
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 223
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 220
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "CEU",
+				"matchNumber": 218
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 224
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 217
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 280
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 52
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 188
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 228
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 229
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 227
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 239
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "UACJ",
+				"matchNumber": 234
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 230
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 238
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 242
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 231
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 243
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "UANL",
+				"matchNumber": 226
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UACJ",
+				"matchNumber": 235
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "UANL",
+				"matchNumber": 237
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 232
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 240
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 233
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 241
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 236
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UMAD",
+				"matchNumber": 249
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 248
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 245
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "UANE",
+				"matchNumber": 250
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 244
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "UANL",
+				"matchNumber": 252
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "CEU",
+				"matchNumber": 251
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 247
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "UV",
+				"matchNumber": 246
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "UANE",
+				"matchNumber": 261
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 256
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 259
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UV",
+				"matchNumber": 257
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 255
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "CEU",
+				"matchNumber": 260
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "UMAD",
+				"matchNumber": 258
+			},
+			{
+				"localTeam": "UDLAP",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 254
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 253
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 173
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 272
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UV",
+				"matchNumber": 264
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 269
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 268
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 265
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "UACJ",
+				"matchNumber": 270
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 262
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 266
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 267
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 263
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 274
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 273
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "UACJ",
+				"matchNumber": 271
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 276
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 277
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 278
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "UV",
+				"matchNumber": 275
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 279
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UMAD",
+				"matchNumber": 300
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 282
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 281
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 283
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 293
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "TEC PUEBLA",
+				"matchNumber": 288
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 290
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 286
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 287
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "UANE",
+				"matchNumber": 284
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "CEU",
+				"matchNumber": 285
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 292
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 291
+			},
+			{
+				"localTeam": "TEC MONTERREY",
+				"visitingTeam": "CEU",
+				"matchNumber": 294
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "UANE",
+				"matchNumber": 295
+			},
+			{
+				"localTeam": "TEC TOLUCA",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 296
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 297
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "UMAD",
+				"matchNumber": 289
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "INTERAMERICANA",
+				"matchNumber": 311
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 305
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UACJ",
+				"matchNumber": 306
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "UANL",
+				"matchNumber": 304
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 298
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 299
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "UACJ",
+				"matchNumber": 307
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 302
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 303
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 309
+			},
+			{
+				"localTeam": "CETYS MEXICALI",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 314
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "UANL",
+				"matchNumber": 315
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 312
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 313
+			},
+			{
+				"localTeam": "ANÁHUAC QUERÉTARO",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 308
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 310
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 316
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 317
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "TEC SANTA FE",
+				"matchNumber": 327
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "UP MÉXICO",
+				"matchNumber": 324
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UANL",
+				"matchNumber": 318
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 321
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 322
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 323
+			},
+			{
+				"localTeam": "ANÁHUAC XALAPA",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 326
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 319
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 320
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 328
+			},
+			{
+				"localTeam": "UPAEP",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 332
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "MONTRER",
+				"matchNumber": 333
+			},
+			{
+				"localTeam": "CEU",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 330
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "TEC GUADALAJARA",
+				"matchNumber": 331
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "UANL",
+				"matchNumber": 329
+			},
+			{
+				"localTeam": "UACJ",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 325
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 301
+			},
+			{
+				"localTeam": "UP MÉXICO",
+				"visitingTeam": "UDLAP",
+				"matchNumber": 334
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "ANÁHUAC XALAPA",
+				"matchNumber": 335
+			},
+			{
+				"localTeam": "TEC SANTA FE",
+				"visitingTeam": "TEC TOLUCA",
+				"matchNumber": 339
+			},
+			{
+				"localTeam": "TEC PUEBLA",
+				"visitingTeam": "UMAD",
+				"matchNumber": 336
+			},
+			{
+				"localTeam": "UANE",
+				"visitingTeam": "CEU",
+				"matchNumber": 337
+			},
+			{
+				"localTeam": "UANL",
+				"visitingTeam": "TEC MONTERREY",
+				"matchNumber": 338
+			},
+			{
+				"localTeam": "MONTRER",
+				"visitingTeam": "ANÁHUAC QUERÉTARO",
+				"matchNumber": 342
+			},
+			{
+				"localTeam": "TEC GUADALAJARA",
+				"visitingTeam": "CETYS MEXICALI",
+				"matchNumber": 341
+			},
+			{
+				"localTeam": "INTERAMERICANA",
+				"visitingTeam": "UPAEP",
+				"matchNumber": 340
+			}
+		]
+	},
+	{
+		"tournament": {
+			"id": "2D2DE225-D4C8-48B8-AF6B-343E80DACF6A",
+			"division": "II",
+			"category": "Femenil",
+			"conference": "Centro",
+			"season": "2026-2027"
+		},
+		"teams": [
+			"BUAP",
+			"UAGRO",
+			"UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+			"UNIVERSIDAD ANÁHUAC XALAPA",
+			"UMAD",
+			"UVM LOMAS VERDES",
+			"UNIVERSIDAD AMERICANA DE PUEBLA",
+			"IBERO CDMX",
+			"IES UNIVERSIDAD",
+			"UAEMÉX",
+			"IPN",
+			"UVM CENTRO",
+			"UNIVERSIDAD MARISTA CD. DE MÉXICO",
+			"UV",
+			"UNAM",
+			"ANÁHUAC PUEBLA"
+		],
+		"weeks": [
+			"SEMANA 1",
+			"SEMANA 2",
+			"SEMANA 3",
+			"SEMANA 4",
+			"SEMANA 5",
+			"SEMANA 6",
+			"SEMANA 7",
+			"SEMANA 8",
+			"SEMANA 9",
+			"SEMANA 10",
+			"SEMANA 11",
+			"SEMANA 12",
+			"SEMANA 13",
+			"SEMANA 14",
+			"SEMANA 15",
+			"SEMANA 16",
+			"SEMANA 17"
+		],
+		"matches": [
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 1
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 2
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 3
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "UV",
+				"matchNumber": 4
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "IBERO CDMX",
+				"matchNumber": 5
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 6
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 7
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 8
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "BUAP",
+				"matchNumber": 9
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "IPN",
+				"matchNumber": 10
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 11
+			},
+			{
+				"localTeam": "IBERO CDMX",
+				"visitingTeam": "UMAD",
+				"matchNumber": 12
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UNAM",
+				"matchNumber": 13
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 14
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"matchNumber": 15
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "IBERO CDMX",
+				"matchNumber": 16
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 17
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 18
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 19
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "IPN",
+				"matchNumber": 20
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 21
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 22
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 23
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"matchNumber": 24
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 25
+			},
+			{
+				"localTeam": "IBERO CDMX",
+				"visitingTeam": "UV",
+				"matchNumber": 26
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "BUAP",
+				"matchNumber": 27
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 28
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "UNAM",
+				"matchNumber": 29
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UMAD",
+				"matchNumber": 30
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 31
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 32
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 33
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 34
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "BUAP",
+				"matchNumber": 35
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 36
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "IBERO CDMX",
+				"matchNumber": 37
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "IPN",
+				"matchNumber": 38
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UMAD",
+				"matchNumber": 39
+			},
+			{
+				"localTeam": "IBERO CDMX",
+				"visitingTeam": "UNAM",
+				"matchNumber": 40
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 41
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 42
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 43
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"matchNumber": 44
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UV",
+				"matchNumber": 45
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 46
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 47
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 48
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 50
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "IPN",
+				"matchNumber": 49
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 51
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UV",
+				"matchNumber": 52
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 53
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 54
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UNAM",
+				"matchNumber": 55
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "UMAD",
+				"matchNumber": 56
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 57
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"matchNumber": 58
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "IBERO CDMX",
+				"matchNumber": 59
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"visitingTeam": "BUAP",
+				"matchNumber": 60
+			},
+			{
+				"localTeam": "IBERO CDMX",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 61
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 62
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 63
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 64
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "BUAP",
+				"matchNumber": 65
+			},
+			{
+				"localTeam": "IBERO CDMX",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 66
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"matchNumber": 67
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 68
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 69
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "IBERO CDMX",
+				"matchNumber": 70
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 71
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 72
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 73
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UNAM",
+				"matchNumber": 75
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "UMAD",
+				"matchNumber": 74
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 76
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"matchNumber": 77
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 78
+			},
+			{
+				"localTeam": "IBERO CDMX",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 79
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 80
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "BUAP",
+				"matchNumber": 81
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "IPN",
+				"matchNumber": 82
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 83
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 84
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 85
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 86
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 87
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 88
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "IBERO CDMX",
+				"matchNumber": 89
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "UMAD",
+				"matchNumber": 90
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "UNAM",
+				"matchNumber": 91
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "UV",
+				"matchNumber": 92
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 93
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "IPN",
+				"matchNumber": 94
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "IPN",
+				"matchNumber": 95
+			},
+			{
+				"localTeam": "IBERO CDMX",
+				"visitingTeam": "BUAP",
+				"matchNumber": 96
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UMAD",
+				"matchNumber": 97
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"matchNumber": 98
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 99
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 100
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 101
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 102
+			},
+			{
+				"localTeam": "UMAD",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 103
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UNAM",
+				"matchNumber": 104
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 105
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 106
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 107
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "UV",
+				"matchNumber": 109
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 108
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 110
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "UV",
+				"matchNumber": 111
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "IBERO CDMX",
+				"matchNumber": 112
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 113
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 114
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 116
+			},
+			{
+				"localTeam": "IBERO CDMX",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC XALAPA",
+				"matchNumber": 115
+			},
+			{
+				"localTeam": "UV",
+				"visitingTeam": "UMAD",
+				"matchNumber": 117
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "BUAP",
+				"matchNumber": 119
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 118
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "IPN",
+				"matchNumber": 120
+			}
+		]
+	},
+	{
+		"tournament": {
+			"id": "E160F43F-CAE0-43CD-BEE0-B3118AAD8ADD",
+			"division": "II",
+			"category": "Varonil",
+			"conference": "Centro",
+			"season": "2026-2027"
+		},
+		"teams": [
+			"UNIVERSIDAD MARISTA CD. DE MÉXICO",
+			"UNIVERSIDAD ANÁHUAC CÓRDOBA",
+			"ANÁHUAC PUEBLA",
+			"UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+			"UNIVERSIDAD AMERICANA DE PUEBLA",
+			"UAGRO",
+			"UNAM",
+			"IPN",
+			"IES UNIVERSIDAD",
+			"UVM CENTRO",
+			"UVM LOMAS VERDES",
+			"BUAP",
+			"UIC",
+			"UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+			"UAEMÉX",
+			"UPAV TEZIUTLÁN",
+			"ESDIE",
+			"ANÁHUAC NORTE",
+			"UNIVERSIDAD LA SALLE MÉXICO"
+		],
+		"weeks": [
+			"SEMANA 1",
+			"SEMANA 2",
+			"SEMANA 3",
+			"SEMANA 4",
+			"SEMANA 5",
+			"SEMANA 6",
+			"SEMANA 7",
+			"SEMANA 8",
+			"SEMANA 9",
+			"SEMANA 10",
+			"SEMANA 11",
+			"SEMANA 12",
+			"SEMANA 13",
+			"SEMANA 14",
+			"SEMANA 15",
+			"SEMANA 16",
+			"SEMANA 17",
+			"SEMANA 18",
+			"SEMANA 19",
+			"SEMANA 20"
+		],
+		"matches": [
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"visitingTeam": "UIC",
+				"matchNumber": 1
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 2
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 3
+			},
+			{
+				"localTeam": "UPAV TEZIUTLÁN",
+				"visitingTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"matchNumber": 6
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 4
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "IPN",
+				"matchNumber": 5
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 7
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"matchNumber": 8
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 9
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"visitingTeam": "UNAM",
+				"matchNumber": 10
+			},
+			{
+				"localTeam": "ESDIE",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"matchNumber": 11
+			},
+			{
+				"localTeam": "UIC",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 12
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 13
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 14
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "UPAV TEZIUTLÁN",
+				"matchNumber": 15
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "BUAP",
+				"matchNumber": 17
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"visitingTeam": "IPN",
+				"matchNumber": 18
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"matchNumber": 19
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "ESDIE",
+				"matchNumber": 20
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 21
+			},
+			{
+				"localTeam": "UPAV TEZIUTLÁN",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 22
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 23
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"matchNumber": 24
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 25
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 26
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 27
+			},
+			{
+				"localTeam": "ESDIE",
+				"visitingTeam": "UIC",
+				"matchNumber": 28
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"matchNumber": 31
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 29
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 30
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"visitingTeam": "UNAM",
+				"matchNumber": 32
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 33
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 34
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "UPAV TEZIUTLÁN",
+				"matchNumber": 35
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 36
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"matchNumber": 37
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"matchNumber": 38
+			},
+			{
+				"localTeam": "UIC",
+				"visitingTeam": "IPN",
+				"matchNumber": 39
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 41
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 40
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "BUAP",
+				"matchNumber": 42
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 43
+			},
+			{
+				"localTeam": "UPAV TEZIUTLÁN",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 44
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UNAM",
+				"matchNumber": 45
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UPAV TEZIUTLÁN",
+				"matchNumber": 46
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 47
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"visitingTeam": "UIC",
+				"matchNumber": 49
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "ESDIE",
+				"matchNumber": 48
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"matchNumber": 50
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 51
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 52
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"matchNumber": 53
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 54
+			},
+			{
+				"localTeam": "ESDIE",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"matchNumber": 55
+			},
+			{
+				"localTeam": "UIC",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 56
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 58
+			},
+			{
+				"localTeam": "UPAV TEZIUTLÁN",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 59
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "BUAP",
+				"matchNumber": 57
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 60
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"matchNumber": 61
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UNAM",
+				"matchNumber": 62
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 63
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"visitingTeam": "IPN",
+				"matchNumber": 64
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"visitingTeam": "UIC",
+				"matchNumber": 65
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 66
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 67
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "ESDIE",
+				"matchNumber": 68
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 69
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 70
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 71
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 72
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 73
+			},
+			{
+				"localTeam": "ESDIE",
+				"visitingTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"matchNumber": 74
+			},
+			{
+				"localTeam": "UIC",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 75
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 76
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "BUAP",
+				"matchNumber": 77
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "UPAV TEZIUTLÁN",
+				"matchNumber": 78
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 79
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "UNAM",
+				"matchNumber": 80
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UIC",
+				"matchNumber": 81
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"matchNumber": 82
+			},
+			{
+				"localTeam": "UPAV TEZIUTLÁN",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 83
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"matchNumber": 84
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"visitingTeam": "IPN",
+				"matchNumber": 85
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "ESDIE",
+				"matchNumber": 86
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 87
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 88
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 89
+			},
+			{
+				"localTeam": "ESDIE",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 90
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 91
+			},
+			{
+				"localTeam": "UIC",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 92
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UPAV TEZIUTLÁN",
+				"matchNumber": 93
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"visitingTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"matchNumber": 95
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 94
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 96
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"visitingTeam": "BUAP",
+				"matchNumber": 97
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 98
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "ESDIE",
+				"matchNumber": 99
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 16
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "IPN",
+				"matchNumber": 100
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 101
+			},
+			{
+				"localTeam": "UPAV TEZIUTLÁN",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 103
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "UNAM",
+				"matchNumber": 102
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 104
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"matchNumber": 105
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "ESDIE",
+				"matchNumber": 106
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"visitingTeam": "UPAV TEZIUTLÁN",
+				"matchNumber": 107
+			},
+			{
+				"localTeam": "ESDIE",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 108
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 109
+			},
+			{
+				"localTeam": "UIC",
+				"visitingTeam": "BUAP",
+				"matchNumber": 111
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 110
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 112
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 114
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 113
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 115
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 116
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "UIC",
+				"matchNumber": 117
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "IPN",
+				"matchNumber": 118
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "ESDIE",
+				"matchNumber": 119
+			},
+			{
+				"localTeam": "UPAV TEZIUTLÁN",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 120
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"matchNumber": 121
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"matchNumber": 122
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 123
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"matchNumber": 124
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UIC",
+				"matchNumber": 125
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 126
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 127
+			},
+			{
+				"localTeam": "ESDIE",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 128
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 129
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "UNAM",
+				"matchNumber": 130
+			},
+			{
+				"localTeam": "UIC",
+				"visitingTeam": "UPAV TEZIUTLÁN",
+				"matchNumber": 131
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 133
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "BUAP",
+				"matchNumber": 132
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 134
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "IPN",
+				"matchNumber": 135
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 136
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 137
+			},
+			{
+				"localTeam": "UPAV TEZIUTLÁN",
+				"visitingTeam": "ESDIE",
+				"matchNumber": 138
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"matchNumber": 139
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"matchNumber": 140
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "UIC",
+				"matchNumber": 141
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 142
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"matchNumber": 143
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 144
+			},
+			{
+				"localTeam": "ESDIE",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 145
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UNAM",
+				"matchNumber": 146
+			},
+			{
+				"localTeam": "UIC",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 147
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 149
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "UPAV TEZIUTLÁN",
+				"matchNumber": 148
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "BUAP",
+				"matchNumber": 152
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 150
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"matchNumber": 151
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"matchNumber": 153
+			},
+			{
+				"localTeam": "UVM LOMAS VERDES",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"matchNumber": 154
+			},
+			{
+				"localTeam": "UVM CENTRO",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"matchNumber": 155
+			},
+			{
+				"localTeam": "UAEMÉX",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"matchNumber": 156
+			},
+			{
+				"localTeam": "UAGRO",
+				"visitingTeam": "IPN",
+				"matchNumber": 157
+			},
+			{
+				"localTeam": "UPAV TEZIUTLÁN",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"matchNumber": 158
+			},
+			{
+				"localTeam": "UNAM",
+				"visitingTeam": "UIC",
+				"matchNumber": 159
+			},
+			{
+				"localTeam": "BUAP",
+				"visitingTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"matchNumber": 160
+			},
+			{
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"visitingTeam": "ESDIE",
+				"matchNumber": 161
+			},
+			{
+				"localTeam": "UNIVERSIDAD AMERICANA DE PUEBLA",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"matchNumber": 162
+			},
+			{
+				"localTeam": "ANÁHUAC PUEBLA",
+				"visitingTeam": "UVM CENTRO",
+				"matchNumber": 163
+			},
+			{
+				"localTeam": "ANÁHUAC NORTE",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"matchNumber": 165
+			},
+			{
+				"localTeam": "ESDIE",
+				"visitingTeam": "UNAM",
+				"matchNumber": 164
+			},
+			{
+				"localTeam": "UIC",
+				"visitingTeam": "UAEMÉX",
+				"matchNumber": 166
+			},
+			{
+				"localTeam": "IPN",
+				"visitingTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"matchNumber": 167
+			},
+			{
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"visitingTeam": "UAGRO",
+				"matchNumber": 168
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE MÉXICO",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"matchNumber": 169
+			},
+			{
+				"localTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeam": "BUAP",
+				"matchNumber": 170
+			},
+			{
+				"localTeam": "IES UNIVERSIDAD",
+				"visitingTeam": "UPAV TEZIUTLÁN",
+				"matchNumber": 171
+			}
+		]
+	}
+]

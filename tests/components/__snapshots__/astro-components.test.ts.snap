@@ -1,0 +1,665 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MatchDaySection con subtítulo y h3 1`] = `
+"
+<section aria-labelledby="next-division-i-varonil">
+  <header>
+    <h3 id="next-division-i-varonil">
+      <a href="/division-i-varonil/">
+        "División I"
+      "Varonil · sábado 26 de septiembre"
+    <a href="/division-i-varonil/">
+      "Ver más"
+      [sr-only]
+        "de División IVaronil"
+  <ul role="list">
+    <li>
+      <astro-island client="load">
+        <article aria-label="BUAP vs UV">
+          <a aria-label="Ver detalle del partido entre BUAP contra UV" href="/division-i-varonil/match/buap-vs-uv-5">
+          <dl>
+            <dt>
+              "Fecha"
+            <dd>
+              <time datetime="2026-09-27T00:00:00.000Z">
+                "18:00 HRS"
+                "26/09/2026"
+              "SEMANA 2"
+            <dt>
+              "Equipos"
+            <dd>
+              "BUA"
+              <a href="/division-i-varonil/teams/buap">
+                "BUAP"
+              "0"
+              [sr-only]
+                "puntos"
+              "UV"
+              <a href="/division-i-varonil/teams/uv">
+                "UV"
+              "0"
+              [sr-only]
+                "puntos"
+            <dt>
+              "Lugar"
+            <dd>
+              "-"
+              [sr-only]
+                "Por definir"
+            <dt>
+              "Estatus"
+            <dd>
+              "NO INICIADO"
+    <li>
+      <astro-island client="load">
+        <article aria-label="UV vs TEC. DE MTY (CEM)">
+          <a aria-label="Ver detalle del partido entre UV contra TEC. DE MTY (CEM)" href="/division-i-varonil/match/uv-vs-tec-de-mty-cem-3">
+          <dl>
+            <dt>
+              "Fecha"
+            <dd>
+              <time datetime="2026-09-26T16:00:00.000Z">
+                "10:00 HRS"
+                "26/09/2026"
+              "SEMANA 2"
+            <dt>
+              "Equipos"
+            <dd>
+              "UV"
+              <a href="/division-i-varonil/teams/uv">
+                "UV"
+              "70"
+              [sr-only]
+                "puntos"
+              "TEC"
+              <a href="/division-i-varonil/teams/tec-de-mty-cem">
+                "TEC. DE MTY (CEM)"
+              "80"
+              [sr-only]
+                "puntos"
+            <dt>
+              "Lugar"
+            <dd>
+              <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+                "CENTRO DEPORTIVO COYOACÁN"
+                [sr-only]
+                  "(abre en una pestaña nueva)"
+            <dt>
+              "Estatus"
+            <dd>
+              "COMPLETADO"
+    <li>
+      <astro-island client="load">
+        <article aria-label="UP MÉXICO vs BUAP">
+          <a aria-label="Ver detalle del partido entre UP MÉXICO contra BUAP" href="/division-i-varonil/match/up-mexico-vs-buap-4">
+          <dl>
+            <dt>
+              "Fecha"
+            <dd>
+              <time datetime="2026-09-26T18:00:00.000Z">
+                "12:00 HRS"
+                "26/09/2026"
+              "SEMANA 2"
+            <dt>
+              "Equipos"
+            <dd>
+              "UP"
+              <a href="/division-i-varonil/teams/up-mexico">
+                "UP MÉXICO"
+              "30"
+              [sr-only]
+                "puntos"
+              "BUA"
+              <a href="/division-i-varonil/teams/buap">
+                "BUAP"
+              "28"
+              [sr-only]
+                "puntos"
+            <dt>
+              "Lugar"
+            <dd>
+              <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+                "CENTRO DEPORTIVO COYOACÁN"
+                [sr-only]
+                  "(abre en una pestaña nueva)"
+            <dt>
+              "Estatus"
+            <dd>
+              "EN CURSO"
+"
+`;
+
+exports[`PastMatches y UpcomingMatches de un equipo > pasados 1`] = `
+"
+<a aria-label="Ver detalle del partido entre UP MÉXICO contra UV" href="/division-i-varonil/match/up-mexico-vs-uv-1">
+"18/09/2026 14:00"
+"EN CASA"
+"W"
+"76 - 57"
+"vs"
+<a href="/division-i-varonil/teams/uv">
+  "UV"
+<a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+  "CENTRO DEPORTIVO COYOACÁN"
+  [sr-only]
+    "(abre en una pestaña nueva)"
+<a aria-label="Ver detalle del partido entre UP MÉXICO contra BUAP" href="/division-i-varonil/match/up-mexico-vs-buap-4">
+"26/09/2026 12:00"
+"EN CASA"
+"W"
+"30 - 28"
+"vs"
+<a href="/division-i-varonil/teams/buap">
+  "BUAP"
+<a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+  "CENTRO DEPORTIVO COYOACÁN"
+  [sr-only]
+    "(abre en una pestaña nueva)"
+"
+`;
+
+exports[`PastMatches y UpcomingMatches de un equipo > próximos 1`] = `
+"
+<a aria-label="Ver detalle del partido entre UV contra UP MÉXICO" href="/division-i-varonil/match/uv-vs-up-mexico-6">
+"03/10/2026"
+"13:00 HRS"
+"VISITANTE"
+"vs"
+<a href="/division-i-varonil/teams/uv">
+  "UV"
+<a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+  "CENTRO DEPORTIVO COYOACÁN"
+  [sr-only]
+    "(abre en una pestaña nueva)"
+<a aria-label="Ver detalle del partido entre TEC. DE MTY (CEM) contra UP MÉXICO" href="/division-i-varonil/match/tec-de-mty-cem-vs-up-mexico-7">
+"04/10/2026"
+"HRS"
+"VISITANTE"
+"vs"
+<a href="/division-i-varonil/teams/tec-de-mty-cem">
+  "TEC. DE MTY (CEM)"
+<a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+  "CENTRO DEPORTIVO COYOACÁN"
+  [sr-only]
+    "(abre en una pestaña nueva)"
+<a aria-label="Ver detalle del partido entre UP MÉXICO contra TEC. DE MTY (CEM)" href="/division-i-varonil/match/up-mexico-vs-tec-de-mty-cem-8">
+"10/10/2026"
+"12:00 HRS"
+"EN CASA"
+"vs"
+<a href="/division-i-varonil/teams/tec-de-mty-cem">
+  "TEC. DE MTY (CEM)"
+<a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+  "CENTRO DEPORTIVO COYOACÁN"
+  [sr-only]
+    "(abre en una pestaña nueva)"
+"
+`;
+
+exports[`PastMatches y UpcomingMatches vacíos > pasados vacío 1`] = `
+"
+"NO HAY PARTIDOS JUGADOS"
+"
+`;
+
+exports[`PastMatches y UpcomingMatches vacíos > próximos vacío 1`] = `
+"
+"NO HAY MAS PARTIDOS POR JUGAR"
+"
+`;
+
+exports[`SelectDivision marca el torneo activo 1`] = `
+"
+<select aria-label="Seleccionar división" id="division" name="division">
+  <option value="division-i-varonil">
+    "Division I - Varonil"
+  <option selected="" value="division-ii-femenil-centro">
+    "Division II - Centro - Femenil"
+"
+`;
+
+exports[`TodayMatches con partidos hoy 1`] = `
+"
+<astro-island client="load">
+<section aria-labelledby="today-matches">
+  <h2 id="today-matches">
+    "Partidos de hoy"
+  <section aria-labelledby="today-division-i-varonil">
+    <header>
+      <h3 id="today-division-i-varonil">
+        <a href="/division-i-varonil/">
+          "División I"
+        "Varonil"
+      <a href="/division-i-varonil/">
+        "Ver más"
+        [sr-only]
+          "de División IVaronil"
+    <ul role="list">
+      <li>
+        <astro-island client="load">
+          <article aria-label="UV vs TEC. DE MTY (CEM)">
+            <a aria-label="Ver detalle del partido entre UV contra TEC. DE MTY (CEM)" href="/division-i-varonil/match/uv-vs-tec-de-mty-cem-3">
+            <dl>
+              <dt>
+                "Fecha"
+              <dd>
+                <time datetime="2026-09-26T16:00:00.000Z">
+                  "10:00 HRS"
+                  "26/09/2026"
+                "SEMANA 2"
+              <dt>
+                "Equipos"
+              <dd>
+                "UV"
+                <a href="/division-i-varonil/teams/uv">
+                  "UV"
+                "70"
+                [sr-only]
+                  "puntos"
+                "TEC"
+                <a href="/division-i-varonil/teams/tec-de-mty-cem">
+                  "TEC. DE MTY (CEM)"
+                "80"
+                [sr-only]
+                  "puntos"
+              <dt>
+                "Lugar"
+              <dd>
+                <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+                  "CENTRO DEPORTIVO COYOACÁN"
+                  [sr-only]
+                    "(abre en una pestaña nueva)"
+              <dt>
+                "Estatus"
+              <dd>
+                "COMPLETADO"
+      <li>
+        <astro-island client="load">
+          <article aria-label="UP MÉXICO vs BUAP">
+            <a aria-label="Ver detalle del partido entre UP MÉXICO contra BUAP" href="/division-i-varonil/match/up-mexico-vs-buap-4">
+            <dl>
+              <dt>
+                "Fecha"
+              <dd>
+                <time datetime="2026-09-26T18:00:00.000Z">
+                  "12:00 HRS"
+                  "26/09/2026"
+                "SEMANA 2"
+              <dt>
+                "Equipos"
+              <dd>
+                "UP"
+                <a href="/division-i-varonil/teams/up-mexico">
+                  "UP MÉXICO"
+                "30"
+                [sr-only]
+                  "puntos"
+                "BUA"
+                <a href="/division-i-varonil/teams/buap">
+                  "BUAP"
+                "28"
+                [sr-only]
+                  "puntos"
+              <dt>
+                "Lugar"
+              <dd>
+                <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+                  "CENTRO DEPORTIVO COYOACÁN"
+                  [sr-only]
+                    "(abre en una pestaña nueva)"
+              <dt>
+                "Estatus"
+              <dd>
+                "EN CURSO"
+      <li>
+        <astro-island client="load">
+          <article aria-label="BUAP vs UV">
+            <a aria-label="Ver detalle del partido entre BUAP contra UV" href="/division-i-varonil/match/buap-vs-uv-5">
+            <dl>
+              <dt>
+                "Fecha"
+              <dd>
+                <time datetime="2026-09-27T00:00:00.000Z">
+                  "18:00 HRS"
+                  "26/09/2026"
+                "SEMANA 2"
+              <dt>
+                "Equipos"
+              <dd>
+                "BUA"
+                <a href="/division-i-varonil/teams/buap">
+                  "BUAP"
+                "0"
+                [sr-only]
+                  "puntos"
+                "UV"
+                <a href="/division-i-varonil/teams/uv">
+                  "UV"
+                "0"
+                [sr-only]
+                  "puntos"
+              <dt>
+                "Lugar"
+              <dd>
+                "-"
+                [sr-only]
+                  "Por definir"
+              <dt>
+                "Estatus"
+              <dd>
+                "NO INICIADO"
+"
+`;
+
+exports[`TodayMatches sin partidos hoy cae a la próxima jornada 1`] = `
+"
+<astro-island client="load">
+<section aria-labelledby="next-matches">
+  <h2 id="next-matches">
+    "Próximos partidos"
+  <section aria-labelledby="next-division-ii-femenil-centro">
+    <header>
+      <h3 id="next-division-ii-femenil-centro">
+        <a href="/division-ii-femenil-centro/">
+          "División II"
+        "Femenil · Centro · martes 29 de septiembre"
+      <a href="/division-ii-femenil-centro/">
+        "Ver más"
+        [sr-only]
+          "de División IIFemenil"
+    <ul role="list">
+      <li>
+        <astro-island client="load">
+          <article aria-label="LOBOS UAdeC vs UAGRO">
+            <a aria-label="Ver detalle del partido entre LOBOS UAdeC contra UAGRO" href="/division-ii-femenil-centro/match/lobos-uadec-vs-uagro-2">
+            <dl>
+              <dt>
+                "Fecha"
+              <dd>
+                <time datetime="2026-09-29T23:00:00.000Z">
+                  "17:00 HRS"
+                  "29/09/2026"
+                "SEMANA 1"
+              <dt>
+                "Equipos"
+              <dd>
+                "LOB"
+                <a href="/division-ii-femenil-centro/teams/lobos-uadec">
+                  "LOBOS UAdeC"
+                "0"
+                [sr-only]
+                  "puntos"
+                "UAG"
+                <a href="/division-ii-femenil-centro/teams/uagro">
+                  "UAGRO"
+                "0"
+                [sr-only]
+                  "puntos"
+              <dt>
+                "Lugar"
+              <dd>
+                <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+                  "CENTRO DEPORTIVO COYOACÁN"
+                  [sr-only]
+                    "(abre en una pestaña nueva)"
+              <dt>
+                "Estatus"
+              <dd>
+                "NO INICIADO"
+      <li>
+        <astro-island client="load">
+          <article aria-label="UAGRO vs LOBOS UAdeC">
+            <a aria-label="Ver detalle del partido entre UAGRO contra LOBOS UAdeC" href="/division-ii-femenil-centro/match/uagro-vs-lobos-uadec-1">
+            <dl>
+              <dt>
+                "Fecha"
+              <dd>
+                <time datetime="2026-09-30T01:30:00.000Z">
+                  "19:30 HRS"
+                  "29/09/2026"
+                "SEMANA 1"
+              <dt>
+                "Equipos"
+              <dd>
+                "UAG"
+                <a href="/division-ii-femenil-centro/teams/uagro">
+                  "UAGRO"
+                "0"
+                [sr-only]
+                  "puntos"
+                "LOB"
+                <a href="/division-ii-femenil-centro/teams/lobos-uadec">
+                  "LOBOS UAdeC"
+                "0"
+                [sr-only]
+                  "puntos"
+              <dt>
+                "Lugar"
+              <dd>
+                <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+                  "CENTRO DEPORTIVO COYOACÁN"
+                  [sr-only]
+                    "(abre en una pestaña nueva)"
+              <dt>
+                "Estatus"
+              <dd>
+                "NO INICIADO"
+  <section aria-labelledby="next-division-i-varonil">
+    <header>
+      <h3 id="next-division-i-varonil">
+        <a href="/division-i-varonil/">
+          "División I"
+        "Varonil · sábado 3 de octubre"
+      <a href="/division-i-varonil/">
+        "Ver más"
+        [sr-only]
+          "de División IVaronil"
+    <ul role="list">
+      <li>
+        <astro-island client="load">
+          <article aria-label="UV vs UP MÉXICO">
+            <a aria-label="Ver detalle del partido entre UV contra UP MÉXICO" href="/division-i-varonil/match/uv-vs-up-mexico-6">
+            <dl>
+              <dt>
+                "Fecha"
+              <dd>
+                <time datetime="2026-10-03T19:00:00.000Z">
+                  "13:00 HRS"
+                  "03/10/2026"
+                "SEMANA 3"
+              <dt>
+                "Equipos"
+              <dd>
+                "UV"
+                <a href="/division-i-varonil/teams/uv">
+                  "UV"
+                "0"
+                [sr-only]
+                  "puntos"
+                "UP"
+                <a href="/division-i-varonil/teams/up-mexico">
+                  "UP MÉXICO"
+                "0"
+                [sr-only]
+                  "puntos"
+              <dt>
+                "Lugar"
+              <dd>
+                <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+                  "CENTRO DEPORTIVO COYOACÁN"
+                  [sr-only]
+                    "(abre en una pestaña nueva)"
+              <dt>
+                "Estatus"
+              <dd>
+                "NO INICIADO"
+"
+`;
+
+exports[`TopPerformers 1`] = `
+"
+<section aria-labelledby="top-division-i-varonil">
+  <header>
+    <h3 id="top-division-i-varonil">
+      "Div. I Varonil"
+    <a href="/division-i-varonil/teams/">
+      "Tabla"
+  <ol>
+    <li>
+      <a href="/division-i-varonil/teams/uv">
+        "1"
+        <img alt="" src="/logos/AAAAAAAA-AAAA-4AAA-8AAA-000000000001/aaaaaaa2-0000-4000-8000-000000000002.avif">
+        "UV"
+        "3-0"
+    <li>
+      <a href="/division-i-varonil/teams/up-mexico">
+        "2"
+        <img alt="" src="/logos/AAAAAAAA-AAAA-4AAA-8AAA-000000000001/aaaaaaa1-0000-4000-8000-000000000001.avif">
+        "UP MÉXICO"
+        "1-1"
+    <li>
+      <a href="/division-i-varonil/teams/tec-de-mty-cem">
+        "3"
+        "TEC"
+        "TEC. DE MTY (CEM)"
+        "1-1"
+<section aria-labelledby="top-division-ii-femenil-centro">
+  <header>
+    <h3 id="top-division-ii-femenil-centro">
+      "Div. II Femenil · Centro"
+    <a href="/division-ii-femenil-centro/teams/">
+      "Tabla"
+  <ol>
+    <li>
+      <a href="/division-ii-femenil-centro/teams/uagro">
+        "0"
+        <img alt="" src="/logos/BBBBBBBB-BBBB-4BBB-8BBB-000000000002/bbbbbbb1-0000-4000-8000-000000000001.avif">
+        "UAGRO"
+        "0-0"
+    <li>
+      <a href="/division-ii-femenil-centro/teams/lobos-uadec">
+        "0"
+        "LOB"
+        "LOBOS UAdeC"
+        "0-0"
+"
+`;
+
+exports[`WeekMatches: los tres estados; una sede con link inseguro se muestra como "Por definir" (oculta el nombre) 1`] = `
+"
+<ul role="list">
+  <li>
+    <astro-island client="load">
+      <article aria-label="BUAP vs UV">
+        <a aria-label="Ver detalle del partido entre BUAP contra UV" href="/division-i-varonil/match/buap-vs-uv-5">
+        <dl>
+          <dt>
+            "Fecha"
+          <dd>
+            <time datetime="2026-09-27T00:00:00.000Z">
+              "18:00 HRS"
+              "26/09/2026"
+            "SEMANA 2"
+          <dt>
+            "Equipos"
+          <dd>
+            "BUA"
+            <a href="/division-i-varonil/teams/buap">
+              "BUAP"
+            "0"
+            [sr-only]
+              "puntos"
+            "UV"
+            <a href="/division-i-varonil/teams/uv">
+              "UV"
+            "0"
+            [sr-only]
+              "puntos"
+          <dt>
+            "Lugar"
+          <dd>
+            "-"
+            [sr-only]
+              "Por definir"
+          <dt>
+            "Estatus"
+          <dd>
+            "NO INICIADO"
+  <li>
+    <astro-island client="load">
+      <article aria-label="UV vs TEC. DE MTY (CEM)">
+        <a aria-label="Ver detalle del partido entre UV contra TEC. DE MTY (CEM)" href="/division-i-varonil/match/uv-vs-tec-de-mty-cem-3">
+        <dl>
+          <dt>
+            "Fecha"
+          <dd>
+            <time datetime="2026-09-26T16:00:00.000Z">
+              "10:00 HRS"
+              "26/09/2026"
+            "SEMANA 2"
+          <dt>
+            "Equipos"
+          <dd>
+            "UV"
+            <a href="/division-i-varonil/teams/uv">
+              "UV"
+            "70"
+            [sr-only]
+              "puntos"
+            "TEC"
+            <a href="/division-i-varonil/teams/tec-de-mty-cem">
+              "TEC. DE MTY (CEM)"
+            "80"
+            [sr-only]
+              "puntos"
+          <dt>
+            "Lugar"
+          <dd>
+            <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+              "CENTRO DEPORTIVO COYOACÁN"
+              [sr-only]
+                "(abre en una pestaña nueva)"
+          <dt>
+            "Estatus"
+          <dd>
+            "COMPLETADO"
+  <li>
+    <astro-island client="load">
+      <article aria-label="UP MÉXICO vs BUAP">
+        <a aria-label="Ver detalle del partido entre UP MÉXICO contra BUAP" href="/division-i-varonil/match/up-mexico-vs-buap-4">
+        <dl>
+          <dt>
+            "Fecha"
+          <dd>
+            <time datetime="2026-09-26T18:00:00.000Z">
+              "12:00 HRS"
+              "26/09/2026"
+            "SEMANA 2"
+          <dt>
+            "Equipos"
+          <dd>
+            "UP"
+            <a href="/division-i-varonil/teams/up-mexico">
+              "UP MÉXICO"
+            "30"
+            [sr-only]
+              "puntos"
+            "BUA"
+            <a href="/division-i-varonil/teams/buap">
+              "BUAP"
+            "28"
+            [sr-only]
+              "puntos"
+          <dt>
+            "Lugar"
+          <dd>
+            <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
+              "CENTRO DEPORTIVO COYOACÁN"
+              [sr-only]
+                "(abre en una pestaña nueva)"
+          <dt>
+            "Estatus"
+          <dd>
+            "EN CURSO"
+"
+`;

@@ -1,0 +1,999 @@
+# division-i-femenil
+TEC MONTERREY → /division-i-femenil/teams/tec-monterrey
+UANL → /division-i-femenil/teams/uanl
+CETYS TIJUANA → /division-i-femenil/teams/cetys-tijuana
+TEC CEM → /division-i-femenil/teams/tec-cem
+ANÁHUAC NORTE → /division-i-femenil/teams/anahuac-norte
+INTERAMERICANA → /division-i-femenil/teams/interamericana
+TEC GUADALAJARA → /division-i-femenil/teams/tec-guadalajara
+UDLAP → /division-i-femenil/teams/udlap
+TEC TOLUCA → /division-i-femenil/teams/tec-toluca
+UPAEP → /division-i-femenil/teams/upaep
+TEC HIDALGO → /division-i-femenil/teams/tec-hidalgo
+ANÁHUAC SUR → /division-i-femenil/teams/anahuac-sur
+MODELO DE MÉRIDA → /division-i-femenil/teams/modelo-de-merida
+UDEM → /division-i-femenil/teams/udem
+UVAQ → /division-i-femenil/teams/uvaq
+SEMANA 1 → /division-i-femenil/semana-1
+SEMANA 2 → /division-i-femenil/semana-2
+SEMANA 3 → /division-i-femenil/semana-3
+SEMANA 4 → /division-i-femenil/semana-4
+SEMANA 5 → /division-i-femenil/semana-5
+SEMANA 6 → /division-i-femenil/semana-6
+SEMANA 7 → /division-i-femenil/semana-7
+SEMANA 8 → /division-i-femenil/semana-8
+SEMANA 9 → /division-i-femenil/semana-9
+SEMANA 10 → /division-i-femenil/semana-10
+SEMANA 11 → /division-i-femenil/semana-11
+SEMANA 12 → /division-i-femenil/semana-12
+SEMANA 13 → /division-i-femenil/semana-13
+SEMANA 14 → /division-i-femenil/semana-14
+SEMANA 15 → /division-i-femenil/semana-15
+SEMANA 16 → /division-i-femenil/semana-16
+SEMANA 17 → /division-i-femenil/semana-17
+SEMANA 18 → /division-i-femenil/semana-18
+SEMANA 19 → /division-i-femenil/semana-19
+SEMANA 20 → /division-i-femenil/semana-20
+SEMANA 21 → /division-i-femenil/semana-21
+SEMANA 22 → /division-i-femenil/semana-22
+/division-i-femenil/match/uanl-vs-anahuac-sur-5
+/division-i-femenil/match/interamericana-vs-tec-guadalajara-7
+/division-i-femenil/match/upaep-vs-cetys-tijuana-6
+/division-i-femenil/match/tec-hidalgo-vs-anahuac-norte-2
+/division-i-femenil/match/udlap-vs-tec-cem-1
+/division-i-femenil/match/tec-monterrey-vs-tec-toluca-4
+/division-i-femenil/match/upaep-vs-tec-guadalajara-12
+/division-i-femenil/match/interamericana-vs-cetys-tijuana-13
+/division-i-femenil/match/tec-hidalgo-vs-tec-cem-9
+/division-i-femenil/match/uanl-vs-tec-toluca-11
+/division-i-femenil/match/tec-monterrey-vs-anahuac-sur-10
+/division-i-femenil/match/udlap-vs-anahuac-norte-8
+/division-i-femenil/match/udem-vs-tec-cem-16
+/division-i-femenil/match/uanl-vs-interamericana-18
+/division-i-femenil/match/tec-toluca-vs-uvaq-19
+/division-i-femenil/match/udlap-vs-modelo-de-merida-14
+/division-i-femenil/match/tec-monterrey-vs-upaep-17
+/division-i-femenil/match/anahuac-sur-vs-uvaq-20
+/division-i-femenil/match/tec-monterrey-vs-interamericana-22
+/division-i-femenil/match/uanl-vs-upaep-23
+/division-i-femenil/match/tec-hidalgo-vs-modelo-de-merida-15
+/division-i-femenil/match/udem-vs-anahuac-norte-21
+/division-i-femenil/match/cetys-tijuana-vs-uvaq-29
+/division-i-femenil/match/modelo-de-merida-vs-tec-toluca-28
+/division-i-femenil/match/udem-vs-udlap-24
+/division-i-femenil/match/tec-guadalajara-vs-uvaq-30
+/division-i-femenil/match/modelo-de-merida-vs-anahuac-sur-27
+/division-i-femenil/match/udem-vs-tec-hidalgo-31
+/division-i-femenil/match/tec-guadalajara-vs-anahuac-norte-37
+/division-i-femenil/match/uvaq-vs-modelo-de-merida-38
+/division-i-femenil/match/cetys-tijuana-vs-tec-cem-36
+/division-i-femenil/match/uanl-vs-tec-hidalgo-35
+/division-i-femenil/match/upaep-vs-udem-39
+/division-i-femenil/match/tec-monterrey-vs-udlap-34
+/division-i-femenil/match/interamericana-vs-udem-44
+/division-i-femenil/match/tec-monterrey-vs-tec-hidalgo-40
+/division-i-femenil/match/cetys-tijuana-vs-anahuac-norte-42
+/division-i-femenil/match/uanl-vs-udlap-41
+/division-i-femenil/match/tec-guadalajara-vs-tec-cem-43
+/division-i-femenil/match/anahuac-norte-vs-interamericana-48
+/division-i-femenil/match/tec-cem-vs-interamericana-54
+/division-i-femenil/match/tec-toluca-vs-udlap-45
+/division-i-femenil/match/anahuac-sur-vs-tec-hidalgo-46
+/division-i-femenil/match/modelo-de-merida-vs-tec-guadalajara-50
+/division-i-femenil/match/tec-cem-vs-upaep-47
+/division-i-femenil/match/anahuac-sur-vs-udlap-53
+/division-i-femenil/match/tec-toluca-vs-tec-hidalgo-52
+/division-i-femenil/match/anahuac-norte-vs-upaep-55
+/division-i-femenil/match/udem-vs-uvaq-51
+/division-i-femenil/match/tec-guadalajara-vs-anahuac-sur-63
+/division-i-femenil/match/tec-hidalgo-vs-upaep-65
+/division-i-femenil/match/cetys-tijuana-vs-tec-toluca-62
+/division-i-femenil/match/udlap-vs-upaep-56
+/division-i-femenil/match/tec-hidalgo-vs-interamericana-57
+/division-i-femenil/match/uvaq-vs-tec-monterrey-60
+/division-i-femenil/match/tec-guadalajara-vs-tec-toluca-67
+/division-i-femenil/match/cetys-tijuana-vs-anahuac-sur-66
+/division-i-femenil/match/tec-cem-vs-modelo-de-merida-58
+/division-i-femenil/match/uvaq-vs-uanl-61
+/division-i-femenil/match/udlap-vs-interamericana-64
+/division-i-femenil/match/anahuac-norte-vs-modelo-de-merida-59
+/division-i-femenil/match/upaep-vs-interamericana-104
+/division-i-femenil/match/anahuac-norte-vs-uanl-26
+/division-i-femenil/match/tec-cem-vs-tec-monterrey-25
+/division-i-femenil/match/tec-cem-vs-uanl-32
+/division-i-femenil/match/anahuac-norte-vs-tec-monterrey-33
+/division-i-femenil/match/modelo-de-merida-vs-udem-3
+/division-i-femenil/match/uvaq-vs-tec-cem-70
+/division-i-femenil/match/uvaq-vs-anahuac-norte-71
+/division-i-femenil/match/upaep-vs-tec-toluca-73
+/division-i-femenil/match/interamericana-vs-anahuac-sur-74
+/division-i-femenil/match/tec-hidalgo-vs-tec-guadalajara-69
+/division-i-femenil/match/udlap-vs-cetys-tijuana-68
+/division-i-femenil/match/udem-vs-tec-monterrey-72
+/division-i-femenil/match/upaep-vs-anahuac-sur-78
+/division-i-femenil/match/interamericana-vs-tec-toluca-79
+/division-i-femenil/match/tec-hidalgo-vs-cetys-tijuana-76
+/division-i-femenil/match/udlap-vs-tec-guadalajara-75
+/division-i-femenil/match/udem-vs-uanl-77
+/division-i-femenil/match/uanl-vs-tec-guadalajara-86
+/division-i-femenil/match/upaep-vs-modelo-de-merida-82
+/division-i-femenil/match/tec-toluca-vs-udem-84
+/division-i-femenil/match/udlap-vs-uvaq-80
+/division-i-femenil/match/tec-monterrey-vs-cetys-tijuana-85
+/division-i-femenil/match/tec-monterrey-vs-tec-guadalajara-88
+/division-i-femenil/match/anahuac-sur-vs-udem-87
+/division-i-femenil/match/interamericana-vs-modelo-de-merida-83
+/division-i-femenil/match/tec-hidalgo-vs-uvaq-81
+/division-i-femenil/match/uanl-vs-cetys-tijuana-89
+/division-i-femenil/match/tec-toluca-vs-tec-cem-90
+/division-i-femenil/match/cetys-tijuana-vs-udem-94
+/division-i-femenil/match/anahuac-sur-vs-anahuac-norte-91
+/division-i-femenil/match/tec-monterrey-vs-modelo-de-merida-92
+/division-i-femenil/match/uvaq-vs-upaep-95
+/division-i-femenil/match/tec-guadalajara-vs-udem-99
+/division-i-femenil/match/anahuac-sur-vs-tec-cem-98
+/division-i-femenil/match/tec-toluca-vs-anahuac-norte-97
+/division-i-femenil/match/uanl-vs-modelo-de-merida-93
+/division-i-femenil/match/uvaq-vs-interamericana-96
+/division-i-femenil/match/tec-toluca-vs-anahuac-sur-103
+/division-i-femenil/match/udlap-vs-tec-hidalgo-100
+/division-i-femenil/match/tec-monterrey-vs-uanl-102
+/division-i-femenil/match/tec-cem-vs-anahuac-norte-101
+/division-i-femenil/match/cetys-tijuana-vs-tec-guadalajara-105
+/division-i-femenil/match/tec-guadalajara-vs-interamericana-118
+/division-i-femenil/match/tec-toluca-vs-uanl-109
+/division-i-femenil/match/cetys-tijuana-vs-upaep-117
+/division-i-femenil/match/anahuac-sur-vs-tec-monterrey-110
+/division-i-femenil/match/anahuac-norte-vs-udlap-107
+/division-i-femenil/match/tec-cem-vs-tec-hidalgo-106
+/division-i-femenil/match/tec-guadalajara-vs-upaep-112
+/division-i-femenil/match/anahuac-sur-vs-uanl-116
+/division-i-femenil/match/tec-toluca-vs-tec-monterrey-115
+/division-i-femenil/match/tec-cem-vs-udlap-113
+/division-i-femenil/match/anahuac-norte-vs-tec-hidalgo-114
+/division-i-femenil/match/udem-vs-modelo-de-merida-108
+/division-i-femenil/match/upaep-vs-uanl-122
+/division-i-femenil/match/interamericana-vs-tec-monterrey-123
+/division-i-femenil/match/modelo-de-merida-vs-tec-hidalgo-119
+/division-i-femenil/match/anahuac-norte-vs-udem-121
+/division-i-femenil/match/uvaq-vs-anahuac-sur-124
+/division-i-femenil/match/upaep-vs-tec-monterrey-127
+/division-i-femenil/match/interamericana-vs-uanl-128
+/division-i-femenil/match/uvaq-vs-tec-toluca-125
+/division-i-femenil/match/tec-cem-vs-udem-126
+/division-i-femenil/match/modelo-de-merida-vs-udlap-120
+/division-i-femenil/match/uanl-vs-tec-cem-131
+/division-i-femenil/match/anahuac-sur-vs-modelo-de-merida-132
+/division-i-femenil/match/tec-hidalgo-vs-udem-129
+/division-i-femenil/match/tec-monterrey-vs-anahuac-norte-130
+/division-i-femenil/match/uvaq-vs-tec-guadalajara-134
+/division-i-femenil/match/tec-toluca-vs-modelo-de-merida-133
+/division-i-femenil/match/uanl-vs-anahuac-norte-138
+/division-i-femenil/match/tec-monterrey-vs-tec-cem-137
+/division-i-femenil/match/udlap-vs-udem-136
+/division-i-femenil/match/cetys-tijuana-vs-interamericana-111
+/division-i-femenil/match/modelo-de-merida-vs-cetys-tijuana-49
+/division-i-femenil/match/udlap-vs-uanl-139
+/division-i-femenil/match/tec-hidalgo-vs-tec-monterrey-140
+/division-i-femenil/match/anahuac-norte-vs-cetys-tijuana-142
+/division-i-femenil/match/tec-cem-vs-tec-guadalajara-141
+/division-i-femenil/match/udem-vs-interamericana-144
+/division-i-femenil/match/tec-cem-vs-cetys-tijuana-147
+/division-i-femenil/match/tec-hidalgo-vs-uanl-146
+/division-i-femenil/match/anahuac-norte-vs-tec-guadalajara-148
+/division-i-femenil/match/udlap-vs-tec-monterrey-145
+/division-i-femenil/match/modelo-de-merida-vs-uvaq-143
+/division-i-femenil/match/udem-vs-upaep-149
+/division-i-femenil/match/tec-guadalajara-vs-modelo-de-merida-154
+/division-i-femenil/match/cetys-tijuana-vs-modelo-de-merida-155
+/division-i-femenil/match/upaep-vs-anahuac-norte-152
+/division-i-femenil/match/interamericana-vs-tec-cem-153
+/division-i-femenil/match/tec-hidalgo-vs-tec-toluca-151
+/division-i-femenil/match/udlap-vs-anahuac-sur-150
+/division-i-femenil/match/upaep-vs-tec-cem-159
+/division-i-femenil/match/uvaq-vs-udem-156
+/division-i-femenil/match/interamericana-vs-anahuac-norte-160
+/division-i-femenil/match/tec-hidalgo-vs-anahuac-sur-158
+/division-i-femenil/match/udlap-vs-tec-toluca-157
+/division-i-femenil/match/upaep-vs-udlap-169
+/division-i-femenil/match/interamericana-vs-udlap-162
+/division-i-femenil/match/tec-toluca-vs-tec-guadalajara-167
+/division-i-femenil/match/upaep-vs-tec-hidalgo-161
+/division-i-femenil/match/uanl-vs-uvaq-165
+/division-i-femenil/match/anahuac-sur-vs-cetys-tijuana-168
+/division-i-femenil/match/modelo-de-merida-vs-tec-cem-163
+/division-i-femenil/match/interamericana-vs-tec-hidalgo-170
+/division-i-femenil/match/tec-monterrey-vs-uvaq-166
+/division-i-femenil/match/anahuac-sur-vs-tec-guadalajara-172
+/division-i-femenil/match/tec-toluca-vs-cetys-tijuana-171
+/division-i-femenil/match/modelo-de-merida-vs-anahuac-norte-164
+/division-i-femenil/match/tec-guadalajara-vs-udlap-174
+/division-i-femenil/match/uanl-vs-udem-177
+/division-i-femenil/match/cetys-tijuana-vs-tec-hidalgo-173
+/division-i-femenil/match/tec-toluca-vs-interamericana-178
+/division-i-femenil/match/anahuac-sur-vs-upaep-179
+/division-i-femenil/match/anahuac-norte-vs-uvaq-175
+/division-i-femenil/match/tec-guadalajara-vs-tec-hidalgo-181
+/division-i-femenil/match/tec-monterrey-vs-udem-182
+/division-i-femenil/match/anahuac-sur-vs-interamericana-184
+/division-i-femenil/match/tec-toluca-vs-upaep-183
+/division-i-femenil/match/cetys-tijuana-vs-udlap-180
+/division-i-femenil/match/tec-cem-vs-uvaq-176
+/division-i-femenil/match/tec-guadalajara-vs-tec-monterrey-191
+/division-i-femenil/match/cetys-tijuana-vs-uanl-190
+/division-i-femenil/match/anahuac-norte-vs-tec-cem-206
+/division-i-femenil/match/modelo-de-merida-vs-upaep-188
+/division-i-femenil/match/uvaq-vs-tec-hidalgo-185
+/division-i-femenil/match/udem-vs-anahuac-sur-189
+/division-i-femenil/match/tec-guadalajara-vs-uanl-194
+/division-i-femenil/match/uvaq-vs-udlap-186
+/division-i-femenil/match/cetys-tijuana-vs-tec-monterrey-193
+/division-i-femenil/match/modelo-de-merida-vs-interamericana-187
+/division-i-femenil/match/udem-vs-tec-toluca-192
+/division-i-femenil/match/upaep-vs-uvaq-201
+/division-i-femenil/match/modelo-de-merida-vs-uanl-197
+/division-i-femenil/match/anahuac-norte-vs-tec-toluca-196
+/division-i-femenil/match/udem-vs-tec-guadalajara-199
+/division-i-femenil/match/tec-cem-vs-anahuac-sur-195
+/division-i-femenil/match/interamericana-vs-uvaq-200
+/division-i-femenil/match/tec-cem-vs-tec-toluca-202
+/division-i-femenil/match/anahuac-norte-vs-anahuac-sur-203
+/division-i-femenil/match/modelo-de-merida-vs-tec-monterrey-198
+/division-i-femenil/match/udem-vs-cetys-tijuana-204
+/division-i-femenil/match/anahuac-sur-vs-tec-toluca-208
+/division-i-femenil/match/uanl-vs-tec-monterrey-207
+/division-i-femenil/match/uvaq-vs-cetys-tijuana-135
+/division-i-femenil/match/tec-guadalajara-vs-cetys-tijuana-210
+/division-i-femenil/match/interamericana-vs-upaep-209
+/division-i-femenil/match/tec-hidalgo-vs-udlap-205
+# division-i-varonil
+UPAEP → /division-i-varonil/teams/upaep
+TEC SANTA FE → /division-i-varonil/teams/tec-santa-fe
+CEU → /division-i-varonil/teams/ceu
+ANÁHUAC XALAPA → /division-i-varonil/teams/anahuac-xalapa
+ANÁHUAC QUERÉTARO → /division-i-varonil/teams/anahuac-queretaro
+MONTRER → /division-i-varonil/teams/montrer
+TEC PUEBLA → /division-i-varonil/teams/tec-puebla
+UP MÉXICO → /division-i-varonil/teams/up-mexico
+TEC MONTERREY → /division-i-varonil/teams/tec-monterrey
+INTERAMERICANA → /division-i-varonil/teams/interamericana
+UDLAP → /division-i-varonil/teams/udlap
+CETYS MEXICALI → /division-i-varonil/teams/cetys-mexicali
+TEC TOLUCA → /division-i-varonil/teams/tec-toluca
+UANE → /division-i-varonil/teams/uane
+UMAD → /division-i-varonil/teams/umad
+UANL → /division-i-varonil/teams/uanl
+TEC GUADALAJARA → /division-i-varonil/teams/tec-guadalajara
+UV → /division-i-varonil/teams/uv
+UACJ → /division-i-varonil/teams/uacj
+SEMANA 1 → /division-i-varonil/semana-1
+SEMANA 2 → /division-i-varonil/semana-2
+SEMANA 3 → /division-i-varonil/semana-3
+SEMANA 4 → /division-i-varonil/semana-4
+SEMANA 5 → /division-i-varonil/semana-5
+SEMANA 6 → /division-i-varonil/semana-6
+SEMANA 7 → /division-i-varonil/semana-7
+SEMANA 8 → /division-i-varonil/semana-8
+SEMANA 9 → /division-i-varonil/semana-9
+SEMANA 10 → /division-i-varonil/semana-10
+SEMANA 11 → /division-i-varonil/semana-11
+SEMANA 12 → /division-i-varonil/semana-12
+SEMANA 13 → /division-i-varonil/semana-13
+SEMANA 14 → /division-i-varonil/semana-14
+SEMANA 15 → /division-i-varonil/semana-15
+SEMANA 16 → /division-i-varonil/semana-16
+SEMANA 17 → /division-i-varonil/semana-17
+SEMANA 18 → /division-i-varonil/semana-18
+SEMANA 19 → /division-i-varonil/semana-19
+SEMANA 20 → /division-i-varonil/semana-20
+SEMANA 21 → /division-i-varonil/semana-21
+SEMANA 22 → /division-i-varonil/semana-22
+SEMANA 23 → /division-i-varonil/semana-23
+SEMANA 24 → /division-i-varonil/semana-24
+/division-i-varonil/match/up-mexico-vs-uv-2
+/division-i-varonil/match/montrer-vs-uacj-10
+/division-i-varonil/match/umad-vs-ceu-3
+/division-i-varonil/match/udlap-vs-anahuac-xalapa-1
+/division-i-varonil/match/tec-monterrey-vs-tec-toluca-5
+/division-i-varonil/match/tec-puebla-vs-uane-4
+/division-i-varonil/match/upaep-vs-cetys-mexicali-7
+/division-i-varonil/match/interamericana-vs-tec-guadalajara-8
+/division-i-varonil/match/uanl-vs-tec-santa-fe-6
+/division-i-varonil/match/upaep-vs-tec-guadalajara-17
+/division-i-varonil/match/umad-vs-uane-13
+/division-i-varonil/match/interamericana-vs-cetys-mexicali-18
+/division-i-varonil/match/up-mexico-vs-anahuac-xalapa-12
+/division-i-varonil/match/uanl-vs-tec-toluca-16
+/division-i-varonil/match/tec-puebla-vs-ceu-14
+/division-i-varonil/match/tec-monterrey-vs-tec-santa-fe-15
+/division-i-varonil/match/udlap-vs-uv-11
+/division-i-varonil/match/anahuac-queretaro-vs-uacj-9
+/division-i-varonil/match/up-mexico-vs-tec-puebla-20
+/division-i-varonil/match/uacj-vs-cetys-mexicali-27
+/division-i-varonil/match/tec-santa-fe-vs-montrer-26
+/division-i-varonil/match/uane-vs-uv-22
+/division-i-varonil/match/ceu-vs-anahuac-xalapa-21
+/division-i-varonil/match/tec-toluca-vs-anahuac-queretaro-25
+/division-i-varonil/match/tec-monterrey-vs-upaep-23
+/division-i-varonil/match/udlap-vs-umad-19
+/division-i-varonil/match/uanl-vs-interamericana-24
+/division-i-varonil/match/up-mexico-vs-umad-30
+/division-i-varonil/match/ceu-vs-uv-31
+/division-i-varonil/match/tec-toluca-vs-montrer-35
+/division-i-varonil/match/uane-vs-anahuac-xalapa-32
+/division-i-varonil/match/tec-monterrey-vs-interamericana-33
+/division-i-varonil/match/uanl-vs-upaep-34
+/division-i-varonil/match/tec-santa-fe-vs-anahuac-queretaro-36
+/division-i-varonil/match/udlap-vs-tec-puebla-29
+/division-i-varonil/match/uacj-vs-tec-guadalajara-28
+/division-i-varonil/match/anahuac-xalapa-vs-tec-monterrey-39
+/division-i-varonil/match/tec-guadalajara-vs-montrer-44
+/division-i-varonil/match/uv-vs-uanl-40
+/division-i-varonil/match/cetys-mexicali-vs-anahuac-queretaro-43
+/division-i-varonil/match/upaep-vs-uacj-45
+/division-i-varonil/match/uv-vs-tec-monterrey-50
+/division-i-varonil/match/umad-vs-tec-toluca-41
+/division-i-varonil/match/tec-puebla-vs-tec-santa-fe-42
+/division-i-varonil/match/uane-vs-up-mexico-38
+/division-i-varonil/match/anahuac-xalapa-vs-uanl-49
+/division-i-varonil/match/ceu-vs-udlap-37
+/division-i-varonil/match/cetys-mexicali-vs-montrer-53
+/division-i-varonil/match/tec-guadalajara-vs-anahuac-queretaro-54
+/division-i-varonil/match/interamericana-vs-uacj-46
+/division-i-varonil/match/umad-vs-tec-santa-fe-51
+/division-i-varonil/match/ceu-vs-up-mexico-47
+/division-i-varonil/match/uane-vs-udlap-48
+/division-i-varonil/match/cetys-mexicali-vs-tec-toluca-97
+/division-i-varonil/match/ceu-vs-anahuac-queretaro-79
+/division-i-varonil/match/cetys-mexicali-vs-tec-santa-fe-107
+/division-i-varonil/match/tec-guadalajara-vs-uv-58
+/division-i-varonil/match/cetys-mexicali-vs-anahuac-xalapa-57
+/division-i-varonil/match/interamericana-vs-uane-62
+/division-i-varonil/match/anahuac-queretaro-vs-umad-59
+/division-i-varonil/match/montrer-vs-tec-puebla-60
+/division-i-varonil/match/uacj-vs-tec-toluca-63
+/division-i-varonil/match/uanl-vs-up-mexico-56
+/division-i-varonil/match/upaep-vs-ceu-61
+/division-i-varonil/match/tec-monterrey-vs-udlap-55
+/division-i-varonil/match/montrer-vs-umad-70
+/division-i-varonil/match/cetys-mexicali-vs-uv-67
+/division-i-varonil/match/upaep-vs-uane-71
+/division-i-varonil/match/tec-guadalajara-vs-anahuac-xalapa-68
+/division-i-varonil/match/interamericana-vs-ceu-72
+/division-i-varonil/match/tec-monterrey-vs-up-mexico-65
+/division-i-varonil/match/uanl-vs-udlap-66
+/division-i-varonil/match/anahuac-queretaro-vs-tec-puebla-69
+/division-i-varonil/match/uacj-vs-tec-santa-fe-64
+/division-i-varonil/match/uv-vs-upaep-86
+/division-i-varonil/match/anahuac-xalapa-vs-upaep-75
+/division-i-varonil/match/tec-monterrey-vs-uacj-81
+/division-i-varonil/match/tec-santa-fe-vs-up-mexico-74
+/division-i-varonil/match/umad-vs-cetys-mexicali-77
+/division-i-varonil/match/tec-toluca-vs-udlap-73
+/division-i-varonil/match/anahuac-xalapa-vs-interamericana-85
+/division-i-varonil/match/uane-vs-montrer-80
+/division-i-varonil/match/tec-puebla-vs-tec-guadalajara-78
+/division-i-varonil/match/umad-vs-tec-guadalajara-87
+/division-i-varonil/match/uanl-vs-uacj-82
+/division-i-varonil/match/tec-toluca-vs-up-mexico-83
+/division-i-varonil/match/ceu-vs-montrer-89
+/division-i-varonil/match/uane-vs-anahuac-queretaro-90
+/division-i-varonil/match/tec-puebla-vs-cetys-mexicali-88
+/division-i-varonil/match/uv-vs-interamericana-76
+/division-i-varonil/match/tec-santa-fe-vs-udlap-84
+/division-i-varonil/match/tec-guadalajara-vs-tec-santa-fe-98
+/division-i-varonil/match/anahuac-xalapa-vs-umad-93
+/division-i-varonil/match/uv-vs-tec-puebla-94
+/division-i-varonil/match/up-mexico-vs-interamericana-92
+/division-i-varonil/match/anahuac-queretaro-vs-tec-monterrey-95
+/division-i-varonil/match/uv-vs-umad-104
+/division-i-varonil/match/montrer-vs-uanl-96
+/division-i-varonil/match/anahuac-xalapa-vs-tec-puebla-103
+/division-i-varonil/match/udlap-vs-upaep-91
+/division-i-varonil/match/uacj-vs-ceu-99
+/division-i-varonil/match/montrer-vs-tec-monterrey-106
+/division-i-varonil/match/up-mexico-vs-upaep-102
+/division-i-varonil/match/udlap-vs-interamericana-101
+/division-i-varonil/match/anahuac-queretaro-vs-uanl-105
+/division-i-varonil/match/uacj-vs-uane-100
+/division-i-varonil/match/upaep-vs-interamericana-169
+/division-i-varonil/match/tec-guadalajara-vs-tec-toluca-108
+/division-i-varonil/match/montrer-vs-interamericana-152
+/division-i-varonil/match/tec-santa-fe-vs-uv-146
+/division-i-varonil/match/ceu-vs-tec-monterrey-113
+/division-i-varonil/match/tec-puebla-vs-uacj-118
+/division-i-varonil/match/ceu-vs-uanl-123
+/division-i-varonil/match/up-mexico-vs-tec-guadalajara-110
+/division-i-varonil/match/anahuac-queretaro-vs-anahuac-xalapa-111
+/division-i-varonil/match/umad-vs-uacj-117
+/division-i-varonil/match/montrer-vs-uv-112
+/division-i-varonil/match/uane-vs-uanl-114
+/division-i-varonil/match/udlap-vs-cetys-mexicali-109
+/division-i-varonil/match/interamericana-vs-tec-santa-fe-116
+/division-i-varonil/match/upaep-vs-tec-toluca-115
+/division-i-varonil/match/montrer-vs-anahuac-xalapa-122
+/division-i-varonil/match/upaep-vs-tec-santa-fe-125
+/division-i-varonil/match/interamericana-vs-tec-toluca-126
+/division-i-varonil/match/up-mexico-vs-cetys-mexicali-120
+/division-i-varonil/match/uane-vs-tec-monterrey-124
+/division-i-varonil/match/udlap-vs-tec-guadalajara-119
+/division-i-varonil/match/anahuac-queretaro-vs-uv-121
+/division-i-varonil/match/upaep-vs-umad-129
+/division-i-varonil/match/upaep-vs-tec-puebla-139
+/division-i-varonil/match/up-mexico-vs-montrer-128
+/division-i-varonil/match/tec-santa-fe-vs-uane-132
+/division-i-varonil/match/tec-toluca-vs-ceu-131
+/division-i-varonil/match/uacj-vs-anahuac-xalapa-135
+/division-i-varonil/match/udlap-vs-anahuac-queretaro-127
+/division-i-varonil/match/uanl-vs-tec-guadalajara-134
+/division-i-varonil/match/interamericana-vs-tec-puebla-130
+/division-i-varonil/match/tec-monterrey-vs-cetys-mexicali-133
+/division-i-varonil/match/up-mexico-vs-anahuac-queretaro-138
+/division-i-varonil/match/umad-vs-interamericana-140
+/division-i-varonil/match/tec-monterrey-vs-tec-guadalajara-143
+/division-i-varonil/match/uanl-vs-cetys-mexicali-144
+/division-i-varonil/match/tec-toluca-vs-uane-141
+/division-i-varonil/match/tec-santa-fe-vs-ceu-142
+/division-i-varonil/match/udlap-vs-montrer-137
+/division-i-varonil/match/uacj-vs-uv-136
+/division-i-varonil/match/tec-guadalajara-vs-uane-150
+/division-i-varonil/match/cetys-mexicali-vs-ceu-149
+/division-i-varonil/match/anahuac-queretaro-vs-upaep-151
+/division-i-varonil/match/tec-toluca-vs-anahuac-xalapa-145
+/division-i-varonil/match/udlap-vs-uacj-153
+/division-i-varonil/match/uanl-vs-tec-puebla-148
+/division-i-varonil/match/tec-monterrey-vs-umad-147
+/division-i-varonil/match/tec-monterrey-vs-tec-puebla-157
+/division-i-varonil/match/cetys-mexicali-vs-uane-159
+/division-i-varonil/match/montrer-vs-upaep-162
+/division-i-varonil/match/tec-guadalajara-vs-ceu-160
+/division-i-varonil/match/up-mexico-vs-uacj-154
+/division-i-varonil/match/tec-toluca-vs-uv-155
+/division-i-varonil/match/uanl-vs-umad-158
+/division-i-varonil/match/tec-santa-fe-vs-anahuac-xalapa-156
+/division-i-varonil/match/anahuac-queretaro-vs-interamericana-161
+/division-i-varonil/match/cetys-mexicali-vs-tec-guadalajara-170
+/division-i-varonil/match/anahuac-queretaro-vs-montrer-171
+/division-i-varonil/match/tec-toluca-vs-tec-santa-fe-168
+/division-i-varonil/match/umad-vs-tec-puebla-165
+/division-i-varonil/match/ceu-vs-uane-166
+/division-i-varonil/match/tec-monterrey-vs-uanl-167
+/division-i-varonil/match/udlap-vs-up-mexico-163
+/division-i-varonil/match/anahuac-xalapa-vs-uv-164
+/division-i-varonil/match/cetys-mexicali-vs-upaep-178
+/division-i-varonil/match/anahuac-xalapa-vs-up-mexico-172
+/division-i-varonil/match/tec-guadalajara-vs-interamericana-179
+/division-i-varonil/match/uv-vs-up-mexico-183
+/division-i-varonil/match/tec-santa-fe-vs-tec-monterrey-177
+/division-i-varonil/match/uacj-vs-montrer-180
+/division-i-varonil/match/tec-toluca-vs-uanl-176
+/division-i-varonil/match/ceu-vs-tec-puebla-174
+/division-i-varonil/match/uane-vs-umad-175
+/division-i-varonil/match/anahuac-xalapa-vs-udlap-182
+/division-i-varonil/match/tec-guadalajara-vs-upaep-189
+/division-i-varonil/match/ceu-vs-umad-184
+/division-i-varonil/match/tec-toluca-vs-tec-monterrey-186
+/division-i-varonil/match/uane-vs-tec-puebla-185
+/division-i-varonil/match/tec-santa-fe-vs-uanl-187
+/division-i-varonil/match/uacj-vs-anahuac-queretaro-181
+/division-i-varonil/match/tec-guadalajara-vs-uacj-198
+/division-i-varonil/match/anahuac-xalapa-vs-uane-192
+/division-i-varonil/match/uv-vs-ceu-193
+/division-i-varonil/match/anahuac-queretaro-vs-tec-santa-fe-196
+/division-i-varonil/match/uv-vs-uane-203
+/division-i-varonil/match/umad-vs-up-mexico-190
+/division-i-varonil/match/montrer-vs-tec-toluca-197
+/division-i-varonil/match/tec-puebla-vs-udlap-191
+/division-i-varonil/match/interamericana-vs-tec-monterrey-195
+/division-i-varonil/match/upaep-vs-uanl-194
+/division-i-varonil/match/anahuac-xalapa-vs-ceu-202
+/division-i-varonil/match/cetys-mexicali-vs-uacj-199
+/division-i-varonil/match/montrer-vs-tec-santa-fe-207
+/division-i-varonil/match/upaep-vs-tec-monterrey-204
+/division-i-varonil/match/umad-vs-udlap-200
+/division-i-varonil/match/interamericana-vs-uanl-205
+/division-i-varonil/match/tec-puebla-vs-up-mexico-201
+/division-i-varonil/match/anahuac-queretaro-vs-tec-toluca-206
+/division-i-varonil/match/up-mexico-vs-ceu-209
+/division-i-varonil/match/anahuac-queretaro-vs-tec-guadalajara-214
+/division-i-varonil/match/uacj-vs-interamericana-216
+/division-i-varonil/match/tec-toluca-vs-tec-puebla-212
+/division-i-varonil/match/montrer-vs-cetys-mexicali-215
+/division-i-varonil/match/tec-santa-fe-vs-umad-213
+/division-i-varonil/match/tec-monterrey-vs-uv-210
+/division-i-varonil/match/udlap-vs-uane-208
+/division-i-varonil/match/uanl-vs-anahuac-xalapa-211
+/division-i-varonil/match/montrer-vs-tec-guadalajara-225
+/division-i-varonil/match/up-mexico-vs-uane-219
+/division-i-varonil/match/tec-toluca-vs-umad-222
+/division-i-varonil/match/uanl-vs-uv-221
+/division-i-varonil/match/tec-santa-fe-vs-tec-puebla-223
+/division-i-varonil/match/tec-monterrey-vs-anahuac-xalapa-220
+/division-i-varonil/match/udlap-vs-ceu-218
+/division-i-varonil/match/anahuac-queretaro-vs-cetys-mexicali-224
+/division-i-varonil/match/uacj-vs-upaep-217
+/division-i-varonil/match/cetys-mexicali-vs-up-mexico-280
+/division-i-varonil/match/tec-puebla-vs-tec-toluca-52
+/division-i-varonil/match/cetys-mexicali-vs-interamericana-188
+/division-i-varonil/match/anahuac-xalapa-vs-tec-guadalajara-228
+/division-i-varonil/match/uv-vs-cetys-mexicali-229
+/division-i-varonil/match/up-mexico-vs-tec-monterrey-227
+/division-i-varonil/match/uv-vs-tec-guadalajara-239
+/division-i-varonil/match/tec-santa-fe-vs-uacj-234
+/division-i-varonil/match/umad-vs-montrer-230
+/division-i-varonil/match/anahuac-xalapa-vs-cetys-mexicali-238
+/division-i-varonil/match/ceu-vs-upaep-242
+/division-i-varonil/match/tec-puebla-vs-anahuac-queretaro-231
+/division-i-varonil/match/uane-vs-interamericana-243
+/division-i-varonil/match/udlap-vs-uanl-226
+/division-i-varonil/match/tec-toluca-vs-uacj-235
+/division-i-varonil/match/up-mexico-vs-uanl-237
+/division-i-varonil/match/ceu-vs-interamericana-232
+/division-i-varonil/match/umad-vs-anahuac-queretaro-240
+/division-i-varonil/match/uane-vs-upaep-233
+/division-i-varonil/match/tec-puebla-vs-montrer-241
+/division-i-varonil/match/udlap-vs-tec-monterrey-236
+/division-i-varonil/match/tec-guadalajara-vs-umad-249
+/division-i-varonil/match/cetys-mexicali-vs-tec-puebla-248
+/division-i-varonil/match/up-mexico-vs-tec-toluca-245
+/division-i-varonil/match/anahuac-queretaro-vs-uane-250
+/division-i-varonil/match/udlap-vs-tec-santa-fe-244
+/division-i-varonil/match/uacj-vs-uanl-252
+/division-i-varonil/match/montrer-vs-ceu-251
+/division-i-varonil/match/interamericana-vs-anahuac-xalapa-247
+/division-i-varonil/match/upaep-vs-uv-246
+/division-i-varonil/match/montrer-vs-uane-261
+/division-i-varonil/match/upaep-vs-anahuac-xalapa-256
+/division-i-varonil/match/tec-guadalajara-vs-tec-puebla-259
+/division-i-varonil/match/interamericana-vs-uv-257
+/division-i-varonil/match/up-mexico-vs-tec-santa-fe-255
+/division-i-varonil/match/anahuac-queretaro-vs-ceu-260
+/division-i-varonil/match/cetys-mexicali-vs-umad-258
+/division-i-varonil/match/udlap-vs-tec-toluca-254
+/division-i-varonil/match/uacj-vs-tec-monterrey-253
+/division-i-varonil/match/uv-vs-udlap-173
+/division-i-varonil/match/upaep-vs-udlap-272
+/division-i-varonil/match/umad-vs-uv-264
+/division-i-varonil/match/tec-santa-fe-vs-cetys-mexicali-269
+/division-i-varonil/match/tec-toluca-vs-tec-guadalajara-268
+/division-i-varonil/match/tec-puebla-vs-anahuac-xalapa-265
+/division-i-varonil/match/uane-vs-uacj-270
+/division-i-varonil/match/upaep-vs-up-mexico-262
+/division-i-varonil/match/tec-monterrey-vs-montrer-266
+/division-i-varonil/match/uanl-vs-anahuac-queretaro-267
+/division-i-varonil/match/interamericana-vs-udlap-263
+/division-i-varonil/match/umad-vs-anahuac-xalapa-274
+/division-i-varonil/match/interamericana-vs-up-mexico-273
+/division-i-varonil/match/ceu-vs-uacj-271
+/division-i-varonil/match/tec-monterrey-vs-anahuac-queretaro-276
+/division-i-varonil/match/uanl-vs-montrer-277
+/division-i-varonil/match/tec-toluca-vs-cetys-mexicali-278
+/division-i-varonil/match/tec-puebla-vs-uv-275
+/division-i-varonil/match/tec-santa-fe-vs-tec-guadalajara-279
+/division-i-varonil/match/interamericana-vs-umad-300
+/division-i-varonil/match/anahuac-xalapa-vs-montrer-282
+/division-i-varonil/match/tec-guadalajara-vs-udlap-281
+/division-i-varonil/match/uv-vs-anahuac-queretaro-283
+/division-i-varonil/match/uv-vs-montrer-293
+/division-i-varonil/match/uacj-vs-tec-puebla-288
+/division-i-varonil/match/cetys-mexicali-vs-udlap-290
+/division-i-varonil/match/tec-toluca-vs-interamericana-286
+/division-i-varonil/match/tec-santa-fe-vs-upaep-287
+/division-i-varonil/match/tec-monterrey-vs-uane-284
+/division-i-varonil/match/uanl-vs-ceu-285
+/division-i-varonil/match/anahuac-xalapa-vs-anahuac-queretaro-292
+/division-i-varonil/match/tec-guadalajara-vs-up-mexico-291
+/division-i-varonil/match/tec-monterrey-vs-ceu-294
+/division-i-varonil/match/uanl-vs-uane-295
+/division-i-varonil/match/tec-toluca-vs-upaep-296
+/division-i-varonil/match/tec-santa-fe-vs-interamericana-297
+/division-i-varonil/match/uacj-vs-umad-289
+/division-i-varonil/match/tec-puebla-vs-interamericana-311
+/division-i-varonil/match/tec-guadalajara-vs-tec-monterrey-305
+/division-i-varonil/match/uv-vs-uacj-306
+/division-i-varonil/match/cetys-mexicali-vs-uanl-304
+/division-i-varonil/match/anahuac-queretaro-vs-up-mexico-298
+/division-i-varonil/match/montrer-vs-udlap-299
+/division-i-varonil/match/anahuac-xalapa-vs-uacj-307
+/division-i-varonil/match/ceu-vs-tec-santa-fe-302
+/division-i-varonil/match/uane-vs-tec-toluca-303
+/division-i-varonil/match/montrer-vs-up-mexico-309
+/division-i-varonil/match/cetys-mexicali-vs-tec-monterrey-314
+/division-i-varonil/match/tec-guadalajara-vs-uanl-315
+/division-i-varonil/match/ceu-vs-tec-toluca-312
+/division-i-varonil/match/uane-vs-tec-santa-fe-313
+/division-i-varonil/match/anahuac-queretaro-vs-udlap-308
+/division-i-varonil/match/umad-vs-upaep-310
+/division-i-varonil/match/anahuac-xalapa-vs-tec-santa-fe-316
+/division-i-varonil/match/uv-vs-tec-toluca-317
+/division-i-varonil/match/uv-vs-tec-santa-fe-327
+/division-i-varonil/match/uacj-vs-up-mexico-324
+/division-i-varonil/match/umad-vs-uanl-318
+/division-i-varonil/match/uane-vs-cetys-mexicali-321
+/division-i-varonil/match/upaep-vs-montrer-322
+/division-i-varonil/match/interamericana-vs-anahuac-queretaro-323
+/division-i-varonil/match/anahuac-xalapa-vs-tec-toluca-326
+/division-i-varonil/match/tec-puebla-vs-tec-monterrey-319
+/division-i-varonil/match/ceu-vs-tec-guadalajara-320
+/division-i-varonil/match/umad-vs-tec-monterrey-328
+/division-i-varonil/match/upaep-vs-anahuac-queretaro-332
+/division-i-varonil/match/interamericana-vs-montrer-333
+/division-i-varonil/match/ceu-vs-cetys-mexicali-330
+/division-i-varonil/match/uane-vs-tec-guadalajara-331
+/division-i-varonil/match/tec-puebla-vs-uanl-329
+/division-i-varonil/match/uacj-vs-udlap-325
+/division-i-varonil/match/tec-puebla-vs-upaep-301
+/division-i-varonil/match/up-mexico-vs-udlap-334
+/division-i-varonil/match/uv-vs-anahuac-xalapa-335
+/division-i-varonil/match/tec-santa-fe-vs-tec-toluca-339
+/division-i-varonil/match/tec-puebla-vs-umad-336
+/division-i-varonil/match/uane-vs-ceu-337
+/division-i-varonil/match/uanl-vs-tec-monterrey-338
+/division-i-varonil/match/montrer-vs-anahuac-queretaro-342
+/division-i-varonil/match/tec-guadalajara-vs-cetys-mexicali-341
+/division-i-varonil/match/interamericana-vs-upaep-340
+# division-ii-femenil-centro
+BUAP → /division-ii-femenil-centro/teams/buap
+UAGRO → /division-ii-femenil-centro/teams/uagro
+UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL → /division-ii-femenil-centro/teams/universidad-la-salle-nezahualcoyotl
+UNIVERSIDAD ANÁHUAC XALAPA → /division-ii-femenil-centro/teams/universidad-anahuac-xalapa
+UMAD → /division-ii-femenil-centro/teams/umad
+UVM LOMAS VERDES → /division-ii-femenil-centro/teams/uvm-lomas-verdes
+UNIVERSIDAD AMERICANA DE PUEBLA → /division-ii-femenil-centro/teams/universidad-americana-de-puebla
+IBERO CDMX → /division-ii-femenil-centro/teams/ibero-cdmx
+IES UNIVERSIDAD → /division-ii-femenil-centro/teams/ies-universidad
+UAEMÉX → /division-ii-femenil-centro/teams/uaemex
+IPN → /division-ii-femenil-centro/teams/ipn
+UVM CENTRO → /division-ii-femenil-centro/teams/uvm-centro
+UNIVERSIDAD MARISTA CD. DE MÉXICO → /division-ii-femenil-centro/teams/universidad-marista-cd-de-mexico
+UV → /division-ii-femenil-centro/teams/uv
+UNAM → /division-ii-femenil-centro/teams/unam
+ANÁHUAC PUEBLA → /division-ii-femenil-centro/teams/anahuac-puebla
+SEMANA 1 → /division-ii-femenil-centro/semana-1
+SEMANA 2 → /division-ii-femenil-centro/semana-2
+SEMANA 3 → /division-ii-femenil-centro/semana-3
+SEMANA 4 → /division-ii-femenil-centro/semana-4
+SEMANA 5 → /division-ii-femenil-centro/semana-5
+SEMANA 6 → /division-ii-femenil-centro/semana-6
+SEMANA 7 → /division-ii-femenil-centro/semana-7
+SEMANA 8 → /division-ii-femenil-centro/semana-8
+SEMANA 9 → /division-ii-femenil-centro/semana-9
+SEMANA 10 → /division-ii-femenil-centro/semana-10
+SEMANA 11 → /division-ii-femenil-centro/semana-11
+SEMANA 12 → /division-ii-femenil-centro/semana-12
+SEMANA 13 → /division-ii-femenil-centro/semana-13
+SEMANA 14 → /division-ii-femenil-centro/semana-14
+SEMANA 15 → /division-ii-femenil-centro/semana-15
+SEMANA 16 → /division-ii-femenil-centro/semana-16
+SEMANA 17 → /division-ii-femenil-centro/semana-17
+/division-ii-femenil-centro/match/umad-vs-ies-universidad-1
+/division-ii-femenil-centro/match/universidad-americana-de-puebla-vs-universidad-marista-cd-de-mexico-2
+/division-ii-femenil-centro/match/universidad-anahuac-xalapa-vs-uvm-centro-3
+/division-ii-femenil-centro/match/uvm-lomas-verdes-vs-uv-4
+/division-ii-femenil-centro/match/universidad-la-salle-nezahualcoyotl-vs-ibero-cdmx-5
+/division-ii-femenil-centro/match/unam-vs-uaemex-6
+/division-ii-femenil-centro/match/ipn-vs-anahuac-puebla-7
+/division-ii-femenil-centro/match/buap-vs-uagro-8
+/division-ii-femenil-centro/match/anahuac-puebla-vs-buap-9
+/division-ii-femenil-centro/match/uaemex-vs-ipn-10
+/division-ii-femenil-centro/match/uvm-centro-vs-universidad-la-salle-nezahualcoyotl-11
+/division-ii-femenil-centro/match/ibero-cdmx-vs-umad-12
+/division-ii-femenil-centro/match/uv-vs-unam-13
+/division-ii-femenil-centro/match/ies-universidad-vs-uvm-lomas-verdes-14
+/division-ii-femenil-centro/match/universidad-marista-cd-de-mexico-vs-universidad-anahuac-xalapa-15
+/division-ii-femenil-centro/match/uvm-lomas-verdes-vs-ibero-cdmx-16
+/division-ii-femenil-centro/match/umad-vs-uvm-centro-17
+/division-ii-femenil-centro/match/buap-vs-uaemex-18
+/division-ii-femenil-centro/match/universidad-anahuac-xalapa-vs-uagro-19
+/division-ii-femenil-centro/match/unam-vs-ipn-20
+/division-ii-femenil-centro/match/universidad-americana-de-puebla-vs-anahuac-puebla-21
+/division-ii-femenil-centro/match/universidad-la-salle-nezahualcoyotl-vs-universidad-marista-cd-de-mexico-22
+/division-ii-femenil-centro/match/uv-vs-ies-universidad-23
+/division-ii-femenil-centro/match/anahuac-puebla-vs-universidad-anahuac-xalapa-24
+/division-ii-femenil-centro/match/uaemex-vs-universidad-americana-de-puebla-25
+/division-ii-femenil-centro/match/ibero-cdmx-vs-uv-26
+/division-ii-femenil-centro/match/ipn-vs-buap-27
+/division-ii-femenil-centro/match/uagro-vs-universidad-la-salle-nezahualcoyotl-28
+/division-ii-femenil-centro/match/ies-universidad-vs-unam-29
+/division-ii-femenil-centro/match/universidad-marista-cd-de-mexico-vs-umad-30
+/division-ii-femenil-centro/match/uvm-centro-vs-uvm-lomas-verdes-31
+/division-ii-femenil-centro/match/umad-vs-uagro-32
+/division-ii-femenil-centro/match/uvm-lomas-verdes-vs-universidad-marista-cd-de-mexico-33
+/division-ii-femenil-centro/match/universidad-anahuac-xalapa-vs-uaemex-34
+/division-ii-femenil-centro/match/unam-vs-buap-35
+/division-ii-femenil-centro/match/uv-vs-uvm-centro-36
+/division-ii-femenil-centro/match/ies-universidad-vs-ibero-cdmx-37
+/division-ii-femenil-centro/match/universidad-americana-de-puebla-vs-ipn-38
+/division-ii-femenil-centro/match/anahuac-puebla-vs-umad-39
+/division-ii-femenil-centro/match/ibero-cdmx-vs-unam-40
+/division-ii-femenil-centro/match/buap-vs-universidad-americana-de-puebla-41
+/division-ii-femenil-centro/match/uaemex-vs-universidad-la-salle-nezahualcoyotl-42
+/division-ii-femenil-centro/match/uvm-centro-vs-ies-universidad-43
+/division-ii-femenil-centro/match/ipn-vs-universidad-anahuac-xalapa-44
+/division-ii-femenil-centro/match/universidad-marista-cd-de-mexico-vs-uv-45
+/division-ii-femenil-centro/match/uagro-vs-uvm-lomas-verdes-46
+/division-ii-femenil-centro/match/umad-vs-uaemex-47
+/division-ii-femenil-centro/match/unam-vs-universidad-americana-de-puebla-48
+/division-ii-femenil-centro/match/uv-vs-uagro-50
+/division-ii-femenil-centro/match/universidad-la-salle-nezahualcoyotl-vs-ipn-49
+/division-ii-femenil-centro/match/uvm-lomas-verdes-vs-anahuac-puebla-51
+/division-ii-femenil-centro/match/anahuac-puebla-vs-uv-52
+/division-ii-femenil-centro/match/uaemex-vs-uvm-lomas-verdes-53
+/division-ii-femenil-centro/match/buap-vs-universidad-la-salle-nezahualcoyotl-54
+/division-ii-femenil-centro/match/uvm-centro-vs-unam-55
+/division-ii-femenil-centro/match/ipn-vs-umad-56
+/division-ii-femenil-centro/match/uagro-vs-ies-universidad-57
+/division-ii-femenil-centro/match/universidad-americana-de-puebla-vs-universidad-anahuac-xalapa-58
+/division-ii-femenil-centro/match/universidad-marista-cd-de-mexico-vs-ibero-cdmx-59
+/division-ii-femenil-centro/match/universidad-anahuac-xalapa-vs-buap-60
+/division-ii-femenil-centro/match/ibero-cdmx-vs-uvm-centro-61
+/division-ii-femenil-centro/match/uagro-vs-universidad-americana-de-puebla-62
+/division-ii-femenil-centro/match/universidad-la-salle-nezahualcoyotl-vs-anahuac-puebla-63
+/division-ii-femenil-centro/match/ies-universidad-vs-universidad-marista-cd-de-mexico-64
+/division-ii-femenil-centro/match/umad-vs-buap-65
+/division-ii-femenil-centro/match/ibero-cdmx-vs-uagro-66
+/division-ii-femenil-centro/match/unam-vs-universidad-anahuac-xalapa-67
+/division-ii-femenil-centro/match/universidad-la-salle-nezahualcoyotl-vs-universidad-americana-de-puebla-68
+/division-ii-femenil-centro/match/ies-universidad-vs-anahuac-puebla-69
+/division-ii-femenil-centro/match/anahuac-puebla-vs-ibero-cdmx-70
+/division-ii-femenil-centro/match/uaemex-vs-ies-universidad-71
+/division-ii-femenil-centro/match/universidad-anahuac-xalapa-vs-universidad-la-salle-nezahualcoyotl-72
+/division-ii-femenil-centro/match/uagro-vs-uvm-centro-73
+/division-ii-femenil-centro/match/universidad-marista-cd-de-mexico-vs-unam-75
+/division-ii-femenil-centro/match/universidad-americana-de-puebla-vs-umad-74
+/division-ii-femenil-centro/match/uvm-lomas-verdes-vs-universidad-americana-de-puebla-76
+/division-ii-femenil-centro/match/umad-vs-universidad-anahuac-xalapa-77
+/division-ii-femenil-centro/match/uvm-centro-vs-anahuac-puebla-78
+/division-ii-femenil-centro/match/ibero-cdmx-vs-uaemex-79
+/division-ii-femenil-centro/match/unam-vs-universidad-la-salle-nezahualcoyotl-80
+/division-ii-femenil-centro/match/uv-vs-buap-81
+/division-ii-femenil-centro/match/ies-universidad-vs-ipn-82
+/division-ii-femenil-centro/match/universidad-marista-cd-de-mexico-vs-uagro-83
+/division-ii-femenil-centro/match/uvm-centro-vs-universidad-marista-cd-de-mexico-84
+/division-ii-femenil-centro/match/anahuac-puebla-vs-universidad-marista-cd-de-mexico-85
+/division-ii-femenil-centro/match/uaemex-vs-uvm-centro-86
+/division-ii-femenil-centro/match/buap-vs-ies-universidad-87
+/division-ii-femenil-centro/match/universidad-anahuac-xalapa-vs-uvm-lomas-verdes-88
+/division-ii-femenil-centro/match/ipn-vs-ibero-cdmx-89
+/division-ii-femenil-centro/match/universidad-la-salle-nezahualcoyotl-vs-umad-90
+/division-ii-femenil-centro/match/uagro-vs-unam-91
+/division-ii-femenil-centro/match/universidad-americana-de-puebla-vs-uv-92
+/division-ii-femenil-centro/match/uv-vs-uaemex-93
+/division-ii-femenil-centro/match/uvm-lomas-verdes-vs-ipn-94
+/division-ii-femenil-centro/match/uvm-centro-vs-ipn-95
+/division-ii-femenil-centro/match/ibero-cdmx-vs-buap-96
+/division-ii-femenil-centro/match/unam-vs-umad-97
+/division-ii-femenil-centro/match/uv-vs-universidad-anahuac-xalapa-98
+/division-ii-femenil-centro/match/uagro-vs-anahuac-puebla-99
+/division-ii-femenil-centro/match/uvm-lomas-verdes-vs-universidad-la-salle-nezahualcoyotl-100
+/division-ii-femenil-centro/match/ies-universidad-vs-universidad-americana-de-puebla-101
+/division-ii-femenil-centro/match/universidad-marista-cd-de-mexico-vs-uaemex-102
+/division-ii-femenil-centro/match/umad-vs-uvm-lomas-verdes-103
+/division-ii-femenil-centro/match/anahuac-puebla-vs-unam-104
+/division-ii-femenil-centro/match/buap-vs-uvm-centro-105
+/division-ii-femenil-centro/match/universidad-anahuac-xalapa-vs-ies-universidad-106
+/division-ii-femenil-centro/match/ipn-vs-universidad-marista-cd-de-mexico-107
+/division-ii-femenil-centro/match/universidad-la-salle-nezahualcoyotl-vs-uv-109
+/division-ii-femenil-centro/match/uaemex-vs-uagro-108
+/division-ii-femenil-centro/match/buap-vs-uvm-lomas-verdes-110
+/division-ii-femenil-centro/match/ipn-vs-uv-111
+/division-ii-femenil-centro/match/universidad-americana-de-puebla-vs-ibero-cdmx-112
+/division-ii-femenil-centro/match/anahuac-puebla-vs-uaemex-113
+/division-ii-femenil-centro/match/uvm-centro-vs-universidad-americana-de-puebla-114
+/division-ii-femenil-centro/match/unam-vs-uvm-lomas-verdes-116
+/division-ii-femenil-centro/match/ibero-cdmx-vs-universidad-anahuac-xalapa-115
+/division-ii-femenil-centro/match/uv-vs-umad-117
+/division-ii-femenil-centro/match/universidad-marista-cd-de-mexico-vs-buap-119
+/division-ii-femenil-centro/match/ies-universidad-vs-universidad-la-salle-nezahualcoyotl-118
+/division-ii-femenil-centro/match/uagro-vs-ipn-120
+# division-ii-varonil-centro
+UNIVERSIDAD MARISTA CD. DE MÉXICO → /division-ii-varonil-centro/teams/universidad-marista-cd-de-mexico
+UNIVERSIDAD ANÁHUAC CÓRDOBA → /division-ii-varonil-centro/teams/universidad-anahuac-cordoba
+ANÁHUAC PUEBLA → /division-ii-varonil-centro/teams/anahuac-puebla
+UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL → /division-ii-varonil-centro/teams/universidad-la-salle-nezahualcoyotl
+UNIVERSIDAD AMERICANA DE PUEBLA → /division-ii-varonil-centro/teams/universidad-americana-de-puebla
+UAGRO → /division-ii-varonil-centro/teams/uagro
+UNAM → /division-ii-varonil-centro/teams/unam
+IPN → /division-ii-varonil-centro/teams/ipn
+IES UNIVERSIDAD → /division-ii-varonil-centro/teams/ies-universidad
+UVM CENTRO → /division-ii-varonil-centro/teams/uvm-centro
+UVM LOMAS VERDES → /division-ii-varonil-centro/teams/uvm-lomas-verdes
+BUAP → /division-ii-varonil-centro/teams/buap
+UIC → /division-ii-varonil-centro/teams/uic
+UNIVERSIDAD ANÁHUAC MÉXICO SUR → /division-ii-varonil-centro/teams/universidad-anahuac-mexico-sur
+UAEMÉX → /division-ii-varonil-centro/teams/uaemex
+UPAV TEZIUTLÁN → /division-ii-varonil-centro/teams/upav-teziutlan
+ESDIE → /division-ii-varonil-centro/teams/esdie
+ANÁHUAC NORTE → /division-ii-varonil-centro/teams/anahuac-norte
+UNIVERSIDAD LA SALLE MÉXICO → /division-ii-varonil-centro/teams/universidad-la-salle-mexico
+SEMANA 1 → /division-ii-varonil-centro/semana-1
+SEMANA 2 → /division-ii-varonil-centro/semana-2
+SEMANA 3 → /division-ii-varonil-centro/semana-3
+SEMANA 4 → /division-ii-varonil-centro/semana-4
+SEMANA 5 → /division-ii-varonil-centro/semana-5
+SEMANA 6 → /division-ii-varonil-centro/semana-6
+SEMANA 7 → /division-ii-varonil-centro/semana-7
+SEMANA 8 → /division-ii-varonil-centro/semana-8
+SEMANA 9 → /division-ii-varonil-centro/semana-9
+SEMANA 10 → /division-ii-varonil-centro/semana-10
+SEMANA 11 → /division-ii-varonil-centro/semana-11
+SEMANA 12 → /division-ii-varonil-centro/semana-12
+SEMANA 13 → /division-ii-varonil-centro/semana-13
+SEMANA 14 → /division-ii-varonil-centro/semana-14
+SEMANA 15 → /division-ii-varonil-centro/semana-15
+SEMANA 16 → /division-ii-varonil-centro/semana-16
+SEMANA 17 → /division-ii-varonil-centro/semana-17
+SEMANA 18 → /division-ii-varonil-centro/semana-18
+SEMANA 19 → /division-ii-varonil-centro/semana-19
+SEMANA 20 → /division-ii-varonil-centro/semana-20
+/division-ii-varonil-centro/match/universidad-anahuac-cordoba-vs-uic-1
+/division-ii-varonil-centro/match/uvm-centro-vs-universidad-americana-de-puebla-2
+/division-ii-varonil-centro/match/uvm-lomas-verdes-vs-universidad-la-salle-nezahualcoyotl-3
+/division-ii-varonil-centro/match/upav-teziutlan-vs-universidad-la-salle-mexico-6
+/division-ii-varonil-centro/match/uagro-vs-ies-universidad-4
+/division-ii-varonil-centro/match/unam-vs-ipn-5
+/division-ii-varonil-centro/match/buap-vs-anahuac-puebla-7
+/division-ii-varonil-centro/match/universidad-marista-cd-de-mexico-vs-universidad-anahuac-mexico-sur-8
+/division-ii-varonil-centro/match/anahuac-puebla-vs-uvm-lomas-verdes-9
+/division-ii-varonil-centro/match/universidad-anahuac-mexico-sur-vs-unam-10
+/division-ii-varonil-centro/match/esdie-vs-universidad-anahuac-cordoba-11
+/division-ii-varonil-centro/match/uic-vs-anahuac-norte-12
+/division-ii-varonil-centro/match/ipn-vs-uaemex-13
+/division-ii-varonil-centro/match/universidad-la-salle-mexico-vs-uagro-14
+/division-ii-varonil-centro/match/universidad-la-salle-nezahualcoyotl-vs-upav-teziutlan-15
+/division-ii-varonil-centro/match/universidad-americana-de-puebla-vs-buap-17
+/division-ii-varonil-centro/match/universidad-anahuac-cordoba-vs-ipn-18
+/division-ii-varonil-centro/match/uaemex-vs-universidad-anahuac-mexico-sur-19
+/division-ii-varonil-centro/match/anahuac-norte-vs-esdie-20
+/division-ii-varonil-centro/match/uvm-lomas-verdes-vs-universidad-americana-de-puebla-21
+/division-ii-varonil-centro/match/upav-teziutlan-vs-anahuac-puebla-22
+/division-ii-varonil-centro/match/unam-vs-ies-universidad-23
+/division-ii-varonil-centro/match/universidad-marista-cd-de-mexico-vs-universidad-la-salle-mexico-24
+/division-ii-varonil-centro/match/uagro-vs-universidad-la-salle-nezahualcoyotl-25
+/division-ii-varonil-centro/match/anahuac-puebla-vs-uagro-26
+/division-ii-varonil-centro/match/uvm-centro-vs-uvm-lomas-verdes-27
+/division-ii-varonil-centro/match/esdie-vs-uic-28
+/division-ii-varonil-centro/match/universidad-anahuac-mexico-sur-vs-universidad-anahuac-cordoba-31
+/division-ii-varonil-centro/match/ies-universidad-vs-uaemex-29
+/division-ii-varonil-centro/match/ipn-vs-anahuac-norte-30
+/division-ii-varonil-centro/match/universidad-la-salle-mexico-vs-unam-32
+/division-ii-varonil-centro/match/universidad-la-salle-nezahualcoyotl-vs-universidad-marista-cd-de-mexico-33
+/division-ii-varonil-centro/match/buap-vs-uvm-centro-34
+/division-ii-varonil-centro/match/universidad-americana-de-puebla-vs-upav-teziutlan-35
+/division-ii-varonil-centro/match/universidad-anahuac-cordoba-vs-ies-universidad-36
+/division-ii-varonil-centro/match/anahuac-norte-vs-universidad-anahuac-mexico-sur-37
+/division-ii-varonil-centro/match/uaemex-vs-universidad-la-salle-mexico-38
+/division-ii-varonil-centro/match/uic-vs-ipn-39
+/division-ii-varonil-centro/match/unam-vs-universidad-la-salle-nezahualcoyotl-41
+/division-ii-varonil-centro/match/uagro-vs-universidad-americana-de-puebla-40
+/division-ii-varonil-centro/match/uvm-lomas-verdes-vs-buap-42
+/division-ii-varonil-centro/match/universidad-marista-cd-de-mexico-vs-anahuac-puebla-43
+/division-ii-varonil-centro/match/upav-teziutlan-vs-uvm-centro-44
+/division-ii-varonil-centro/match/anahuac-puebla-vs-unam-45
+/division-ii-varonil-centro/match/buap-vs-upav-teziutlan-46
+/division-ii-varonil-centro/match/ies-universidad-vs-anahuac-norte-47
+/division-ii-varonil-centro/match/universidad-anahuac-mexico-sur-vs-uic-49
+/division-ii-varonil-centro/match/ipn-vs-esdie-48
+/division-ii-varonil-centro/match/universidad-la-salle-mexico-vs-universidad-anahuac-cordoba-50
+/division-ii-varonil-centro/match/universidad-la-salle-nezahualcoyotl-vs-uaemex-51
+/division-ii-varonil-centro/match/uvm-centro-vs-uagro-52
+/division-ii-varonil-centro/match/anahuac-norte-vs-universidad-la-salle-mexico-53
+/division-ii-varonil-centro/match/uaemex-vs-anahuac-puebla-54
+/division-ii-varonil-centro/match/esdie-vs-universidad-anahuac-mexico-sur-55
+/division-ii-varonil-centro/match/uic-vs-ies-universidad-56
+/division-ii-varonil-centro/match/unam-vs-universidad-americana-de-puebla-58
+/division-ii-varonil-centro/match/upav-teziutlan-vs-uvm-lomas-verdes-59
+/division-ii-varonil-centro/match/uagro-vs-buap-57
+/division-ii-varonil-centro/match/universidad-marista-cd-de-mexico-vs-uvm-centro-60
+/division-ii-varonil-centro/match/anahuac-puebla-vs-universidad-anahuac-cordoba-61
+/division-ii-varonil-centro/match/uvm-centro-vs-unam-62
+/division-ii-varonil-centro/match/uvm-lomas-verdes-vs-uagro-63
+/division-ii-varonil-centro/match/universidad-anahuac-mexico-sur-vs-ipn-64
+/division-ii-varonil-centro/match/universidad-la-salle-mexico-vs-uic-65
+/division-ii-varonil-centro/match/universidad-la-salle-nezahualcoyotl-vs-anahuac-norte-66
+/division-ii-varonil-centro/match/buap-vs-universidad-marista-cd-de-mexico-67
+/division-ii-varonil-centro/match/ies-universidad-vs-esdie-68
+/division-ii-varonil-centro/match/universidad-americana-de-puebla-vs-uaemex-69
+/division-ii-varonil-centro/match/universidad-anahuac-cordoba-vs-universidad-americana-de-puebla-70
+/division-ii-varonil-centro/match/universidad-marista-cd-de-mexico-vs-uvm-lomas-verdes-71
+/division-ii-varonil-centro/match/anahuac-norte-vs-anahuac-puebla-72
+/division-ii-varonil-centro/match/uaemex-vs-uvm-centro-73
+/division-ii-varonil-centro/match/esdie-vs-universidad-la-salle-mexico-74
+/division-ii-varonil-centro/match/uic-vs-universidad-la-salle-nezahualcoyotl-75
+/division-ii-varonil-centro/match/ipn-vs-ies-universidad-76
+/division-ii-varonil-centro/match/unam-vs-buap-77
+/division-ii-varonil-centro/match/uagro-vs-upav-teziutlan-78
+/division-ii-varonil-centro/match/universidad-anahuac-cordoba-vs-universidad-la-salle-nezahualcoyotl-79
+/division-ii-varonil-centro/match/uvm-lomas-verdes-vs-unam-80
+/division-ii-varonil-centro/match/anahuac-puebla-vs-uic-81
+/division-ii-varonil-centro/match/uvm-centro-vs-universidad-anahuac-cordoba-82
+/division-ii-varonil-centro/match/upav-teziutlan-vs-universidad-marista-cd-de-mexico-83
+/division-ii-varonil-centro/match/ies-universidad-vs-universidad-anahuac-mexico-sur-84
+/division-ii-varonil-centro/match/universidad-la-salle-mexico-vs-ipn-85
+/division-ii-varonil-centro/match/universidad-la-salle-nezahualcoyotl-vs-esdie-86
+/division-ii-varonil-centro/match/buap-vs-uaemex-87
+/division-ii-varonil-centro/match/universidad-americana-de-puebla-vs-anahuac-norte-88
+/division-ii-varonil-centro/match/uaemex-vs-uvm-lomas-verdes-89
+/division-ii-varonil-centro/match/esdie-vs-anahuac-puebla-90
+/division-ii-varonil-centro/match/anahuac-norte-vs-uvm-centro-91
+/division-ii-varonil-centro/match/uic-vs-universidad-americana-de-puebla-92
+/division-ii-varonil-centro/match/unam-vs-upav-teziutlan-93
+/division-ii-varonil-centro/match/universidad-anahuac-mexico-sur-vs-universidad-la-salle-mexico-95
+/division-ii-varonil-centro/match/ipn-vs-universidad-la-salle-nezahualcoyotl-94
+/division-ii-varonil-centro/match/universidad-marista-cd-de-mexico-vs-uagro-96
+/division-ii-varonil-centro/match/universidad-anahuac-cordoba-vs-buap-97
+/division-ii-varonil-centro/match/universidad-americana-de-puebla-vs-universidad-marista-cd-de-mexico-98
+/division-ii-varonil-centro/match/uaemex-vs-esdie-99
+/division-ii-varonil-centro/match/ies-universidad-vs-universidad-marista-cd-de-mexico-16
+/division-ii-varonil-centro/match/anahuac-puebla-vs-ipn-100
+/division-ii-varonil-centro/match/buap-vs-anahuac-norte-101
+/division-ii-varonil-centro/match/upav-teziutlan-vs-uaemex-103
+/division-ii-varonil-centro/match/uagro-vs-unam-102
+/division-ii-varonil-centro/match/universidad-la-salle-mexico-vs-ies-universidad-104
+/division-ii-varonil-centro/match/universidad-la-salle-nezahualcoyotl-vs-universidad-anahuac-mexico-sur-105
+/division-ii-varonil-centro/match/universidad-americana-de-puebla-vs-esdie-106
+/division-ii-varonil-centro/match/universidad-anahuac-cordoba-vs-upav-teziutlan-107
+/division-ii-varonil-centro/match/esdie-vs-uvm-centro-108
+/division-ii-varonil-centro/match/anahuac-norte-vs-uvm-lomas-verdes-109
+/division-ii-varonil-centro/match/uic-vs-buap-111
+/division-ii-varonil-centro/match/uaemex-vs-uagro-110
+/division-ii-varonil-centro/match/unam-vs-universidad-marista-cd-de-mexico-112
+/division-ii-varonil-centro/match/universidad-anahuac-mexico-sur-vs-anahuac-puebla-114
+/division-ii-varonil-centro/match/ipn-vs-universidad-americana-de-puebla-113
+/division-ii-varonil-centro/match/ies-universidad-vs-universidad-la-salle-nezahualcoyotl-115
+/division-ii-varonil-centro/match/anahuac-puebla-vs-ies-universidad-116
+/division-ii-varonil-centro/match/uvm-lomas-verdes-vs-uic-117
+/division-ii-varonil-centro/match/uvm-centro-vs-ipn-118
+/division-ii-varonil-centro/match/buap-vs-esdie-119
+/division-ii-varonil-centro/match/upav-teziutlan-vs-anahuac-norte-120
+/division-ii-varonil-centro/match/universidad-la-salle-nezahualcoyotl-vs-universidad-la-salle-mexico-121
+/division-ii-varonil-centro/match/uagro-vs-universidad-anahuac-cordoba-122
+/division-ii-varonil-centro/match/universidad-marista-cd-de-mexico-vs-uaemex-123
+/division-ii-varonil-centro/match/universidad-americana-de-puebla-vs-universidad-anahuac-mexico-sur-124
+/division-ii-varonil-centro/match/uvm-centro-vs-uic-125
+/division-ii-varonil-centro/match/universidad-anahuac-cordoba-vs-universidad-marista-cd-de-mexico-126
+/division-ii-varonil-centro/match/universidad-la-salle-mexico-vs-anahuac-puebla-127
+/division-ii-varonil-centro/match/esdie-vs-uvm-lomas-verdes-128
+/division-ii-varonil-centro/match/anahuac-norte-vs-uagro-129
+/division-ii-varonil-centro/match/uaemex-vs-unam-130
+/division-ii-varonil-centro/match/uic-vs-upav-teziutlan-131
+/division-ii-varonil-centro/match/universidad-anahuac-mexico-sur-vs-uvm-centro-133
+/division-ii-varonil-centro/match/ipn-vs-buap-132
+/division-ii-varonil-centro/match/ies-universidad-vs-universidad-americana-de-puebla-134
+/division-ii-varonil-centro/match/uvm-lomas-verdes-vs-ipn-135
+/division-ii-varonil-centro/match/anahuac-puebla-vs-universidad-la-salle-nezahualcoyotl-136
+/division-ii-varonil-centro/match/uvm-centro-vs-ies-universidad-137
+/division-ii-varonil-centro/match/upav-teziutlan-vs-esdie-138
+/division-ii-varonil-centro/match/unam-vs-universidad-anahuac-cordoba-139
+/division-ii-varonil-centro/match/buap-vs-universidad-anahuac-mexico-sur-140
+/division-ii-varonil-centro/match/uagro-vs-uic-141
+/division-ii-varonil-centro/match/universidad-marista-cd-de-mexico-vs-anahuac-norte-142
+/division-ii-varonil-centro/match/universidad-americana-de-puebla-vs-universidad-la-salle-mexico-143
+/division-ii-varonil-centro/match/universidad-anahuac-cordoba-vs-uaemex-144
+/division-ii-varonil-centro/match/esdie-vs-uagro-145
+/division-ii-varonil-centro/match/anahuac-norte-vs-unam-146
+/division-ii-varonil-centro/match/uic-vs-universidad-marista-cd-de-mexico-147
+/division-ii-varonil-centro/match/universidad-anahuac-mexico-sur-vs-uvm-lomas-verdes-149
+/division-ii-varonil-centro/match/ipn-vs-upav-teziutlan-148
+/division-ii-varonil-centro/match/ies-universidad-vs-buap-152
+/division-ii-varonil-centro/match/universidad-la-salle-mexico-vs-uvm-centro-150
+/division-ii-varonil-centro/match/universidad-la-salle-nezahualcoyotl-vs-universidad-americana-de-puebla-151
+/division-ii-varonil-centro/match/uvm-lomas-verdes-vs-universidad-anahuac-cordoba-153
+/division-ii-varonil-centro/match/uvm-lomas-verdes-vs-ies-universidad-154
+/division-ii-varonil-centro/match/uvm-centro-vs-universidad-la-salle-nezahualcoyotl-155
+/division-ii-varonil-centro/match/uaemex-vs-anahuac-norte-156
+/division-ii-varonil-centro/match/uagro-vs-ipn-157
+/division-ii-varonil-centro/match/upav-teziutlan-vs-universidad-anahuac-mexico-sur-158
+/division-ii-varonil-centro/match/unam-vs-uic-159
+/division-ii-varonil-centro/match/buap-vs-universidad-la-salle-mexico-160
+/division-ii-varonil-centro/match/universidad-marista-cd-de-mexico-vs-esdie-161
+/division-ii-varonil-centro/match/universidad-americana-de-puebla-vs-anahuac-puebla-162
+/division-ii-varonil-centro/match/anahuac-puebla-vs-uvm-centro-163
+/division-ii-varonil-centro/match/anahuac-norte-vs-universidad-anahuac-cordoba-165
+/division-ii-varonil-centro/match/esdie-vs-unam-164
+/division-ii-varonil-centro/match/uic-vs-uaemex-166
+/division-ii-varonil-centro/match/ipn-vs-universidad-marista-cd-de-mexico-167
+/division-ii-varonil-centro/match/universidad-anahuac-mexico-sur-vs-uagro-168
+/division-ii-varonil-centro/match/universidad-la-salle-mexico-vs-uvm-lomas-verdes-169
+/division-ii-varonil-centro/match/universidad-la-salle-nezahualcoyotl-vs-buap-170
+/division-ii-varonil-centro/match/ies-universidad-vs-upav-teziutlan-171
