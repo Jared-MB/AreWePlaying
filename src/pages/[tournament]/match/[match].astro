@@ -104,21 +104,60 @@ const teams = [
   slug: getTeamSlug({ shortName: side.name }),
 }));
 
-const comparison = [
-  { label: "Posición", get: (t: TeamPosition) => `#${t.position}` },
-  { label: "Récord", get: (t: TeamPosition) => `${t.wins}W - ${t.losses}L` },
-  { label: "Win rate", get: (t: TeamPosition) => `${t.percentage}%` },
-  { label: "Puntos a favor", get: (t: TeamPosition) => String(t.goalsFor) },
+interface ComparisonRow {
+  label: string;
+  format: (t: TeamPosition) => string;
+  value: (t: TeamPosition) => number;
+  lowerIsBetter?: boolean;
+}
+
+const comparison: ComparisonRow[] = [
+  {
+    label: "Posición",
+    format: (t) => `#${t.position}`,
+    value: (t) => t.position,
+    lowerIsBetter: true,
+  },
+  {
+    label: "Récord",
+    format: (t) => `${t.wins}W - ${t.losses}L`,
+    value: (t) => t.wins,
+  },
+  {
+    label: "Win rate",
+    format: (t) => `${t.percentage}%`,
+    value: (t) => t.percentage,
+  },
+  {
+    label: "Puntos a favor",
+    format: (t) => String(t.goalsFor),
+    value: (t) => t.goalsFor,
+  },
   {
     label: "Puntos en contra",
-    get: (t: TeamPosition) => String(t.goalsAgainst),
+    format: (t) => String(t.goalsAgainst),
+    value: (t) => t.goalsAgainst,
+    lowerIsBetter: true,
   },
   {
     label: "Diferencia",
-    get: (t: TeamPosition) =>
-      `${t.goalDifference > 0 ? "+" : ""}${t.goalDifference}`,
+    format: (t) => `${t.goalDifference > 0 ? "+" : ""}${t.goalDifference}`,
+    value: (t) => t.goalDifference,
   },
 ];
+
+// Porcentaje de la barra que le corresponde al local. Desplaza valores
+// negativos (p. ej. diferencia) y reparte a partes iguales si ambos son 0.
+function localShare(row: ComparisonRow, local: TeamPosition, visiting: TeamPosition) {
+  const offset = Math.min(0, row.value(local), row.value(visiting));
+  const a = row.value(local) - offset;
+  const b = row.value(visiting) - offset;
+  const total = a + b;
+
+  if (!Number.isFinite(total) || total === 0) return 50;
+
+  return ((row.lowerIsBetter ? b : a) / total) * 100;
+}
 
 const tournamentLabel = getTournamentLabel(tournament);
 const venueUrl = safeHttpUrl(match.locationUrl);
@@ -288,53 +327,53 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
           >
             Comparativa
           </h2>
-          <div class="overflow-hidden rounded-md bg-surface shadow-xs">
-            <table class="w-full table-fixed border-collapse text-sm">
-              <caption class="sr-only">
-                Estadísticas de temporada de {match.localTeam} y{" "}
-                {match.visitingTeam}
-              </caption>
-              <thead>
-                <tr class="border-b border-line/70">
-                  <th
-                    scope="col"
-                    class="p-3 text-center font-mono text-xs font-bold uppercase tracking-wider wrap-break-word"
-                  >
-                    {match.localTeam}
-                  </th>
-                  <th
-                    scope="col"
-                    class="p-3 text-center text-xs font-bold uppercase tracking-widest text-muted-foreground"
-                  >
-                    Dato
-                  </th>
-                  <th
-                    scope="col"
-                    class="p-3 text-center font-mono text-xs font-bold uppercase tracking-wider wrap-break-word"
-                  >
-                    {match.visitingTeam}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparison.map((row) => (
-                  <tr class="border-b border-line/40 last:border-b-0">
-                    <td class="p-3 text-center font-mono text-base font-bold tabular-nums">
-                      {row.get(localStats)}
-                    </td>
-                    <th
-                      scope="row"
-                      class="p-3 text-center text-xs font-bold uppercase tracking-wider text-muted-foreground"
+          <div class="rounded-md bg-surface p-4 shadow-xs md:p-6">
+            <div class="mb-4 flex items-center justify-between gap-4 border-b border-line/70 pb-3 font-mono text-xs font-bold uppercase tracking-wider">
+              <span class="flex min-w-0 items-center gap-2">
+                <span aria-hidden="true" class="size-2.5 shrink-0 rounded-full bg-blue-600" />
+                <span class="truncate">{match.localTeam}</span>
+              </span>
+              <span class="flex min-w-0 items-center gap-2">
+                <span class="truncate">{match.visitingTeam}</span>
+                <span aria-hidden="true" class="size-2.5 shrink-0 rounded-full bg-red-600" />
+              </span>
+            </div>
+            <ul
+              class="flex flex-col gap-5"
+              aria-label={`Estadísticas de temporada de ${match.localTeam} y ${match.visitingTeam}`}
+            >
+              {comparison.map((row) => {
+                const share = localShare(row, localStats, visitingStats);
+
+                return (
+                  <li>
+                    <div class="grid grid-cols-[1fr_auto_1fr] items-baseline gap-3">
+                      <span class="font-mono text-base font-bold tabular-nums">
+                        <span class="sr-only">{match.localTeam}: </span>
+                        {row.format(localStats)}
+                      </span>
+                      <span class="text-center text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                        {row.label}
+                      </span>
+                      <span class="text-right font-mono text-base font-bold tabular-nums">
+                        <span class="sr-only">{match.visitingTeam}: </span>
+                        {row.format(visitingStats)}
+                      </span>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      class="mt-2 flex h-1.5 gap-0.5 overflow-hidden rounded-full bg-muted"
                     >
-                      {row.label}
-                    </th>
-                    <td class="p-3 text-center font-mono text-base font-bold tabular-nums">
-                      {row.get(visitingStats)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                      <span
+                        class="h-full rounded-l-full bg-blue-600"
+                        style={`width: ${share}%`}
+                      />
+                      <span class="h-full flex-1 rounded-r-full bg-red-600" />
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </section>
       ) : null
