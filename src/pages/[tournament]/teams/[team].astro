@@ -117,10 +117,11 @@ const statCards = [
               {team.shortName.split(" ")[0].substring(0, 3)}
             </div>
             <h1
-              class="font-mono text-4xl font-bold uppercase tracking-wider md:text-6xl flex"
+              class="font-mono text-4xl font-bold uppercase tracking-wider md:text-6xl flex flex-wrap-reverse md:flex-nowrap"
             >
-              <span class="text-balance" transition:name={team.shortName}
-                >{team.shortName}</span
+              <span
+                class="text-balance wrap-break-word"
+                transition:name={team.shortName}>{team.shortName}</span
               >
               <small class="text-3xl">#{team.position}</small>
             </h1>
