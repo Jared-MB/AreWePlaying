@@ -25,6 +25,7 @@ import { getWeekSlug } from "@/utils/week-slug";
 import { slugify } from "@/utils/slugify";
 import { format, isValid, parse } from "date-fns";
 import { es } from "date-fns/locale";
+import { MapPin } from "@lucide/astro";
 
 export async function getStaticPaths() {
   const perTournament = getTournaments().map(async (t) => {
@@ -136,11 +137,9 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
   <div class="mx-auto w-full max-w-5xl">
     <div class="mb-6 flex items-center justify-between gap-4">
       <a
-        href={
-          week
-            ? `/${tournamentSlug}/${getWeekSlug(week)}`
-            : `/${tournamentSlug}`
-        }
+        href={week
+          ? `/${tournamentSlug}/${getWeekSlug(week)}`
+          : `/${tournamentSlug}`}
         class="rounded-md bg-surface px-4 py-2 text-sm font-bold uppercase tracking-wider shadow-xs transition-transform duration-180 hover:bg-surface-hover/70 focus-visible:scale-95"
       >
         ← Regresar
@@ -168,117 +167,117 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
       <h1
         class="font-mono text-3xl font-bold uppercase tracking-wider text-balance md:text-5xl flex flex-wrap items-baseline gap-4"
       >
-        {match.localTeam}
+        <a
+          href={`/${tournamentSlug}/teams/${teams[0].slug}`}
+          class="hover:underline"
+          transition:name={match.localTeam}>{match.localTeam}</a
+        >
         <span class="text-muted-foreground text-3xl">vs</span>
-        {match.visitingTeam}
+        <a
+          href={`/${tournamentSlug}/teams/${teams[1].slug}`}
+          class="hover:underline"
+          transition:name={match.visitingTeam}>{match.visitingTeam}</a
+        >
       </h1>
       <p class="mt-3 text-sm uppercase tracking-wider text-muted-foreground">
         {longDate}{rawTime ? ` · ${rawTime} hrs` : ""}
       </p>
     </header>
 
-    <section
-      aria-label="Marcador"
-      class="mb-8 rounded-md bg-surface p-6 shadow-xs md:p-8"
+    <div
+      class="mb-8 rounded-md bg-surface p-6 shadow-xs md:p-8 flex flex-col gap-6"
     >
-      <div class="flex flex-col gap-6">
-        {
-          teams.map((team) => (
-            <div class="flex items-center gap-4">
-              <div class="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-full border border-line/70 bg-primary md:size-20">
-                {team.logo ? (
-                  <img
-                    src={team.logo}
-                    alt=""
-                    width="80"
-                    height="80"
-                    class="size-full bg-white object-contain p-1.5"
-                    loading="eager"
-                  />
+      <section aria-label="Marcador">
+        <div class="flex flex-col gap-6">
+          {
+            teams.map((team) => (
+              <div class="flex items-center gap-4">
+                <div class="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-full border border-line/70 bg-primary md:size-20">
+                  {team.logo ? (
+                    <img
+                      src={team.logo}
+                      alt=""
+                      width="80"
+                      height="80"
+                      class="size-full bg-white object-contain p-1.5"
+                      loading="eager"
+                    />
+                  ) : (
+                    <span class="text-sm font-bold text-primary-foreground md:text-base">
+                      {teamInitials(team.name)}
+                    </span>
+                  )}
+                </div>
+
+                <div class="min-w-0 flex-1">
+                  <a
+                    href={`/${tournamentSlug}/teams/${team.slug}`}
+                    class="font-mono text-xl font-bold uppercase tracking-wide wrap-break-word hover:underline md:text-3xl"
+                  >
+                    {team.name}
+                  </a>
+                  <p class="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                    {[team.role, team.position, team.record]
+                      .filter(Boolean)
+                      .join(" · ")}
+                  </p>
+                </div>
+
+                {hasScore ? (
+                  <p
+                    class={`shrink-0 rounded-md border border-line/70 px-4 py-1 font-mono text-3xl font-bold tabular-nums md:text-5xl ${
+                      team.isWinner
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-muted text-muted-foreground"
+                    }`}
+                  >
+                    {team.points}
+                  </p>
                 ) : (
-                  <span class="text-sm font-bold text-primary-foreground md:text-base">
-                    {teamInitials(team.name)}
-                  </span>
+                  <p class="shrink-0 rounded-md border border-line/70 px-4 py-1 font-mono text-3xl font-bold tabular-nums md:text-5xl bg-muted text-muted-foreground">
+                    ?
+                  </p>
                 )}
               </div>
-
-              <div class="min-w-0 flex-1">
-                <a
-                  href={`/${tournamentSlug}/teams/${team.slug}`}
-                  class="font-mono text-xl font-bold uppercase tracking-wide wrap-break-word hover:underline md:text-3xl"
-                >
-                  {team.name}
-                </a>
-                <p class="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                  {[team.role, team.position, team.record]
-                    .filter(Boolean)
-                    .join(" · ")}
-                </p>
-              </div>
-
-              {hasScore ? (
-                <p
-                  class={`shrink-0 rounded-md border border-line/70 px-4 py-1 font-mono text-3xl font-bold tabular-nums md:text-5xl ${
-                    team.isWinner
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-muted text-muted-foreground"
-                  }`}
-                >
-                  {team.points}
-                </p>
-              ) : null}
-            </div>
-          ))
-        }
-      </div>
-    </section>
-
-    <section
-      aria-label="Detalles del partido"
-      class="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
-    >
-      <article class="rounded-md bg-surface p-4 shadow-xs">
-        <p
-          class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
-        >
-          Fecha
-        </p>
-        <p class="mt-1 font-mono text-lg font-bold uppercase">{card.dateLabel}</p>
-      </article>
-      <article class="rounded-md bg-surface p-4 shadow-xs">
-        <p
-          class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
-        >
-          Hora
-        </p>
-        <p class="mt-1 font-mono text-lg font-bold tabular-nums">
-          {rawTime ? `${rawTime} HRS` : "—"}
-        </p>
-      </article>
-      <article class="rounded-md bg-surface p-4 shadow-xs sm:col-span-2">
-        <p
-          class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
-        >
-          Sede
-        </p>
-        {
-          venueUrl ? (
-            <a
-              href={venueUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="mt-1 block font-mono text-lg font-bold uppercase wrap-break-word hover:underline"
-            >
-              {venue}
-            </a>
-          ) : (
-            <p class="mt-1 font-mono text-lg font-bold uppercase wrap-break-word">
-              {venue}
-            </p>
-          )
-        }
-      </article>
-    </section>
+            ))
+          }
+        </div>
+      </section>
+      <hr />
+      <section
+        aria-label="Detalles del partido"
+        class="flex justify-between items-end"
+      >
+        <article>
+          <p class="mt-1 font-mono text-xl font-bold uppercase">
+            {card.dateLabel}
+          </p>
+          <p class="font-mono tabular-nums text-muted-foreground">
+            {rawTime ? `${rawTime} HRS` : "—"}
+          </p>
+        </article>
+        <article class="sm:col-span-2">
+          {
+            venueUrl ? (
+              <a
+                href={venueUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-1 flex gap-2 items-center font-mono font-medium uppercase wrap-break-word hover:underline"
+              >
+                <MapPin class="size-4" />
+                {venue}
+              </a>
+            ) : (
+              <p class="mt-1 flex gap-2 items-center font-mono font-medium uppercase wrap-break-word">
+                <MapPin class="size-4" />
+                {venue}
+              </p>
+            )
+          }
+        </article>
+      </section>
+    </div>
 
     {
       localStats && visitingStats ? (
