@@ -60,8 +60,9 @@ test("home → torneo → tabla → equipo → partido", async ({ page }) => {
 	await expect(page).toHaveTitle(
 		`Calendario | ${team.shortName} | Are We Playing?`,
 	);
+	// El encabezado incluye la posición en la tabla junto al nombre.
 	await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-		team.shortName,
+		`${team.shortName}#${team.position}`,
 	);
 	await expect(page.getByText(`${team.wins}W - ${team.losses}L`)).toBeVisible();
 
