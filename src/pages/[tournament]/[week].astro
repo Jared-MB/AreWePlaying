@@ -1,7 +1,6 @@
 ---
 import TournamentLayout from "@/layouts/TournamentLayout.astro";
 import WeekMatches from "@/components/WeekMatches.astro";
-import ScrollToFavoriteMatch from "@/components/ScrollToFavoriteMatch.astro";
 
 import { getTournaments } from "@/utils/get-tournaments";
 import {
@@ -45,11 +44,9 @@ const weekMatches = matches.find((m) => m.id === week?.id)?.data ?? [];
   weekSlug={weekSlug}
   description={week && `Partidos de la ${week.week.toLowerCase()}`}
 >
-  <ScrollToFavoriteMatch>
-    <WeekMatches
-      matches={weekMatches}
-      week={week}
-      tournamentSlug={tournamentSlug}
-    />
-  </ScrollToFavoriteMatch>
+  <WeekMatches
+    matches={weekMatches}
+    week={week}
+    tournamentSlug={tournamentSlug}
+  />
 </TournamentLayout>
