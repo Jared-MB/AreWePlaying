@@ -11,6 +11,7 @@ import PastMatches from "@/components/PastMatches.astro";
 import UpcomingMatches from "@/components/UpcomingMatches.astro";
 import FavoriteButton from "@/components/favorite-button.tsx";
 import ShareButton from "@/components/share-button.tsx";
+import { getTeamStats } from "@/utils/team-stats";
 
 export async function getStaticPaths() {
   const params = getTournaments().map(async (t) => {
@@ -43,6 +44,38 @@ if (!team) {
     `No existe el equipo "${Astro.params.team}" en el torneo "${tournamentSlug}".`,
   );
 }
+
+const stats = getTeamStats(team);
+const average = new Intl.NumberFormat("es-MX", {
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 1,
+});
+const signed = new Intl.NumberFormat("es-MX", {
+  minimumFractionDigits: 1,
+  maximumFractionDigits: 1,
+  signDisplay: "exceptZero",
+});
+const integer = new Intl.NumberFormat("es-MX", { signDisplay: "exceptZero" });
+const formatAverage = (value: number | null, format = average) =>
+  value === null ? "—" : format.format(value);
+
+const statCards = [
+  {
+    label: "Puntos a favor / PJ",
+    value: formatAverage(stats.pointsForPerGame),
+    detail: `${team.goalsFor} en total`,
+  },
+  {
+    label: "Puntos en contra / PJ",
+    value: formatAverage(stats.pointsAgainstPerGame),
+    detail: `${team.goalsAgainst} en total`,
+  },
+  {
+    label: "Diferencia / PJ",
+    value: formatAverage(stats.differentialPerGame, signed),
+    detail: `${integer.format(team.goalDifference)} en total`,
+  },
+];
 ---
 
 <Layout
@@ -55,7 +88,7 @@ if (!team) {
   }}
 >
   <div class="p-4 md:p-8">
-    <div class="mx-auto max-w-7xl">
+    <div class="mx-auto flex max-w-7xl flex-col">
       <div class="flex justify-between items-center mb-6">
         <a
           href={`/${tournamentSlug}/teams`}
@@ -84,11 +117,12 @@ if (!team) {
               {team.shortName.split(" ")[0].substring(0, 3)}
             </div>
             <h1
-              class="font-mono text-4xl font-bold uppercase tracking-wider md:text-6xl"
+              class="font-mono text-4xl font-bold uppercase tracking-wider md:text-6xl flex"
             >
               <span class="text-balance" transition:name={team.shortName}
                 >{team.shortName}</span
               >
+              <small class="text-3xl">#{team.position}</small>
             </h1>
           </div>
 
@@ -116,6 +150,37 @@ if (!team) {
           </section>
         </div>
       </header>
+
+      <section
+        aria-labelledby="team-stats"
+        class="order-last mt-8 md:order-0 md:mt-0 md:mb-8"
+      >
+        <h2
+          id="team-stats"
+          class="mb-4 pb-2 font-mono text-3xl font-bold uppercase tracking-wider"
+        >
+          ESTADÍSTICAS
+        </h2>
+        <dl class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+          {
+            statCards.map(({ label, value, detail }) => (
+              <div class="flex min-w-0 flex-col rounded-md bg-surface p-4 shadow-xs">
+                <dt class="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                  {label}
+                </dt>
+                <dd class="order-first mb-1 font-mono text-2xl font-bold tabular-nums">
+                  {value}
+                </dd>
+                {detail ? (
+                  <dd class="mt-1 text-xs uppercase tracking-wider text-muted-foreground tabular-nums">
+                    {detail}
+                  </dd>
+                ) : null}
+              </div>
+            ))
+          }
+        </dl>
+      </section>
 
       {/* Players Section */}
       {
