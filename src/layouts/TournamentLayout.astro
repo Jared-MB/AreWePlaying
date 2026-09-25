@@ -61,101 +61,106 @@ const pageDescription =
   icon={icon}
 >
   <AreWePlaying />
-  <div class="mb-12 space-y-6">
-    <div class="flex md:hidden flex-wrap items-center gap-3">
-      <label
-        for="division-mobile"
-        class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
-      >
-        Division:
-      </label>
-      <SelectDivision id="division-mobile" defaultSelected={tournamentSlug} />
-    </div>
-    <hr />
-    <div class="flex items-center justify-between">
-      <nav
-        aria-labelledby="rama-label"
-        class="flex flex-wrap items-center gap-3"
-      >
-        <span
-          id="rama-label"
+  <div>
+    <div class="space-y-6">
+      <div class="flex md:hidden flex-wrap items-center gap-3">
+        <label
+          for="division-mobile"
           class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
         >
-          Rama:
-        </span>
-        <div class="flex flex-wrap gap-2">
-          {
-            womenTournament ? (
-              <FilterLink
-                href={`/${getTournamentSlug(womenTournament)}`}
-                isActive={womenTournament.id === tournament.id}
-              >
-                Femenil
-              </FilterLink>
-            ) : null
-          }
-          {
-            menTournament ? (
-              <FilterLink
-                href={`/${getTournamentSlug(menTournament)}`}
-                isActive={menTournament.id === tournament.id}
-              >
-                Varonil
-              </FilterLink>
-            ) : null
-          }
-        </div>
-      </nav>
-      <!-- <div class="inline-block md:hidden">
+          Division:
+        </label>
+        <SelectDivision id="division-mobile" defaultSelected={tournamentSlug} />
+      </div>
+      <hr />
+      <div class="flex items-center justify-between">
+        <nav
+          aria-labelledby="rama-label"
+          class="flex flex-wrap items-center gap-3"
+        >
+          <span
+            id="rama-label"
+            class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
+          >
+            Rama:
+          </span>
+          <div class="flex flex-wrap gap-2">
+            {
+              womenTournament ? (
+                <FilterLink
+                  href={`/${getTournamentSlug(womenTournament)}`}
+                  isActive={womenTournament.id === tournament.id}
+                >
+                  Femenil
+                </FilterLink>
+              ) : null
+            }
+            {
+              menTournament ? (
+                <FilterLink
+                  href={`/${getTournamentSlug(menTournament)}`}
+                  isActive={menTournament.id === tournament.id}
+                >
+                  Varonil
+                </FilterLink>
+              ) : null
+            }
+          </div>
+        </nav>
+        <!-- <div class="inline-block md:hidden">
 					<SelectUniversity />
 				</div> -->
-    </div>
-    <div class="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
-      <nav aria-labelledby="semana-label" class="hidden md:flex flex-wrap gap-2">
-        <span
-          id="semana-label"
-          class="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1"
+      </div>
+      <div class="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
+        <nav
+          aria-labelledby="semana-label"
+          class="hidden md:flex flex-wrap gap-2"
         >
-          Semana:
-        </span>
-        {
-          weeks.map((week) => (
-            <FilterLink
-              isActive={weekSlug === getWeekSlug(week)}
-              href={`/${tournamentSlug}/${getWeekSlug(week)}`}
-            >
-              {week.week}
-            </FilterLink>
-          ))
-        }
-      </nav>
-      <div class="flex md:hidden flex-wrap gap-2">
-        <label
-          for="week-mobile"
-          class="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1"
-        >
-          Semana:
-        </label>
-        <select
-          id="week-mobile"
-          name="week-mobile"
-          data-week-select
-          class="border-input data-placeholder:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
-        >
+          <span
+            id="semana-label"
+            class="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1"
+          >
+            Semana:
+          </span>
           {
-            weeks.map((w) => (
-              <option
-                selected={weekSlug === getWeekSlug(w)}
-                value={getWeekSlug(w)}
+            weeks.map((week) => (
+              <FilterLink
+                isActive={weekSlug === getWeekSlug(week)}
+                href={`/${tournamentSlug}/${getWeekSlug(week)}`}
               >
-                {w.week}
-              </option>
+                {week.week}
+              </FilterLink>
             ))
           }
-        </select>
+        </nav>
+        <div class="flex md:hidden flex-wrap gap-2">
+          <label
+            for="week-mobile"
+            class="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1"
+          >
+            Semana:
+          </label>
+          <select
+            id="week-mobile"
+            name="week-mobile"
+            data-week-select
+            class="border-input data-placeholder:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+          >
+            {
+              weeks.map((w) => (
+                <option
+                  selected={weekSlug === getWeekSlug(w)}
+                  value={getWeekSlug(w)}
+                >
+                  {w.week}
+                </option>
+              ))
+            }
+          </select>
+        </div>
       </div>
+      <hr />
     </div>
-    <hr />
     <slot />
   </div>
 </Layout>

@@ -61,7 +61,7 @@ export default function MatchCard({
 		<div
 			ref={$card}
 			data-active={isFavorite}
-			className="bg-surface group relative shadow-xs mb-6 text-card-foreground flex flex-col gap-6 p-0 transition-all duration-180 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none has-[a]:active:scale-99 has-[a]:active:shadow-none rounded-md data-[active=true]:bg-primary/90 data-[active=true]:text-primary-foreground!"
+			className="group relative hover:bg-surface text-card-foreground flex flex-col gap-6 p-0 data-[active=true]:bg-primary/90 data-[active=true]:text-primary-foreground!"
 		>
 			{/* El resaltado del favorito es sólo color: esto lo vuelve audible. */}
 			{isFavorite ? (

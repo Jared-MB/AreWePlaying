@@ -33,7 +33,10 @@ const otherTeams = sortedTeams.slice(1);
     <div class="p-4 md:p-8">
       <div class="mx-auto max-w-7xl">
         <div class="md:hidden mb-12">
-          <SelectDivision id="division-mobile" defaultSelected={tournamentSlug} />
+          <SelectDivision
+            id="division-mobile"
+            defaultSelected={tournamentSlug}
+          />
         </div>
         <header
           class="mb-12 border-8 border-frame bg-inverse p-8 text-inverse-foreground shadow-[8px_8px_0px_0px_var(--color-hard-shadow)]"
@@ -125,7 +128,10 @@ const otherTeams = sortedTeams.slice(1);
         <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {
             otherTeams.map((team) => (
-              <a href={`/${tournamentSlug}/teams/${getTeamSlug(team)}`}>
+              <a
+                href={`/${tournamentSlug}/teams/${getTeamSlug(team)}`}
+                class="bg-surface shadow-sm"
+              >
                 <MatchCard>
                   <div class="relative h-3 border-b-4 border-frame bg-muted">
                     <div

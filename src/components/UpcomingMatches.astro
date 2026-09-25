@@ -21,7 +21,7 @@ const matches = await getUpcomingMatches({ teamId, tournamentId });
 <>
   {
     matches.length > 0 ? (
-      <div class="space-y-3">
+      <div class="[&>div]:border-t [&>div]:border-t-line/70 [&>div]:first:border-t-0">
         {matches.map((match) => {
           const isHome = match.localTeamId === teamId;
           const venueUrl = safeHttpUrl(match.locationUrl);

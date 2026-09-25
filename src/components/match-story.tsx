@@ -389,7 +389,7 @@ export default function MatchStory({
 			<div class="mx-auto w-full max-w-[360px]">
 				<div
 					ref={$frame}
-					class="relative w-full overflow-hidden rounded-md shadow-xs"
+					class="relative w-full overflow-hidden rounded-md border border-line/70"
 					style={{ aspectRatio: `${STORY_WIDTH} / ${STORY_HEIGHT}` }}
 				>
 					<div

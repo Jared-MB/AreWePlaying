@@ -86,74 +86,76 @@ export default function FavoriteCountdown({
 	return (
 		<section
 			aria-labelledby="favorite-countdown"
-			class="mb-12 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-2 motion-safe:duration-300"
+			className="mb-12 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-2 motion-safe:duration-300"
 		>
 			<h2
 				id="favorite-countdown"
-				class="mb-6 flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground"
+				className="mb-6 flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground"
 			>
 				<Star
-					class="size-4 shrink-0 fill-favorite-strong text-favorite-strong"
+					className="size-4 shrink-0 fill-favorite-strong text-favorite-strong"
 					aria-hidden="true"
 				/>
 				{pending.length === 1 ? "Tu próximo partido" : "Tus próximos partidos"}
 			</h2>
 
-			<div class={`grid gap-6 ${pending.length > 1 ? "sm:grid-cols-2" : ""}`}>
+			<div
+				className={`grid gap-6 ${pending.length > 1 ? "sm:grid-cols-2" : ""}`}
+			>
 				{pending.map((match) => {
 					const remaining = match.startsAt - now;
 
 					return (
 						<article
 							key={match.matchId}
-							class="flex min-w-0 flex-col gap-4 rounded-md bg-surface p-6 shadow-xs transition-all duration-180 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none has-[a]:active:scale-99 has-[a]:active:shadow-none relative"
+							className="flex min-w-0 flex-col gap-4 p-6 relative hover:bg-surface border-y border-y-line/70"
 						>
 							<a
 								className="cursor-pointer focus-visible:outline-2 outline-offset-4 absolute inset-0"
 								href={`/${match.tournamentSlug}/match/${match.matchSlug}`}
 								aria-label={`Ver detalle del partido entre ${match.team} contra ${match.opponent}`}
 							/>
-							<header class="min-w-0 flex flex-col gap-1">
-								<h3 class="wrap-break-word font-bold uppercase tracking-wide text-xl [&>a]:hover:underline [&>a]:z-10 [&>a]:relative [&>a]:touch-hitbox">
+							<header className="min-w-0 flex flex-col gap-1">
+								<h3 className="wrap-break-word font-bold uppercase tracking-wide text-xl [&>a]:hover:underline [&>a]:z-10 [&>a]:relative [&>a]:touch-hitbox">
 									<a href={`/${match.tournamentSlug}/teams/${match.teamSlug}`}>
 										{match.team}
 									</a>{" "}
-									<span class="text-muted-foreground text-base">vs</span>{" "}
+									<span className="text-muted-foreground text-base">vs</span>{" "}
 									<a
 										href={`/${match.tournamentSlug}/teams/${match.opponentSlug}`}
 									>
 										{match.opponent}
 									</a>
 								</h3>
-								<p class="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
+								<p className="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
 									{match.tournament}
 									{match.week ? ` · ${match.week}` : null}
 									{` · ${match.isLocal ? "Local" : "Visita"}`}
 								</p>
 							</header>
 
-							<p class="sr-only">
+							<p className="sr-only">
 								{describe(remaining)} para el partido de {match.team}:{" "}
 								{match.label}.
 							</p>
 
-							<div class="flex flex-wrap gap-3" aria-hidden="true">
+							<div className="flex flex-wrap gap-3" aria-hidden="true">
 								{getParts(remaining).map((part) => (
-									<div key={part.label} class="min-w-14">
-										<div class="font-mono text-3xl font-bold tabular-nums md:text-4xl">
+									<div key={part.label} className="min-w-14">
+										<div className="font-mono text-3xl font-bold tabular-nums md:text-4xl">
 											{String(part.value).padStart(2, "0")}
 										</div>
-										<div class="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+										<div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
 											{part.label}
 										</div>
 									</div>
 								))}
 							</div>
 
-							<div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-sm">
+							<div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-sm">
 								<time
 									dateTime={new Date(match.startsAt).toISOString()}
-									class="min-w-0 font-bold uppercase tracking-wide"
+									className="min-w-0 font-bold uppercase tracking-wide"
 								>
 									{match.label}
 								</time>
@@ -164,11 +166,13 @@ export default function FavoriteCountdown({
 									href={match.locationUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="flex min-w-0 w-fit items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted-foreground hover:underline z-10 touch-hitbox"
+									className="flex min-w-0 w-fit items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted-foreground hover:underline z-10 touch-hitbox"
 								>
-									<MapPin class="size-3.5 shrink-0" aria-hidden="true" />
-									<span class="sr-only">Lugar: </span>
-									<span class="min-w-0 wrap-break-word">{match.location}</span>
+									<MapPin className="size-3.5 shrink-0" aria-hidden="true" />
+									<span className="sr-only">Lugar: </span>
+									<span className="min-w-0 wrap-break-word">
+										{match.location}
+									</span>
 								</a>
 							) : null}
 						</article>
