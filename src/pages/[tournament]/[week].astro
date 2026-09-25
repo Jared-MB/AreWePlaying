@@ -2,6 +2,7 @@
 import TournamentLayout from "@/layouts/TournamentLayout.astro";
 import WeekMatches from "@/components/WeekMatches.astro";
 
+import { getCurrentWeek } from "@/utils/get-current-week";
 import { getTournaments } from "@/utils/get-tournaments";
 import {
   getTournamentSlug,
@@ -31,12 +32,17 @@ const tournamentSlug = Astro.params.tournament;
 const tournamentId = tournament.id.toLowerCase();
 const weekSlug = Astro.params.week;
 
-const [matches, week] = await Promise.all([
+const [matches, week, weeks] = await Promise.all([
   getMatches(tournamentId),
   getWeekBySlug({ tournamentId, slug: weekSlug }),
+  getWeeks(tournamentId),
 ]);
 
 const weekMatches = matches.find((m) => m.id === week?.id)?.data ?? [];
+// El "Yes!!" y el confeti sólo tienen sentido en la semana en curso. Mismo
+// respaldo que la portada del torneo: antes de que arranque, cuenta la primera.
+const currentWeek = getCurrentWeek(weeks) ?? weeks[0];
+const isCurrentWeek = !!week && currentWeek?.id === week.id;
 ---
 
 <TournamentLayout
@@ -48,5 +54,6 @@ const weekMatches = matches.find((m) => m.id === week?.id)?.data ?? [];
     matches={weekMatches}
     week={week}
     tournamentSlug={tournamentSlug}
+    celebrate={isCurrentWeek}
   />
 </TournamentLayout>
