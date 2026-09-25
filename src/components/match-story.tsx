@@ -324,9 +324,6 @@ export default function MatchStory({
 			</div>
 
 			<fieldset>
-				<legend class="mb-2 text-xs font-bold uppercase tracking-widest text-muted-foreground">
-					Color institucional
-				</legend>
 				<div class="flex flex-wrap items-center gap-2">
 					{ACCENT_PRESETS.map((preset) => (
 						<button
