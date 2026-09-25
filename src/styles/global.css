@@ -37,7 +37,7 @@
 	--sidebar-border: oklch(0.3458 0.1698 302.0685);
 	--sidebar-ring: oklch(1 0 0);
 	/* Superficies neutras (tarjetas, botones secundarios) y sus bordes. */
-	--surface: oklch(0.967 0.001 286.375);
+	--surface: oklch(97.913% 0.00011 271.152);
 	--surface-hover: oklch(0.92 0.004 286.32);
 	--line: oklch(0.705 0.015 286.067);
 	/* Contenido sobre la tarjeta resaltada (partido del equipo favorito, fondo primary). */
