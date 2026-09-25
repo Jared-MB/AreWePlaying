@@ -12,7 +12,7 @@
 
 ## Code styling
 
-- Code can have max 4 indent deep, if a piece of code exceded this, must be extracted into a separated function.
+- Code can have max 4 indent deep, if a piece of code exceded this, must be extracted into a separated function. This rule doesn't apply on markup languajes like `html`, `astro` or `tsx/jsx`. 
 
 ### Typescript
 
