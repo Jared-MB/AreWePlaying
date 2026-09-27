@@ -20,10 +20,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "cd6ceaca-2363-4b55-862f-4710a796013b",
@@ -44,9 +44,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(7)",
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "1-1"
 			},
 			{
@@ -68,8 +68,32 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(2)",
+				"visitingTeamWR": "2-0"
+			},
+			{
+				"matchId": "608c2e2f-9663-4c0e-8cdc-7d8772cb8e7e",
+				"matchNumber": 1,
+				"localTeam": "UDLAP",
+				"localTeamId": "1a4adb2b-4d18-4dbe-8909-45fd99de06e5",
+				"visitingTeam": "TEC CEM",
+				"visitingTeamId": "bea107fe-6c11-4cc0-918f-6b8c1de567a5",
+				"date": "18/09/2026 16:00",
+				"startTime": "18/09/2026 16:00",
+				"endTime": "18/09/2026 18:00",
+				"localTeamPoints": "50",
+				"visitingTeamPoints": "55",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 1 UNIVERSIDAD DE LAS AMÉRICAS PUEBLA vs TECNOLÓGICO DE MONTERREY CAMPUS ESTADO DE MÉXICO",
+				"started": 0,
+				"location": "GIMNASIO MORRIS \"MOE\" WILLIAMS",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
 				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
 			},
@@ -92,32 +116,8 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(5)",
-				"visitingTeamWR": "2-0"
-			},
-			{
-				"matchId": "608c2e2f-9663-4c0e-8cdc-7d8772cb8e7e",
-				"matchNumber": 1,
-				"localTeam": "UDLAP",
-				"localTeamId": "1a4adb2b-4d18-4dbe-8909-45fd99de06e5",
-				"visitingTeam": "TEC CEM",
-				"visitingTeamId": "bea107fe-6c11-4cc0-918f-6b8c1de567a5",
-				"date": "18/09/2026 16:00",
-				"startTime": "18/09/2026 16:00",
-				"endTime": "18/09/2026 18:00",
-				"localTeamPoints": "50",
-				"visitingTeamPoints": "55",
-				"period": "CUARTO 4",
-				"name": "PARTIDO 1 UNIVERSIDAD DE LAS AMÉRICAS PUEBLA vs TECNOLÓGICO DE MONTERREY CAMPUS ESTADO DE MÉXICO",
-				"started": 0,
-				"location": "GIMNASIO MORRIS \"MOE\" WILLIAMS",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
 				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			},
@@ -141,8 +141,8 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(9)",
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
@@ -164,9 +164,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(7)",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "1-1"
 			},
 			{
@@ -188,9 +188,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(3)",
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -212,34 +212,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(4)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
-			},
-			{
-				"matchId": "e1a13d4b-eaf0-4895-8f4e-f9ddeb62878a",
-				"matchNumber": 11,
-				"localTeam": "UANL",
-				"localTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
-				"visitingTeam": "TEC TOLUCA",
-				"visitingTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
-				"date": "19/09/2026 14:00",
-				"startTime": "19/09/2026 14:03",
-				"endTime": "19/09/2026 15:56",
-				"localTeamPoints": "63",
-				"visitingTeamPoints": "58",
-				"period": "CUARTO 4",
-				"name": "PARTIDO 11 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA",
-				"started": 0,
-				"location": "GIMNASIO \"LUIS E. TODD\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(9)",
-				"visitingTeamWR": "0-2"
 			},
 			{
 				"matchId": "fc54066f-50fb-488b-ae47-c5bca563900d",
@@ -261,8 +237,32 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(12)",
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
+			},
+			{
+				"matchId": "e1a13d4b-eaf0-4895-8f4e-f9ddeb62878a",
+				"matchNumber": 11,
+				"localTeam": "UANL",
+				"localTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
+				"visitingTeam": "TEC TOLUCA",
+				"visitingTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
+				"date": "19/09/2026 14:00",
+				"startTime": "19/09/2026 14:03",
+				"endTime": "19/09/2026 15:56",
+				"localTeamPoints": "63",
+				"visitingTeamPoints": "58",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 11 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA",
+				"started": 0,
+				"location": "GIMNASIO \"LUIS E. TODD\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
@@ -284,9 +284,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(5)",
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			}
 		],
@@ -313,9 +313,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(4)",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -326,21 +326,21 @@
 				"visitingTeam": "INTERAMERICANA",
 				"visitingTeamId": "9ea22708-a1af-4f68-97e6-958985ca7803",
 				"date": "25/09/2026 12:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
+				"startTime": "25/09/2026 12:05",
+				"endTime": "25/09/2026 13:54",
+				"localTeamPoints": "56",
+				"visitingTeamPoints": "55",
+				"period": "CUARTO 4",
 				"name": "PARTIDO 18 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs UNIVERSIDAD INTERAMERICANA DE PUEBLA",
-				"started": 1,
+				"started": 0,
 				"location": "GIMNASIO \"LUIS E. TODD\"",
 				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "b4dec5e5-04b1-4c23-b10e-21d50ecbe83b",
@@ -361,10 +361,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "602e4fe5-abca-4fc1-9333-fae304619477",
@@ -374,21 +374,21 @@
 				"visitingTeam": "MODELO DE MÉRIDA",
 				"visitingTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
 				"date": "25/09/2026 16:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
+				"startTime": "25/09/2026 16:00",
+				"endTime": "25/09/2026 18:00",
+				"localTeamPoints": "67",
+				"visitingTeamPoints": "61",
+				"period": "CUARTO 4",
 				"name": "PARTIDO 14 UNIVERSIDAD DE LAS AMÉRICAS PUEBLA vs UNIVERSIDAD MODELO DE MÉRIDA",
-				"started": 1,
+				"started": 0,
 				"location": "GIMNASIO MORRIS \"MOE\" WILLIAMS",
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "872637f6-5ab0-4404-a64c-35e71fa3051a",
@@ -398,21 +398,21 @@
 				"visitingTeam": "UPAEP",
 				"visitingTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
 				"date": "25/09/2026 16:30",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
+				"startTime": "25/09/2026 16:30",
+				"endTime": "25/09/2026 18:30",
+				"localTeamPoints": "51",
+				"visitingTeamPoints": "42",
+				"period": "CUARTO 4",
 				"name": "PARTIDO 17 TECNOLÓGICO DE MONTERREY CAMPUS MONTERREY vs UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA",
-				"started": 1,
+				"started": 0,
 				"location": "GIMNASIO WELLNESS CENTER",
 				"locationUrl": "http://maps.google.com/maps?daddr=25.6531123000,-100.2878091000",
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "669cd592-bc32-4cbd-a090-48d8ee3d3a53",
@@ -422,45 +422,21 @@
 				"visitingTeam": "UPAEP",
 				"visitingTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
 				"date": "26/09/2026 14:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
+				"startTime": "26/09/2026 14:03",
+				"endTime": "26/09/2026 16:11",
+				"localTeamPoints": "70",
+				"visitingTeamPoints": "75",
+				"period": "CUARTO 4",
 				"name": "PARTIDO 23 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA",
-				"started": 1,
+				"started": 0,
 				"location": "GIMNASIO \"LUIS E. TODD\"",
 				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
-			},
-			{
-				"matchId": "814c1c18-e935-4fc8-a35e-898975d4135d",
-				"matchNumber": 20,
-				"localTeam": "ANÁHUAC SUR",
-				"localTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
-				"visitingTeam": "UVAQ",
-				"visitingTeamId": "53456a3c-f31c-44e7-9437-7fb8e8a68b78",
-				"date": "26/09/2026 14:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 20 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD VASCO DE QUIROGA",
-				"started": 1,
-				"location": "-",
-				"locationUrl": "-",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "8527bc6d-0815-4151-9c82-35fff169ee35",
@@ -470,21 +446,45 @@
 				"visitingTeam": "INTERAMERICANA",
 				"visitingTeamId": "9ea22708-a1af-4f68-97e6-958985ca7803",
 				"date": "26/09/2026 14:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
+				"startTime": "26/09/2026 14:00",
+				"endTime": "26/09/2026 16:00",
+				"localTeamPoints": "60",
+				"visitingTeamPoints": "38",
+				"period": "CUARTO 4",
 				"name": "PARTIDO 22 TECNOLÓGICO DE MONTERREY CAMPUS MONTERREY vs UNIVERSIDAD INTERAMERICANA DE PUEBLA",
-				"started": 1,
+				"started": 0,
 				"location": "GIMNASIO WELLNESS CENTER",
 				"locationUrl": "http://maps.google.com/maps?daddr=25.6531123000,-100.2878091000",
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
+			},
+			{
+				"matchId": "814c1c18-e935-4fc8-a35e-898975d4135d",
+				"matchNumber": 20,
+				"localTeam": "ANÁHUAC SUR",
+				"localTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
+				"visitingTeam": "UVAQ",
+				"visitingTeamId": "53456a3c-f31c-44e7-9437-7fb8e8a68b78",
+				"date": "26/09/2026 14:00",
+				"startTime": "26/09/2026 14:03",
+				"endTime": "26/09/2026 15:48",
+				"localTeamPoints": "45",
+				"visitingTeamPoints": "54",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 20 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD VASCO DE QUIROGA",
+				"started": 0,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "bccdc127-d17c-447c-b128-5bf64cf1200b",
@@ -494,21 +494,21 @@
 				"visitingTeam": "MODELO DE MÉRIDA",
 				"visitingTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
 				"date": "26/09/2026 15:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
+				"startTime": "26/09/2026 15:00",
+				"endTime": "26/09/2026 17:00",
+				"localTeamPoints": "66",
+				"visitingTeamPoints": "80",
+				"period": "CUARTO 4",
 				"name": "PARTIDO 15 TECNOLÓGICO DE MONTERREY CAMPUS HIDALGO vs UNIVERSIDAD MODELO DE MÉRIDA",
-				"started": 1,
+				"started": 0,
 				"location": "ARENA BORREGOS \"AZUL\" HIDALGO",
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "2588971b-70f2-4ca1-b586-32b44baa9d41",
@@ -529,9 +529,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(5)",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			}
 		],
@@ -558,10 +558,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "1e777e8a-3b0f-4218-817c-aedf8a36f6fc",
@@ -582,9 +582,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(9)",
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
@@ -606,10 +606,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "f206a3f6-e7f7-4c5b-8a9a-2a9f6c46875d",
@@ -630,10 +630,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "97bdecad-1a1a-4aab-88b9-2ceef8d171b4",
@@ -654,10 +654,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "ef125a8b-8e4f-46ae-ad30-9318a513b0c0",
@@ -678,10 +678,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
 			}
 		],
 		"id": "3803c4ed-8fd6-4859-b3d3-3e5bed86306c"
@@ -707,9 +707,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(5)",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -731,10 +731,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "3aa17c9c-6ad5-4d6c-b7ac-0a8074112bbe",
@@ -755,9 +755,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(4)",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -779,10 +779,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "f2126fb6-ecdd-49b0-a3eb-bfd050309e00",
@@ -803,9 +803,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(14)",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -828,9 +828,9 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "7a355cc9-f0eb-40c1-8748-9da5474dda62",
@@ -851,9 +851,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(14)",
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -876,9 +876,9 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "d63ab89f-618c-4f91-97b2-6e7b6ef478c5",
@@ -899,9 +899,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(5)",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -923,10 +923,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "caa6dbb3-899d-4033-96f0-9fa7a5568edd",
@@ -947,9 +947,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(4)",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
 			}
 		],
@@ -976,10 +976,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "09c06d72-1d94-4c7d-96a1-e778bdd181f8",
@@ -1000,10 +1000,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "a05040bd-fbef-4824-8ab2-35d9d2acae2a",
@@ -1024,10 +1024,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "6fe0f981-ac26-405b-a246-b3e00af191b4",
@@ -1048,10 +1048,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "8f50ad3b-c724-4499-b9d5-d7051c5f69a3",
@@ -1072,9 +1072,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(7)",
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "1-1"
 			},
 			{
@@ -1096,10 +1096,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "9748b27e-4431-4ed5-9a29-afe57b39120c",
@@ -1120,10 +1120,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "605e6dc4-e263-45dd-98c5-8d696253a1ce",
@@ -1144,10 +1144,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "d852c68a-d839-41a0-904d-ac4c1133b3c1",
@@ -1168,10 +1168,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "a5a8f498-096d-42c2-af4a-db1c61b79210",
@@ -1192,10 +1192,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			}
 		],
 		"id": "37c9af0c-126c-4965-93e5-dd0cc440c7c2"
@@ -1221,10 +1221,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "1200e512-a812-497a-a155-71b16a84362a",
@@ -1245,10 +1245,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "f0d98c48-2827-4bb3-874c-bd7aaa06f1e4",
@@ -1269,9 +1269,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(9)",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
@@ -1293,10 +1293,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "9c9695ba-3545-4d1c-a438-73d684ba6e4c",
@@ -1317,10 +1317,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "064bc2b9-49cc-4d4e-882a-b327bf4836ba",
@@ -1341,10 +1341,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "cfa63885-e4af-4c5c-bb82-3f4e38f3849c",
@@ -1365,33 +1365,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(9)",
-				"visitingTeamWR": "0-2"
-			},
-			{
-				"matchId": "bc7e6ee3-fa01-4658-845c-fb80849dabbd",
-				"matchNumber": 66,
-				"localTeam": "CETYS TIJUANA",
-				"localTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
-				"visitingTeam": "ANÁHUAC SUR",
-				"visitingTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
-				"date": "31/10/2026 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 66 CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA vs UNIVERSIDAD ANÁHUAC MÉXICO SUR",
-				"started": 1,
-				"location": "GIMNASIO \"RODRIGO VALLE HERNÁNDEZ\" TIJUANA",
-				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(3)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(12)",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
@@ -1413,10 +1389,34 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
+				"localTeamWR": "2-0",
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
+			},
+			{
+				"matchId": "bc7e6ee3-fa01-4658-845c-fb80849dabbd",
+				"matchNumber": 66,
+				"localTeam": "CETYS TIJUANA",
+				"localTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
+				"visitingTeam": "ANÁHUAC SUR",
+				"visitingTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
+				"date": "31/10/2026 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 66 CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA vs UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"started": 1,
+				"location": "GIMNASIO \"RODRIGO VALLE HERNÁNDEZ\" TIJUANA",
+				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "b4c095a6-0a53-4be1-a9dd-7247719dea66",
@@ -1437,10 +1437,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "5b11a070-92e3-4c5f-950b-2ec69fcb3e1e",
@@ -1461,10 +1461,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "10f4e7a6-a811-48e4-8a9a-a109659018dd",
@@ -1485,10 +1485,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			}
 		],
 		"id": "0b1ddfaa-e2cb-4b70-b42f-d7f7d71cf88a"
@@ -1514,10 +1514,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "3bf28f44-dabc-4689-955c-3ac783e1239a",
@@ -1538,10 +1538,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "ca9363d5-d4f2-40f8-9a5f-359c38b42754",
@@ -1562,10 +1562,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "5af644d3-3c37-440e-bd06-601612cd3577",
@@ -1586,10 +1586,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "6d369071-7694-45f5-ad51-c00a231ace99",
@@ -1610,10 +1610,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "25593cd1-c2f6-4291-8332-6aa9c6106159",
@@ -1634,9 +1634,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(14)",
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			}
 		],
@@ -1663,9 +1663,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(4)",
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -1687,34 +1687,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(5)",
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
-			},
-			{
-				"matchId": "c13c693f-e372-439e-b186-da369253d753",
-				"matchNumber": 73,
-				"localTeam": "UPAEP",
-				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
-				"visitingTeam": "TEC TOLUCA",
-				"visitingTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
-				"date": "13/11/2026 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 73 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA",
-				"started": 1,
-				"location": "GIMNASIO \"EL NIDO\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(9)",
-				"visitingTeamWR": "0-2"
 			},
 			{
 				"matchId": "a12ba12d-31db-4149-b9d3-367ac865328f",
@@ -1735,9 +1711,33 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(12)",
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
+			},
+			{
+				"matchId": "c13c693f-e372-439e-b186-da369253d753",
+				"matchNumber": 73,
+				"localTeam": "UPAEP",
+				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
+				"visitingTeam": "TEC TOLUCA",
+				"visitingTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
+				"date": "13/11/2026 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 73 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA",
+				"started": 1,
+				"location": "GIMNASIO \"EL NIDO\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
@@ -1759,9 +1759,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(7)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "1-1"
 			},
 			{
@@ -1783,9 +1783,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(3)",
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -1807,10 +1807,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "ccfc1696-5767-4d25-aa3d-0bc208855394",
@@ -1831,10 +1831,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "dc8436c4-d5ab-4bee-a52a-45d0bb90e700",
@@ -1855,9 +1855,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(9)",
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
@@ -1879,9 +1879,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(3)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -1903,9 +1903,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(7)",
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "1-1"
 			},
 			{
@@ -1927,10 +1927,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			}
 		],
 		"id": "9fadd2e7-4f4c-4f6f-bf50-2623ecc289ed"
@@ -1956,34 +1956,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(7)",
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "1-1"
-			},
-			{
-				"matchId": "163d1bc1-a5fd-435a-adb2-e109efa37ab1",
-				"matchNumber": 82,
-				"localTeam": "UPAEP",
-				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
-				"visitingTeam": "MODELO DE MÉRIDA",
-				"visitingTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
-				"date": "20/11/2026 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 82 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs UNIVERSIDAD MODELO DE MÉRIDA",
-				"started": 1,
-				"location": "GIMNASIO \"EL NIDO\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
 			},
 			{
 				"matchId": "c9b183f6-9b1d-43cc-b05e-ca6db2d54042",
@@ -2004,10 +1980,34 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(14)",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
+			},
+			{
+				"matchId": "163d1bc1-a5fd-435a-adb2-e109efa37ab1",
+				"matchNumber": 82,
+				"localTeam": "UPAEP",
+				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"visitingTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
+				"date": "20/11/2026 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 82 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs UNIVERSIDAD MODELO DE MÉRIDA",
+				"started": 1,
+				"location": "GIMNASIO \"EL NIDO\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "70291bc7-12df-411e-8417-07f8443d79ea",
@@ -2028,10 +2028,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "24e49a06-5a24-4754-af27-603b926ba3e7",
@@ -2053,9 +2053,33 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(3)",
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
+			},
+			{
+				"matchId": "4abcd2df-6bc6-456f-8f16-cc805a2d24f0",
+				"matchNumber": 87,
+				"localTeam": "ANÁHUAC SUR",
+				"localTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
+				"visitingTeam": "UDEM",
+				"visitingTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
+				"date": "21/11/2026 12:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 87 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD DE MONTERREY",
+				"started": 1,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(15)",
+				"visitingTeamWR": "0-0"
 			},
 			{
 				"matchId": "1eb17e5d-9577-418e-b865-54f0babce1aa",
@@ -2077,33 +2101,9 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(7)",
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "1-1"
-			},
-			{
-				"matchId": "4abcd2df-6bc6-456f-8f16-cc805a2d24f0",
-				"matchNumber": 87,
-				"localTeam": "ANÁHUAC SUR",
-				"localTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
-				"visitingTeam": "UDEM",
-				"visitingTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
-				"date": "21/11/2026 12:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 87 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD DE MONTERREY",
-				"started": 1,
-				"location": "-",
-				"locationUrl": "-",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "0-0"
 			},
 			{
 				"matchId": "b405bc10-1cce-4106-9f87-26c1fde49e06",
@@ -2124,10 +2124,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "27d18e80-bcd1-4e31-a258-eda61c673613",
@@ -2148,10 +2148,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "8aa895c5-593a-4c36-ba2a-497a25078594",
@@ -2172,9 +2172,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(3)",
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
 			}
 		],
@@ -2201,9 +2201,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(4)",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -2225,9 +2225,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(14)",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -2249,9 +2249,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(5)",
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -2274,9 +2274,9 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "be17861a-71ba-415b-ab97-4c51345ddf9c",
@@ -2297,10 +2297,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "e2104a5d-0ed9-4000-b8cf-ca4bccf1bdd6",
@@ -2321,9 +2321,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(14)",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -2345,9 +2345,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(4)",
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -2369,34 +2369,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(5)",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
-			},
-			{
-				"matchId": "f2a338fa-c841-4a1d-988e-f264d64c7933",
-				"matchNumber": 93,
-				"localTeam": "UANL",
-				"localTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
-				"visitingTeam": "MODELO DE MÉRIDA",
-				"visitingTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
-				"date": "28/11/2026 14:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 93 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs UNIVERSIDAD MODELO DE MÉRIDA",
-				"started": 1,
-				"location": "GIMNASIO \"LUIS E. TODD\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
 			},
 			{
 				"matchId": "04e7ef5d-1929-46b2-b627-a43457f112f1",
@@ -2417,9 +2393,33 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(6)",
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
+			},
+			{
+				"matchId": "f2a338fa-c841-4a1d-988e-f264d64c7933",
+				"matchNumber": 93,
+				"localTeam": "UANL",
+				"localTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"visitingTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
+				"date": "28/11/2026 14:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 93 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs UNIVERSIDAD MODELO DE MÉRIDA",
+				"started": 1,
+				"location": "GIMNASIO \"LUIS E. TODD\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "1-1"
 			}
 		],
@@ -2446,10 +2446,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "d756192a-91c6-4436-8bf0-ea8d6c511eff",
@@ -2470,10 +2470,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "ae7c3332-22ee-461f-bea5-6fba7c25bc72",
@@ -2495,9 +2495,9 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "2ce2c7c1-fbc1-4da1-9c89-b916ee1f648a",
@@ -2518,9 +2518,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(5)",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -2542,9 +2542,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(7)",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "1-1"
 			}
 		],
@@ -2571,34 +2571,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
-			},
-			{
-				"matchId": "ce3e2241-6be4-4a12-899b-39a92813fc9d",
-				"matchNumber": 109,
-				"localTeam": "TEC TOLUCA",
-				"localTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
-				"visitingTeam": "UANL",
-				"visitingTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
-				"date": "05/02/2027 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 109 TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA vs UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN",
-				"started": 1,
-				"location": "ARENA BORREGOS \"CUBO DE HIELO\" TOLUCA",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(9)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "e298eee7-59e3-4de9-8563-eadd67cdade3",
@@ -2619,10 +2595,34 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
+			},
+			{
+				"matchId": "ce3e2241-6be4-4a12-899b-39a92813fc9d",
+				"matchNumber": 109,
+				"localTeam": "TEC TOLUCA",
+				"localTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
+				"visitingTeam": "UANL",
+				"visitingTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
+				"date": "05/02/2027 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 109 TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA vs UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN",
+				"started": 1,
+				"location": "ARENA BORREGOS \"CUBO DE HIELO\" TOLUCA",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(14)",
+				"localTeamWR": "0-2",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "40d7e94a-bafe-4a0e-bdb4-37f330975ffc",
@@ -2643,10 +2643,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "434b6861-0ef4-43f5-bf6a-0174c6ab839b",
@@ -2667,10 +2667,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "ba448756-119c-4e72-b505-c34a15333c12",
@@ -2691,10 +2691,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "d1370965-9c29-4cd2-8e9d-eabd962aa590",
@@ -2715,10 +2715,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "1ce7d306-50a7-484d-a336-961998d54bf1",
@@ -2739,10 +2739,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "c3cf84e0-ebf2-4127-a2cd-2e1a1be03824",
@@ -2763,10 +2763,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "ae7a5135-18b2-45cb-9b29-e2df1224aa20",
@@ -2787,10 +2787,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "fb50d4c1-8ef8-4e30-94fc-d84c245bf43b",
@@ -2811,10 +2811,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "1af4e813-4865-4e1e-abf8-7606e5f93742",
@@ -2835,10 +2835,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			}
 		],
 		"id": "3c133d0a-8946-4983-b63f-60a92db75e92"
@@ -2864,10 +2864,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "14c7bdbb-a2e4-44f4-8628-46f7137ca063",
@@ -2888,10 +2888,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "690308e6-e8ed-4ac1-bec7-78a37b3f756e",
@@ -2912,10 +2912,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "b037649b-bd8b-4f98-be2f-7b1dcef70a9f",
@@ -2936,9 +2936,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(14)",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -2960,10 +2960,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "747aa7c5-0781-4bbc-be15-f3ce0a2cef3f",
@@ -2984,10 +2984,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "ed966339-f59e-441a-b4a9-a476c6bdf13c",
@@ -3008,10 +3008,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "37e7b227-acca-468d-9ee8-2599e3b069b0",
@@ -3032,9 +3032,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(9)",
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
@@ -3056,9 +3056,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(14)",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -3080,10 +3080,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			}
 		],
 		"id": "b4362bb8-2d1b-4ffa-a1f3-24c4888ef621"
@@ -3109,9 +3109,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(4)",
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -3133,10 +3133,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "c615ef71-1998-45e2-99a8-1864dffd145f",
@@ -3157,9 +3157,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(14)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -3182,8 +3182,8 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(5)",
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -3205,9 +3205,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(7)",
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "1-1"
 			},
 			{
@@ -3229,34 +3229,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
-			},
-			{
-				"matchId": "3ee5805a-b05c-4bcf-a0d4-07f5b52ab2ac",
-				"matchNumber": 138,
-				"localTeam": "UANL",
-				"localTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
-				"visitingTeam": "ANÁHUAC NORTE",
-				"visitingTeamId": "1fd01df7-224f-49f1-bede-d7493262cc8f",
-				"date": "20/02/2027 14:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 138 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs UNIVERSIDAD ANÁHUAC MÉXICO NORTE",
-				"started": 1,
-				"location": "GIMNASIO \"LUIS E. TODD\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(5)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "8075fc59-fba3-4b8a-b8f9-33b6974131b4",
@@ -3278,7 +3254,31 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(3)",
+				"visitingTeamWR": "2-0"
+			},
+			{
+				"matchId": "3ee5805a-b05c-4bcf-a0d4-07f5b52ab2ac",
+				"matchNumber": 138,
+				"localTeam": "UANL",
+				"localTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"visitingTeamId": "1fd01df7-224f-49f1-bede-d7493262cc8f",
+				"date": "20/02/2027 14:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 138 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs UNIVERSIDAD ANÁHUAC MÉXICO NORTE",
+				"started": 1,
+				"location": "GIMNASIO \"LUIS E. TODD\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
 				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			},
@@ -3301,9 +3301,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(14)",
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			}
 		],
@@ -3330,10 +3330,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "702de033-0d9e-438a-b9bd-db3632797ca6",
@@ -3354,9 +3354,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(3)",
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
 			}
 		],
@@ -3383,10 +3383,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "ded6feac-a48c-4aaf-9f47-0fd55d770b9d",
@@ -3407,10 +3407,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "d527b07d-a021-481b-91f6-6f7c48a91d00",
@@ -3431,34 +3431,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(3)",
-				"visitingTeamWR": "2-0"
-			},
-			{
-				"matchId": "c33c1bdd-b342-4874-9ef0-ee580cb75e50",
-				"matchNumber": 141,
-				"localTeam": "TEC CEM",
-				"localTeamId": "bea107fe-6c11-4cc0-918f-6b8c1de567a5",
-				"visitingTeam": "TEC GUADALAJARA",
-				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
-				"date": "05/03/2027 19:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 141 TECNOLÓGICO DE MONTERREY CAMPUS ESTADO DE MÉXICO vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
-				"started": 1,
-				"location": "ARENA BOREGOS CEM",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
-				"live": 0,
-				"url": "",
 				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "1-1"
+				"visitingTeamPosition": "(2)",
+				"visitingTeamWR": "2-0"
 			},
 			{
 				"matchId": "7174a749-ea60-4b63-b8e8-025c48055035",
@@ -3479,34 +3455,34 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
-				"matchId": "8b472f04-22ab-4d36-b01d-472ec5a6bb6e",
-				"matchNumber": 147,
+				"matchId": "c33c1bdd-b342-4874-9ef0-ee580cb75e50",
+				"matchNumber": 141,
 				"localTeam": "TEC CEM",
 				"localTeamId": "bea107fe-6c11-4cc0-918f-6b8c1de567a5",
-				"visitingTeam": "CETYS TIJUANA",
-				"visitingTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
-				"date": "06/03/2027 13:00",
+				"visitingTeam": "TEC GUADALAJARA",
+				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
+				"date": "05/03/2027 19:00",
 				"startTime": "-",
 				"endTime": "-",
 				"localTeamPoints": "-",
 				"visitingTeamPoints": "-",
 				"period": "-",
-				"name": "PARTIDO 147 TECNOLÓGICO DE MONTERREY CAMPUS ESTADO DE MÉXICO vs CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA",
+				"name": "PARTIDO 141 TECNOLÓGICO DE MONTERREY CAMPUS ESTADO DE MÉXICO vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
 				"started": 1,
 				"location": "ARENA BOREGOS CEM",
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(3)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamPosition": "(8)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "7a87a1d1-09e0-4a7b-a55f-f6a680d22029",
@@ -3527,8 +3503,32 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
+			},
+			{
+				"matchId": "8b472f04-22ab-4d36-b01d-472ec5a6bb6e",
+				"matchNumber": 147,
+				"localTeam": "TEC CEM",
+				"localTeamId": "bea107fe-6c11-4cc0-918f-6b8c1de567a5",
+				"visitingTeam": "CETYS TIJUANA",
+				"visitingTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
+				"date": "06/03/2027 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 147 TECNOLÓGICO DE MONTERREY CAMPUS ESTADO DE MÉXICO vs CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA",
+				"started": 1,
+				"location": "ARENA BOREGOS CEM",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(3)",
+				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
 			},
@@ -3551,9 +3551,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(7)",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "1-1"
 			},
 			{
@@ -3575,10 +3575,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "e7b1278f-7ac9-478d-b536-8c743930d860",
@@ -3599,10 +3599,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "422c96ae-e3a1-4ab1-b695-8c49a637b9be",
@@ -3623,10 +3623,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			}
 		],
 		"id": "07675402-e8da-4bc5-a2d0-30741c401d6c"
@@ -3652,10 +3652,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "2be782f5-cf88-430a-83e9-99a6e87dcc24",
@@ -3676,34 +3676,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
-			},
-			{
-				"matchId": "e3d5d793-3030-4248-baeb-b781cf3b03bc",
-				"matchNumber": 152,
-				"localTeam": "UPAEP",
-				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
-				"visitingTeam": "ANÁHUAC NORTE",
-				"visitingTeamId": "1fd01df7-224f-49f1-bede-d7493262cc8f",
-				"date": "12/03/2027 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 152 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs UNIVERSIDAD ANÁHUAC MÉXICO NORTE",
-				"started": 1,
-				"location": "GIMNASIO \"EL NIDO\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(5)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "f0357be5-6188-40d4-b0b9-82dbd444c11f",
@@ -3724,8 +3700,32 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(3)",
+				"visitingTeamWR": "2-0"
+			},
+			{
+				"matchId": "e3d5d793-3030-4248-baeb-b781cf3b03bc",
+				"matchNumber": 152,
+				"localTeam": "UPAEP",
+				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"visitingTeamId": "1fd01df7-224f-49f1-bede-d7493262cc8f",
+				"date": "12/03/2027 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 152 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs UNIVERSIDAD ANÁHUAC MÉXICO NORTE",
+				"started": 1,
+				"location": "GIMNASIO \"EL NIDO\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
 				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			},
@@ -3748,9 +3748,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(9)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
@@ -3772,10 +3772,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "1457b2cb-5660-47bd-b026-29c25ab12a55",
@@ -3796,9 +3796,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(4)",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -3820,9 +3820,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(14)",
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -3844,9 +3844,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(5)",
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -3868,10 +3868,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "e97661d6-1e31-49f8-b7f9-5e37227f300e",
@@ -3892,9 +3892,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0548945000,-98.2845204000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(9)",
+				"localTeamPosition": "(9)",
+				"localTeamWR": "1-2",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			}
 		],
@@ -3921,10 +3921,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "089461ce-80c7-4ad2-b6a9-669b49caf864",
@@ -3945,34 +3945,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
-			},
-			{
-				"matchId": "58e653d8-a0ca-4b7f-a3cf-d4c86c8c5327",
-				"matchNumber": 167,
-				"localTeam": "TEC TOLUCA",
-				"localTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
-				"visitingTeam": "TEC GUADALAJARA",
-				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
-				"date": "19/03/2027 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 167 TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
-				"started": 1,
-				"location": "ARENA BORREGOS \"CUBO DE HIELO\" TOLUCA",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(9)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "1-1"
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "6dc4e82f-3db5-43b6-9578-84b393146f55",
@@ -3993,10 +3969,34 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
+			},
+			{
+				"matchId": "58e653d8-a0ca-4b7f-a3cf-d4c86c8c5327",
+				"matchNumber": 167,
+				"localTeam": "TEC TOLUCA",
+				"localTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
+				"visitingTeam": "TEC GUADALAJARA",
+				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
+				"date": "19/03/2027 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 167 TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
+				"started": 1,
+				"location": "ARENA BORREGOS \"CUBO DE HIELO\" TOLUCA",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(8)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "ecb1deb9-5f62-4ac2-8468-d07f410afff2",
@@ -4017,10 +4017,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "bbdd1d75-8e4f-4901-8ecf-6d16d2ce257e",
@@ -4041,9 +4041,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(3)",
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -4065,9 +4065,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(4)",
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -4089,10 +4089,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "a419f2e0-31a7-4429-a930-7826a55b67b8",
@@ -4114,9 +4114,9 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "cdb0ce66-0676-4788-9fda-d6f262f02490",
@@ -4137,9 +4137,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(7)",
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "1-1"
 			},
 			{
@@ -4161,9 +4161,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(3)",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -4185,9 +4185,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(5)",
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "2-0"
 			}
 		],
@@ -4214,34 +4214,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
-			},
-			{
-				"matchId": "615275e7-3a62-4942-88bc-9ca7707a0d4e",
-				"matchNumber": 177,
-				"localTeam": "UANL",
-				"localTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
-				"visitingTeam": "UDEM",
-				"visitingTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
-				"date": "02/04/2027 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 177 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs UNIVERSIDAD DE MONTERREY",
-				"started": 1,
-				"location": "GIMNASIO \"LUIS E. TODD\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "631af0f9-fbf3-40e4-8368-a9135eec813b",
@@ -4262,10 +4238,34 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
+			},
+			{
+				"matchId": "615275e7-3a62-4942-88bc-9ca7707a0d4e",
+				"matchNumber": 177,
+				"localTeam": "UANL",
+				"localTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
+				"visitingTeam": "UDEM",
+				"visitingTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
+				"date": "02/04/2027 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 177 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs UNIVERSIDAD DE MONTERREY",
+				"started": 1,
+				"location": "GIMNASIO \"LUIS E. TODD\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
+				"visitingTeamPosition": "(15)",
+				"visitingTeamWR": "0-0"
 			},
 			{
 				"matchId": "a4a5c025-579e-449b-a516-bae6ffc9f27f",
@@ -4286,10 +4286,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "af0ba6ec-6c0a-487e-b9cd-9c6b56848b32",
@@ -4310,10 +4310,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "0a10ce9e-6923-466e-b8d7-2d0b559929e8",
@@ -4334,10 +4334,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "4e2cbf03-3bb6-4a4b-980e-9abb94bb35e0",
@@ -4358,10 +4358,34 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
+			},
+			{
+				"matchId": "61e4aae6-9d51-4576-9f4f-70bf28bae2cb",
+				"matchNumber": 184,
+				"localTeam": "ANÁHUAC SUR",
+				"localTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
+				"visitingTeam": "INTERAMERICANA",
+				"visitingTeamId": "9ea22708-a1af-4f68-97e6-958985ca7803",
+				"date": "03/04/2027 12:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 184 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD INTERAMERICANA DE PUEBLA",
+				"started": 1,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "1af5d361-83ab-4e78-b1db-62ab20943374",
@@ -4383,33 +4407,9 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(14)",
+				"localTeamWR": "4-0",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
-			},
-			{
-				"matchId": "61e4aae6-9d51-4576-9f4f-70bf28bae2cb",
-				"matchNumber": 184,
-				"localTeam": "ANÁHUAC SUR",
-				"localTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
-				"visitingTeam": "INTERAMERICANA",
-				"visitingTeamId": "9ea22708-a1af-4f68-97e6-958985ca7803",
-				"date": "03/04/2027 12:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 184 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD INTERAMERICANA DE PUEBLA",
-				"started": 1,
-				"location": "-",
-				"locationUrl": "-",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "5cf16c3c-a91f-41a0-b27e-174d0c51639b",
@@ -4430,10 +4430,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "28e0dad3-989c-4ded-829c-da785c644543",
@@ -4454,10 +4454,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "f6fec51a-e912-4adf-9c5a-401a6b2798f7",
@@ -4478,10 +4478,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			}
 		],
 		"id": "35b95c7e-e3fc-4f01-96c2-6d9d1259b42c"
@@ -4507,10 +4507,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "dc1e4f1b-0488-4096-b69d-8fda42c60987",
@@ -4531,10 +4531,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "cb6518ab-c2de-4400-ad9b-ba42bd28e08a",
@@ -4555,9 +4555,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(4)",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -4579,10 +4579,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "9539f69b-a34a-4b9b-9900-f10001118561",
@@ -4603,10 +4603,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "e411013a-605e-415a-917d-2aa9810d612c",
@@ -4627,10 +4627,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "cae97421-f9df-4907-8700-1686c220d993",
@@ -4651,10 +4651,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "59afb7d5-1076-49ae-bf9f-64f65843df0e",
@@ -4675,10 +4675,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			},
 			{
 				"matchId": "e8d5b5fa-84bc-4daa-bcea-f7df0431616f",
@@ -4699,10 +4699,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
 				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "ed185c6b-d9dc-4eb7-9c7f-79ff2de24c30",
@@ -4723,10 +4723,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "1-1"
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "fe873eff-a77a-4e25-b3fa-8cb0ce1d3e26",
@@ -4747,9 +4747,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(9)",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			}
 		],
@@ -4776,34 +4776,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
-			},
-			{
-				"matchId": "97802b16-ae37-4672-983a-67da0783fab4",
-				"matchNumber": 197,
-				"localTeam": "MODELO DE MÉRIDA",
-				"localTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
-				"visitingTeam": "UANL",
-				"visitingTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
-				"date": "16/04/2027 18:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 197 UNIVERSIDAD MODELO DE MÉRIDA vs UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN",
-				"started": 1,
-				"location": "UNIDAD DEPORTIVA FRANCISCO DE MONTEJO",
-				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "2-0"
+				"localTeamPosition": "(11)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "77547a5f-8b05-46c1-80b5-e68020cef74d",
@@ -4824,34 +4800,34 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(9)",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
-				"matchId": "8dc2e366-00eb-43e3-bb15-eb0fc1752eda",
-				"matchNumber": 199,
-				"localTeam": "UDEM",
-				"localTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
-				"visitingTeam": "TEC GUADALAJARA",
-				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
-				"date": "16/04/2027 19:00",
+				"matchId": "97802b16-ae37-4672-983a-67da0783fab4",
+				"matchNumber": 197,
+				"localTeam": "MODELO DE MÉRIDA",
+				"localTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
+				"visitingTeam": "UANL",
+				"visitingTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
+				"date": "16/04/2027 18:00",
 				"startTime": "-",
 				"endTime": "-",
 				"localTeamPoints": "-",
 				"visitingTeamPoints": "-",
 				"period": "-",
-				"name": "PARTIDO 199 UNIVERSIDAD DE MONTERREY vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
+				"name": "PARTIDO 197 UNIVERSIDAD MODELO DE MÉRIDA vs UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN",
 				"started": 1,
-				"location": "-",
-				"locationUrl": "-",
+				"location": "UNIDAD DEPORTIVA FRANCISCO DE MONTEJO",
+				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "1-1"
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "3-1"
 			},
 			{
 				"matchId": "c4e1b2bd-159f-4201-917f-1f5738e379a1",
@@ -4872,10 +4848,34 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
+			},
+			{
+				"matchId": "8dc2e366-00eb-43e3-bb15-eb0fc1752eda",
+				"matchNumber": 199,
+				"localTeam": "UDEM",
+				"localTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
+				"visitingTeam": "TEC GUADALAJARA",
+				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
+				"date": "16/04/2027 19:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 199 UNIVERSIDAD DE MONTERREY vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
+				"started": 1,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(15)",
+				"localTeamWR": "0-0",
+				"visitingTeamPosition": "(8)",
+				"visitingTeamWR": "1-1"
 			},
 			{
 				"matchId": "9a4c2ca0-f6bd-44d6-bddc-23ba73775900",
@@ -4896,10 +4896,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(5)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "34fa0f4e-be16-4716-b333-99de5eff9f77",
@@ -4920,9 +4920,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(9)",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
@@ -4944,10 +4944,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5420891000,-99.1819830000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "2-0",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-2"
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "0-3"
 			},
 			{
 				"matchId": "a21a9fbc-b791-4aa1-b495-56f35e2a99fc",
@@ -4968,10 +4968,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "0-0",
+				"localTeamPosition": "(7)",
+				"localTeamWR": "1-1",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "8f888926-4c67-40ab-9bdc-20d90ccd65d9",
@@ -4992,9 +4992,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(3)",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
 			}
 		],
@@ -5021,9 +5021,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(9)",
+				"localTeamPosition": "(13)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-2"
 			},
 			{
@@ -5045,10 +5045,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "2-0",
+				"localTeamPosition": "(6)",
+				"localTeamWR": "3-1",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "2-0"
+				"visitingTeamWR": "4-0"
 			},
 			{
 				"matchId": "60884c7d-26c7-4df7-b05b-acd91c78b5c2",
@@ -5069,9 +5069,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(3)",
+				"localTeamPosition": "(5)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -5093,9 +5093,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.7324076000,-103.4541438000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(3)",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "2-0"
 			},
 			{
@@ -5117,10 +5117,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.9995805000,-98.2751013000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "1-1",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(10)",
+				"localTeamWR": "1-3",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "1-3"
 			},
 			{
 				"matchId": "c93dad7d-d9b5-4129-8cef-1b47ee902068",
@@ -5141,10 +5141,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-2",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "0-2"
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-3",
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "1-2"
 			}
 		],
 		"id": "a9bcd2a4-ae8f-40bd-b44a-8202fd8eb9b3"
