@@ -116,3 +116,37 @@ export function toISODateTime(value: string) {
 	const epoch = leagueDateToEpoch(value);
 	return Number.isFinite(epoch) ? new Date(epoch).toISOString() : undefined;
 }
+
+const scheduleFormatter = new Intl.DateTimeFormat("es-MX", {
+	timeZone: LEAGUE_TIME_ZONE,
+	weekday: "short",
+	day: "numeric",
+	month: "short",
+	hour: "2-digit",
+	minute: "2-digit",
+	hour12: false,
+});
+
+const monthFormatter = new Intl.DateTimeFormat("es-MX", {
+	timeZone: LEAGUE_TIME_ZONE,
+	month: "long",
+	year: "numeric",
+});
+
+/** { day: "sáb 4 oct", time: "18:00" }, en hora de la liga, para el calendario. */
+export function formatLeagueSchedule(epoch: number) {
+	const parts = scheduleFormatter.formatToParts(epoch);
+	// es-MX abrevia con punto ("sáb.", "oct."): en mayúsculas estorba.
+	const value = (type: Intl.DateTimeFormatPartTypes) =>
+		(parts.find((p) => p.type === type)?.value ?? "").replace(".", "");
+
+	return {
+		day: `${value("weekday")} ${value("day")} ${value("month")}`,
+		time: `${value("hour")}:${value("minute")}`,
+	};
+}
+
+/** "octubre de 2026", en hora de la liga: agrupa el calendario por mes. */
+export function formatLeagueMonth(epoch: number) {
+	return monthFormatter.format(epoch);
+}

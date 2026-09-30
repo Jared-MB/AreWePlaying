@@ -1,0 +1,419 @@
+---
+import ScheduleRow from "@/components/ScheduleRow.astro";
+import type { Match } from "@/types/match";
+import { getPastMatches } from "@/utils/get-past-matches";
+import { getUpcomingMatches } from "@/utils/get-upcoming-matches";
+import { formatLeagueMonth, leagueDateToEpoch } from "@/utils/league-date";
+import { getTeamSlug } from "@/utils/team-slug";
+
+interface Props {
+  teamId: string;
+  /** UUID del torneo: con él se leen los datos del disco. */
+  tournamentId: string;
+  /** Slug del torneo: con él se arman los enlaces. */
+  tournamentSlug: string;
+}
+
+const { teamId, tournamentId, tournamentSlug } = Astro.props;
+
+const [upcoming, past] = await Promise.all([
+  getUpcomingMatches({ teamId, tournamentId }),
+  getPastMatches({ teamId, tournamentId }),
+]);
+
+const byDate = (a: Match, b: Match) =>
+  leagueDateToEpoch(a.date) - leagueDateToEpoch(b.date);
+
+function groupByMonth(matches: Match[]) {
+  const groups = new Map<string, Match[]>();
+
+  for (const match of matches) {
+    const month = formatLeagueMonth(leagueDateToEpoch(match.date));
+    groups.set(month, [...(groups.get(month) ?? []), match]);
+  }
+
+  return [...groups];
+}
+
+const isHome = (match: Match) => match.localTeamId === teamId;
+const getOpponentName = (match: Match) =>
+  isHome(match) ? match.visitingTeam : match.localTeam;
+
+// Los rivales de toda la temporada, para que el filtro sirva en ambas pestañas.
+const opponents = [
+  ...new Map(
+    [...upcoming, ...past].map((match) => {
+      const name = getOpponentName(match);
+      return [getTeamSlug({ shortName: name }), name];
+    }),
+  ),
+].toSorted(([, a], [, b]) => a.localeCompare(b, "es"));
+
+const panels = [
+  {
+    id: "proximos",
+    label: "Próximos",
+    count: upcoming.length,
+    groups: groupByMonth(upcoming.toSorted(byDate)),
+    showResult: false,
+    empty: "No hay más partidos por jugar",
+  },
+  {
+    id: "pasados",
+    label: "Pasados",
+    count: past.length,
+    // Como en la NBA: lo más reciente arriba.
+    groups: groupByMonth(past.toSorted((a, b) => byDate(b, a))),
+    showResult: true,
+    empty: "Todavía no hay partidos jugados",
+  },
+];
+
+// Con la temporada terminada no tiene caso abrir en una pestaña vacía.
+const defaultPanel =
+  upcoming.length === 0 && past.length > 0 ? "pasados" : "proximos";
+
+const select =
+  "cursor-pointer appearance-none truncate rounded-sm bg-background py-2 pr-6 pl-1 font-mono text-base font-bold uppercase tracking-wider text-foreground hover:underline sm:text-sm";
+---
+
+<div data-schedule data-default={defaultPanel}>
+  <div
+    class="flex flex-col-reverse gap-x-6 border-b border-line/70 sm:flex-row sm:items-end sm:justify-between"
+  >
+    <div role="tablist" aria-label="Partidos" class="flex gap-6">
+      {
+        panels.map(({ id, label, count }) => (
+          <button
+            type="button"
+            role="tab"
+            id={`schedule-tab-${id}`}
+            data-schedule-tab={id}
+            aria-controls={`schedule-panel-${id}`}
+            aria-selected={id === defaultPanel ? "true" : "false"}
+            tabindex={id === defaultPanel ? 0 : -1}
+            class="-mb-px border-b-2 border-transparent py-3 font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground transition-colors duration-150 hover:text-foreground aria-selected:border-foreground aria-selected:text-foreground"
+          >
+            {label}{" "}
+            <span class="tabular-nums">
+              (<span data-schedule-count={id}>{count}</span>)
+            </span>
+          </button>
+        ))
+      }
+    </div>
+
+    <div
+      class="flex flex-wrap items-center gap-x-6 gap-y-1 pb-2 sm:justify-end sm:pb-1.5"
+    >
+      <button
+        type="button"
+        data-schedule-reset="toolbar"
+        hidden
+        class="rounded-sm border border-line px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider hover:bg-surface-hover"
+      >
+        Restablecer
+      </button>
+
+      <div class="relative">
+        <label for="schedule-location" class="sr-only">Ubicación</label>
+        <select
+          id="schedule-location"
+          name="ubicacion"
+          data-schedule-filter="ubicacion"
+          class={select}
+        >
+          <option value="">Todas las ubicaciones</option>
+          <option value="local">Local</option>
+          <option value="visita">Visita</option>
+        </select>
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 16 16"
+          class="pointer-events-none absolute top-1/2 right-1 size-3.5 -translate-y-1/2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"><path d="m4 6 4 4 4-4"></path></svg
+        >
+      </div>
+
+      <div class="relative min-w-0">
+        <label for="schedule-opponent" class="sr-only">Rival</label>
+        <select
+          id="schedule-opponent"
+          name="rival"
+          data-schedule-filter="rival"
+          class:list={[select, "max-w-64"]}
+        >
+          <option value="">Todos los rivales</option>
+          {
+            opponents.map(([slug, name]) => (
+              <option value={slug}>{name}</option>
+            ))
+          }
+        </select>
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 16 16"
+          class="pointer-events-none absolute top-1/2 right-1 size-3.5 -translate-y-1/2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"><path d="m4 6 4 4 4-4"></path></svg
+        >
+      </div>
+    </div>
+  </div>
+
+  <p data-schedule-status aria-live="polite" class="sr-only"></p>
+
+  {
+    panels.map(({ id, groups, showResult, empty }) => (
+      <div
+        role="tabpanel"
+        id={`schedule-panel-${id}`}
+        aria-labelledby={`schedule-tab-${id}`}
+        data-schedule-panel={id}
+        hidden={id !== defaultPanel}
+        tabindex="0"
+        class="pt-6"
+      >
+        {groups.length > 0 ? (
+          <>
+            {groups.map(([month, matches]) => (
+              <section data-schedule-month class="mb-8 last:mb-0">
+                <h3 class="mb-4 font-mono text-2xl uppercase tracking-wide">
+                  {month}
+                </h3>
+                <ol class="flex flex-col gap-2">
+                  {matches.map((match) => (
+                    <li
+                      data-schedule-match
+                      data-location={isHome(match) ? "local" : "visita"}
+                      data-opponent={getTeamSlug({
+                        shortName: getOpponentName(match),
+                      })}
+                    >
+                      <ScheduleRow
+                        match={match}
+                        teamId={teamId}
+                        tournamentId={tournamentId}
+                        tournamentSlug={tournamentSlug}
+                        showResult={showResult}
+                      />
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            ))}
+            <div
+              data-schedule-no-results
+              hidden
+              class="rounded-md bg-surface p-6 text-center shadow-xs"
+            >
+              <p class="font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground">
+                Ningún partido coincide con los filtros
+              </p>
+              <button
+                type="button"
+                data-schedule-reset
+                class="mt-3 font-mono text-sm font-bold uppercase tracking-wider underline"
+              >
+                Quitar filtros
+              </button>
+            </div>
+          </>
+        ) : (
+          <div class="rounded-md bg-surface p-6 text-center shadow-xs">
+            <p class="font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground">
+              {empty}
+            </p>
+          </div>
+        )}
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  // Pestañas según el patrón de la APG y filtros de ubicación y rival. Todo
+  // queda en la URL (?partidos=pasados&ubicacion=local&rival=uagro) para poder
+  // compartir la vista. Los listeners van en `document` para sobrevivir a los
+  // swaps del ClientRouter.
+  const TAB_PARAM = "partidos";
+  const FILTERS = ["ubicacion", "rival"] as const;
+
+  type Filters = Record<(typeof FILTERS)[number], string>;
+
+  const $$ = <T extends HTMLElement>(selector: string, root: ParentNode = document) => [
+    ...root.querySelectorAll<T>(selector),
+  ];
+
+  const select = (id: string, { focus = false } = {}) => {
+    const $tabs = $$("[data-schedule-tab]");
+    if (!$tabs.some(($tab) => $tab.dataset.scheduleTab === id)) return;
+
+    for (const $tab of $tabs) {
+      const active = $tab.dataset.scheduleTab === id;
+      $tab.setAttribute("aria-selected", String(active));
+      $tab.tabIndex = active ? 0 : -1;
+      if (active && focus) $tab.focus();
+    }
+
+    for (const $panel of $$("[data-schedule-panel]")) {
+      $panel.hidden = $panel.dataset.schedulePanel !== id;
+    }
+  };
+
+  const readFilters = (): Filters => ({
+    ubicacion:
+      $$<HTMLSelectElement>('[data-schedule-filter="ubicacion"]')[0]?.value ??
+      "",
+    rival:
+      $$<HTMLSelectElement>('[data-schedule-filter="rival"]')[0]?.value ?? "",
+  });
+
+  const matchesFilters = ($match: HTMLElement, filters: Filters) =>
+    (!filters.ubicacion || $match.dataset.location === filters.ubicacion) &&
+    (!filters.rival || $match.dataset.opponent === filters.rival);
+
+  /** Filtra un panel y devuelve cuántos partidos quedaron visibles. */
+  const filterPanel = ($panel: HTMLElement, filters: Filters) => {
+    let visible = 0;
+
+    for (const $month of $$("[data-schedule-month]", $panel)) {
+      const $matches = $$("[data-schedule-match]", $month);
+      for (const $match of $matches) {
+        $match.hidden = !matchesFilters($match, filters);
+      }
+      const shown = $matches.filter(($match) => !$match.hidden).length;
+      $month.hidden = shown === 0;
+      visible += shown;
+    }
+
+    const $noResults = $panel.querySelector<HTMLElement>(
+      "[data-schedule-no-results]",
+    );
+    if ($noResults) $noResults.hidden = visible > 0;
+
+    return visible;
+  };
+
+  const applyFilters = ({ announce = false } = {}) => {
+    const filters = readFilters();
+    const active = FILTERS.some((name) => filters[name]);
+    let selectedCount = 0;
+
+    for (const $panel of $$("[data-schedule-panel]")) {
+      const id = $panel.dataset.schedulePanel;
+      const visible = filterPanel($panel, filters);
+      const $count = document.querySelector(`[data-schedule-count="${id}"]`);
+      if ($count) $count.textContent = String(visible);
+      if (!$panel.hidden) selectedCount = visible;
+    }
+
+    const $reset = document.querySelector<HTMLElement>(
+      '[data-schedule-reset="toolbar"]',
+    );
+    if ($reset) $reset.hidden = !active;
+
+    const $status = document.querySelector("[data-schedule-status]");
+    if ($status && announce) {
+      $status.textContent = `${selectedCount} ${selectedCount === 1 ? "partido" : "partidos"}`;
+    }
+  };
+
+  const updateUrl = () => {
+    const $schedule = document.querySelector<HTMLElement>("[data-schedule]");
+    const $tab = document.querySelector<HTMLElement>(
+      '[data-schedule-tab][aria-selected="true"]',
+    );
+    const tab = $tab?.dataset.scheduleTab ?? "";
+    const filters = readFilters();
+    const url = new URL(location.href);
+
+    if (tab === $schedule?.dataset.default) url.searchParams.delete(TAB_PARAM);
+    else url.searchParams.set(TAB_PARAM, tab);
+
+    for (const name of FILTERS) {
+      if (filters[name]) url.searchParams.set(name, filters[name]);
+      else url.searchParams.delete(name);
+    }
+
+    history.replaceState(history.state, "", url);
+  };
+
+  const resetFilters = () => {
+    for (const $select of $$<HTMLSelectElement>("[data-schedule-filter]")) {
+      $select.value = "";
+    }
+    applyFilters({ announce: true });
+    updateUrl();
+    document.querySelector<HTMLElement>("[data-schedule-filter]")?.focus();
+  };
+
+  document.addEventListener("click", (e) => {
+    const $target = e.target as Element;
+
+    if ($target.closest("[data-schedule-reset]")) {
+      resetFilters();
+      return;
+    }
+
+    const id = $target.closest<HTMLElement>("[data-schedule-tab]")?.dataset
+      .scheduleTab;
+    if (!id) return;
+
+    select(id);
+    applyFilters({ announce: true });
+    updateUrl();
+  });
+
+  document.addEventListener("change", (e) => {
+    if (!(e.target as Element).closest("[data-schedule-filter]")) return;
+
+    applyFilters({ announce: true });
+    updateUrl();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    const $tab = (e.target as Element).closest<HTMLElement>(
+      "[data-schedule-tab]",
+    );
+    if (!$tab) return;
+
+    const $tabs = $$("[data-schedule-tab]");
+    const index = $tabs.indexOf($tab);
+    const next = {
+      ArrowRight: $tabs[(index + 1) % $tabs.length],
+      ArrowLeft: $tabs[(index - 1 + $tabs.length) % $tabs.length],
+      Home: $tabs[0],
+      End: $tabs.at(-1),
+    }[e.key];
+    const id = next?.dataset.scheduleTab;
+    if (!id) return;
+
+    e.preventDefault();
+    select(id, { focus: true });
+    applyFilters({ announce: true });
+    updateUrl();
+  });
+
+  /** Sólo acepta valores que existan en el <select>: la URL la puede editar cualquiera. */
+  const restoreFilter = ($select: HTMLSelectElement, value: string | null) => {
+    const exists = [...$select.options].some((o) => o.value === value);
+    $select.value = value && exists ? value : "";
+  };
+
+  document.addEventListener("astro:page-load", () => {
+    if (!document.querySelector("[data-schedule]")) return;
+
+    const params = new URL(location.href).searchParams;
+    const tab = params.get(TAB_PARAM);
+    if (tab) select(tab);
+
+    for (const $select of $$<HTMLSelectElement>("[data-schedule-filter]")) {
+      restoreFilter($select, params.get($select.dataset.scheduleFilter ?? ""));
+    }
+    applyFilters();
+  });
+</script>

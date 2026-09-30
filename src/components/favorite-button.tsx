@@ -3,7 +3,21 @@ import { Star, StarOff } from "lucide-preact";
 import { useEffect, useState } from "preact/hooks";
 import { toast } from "sonner";
 
-export default function FavoriteButton({ id }: { id: string }) {
+// "banner" es el botón de contorno sobre el encabezado de color del equipo.
+const VARIANTS = {
+	surface:
+		"bg-surface hover:bg-surface-hover rounded-md p-2 shadow-xs text-sm tracking-wider",
+	banner:
+		"items-center rounded-full border-2 border-current px-4 py-2 font-mono text-sm font-bold uppercase tracking-wider hover:bg-primary-foreground hover:text-banner",
+};
+
+export default function FavoriteButton({
+	id,
+	variant = "surface",
+}: {
+	id: string;
+	variant?: keyof typeof VARIANTS;
+}) {
 	const [isFavorite, setIsFavorite] = useState(false);
 
 	const toggleFavorite = () => {
@@ -48,10 +62,13 @@ export default function FavoriteButton({ id }: { id: string }) {
 			type="button"
 			data-active={isFavorite}
 			title={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
-			className="touch-hitbox group cursor-pointer flex justify-center gap-2 bg-surface hover:bg-surface-hover rounded-md p-2 duration-180 text-sm tracking-wider shadow-xs transition-transform focus:scale-95"
+			className={`touch-hitbox group cursor-pointer flex justify-center gap-2 duration-180 transition-[transform,background-color,color] focus:scale-95 ${VARIANTS[variant]}`}
 		>
-			<Star className="size-5 transition-colors duration-75 fill-background group-data-[active=true]:fill-favorite text-favorite" />
-			<span className="hidden lg:inline-flex">
+			<Star
+				aria-hidden="true"
+				className={`size-5 transition-colors duration-75 group-data-[active=true]:fill-favorite ${variant === "banner" ? "fill-transparent group-data-[active=true]:text-favorite" : "fill-background text-favorite"}`}
+			/>
+			<span className="sr-only lg:not-sr-only">
 				{isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
 			</span>
 		</button>

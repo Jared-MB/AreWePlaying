@@ -221,6 +221,10 @@
 	--color-popover-foreground: var(--popover-foreground);
 	--color-primary: var(--primary);
 	--color-primary-foreground: var(--primary-foreground);
+	/* Fondo del encabezado de equipo: el color del escudo (`--banner`, lo pone
+	la página) o, sin él, el primario oscurecido, porque el blanco sobre el
+	naranja no alcanza contraste para el texto chico. */
+	--color-banner: var(--banner, color-mix(in oklch, var(--primary) 62%, black));
 	--color-secondary: var(--secondary);
 	--color-secondary-foreground: var(--secondary-foreground);
 	--color-muted: var(--muted);
