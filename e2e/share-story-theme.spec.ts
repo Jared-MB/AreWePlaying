@@ -1,6 +1,12 @@
-import { expect, test } from "@playwright/test";
+import { expect, type Page, test } from "@playwright/test";
 import { finishedMatch, first, matchSlug, teamSlug } from "./data";
 import { hydrated } from "./hydration";
+
+/** Los controles de la story viven en un diálogo que abre el botón "Compartir". */
+async function openStory(page: Page) {
+	await page.getByRole("button", { name: "Compartir", exact: true }).click();
+	await expect(page.getByRole("dialog", { name: "Compartir" })).toBeVisible();
+}
 
 test("compartir sin Web Share copia la URL del equipo", async ({
 	page,
@@ -38,9 +44,7 @@ test("la story se descarga como PNG con el nombre del partido", async ({
 
 	await page.goto(`/${data.slug}/match/${matchSlug(match)}`);
 	await hydrated(page);
-	await expect(
-		page.getByRole("heading", { name: "Para compartir" }),
-	).toBeVisible();
+	await openStory(page);
 
 	const [download] = await Promise.all([
 		page.waitForEvent("download", { timeout: 30_000 }),
@@ -63,10 +67,12 @@ test("el color de la story se recuerda entre partidos", async ({ page }) => {
 	test.skip(!match, "Sin partidos");
 	await page.goto(`/${first.slug}/match/${matchSlug(match)}`);
 	await hydrated(page);
+	await openStory(page);
 	await page.getByRole("button", { name: "Guinda" }).click();
 	await page.getByRole("button", { name: "Claro" }).click();
 	await page.reload();
 	await hydrated(page);
+	await openStory(page);
 	await expect(page.getByRole("button", { name: "Guinda" })).toHaveAttribute(
 		"aria-pressed",
 		"true",

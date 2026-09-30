@@ -50,6 +50,9 @@ export default async function globalSetup(config: FullConfig) {
 					);
 					// La story carga html-to-image con un import dinámico al exportar.
 					if (path === matchPath) {
+						await page
+							.getByRole("button", { name: "Compartir", exact: true })
+							.click({ timeout: 5_000 });
 						await Promise.all([
 							page.waitForEvent("download", { timeout: 15_000 }),
 							page

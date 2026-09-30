@@ -50,7 +50,9 @@ test("home → torneo → tabla → equipo → partido", async ({ page }) => {
 
 	await page.goto(`/${first.slug}/teams`);
 	const team = first.table.toSorted((a, b) => a.position - b.position)[0];
+	// El menú de equipos del encabezado también enlaza al equipo, pero oculto.
 	await page
+		.getByRole("main")
 		.locator(`a[href="/${first.slug}/teams/${teamSlug(team.shortName)}"]`)
 		.first()
 		.click();
@@ -60,10 +62,11 @@ test("home → torneo → tabla → equipo → partido", async ({ page }) => {
 	await expect(page).toHaveTitle(
 		`Calendario | ${team.shortName} | Are We Playing?`,
 	);
-	// El encabezado incluye la posición en la tabla junto al nombre.
+	// La posición en la tabla va bajo el nombre, junto al récord.
 	await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-		`${team.shortName}#${team.position}`,
+		team.shortName,
 	);
+	await expect(page.getByText(`#${team.position} en la tabla`)).toBeVisible();
 	await expect(page.getByText(`${team.wins}W - ${team.losses}L`)).toBeVisible();
 
 	const detail = page
