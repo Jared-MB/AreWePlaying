@@ -19,6 +19,9 @@ importers:
       '@astrojs/vercel':
         specifier: ^11.0.10
         version: 11.0.10(@preact/compat@18.3.2(preact@10.29.8))(astro@7.2.8(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@20.19.22)(@vercel/functions@3.9.5(ws@8.21.0))(jiti@2.7.0)(tsx@4.20.6))(ws@8.21.0)
+      '@fontsource-variable/geist-pixel':
+        specifier: ^5.3.1
+        version: 5.3.1
       '@fontsource/space-mono':
         specifier: 5.3.0
         version: 5.3.0
@@ -729,6 +732,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/geist-pixel@5.3.1':
+    resolution: {integrity: sha512-2DA1zXUu6/F/7RJxtFGRrdsLmYWuuwhT8n/HAuCUsKLryCFHIAVSiSg6rYHsTCk7Qiu0q9D9QMpqbfOSC5Eugg==}
 
   '@fontsource/space-mono@5.3.0':
     resolution: {integrity: sha512-FrpBMOVWn3PRdRHlrZWC55X3kZG/2BTH7SM5ZyS/bky3iKya2BturI5lk+t0RoDQL2JyHzURsVq/EisCsxpI5A==}
@@ -3536,6 +3542,8 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
+  '@fontsource-variable/geist-pixel@5.3.1': {}
+
   '@fontsource/space-mono@5.3.0': {}
 
   '@img/colour@1.1.0': {}
@@ -5587,7 +5595,7 @@ snapshots:
   vite@8.2.2(@types/node@20.19.22)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.20.6):
     dependencies:
       lightningcss: 1.33.0
-      picomatch: 4.0.5
+      picomatch: 4.0.7
       postcss: 8.5.26
       rolldown: 1.2.6
       tinyglobby: 0.2.17

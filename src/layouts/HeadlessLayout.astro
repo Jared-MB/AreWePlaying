@@ -1,5 +1,6 @@
 ---
 import "@fontsource/space-mono";
+import "@fontsource-variable/geist-pixel";
 import "@/styles/global.css";
 import { ClientRouter } from "astro:transitions";
 
@@ -90,7 +91,9 @@ const socialImageUrl = new URL(icon?.href ?? image, Astro.site ?? Astro.url);
             ? theme === "dark"
             : matchMedia("(prefers-color-scheme: dark)").matches;
           document.documentElement.classList.toggle("dark", isDark);
-          document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+          document.documentElement.style.colorScheme = isDark
+            ? "dark"
+            : "light";
         };
         applyTheme();
         // El ClientRouter reemplaza los atributos de <html> al navegar.
