@@ -342,6 +342,51 @@ no llegan al borde y no cambian. */
 	}
 }
 
+/* Boleto: las muescas son un recorte real (máscara), no círculos pintados del
+color del fondo, así que se ven igual sobre cualquier superficie. Quien la usa
+fija dónde cae el recorte con `--notch-x` (muescas arriba y abajo) o `--notch-y`
+(muescas a los lados). */
+@utility ticket-notch-y {
+	mask-image:
+		radial-gradient(
+			circle var(--notch, 14px) at var(--notch-x, 70%) 0,
+			transparent 98%,
+			#000
+		),
+		radial-gradient(
+			circle var(--notch, 14px) at var(--notch-x, 70%) 100%,
+			transparent 98%,
+			#000
+		);
+	mask-composite: intersect;
+}
+
+@utility ticket-notch-x {
+	mask-image:
+		radial-gradient(
+			circle var(--notch, 14px) at 0 var(--notch-y, 50%),
+			transparent 98%,
+			#000
+		),
+		radial-gradient(
+			circle var(--notch, 14px) at 100% var(--notch-y, 50%),
+			transparent 98%,
+			#000
+		);
+	mask-composite: intersect;
+}
+
+/* Una máscara recorta también `border` y `box-shadow`. El filtro va en un
+contenedor por fuera: cuatro sombras sin desenfoque dibujan un filo de 1px que
+sigue las muescas y las dos últimas son la sombra suave del boleto. */
+@utility ticket-edge {
+	--_edge: color-mix(in oklab, var(--line) 55%, transparent);
+	--_soft: color-mix(in oklab, var(--shadow-color) 10%, transparent);
+	filter: drop-shadow(1px 0 0 var(--_edge)) drop-shadow(-1px 0 0 var(--_edge))
+		drop-shadow(0 1px 0 var(--_edge)) drop-shadow(0 -1px 0 var(--_edge))
+		drop-shadow(0 1px 1px var(--_soft)) drop-shadow(0 4px 8px var(--_soft));
+}
+
 @layer base {
 	* {
 		@apply border-border outline-ring/50;

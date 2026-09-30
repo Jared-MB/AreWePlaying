@@ -17,51 +17,45 @@ exports[`MatchDaySection con subtítulo y h3 1`] = `
       <astro-island client="load">
         <article aria-label="BUAP vs UV">
           <a aria-label="Ver detalle del partido entre BUAP contra UV" href="/division-i-varonil/match/buap-vs-uv-5">
+          "SEMANA 2"
+          "#0005"
           <dl>
-            <dt>
-              "Fecha"
-            <dd>
-              <time datetime="2026-09-27T00:00:00.000Z">
-                "18:00 HRS"
-                "26/09/2026"
-              "SEMANA 2"
             <dt>
               "Equipos"
             <dd>
               "BUA"
               <a href="/division-i-varonil/teams/buap">
                 "BUAP"
-              "0"
-              [sr-only]
-                "puntos"
+              "VS"
               "UV"
               <a href="/division-i-varonil/teams/uv">
                 "UV"
-              "0"
-              [sr-only]
-                "puntos"
             <dt>
-              "Lugar"
+              "Fecha"
+            <dd>
+              <time datetime="2026-09-27T00:00:00.000Z">
+                "26/09/2026"
+            <dt>
+              "Hora"
+            <dd>
+              "18:00 HRS"
+            <dt>
+              "Cancha"
             <dd>
               "-"
               [sr-only]
                 "Por definir"
             <dt>
-              "Estatus"
+              "Estado"
             <dd>
               "NO INICIADO"
     <li>
       <astro-island client="load">
         <article aria-label="UV vs TEC. DE MTY (CEM)">
           <a aria-label="Ver detalle del partido entre UV contra TEC. DE MTY (CEM)" href="/division-i-varonil/match/uv-vs-tec-de-mty-cem-3">
+          "SEMANA 2"
+          "#0003"
           <dl>
-            <dt>
-              "Fecha"
-            <dd>
-              <time datetime="2026-09-26T16:00:00.000Z">
-                "10:00 HRS"
-                "26/09/2026"
-              "SEMANA 2"
             <dt>
               "Equipos"
             <dd>
@@ -71,35 +65,40 @@ exports[`MatchDaySection con subtítulo y h3 1`] = `
               "70"
               [sr-only]
                 "puntos"
-              "TEC"
-              <a href="/division-i-varonil/teams/tec-de-mty-cem">
-                "TEC. DE MTY (CEM)"
+              "–"
               "80"
               [sr-only]
                 "puntos"
+              "TEC"
+              <a href="/division-i-varonil/teams/tec-de-mty-cem">
+                "TEC. DE MTY (CEM)"
             <dt>
-              "Lugar"
+              "Fecha"
+            <dd>
+              <time datetime="2026-09-26T16:00:00.000Z">
+                "26/09/2026"
+            <dt>
+              "Hora"
+            <dd>
+              "10:00 HRS"
+            <dt>
+              "Cancha"
             <dd>
               <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
                 "CENTRO DEPORTIVO COYOACÁN"
                 [sr-only]
                   "(abre en una pestaña nueva)"
             <dt>
-              "Estatus"
+              "Estado"
             <dd>
               "COMPLETADO"
     <li>
       <astro-island client="load">
         <article aria-label="UP MÉXICO vs BUAP">
           <a aria-label="Ver detalle del partido entre UP MÉXICO contra BUAP" href="/division-i-varonil/match/up-mexico-vs-buap-4">
+          "SEMANA 2"
+          "#0004"
           <dl>
-            <dt>
-              "Fecha"
-            <dd>
-              <time datetime="2026-09-26T18:00:00.000Z">
-                "12:00 HRS"
-                "26/09/2026"
-              "SEMANA 2"
             <dt>
               "Equipos"
             <dd>
@@ -109,21 +108,31 @@ exports[`MatchDaySection con subtítulo y h3 1`] = `
               "30"
               [sr-only]
                 "puntos"
-              "BUA"
-              <a href="/division-i-varonil/teams/buap">
-                "BUAP"
+              "–"
               "28"
               [sr-only]
                 "puntos"
+              "BUA"
+              <a href="/division-i-varonil/teams/buap">
+                "BUAP"
             <dt>
-              "Lugar"
+              "Fecha"
+            <dd>
+              <time datetime="2026-09-26T18:00:00.000Z">
+                "26/09/2026"
+            <dt>
+              "Hora"
+            <dd>
+              "12:00 HRS"
+            <dt>
+              "Cancha"
             <dd>
               <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
                 "CENTRO DEPORTIVO COYOACÁN"
                 [sr-only]
                   "(abre en una pestaña nueva)"
             <dt>
-              "Estatus"
+              "Estado"
             <dd>
               "EN CURSO"
 "
@@ -339,14 +348,9 @@ exports[`TodayMatches con partidos hoy 1`] = `
         <astro-island client="load">
           <article aria-label="UV vs TEC. DE MTY (CEM)">
             <a aria-label="Ver detalle del partido entre UV contra TEC. DE MTY (CEM)" href="/division-i-varonil/match/uv-vs-tec-de-mty-cem-3">
+            "SEMANA 2"
+            "#0003"
             <dl>
-              <dt>
-                "Fecha"
-              <dd>
-                <time datetime="2026-09-26T16:00:00.000Z">
-                  "10:00 HRS"
-                  "26/09/2026"
-                "SEMANA 2"
               <dt>
                 "Equipos"
               <dd>
@@ -356,35 +360,40 @@ exports[`TodayMatches con partidos hoy 1`] = `
                 "70"
                 [sr-only]
                   "puntos"
-                "TEC"
-                <a href="/division-i-varonil/teams/tec-de-mty-cem">
-                  "TEC. DE MTY (CEM)"
+                "–"
                 "80"
                 [sr-only]
                   "puntos"
+                "TEC"
+                <a href="/division-i-varonil/teams/tec-de-mty-cem">
+                  "TEC. DE MTY (CEM)"
               <dt>
-                "Lugar"
+                "Fecha"
+              <dd>
+                <time datetime="2026-09-26T16:00:00.000Z">
+                  "26/09/2026"
+              <dt>
+                "Hora"
+              <dd>
+                "10:00 HRS"
+              <dt>
+                "Cancha"
               <dd>
                 <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
                   "CENTRO DEPORTIVO COYOACÁN"
                   [sr-only]
                     "(abre en una pestaña nueva)"
               <dt>
-                "Estatus"
+                "Estado"
               <dd>
                 "COMPLETADO"
       <li>
         <astro-island client="load">
           <article aria-label="UP MÉXICO vs BUAP">
             <a aria-label="Ver detalle del partido entre UP MÉXICO contra BUAP" href="/division-i-varonil/match/up-mexico-vs-buap-4">
+            "SEMANA 2"
+            "#0004"
             <dl>
-              <dt>
-                "Fecha"
-              <dd>
-                <time datetime="2026-09-26T18:00:00.000Z">
-                  "12:00 HRS"
-                  "26/09/2026"
-                "SEMANA 2"
               <dt>
                 "Equipos"
               <dd>
@@ -394,58 +403,67 @@ exports[`TodayMatches con partidos hoy 1`] = `
                 "30"
                 [sr-only]
                   "puntos"
-                "BUA"
-                <a href="/division-i-varonil/teams/buap">
-                  "BUAP"
+                "–"
                 "28"
                 [sr-only]
                   "puntos"
+                "BUA"
+                <a href="/division-i-varonil/teams/buap">
+                  "BUAP"
               <dt>
-                "Lugar"
+                "Fecha"
+              <dd>
+                <time datetime="2026-09-26T18:00:00.000Z">
+                  "26/09/2026"
+              <dt>
+                "Hora"
+              <dd>
+                "12:00 HRS"
+              <dt>
+                "Cancha"
               <dd>
                 <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
                   "CENTRO DEPORTIVO COYOACÁN"
                   [sr-only]
                     "(abre en una pestaña nueva)"
               <dt>
-                "Estatus"
+                "Estado"
               <dd>
                 "EN CURSO"
       <li>
         <astro-island client="load">
           <article aria-label="BUAP vs UV">
             <a aria-label="Ver detalle del partido entre BUAP contra UV" href="/division-i-varonil/match/buap-vs-uv-5">
+            "SEMANA 2"
+            "#0005"
             <dl>
-              <dt>
-                "Fecha"
-              <dd>
-                <time datetime="2026-09-27T00:00:00.000Z">
-                  "18:00 HRS"
-                  "26/09/2026"
-                "SEMANA 2"
               <dt>
                 "Equipos"
               <dd>
                 "BUA"
                 <a href="/division-i-varonil/teams/buap">
                   "BUAP"
-                "0"
-                [sr-only]
-                  "puntos"
+                "VS"
                 "UV"
                 <a href="/division-i-varonil/teams/uv">
                   "UV"
-                "0"
-                [sr-only]
-                  "puntos"
               <dt>
-                "Lugar"
+                "Fecha"
+              <dd>
+                <time datetime="2026-09-27T00:00:00.000Z">
+                  "26/09/2026"
+              <dt>
+                "Hora"
+              <dd>
+                "18:00 HRS"
+              <dt>
+                "Cancha"
               <dd>
                 "-"
                 [sr-only]
                   "Por definir"
               <dt>
-                "Estatus"
+                "Estado"
               <dd>
                 "NO INICIADO"
 "
@@ -472,76 +490,74 @@ exports[`TodayMatches sin partidos hoy cae a la próxima jornada 1`] = `
         <astro-island client="load">
           <article aria-label="LOBOS UAdeC vs UAGRO">
             <a aria-label="Ver detalle del partido entre LOBOS UAdeC contra UAGRO" href="/division-ii-femenil-centro/match/lobos-uadec-vs-uagro-2">
+            "SEMANA 1"
+            "#0002"
             <dl>
-              <dt>
-                "Fecha"
-              <dd>
-                <time datetime="2026-09-29T23:00:00.000Z">
-                  "17:00 HRS"
-                  "29/09/2026"
-                "SEMANA 1"
               <dt>
                 "Equipos"
               <dd>
                 "LOB"
                 <a href="/division-ii-femenil-centro/teams/lobos-uadec">
                   "LOBOS UAdeC"
-                "0"
-                [sr-only]
-                  "puntos"
+                "VS"
                 "UAG"
                 <a href="/division-ii-femenil-centro/teams/uagro">
                   "UAGRO"
-                "0"
-                [sr-only]
-                  "puntos"
               <dt>
-                "Lugar"
+                "Fecha"
+              <dd>
+                <time datetime="2026-09-29T23:00:00.000Z">
+                  "29/09/2026"
+              <dt>
+                "Hora"
+              <dd>
+                "17:00 HRS"
+              <dt>
+                "Cancha"
               <dd>
                 <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
                   "CENTRO DEPORTIVO COYOACÁN"
                   [sr-only]
                     "(abre en una pestaña nueva)"
               <dt>
-                "Estatus"
+                "Estado"
               <dd>
                 "NO INICIADO"
       <li>
         <astro-island client="load">
           <article aria-label="UAGRO vs LOBOS UAdeC">
             <a aria-label="Ver detalle del partido entre UAGRO contra LOBOS UAdeC" href="/division-ii-femenil-centro/match/uagro-vs-lobos-uadec-1">
+            "SEMANA 1"
+            "#0001"
             <dl>
-              <dt>
-                "Fecha"
-              <dd>
-                <time datetime="2026-09-30T01:30:00.000Z">
-                  "19:30 HRS"
-                  "29/09/2026"
-                "SEMANA 1"
               <dt>
                 "Equipos"
               <dd>
                 "UAG"
                 <a href="/division-ii-femenil-centro/teams/uagro">
                   "UAGRO"
-                "0"
-                [sr-only]
-                  "puntos"
+                "VS"
                 "LOB"
                 <a href="/division-ii-femenil-centro/teams/lobos-uadec">
                   "LOBOS UAdeC"
-                "0"
-                [sr-only]
-                  "puntos"
               <dt>
-                "Lugar"
+                "Fecha"
+              <dd>
+                <time datetime="2026-09-30T01:30:00.000Z">
+                  "29/09/2026"
+              <dt>
+                "Hora"
+              <dd>
+                "19:30 HRS"
+              <dt>
+                "Cancha"
               <dd>
                 <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
                   "CENTRO DEPORTIVO COYOACÁN"
                   [sr-only]
                     "(abre en una pestaña nueva)"
               <dt>
-                "Estatus"
+                "Estado"
               <dd>
                 "NO INICIADO"
   <section aria-labelledby="next-division-i-varonil">
@@ -559,38 +575,37 @@ exports[`TodayMatches sin partidos hoy cae a la próxima jornada 1`] = `
         <astro-island client="load">
           <article aria-label="UV vs UP MÉXICO">
             <a aria-label="Ver detalle del partido entre UV contra UP MÉXICO" href="/division-i-varonil/match/uv-vs-up-mexico-6">
+            "SEMANA 3"
+            "#0006"
             <dl>
-              <dt>
-                "Fecha"
-              <dd>
-                <time datetime="2026-10-03T19:00:00.000Z">
-                  "13:00 HRS"
-                  "03/10/2026"
-                "SEMANA 3"
               <dt>
                 "Equipos"
               <dd>
                 "UV"
                 <a href="/division-i-varonil/teams/uv">
                   "UV"
-                "0"
-                [sr-only]
-                  "puntos"
+                "VS"
                 "UP"
                 <a href="/division-i-varonil/teams/up-mexico">
                   "UP MÉXICO"
-                "0"
-                [sr-only]
-                  "puntos"
               <dt>
-                "Lugar"
+                "Fecha"
+              <dd>
+                <time datetime="2026-10-03T19:00:00.000Z">
+                  "03/10/2026"
+              <dt>
+                "Hora"
+              <dd>
+                "13:00 HRS"
+              <dt>
+                "Cancha"
               <dd>
                 <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
                   "CENTRO DEPORTIVO COYOACÁN"
                   [sr-only]
                     "(abre en una pestaña nueva)"
               <dt>
-                "Estatus"
+                "Estado"
               <dd>
                 "NO INICIADO"
 "
@@ -652,51 +667,45 @@ exports[`WeekMatches: los tres estados; una sede con link inseguro se muestra co
     <astro-island client="load">
       <article aria-label="BUAP vs UV">
         <a aria-label="Ver detalle del partido entre BUAP contra UV" href="/division-i-varonil/match/buap-vs-uv-5">
+        "SEMANA 2"
+        "#0005"
         <dl>
-          <dt>
-            "Fecha"
-          <dd>
-            <time datetime="2026-09-27T00:00:00.000Z">
-              "18:00 HRS"
-              "26/09/2026"
-            "SEMANA 2"
           <dt>
             "Equipos"
           <dd>
             "BUA"
             <a href="/division-i-varonil/teams/buap">
               "BUAP"
-            "0"
-            [sr-only]
-              "puntos"
+            "VS"
             "UV"
             <a href="/division-i-varonil/teams/uv">
               "UV"
-            "0"
-            [sr-only]
-              "puntos"
           <dt>
-            "Lugar"
+            "Fecha"
+          <dd>
+            <time datetime="2026-09-27T00:00:00.000Z">
+              "26/09/2026"
+          <dt>
+            "Hora"
+          <dd>
+            "18:00 HRS"
+          <dt>
+            "Cancha"
           <dd>
             "-"
             [sr-only]
               "Por definir"
           <dt>
-            "Estatus"
+            "Estado"
           <dd>
             "NO INICIADO"
   <li>
     <astro-island client="load">
       <article aria-label="UV vs TEC. DE MTY (CEM)">
         <a aria-label="Ver detalle del partido entre UV contra TEC. DE MTY (CEM)" href="/division-i-varonil/match/uv-vs-tec-de-mty-cem-3">
+        "SEMANA 2"
+        "#0003"
         <dl>
-          <dt>
-            "Fecha"
-          <dd>
-            <time datetime="2026-09-26T16:00:00.000Z">
-              "10:00 HRS"
-              "26/09/2026"
-            "SEMANA 2"
           <dt>
             "Equipos"
           <dd>
@@ -706,35 +715,40 @@ exports[`WeekMatches: los tres estados; una sede con link inseguro se muestra co
             "70"
             [sr-only]
               "puntos"
-            "TEC"
-            <a href="/division-i-varonil/teams/tec-de-mty-cem">
-              "TEC. DE MTY (CEM)"
+            "–"
             "80"
             [sr-only]
               "puntos"
+            "TEC"
+            <a href="/division-i-varonil/teams/tec-de-mty-cem">
+              "TEC. DE MTY (CEM)"
           <dt>
-            "Lugar"
+            "Fecha"
+          <dd>
+            <time datetime="2026-09-26T16:00:00.000Z">
+              "26/09/2026"
+          <dt>
+            "Hora"
+          <dd>
+            "10:00 HRS"
+          <dt>
+            "Cancha"
           <dd>
             <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
               "CENTRO DEPORTIVO COYOACÁN"
               [sr-only]
                 "(abre en una pestaña nueva)"
           <dt>
-            "Estatus"
+            "Estado"
           <dd>
             "COMPLETADO"
   <li>
     <astro-island client="load">
       <article aria-label="UP MÉXICO vs BUAP">
         <a aria-label="Ver detalle del partido entre UP MÉXICO contra BUAP" href="/division-i-varonil/match/up-mexico-vs-buap-4">
+        "SEMANA 2"
+        "#0004"
         <dl>
-          <dt>
-            "Fecha"
-          <dd>
-            <time datetime="2026-09-26T18:00:00.000Z">
-              "12:00 HRS"
-              "26/09/2026"
-            "SEMANA 2"
           <dt>
             "Equipos"
           <dd>
@@ -744,21 +758,31 @@ exports[`WeekMatches: los tres estados; una sede con link inseguro se muestra co
             "30"
             [sr-only]
               "puntos"
-            "BUA"
-            <a href="/division-i-varonil/teams/buap">
-              "BUAP"
+            "–"
             "28"
             [sr-only]
               "puntos"
+            "BUA"
+            <a href="/division-i-varonil/teams/buap">
+              "BUAP"
           <dt>
-            "Lugar"
+            "Fecha"
+          <dd>
+            <time datetime="2026-09-26T18:00:00.000Z">
+              "26/09/2026"
+          <dt>
+            "Hora"
+          <dd>
+            "12:00 HRS"
+          <dt>
+            "Cancha"
           <dd>
             <a href="http://maps.google.com/maps?daddr=19.36,-99.16" rel="noopener noreferrer" target="_blank">
               "CENTRO DEPORTIVO COYOACÁN"
               [sr-only]
                 "(abre en una pestaña nueva)"
           <dt>
-            "Estatus"
+            "Estado"
           <dd>
             "EN CURSO"
 "

@@ -1,0 +1,125 @@
+---
+import TeamCrest from "@/components/TeamCrest.astro";
+import TicketStatusChip from "@/components/TicketStatusChip.astro";
+import TicketVenue from "@/components/TicketVenue.astro";
+import type { Ticket, TicketTeam } from "@/utils/build-ticket";
+
+interface Props {
+  ticket: Ticket;
+}
+
+const { ticket } = Astro.props;
+const teams: TicketTeam[] = [ticket.local, ticket.visiting];
+
+const label =
+  "text-xs font-bold uppercase tracking-wider text-muted-foreground group-data-[active=true]:text-highlight-foreground/75";
+---
+
+{
+  /* Opción C · Estadio: talón de color a la izquierda, marcador al centro y fila FECHA / HORA / CANCHA. */
+}
+<div class="ticket-edge">
+  <article
+    aria-label={ticket.matchup}
+    class="max-md:ticket-notch-x md:ticket-notch-y relative grid grid-rows-[3rem_1fr] overflow-hidden rounded-lg bg-surface text-card-foreground transition-[background-color] [--notch-x:calc(4.5rem_+_1px)] [--notch-y:calc(3rem_+_1px)] hover:bg-surface-hover group-data-[active=true]:bg-primary group-data-[active=true]:text-highlight-foreground group-data-[active=true]:hover:bg-primary/90 md:grid-cols-[4.5rem_1fr] md:grid-rows-1"
+  >
+    <a
+      class="absolute inset-0 cursor-pointer rounded-lg focus-visible:outline-offset-[-6px]"
+      href={ticket.href}
+      aria-label={`Ver detalle del partido entre ${ticket.local.name} contra ${ticket.visiting.name}`}
+    ></a>
+
+    <div
+      class="flex items-center justify-center border-dashed border-line bg-primary px-4 text-highlight-foreground max-md:border-b-2 md:border-r-2 group-data-[active=true]:border-highlight-foreground/40 group-data-[active=true]:bg-inverse group-data-[active=true]:text-inverse-foreground"
+    >
+      <p
+        class="flex w-full items-center justify-between gap-3 text-xs font-bold uppercase tracking-wider md:w-auto md:rotate-180 md:[writing-mode:vertical-rl]"
+      >
+        <span>{ticket.weekLabel ?? "Partido"}</span>
+        <span class="font-pixel text-base tabular-nums" translate="no">
+          {ticket.number}
+        </span>
+      </p>
+    </div>
+
+    <dl class="flex min-w-0 flex-col justify-between gap-6 p-5 md:p-6">
+      <div>
+        <dt class="sr-only">Equipos</dt>
+        <dd class="grid grid-cols-[1fr_auto_1fr] items-center gap-3 md:gap-6">
+          {
+            teams.map((team, index) => (
+              <>
+                {index === 1 ? (
+                  <p
+                    class="font-pixel text-3xl font-bold tabular-nums md:text-5xl"
+                    aria-hidden={!ticket.hasScore}
+                  >
+                    {ticket.hasScore ? (
+                      <>
+                        <span class={ticket.local.isWinner ? "" : "opacity-55"}>
+                          {ticket.local.points}
+                          <span class="sr-only"> puntos</span>
+                        </span>
+                        <span aria-hidden="true" class="px-1 opacity-55">
+                          –
+                        </span>
+                        <span
+                          class={ticket.visiting.isWinner ? "" : "opacity-55"}
+                        >
+                          {ticket.visiting.points}
+                          <span class="sr-only"> puntos</span>
+                        </span>
+                      </>
+                    ) : (
+                      "VS"
+                    )}
+                  </p>
+                ) : null}
+                <div class="flex min-w-0 flex-col items-center gap-2 text-center">
+                  <TeamCrest
+                    logo={team.logo}
+                    initials={team.initials}
+                    class="size-12 text-sm md:size-14 group-data-[active=true]:bg-highlight-chip-strong group-data-[active=true]:text-highlight-chip-strong-foreground"
+                  />
+                  <a
+                    href={team.href}
+                    class="relative z-10 min-w-0 touch-hitbox wrap-break-word text-sm font-bold uppercase leading-tight tracking-wide hover:underline md:text-base"
+                  >
+                    {team.name}
+                  </a>
+                </div>
+              </>
+            ))
+          }
+        </dd>
+      </div>
+
+      <div
+        class="grid grid-cols-2 gap-x-4 gap-y-3 border-t-2 border-dashed border-line pt-4 md:grid-cols-[auto_auto_1fr_auto] group-data-[active=true]:border-highlight-foreground/40"
+      >
+        <div>
+          <dt class={label}>Fecha</dt>
+          <dd class="font-bold tabular-nums">
+            <time datetime={ticket.datetime}>{ticket.day}</time>
+          </dd>
+        </div>
+        <div>
+          <dt class={label}>Hora</dt>
+          <dd class="font-bold tabular-nums">{ticket.time}&nbsp;HRS</dd>
+        </div>
+        <div class="min-w-0">
+          <dt class={label}>Cancha</dt>
+          <dd class="text-sm font-bold uppercase tracking-wide">
+            <TicketVenue ticket={ticket} />
+          </dd>
+        </div>
+        <div>
+          <dt class={label}>Estado</dt>
+          <dd>
+            <TicketStatusChip status={ticket.status} />
+          </dd>
+        </div>
+      </div>
+    </dl>
+  </article>
+</div>

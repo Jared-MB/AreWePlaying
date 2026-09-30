@@ -50,6 +50,7 @@ test('WeekMatches: los tres estados; una sede con link inseguro se muestra como 
 			matches,
 			week,
 			tournamentSlug: "division-i-varonil",
+			tournamentId: T1.toLowerCase(),
 		}),
 	).toMatchSnapshot();
 });

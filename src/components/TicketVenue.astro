@@ -1,0 +1,32 @@
+---
+import type { Ticket } from "@/utils/build-ticket";
+
+interface Props {
+  ticket: Pick<Ticket, "venueUrl" | "venueName">;
+  class?: string;
+}
+
+const { ticket, class: className } = Astro.props;
+---
+
+{
+  ticket.venueUrl ? (
+    <a
+      href={ticket.venueUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class:list={[
+        "relative z-10 inline-block touch-hitbox hover:underline",
+        className,
+      ]}
+    >
+      {ticket.venueName}
+      <span class="sr-only"> (abre en una pestaña nueva)</span>
+    </a>
+  ) : (
+    <span class={className}>
+      <span aria-hidden="true">-</span>
+      <span class="sr-only">Por definir</span>
+    </span>
+  )
+}

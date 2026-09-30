@@ -3,10 +3,14 @@ import type { ComponentChildren } from "preact";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { readFavorites } from "@/utils/favorites";
 
+const DEFAULT_CLASS_NAME =
+	"group relative hover:bg-surface text-card-foreground flex flex-col gap-6 p-0 data-[active=true]:bg-primary/90 data-[active=true]:text-primary-foreground!";
+
 export default function MatchCard({
 	localTeamId,
 	visitingTeamId,
 	celebrate = true,
+	className = DEFAULT_CLASS_NAME,
 	children,
 }: {
 	localTeamId?: string;
@@ -16,6 +20,11 @@ export default function MatchCard({
 	 * listas de partidos futuros: resaltarlos sí, celebrarlos todavía no.
 	 */
 	celebrate?: boolean;
+	/**
+	 * Reemplaza las clases de la tarjeta. Los boletos se pintan ellos mismos
+	 * (`group-data-[active=true]`) y sólo necesitan `group relative`.
+	 */
+	className?: string;
 	children: ComponentChildren;
 }) {
 	const [isFavorite, setIsFavorite] = useState(false);
@@ -58,11 +67,7 @@ export default function MatchCard({
 	}, []);
 
 	return (
-		<div
-			ref={$card}
-			data-active={isFavorite}
-			className="group relative hover:bg-surface text-card-foreground flex flex-col gap-6 p-0 data-[active=true]:bg-primary/90 data-[active=true]:text-primary-foreground!"
-		>
+		<div ref={$card} data-active={isFavorite} className={className}>
 			{/* El resaltado del favorito es sólo color: esto lo vuelve audible. */}
 			{isFavorite ? (
 				<p className="sr-only">Juega uno de tus equipos favoritos</p>
