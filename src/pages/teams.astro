@@ -1,0 +1,105 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getTeamsByTournament } from "@/utils/get-teams-by-tournament";
+
+// Directorio de todos los equipos de la temporada, una sección por torneo, al
+// estilo de la página de equipos de la NBA.
+const groups = await getTeamsByTournament();
+
+const title = "Equipos | Are We Playing?";
+const description =
+  "Todos los equipos de la liga ABE en esta temporada, agrupados por división y rama.";
+---
+
+<Layout title={title} description={description}>
+  <div class="mx-auto flex w-full max-w-7xl flex-col gap-10">
+    <h1
+      class="border-b border-line/70 pb-4 font-mono text-4xl font-bold uppercase tracking-tight md:text-6xl"
+    >
+      Todos los equipos
+    </h1>
+
+    <div class="grid gap-x-10 gap-y-12">
+      {
+        groups.map((group) => (
+          <section aria-labelledby={`teams-${group.slug}`} class="min-w-0">
+            <div class="mb-4 flex items-baseline justify-between gap-4">
+              <h2
+                id={`teams-${group.slug}`}
+                class="min-w-0 scroll-mt-28 font-mono text-sm font-bold uppercase tracking-wider"
+              >
+                {group.label}
+              </h2>
+              <a
+                href={`/${group.slug}/teams`}
+                class="shrink-0 text-xs font-bold uppercase tracking-wider text-muted-foreground hover:text-foreground hover:underline"
+              >
+                Tabla
+              </a>
+            </div>
+
+            {group.teams.length === 0 ? (
+              <p class="text-sm text-muted-foreground">
+                Aún no hay equipos registrados en este torneo.
+              </p>
+            ) : (
+              <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                {group.teams.map((team) => (
+                  <li class="flex items-start gap-4">
+                    {team.logo ? (
+                      <img
+                        src={team.logo}
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        decoding="async"
+                        class="size-10 shrink-0 object-contain"
+                      />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        class="grid size-10 shrink-0 place-items-center rounded-sm bg-inverse text-xs font-bold uppercase text-inverse-foreground"
+                      >
+                        {team.initials}
+                      </span>
+                    )}
+                    <div class="min-w-0">
+                      <a
+                        href={team.href}
+                        class="block wrap-break-word text-base font-bold leading-snug hover:underline"
+                      >
+                        {team.name}
+                      </a>
+                      <ul
+                        aria-label={`Secciones de ${team.name}`}
+                        class="mt-1 flex flex-wrap gap-x-4 text-sm text-muted-foreground"
+                      >
+                        <li>
+                          <a
+                            href={`${team.href}#team-stats`}
+                            class="hover:text-foreground hover:underline"
+                          >
+                            Estadísticas
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href={`${team.href}#team-matches`}
+                            class="hover:text-foreground hover:underline"
+                          >
+                            Partidos
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
