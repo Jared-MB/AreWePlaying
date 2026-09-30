@@ -41,6 +41,14 @@ const props = {
 	tournamentLabel: "División I · Varonil",
 	siteLabel: "areweplaying.com",
 	fileName: "up-mexico-vs-uv-1.png",
+	shareTitle: "UP MÉXICO vs UV",
+};
+
+/** Los controles viven en un diálogo cerrado; hay que abrirlo para alcanzarlos. */
+const renderOpen = (overrides: Partial<typeof props> = {}) => {
+	const result = render(<MatchStory {...props} {...overrides} />);
+	fireEvent.click(screen.getByRole("button", { name: "Compartir" }));
+	return result;
 };
 
 const pressed = (name: string) =>
@@ -62,7 +70,7 @@ beforeEach(() => {
 afterEach(cleanup);
 
 test("por defecto: tema oscuro y acento naranja", () => {
-	render(<MatchStory {...props} />);
+	renderOpen();
 	expect(pressed("Oscuro")).toBe("true");
 	expect(pressed("Claro")).toBe("false");
 	expect(pressed("Naranja")).toBe("true");
@@ -71,7 +79,7 @@ test("por defecto: tema oscuro y acento naranja", () => {
 test("restaura tema y acento guardados (el hex se normaliza a mayúsculas)", () => {
 	window.localStorage.setItem("story-theme", "light");
 	window.localStorage.setItem("story-accent", "#7a1129");
-	render(<MatchStory {...props} />);
+	renderOpen();
 	expect(pressed("Claro")).toBe("true");
 	expect(pressed("Guinda")).toBe("true");
 	expect(pressed("Naranja")).toBe("false");
@@ -80,13 +88,13 @@ test("restaura tema y acento guardados (el hex se normaliza a mayúsculas)", () 
 test("ignora valores guardados inválidos", () => {
 	window.localStorage.setItem("story-theme", "sepia");
 	window.localStorage.setItem("story-accent", "rojo");
-	render(<MatchStory {...props} />);
+	renderOpen();
 	expect(pressed("Oscuro")).toBe("true");
 	expect(pressed("Naranja")).toBe("true");
 });
 
 test("elegir tema y acento los recuerda", () => {
-	render(<MatchStory {...props} />);
+	renderOpen();
 	fireEvent.click(screen.getByRole("button", { name: "Claro" }));
 	fireEvent.click(screen.getByRole("button", { name: "Azul" }));
 	expect(window.localStorage.getItem("story-theme")).toBe("light");
@@ -95,7 +103,7 @@ test("elegir tema y acento los recuerda", () => {
 });
 
 test("color libre desde el selector", () => {
-	const { container } = render(<MatchStory {...props} />);
+	const { container } = renderOpen();
 	const input = container.querySelector<HTMLInputElement>(
 		'input[type="color"]',
 	);
@@ -112,7 +120,7 @@ test("color libre desde el selector", () => {
 });
 
 test("la story muestra los datos del partido", () => {
-	const { container } = render(<MatchStory {...props} />);
+	const { container } = renderOpen();
 	const text = container.textContent ?? "";
 	for (const piece of [
 		"UP MÉXICO",
@@ -148,7 +156,7 @@ test("descargar genera un PNG 1080×1920 con el nombre de archivo", async () => 
 	const click = vi
 		.spyOn(HTMLAnchorElement.prototype, "click")
 		.mockImplementation(function (this: HTMLAnchorElement) {});
-	render(<MatchStory {...props} />);
+	renderOpen();
 
 	fireEvent.click(screen.getByRole("button", { name: /Descargar 9:16/ }));
 	await waitFor(() =>
@@ -168,14 +176,14 @@ test("descargar genera un PNG 1080×1920 con el nombre de archivo", async () => 
 
 test("si falla el render, avisa", async () => {
 	htmlToImage.toPng.mockRejectedValue(new Error("canvas"));
-	render(<MatchStory {...props} />);
+	renderOpen();
 	fireEvent.click(screen.getByRole("button", { name: /Descargar 9:16/ }));
 	await waitFor(() =>
 		expect(toast.error).toHaveBeenCalledWith("No se pudo generar la imagen"),
 	);
 });
 
-test("sin soporte para compartir archivos no aparece el botón Compartir", () => {
-	render(<MatchStory {...props} />);
-	expect(screen.queryByRole("button", { name: /Compartir/ })).toBeNull();
+test("sin soporte para compartir archivos no aparece el botón Compartir imagen", () => {
+	renderOpen();
+	expect(screen.queryByRole("button", { name: /Compartir imagen/ })).toBeNull();
 });

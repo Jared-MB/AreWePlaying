@@ -4,11 +4,10 @@ import { getContainerRenderer } from "@astrojs/preact";
 import { loadRenderers } from "astro:container";
 import { afterEach, beforeAll, beforeEach, expect, test, vi } from "vitest";
 import MatchDaySection from "@/components/MatchDaySection.astro";
-import PastMatches from "@/components/PastMatches.astro";
 import SelectDivision from "@/components/SelectDivision.astro";
+import TeamSchedule from "@/components/TeamSchedule.astro";
 import TodayMatches from "@/components/TodayMatches.astro";
 import TopPerformers from "@/components/TopPerformers.astro";
-import UpcomingMatches from "@/components/UpcomingMatches.astro";
 import WeekMatches from "@/components/WeekMatches.astro";
 import { getMatches } from "@/utils/get-matches";
 import { getTournaments } from "@/utils/get-tournaments";
@@ -70,26 +69,24 @@ test("MatchDaySection con subtítulo y h3", async () => {
 	).toMatchSnapshot();
 });
 
-test("PastMatches y UpcomingMatches de un equipo", async () => {
-	const props = {
-		teamId: TEAM.upMexico,
-		tournamentId: T1,
-		tournamentSlug: "division-i-varonil",
-	};
-	expect(await render(PastMatches, props)).toMatchSnapshot("pasados");
-	expect(await render(UpcomingMatches, props)).toMatchSnapshot("próximos");
+test("TeamSchedule de un equipo", async () => {
+	expect(
+		await render(TeamSchedule, {
+			teamId: TEAM.upMexico,
+			tournamentId: T1,
+			tournamentSlug: "division-i-varonil",
+		}),
+	).toMatchSnapshot();
 });
 
-test("PastMatches y UpcomingMatches vacíos", async () => {
-	const props = {
-		teamId: "sin-partidos",
-		tournamentId: T1,
-		tournamentSlug: "division-i-varonil",
-	};
-	expect(await render(PastMatches, props)).toMatchSnapshot("pasados vacío");
-	expect(await render(UpcomingMatches, props)).toMatchSnapshot(
-		"próximos vacío",
-	);
+test("TeamSchedule vacío", async () => {
+	expect(
+		await render(TeamSchedule, {
+			teamId: "sin-partidos",
+			tournamentId: T1,
+			tournamentSlug: "division-i-varonil",
+		}),
+	).toMatchSnapshot();
 });
 
 test("TopPerformers", async () => {
