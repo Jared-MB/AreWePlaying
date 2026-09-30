@@ -1,4 +1,5 @@
 ---
+import BackLink from "@/components/BackLink.astro";
 import MatchStory from "@/components/match-story.tsx";
 import { SITE_HOST } from "@/constants/site";
 import Layout from "@/layouts/Layout.astro";
@@ -25,7 +26,9 @@ import { getWeekSlug } from "@/utils/week-slug";
 import { slugify } from "@/utils/slugify";
 import { format, isValid, parse } from "date-fns";
 import { es } from "date-fns/locale";
-import { MapPin } from "@lucide/astro";
+import MatchHeroCourt from "@/components/MatchHeroCourt.astro";
+import { getLogoBackground } from "@/utils/get-logo-background";
+import type { MatchHero } from "@/utils/match-hero";
 
 export async function getStaticPaths() {
   const perTournament = getTournaments().map(async (t) => {
@@ -93,16 +96,13 @@ const longDate = isValid(parsedDate)
   ? format(parsedDate, "EEEE d 'de' MMMM 'de' yyyy", { locale: es })
   : rawDate;
 
-const teams = [
-  { side: card.local, role: "Local" as const, stats: localStats },
-  { side: card.visiting, role: "Visitante" as const, stats: visitingStats },
-].map(({ side, role, stats }) => ({
+const toHeroTeam = (side: typeof card.local, role: "Local" | "Visitante") => ({
   ...side,
   role,
-  stats,
-  fullName: stats?.name ?? side.name,
-  slug: getTeamSlug({ shortName: side.name }),
-}));
+  href: `/${tournamentSlug}/teams/${getTeamSlug({ shortName: side.name })}`,
+});
+const heroLocal = toHeroTeam(card.local, "Local");
+const heroVisiting = toHeroTeam(card.visiting, "Visitante");
 
 interface ComparisonRow {
   label: string;
@@ -167,6 +167,27 @@ const tournamentLabel = getTournamentLabel(tournament);
 const venueUrl = safeHttpUrl(match.locationUrl);
 const venue = card.venue;
 
+// La story dibuja sus propios círculos: necesita el fondo de los escudos cuadrados.
+const [storyLocal, storyVisiting] = await Promise.all(
+  [card.local, card.visiting].map(async (side) => ({
+    ...side,
+    logoBackground: await getLogoBackground(side.logo),
+  })),
+);
+
+const hero: MatchHero = {
+  status,
+  statusLabel: MATCH_STATUS_LABEL[status],
+  eyebrow: `${tournamentLabel}${week ? ` · ${week.week}` : ""} · Partido ${match.matchNumber}`,
+  title: `${match.localTeam} vs ${match.visitingTeam}`,
+  date: longDate,
+  time: rawTime,
+  venue,
+  venueUrl,
+  local: heroLocal,
+  visiting: heroVisiting,
+};
+
 const title = `${match.localTeam} vs ${match.visitingTeam}${hasScore ? ` ${match.localTeamPoints}-${match.visitingTeamPoints}` : ""} | Are We Playing?`;
 const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}${rawTime ? ` a las ${rawTime}` : ""} · ${venue}. ${tournamentLabel}.`;
 ---
@@ -178,104 +199,34 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
   image={`/${tournamentSlug}/match/${Astro.params.match}/og.png`}
 >
   <div class="mx-auto w-full max-w-5xl">
-    <div class="mb-6 flex items-center justify-between gap-4">
-      <a
-        href={week
-          ? `/${tournamentSlug}/${getWeekSlug(week)}`
-          : `/${tournamentSlug}`}
-        class="rounded-md bg-surface px-4 py-2 text-sm font-bold uppercase tracking-wider shadow-xs transition-transform duration-180 hover:bg-surface-hover/70 focus-visible:scale-95"
-      >
-        ← Regresar
-      </a>
+    <BackLink
+      href={week
+        ? `/${tournamentSlug}/${getWeekSlug(week)}`
+        : `/${tournamentSlug}`}
+      class="mb-6 inline-block rounded-md bg-surface px-4 py-2 text-sm font-bold uppercase tracking-wider shadow-xs transition-transform duration-180 hover:bg-surface-hover/70 focus-visible:scale-95"
+    >
+      ← Regresar
+    </BackLink>
 
-      <span
-        class={`rounded-md border border-line/70 px-3 py-1 text-xs font-bold uppercase tracking-wider ${
-          status === "finished"
-            ? "bg-muted text-muted-foreground"
-            : "bg-primary text-primary-foreground"
-        }`}
-      >
-        {MATCH_STATUS_LABEL[status]}
-      </span>
+    <div class="mb-8">
+      <MatchHeroCourt hero={hero}>
+        <MatchStory
+          slot="actions"
+          shareTitle={hero.title}
+          client:load
+          status={card.status}
+          local={storyLocal}
+          visiting={storyVisiting}
+          dateLabel={card.dateLabel}
+          timeLabel={card.timeLabel}
+          venue={card.venue}
+          weekLabel={card.weekLabel}
+          tournamentLabel={card.tournamentLabel}
+          siteLabel={SITE_HOST}
+          fileName={`are-we-playing-${slugify(match.localTeam)}-vs-${slugify(match.visitingTeam)}.png`}
+        />
+      </MatchHeroCourt>
     </div>
-
-    <header class="mb-8 border-b border-b-line/70 pb-6">
-      <p
-        class="mb-4 text-xs font-bold uppercase tracking-widest text-muted-foreground"
-      >
-        {tournamentLabel}{week ? ` · ${week.week}` : ""} · Partido {
-          match.matchNumber
-        }
-      </p>
-      <h1
-        class="font-mono text-3xl font-bold uppercase tracking-wider text-balance md:text-5xl flex flex-col flex-wrap items-baseline gap-4"
-      >
-        <div class="flex justify-between items-center w-full">
-          <a
-            href={`/${tournamentSlug}/teams/${teams[0].slug}`}
-            class="hover:underline text-balance"
-            transition:name={match.localTeam}>{match.localTeam}</a
-          >
-          {
-            hasScore && (
-              <span
-                class:list={[
-                  "text-muted-foreground bg-muted border border-line/70 px-4 text-center py-1 rounded-md tabular-nums",
-                  teams[0].isWinner && "bg-primary! text-primary-foreground",
-                ]}
-              >
-                {teams[0].points}
-              </span>
-            )
-          }
-        </div>
-        <span class="text-muted-foreground text-3xl">vs</span>
-        <div class="flex justify-between items-center w-full">
-          <a
-            href={`/${tournamentSlug}/teams/${teams[1].slug}`}
-            class="hover:underline text-balance"
-            transition:name={match.visitingTeam}>{match.visitingTeam}</a
-          >
-          {
-            hasScore && (
-              <span
-                class:list={[
-                  "text-muted-foreground bg-muted border border-line/70 px-4 text-center py-1 rounded-md tabular-nums",
-                  teams[1].isWinner && "bg-primary! text-primary-foreground",
-                ]}
-              >
-                {teams[1].points}
-              </span>
-            )
-          }
-        </div>
-      </h1>
-      <div
-        class="mt-4 text-sm uppercase tracking-wider text-muted-foreground flex flex-wrap gap-2 justify-between items-center"
-      >
-        <p>
-          {longDate}{rawTime ? ` · ${rawTime} hrs` : ""}
-        </p>
-        {
-          venueUrl ? (
-            <a
-              href={venueUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex gap-2 items-center wrap-break-word hover:underline"
-            >
-              <MapPin class="size-4" />
-              {venue}
-            </a>
-          ) : (
-            <p class="flex gap-2 items-center wrap-break-word">
-              <MapPin class="size-4" />
-              {venue}
-            </p>
-          )
-        }
-      </div>
-    </header>
 
     {
       localStats && visitingStats ? (
@@ -376,19 +327,5 @@ const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}$
         </section>
       ) : null
     }
-    <hr class="mb-6" />
-    <MatchStory
-      client:load
-      status={card.status}
-      local={card.local}
-      visiting={card.visiting}
-      dateLabel={card.dateLabel}
-      timeLabel={card.timeLabel}
-      venue={card.venue}
-      weekLabel={card.weekLabel}
-      tournamentLabel={card.tournamentLabel}
-      siteLabel={SITE_HOST}
-      fileName={`are-we-playing-${slugify(match.localTeam)}-vs-${slugify(match.visitingTeam)}.png`}
-    />
   </div>
 </Layout>
