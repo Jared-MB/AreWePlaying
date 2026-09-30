@@ -11,15 +11,7 @@ import {
 	type StoryTheme,
 	buildPalette,
 } from "@/constants/story";
-import {
-	Check,
-	Download,
-	Link2,
-	Loader2,
-	MapPin,
-	Share2,
-	X,
-} from "lucide-preact";
+import { Check, Download, Link2, Loader2, Share2, X } from "lucide-preact";
 import {
 	useCallback,
 	useEffect,
@@ -498,6 +490,7 @@ export default function MatchStory({ fileName, shareTitle, ...story }: Props) {
 				Compartir
 			</button>
 
+			{/* biome-ignore lint/a11y/useKeyWithClickEvents: el clic en el fondo es solo para mouse; con teclado cierra Escape (nativo del dialog) y el botón de cerrar */}
 			<dialog
 				ref={$dialog}
 				aria-labelledby="share-title"

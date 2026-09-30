@@ -61,9 +61,11 @@ const opponentMeta = [
 // Un partido ya pasado puede seguir sin marcador ("-") si no se capturó.
 const ownPoints = Number.parseInt(
   isHome ? match.localTeamPoints : match.visitingTeamPoints,
+  10,
 );
 const rivalPoints = Number.parseInt(
   isHome ? match.visitingTeamPoints : match.localTeamPoints,
+  10,
 );
 const hasScore =
   showResult && Number.isFinite(ownPoints) && Number.isFinite(rivalPoints);
