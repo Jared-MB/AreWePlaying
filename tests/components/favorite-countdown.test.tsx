@@ -90,11 +90,11 @@ test("un favorito: tarjeta completa (golden)", () => {
 	render(<FavoriteCountdown matchesByTeam={byTeam} />);
 
 	expect(screen.getByRole("heading", { level: 2 }).textContent).toBe(
-		"Tu próximo partido",
+		"Tus tickets",
 	);
 	const article = screen.getByRole("article");
 	expect(article.textContent).toMatchInlineSnapshot(
-		`"BUAP vs UVDivisión I · Varonil · SEMANA 2 · LocalFaltan 6 horas para el partido de BUAP: sábado 26 de septiembre · 18:00 hrs.00Días06Hrs00Min00Segsábado 26 de septiembre · 18:00 hrsLugar: GIMNASIO"`,
+		`"BUAP vs UVDivisión I · Varonil · SEMANA 2 · LocalFaltan 6 horas para el partido de BUAP: sábado 26 de septiembre · 18:00 hrs.00Días06Hrs00Min00SegFechasábado 26 de septiembre · 18:00 hrsCanchaGIMNASIO (abre en una pestaña nueva)Favorito"`,
 	);
 	expect(
 		[...article.querySelectorAll("a")].map((a) => [
@@ -134,11 +134,11 @@ test("dos favoritos que juegan entre sí: una sola tarjeta", () => {
 	expect(screen.getByRole("article").textContent).toContain("Visita");
 });
 
-test("varios partidos: ordenados por hora y título en plural", () => {
+test("varios partidos: ordenados por hora", () => {
 	favorites(["tec", "buap"]);
 	render(<FavoriteCountdown matchesByTeam={byTeam} />);
 	expect(screen.getByRole("heading", { level: 2 }).textContent).toBe(
-		"Tus próximos partidos",
+		"Tus tickets",
 	);
 	expect(
 		screen
@@ -147,7 +147,7 @@ test("varios partidos: ordenados por hora y título en plural", () => {
 	).toEqual(["BUAP vs UV", "TEC vs UP"]);
 	// Sin link de sede no hay enlace al mapa.
 	const tec = screen.getAllByRole("article")[1];
-	expect(tec.textContent).not.toContain("Lugar:");
+	expect(tec.textContent).not.toContain("Cancha");
 });
 
 describe("texto para lector de pantalla", () => {

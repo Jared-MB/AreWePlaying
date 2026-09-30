@@ -35,7 +35,7 @@ test("marcar favorito persiste y arma la cuenta regresiva en la home", async ({
 	);
 
 	await page.goto("/");
-	const countdown = page.getByRole("region", { name: "Tu próximo partido" });
+	const countdown = page.getByRole("region", { name: "Tus tickets" });
 	await expect(countdown).toBeVisible({ timeout: 15_000 });
 	await expect(
 		countdown.locator(`a[href="/${data.slug}/match/${matchSlug(match)}"]`),
@@ -55,9 +55,9 @@ test("marcar favorito persiste y arma la cuenta regresiva en la home", async ({
 	await expect(page.locator('[aria-busy="true"]')).toHaveCount(0, {
 		timeout: 15_000,
 	});
-	await expect(
-		page.getByRole("region", { name: "Tu próximo partido" }),
-	).toHaveCount(0);
+	await expect(page.getByRole("region", { name: "Tus tickets" })).toHaveCount(
+		0,
+	);
 });
 
 test("en la jornada, el partido del favorito se resalta y se anuncia", async ({
