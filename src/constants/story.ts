@@ -73,6 +73,8 @@ export type Palette = ReturnType<typeof buildPalette>;
 export interface StoryTeam {
 	name: string;
 	logo: string | null;
+	/** Fondo de un escudo cuadrado con color propio; sin él, el círculo es blanco. */
+	logoBackground?: string | null;
 	initials: string;
 	record: string;
 	position: string;

@@ -291,6 +291,27 @@
 	--tracking-widest: calc(var(--tracking-normal) + 0.1em);
 }
 
+/* Degradado del centro transparente al fondo del círculo (`--crest-bg`, blanco
+por defecto o el color de fondo de un escudo cuadrado): las esquinas se funden
+con el borde en vez de verse recortadas. Los escudos redondos o transparentes
+no llegan al borde y no cambian. */
+@utility crest-fade {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		background: radial-gradient(
+			closest-side,
+			transparent 70%,
+			var(--crest-bg, white) 100%
+		);
+		pointer-events: none;
+	}
+}
+
 @utility touch-hitbox {
 	position: relative;
 

@@ -1,0 +1,99 @@
+---
+// Enlace "Regresar": vuelve a la página anterior del historial si es de este
+// sitio; si no (entrada directa, link compartido, pestaña nueva), navega al
+// `href` de respaldo. Sigue siendo un <a> para Cmd/Ctrl/middle-click.
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"a"> & { href: string };
+
+const { href, ...props } = Astro.props;
+---
+
+<a href={href} data-back-link {...props}>
+  <slot />
+</a>
+
+<script>
+  const STORAGE_KEY = "back-link-history";
+
+  type HistoryUrls = Record<number, string>;
+
+  function readHistoryUrls(): HistoryUrls {
+    try {
+      return JSON.parse(sessionStorage.getItem(STORAGE_KEY) ?? "{}");
+    } catch {
+      return {};
+    }
+  }
+
+  /** Guarda la URL actual (con sus query params) bajo el índice del ClientRouter. */
+  function rememberCurrentUrl() {
+    const index = history.state?.index;
+    if (typeof index !== "number") return;
+
+    try {
+      const urls = { ...readHistoryUrls(), [index]: location.href };
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(urls));
+    } catch {}
+  }
+
+  /** URL de la entrada anterior del historial si pertenece a este sitio. */
+  function getPreviousInAppUrl() {
+    if ("navigation" in window && window.navigation) {
+      // `entries()` solo expone entradas del mismo origen.
+      const { currentEntry } = window.navigation;
+      if (!currentEntry || currentEntry.index < 1) return undefined;
+      return window.navigation.entries()[currentEntry.index - 1]?.url ?? undefined;
+    }
+
+    const index = history.state?.index;
+    if (typeof index !== "number" || index < 1) return undefined;
+    return readHistoryUrls()[index - 1];
+  }
+
+  function isPlainClick(event: MouseEvent) {
+    return (
+      event.button === 0 &&
+      !event.metaKey &&
+      !event.ctrlKey &&
+      !event.shiftKey &&
+      !event.altKey
+    );
+  }
+
+  // El `href` pasa a ser la página anterior real para que el hover, copiar el
+  // link y Cmd/Ctrl-click coincidan con a dónde regresa el click.
+  document.addEventListener("astro:page-load", () => {
+    rememberCurrentUrl();
+
+    const previousUrl = getPreviousInAppUrl();
+    if (!previousUrl) return;
+
+    for (const $link of document.querySelectorAll<HTMLAnchorElement>(
+      "[data-back-link]",
+    )) {
+      $link.href = previousUrl;
+      $link.dataset.backLink = "history";
+    }
+  });
+
+  // Antes de salir se vuelve a guardar: la página pudo cambiar su URL con
+  // `replaceState` (p. ej. filtros en query params).
+  document.addEventListener("astro:before-preparation", rememberCurrentUrl);
+  window.addEventListener("pagehide", rememberCurrentUrl);
+
+  // En captura para adelantarse al handler de clicks del ClientRouter, y en
+  // `document` para sobrevivir a sus swaps.
+  document.addEventListener(
+    "click",
+    (event) => {
+      if (!(event.target instanceof Element)) return;
+      if (!event.target.closest("[data-back-link='history']")) return;
+      if (!isPlainClick(event)) return;
+
+      event.preventDefault();
+      history.back();
+    },
+    { capture: true },
+  );
+</script>
