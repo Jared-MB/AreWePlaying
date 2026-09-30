@@ -6,6 +6,7 @@ import "sonner/dist/styles.css";
 import HeaderLink from "@/components/HeaderLink.astro";
 import Footer from "@/components/Footer.astro";
 import SelectDivision from "@/components/SelectDivision.astro";
+import TeamsMenu from "@/components/TeamsMenu.astro";
 import { Toaster } from "@/components/sonner";
 
 import HeadlessLayout from "./HeadlessLayout.astro";
@@ -39,16 +40,7 @@ const { tournamentSlug, title, description, image, icon } = Astro.props;
           <nav class="flex items-center gap-6 md:gap-8">
             <HeaderLink href="/" aria-label="Ir al inicio"> Inicio </HeaderLink>
 
-            {
-              tournamentSlug ? (
-                <HeaderLink
-                  href={`/${tournamentSlug}/teams`}
-                  aria-label="Ver equipos"
-                >
-                  Equipos
-                </HeaderLink>
-              ) : null
-            }
+            <TeamsMenu />
           </nav>
 
           <div class="flex items-center gap-4">

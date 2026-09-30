@@ -1,0 +1,169 @@
+---
+import ChevronDown from "@lucide/astro/icons/chevron-down";
+
+import { getTeamsByTournament } from "@/utils/get-teams-by-tournament";
+
+// Una columna por torneo, como las conferencias en el menú de la NBA.
+const groups = await getTeamsByTournament();
+---
+
+<div data-teams-menu class="relative">
+  <a
+    href="/teams"
+    data-teams-menu-trigger
+    class="group inline-flex h-9 items-center gap-2 rounded-md px-4 text-sm font-bold uppercase tracking-wider touch-manipulation outline-none transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 data-open:bg-primary data-open:text-primary-foreground"
+  >
+    Equipos
+    <ChevronDown
+      aria-hidden="true"
+      class="size-4 transition-transform duration-200 group-data-open:rotate-180 motion-reduce:transition-none"
+    />
+  </a>
+
+  <nav
+    id="teams-menu-panel"
+    data-teams-menu-panel
+    aria-label="Equipos"
+    hidden
+    class="fixed inset-x-4 top-(--teams-menu-top,5rem) z-30 max-h-[calc(100dvh-var(--teams-menu-top,5rem)-1rem)] overflow-y-auto overscroll-contain rounded-md border border-line/70 bg-popover text-popover-foreground shadow-lg animate-in fade-in slide-in-from-top-1 duration-150 motion-reduce:animate-none md:right-auto md:left-(--teams-menu-left,1rem) md:w-[min(72rem,calc(100vw-var(--teams-menu-left,1rem)-1rem))]"
+  >
+    <div class="grid gap-x-8 gap-y-6 p-6 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        groups.map((group) => (
+          <section aria-labelledby={`teams-menu-${group.slug}`} class="min-w-0">
+            <a
+              id={`teams-menu-${group.slug}`}
+              href={`/${group.slug}/teams`}
+              class="mb-3 block rounded-sm text-xs font-bold uppercase tracking-widest text-muted-foreground outline-none hover:text-foreground hover:underline focus-visible:ring-[3px] focus-visible:ring-ring/50"
+            >
+              {group.label}
+            </a>
+            {group.teams.length === 0 ? (
+              <p class="text-sm text-muted-foreground">
+                Aún no hay equipos registrados.
+              </p>
+            ) : (
+              // biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista
+              <ul role="list" class="flex flex-col">
+                {group.teams.map((team) => (
+                  <li>
+                    <a
+                      href={team.href}
+                      class="flex min-h-9 items-center gap-3 rounded-sm px-2 py-1 -mx-2 text-sm outline-none transition-colors hover:bg-surface-hover focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                    >
+                      {team.logo ? (
+                        <img
+                          src={team.logo}
+                          alt=""
+                          width="20"
+                          height="20"
+                          loading="lazy"
+                          decoding="async"
+                          class="size-5 shrink-0 object-contain"
+                        />
+                      ) : (
+                        <span
+                          aria-hidden="true"
+                          class="grid size-5 shrink-0 place-items-center rounded-sm bg-inverse text-[0.5rem] font-bold uppercase text-inverse-foreground"
+                        >
+                          {team.initials}
+                        </span>
+                      )}
+                      <span class="min-w-0 break-words">{team.name}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        ))
+      }
+    </div>
+    <div class="border-t border-line/70 px-6 py-3">
+      <a
+        href="/teams"
+        class="inline-flex min-h-9 items-center rounded-sm text-sm font-bold uppercase tracking-wider outline-none hover:underline focus-visible:ring-[3px] focus-visible:ring-ring/50"
+      >
+        Ver todos los equipos
+      </a>
+    </div>
+  </nav>
+</div>
+
+<script>
+  // El enlace "Equipos" lleva a /teams; con mouse, pasar por encima despliega el
+  // panel como atajo. En touch y teclado no hay hover y el enlace basta, porque
+  // /teams tiene los mismos equipos. Los listeners van en `document` para seguir
+  // funcionando después de que el ClientRouter reemplace el <body>.
+  const getParts = () => {
+    const $trigger = document.querySelector<HTMLAnchorElement>(
+      "[data-teams-menu-trigger]",
+    );
+    const $panel = document.querySelector<HTMLElement>(
+      "[data-teams-menu-panel]",
+    );
+    return $trigger && $panel ? { $trigger, $panel } : null;
+  };
+
+  const setOpen = (open: boolean, { returnFocus = false } = {}) => {
+    const parts = getParts();
+    if (!parts) return;
+
+    const { $trigger, $panel } = parts;
+    if (open) {
+      // El panel es `fixed` para no quedar recortado; se ancla bajo el botón.
+      const { bottom, left } = $trigger.getBoundingClientRect();
+      $panel.style.setProperty("--teams-menu-top", `${bottom + 12}px`);
+      $panel.style.setProperty("--teams-menu-left", `${left}px`);
+    }
+
+    $trigger.toggleAttribute("data-open", open);
+    $panel.hidden = !open;
+
+    if (!open && returnFocus) $trigger.focus();
+  };
+
+  const isOpen = () => Boolean(getParts()?.$trigger.hasAttribute("data-open"));
+
+  let closeTimer: number | undefined;
+
+  const isInsideMenu = (node: EventTarget | null) =>
+    node instanceof Element && Boolean(node.closest("[data-teams-menu]"));
+
+  document.addEventListener("pointerover", (e) => {
+    if (e.pointerType !== "mouse" || !isInsideMenu(e.target)) return;
+
+    window.clearTimeout(closeTimer);
+    if (!isOpen()) setOpen(true);
+  });
+
+  document.addEventListener("pointerout", (e) => {
+    if (e.pointerType !== "mouse" || !isInsideMenu(e.target)) return;
+    if (isInsideMenu(e.relatedTarget)) return;
+
+    // El margen deja cruzar el hueco entre el botón y el panel sin que se cierre.
+    closeTimer = window.setTimeout(() => setOpen(false), 150);
+  });
+
+  document.addEventListener("click", (e) => {
+    const $target = e.target as HTMLElement | null;
+
+    // Clic fuera del panel, o en un enlace (la navegación ya está en camino).
+    const isOutside = !$target?.closest("[data-teams-menu-panel]");
+    if (isOpen() && (isOutside || $target?.closest("a"))) setOpen(false);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen()) setOpen(false, { returnFocus: true });
+  });
+
+  // Si el foco sale del menú con Tab, se cierra.
+  document.addEventListener("focusin", (e) => {
+    const $target = e.target as HTMLElement | null;
+    if (isOpen() && !$target?.closest("[data-teams-menu]")) setOpen(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (isOpen()) setOpen(true);
+  });
+</script>
