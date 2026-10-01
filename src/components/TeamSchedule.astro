@@ -36,6 +36,17 @@ function groupByMonth(matches: Match[]) {
   return [...groups];
 }
 
+/** Agrega a cada mes el lugar de su primer boleto en todo el panel. */
+function withOffsets(groups: [string, Match[]][]) {
+  let offset = 0;
+
+  return groups.map(([month, matches]) => {
+    const group = { month, matches, offset };
+    offset += matches.length;
+    return group;
+  });
+}
+
 const isHome = (match: Match) => match.localTeamId === teamId;
 const getOpponentName = (match: Match) =>
   isHome(match) ? match.visitingTeam : match.localTeam;
@@ -55,7 +66,7 @@ const panels = [
     id: "proximos",
     label: "Próximos",
     count: upcoming.length,
-    groups: groupByMonth(upcoming.toSorted(byDate)),
+    groups: withOffsets(groupByMonth(upcoming.toSorted(byDate))),
     showResult: false,
     empty: "No hay más partidos por jugar",
   },
@@ -64,7 +75,7 @@ const panels = [
     label: "Pasados",
     count: past.length,
     // Como en la NBA: lo más reciente arriba.
-    groups: groupByMonth(past.toSorted((a, b) => byDate(b, a))),
+    groups: withOffsets(groupByMonth(past.toSorted((a, b) => byDate(b, a)))),
     showResult: true,
     empty: "Todavía no hay partidos jugados",
   },
@@ -180,13 +191,13 @@ const select =
       >
         {groups.length > 0 ? (
           <>
-            {groups.map(([month, matches]) => (
+            {groups.map(({ month, matches, offset }) => (
               <section data-schedule-month class="mb-8 last:mb-0">
                 <h3 class="mb-4 font-mono text-2xl uppercase tracking-wide">
                   {month}
                 </h3>
                 <ol class="flex flex-col gap-4">
-                  {matches.map((match) => (
+                  {matches.map((match, i) => (
                     <li
                       data-schedule-match
                       data-location={isHome(match) ? "local" : "visita"}
@@ -195,6 +206,7 @@ const select =
                       })}
                     >
                       <ScheduleTicket
+                        index={offset + i}
                         ticket={buildScheduleTicket({
                           match,
                           teamId,
@@ -406,6 +418,19 @@ const select =
     const exists = [...$select.options].some((o) => o.value === value);
     $select.value = value && exists ? value : "";
   };
+
+  // El rasgado de un boleto pasado ocurre una sola vez: al terminar la última
+  // animación se quita `data-ticket-tear` (el estado final es el estilo base), y
+  // así no se repite al filtrar ni al cambiar de pestaña.
+  document.addEventListener("animationend", (e) => {
+    const $ticket = (e.target as Element).closest("[data-ticket-tear]");
+    if (!$ticket) return;
+
+    const pending = $ticket
+      .getAnimations({ subtree: true })
+      .some((animation) => animation.playState === "running");
+    if (!pending) $ticket.removeAttribute("data-ticket-tear");
+  });
 
   document.addEventListener("astro:page-load", () => {
     if (!document.querySelector("[data-schedule]")) return;

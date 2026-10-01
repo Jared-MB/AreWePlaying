@@ -832,15 +832,170 @@ y no una máscara de mosaicos: ésta dejaba una costura punteada sobre el borde.
 @utility stamp-ink {
 	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='3' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2 0 0 0 2.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 	mask-size: 160px 160px;
-
-	@media (prefers-reduced-motion: no-preference) {
-		animation: stamp-in 220ms cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
-	}
 }
 
 @keyframes stamp-in {
 	from {
 		opacity: 0;
 		scale: 1.35;
+	}
+}
+
+/* Al mostrarse un boleto pasado se ve como un boleto normal (muescas y línea
+punteada entre el cuerpo y el talón) y se rasga: tras la tensión aparecen los
+bordes irregulares, el talón se desprende y después cae el sello. Cada boleto
+espera un poco más que el anterior (`--tear-index`, con tope para que una lista
+larga no tarde segundos). Lo propio del boleto entero se aplica con animaciones
+que sólo tienen fotograma inicial: al terminar vuelve el estilo base, que es el
+boleto rasgado, así que el script quita `data-ticket-tear` al acabar y no se
+repiten al filtrar ni al cambiar de pestaña. */
+[data-ticket-tear] {
+	--tear-duration: 700ms;
+	--tear-pop-at: 140ms;
+	--tear-stamp: 300ms;
+	--tear-recoil: 3px;
+	--tear-delay: calc(250ms + min(var(--tear-index, 0), 8) * 120ms);
+	--tear-pop: calc(var(--tear-delay) + var(--tear-pop-at));
+	/* Eje en el que se aleja el talón (en móvil queda debajo del cuerpo) y
+	cuánto de la inclinación se aplica. */
+	--ax: 0;
+	--ay: 1;
+	--amp: 0.5;
+	/* El cuerpo rasgado queda 0.625rem (el `gap`) corto del talón: antes del
+	rasgado se estira para que el boleto se vea pegado. */
+	--tear-join-x: 0px;
+	--tear-join-y: -0.625rem;
+	--tear-border: 2px 0 0 0;
+	--tear-mask:
+		radial-gradient(
+			circle 14px at 0 calc(100% - 4.5rem - 1px),
+			transparent 98%,
+			#000
+		),
+		radial-gradient(
+			circle 14px at 100% calc(100% - 4.5rem - 1px),
+			transparent 98%,
+			#000
+		);
+
+	@media (min-width: 48rem) {
+		--ax: 1;
+		--ay: 0;
+		--amp: 1;
+		--tear-join-x: -0.625rem;
+		--tear-join-y: 0px;
+		--tear-border: 0 0 0 2px;
+		--tear-mask:
+			radial-gradient(
+				circle 14px at calc(100% - 10.5rem - 1px) 0,
+				transparent 98%,
+				#000
+			),
+			radial-gradient(
+				circle 14px at calc(100% - 10.5rem - 1px) 100%,
+				transparent 98%,
+				#000
+			);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		& > article {
+			animation: ticket-tear-notches 1ms var(--tear-pop) backwards;
+		}
+
+		& [data-ticket-body] {
+			animation:
+				ticket-tear-body 1ms var(--tear-pop) backwards,
+				ticket-tear-recoil 450ms var(--tear-pop) cubic-bezier(0.2, 0.8, 0.2, 1);
+		}
+
+		& [data-ticket-stub] {
+			animation:
+				ticket-tear var(--tear-duration) var(--tear-delay) both,
+				ticket-tear-stub 1ms var(--tear-pop) backwards;
+		}
+
+		& .stamp-ink {
+			animation: stamp-in 220ms calc(var(--tear-pop) + var(--tear-stamp))
+				cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+		}
+	}
+}
+
+@keyframes ticket-tear-notches {
+	from {
+		mask-image: var(--tear-mask);
+		mask-composite: intersect;
+	}
+}
+
+@keyframes ticket-tear-body {
+	from {
+		clip-path: none;
+		margin-right: var(--tear-join-x);
+		margin-bottom: var(--tear-join-y);
+	}
+}
+
+@keyframes ticket-tear-stub {
+	from {
+		clip-path: none;
+		border-style: dashed;
+		border-color: var(--background);
+		border-width: var(--tear-border);
+	}
+}
+
+/* El cuerpo se echa hacia atrás al soltarse el talón. */
+@keyframes ticket-tear-recoil {
+	0% {
+		translate: 0 0;
+	}
+	12% {
+		translate: calc(var(--tear-recoil) * var(--ax) * -1)
+			calc(var(--tear-recoil) * var(--ay) * -1);
+	}
+}
+
+/* Tirón seco: el talón vibra por la tensión (hasta el 20%), se suelta de
+golpe, se pasa de largo y rebota hasta quedarse. */
+@keyframes ticket-tear {
+	0% {
+		rotate: 0deg;
+		translate: 0 0;
+		animation-timing-function: ease-in-out;
+	}
+	5% {
+		rotate: -0.7deg;
+		animation-timing-function: ease-in-out;
+	}
+	10% {
+		rotate: 0.5deg;
+		translate: calc(1px * var(--ax)) calc(1px * var(--ay));
+		animation-timing-function: ease-in-out;
+	}
+	15% {
+		rotate: -1deg;
+		translate: calc(-1px * var(--ax)) calc(-1px * var(--ay));
+		animation-timing-function: ease-in-out;
+	}
+	20% {
+		rotate: -1.2deg;
+		translate: 0 0;
+		animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+	}
+	27% {
+		rotate: calc(5deg * var(--amp));
+		translate: calc(14px * var(--ax)) calc(14px * var(--ay));
+		animation-timing-function: ease-in-out;
+	}
+	42% {
+		rotate: calc(0.5deg * var(--amp));
+		translate: calc(-3px * var(--ax)) calc(-3px * var(--ay));
+		animation-timing-function: ease-in-out;
+	}
+	60% {
+		rotate: calc(2.6deg * var(--amp));
+		translate: calc(2px * var(--ax)) calc(2px * var(--ay));
 	}
 }

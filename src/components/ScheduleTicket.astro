@@ -5,9 +5,11 @@ import type { ScheduleTicket } from "@/utils/build-schedule-ticket";
 
 interface Props {
   ticket: ScheduleTicket;
+  /** Lugar del boleto en la lista: cada boleto rasgado espera un poco más que el anterior. */
+  index?: number;
 }
 
-const { ticket } = Astro.props;
+const { ticket, index = 0 } = Astro.props;
 const { result } = ticket;
 const word = result?.isWin ? "Victoria" : "Derrota";
 
@@ -22,7 +24,11 @@ const label =
 {
   /* Boleto del calendario: el cuerpo lleva al rival, la fecha y la cancha; el talón de la derecha, la hora o el marcador. Si el partido ya se jugó, el talón se muestra desprendido. */
 }
-<div class:list={["group", torn ? "ticket-shadow" : "ticket-edge"]}>
+<div
+  class:list={["group", torn ? "ticket-shadow" : "ticket-edge"]}
+  data-ticket-tear={torn ? "" : undefined}
+  style={torn ? { "--tear-index": index } : undefined}
+>
   <article
     aria-label={ticket.matchup}
     class:list={[
@@ -38,6 +44,7 @@ const label =
       aria-label={`Ver detalle del partido ${ticket.matchup}`}></a>
 
     <div
+      data-ticket-body={torn ? "" : undefined}
       class:list={[
         "flex min-w-0 flex-col justify-between gap-4 p-5 md:p-6",
         torn &&
@@ -115,6 +122,7 @@ const label =
     </div>
 
     <div
+      data-ticket-stub={torn ? "" : undefined}
       class:list={[
         "flex items-center justify-between gap-3 px-5 md:flex-col md:justify-center md:px-4",
         torn
