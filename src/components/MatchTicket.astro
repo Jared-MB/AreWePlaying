@@ -21,7 +21,7 @@ const label =
 <div class="ticket-edge">
   <article
     aria-label={ticket.matchup}
-    class="max-md:ticket-notch-x md:ticket-notch-y relative grid grid-rows-[3rem_1fr] overflow-hidden rounded-lg bg-surface text-card-foreground transition-[background-color] [--notch-x:calc(4.5rem_+_1px)] [--notch-y:calc(3rem_+_1px)] hover:bg-surface-hover group-data-[active=true]:bg-primary group-data-[active=true]:text-highlight-foreground group-data-[active=true]:hover:bg-primary/90 md:grid-cols-[4.5rem_1fr] md:grid-rows-1"
+    class="max-md:ticket-notch-x md:ticket-notch-y relative grid grid-rows-[3rem_1fr] overflow-hidden rounded-lg bg-surface text-card-foreground transition-[background-color] [--notch-x:calc(4.5rem+1px)] [--notch-y:calc(3rem+1px)] hover:bg-surface-hover group-data-[active=true]:bg-primary group-data-[active=true]:text-highlight-foreground group-data-[active=true]:hover:bg-primary/90 md:grid-cols-[4.5rem_1fr] md:grid-rows-1"
   >
     <a
       class="absolute inset-0 cursor-pointer rounded-lg focus-visible:outline-offset-[-6px]"
@@ -30,7 +30,7 @@ const label =
     ></a>
 
     <div
-      class="flex items-center justify-center border-dashed border-line bg-primary px-4 text-highlight-foreground max-md:border-b-2 md:border-r-2 group-data-[active=true]:border-highlight-foreground/40 group-data-[active=true]:bg-inverse group-data-[active=true]:text-inverse-foreground"
+      class="flex items-center justify-center border-dashed border-background bg-primary px-4 text-highlight-foreground max-md:border-b-2 md:border-r-2 group-data-[active=true]:bg-inverse group-data-[active=true]:text-inverse-foreground"
     >
       <p
         class="flex w-full items-center justify-between gap-3 text-xs font-bold uppercase tracking-wider md:w-auto md:rotate-180 md:[writing-mode:vertical-rl]"

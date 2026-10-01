@@ -350,7 +350,7 @@ export default function FavoriteCountdown({
 								{/* Talón de color: arriba como banda en móvil, a la izquierda en escritorio. */}
 								<div
 									aria-hidden="true"
-									className="order-first flex items-center justify-center gap-2 border-dashed border-line bg-primary px-4 text-xs font-bold uppercase tracking-wider text-highlight-foreground max-md:border-b-2 md:flex-col md:border-r-2"
+									className="order-first flex items-center justify-center gap-2 border-dashed border-background bg-primary px-4 text-xs font-bold uppercase tracking-wider text-highlight-foreground max-md:border-b-2 md:flex-col md:border-r-2"
 								>
 									<Star className="size-4 shrink-0 fill-current" />
 									<span className="md:rotate-180 md:[writing-mode:vertical-rl]">
