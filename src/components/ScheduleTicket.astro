@@ -1,0 +1,138 @@
+---
+import ScheduleVenue from "@/components/ScheduleVenue.astro";
+import TeamCrest from "@/components/TeamCrest.astro";
+import type { ScheduleTicket } from "@/utils/build-schedule-ticket";
+
+interface Props {
+  ticket: ScheduleTicket;
+}
+
+const { ticket } = Astro.props;
+const { result } = ticket;
+
+// Un partido pasado es un boleto rasgado: cada pieza es su propia superficie y
+// el borde por donde se desprendió el talón queda irregular.
+const torn = ticket.isPast;
+
+const label =
+  "text-xs font-bold uppercase tracking-wider text-muted-foreground";
+---
+
+{
+  /* Boleto del calendario: el cuerpo lleva al rival, la fecha y la cancha; el talón de la derecha, la hora o el marcador. Si el partido ya se jugó, el talón se muestra desprendido. */
+}
+<div class:list={["group", torn ? "ticket-shadow" : "ticket-edge"]}>
+  <article
+    aria-label={ticket.matchup}
+    class:list={[
+      "relative grid grid-rows-[1fr_4.5rem] text-card-foreground md:grid-cols-[1fr_10.5rem] md:grid-rows-1",
+      torn
+        ? "gap-2.5"
+        : "max-md:ticket-notch-x md:ticket-notch-y overflow-hidden rounded-lg bg-surface transition-[background-color] [--notch-x:calc(100%-10.5rem-1px)] [--notch-y:calc(100%-4.5rem-1px)] hover:bg-surface-hover",
+    ]}
+  >
+    <a
+      class="absolute inset-0 cursor-pointer rounded-lg focus-visible:outline-offset-[-6px]"
+      href={ticket.href}
+      aria-label={`Ver detalle del partido ${ticket.matchup}`}></a>
+
+    <div
+      class:list={[
+        "flex min-w-0 flex-col justify-between gap-4 p-5 md:p-6",
+        torn &&
+          "ticket-torn-b md:ticket-torn-r pointer-events-none rounded-t-lg border border-b-0 border-line/55 md:border-b md:border-r-0 bg-surface transition-[background-color] group-hover:bg-surface-hover md:rounded-l-lg md:rounded-tr-none",
+      ]}
+    >
+      <div class="flex items-center gap-3">
+        <span
+          class:list={[
+            "rounded-md px-2.5 py-1 text-xs font-bold uppercase tracking-wider",
+            ticket.isHome
+              ? "bg-primary text-highlight-foreground"
+              : "bg-inverse text-inverse-foreground",
+          ]}
+        >
+          {ticket.locationLabel}
+        </span>
+        <span
+          class="font-pixel text-base tabular-nums text-muted-foreground"
+          translate="no"
+        >
+          {ticket.number}
+        </span>
+      </div>
+
+      <div class="flex min-w-0 items-center gap-4">
+        <TeamCrest
+          logo={ticket.opponent.logo}
+          initials={ticket.opponent.initials}
+          class="size-14 text-base md:size-16"
+        />
+        <div class="min-w-0">
+          <p class="text-sm tracking-wide text-muted-foreground tabular-nums">
+            {ticket.opponentMeta}
+          </p>
+          <a
+            href={ticket.opponent.href}
+            class="pointer-events-auto relative z-10 block touch-hitbox truncate text-lg font-bold uppercase tracking-wide hover:underline md:text-xl"
+          >
+            {ticket.opponent.name}
+          </a>
+        </div>
+      </div>
+
+      <dl
+        class="grid grid-cols-[auto_minmax(0,1fr)] gap-x-6 border-t-2 border-dashed border-line pt-4"
+      >
+        <div>
+          <dt class={label}>Fecha</dt>
+          <dd class="font-bold tabular-nums uppercase">
+            <time datetime={ticket.datetime}>{ticket.day}</time>
+          </dd>
+        </div>
+        <div class="min-w-0">
+          <dt class={label}>Cancha</dt>
+          <dd class="text-sm font-bold uppercase tracking-wide">
+            <ScheduleVenue ticket={ticket} />
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div
+      class:list={[
+        "flex items-center justify-between gap-3 px-5 md:flex-col md:justify-center md:px-4",
+        torn
+          ? "ticket-torn-t md:ticket-torn-l pointer-events-none origin-top-right rotate-1 rounded-b-lg md:rotate-2 md:rounded-r-lg md:rounded-bl-none"
+          : "border-dashed border-background max-md:border-t-2 md:border-l-2",
+        ticket.isHome
+          ? "bg-primary text-highlight-foreground"
+          : "bg-inverse text-inverse-foreground",
+      ]}
+    >
+      {
+        result ? (
+          <>
+            <p class="text-xs font-bold uppercase tracking-wider">
+              {result.isWin ? "Victoria" : "Derrota"}
+            </p>
+            <p class="font-pixel text-3xl font-bold tabular-nums">
+              {result.ownPoints}–{result.rivalPoints}
+              <span class="sr-only"> puntos</span>
+            </p>
+          </>
+        ) : (
+          <>
+            <p class="text-xs font-bold uppercase tracking-wider">
+              {ticket.missingResult ? "Sin marcador" : "Hora"}
+            </p>
+            <p class="font-pixel text-3xl font-bold tabular-nums">
+              <time datetime={ticket.datetime}>{ticket.time}</time>
+              <span class="sr-only"> horas</span>
+            </p>
+          </>
+        )
+      }
+    </div>
+  </article>
+</div>

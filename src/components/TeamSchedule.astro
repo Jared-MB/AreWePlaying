@@ -1,6 +1,7 @@
 ---
-import ScheduleRow from "@/components/ScheduleRow.astro";
+import ScheduleTicket from "@/components/ScheduleTicket.astro";
 import type { Match } from "@/types/match";
+import { buildScheduleTicket } from "@/utils/build-schedule-ticket";
 import { getPastMatches } from "@/utils/get-past-matches";
 import { getUpcomingMatches } from "@/utils/get-upcoming-matches";
 import { formatLeagueMonth, leagueDateToEpoch } from "@/utils/league-date";
@@ -184,7 +185,7 @@ const select =
                 <h3 class="mb-4 font-mono text-2xl uppercase tracking-wide">
                   {month}
                 </h3>
-                <ol class="flex flex-col gap-2">
+                <ol class="flex flex-col gap-4">
                   {matches.map((match) => (
                     <li
                       data-schedule-match
@@ -193,12 +194,14 @@ const select =
                         shortName: getOpponentName(match),
                       })}
                     >
-                      <ScheduleRow
-                        match={match}
-                        teamId={teamId}
-                        tournamentId={tournamentId}
-                        tournamentSlug={tournamentSlug}
-                        showResult={showResult}
+                      <ScheduleTicket
+                        ticket={buildScheduleTicket({
+                          match,
+                          teamId,
+                          tournamentId,
+                          tournamentSlug,
+                          showResult,
+                        })}
                       />
                     </li>
                   ))}

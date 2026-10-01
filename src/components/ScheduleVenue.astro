@@ -1,0 +1,31 @@
+---
+import type { ScheduleTicket } from "@/utils/build-schedule-ticket";
+
+interface Props {
+  ticket: Pick<ScheduleTicket, "venueName" | "venueUrl">;
+  class?: string;
+}
+
+const { ticket, class: className } = Astro.props;
+---
+
+{
+  ticket.venueName && ticket.venueUrl ? (
+    <a
+      href={ticket.venueUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class:list={[
+        "pointer-events-auto relative z-10 block w-fit max-w-full touch-hitbox truncate hover:underline",
+        className,
+      ]}
+    >
+      {ticket.venueName}
+      <span class="sr-only"> (abre en una pestaña nueva)</span>
+    </a>
+  ) : (
+    <span class:list={["block truncate", className]}>
+      {ticket.venueName ?? "Sede por definir"}
+    </span>
+  )
+}
