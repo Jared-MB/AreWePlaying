@@ -45,13 +45,34 @@ const tournaments = getTournaments();
             // biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista
             <ul role="list" class="flex flex-wrap gap-3 md:gap-6 items-center">
               {tournaments.map((t) => (
-                <li>
+                <li class="ticket-edge">
                   <a
                     href={`/${getTournamentSlug(t)}`}
-                    class="block bg-surface rounded-md px-4 py-2 shadow-xs hover:bg-surface-hover/70 focus-visible:scale-95 transition-transform duration-180"
+                    class="ticket-notch-x flex items-stretch overflow-hidden rounded-md bg-surface transition-[background-color] [--notch:6px] hover:bg-surface-hover focus-visible:outline-offset-[-3px]"
                   >
-                    División {t.division} {t.category}{" "}
-                    {t.conference ? `· ${t.conference}` : null}
+                    <span
+                      class="grid min-w-11 place-items-center border-r-2 border-dashed border-highlight-foreground/40 bg-primary px-2.5 font-pixel text-xl font-bold text-highlight-foreground"
+                      translate="no"
+                    >
+                      <span class="sr-only">División </span>{t.division}
+                    </span>
+                    <span class="flex min-h-11 flex-col justify-center gap-0.5 py-2 pr-4 pl-3">
+                      <span
+                        aria-hidden="true"
+                        class="text-[10px] uppercase tracking-wider text-muted-foreground"
+                      >
+                        División
+                      </span>
+                      <span class="whitespace-nowrap text-sm font-bold uppercase">
+                        {t.category}
+                        {t.conference ? (
+                          <span class="font-normal text-muted-foreground">
+                            {" "}
+                            · {t.conference}
+                          </span>
+                        ) : null}
+                      </span>
+                    </span>
                   </a>
                 </li>
               ))}
