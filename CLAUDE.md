@@ -29,3 +29,10 @@
 ### Astro
 
 - Files MUST be named with `PascalCase`. E.g. `MyComponent.astro`.
+
+## Refactoring
+
+- Mesure, don't guess: 
+  - Refactors about performance, ALWAYS mesure before and after the refactoring. 
+  - If the time between changes are insignificant (less than 10% of improvement), keep the one that's more readable.
+- ALWAYS try to avoid microoptimizations. If some change its a microoptimization, ALWAYS ask before making a change with the text: "THIS IS A MICROOPTIMIZATION, you sure to continue with this change?"
