@@ -298,6 +298,7 @@ exports[`TeamSchedule de un equipo 1`] = `
               [sr-only]
                 "(abre en una pestaña nueva)"
         "Victoria"
+        "Final"
         "30–28"
         [sr-only]
           "puntos"
@@ -324,6 +325,7 @@ exports[`TeamSchedule de un equipo 1`] = `
               [sr-only]
                 "(abre en una pestaña nueva)"
         "Victoria"
+        "Final"
         "76–57"
         [sr-only]
           "puntos"

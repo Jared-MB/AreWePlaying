@@ -827,3 +827,20 @@ y no una máscara de mosaicos: ésta dejaba una costura punteada sobre el borde.
 		@apply touch-hitbox;
 	}
 }
+
+/* Tinta gastada del sello de resultado: el trazo deja de ser perfecto. */
+@utility stamp-ink {
+	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='3' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2 0 0 0 2.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+	mask-size: 160px 160px;
+
+	@media (prefers-reduced-motion: no-preference) {
+		animation: stamp-in 220ms cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+	}
+}
+
+@keyframes stamp-in {
+	from {
+		opacity: 0;
+		scale: 1.35;
+	}
+}

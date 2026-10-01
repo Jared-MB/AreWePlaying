@@ -9,6 +9,7 @@ interface Props {
 
 const { ticket } = Astro.props;
 const { result } = ticket;
+const word = result?.isWin ? "Victoria" : "Derrota";
 
 // Un partido pasado es un boleto rasgado: cada pieza es su propia superficie y
 // el borde por donde se desprendió el talón queda irregular.
@@ -40,7 +41,7 @@ const label =
       class:list={[
         "flex min-w-0 flex-col justify-between gap-4 p-5 md:p-6",
         torn &&
-          "ticket-torn-b md:ticket-torn-r pointer-events-none rounded-t-lg border border-b-0 border-line/55 md:border-b md:border-r-0 bg-surface transition-[background-color] group-hover:bg-surface-hover md:rounded-l-lg md:rounded-tr-none",
+          "relative overflow-hidden ticket-torn-b md:ticket-torn-r pointer-events-none rounded-t-lg border border-b-0 border-line/55 md:border-b md:border-r-0 bg-surface transition-[background-color] group-hover:bg-surface-hover md:rounded-l-lg md:rounded-tr-none",
       ]}
     >
       <div class="flex items-center gap-3">
@@ -97,6 +98,20 @@ const label =
           </dd>
         </div>
       </dl>
+
+      {
+        result && (
+          /* El sello del resultado: una cinta en diagonal de lado a lado del cuerpo. */
+          <p
+            class:list={[
+              "stamp-ink absolute text-inverse-foreground -right-3 top-3 -rotate-6 px-8 py-1 text-sm font-bold uppercase tracking-[0.3em] md:top-1/2 md:right-auto md:left-[78%] md:w-[48rem] md:-translate-x-1/2 md:-translate-y-1/2 md:-rotate-30 md:px-0 md:py-5 md:text-center md:text-lg",
+              result.isWin ? "bg-primary" : "bg-inverse",
+            ]}
+          >
+            {word}
+          </p>
+        )
+      }
     </div>
 
     <div
@@ -113,9 +128,7 @@ const label =
       {
         result ? (
           <>
-            <p class="text-xs font-bold uppercase tracking-wider">
-              {result.isWin ? "Victoria" : "Derrota"}
-            </p>
+            <p class="text-xs font-bold uppercase tracking-wider">Final</p>
             <p class="font-pixel text-3xl font-bold tabular-nums">
               {result.ownPoints}–{result.rivalPoints}
               <span class="sr-only"> puntos</span>
