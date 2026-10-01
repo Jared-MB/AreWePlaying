@@ -50,6 +50,13 @@ export default defineConfig({
 		optimizeDeps: {
 			include: ["html-to-image", "canvas-confetti"],
 		},
+		// La función de Vercel resuelve las dependencias externas en runtime, y
+		// estas dos se cargan por su barrel: date-fns con todos sus locales y
+		// lucide con todos sus iconos. Eran ~1.5 s de arranque en frío de la isla
+		// de partidos de hoy; empaquetadas, el tree-shaking deja sólo lo usado.
+		ssr: {
+			noExternal: ["date-fns", "lucide-preact"],
+		},
 	},
 	integrations: [preact({ compat: true })],
 });
