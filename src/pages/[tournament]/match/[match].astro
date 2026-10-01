@@ -167,11 +167,11 @@ const venueUrl = safeHttpUrl(match.locationUrl);
 const venue = card.venue;
 
 // La story dibuja sus propios círculos: necesita el fondo de los escudos cuadrados.
-const [storyLocal, storyVisiting] = await Promise.all(
-  [card.local, card.visiting].map(async (side) => ({
+const [storyLocal, storyVisiting] = [card.local, card.visiting].map(
+  (side) => ({
     ...side,
-    logoBackground: await getLogoBackground(side.logo),
-  })),
+    logoBackground: getLogoBackground(side.logo),
+  }),
 );
 
 const hero: MatchHero = {

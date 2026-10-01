@@ -10,6 +10,7 @@ import preact from "@astrojs/preact";
 import vercel from "@astrojs/vercel";
 
 import { SITE_URL } from "./src/constants/site";
+import { logoBackgrounds } from "./src/vite/logo-backgrounds";
 
 /**
  * satori (la imagen social de cada partido) carga sus dos .wasm en runtime con
@@ -41,7 +42,7 @@ export default defineConfig({
 	// su entrypoint se queda respondiendo 504. Sólo se apaga para Playwright.
 	devToolbar: { enabled: !process.env.E2E },
 	vite: {
-		plugins: [tailwindcss()],
+		plugins: [tailwindcss(), logoBackgrounds()],
 		// Sólo afecta a `astro dev`. Estas dependencias se descubren tarde (import
 		// dinámico de la story, islas que sólo montan algunas páginas): Vite las
 		// re-optimiza a media sesión y responde 504 "Outdated Optimize Dep", así

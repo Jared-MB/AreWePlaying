@@ -12,7 +12,7 @@ interface Props {
 
 const { logo, initials, class: className, size = 96 } = Astro.props;
 // Un escudo cuadrado con fondo de color pinta el círculo de ese color.
-const background = await getLogoBackground(logo);
+const background = getLogoBackground(logo);
 
 // El margen blanco sale de encoger el <img> dentro del círculo, no de un
 // padding en %: ese se calcula sobre el ancho del contenedor, no del escudo.
