@@ -1,77 +1,100 @@
 ---
+import TeamCrest from "@/components/TeamCrest.astro";
+import { teamInitials } from "@/utils/get-match-card";
 import { getTopTeams } from "@/utils/get-top-teams";
 import { getTournamentSlug } from "@/utils/tournament-slug";
 import { getTeamSlug } from "@/utils/team-slug";
 
 const topTeams = await getTopTeams();
+
+const formatDifference = (value: number) =>
+  value > 0 ? `+${value}` : String(value);
+
+// El líder va al centro del podio: 2.º a la izquierda, 1.º en medio, 3.º a la derecha.
+const SLOT_COLUMN = ["col-start-2", "col-start-1", "col-start-3"];
+const STEP_STYLE = [
+  "h-17 bg-primary text-highlight-foreground text-4xl group-hover:brightness-110",
+  "h-11 bg-foreground/10 text-3xl group-hover:bg-foreground/20",
+  "h-8 bg-foreground/10 text-xl group-hover:bg-foreground/20",
+];
+const CREST_SIZE = ["size-14", "size-11", "size-11"];
 ---
 
 <div class="space-y-8">
   {
-    topTeams.map(({ tournament, teams }) => {
+    topTeams.map(({ tournament, teams: ranked }) => {
       const tournamentSlug = getTournamentSlug(tournament);
+      // Sin partidos jugados la tabla llega con posición 0 para todos.
+      const teams = ranked.filter((team) => team.position > 0);
+      const title = `Div. ${tournament.division} ${tournament.category}`;
 
       return (
         <section
           aria-labelledby={`top-${tournamentSlug}`}
-          class="rounded-md bg-surface shadow-xs"
+          class="overflow-hidden rounded-lg bg-surface px-4 pt-3.5 text-foreground shadow-xs ring-1 ring-line/45"
         >
-          <header class="flex items-baseline justify-between gap-2 bg-primary rounded-t-md px-4 py-2 text-primary-foreground">
+          <header class="flex items-baseline justify-between gap-2">
             <h3
               id={`top-${tournamentSlug}`}
-              class="min-w-0 font-mono text-sm font-bold uppercase tracking-wider"
+              class="min-w-0 text-sm font-bold uppercase tracking-wider"
             >
-              Div. {tournament.division} {tournament.category}
-              {tournament.conference ? ` · ${tournament.conference}` : null}
+              {title}
+              {tournament.conference ? (
+                <span class="font-normal text-muted-foreground">
+                  {" "}
+                  · {tournament.conference}
+                </span>
+              ) : null}
             </h3>
             <a
               href={`/${tournamentSlug}/teams/`}
-              class="shrink-0 text-xs font-bold uppercase tracking-wider opacity-70 hover:opacity-100"
+              class="shrink-0 touch-hitbox text-xs font-bold uppercase tracking-wider text-foreground hover:underline dark:text-primary"
             >
-              Tabla
+              Tabla →
             </a>
           </header>
 
           {teams.length > 0 ? (
-            <ol class="divide-y-2 divide-surface-hover/70">
-              {teams.map((team) => (
-                <li class="last:rounded-b-md hover:bg-surface-hover">
+            <ol class="grid grid-cols-3 items-end gap-x-2 pt-5">
+              {teams.map((team, index) => (
+                <li class={`row-start-1 ${SLOT_COLUMN[index]}`}>
                   <a
                     href={`/${tournamentSlug}/teams/${getTeamSlug(team)}`}
-                    class="flex items-center gap-3 px-4 py-3"
+                    class="group flex flex-col items-center text-center focus-visible:outline-offset-[-2px]"
                   >
-                    <span class="grid size-8 rounded-full shrink-0 place-items-center bg-primary font-mono text-sm font-bold text-primary-foreground tabular-nums">
-                      {team.position}
-                    </span>
-                    {team.logo ? (
-                      <img
-                        src={team.logo}
-                        alt=""
-                        width="32"
-                        height="32"
-                        loading="lazy"
-                        class="size-8 shrink-0 object-contain"
+                    <span class="flex flex-col items-center gap-1.5 px-0.5 pb-2.5">
+                      <TeamCrest
+                        logo={team.logo}
+                        initials={teamInitials(team.shortName)}
+                        class={`${CREST_SIZE[index]} text-xs`}
+                        size={56}
                       />
-                    ) : (
-                      <span
-                        aria-hidden="true"
-                        class="grid size-8 shrink-0 place-items-center border-2 border-foreground text-[10px] font-bold"
-                      >
-                        {team.shortName.split(" ")[0].substring(0, 3)}
+                      <span class="line-clamp-2 min-h-[2.5em] text-[11px] font-bold uppercase leading-tight tracking-wide wrap-anywhere">
+                        {team.shortName}
                       </span>
-                    )}
-                    <span class="min-w-0 flex-1 truncate font-bold uppercase tracking-wide">
-                      {team.shortName}
+                      <span
+                        class="whitespace-nowrap font-pixel text-[22px] font-bold leading-none tabular-nums"
+                        translate="no"
+                      >
+                        {team.wins}-{team.losses}
+                      </span>
+                      <span class="text-[10px] uppercase tracking-wider text-muted-foreground">
+                        {formatDifference(team.goalDifference)} dif
+                      </span>
                     </span>
-                    <span class="shrink-0 font-mono text-sm font-bold tabular-nums">
-                      {team.wins}-{team.losses}
+                    <span
+                      class={`grid w-full place-items-center rounded-t-sm font-pixel font-bold tabular-nums transition-[filter,background-color] ${STEP_STYLE[index]}`}
+                      translate="no"
+                    >
+                      <span class="sr-only">Posición </span>
+                      {team.position}
                     </span>
                   </a>
                 </li>
               ))}
             </ol>
           ) : (
-            <p class="px-4 py-3 text-sm font-bold uppercase tracking-wider text-muted-foreground">
+            <p class="py-3 text-sm font-bold uppercase tracking-wider text-muted-foreground">
               Sin tabla disponible
             </p>
           )}
