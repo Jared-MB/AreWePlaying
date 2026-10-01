@@ -50,9 +50,18 @@ if (!team) {
 
 const stats = getTeamStats(team);
 const logo = getTeamLogo({ tournamentId, teamId: team.id });
-// El fondo del encabezado toma el color del escudo; sin escudo (o sin color en
-// él) se queda el color de la marca.
+// El color del escudo es el primario de toda la página del equipo (encabezado,
+// boletos, filtros); sin escudo (o sin color en él) se queda el color de la marca.
+// `getLogoColor` ya lo oscurece para que el blanco se lea encima, así que el texto
+// sobre el primario también pasa a blanco en lugar del casi negro de la marca.
 const logoColor = await getLogoColor({ tournamentId, teamId: team.id });
+const teamTheme = logoColor
+  ? {
+      "--primary": logoColor,
+      "--primary-foreground": "#fff",
+      "--highlight-foreground": "#fff",
+    }
+  : undefined;
 
 // El lugar de cada estadística entre los equipos del torneo, como en la NBA.
 // Los que aún no juegan (promedio null) no cuentan.
@@ -121,7 +130,7 @@ const statColumns = [
     type: "image/avif",
   }}
 >
-  <div class="p-4 md:p-8">
+  <div class="p-4 md:p-8" style={teamTheme}>
     <div class="mx-auto flex max-w-7xl flex-col">
       <BackLink
         href={`/${tournamentSlug}/teams`}
