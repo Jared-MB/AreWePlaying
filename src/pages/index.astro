@@ -16,9 +16,13 @@ const tournaments = getTournaments();
 
 <HeadlessLayout>
   <div class="flex flex-col">
-    <div data-page-header class="sticky top-0 bg-background z-20">
+    <div
+      data-page-header
+      class="sticky top-(--page-header-top,0px) bg-background z-20"
+    >
       <header
-        class="border-b border-line/70 bg-background sticky top-0 z-20 py-6 px-4"
+        data-page-header-teams
+        class="border-b border-line/70 bg-background py-6 px-4"
       >
         <div data-dropdown-menu class="container mx-auto">
           <TeamsMenu />
@@ -130,22 +134,35 @@ const tournaments = getTournaments();
 </HeadlessLayout>
 
 <script>
-  // Expone la altura del encabezado sticky como `--page-header-h` para que los
-  // headers de cada torneo se peguen justo debajo de él.
+  // El header "Equipos" solo se ve al inicio: el contenedor sticky se pega con un
+  // `top` negativo igual a la altura de "Equipos", así que éste se va con el scroll
+  // y "Are We Playing?" se queda fijo. Se expone:
+  //  - `--page-header-top`: ese `top` negativo.
+  //  - `--page-header-h`: la altura que queda fija, para que los headers de cada
+  //    torneo se peguen justo debajo.
   let observer: ResizeObserver | undefined;
 
   document.addEventListener("astro:page-load", () => {
     observer?.disconnect();
 
     const $header = document.querySelector<HTMLElement>("[data-page-header]");
-    if (!$header) return;
+    const $teams = document.querySelector<HTMLElement>(
+      "[data-page-header-teams]",
+    );
+    if (!$header || !$teams) return;
 
-    observer = new ResizeObserver(() => {
-      document.documentElement.style.setProperty(
+    const update = () => {
+      const teamsHeight = $teams.offsetHeight;
+      const { style } = document.documentElement;
+      style.setProperty("--page-header-top", `${-teamsHeight}px`);
+      style.setProperty(
         "--page-header-h",
-        `${$header.offsetHeight}px`,
+        `${$header.offsetHeight - teamsHeight}px`,
       );
-    });
+    };
+
+    observer = new ResizeObserver(update);
     observer.observe($header);
+    observer.observe($teams);
   });
 </script>
