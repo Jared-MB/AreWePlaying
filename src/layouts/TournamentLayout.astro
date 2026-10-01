@@ -1,10 +1,11 @@
 ---
-import FilterLink from "@/components/FilterLink.astro";
+import BranchFilter from "@/components/BranchFilter.astro";
+import WeekPicker from "@/components/WeekPicker.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getTournaments } from "@/utils/get-tournaments";
 import { getTournamentSlug } from "@/utils/tournament-slug";
 import { getWeeks } from "@/utils/get-weeks";
-import { getWeekSlug } from "@/utils/week-slug";
+import { getCurrentWeek } from "@/utils/get-current-week";
 import type { Tournament } from "@/types/tournament";
 import AreWePlaying from "@/components/AreWePlaying.astro";
 import SelectDivision from "@/components/SelectDivision.astro";
@@ -62,7 +63,7 @@ const pageDescription =
 >
   <AreWePlaying />
   <div>
-    <div class="space-y-6">
+    <div class="space-y-6 mb-6">
       <div class="flex md:hidden flex-wrap items-center gap-3">
         <label
           for="division-mobile"
@@ -73,109 +74,20 @@ const pageDescription =
         <SelectDivision id="division-mobile" defaultSelected={tournamentSlug} />
       </div>
       <hr />
-      <div class="flex items-center justify-between">
-        <nav
-          aria-labelledby="rama-label"
-          class="flex flex-wrap items-center gap-3"
-        >
-          <span
-            id="rama-label"
-            class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
-          >
-            Rama:
-          </span>
-          <div class="flex flex-wrap gap-2">
-            {
-              womenTournament ? (
-                <FilterLink
-                  href={`/${getTournamentSlug(womenTournament)}`}
-                  isActive={womenTournament.id === tournament.id}
-                >
-                  Femenil
-                </FilterLink>
-              ) : null
-            }
-            {
-              menTournament ? (
-                <FilterLink
-                  href={`/${getTournamentSlug(menTournament)}`}
-                  isActive={menTournament.id === tournament.id}
-                >
-                  Varonil
-                </FilterLink>
-              ) : null
-            }
-          </div>
-        </nav>
-        <!-- <div class="inline-block md:hidden">
-					<SelectUniversity />
-				</div> -->
+      <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
+        <BranchFilter
+          current={tournament}
+          women={womenTournament}
+          men={menTournament}
+        />
+        <WeekPicker
+          tournamentSlug={tournamentSlug}
+          weeks={weeks}
+          weekSlug={weekSlug}
+          currentWeekId={getCurrentWeek(weeks)?.id}
+        />
       </div>
-      <div class="flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
-        <nav
-          aria-labelledby="semana-label"
-          class="hidden md:flex flex-wrap gap-2"
-        >
-          <span
-            id="semana-label"
-            class="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1"
-          >
-            Semana:
-          </span>
-          {
-            weeks.map((week) => (
-              <FilterLink
-                isActive={weekSlug === getWeekSlug(week)}
-                href={`/${tournamentSlug}/${getWeekSlug(week)}`}
-              >
-                {week.week}
-              </FilterLink>
-            ))
-          }
-        </nav>
-        <div class="flex md:hidden flex-wrap gap-2">
-          <label
-            for="week-mobile"
-            class="text-xs font-bold uppercase tracking-widest text-muted-foreground flex items-center mr-1"
-          >
-            Semana:
-          </label>
-          <select
-            id="week-mobile"
-            name="week-mobile"
-            data-week-select
-            class="border-input data-placeholder:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
-          >
-            {
-              weeks.map((w) => (
-                <option
-                  selected={weekSlug === getWeekSlug(w)}
-                  value={getWeekSlug(w)}
-                >
-                  {w.week}
-                </option>
-              ))
-            }
-          </select>
-        </div>
-      </div>
-      <hr />
     </div>
     <slot />
   </div>
 </Layout>
-
-<script>
-  // Delegated on `document` so it keeps working after a view transition swaps
-  // the <body> and replaces the select with a fresh element.
-  document.addEventListener("change", (e) => {
-    const $week = (e.target as HTMLElement | null)?.closest<HTMLSelectElement>(
-      "select[data-week-select]",
-    );
-
-    if (!$week) return;
-
-    const [_, currentLocation] = window.location.pathname.split("/");
-    window.location.href = `/${currentLocation}/${$week.value}`;
-  });
-</script>

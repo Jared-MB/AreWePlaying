@@ -1,0 +1,56 @@
+---
+import type { Tournament } from "@/types/tournament";
+import { getTournamentSlug } from "@/utils/tournament-slug";
+
+interface Props {
+  /** Torneo activo; se compara con cada rama para marcar la actual. */
+  current: Tournament;
+  women?: Tournament;
+  men?: Tournament;
+}
+
+const { current, women, men } = Astro.props;
+
+const branches = [
+  { label: "Femenil", tournament: women },
+  { label: "Varonil", tournament: men },
+].flatMap(({ label, tournament }) =>
+  tournament
+    ? [
+        {
+          label,
+          href: `/${getTournamentSlug(tournament)}`,
+          isActive: tournament.id === current.id,
+        },
+      ]
+    : [],
+);
+---
+
+{
+  /* Cada rama es un boleto pequeño, igual que los filtros de división del inicio. */
+}
+<nav aria-labelledby="rama-label" class="flex flex-wrap items-center gap-3">
+  <span
+    id="rama-label"
+    class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
+  >
+    Rama:
+  </span>
+  {
+    // biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista
+    <ul role="list" class="flex gap-3">
+      {branches.map(({ label, href, isActive }) => (
+        <li class="ticket-edge">
+          <a
+            href={href}
+            aria-current={isActive ? "page" : undefined}
+            class="ticket-notch-x flex min-h-11 items-center rounded-md bg-surface px-5 text-sm font-bold uppercase tracking-wider transition-[background-color] [--notch:6px] hover:bg-surface-hover focus-visible:outline-offset-[-3px] aria-[current=page]:bg-primary aria-[current=page]:text-highlight-foreground aria-[current=page]:hover:bg-primary/90"
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  }
+</nav>

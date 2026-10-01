@@ -1,0 +1,237 @@
+---
+import ChevronDown from "@lucide/astro/icons/chevron-down";
+import ChevronLeft from "@lucide/astro/icons/chevron-left";
+import ChevronRight from "@lucide/astro/icons/chevron-right";
+
+import type { Week } from "@/types/week";
+import { getWeekSlug } from "@/utils/week-slug";
+
+interface Props {
+  tournamentSlug: string;
+  weeks: Week[];
+  /** Slug de la jornada activa, p. ej. "semana-1". */
+  weekSlug?: string;
+  /** Jornada en curso: lleva un punto en el listado. */
+  currentWeekId?: string;
+}
+
+const { tournamentSlug, weeks, weekSlug, currentWeekId } = Astro.props;
+
+// Las fechas de las jornadas vienen como "dd/MM/yyyy". Se formatean en UTC para
+// que el día no se corra con la zona horaria de quien construye el sitio.
+const toDate = (value: string) => {
+  const [day, month, year] = value.split("/").map(Number);
+  return new Date(Date.UTC(year, month - 1, day));
+};
+const shortDate = new Intl.DateTimeFormat("es-MX", {
+  timeZone: "UTC",
+  day: "numeric",
+  month: "short",
+});
+// "SEMANA 5" → "5". Si el nombre no trae número (p. ej. una fase final) se
+// usa la posición en la lista.
+const items = weeks.map((week, index) => ({
+  week,
+  href: `/${tournamentSlug}/${getWeekSlug(week)}`,
+  number: /\d+/.exec(week.week)?.[0] ?? String(index + 1),
+  date: toDate(week.date),
+  isActive: getWeekSlug(week) === weekSlug,
+  isCurrent: week.id === currentWeekId,
+}));
+
+const activeIndex = items.findIndex((item) => item.isActive);
+const active = items[activeIndex];
+const previous = items[activeIndex - 1];
+const next = items[activeIndex + 1];
+
+const stepClass =
+  "grid w-12 shrink-0 place-items-center transition-[background-color] focus-visible:outline-offset-[-3px]";
+---
+
+<nav aria-label="Semana" data-week-picker class="relative w-full sm:w-80">
+  {
+    /* Boleto: flecha anterior, jornada actual (abre el listado) y flecha siguiente. */
+  }
+  <div class="ticket-edge">
+    <div
+      class="ticket-notch-x flex min-h-14 items-stretch overflow-hidden rounded-md bg-surface [--notch:6px]"
+    >
+      {
+        previous ? (
+          <a
+            href={previous.href}
+            aria-label={`Semana anterior: ${previous.week.week.toLowerCase()}`}
+            class={`${stepClass} hover:bg-surface-hover`}
+          >
+            <ChevronLeft aria-hidden="true" class="size-5" />
+          </a>
+        ) : (
+          <span aria-hidden="true" class={`${stepClass} opacity-40`}>
+            <ChevronLeft class="size-5" />
+          </span>
+        )
+      }
+
+      <button
+        type="button"
+        data-week-picker-trigger
+        aria-expanded="false"
+        aria-controls="week-picker-panel"
+        class="group flex min-w-0 flex-1 touch-manipulation items-center justify-center gap-3 border-x-2 border-dashed border-line/70 px-2 transition-[background-color] hover:bg-surface-hover focus-visible:outline-offset-[-3px]"
+      >
+        {
+          active ? (
+            <>
+              <span
+                class="font-pixel text-3xl font-bold leading-none tabular-nums"
+                translate="no"
+              >
+                {active.number.padStart(2, "0")}
+              </span>
+              <span class="flex flex-col items-start gap-px text-left">
+                <span class="text-[10px] uppercase tracking-wider text-muted-foreground">
+                  Semana
+                </span>
+                <span class="whitespace-nowrap text-sm font-bold uppercase">
+                  Del {shortDate.format(active.date)}
+                </span>
+              </span>
+            </>
+          ) : (
+            <span class="text-sm font-bold uppercase">Elegir semana</span>
+          )
+        }
+        <ChevronDown
+          aria-hidden="true"
+          class="size-4 text-muted-foreground transition-transform duration-200 group-aria-expanded:rotate-180 motion-reduce:transition-none"
+        />
+      </button>
+
+      {
+        next ? (
+          <a
+            href={next.href}
+            aria-label={`Semana siguiente: ${next.week.week.toLowerCase()}`}
+            class={`${stepClass} hover:bg-surface-hover`}
+          >
+            <ChevronRight aria-hidden="true" class="size-5" />
+          </a>
+        ) : (
+          <span aria-hidden="true" class={`${stepClass} opacity-40`}>
+            <ChevronRight class="size-5" />
+          </span>
+        )
+      }
+    </div>
+  </div>
+
+  <div
+    id="week-picker-panel"
+    data-week-picker-panel
+    hidden
+    class="absolute inset-x-0 top-full z-30 mt-2 max-h-[min(70dvh,26rem)] overflow-y-auto overscroll-contain rounded-lg bg-surface shadow-lg ring-1 ring-line/45 animate-in fade-in slide-in-from-top-1 duration-150 motion-reduce:animate-none"
+  >
+    {
+      // biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista
+    <ul role="list" class="divide-y-2 divide-dashed divide-line/60">
+      {
+        items.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              aria-current={item.isActive ? "page" : undefined}
+              aria-label={`${item.week.week.toLowerCase()}, del ${shortDate.format(item.date)}${item.isCurrent ? " (semana actual)" : ""}`}
+              class="group flex min-h-14 touch-manipulation items-center gap-3 px-4 transition-[background-color] hover:bg-surface-hover focus-visible:outline-offset-[-3px] aria-[current=page]:bg-primary aria-[current=page]:text-highlight-foreground aria-[current=page]:hover:bg-primary/90"
+            >
+              <span
+                class="w-9 shrink-0 text-right font-pixel text-3xl font-bold leading-none tabular-nums"
+                translate="no"
+              >
+                {item.number.padStart(2, "0")}
+              </span>
+              <span class="flex min-w-0 flex-1 flex-col items-start gap-px">
+                <span class="text-[10px] uppercase tracking-wider text-muted-foreground group-aria-[current=page]:text-highlight-foreground/75">
+                  Semana
+                </span>
+                <span class="whitespace-nowrap text-sm font-bold uppercase">
+                  Del {shortDate.format(item.date)}
+                </span>
+              </span>
+              {item.isCurrent ? (
+                <span
+                  aria-hidden="true"
+                  class="shrink-0 text-[10px] font-bold uppercase tracking-wider"
+                >
+                  Actual
+                </span>
+              ) : null}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    }
+  </div>
+</nav>
+
+<script>
+  // El botón abre el listado de semanas. Los listeners van en `document` para
+  // seguir funcionando después de que el ClientRouter reemplace el <body>.
+  const getParts = () => {
+    const $trigger = document.querySelector<HTMLButtonElement>(
+      "[data-week-picker-trigger]",
+    );
+    const $panel = document.querySelector<HTMLElement>(
+      "[data-week-picker-panel]",
+    );
+    return $trigger && $panel ? { $trigger, $panel } : null;
+  };
+
+  const isOpen = () =>
+    getParts()?.$trigger.getAttribute("aria-expanded") === "true";
+
+  const setOpen = (open: boolean, { returnFocus = false } = {}) => {
+    const parts = getParts();
+    if (!parts) return;
+
+    const { $trigger, $panel } = parts;
+    $trigger.setAttribute("aria-expanded", String(open));
+    $panel.hidden = !open;
+
+    if (open) {
+      // Centra la semana activa en el listado, sin mover la página.
+      const $active = $panel.querySelector<HTMLElement>('[aria-current="page"]');
+      if ($active) {
+        $panel.scrollTop =
+          $active.offsetTop - ($panel.clientHeight - $active.offsetHeight) / 2;
+      }
+    } else if (returnFocus) {
+      $trigger.focus();
+    }
+  };
+
+  const isInsidePicker = (node: EventTarget | null) =>
+    node instanceof Element && Boolean(node.closest("[data-week-picker]"));
+
+  document.addEventListener("click", (e) => {
+    const $target = e.target as HTMLElement | null;
+
+    if ($target?.closest("[data-week-picker-trigger]")) {
+      setOpen(!isOpen());
+      return;
+    }
+
+    // Clic fuera del listado, o en una semana (la navegación ya está en camino).
+    const isOutside = !$target?.closest("[data-week-picker-panel]");
+    if (isOpen() && (isOutside || $target?.closest("a"))) setOpen(false);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen()) setOpen(false, { returnFocus: true });
+  });
+
+  // Si el foco sale del selector con Tab, se cierra.
+  document.addEventListener("focusin", (e) => {
+    if (isOpen() && !isInsidePicker(e.target)) setOpen(false);
+  });
+</script>
