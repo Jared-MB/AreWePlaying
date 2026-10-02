@@ -35,6 +35,20 @@ Same underlying data as the official ABE site and other score sources, but a muc
 - Data may be outdated or incomplete since it depends on third-party endpoints that can change without notice.
 - The upstream API is someone else's server and is treated as a courtesy, not an entitlement: finished tournaments are never refetched, nothing is refetched twice within 24 hours, and data that doesn't change mid-tournament (weeks, teams, logos) is fetched once and reused. Future work must not move data fetching into the runtime or otherwise multiply requests to it.
 
+## Visual Style
+
+Neutral and clean: content-first, high contrast, no decoration that competes with schedules and scores. `src/styles/global.css` is the source of truth for tokens; this section records intent, not a copy of the values.
+
+- **Stack**: Tailwind CSS 4 with CSS variables in OKLCH, exposed through `@theme inline` (shadcn-style token names: `background`, `foreground`, `primary`, `muted`, `border`…). Use tokens, never hard-coded colors.
+- **Theming**: light and dark, switched with the `.dark` class on `<html>`. The saved choice (`localStorage` `theme`) wins; otherwise `prefers-color-scheme`. Every new token needs both values.
+- **Color**: white / near-black surfaces with a single warm orange `primary` (`oklch(0.71 0.19 39.57)`, same in both themes) as the accent. Purple is reserved for focus rings and chart ramps. Neutral `surface` / `surface-hover` / `line` for cards and borders; `destructive` for errors; a gold `favorite` for the favorites star. The highlighted card (favorite team's match) sits on `primary` and uses the `highlight-*` tokens for legible content.
+- **Typography**: Space Mono (`font-sans` and `font-mono`) for all text, with wide tracking (`--tracking-normal: 0.05em`) and small uppercase bold labels. Geist Pixel (`font-pixel`) only for numerals and display accents (match numbers, countdown). Use `tabular-nums` for numbers and `translate="no"` on identifiers.
+- **Shape and depth**: base radius `0.625rem` (`rounded-lg`, with `sm`/`md`/`xl` derived from it). Shadows are hard offsets with no blur (`2px 2px 0`), all derived from `--shadow-color` and `--shadow-opacity`; themes only change those two.
+- **Motifs, kept restrained**: match cards are ticket-like (colored stub, dashed divider, notched edges, a tear animation) and the team pages use thicker black frames with inverted blocks (`frame`, `inverse`, `hard-shadow`). Use these motifs where they already exist; don't spread them to new surfaces.
+- **Layout**: mobile-first single column inside a `container` with `px-4`/`px-6` gutters; sticky header with a bottom border (`line/70`); spacing from Tailwind's `0.25rem` scale.
+- **Motion**: functional only (ticket tear and stamp-in), and CSS animations stay behind `prefers-reduced-motion: no-preference`.
+- **Accessibility**: skip-to-content link, visible `:focus-visible` rings, `touch-hitbox` for small targets.
+
 ## Brand Commitments
 
 - Name: "Are We Playing?" (ABE League Match Days).
