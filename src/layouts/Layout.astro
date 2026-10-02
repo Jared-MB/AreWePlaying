@@ -8,6 +8,8 @@ import Footer from "@/components/Footer.astro";
 import SelectDivision from "@/components/SelectDivision.astro";
 import TeamsMenu from "@/components/TeamsMenu.astro";
 import { Toaster } from "@/components/sonner";
+import { getTournaments } from "@/utils/get-tournaments";
+import { getTournamentSlug } from "@/utils/tournament-slug";
 
 import HeadlessLayout from "./HeadlessLayout.astro";
 
@@ -25,6 +27,10 @@ interface Props {
 }
 
 const { tournamentSlug, title, description, image, icon } = Astro.props;
+
+// Fuera de un torneo (p. ej. /teams) el enlace apunta al primer torneo de la temporada.
+const [firstTournament] = getTournaments();
+const tournamentHref = `/${tournamentSlug ?? (firstTournament && getTournamentSlug(firstTournament))}`;
 ---
 
 <HeadlessLayout
@@ -41,6 +47,10 @@ const { tournamentSlug, title, description, image, icon } = Astro.props;
             <HeaderLink href="/" aria-label="Ir al inicio"> Inicio </HeaderLink>
 
             <TeamsMenu />
+
+            <HeaderLink href={tournamentHref} aria-label="Ver torneos">
+              Torneos
+            </HeaderLink>
           </nav>
 
           <div class="flex items-center gap-4">
