@@ -29,7 +29,7 @@ is yours to sort out.
 
 If you own the upstream data source, a logo, or a mark used here and you want it
 removed, or you want us to stop fetching from your server, write to
-**amunozbaez669@gmail.com** or open an issue at
+**contacto@areweplaying.com** or open an issue at
 <https://github.com/Jared-MB/AreWePlaying/issues>.
 
 This project is non‑commercial, run by

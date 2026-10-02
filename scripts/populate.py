@@ -39,7 +39,7 @@ API = "https://scoretdi2025-eta.vercel.app/api/"
 # escribirle en lugar de bloquear a ciegas un cliente anónimo.
 DEFAULT_USER_AGENT = (
     "AreWePlaying/1.0 (+https://areweplaying.com; "
-    "https://github.com/Jared-MB/AreWePlaying; amunozbaez669@gmail.com)"
+    "https://github.com/Jared-MB/AreWePlaying; contacto@areweplaying.com)"
 )
 
 # Un fork debe identificarse con sus propios datos: si no, su tráfico llega al

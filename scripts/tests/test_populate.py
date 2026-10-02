@@ -103,7 +103,7 @@ def test_user_agent(load_populate, monkeypatch):
     p = load_populate()
     assert p.HEADERS["User-Agent"] == (
         "AreWePlaying/1.0 (+https://areweplaying.com; "
-        "https://github.com/Jared-MB/AreWePlaying; amunozbaez669@gmail.com)"
+        "https://github.com/Jared-MB/AreWePlaying; contacto@areweplaying.com)"
     )
 
 

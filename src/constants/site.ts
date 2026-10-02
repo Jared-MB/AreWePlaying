@@ -14,5 +14,5 @@ export const ABE_URL = "https://www.abemexico.org/";
 
 // Canales de contacto para avisos de retiro (los muestra "Acerca de" y los
 // repite el User-Agent con el que scripts/populate.py consulta el API).
-export const CONTACT_EMAIL = "amunozbaez669@gmail.com";
+export const CONTACT_EMAIL = "contacto@areweplaying.com";
 export const ISSUES_URL = `${REPO_URL}/issues`;

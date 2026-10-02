@@ -186,4 +186,4 @@ that means if you reuse this repo.
 - Every request the pipeline makes carries a `User-Agent` identifying the project, its repo, and a contact address, so the API owner always knows who we are.
 
 > [!IMPORTANT]
-> If you own the upstream API, a logo, or a mark used here and you want it removed (or you want us to stop fetching from your server) email <amunozbaez669@gmail.com> or open an [issue](https://github.com/Jared-MB/AreWePlaying/issues).
+> If you own the upstream API, a logo, or a mark used here and you want it removed (or you want us to stop fetching from your server) email <contacto@areweplaying.com> or open an [issue](https://github.com/Jared-MB/AreWePlaying/issues).
