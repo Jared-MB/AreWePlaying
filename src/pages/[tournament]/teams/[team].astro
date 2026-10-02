@@ -159,17 +159,19 @@ const statColumns = [
               initials={team.shortName.split(" ")[0].substring(0, 3)}
               class="size-16 text-2xl md:size-24 md:text-3xl"
             />
-            <div class="min-w-0">
+            <div class="@container min-w-0 flex-1">
               <h1
                 class="font-mono text-3xl font-bold uppercase tracking-wider text-balance wrap-break-word md:text-4xl"
               >
                 <span transition:name={team.shortName}>{team.shortName}</span>
               </h1>
-              <p class="mt-1 text-sm tabular-nums text-primary-foreground/85 md:text-base">
+              {/* Astro quita el espacio entre los <span> y la línea no tiene
+              dónde partirse: en columnas angostas se apila y pierde el "|". */}
+              <p class="mt-1 flex flex-col text-sm tabular-nums text-primary-foreground/85 @min-[16rem]:flex-row @min-[16rem]:gap-x-2 md:text-base">
                 <span class="whitespace-nowrap">
                   {team.wins}W - {team.losses}L
                 </span>
-                <span aria-hidden="true" class="mx-1">|</span>
+                <span aria-hidden="true" class="hidden @min-[16rem]:inline">|</span>
                 <span class="whitespace-nowrap">
                   #{team.position} en la tabla
                 </span>
