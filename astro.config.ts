@@ -7,6 +7,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 import preact from "@astrojs/preact";
 
+import sitemap from "@astrojs/sitemap";
+
 import vercel from "@astrojs/vercel";
 
 import { SITE_URL } from "./src/constants/site";
@@ -58,5 +60,5 @@ export default defineConfig({
 			noExternal: ["date-fns", "lucide-preact"],
 		},
 	},
-	integrations: [preact({ compat: true })],
+	integrations: [preact({ compat: true }), sitemap()],
 });
