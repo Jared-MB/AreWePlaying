@@ -1,7 +1,9 @@
 ---
 import ChevronDown from "@lucide/astro/icons/chevron-down";
+import Search from "@lucide/astro/icons/search";
 
 import { getTeamsByTournament } from "@/utils/get-teams-by-tournament";
+import { normalizeSearch } from "@/utils/normalize-search";
 
 // Una columna por torneo, como las conferencias en el menú de la NBA.
 const groups = await getTeamsByTournament();
@@ -27,10 +29,49 @@ const groups = await getTeamsByTournament();
     hidden
     class="fixed inset-x-4 top-(--teams-menu-top,5rem) z-30 max-h-[calc(100dvh-var(--teams-menu-top,5rem)-1rem)] overflow-y-auto overscroll-contain rounded-md border border-line/70 bg-popover text-popover-foreground shadow-lg animate-in fade-in slide-in-from-top-1 duration-150 motion-reduce:animate-none md:right-auto md:left-(--teams-menu-left,1rem) md:w-[min(72rem,calc(100vw-var(--teams-menu-left,1rem)-1rem))]"
   >
-    <div class="grid gap-x-8 gap-y-6 p-6 sm:grid-cols-2 lg:grid-cols-4">
+    <search class="sticky top-0 z-10 block border-b border-line/70 bg-popover px-6">
+    <form action="/teams" class="flex items-center gap-3">
+      <label for="teams-menu-search" class="sr-only">Buscar equipo</label>
+      <Search aria-hidden="true" class="size-5 shrink-0 text-primary" />
+      <input
+        id="teams-menu-search"
+        data-teams-menu-search
+        type="text"
+        name="equipo"
+        enterkeyhint="search"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Buscar equipo…"
+        aria-describedby="teams-menu-search-status"
+        class="h-14 min-w-0 flex-1 bg-transparent text-base font-bold uppercase tracking-wider outline-none placeholder:font-normal placeholder:normal-case placeholder:text-muted-foreground"
+      />
+      <kbd
+        aria-hidden="true"
+        translate="no"
+        class="hidden rounded-sm border border-line/70 px-1.5 text-[10px] md:inline"
+      >
+        /
+      </kbd>
+    </form>
+    </search>
+    <p
+      id="teams-menu-search-status"
+      data-teams-menu-status
+      aria-live="polite"
+      class="sr-only"
+    >
+    </p>
+    <div
+      data-teams-menu-grid
+      class="grid gap-x-8 gap-y-6 p-6 sm:grid-cols-2 lg:grid-cols-4"
+    >
       {
         groups.map((group) => (
-          <section aria-labelledby={`teams-menu-${group.slug}`} class="min-w-0">
+          <section
+            data-teams-menu-group
+            aria-labelledby={`teams-menu-${group.slug}`}
+            class="min-w-0"
+          >
             <a
               id={`teams-menu-${group.slug}`}
               href={`/${group.slug}/teams`}
@@ -46,7 +87,7 @@ const groups = await getTeamsByTournament();
               // biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista
               <ul role="list" class="flex flex-col">
                 {group.teams.map((team) => (
-                  <li>
+                  <li data-search={normalizeSearch(`${team.name} ${group.label}`)}>
                     <a
                       href={team.href}
                       class="flex min-h-9 items-center gap-3 rounded-sm px-2 py-1 -mx-2 text-sm outline-none transition-colors hover:bg-surface-hover focus-visible:ring-[3px] focus-visible:ring-ring/50"
@@ -79,6 +120,9 @@ const groups = await getTeamsByTournament();
         ))
       }
     </div>
+    <p data-teams-menu-empty hidden class="px-6 py-6 text-sm">
+      Ningún equipo coincide con “<span data-teams-menu-query></span>”.
+    </p>
     <div class="border-t border-line/70 px-6 py-3">
       <a
         href="/teams"
@@ -91,9 +135,12 @@ const groups = await getTeamsByTournament();
 </div>
 
 <script>
+  import { normalizeSearch } from "@/utils/normalize-search";
+
   // El enlace "Equipos" lleva a /teams; con mouse, pasar por encima despliega el
-  // panel como atajo. En touch y teclado no hay hover y el enlace basta, porque
-  // /teams tiene los mismos equipos. Los listeners van en `document` para seguir
+  // panel como atajo; con "/" o Ctrl/⌘+K se abre y enfoca el buscador. En touch
+  // y teclado sin atajo no hay hover y el enlace basta, porque /teams tiene los
+  // mismos equipos. Los listeners van en `document` para seguir
   // funcionando después de que el ClientRouter reemplace el <body>.
   const getParts = () => {
     const $trigger = document.querySelector<HTMLAnchorElement>(
@@ -103,6 +150,49 @@ const groups = await getTeamsByTournament();
       "[data-teams-menu-panel]",
     );
     return $trigger && $panel ? { $trigger, $panel } : null;
+  };
+
+  const getSearch = () =>
+    document.querySelector<HTMLInputElement>("[data-teams-menu-search]");
+
+  const filterTeams = () => {
+    const $panel = getParts()?.$panel;
+    const $input = getSearch();
+    if (!$panel || !$input) return;
+
+    const tokens = normalizeSearch($input.value).split(" ").filter(Boolean);
+    let matches = 0;
+
+    for (const $item of $panel.querySelectorAll<HTMLElement>("li[data-search]")) {
+      const haystack = $item.dataset.search ?? "";
+      const isMatch = tokens.every((token) => haystack.includes(token));
+      $item.hidden = !isMatch;
+      if (isMatch) matches++;
+    }
+
+    for (const $group of $panel.querySelectorAll<HTMLElement>(
+      "[data-teams-menu-group]",
+    )) {
+      $group.hidden = !$group.querySelector("li:not([hidden])");
+    }
+
+    const $grid = $panel.querySelector<HTMLElement>("[data-teams-menu-grid]");
+    if ($grid) $grid.hidden = matches === 0;
+
+    const $empty = $panel.querySelector<HTMLElement>("[data-teams-menu-empty]");
+    if ($empty) {
+      $empty.hidden = matches > 0;
+      const $query = $empty.querySelector("[data-teams-menu-query]");
+      if ($query) $query.textContent = $input.value.trim();
+    }
+
+    const $status = $panel.querySelector("[data-teams-menu-status]");
+    if ($status) {
+      $status.textContent =
+        matches === 0
+          ? "Sin resultados"
+          : `${matches} ${matches === 1 ? "equipo" : "equipos"}`;
+    }
   };
 
   const setOpen = (open: boolean, { returnFocus = false } = {}) => {
@@ -119,6 +209,13 @@ const groups = await getTeamsByTournament();
 
     $trigger.toggleAttribute("data-open", open);
     $panel.hidden = !open;
+
+    // Al cerrar el buscador se limpia para que el menú abra completo la próxima vez.
+    const $search = getSearch();
+    if (!open && $search?.value) {
+      $search.value = "";
+      filterTeams();
+    }
 
     if (!open && returnFocus) $trigger.focus();
   };
@@ -140,6 +237,8 @@ const groups = await getTeamsByTournament();
   document.addEventListener("pointerout", (e) => {
     if (e.pointerType !== "mouse" || !isInsideMenu(e.target)) return;
     if (isInsideMenu(e.relatedTarget)) return;
+    // Mientras se escribe, el panel no se cierra aunque el mouse se aparte.
+    if (getParts()?.$panel.contains(document.activeElement)) return;
 
     // El margen deja cruzar el hueco entre el botón y el panel sin que se cierre.
     closeTimer = window.setTimeout(() => setOpen(false), 150);
@@ -153,8 +252,72 @@ const groups = await getTeamsByTournament();
     if (isOpen() && (isOutside || $target?.closest("a"))) setOpen(false);
   });
 
+  const isTyping = (target: EventTarget | null) =>
+    target instanceof HTMLElement &&
+    (target.isContentEditable ||
+      /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
+
+  const openSearch = () => {
+    setOpen(true);
+    getSearch()?.focus();
+  };
+
+  document.addEventListener("input", (e) => {
+    if (e.target === getSearch()) filterTeams();
+  });
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && isOpen()) setOpen(false, { returnFocus: true });
+    if (e.key === "Escape" && isOpen()) {
+      setOpen(false, { returnFocus: true });
+      return;
+    }
+
+    const isShortcut =
+      ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") ||
+      (e.key === "/" && !e.metaKey && !e.ctrlKey && !isTyping(e.target));
+    if (isShortcut && getSearch()) {
+      e.preventDefault();
+      openSearch();
+      return;
+    }
+
+    if (e.target !== getSearch()) return;
+    const $links = [
+      ...(getParts()?.$panel.querySelectorAll<HTMLAnchorElement>(
+        "li:not([hidden]) a",
+      ) ?? []),
+    ];
+
+    // Enter abre el primer resultado; ↓ pasa a la lista para seguir con el teclado.
+    if (e.key === "Enter" && $links[0]) {
+      e.preventDefault();
+      $links[0].click();
+    } else if (e.key === "ArrowDown" && $links[0]) {
+      e.preventDefault();
+      $links[0].focus();
+    }
+  });
+
+  // En la lista: ↑/↓ recorren los resultados visibles; ↑ en el primero vuelve al campo.
+  document.addEventListener("keydown", (e) => {
+    const $link = (e.target as HTMLElement | null)?.closest<HTMLAnchorElement>(
+      "[data-teams-menu-panel] li a",
+    );
+    if (!$link || (e.key !== "ArrowDown" && e.key !== "ArrowUp")) return;
+
+    const $links = [
+      ...(getParts()?.$panel.querySelectorAll<HTMLAnchorElement>(
+        "li:not([hidden]) a",
+      ) ?? []),
+    ];
+    const index = $links.indexOf($link);
+    const $next =
+      e.key === "ArrowDown" ? $links[index + 1] : ($links[index - 1] ?? getSearch());
+
+    if ($next) {
+      e.preventDefault();
+      $next.focus();
+    }
   });
 
   // Si el foco sale del menú con Tab, se cierra.
