@@ -1,0 +1,119 @@
+---
+import TeamCrest from "@/components/TeamCrest.astro";
+import type { StandingTeam } from "@/utils/get-standings";
+import { getLogoColor } from "@/utils/get-logo-color";
+
+interface Props {
+  team: StandingTeam;
+  tournamentId: string;
+  /** El líder ocupa todo el ancho; 2.º y 3.º van lado a lado, más compactos. */
+  size: "lg" | "md";
+}
+
+const { team, tournamentId, size } = Astro.props;
+
+// Como el encabezado de la página del equipo: el fondo es el color del escudo.
+const color = await getLogoColor({ tournamentId, teamId: team.id });
+
+const percent = new Intl.NumberFormat("es-MX", { maximumFractionDigits: 1 });
+const signed = new Intl.NumberFormat("es-MX", { signDisplay: "exceptZero" });
+
+const stats = [
+  { label: "G", name: "Ganados", value: team.wins },
+  { label: "P", name: "Perdidos", value: team.losses },
+  {
+    label: "%",
+    name: "Porcentaje de victorias",
+    value: percent.format(team.percentage),
+  },
+  {
+    label: "DIF",
+    name: "Diferencia de puntos",
+    value: signed.format(team.difference),
+  },
+];
+
+const isLarge = size === "lg";
+---
+
+<a
+  href={team.href}
+  class="group relative block h-full overflow-hidden rounded-md bg-banner text-primary-foreground shadow-xs transition-[filter] hover:brightness-110"
+  style={color ? { "--banner": color } : undefined}
+>
+  {/* El círculo de media cancha, igual que en la página del equipo. */}
+  <div
+    aria-hidden="true"
+    class:list={[
+      "pointer-events-none absolute left-10 rounded-full border-primary-foreground/8",
+      isLarge
+        ? "-top-40 size-80 border-[1.5rem]"
+        : "-top-28 size-56 border-[1rem]",
+    ]}
+  >
+  </div>
+
+  <div
+    class:list={[
+      "relative grid",
+      isLarge
+        ? "gap-6 p-6 md:p-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-x-10"
+        : "gap-5 p-5 md:p-6",
+    ]}
+  >
+    <div class="flex min-w-0 items-center gap-4 md:gap-5">
+      <span
+        class:list={[
+          "font-pixel leading-none tabular-nums",
+          isLarge ? "text-6xl md:text-8xl" : "text-5xl md:text-6xl",
+        ]}
+        translate="no"
+      >
+        <span class="sr-only">Lugar </span>{team.position}
+      </span>
+      <TeamCrest
+        logo={team.logo}
+        initials={team.initials}
+        class={isLarge
+          ? "size-16 text-2xl md:size-24 md:text-3xl"
+          : "size-14 text-xl md:size-16 md:text-2xl"}
+      />
+      <h2
+        class:list={[
+          "min-w-0 font-mono font-bold uppercase tracking-wider text-balance wrap-break-word hyphens-auto group-hover:underline",
+          isLarge ? "text-2xl md:text-4xl" : "text-xl md:text-2xl",
+        ]}
+      >
+        <span transition:name={team.name}>{team.name}</span>
+      </h2>
+    </div>
+
+    <dl
+      class:list={[
+        "grid grid-cols-4 divide-x divide-primary-foreground/25 border-t border-primary-foreground/25 pt-4",
+        isLarge && "lg:border-t-0 lg:pt-0",
+      ]}
+    >
+      {
+        stats.map(({ label, name, value }) => (
+          <div class="flex min-w-0 flex-col items-center px-2 text-center md:px-5">
+            <dt class="text-xs font-bold uppercase tracking-wider md:text-sm">
+              <abbr title={name} class="no-underline">
+                {label}
+              </abbr>
+              <span class="sr-only">: {name}</span>
+            </dt>
+            <dd
+              class:list={[
+                "mt-1 font-pixel leading-none tabular-nums",
+                isLarge ? "text-2xl md:text-3xl" : "text-xl md:text-2xl",
+              ]}
+            >
+              {value}
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</a>

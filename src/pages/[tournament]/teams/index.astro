@@ -1,14 +1,14 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import SelectDivision from "@/components/SelectDivision.astro";
+import StandingsLadder from "@/components/StandingsLadder.astro";
+import { getTournamentLabel } from "@/utils/get-match-card";
+import { getStandings } from "@/utils/get-standings";
 import { getTournaments } from "@/utils/get-tournaments";
 import {
   getTournamentSlug,
   requireTournamentBySlug,
 } from "@/utils/tournament-slug";
-import { getTeamsTable } from "@/utils/get-teams-table";
-import { getTeamSlug } from "@/utils/team-slug";
-import MatchCard from "@/components/match-card.tsx";
-import SelectDivision from "@/components/SelectDivision.astro";
 
 export function getStaticPaths() {
   return getTournaments().map((t) => ({
@@ -20,171 +20,66 @@ export function getStaticPaths() {
 
 const tournament = requireTournamentBySlug(Astro.params.tournament);
 const tournamentSlug = Astro.params.tournament;
+const tournamentId = tournament.id.toLowerCase();
+const tournamentLabel = getTournamentLabel(tournament);
 
-const teams = await getTeamsTable(tournament.id.toLowerCase());
-
-const sortedTeams = teams.toSorted((a, b) => a.position - b.position);
-const topTeam = sortedTeams[0];
-const otherTeams = sortedTeams.slice(1);
+const { teams, hasStarted } = await getStandings(tournament);
 ---
 
-<Layout tournamentSlug={tournamentSlug}>
-  <div class="min-h-screen bg-background">
-    <div class="p-4 md:p-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="md:hidden mb-12">
-          <SelectDivision
-            id="division-mobile"
-            defaultSelected={tournamentSlug}
-          />
-        </div>
-        <header
-          class="mb-12 border-8 border-frame bg-inverse p-8 text-inverse-foreground shadow-[8px_8px_0px_0px_var(--color-hard-shadow)]"
-        >
-          <h1
-            class="font-mono text-7xl font-bold uppercase leading-none tracking-tighter md:text-9xl"
-          >
-            TEAMS
-          </h1>
-          <div
-            class="mt-6 flex flex-wrap gap-8 border-t-4 border-inverse-foreground pt-6"
-          >
-            <div>
-              <div class="font-mono text-5xl font-bold md:text-7xl">
-                {teams.length}
-              </div>
-              <div
-                class="font-mono text-sm uppercase tracking-wider opacity-70"
-              >
-                Equipos totales
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <a
-          href={`/${tournamentSlug}/teams/${getTeamSlug(topTeam)}`}
-          class="group mb-8 block"
-        >
-          <div
-            class="border-4 border-frame bg-primary shadow-[12px_12px_0px_0px_var(--color-hard-shadow)] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-[4px_4px_0px_0px_var(--color-hard-shadow)]"
-          >
-            <div class="border-b-4 border-frame bg-background px-6 py-3">
-              <div
-                class="font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground"
-              >
-                🏆 Top Performer
-              </div>
-            </div>
-            <div class="grid gap-0 md:grid-cols-[1fr_auto]">
-              <div class="p-8">
-                <h2
-                  class="mb-6 font-mono text-4xl font-bold uppercase leading-none tracking-tight text-primary-foreground md:text-6xl"
-                >
-                  <span transition:name={topTeam.shortName}
-                    >{topTeam.shortName}</span
-                  >
-                </h2>
-                <div class="flex flex-col md:flex-row gap-2 md:gap-12">
-                  <div>
-                    <div
-                      class="font-mono text-5xl font-bold text-primary-foreground md:text-7xl"
-                    >
-                      {topTeam.percentage}%
-                    </div>
-                    <div
-                      class="font-mono text-sm uppercase tracking-wider text-primary-foreground/70"
-                    >
-                      Win Rate
-                    </div>
-                  </div>
-                  <div>
-                    <div
-                      class="font-mono text-5xl font-bold text-primary-foreground md:text-7xl"
-                    >
-                      {topTeam.wins}-{topTeam.losses}
-                    </div>
-                    <div
-                      class="font-mono text-sm uppercase tracking-wider text-primary-foreground/70"
-                    >
-                      Record
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="flex items-center justify-center border-l-4 border-frame bg-background p-8 md:w-64"
-              >
-                <div
-                  class="flex h-40 w-40 items-center justify-center border-4 border-frame bg-primary text-5xl font-bold text-primary-foreground shadow-[6px_6px_0px_0px_var(--color-hard-shadow)]"
-                >
-                  {topTeam.shortName.split(" ")[0].substring(0, 3)}
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {
-            otherTeams.map((team) => (
-              <a
-                href={`/${tournamentSlug}/teams/${getTeamSlug(team)}`}
-                class="bg-surface shadow-sm"
-              >
-                <MatchCard>
-                  <div class="relative h-3 border-b-4 border-frame bg-muted">
-                    <div
-                      class="h-full bg-primary"
-                      style={{ width: `${team.percentage}%` }}
-                    />
-                  </div>
-
-                  <div class="p-6">
-                    <div class="mb-4 flex items-start justify-between gap-4">
-                      <span class="flex h-16 w-16 shrink-0 items-center justify-center border-2 border-frame bg-inverse text-lg font-bold text-inverse-foreground">
-                        {team.shortName.split(" ")[0].substring(0, 3)}
-                      </span>
-                      <div class="font-mono font-bold text-lg size-10 bg-primary text-primary-foreground shadow-[4px_4px_0px_0px_var(--color-hard-shadow)] grid place-items-center">
-                        {team.position}
-                      </div>
-                    </div>
-
-                    <h2
-                      class:list={[
-                        "mb-4 font-mono text-xl font-bold uppercase leading-tight tracking-tight",
-                      ]}
-                    >
-                      <span transition:name={team.shortName}>
-                        {team.shortName}
-                      </span>
-                    </h2>
-
-                    <div class="flex items-end justify-between border-t-4 border-frame pt-4">
-                      <div>
-                        <div class="font-mono text-3xl font-bold leading-none">
-                          {team.percentage}%
-                        </div>
-                        <div class="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                          Win Rate
-                        </div>
-                      </div>
-                      <div class="text-right">
-                        <div class="font-mono text-2xl font-bold leading-none">
-                          {team.wins}-{team.losses}
-                        </div>
-                        <div class="mt-1 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                          W-L
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </MatchCard>
-              </a>
-            ))
-          }
-        </section>
-      </div>
+<Layout
+  tournamentSlug={tournamentSlug}
+  title={`Tabla | ${tournamentLabel} | Are We Playing?`}
+  description={`Tabla de posiciones de la liga ABE: ${tournamentLabel}.`}
+>
+  <div class="mx-auto flex w-full max-w-7xl flex-col gap-6 md:gap-8">
+    <div class="flex flex-wrap items-center gap-3 md:hidden">
+      <label
+        for="division-mobile"
+        class="text-xs font-bold uppercase tracking-widest text-muted-foreground"
+      >
+        Division:
+      </label>
+      <SelectDivision id="division-mobile" defaultSelected={tournamentSlug} />
     </div>
+
+    <header class="border-b border-line/70 pb-4">
+      <h1
+        class="mb-4 font-mono text-4xl font-bold uppercase tracking-tight md:text-6xl"
+      >
+        Tabla
+      </h1>
+      <p
+        class="mt-2 text-sm font-bold uppercase tracking-wider text-muted-foreground tabular-nums"
+      >
+        {tournamentLabel}
+        <span aria-hidden="true"> · </span>
+        <span class="whitespace-nowrap">{teams.length}&nbsp;equipos</span>
+      </p>
+    </header>
+
+    {
+      teams.length === 0 ? (
+        <p class="text-base">
+          Aún no hay equipos registrados en este torneo.{" "}
+          <a href="/teams" class="font-bold underline underline-offset-4">
+            Ver todos los equipos
+          </a>
+        </p>
+      ) : (
+        <>
+          {hasStarted ? null : (
+            <p class="text-sm text-muted-foreground md:text-base">
+              Aún no se juega ningún partido en este torneo: los equipos van en
+              orden alfabético hasta que haya resultados.
+            </p>
+          )}
+          <StandingsLadder
+            teams={teams}
+            hasStarted={hasStarted}
+            tournamentId={tournamentId}
+          />
+        </>
+      )
+    }
   </div>
 </Layout>

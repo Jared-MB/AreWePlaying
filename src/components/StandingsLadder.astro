@@ -1,0 +1,105 @@
+---
+import StandingsBanner from "@/components/StandingsBanner.astro";
+import TeamCrest from "@/components/TeamCrest.astro";
+import type { StandingTeam } from "@/utils/get-standings";
+
+interface Props {
+  teams: StandingTeam[];
+  hasStarted: boolean;
+  tournamentId: string;
+}
+
+const { teams, hasStarted, tournamentId } = Astro.props;
+
+// Los tres primeros sólo existen cuando ya hay partidos jugados.
+const [leader, ...runnersUp] = hasStarted ? teams.slice(0, 3) : [];
+const rest = hasStarted ? teams.slice(3) : teams;
+
+const percent = new Intl.NumberFormat("es-MX", { maximumFractionDigits: 1 });
+---
+
+{
+  /* El líder a todo el ancho y 2.º y 3.º lado a lado, con el encabezado de la
+  página de equipo; el resto como peldaños con su porcentaje de victorias, en
+  orden de izquierda a derecha. */
+}
+<div class="flex flex-col gap-6">
+  {
+    leader ? (
+      <StandingsBanner
+        team={leader}
+        tournamentId={tournamentId}
+        size="lg"
+      />
+    ) : null
+  }
+
+  {
+    runnersUp.length > 0 ? (
+      <div class="grid gap-6 md:grid-cols-2">
+        {runnersUp.map((team) => (
+          <StandingsBanner team={team} tournamentId={tournamentId} size="md" />
+        ))}
+      </div>
+    ) : null
+  }
+
+  {
+    (
+      <ol
+        // biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista
+        role="list"
+        start={hasStarted ? 4 : undefined}
+        class="grid gap-x-6 gap-y-2 md:grid-cols-2"
+      >
+        {rest.map((team) => (
+          <li class="group relative flex items-center gap-3 rounded-md border-b border-line/45 px-2 py-3 transition-[background-color] hover:bg-surface-hover md:gap-4">
+            {team.position !== null ? (
+              <span
+                class="w-8 shrink-0 text-right font-pixel text-2xl leading-none text-muted-foreground tabular-nums md:w-10 md:text-3xl"
+                translate="no"
+              >
+                <span class="sr-only">Lugar </span>
+                {team.position}
+              </span>
+            ) : null}
+            <TeamCrest
+              logo={team.logo}
+              initials={team.initials}
+              class="size-10 text-xs"
+              size={40}
+            />
+            <div class="min-w-0 flex-1">
+              <a
+                href={team.href}
+                class="block text-sm font-bold uppercase leading-tight tracking-wide wrap-break-word hyphens-auto outline-none after:absolute after:inset-0 after:rounded-md after:content-[''] group-hover:underline focus-visible:after:outline-2 focus-visible:after:-outline-offset-2 focus-visible:after:outline-ring md:text-base"
+              >
+                <span transition:name={team.name}>{team.name}</span>
+              </a>
+              {hasStarted ? (
+                <div
+                  aria-hidden="true"
+                  class="mt-2 h-1.5 overflow-hidden rounded-full bg-foreground/10"
+                >
+                  <div
+                    class="h-full rounded-full bg-primary"
+                    style={{ width: `${team.percentage}%` }}
+                  />
+                </div>
+              ) : null}
+            </div>
+            <div class="shrink-0 text-right">
+              <p class="font-pixel text-xl leading-none whitespace-nowrap tabular-nums md:text-2xl">
+                {team.wins}-{team.losses}
+                <span class="sr-only"> ganados y perdidos</span>
+              </p>
+              <p class="mt-1 text-xs tabular-nums text-muted-foreground">
+                {percent.format(team.percentage)}%
+              </p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    )
+  }
+</div>
