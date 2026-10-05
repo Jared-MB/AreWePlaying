@@ -66,15 +66,20 @@ afterEach(() => {
 	vi.useRealTimers();
 });
 
-test("sin favoritos no pinta nada, pero avisa que ya se acomodó", async () => {
+test("sin favoritos invita a elegir un equipo y avisa que ya se acomodó", async () => {
 	const settled = vi.fn();
 	window.addEventListener("favorite-countdown-settled", settled);
-	const { container } = render(<FavoriteCountdown matchesByTeam={byTeam} />);
+	const { container, getByLabelText } = render(
+		<FavoriteCountdown matchesByTeam={byTeam} />,
+	);
 	await act(async () => {
 		await vi.advanceTimersByTimeAsync(150);
 	});
 
-	expect(container.innerHTML).toBe("");
+	expect(container.textContent).toContain("Elige tu equipo");
+	const input = getByLabelText("Buscar equipo") as HTMLInputElement;
+	expect(input.name).toBe("equipo");
+	expect(input.form?.getAttribute("action")).toBe("/teams");
 	expect(settled).toHaveBeenCalledTimes(1);
 	window.removeEventListener("favorite-countdown-settled", settled);
 });
