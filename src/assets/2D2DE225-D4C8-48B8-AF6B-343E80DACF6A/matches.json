@@ -20,9 +20,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0475482000,-98.2581823000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(1)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(8)",
+				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -44,9 +44,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(7)",
+				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -68,9 +68,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5122456252,-96.8894860729",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(13)",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -92,9 +92,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(5)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(6)",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -116,9 +116,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
+				"localTeamPosition": "(16)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(11)",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -129,21 +129,21 @@
 				"visitingTeam": "UAEMÉX",
 				"visitingTeamId": "d17b4e74-7b32-451c-a342-786dc260261e",
 				"date": "03/10/2026 09:30",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
+				"startTime": "03/10/2026 09:32",
+				"endTime": "03/10/2026 11:19",
+				"localTeamPoints": "88",
+				"visitingTeamPoints": "43",
+				"period": "CUARTO 4",
 				"name": "PARTIDO 6 UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO vs UNIVERSIDAD AUTÓNOMA DEL ESTADO DE MÉXICO",
-				"started": 1,
+				"started": 0,
 				"location": "GIMNASIO FRONTON CERRADO",
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3238790000,-99.1880815000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(2)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "e0fd159e-11ec-4bd7-af6c-ac1d78f7de58",
@@ -153,21 +153,21 @@
 				"visitingTeam": "ANÁHUAC PUEBLA",
 				"visitingTeamId": "2ebca76f-34d6-4259-a105-121d94423f9f",
 				"date": "03/10/2026 12:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
+				"startTime": "03/10/2026 12:00",
+				"endTime": "03/10/2026 14:00",
+				"localTeamPoints": "23",
+				"visitingTeamPoints": "109",
+				"period": "CUARTO 4",
 				"name": "PARTIDO 7 INSTITUTO POLITÉCNICO NACIONAL vs UNIVERSIDAD ANÁHUAC CAMPUS PUEBLA",
-				"started": 1,
+				"started": 0,
 				"location": "GIMNASIO EL CARILLÓN",
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4542322665,-99.1685060280",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(16)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(1)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "4604548e-e5b5-4230-9fe3-047835a0d521",
@@ -188,9 +188,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0000877154,-98.2036444553",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(7)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(4)",
+				"visitingTeamPosition": "(6)",
 				"visitingTeamWR": "1-0"
 			}
 		],
@@ -217,9 +217,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(5)",
+				"localTeamPosition": "(1)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -241,10 +241,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2781070168,-99.6569049132",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(16)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(11)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "9e5bff9a-8911-4506-aaa9-ab4d8b9c2572",
@@ -265,9 +265,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(15)",
+				"visitingTeamPosition": "(16)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -289,9 +289,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3701533042,-99.2651447945",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(1)",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -313,10 +313,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(2)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "8f106667-8e97-4f61-9169-0794e78cad1a",
@@ -337,9 +337,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.7496596078,-98.1019174959",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
+				"localTeamPosition": "(10)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(3)",
+				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -361,9 +361,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(9)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(9)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "0-0"
 			}
 		],
@@ -390,9 +390,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(5)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(11)",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -414,9 +414,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0475482000,-98.2581823000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(1)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(13)",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -438,10 +438,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0000877154,-98.2036444553",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(7)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "ef190393-ab03-49bb-ab32-b5e69b6acfe0",
@@ -462,9 +462,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5122456252,-96.8894860729",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(4)",
+				"visitingTeamPosition": "(6)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -486,10 +486,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3238790000,-99.1880815000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(16)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(2)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "a5a0efc6-33cb-447a-ac2a-da22422f77e9",
@@ -510,10 +510,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(1)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "f68a3774-ff19-4a12-9d96-da70b677a318",
@@ -534,9 +534,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(8)",
+				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -558,9 +558,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
+				"localTeamPosition": "(16)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(7)",
+				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "0-1"
 			}
 		],
@@ -587,9 +587,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(9)",
+				"localTeamPosition": "(1)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -611,9 +611,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2781070168,-99.6569049132",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(2)",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -635,9 +635,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3701533042,-99.2651447945",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(6)",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -659,9 +659,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4542322665,-99.1685060280",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(16)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(5)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -683,9 +683,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(6)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(15)",
+				"visitingTeamPosition": "(16)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -707,10 +707,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.7496596078,-98.1019174959",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
+				"localTeamPosition": "(10)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(2)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "7936dd87-b578-4c0a-969c-488123f52c1f",
@@ -731,9 +731,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(9)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(1)",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -755,9 +755,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(3)",
+				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "1-0"
 			}
 		],
@@ -784,9 +784,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0475482000,-98.2581823000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(1)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(4)",
+				"visitingTeamPosition": "(6)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -808,9 +808,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(5)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(7)",
+				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -832,10 +832,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5122456252,-96.8894860729",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "f92e4bf4-5a49-4fbe-bd72-0521cd956ddd",
@@ -856,9 +856,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3238790000,-99.1880815000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(5)",
+				"localTeamPosition": "(2)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -880,9 +880,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(13)",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -904,9 +904,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.7496596078,-98.1019174959",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
+				"localTeamPosition": "(10)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(11)",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -928,10 +928,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(16)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-1"
 			}
 		],
 		"id": "ed3e5a2e-b0fc-4381-ab86-ff62bdcb121e"
@@ -957,9 +957,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(1)",
+				"localTeamPosition": "(1)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -981,10 +981,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3701533042,-99.2651447945",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(2)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "ad1767de-bd52-4225-8e8a-57869f52e079",
@@ -1005,9 +1005,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0000877154,-98.2036444553",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(7)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(2)",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -1029,9 +1029,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2781070168,-99.6569049132",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(15)",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(16)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -1053,9 +1053,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(8)",
+				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -1077,9 +1077,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4542322665,-99.1685060280",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(16)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(9)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -1101,9 +1101,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(9)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(6)",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -1125,9 +1125,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(6)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(3)",
+				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "1-0"
 			}
 		],
@@ -1154,10 +1154,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0475482000,-98.2581823000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(1)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "69da67ce-c0b1-486e-947a-4447eabe01be",
@@ -1178,9 +1178,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3238790000,-99.1880815000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(2)",
+				"localTeamPosition": "(2)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -1202,10 +1202,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
+				"localTeamPosition": "(16)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(16)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "396628ac-44d9-4f6b-9ee8-f6c3adb49742",
@@ -1226,9 +1226,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(4)",
+				"visitingTeamPosition": "(6)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -1250,10 +1250,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(5)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(1)",
+				"visitingTeamWR": "1-0"
 			}
 		],
 		"id": "30c472ff-eb28-4a89-a2b7-4a0849b06243"
@@ -1279,9 +1279,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(6)",
+				"localTeamPosition": "(1)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -1303,9 +1303,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2781070168,-99.6569049132",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(3)",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -1327,9 +1327,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0000877154,-98.2036444553",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(7)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(15)",
+				"visitingTeamPosition": "(16)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -1351,10 +1351,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(2)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "99447f25-54bb-4c28-82ce-047137fbbc86",
@@ -1375,9 +1375,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4542322665,-99.1685060280",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(16)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(1)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -1399,9 +1399,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(6)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(8)",
+				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -1423,9 +1423,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(9)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(11)",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -1447,9 +1447,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(9)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "0-0"
 			}
 		],
@@ -1476,9 +1476,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5122456252,-96.8894860729",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(5)",
+				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -1500,9 +1500,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3701533042,-99.2651447945",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(13)",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -1524,9 +1524,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(6)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(2)",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -1548,10 +1548,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
+				"localTeamPosition": "(16)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(1)",
+				"visitingTeamWR": "1-0"
 			}
 		],
 		"id": "e15f46c2-8846-45b7-9b24-c10f21722fe8"
@@ -1577,9 +1577,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.7496596078,-98.1019174959",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
+				"localTeamPosition": "(10)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(7)",
+				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "0-1"
 			}
 		],
@@ -1606,34 +1606,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0475482000,-98.2581823000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(1)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(5)",
+				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "0-1"
-			},
-			{
-				"matchId": "1aac4519-2ec1-49b4-a277-cc630881fed2",
-				"matchNumber": 66,
-				"localTeam": "IBERO CDMX",
-				"localTeamId": "beab0868-cfcd-4cd7-8265-20b7c2aef628",
-				"visitingTeam": "UAGRO",
-				"visitingTeamId": "0c9af7ea-3eba-4774-afbd-41c7c9c0e91c",
-				"date": "05/02/2027 14:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 66 UNIVERSIDAD IBEROAMERICANA CIUDAD DE MÉXICO vs UNIVERSIDAD AUTÓNOMA DE GUERRERO",
-				"started": 1,
-				"location": "CANCHA DE BÁSQUETBOL IBERO",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.3701533042,-99.2651447945",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(4)",
-				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "35e79f64-3dcb-462d-abd7-ab9cf0228d78",
@@ -1654,10 +1630,34 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3238790000,-99.1880815000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(9)",
+				"localTeamPosition": "(2)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "0-0"
+			},
+			{
+				"matchId": "1aac4519-2ec1-49b4-a277-cc630881fed2",
+				"matchNumber": 66,
+				"localTeam": "IBERO CDMX",
+				"localTeamId": "beab0868-cfcd-4cd7-8265-20b7c2aef628",
+				"visitingTeam": "UAGRO",
+				"visitingTeamId": "0c9af7ea-3eba-4774-afbd-41c7c9c0e91c",
+				"date": "05/02/2027 14:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 66 UNIVERSIDAD IBEROAMERICANA CIUDAD DE MÉXICO vs UNIVERSIDAD AUTÓNOMA DE GUERRERO",
+				"started": 1,
+				"location": "CANCHA DE BÁSQUETBOL IBERO",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.3701533042,-99.2651447945",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(14)",
+				"localTeamWR": "0-0",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "2c559244-6da6-4dab-8ded-fd14072c00ad",
@@ -1678,9 +1678,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
+				"localTeamPosition": "(16)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(2)",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -1702,10 +1702,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.7496596078,-98.1019174959",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
+				"localTeamPosition": "(10)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(1)",
+				"visitingTeamWR": "1-0"
 			}
 		],
 		"id": "24d28a38-0781-4b5c-a17c-68201ac0585f"
@@ -1731,9 +1731,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(11)",
+				"localTeamPosition": "(1)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -1755,9 +1755,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2781070168,-99.6569049132",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(8)",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -1779,9 +1779,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5122456252,-96.8894860729",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(15)",
+				"visitingTeamPosition": "(16)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -1803,33 +1803,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(6)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "0-0"
-			},
-			{
-				"matchId": "a374c7e7-fee1-4b0a-b637-8b6c78d1499c",
-				"matchNumber": 75,
-				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
-				"localTeamId": "a9eb6947-9e84-4d26-9f8c-14b3c9692e34",
-				"visitingTeam": "UNAM",
-				"visitingTeamId": "76b0af03-5833-447e-a2f4-2271f7256c7e",
-				"date": "13/02/2027 17:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 75 UNIVERSIDAD MARISTA CAMPUS CIUDAD DE MÉXICO vs UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO",
-				"started": 1,
-				"location": "DEPORTIVO MOCTEZUMA",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(7)",
-				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(12)",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -1851,9 +1827,33 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(1)",
+				"visitingTeamPosition": "(3)",
+				"visitingTeamWR": "1-0"
+			},
+			{
+				"matchId": "a374c7e7-fee1-4b0a-b637-8b6c78d1499c",
+				"matchNumber": 75,
+				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
+				"localTeamId": "a9eb6947-9e84-4d26-9f8c-14b3c9692e34",
+				"visitingTeam": "UNAM",
+				"visitingTeamId": "76b0af03-5833-447e-a2f4-2271f7256c7e",
+				"date": "13/02/2027 17:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 75 UNIVERSIDAD MARISTA CAMPUS CIUDAD DE MÉXICO vs UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO",
+				"started": 1,
+				"location": "DEPORTIVO MOCTEZUMA",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(9)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "1-0"
 			}
 		],
@@ -1880,9 +1880,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(5)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(2)",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -1904,9 +1904,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0475482000,-98.2581823000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(1)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(9)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -1928,10 +1928,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(1)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "7c8025dc-6e96-4658-99e3-defcccff9b0c",
@@ -1952,10 +1952,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3701533042,-99.2651447945",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "219c8d64-6152-41bc-91b7-12b2ae05b7ee",
@@ -1976,9 +1976,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3238790000,-99.1880815000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(15)",
+				"localTeamPosition": "(2)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(16)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -2000,9 +2000,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(5)",
+				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -2024,10 +2024,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.7496596078,-98.1019174959",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
+				"localTeamPosition": "(10)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(16)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "b6200a04-a8e6-4519-9014-8c13ec6822eb",
@@ -2048,9 +2048,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(9)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(4)",
+				"visitingTeamPosition": "(6)",
 				"visitingTeamWR": "1-0"
 			}
 		],
@@ -2077,9 +2077,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(7)",
+				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -2101,9 +2101,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(7)",
+				"localTeamPosition": "(1)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -2125,9 +2125,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2781070168,-99.6569049132",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(13)",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -2149,9 +2149,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0000877154,-98.2036444553",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(7)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(8)",
+				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -2173,9 +2173,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5122456252,-96.8894860729",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(3)",
+				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -2197,9 +2197,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4542322665,-99.1685060280",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(16)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(11)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -2221,9 +2221,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
+				"localTeamPosition": "(16)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(1)",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -2245,10 +2245,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(6)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(2)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "e4f5dce7-ad2f-4799-8b09-3d4eef79836c",
@@ -2269,9 +2269,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(6)",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "0-1"
 			}
 		],
@@ -2298,10 +2298,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "e811a218-8f94-4191-baad-b1185453c64f",
@@ -2322,10 +2322,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(5)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(16)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "b98dc95d-f99f-4dc9-b981-e161b0b7d461",
@@ -2346,10 +2346,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(16)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "b176e985-0de7-46e8-b16a-4ab0e5ed47f2",
@@ -2370,9 +2370,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3238790000,-99.1880815000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(1)",
+				"localTeamPosition": "(2)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -2394,9 +2394,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3701533042,-99.2651447945",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(5)",
+				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -2418,9 +2418,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
+				"localTeamPosition": "(8)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(9)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -2442,10 +2442,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(6)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(1)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "619c7601-1131-4ffa-8ee7-7aaae6a40f90",
@@ -2466,9 +2466,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(3)",
+				"localTeamPosition": "(5)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(15)",
+				"visitingTeamPosition": "(16)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -2490,9 +2490,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=18.7496596078,-98.1019174959",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(8)",
+				"localTeamPosition": "(10)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(2)",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -2514,10 +2514,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(9)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "0-1"
 			}
 		],
 		"id": "890a8f1f-c9e5-4461-b027-b5076112eb66"
@@ -2543,9 +2543,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0475482000,-98.2581823000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(1)",
+				"localTeamPosition": "(3)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(3)",
+				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -2567,10 +2567,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(1)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(2)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "ef47255b-4423-4db2-91cc-b28de66ee0b9",
@@ -2591,9 +2591,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0000877154,-98.2036444553",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(7)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(13)",
+				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -2615,9 +2615,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5122456252,-96.8894860729",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(9)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(8)",
+				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -2639,9 +2639,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4542322665,-99.1685060280",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(16)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(7)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -2663,9 +2663,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2781070168,-99.6569049132",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(14)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(4)",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(6)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -2687,9 +2687,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(15)",
+				"localTeamPosition": "(16)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(6)",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -2711,9 +2711,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.0000877154,-98.2036444553",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
+				"localTeamPosition": "(7)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(3)",
+				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -2735,9 +2735,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4542322665,-99.1685060280",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(16)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(6)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "0-1"
 			},
 			{
@@ -2759,9 +2759,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
+				"localTeamPosition": "(4)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(11)",
+				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-0"
 			}
 		],
@@ -2788,10 +2788,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "0-0"
+				"localTeamPosition": "(1)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "0-1"
 			},
 			{
 				"matchId": "77832eb5-67eb-4ff3-86ae-4e3d57b9e548",
@@ -2812,9 +2812,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
+				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(2)",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -2836,9 +2836,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3701533042,-99.2651447945",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
+				"localTeamPosition": "(14)",
 				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(9)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "0-0"
 			},
 			{
@@ -2860,9 +2860,9 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.3238790000,-99.1880815000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "0-0",
-				"visitingTeamPosition": "(3)",
+				"localTeamPosition": "(2)",
+				"localTeamWR": "1-0",
+				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "1-0"
 			},
 			{
@@ -2884,34 +2884,10 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "1-0"
-			},
-			{
-				"matchId": "1937b690-010c-4e8a-8e80-79ee68d3cdbb",
-				"matchNumber": 118,
-				"localTeam": "IES UNIVERSIDAD",
-				"localTeamId": "55eaae49-77a1-4c03-a877-2e5df1aa4947",
-				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
-				"visitingTeamId": "70b10010-e532-46cc-9ab3-8343e52b9fca",
-				"date": "20/03/2027 15:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 118 INSTITUTO DE ESTUDIOS SUPERIORES DE LA SIERRA vs UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
-				"started": 1,
-				"location": "POLIDEPORTIVO MEXICO",
-				"locationUrl": "http://maps.google.com/maps?daddr=18.7496596078,-98.1019174959",
-				"live": 0,
-				"url": "",
 				"localTeamPosition": "(8)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(3)",
+				"visitingTeamWR": "1-0"
 			},
 			{
 				"matchId": "ecc47648-65ee-450c-86ef-6453681c7309",
@@ -2932,10 +2908,34 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(7)",
+				"localTeamPosition": "(9)",
 				"localTeamWR": "0-1",
-				"visitingTeamPosition": "(5)",
+				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "0-1"
+			},
+			{
+				"matchId": "1937b690-010c-4e8a-8e80-79ee68d3cdbb",
+				"matchNumber": 118,
+				"localTeam": "IES UNIVERSIDAD",
+				"localTeamId": "55eaae49-77a1-4c03-a877-2e5df1aa4947",
+				"visitingTeam": "UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"visitingTeamId": "70b10010-e532-46cc-9ab3-8343e52b9fca",
+				"date": "20/03/2027 15:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 118 INSTITUTO DE ESTUDIOS SUPERIORES DE LA SIERRA vs UNIVERSIDAD LA SALLE NEZAHUALCÓYOTL",
+				"started": 1,
+				"location": "POLIDEPORTIVO MEXICO",
+				"locationUrl": "http://maps.google.com/maps?daddr=18.7496596078,-98.1019174959",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(10)",
+				"localTeamWR": "0-1",
+				"visitingTeamPosition": "(16)",
+				"visitingTeamWR": "0-0"
 			},
 			{
 				"matchId": "cc95c20a-c24f-4b04-8c76-9cd914243236",
@@ -2956,10 +2956,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(4)",
+				"localTeamPosition": "(6)",
 				"localTeamWR": "1-0",
-				"visitingTeamPosition": "(16)",
-				"visitingTeamWR": "0-0"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "0-1"
 			}
 		],
 		"id": "fcb2c147-780e-45fd-ad01-a424f783e04d"
