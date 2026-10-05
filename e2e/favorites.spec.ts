@@ -46,7 +46,7 @@ test("marcar favorito persiste y arma la cuenta regresiva en la home", async ({
 		),
 	).toHaveCount(1);
 
-	// Quitarlo borra la cuenta regresiva.
+	// Quitarlo borra la cuenta regresiva y en su lugar invita a elegir equipo.
 	await page.goto(teamUrl);
 	await hydrated(page);
 	await page.getByRole("button", { name: /favoritos/ }).click();
@@ -55,9 +55,11 @@ test("marcar favorito persiste y arma la cuenta regresiva en la home", async ({
 	await expect(page.locator('[aria-busy="true"]')).toHaveCount(0, {
 		timeout: 15_000,
 	});
-	await expect(page.getByRole("region", { name: "Tus tickets" })).toHaveCount(
-		0,
-	);
+	const prompt = page.getByRole("region", { name: "Tus tickets" });
+	await expect(prompt.getByLabel("Buscar equipo")).toBeVisible({
+		timeout: 15_000,
+	});
+	await expect(prompt.locator(`a[href*="/match/"]`)).toHaveCount(0);
 });
 
 test("en la jornada, el partido del favorito se resalta y se anuncia", async ({
