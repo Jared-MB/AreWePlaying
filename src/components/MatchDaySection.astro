@@ -1,4 +1,5 @@
 ---
+import DivisionLabel from "@/components/DivisionLabel.astro";
 import WeekMatches from "@/components/WeekMatches.astro";
 
 import type { Match } from "@/types/match";
@@ -33,6 +34,11 @@ const {
 const tournamentSlug = getTournamentSlug(tournament);
 const headingId = `${idPrefix}-${tournamentSlug}`;
 const Heading = `h${headingLevel}` as const;
+// Bajo un título de sección (nivel 3) el encabezado del torneo es menor y no
+// enlaza: el enlace visible es "Ver más", para no repetir el mismo destino.
+const isNested = headingLevel === 3;
+const Title = isNested ? "span" : "a";
+const titleProps = isNested ? {} : { href: `/${tournamentSlug}/` };
 ---
 
 <section aria-labelledby={headingId} class="relative">
@@ -41,25 +47,22 @@ const Heading = `h${headingLevel}` as const;
   >
     <Heading
       id={headingId}
-      class="flex min-w-0 flex-wrap items-baseline gap-x-4 gap-y-1 scroll-mt-8"
+      class="flex min-w-0 flex-wrap items-center gap-x-4 gap-y-1 scroll-mt-[calc(var(--page-header-h,0px)+1rem)]"
     >
-      <a
-        href={`/${tournamentSlug}/`}
-        class="font-mono text-3xl font-bold uppercase tracking-tight md:text-4xl hover:underline"
-      >
-        División {tournament.division}
-      </a>
-      <span
-        class="font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground"
-      >
-        {tournament.category}
-        {tournament.conference ? ` · ${tournament.conference}` : null}
-        {subtitle ? ` · ${subtitle}` : null}
-      </span>
+      <Title {...titleProps} class:list={[!isNested && "hover:underline"]}>
+        <DivisionLabel tournament={tournament} size="md" />
+      </Title>
+      {
+        subtitle ? (
+          <span class="font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground">
+            {subtitle}
+          </span>
+        ) : null
+      }
     </Heading>
     <a
       href={`/${tournamentSlug}/`}
-      class="shrink-0 whitespace-nowrap hover:underline"
+      class="touch-hitbox shrink-0 whitespace-nowrap hover:underline"
     >
       Ver más
       {

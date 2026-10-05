@@ -1,0 +1,84 @@
+---
+import type { Tournament } from "@/types/tournament";
+
+interface Props {
+  tournament: Pick<Tournament, "division" | "category" | "conference">;
+  /** lg: talón del boleto de la portada · md: encabezado de jornada · sm: pie de tarjeta. */
+  size?: "lg" | "md" | "sm";
+  class?: string;
+}
+
+const { tournament, size = "md", class: className } = Astro.props;
+
+// Un solo nombre para la división en toda la portada: ficha "DIV. + número",
+// rama y, si la hay, conferencia. El número va en pixel como en los boletos.
+const CHIP = {
+  lg: "min-w-14 flex-col border-r-2 border-dashed border-highlight-foreground/40 px-3",
+  md: "size-12 flex-col rounded-sm",
+  sm: "h-6 gap-1 rounded-sm px-1.5",
+};
+const NUMERAL = {
+  lg: "text-3xl",
+  md: "text-2xl",
+  sm: "text-xs",
+};
+const NAME = {
+  lg: "text-lg",
+  md: "text-lg",
+  sm: "text-sm",
+};
+const NAME_BOX = {
+  lg: "flex-col justify-center gap-1 py-3 pr-3 pl-3 md:pr-4",
+  md: "flex-col justify-center gap-0.5",
+  sm: "items-baseline gap-x-1.5",
+};
+const ROOT = {
+  lg: "items-stretch",
+  md: "items-center gap-3",
+  sm: "items-center gap-2",
+};
+const isCompact = size === "sm";
+---
+
+<span
+  class:list={[
+    "flex min-w-0",
+    ROOT[size],
+    className,
+  ]}
+>
+  <span
+    class:list={[
+      "flex shrink-0 items-center justify-center bg-primary font-pixel font-bold leading-none text-highlight-foreground",
+      CHIP[size],
+    ]}
+    translate="no"
+  >
+    <span class="sr-only">División </span>
+    <span aria-hidden="true" class="text-xs tracking-wider">DIV.</span>
+    <span class={NUMERAL[size]}>{tournament.division}</span>
+  </span>
+  <span
+    class:list={[
+      "flex min-w-0",
+      NAME_BOX[size],
+    ]}
+  >
+    <span class:list={[NAME[size], "font-bold uppercase leading-tight"]}>
+      {tournament.category}
+    </span>
+    {
+      tournament.conference ? (
+        <span
+          class:list={[
+            "uppercase text-muted-foreground",
+            isCompact ? "text-xs" : "text-sm",
+          ]}
+        >
+          {isCompact ? "· " : null}
+          {tournament.conference}
+        </span>
+      ) : null
+    }
+  </span>
+</span>

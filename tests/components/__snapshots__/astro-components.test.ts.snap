@@ -5,9 +5,12 @@ exports[`MatchDaySection con subtítulo y h3 1`] = `
 <section aria-labelledby="next-division-i-varonil">
   <header>
     <h3 id="next-division-i-varonil">
-      <a href="/division-i-varonil/">
-        "División I"
-      "Varonil · sábado 26 de septiembre"
+      [sr-only]
+        "División"
+      "DIV."
+      "I"
+      "Varonil"
+      "sábado 26 de septiembre"
     <a href="/division-i-varonil/">
       "Ver más"
       [sr-only]
@@ -42,9 +45,7 @@ exports[`MatchDaySection con subtítulo y h3 1`] = `
             <dt>
               "Cancha"
             <dd>
-              "-"
-              [sr-only]
-                "Por definir"
+              "Por definir"
             <dt>
               "Estado"
             <dd>
@@ -378,8 +379,10 @@ exports[`TodayMatches con partidos hoy 1`] = `
   <section aria-labelledby="today-division-i-varonil">
     <header>
       <h3 id="today-division-i-varonil">
-        <a href="/division-i-varonil/">
-          "División I"
+        [sr-only]
+          "División"
+        "DIV."
+        "I"
         "Varonil"
       <a href="/division-i-varonil/">
         "Ver más"
@@ -501,9 +504,7 @@ exports[`TodayMatches con partidos hoy 1`] = `
               <dt>
                 "Cancha"
               <dd>
-                "-"
-                [sr-only]
-                  "Por definir"
+                "Por definir"
               <dt>
                 "Estado"
               <dd>
@@ -520,9 +521,13 @@ exports[`TodayMatches sin partidos hoy cae a la próxima jornada 1`] = `
   <section aria-labelledby="next-division-ii-femenil-centro">
     <header>
       <h3 id="next-division-ii-femenil-centro">
-        <a href="/division-ii-femenil-centro/">
-          "División II"
-        "Femenil · Centro · martes 29 de septiembre"
+        [sr-only]
+          "División"
+        "DIV."
+        "II"
+        "Femenil"
+        "Centro"
+        "martes 29 de septiembre"
       <a href="/division-ii-femenil-centro/">
         "Ver más"
         [sr-only]
@@ -605,9 +610,12 @@ exports[`TodayMatches sin partidos hoy cae a la próxima jornada 1`] = `
   <section aria-labelledby="next-division-i-varonil">
     <header>
       <h3 id="next-division-i-varonil">
-        <a href="/division-i-varonil/">
-          "División I"
-        "Varonil · sábado 3 de octubre"
+        [sr-only]
+          "División"
+        "DIV."
+        "I"
+        "Varonil"
+        "sábado 3 de octubre"
       <a href="/division-i-varonil/">
         "Ver más"
         [sr-only]
@@ -658,7 +666,11 @@ exports[`TopPerformers 1`] = `
 <section aria-labelledby="top-division-i-varonil">
   <header>
     <h3 id="top-division-i-varonil">
-      "Div. I Varonil"
+      [sr-only]
+        "División"
+      "DIV."
+      "I"
+      "Varonil"
     <a href="/division-i-varonil/teams/">
       "Tabla →"
   <ol>
@@ -667,7 +679,6 @@ exports[`TopPerformers 1`] = `
         <img alt="" src="/logos/AAAAAAAA-AAAA-4AAA-8AAA-000000000001/aaaaaaa2-0000-4000-8000-000000000002.avif">
         "UV"
         "3-0"
-        "+50 dif"
         [sr-only]
           "Posición"
         "1"
@@ -676,7 +687,6 @@ exports[`TopPerformers 1`] = `
         <img alt="" src="/logos/AAAAAAAA-AAAA-4AAA-8AAA-000000000001/aaaaaaa1-0000-4000-8000-000000000001.avif">
         "UP MÉXICO"
         "1-1"
-        "+20 dif"
         [sr-only]
           "Posición"
         "2"
@@ -685,14 +695,17 @@ exports[`TopPerformers 1`] = `
         "TEC"
         "TEC. DE MTY (CEM)"
         "1-1"
-        "+10 dif"
         [sr-only]
           "Posición"
         "3"
 <section aria-labelledby="top-division-ii-femenil-centro">
   <header>
     <h3 id="top-division-ii-femenil-centro">
-      "Div. II Femenil"
+      [sr-only]
+        "División"
+      "DIV."
+      "II"
+      "Femenil"
       "· Centro"
     <a href="/division-ii-femenil-centro/teams/">
       "Tabla →"
@@ -732,9 +745,7 @@ exports[`WeekMatches: los tres estados; una sede con link inseguro se muestra co
           <dt>
             "Cancha"
           <dd>
-            "-"
-            [sr-only]
-              "Por definir"
+            "Por definir"
           <dt>
             "Estado"
           <dd>

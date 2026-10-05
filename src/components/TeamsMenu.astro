@@ -13,7 +13,9 @@ const groups = await getTeamsByTournament();
   <a
     href="/teams"
     data-teams-menu-trigger
-    class="group inline-flex h-9 items-center gap-2 rounded-md px-4 text-sm font-bold uppercase tracking-wider touch-manipulation outline-none transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 data-open:bg-primary data-open:text-primary-foreground"
+    aria-controls="teams-menu-panel"
+    aria-expanded="false"
+    class="group touch-hitbox inline-flex h-9 items-center gap-2 rounded-md px-4 text-sm font-bold uppercase tracking-wider touch-manipulation outline-none transition-colors hover:bg-primary hover:text-highlight-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50 data-open:bg-primary data-open:text-highlight-foreground"
   >
     Equipos
     <ChevronDown
@@ -208,6 +210,7 @@ const groups = await getTeamsByTournament();
     }
 
     $trigger.toggleAttribute("data-open", open);
+    $trigger.setAttribute("aria-expanded", String(open));
     $panel.hidden = !open;
 
     // Al cerrar el buscador se limpia para que el menú abra completo la próxima vez.
