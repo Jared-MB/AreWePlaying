@@ -16,13 +16,16 @@ const description =
 
 <Layout title={title} description={description}>
   <div class="mx-auto flex w-full max-w-7xl flex-col gap-10">
+    <div
+      class="flex flex-col gap-4 border-b border-line/70 pb-4 md:flex-row md:items-end md:justify-between md:gap-8"
+    >
     <h1
-      class="border-b border-line/70 pb-4 font-mono text-4xl font-bold uppercase tracking-tight md:text-6xl"
+      class="min-w-0 font-mono text-4xl font-bold uppercase tracking-tight md:text-6xl"
     >
       Todos los equipos
     </h1>
 
-    <search class="md:hidden">
+    <search class="w-full md:max-w-sm md:shrink-0">
       <form action="/teams" class="flex items-center gap-3">
         <label for="teams-search" class="sr-only">Buscar equipo</label>
         <div
@@ -51,6 +54,7 @@ const description =
       >
       </p>
     </search>
+    </div>
 
     <p data-teams-empty hidden class="text-base">
       Ningún equipo coincide con “<span data-teams-query></span>”.
@@ -206,9 +210,7 @@ const description =
     const $input = document.querySelector<HTMLInputElement>(
       "[data-teams-search]",
     );
-    // En escritorio el campo está oculto (ahí se busca desde el menú "Equipos"):
-    // no se filtra la lista sin que se vea por qué.
-    if (!$input?.checkVisibility()) return;
+    if (!$input) return;
 
     const query = new URLSearchParams(window.location.search).get(PARAM) ?? "";
     $input.value = query;

@@ -5,11 +5,15 @@
   >
     Are We Playing?
   </span>
-  <span
-    data-active="false"
-    id="are-we-playing"
-    class="hidden data-[active=true]:inline-block text-5xl font-bold uppercase md:text-7xl text-primary"
-  >
-    Yes!!
-  </span>
+  {/* La portada contesta con los favoritos (slot "answer"); las páginas de torneo
+    sólo encienden el "Yes!!" cuando juega un favorito en la jornada. */}
+  <slot name="answer">
+    <span
+      data-active="false"
+      id="are-we-playing"
+      class="hidden data-[active=true]:inline-block text-5xl font-bold uppercase md:text-7xl text-primary"
+    >
+      Yes!!
+    </span>
+  </slot>
 </h1>

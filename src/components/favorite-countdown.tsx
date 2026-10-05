@@ -1,3 +1,4 @@
+import { SECTION_HEADING_CLASS } from "@/constants/typography";
 import { readFavorites } from "@/utils/favorites";
 import type { NextTeamMatch } from "@/utils/get-next-matches";
 import { ChevronLeft, ChevronRight, MapPin, Star } from "lucide-preact";
@@ -25,6 +26,9 @@ const NAV_BUTTON =
 const TICKET_LABEL =
 	"text-xs font-bold uppercase tracking-wider text-muted-foreground";
 
+const TICKET_STUB =
+	"order-first flex items-center justify-center gap-2 border-dashed border-background bg-primary px-4 text-xs font-bold uppercase tracking-wider text-highlight-foreground max-md:border-b-2 md:flex-col md:border-r-2";
+
 function getParts(remaining: number) {
 	const left = Math.max(remaining, 0);
 
@@ -45,6 +49,61 @@ function describe(remaining: number) {
 }
 
 /**
+ * Primera visita: sin favoritos no hay cuenta regresiva, así que el mismo lugar
+ * enseña cómo conseguirla, en una sola fila para no empujar los partidos. El
+ * formulario manda la búsqueda a /teams, que ya filtra por `?equipo=`, y
+ * funciona sin JavaScript.
+ */
+function FavoritesPrompt() {
+	return (
+		<section aria-labelledby="favorite-countdown" className="mb-8">
+			<form
+				action="/teams"
+				className="flex flex-col gap-3 rounded-lg bg-surface p-4 ring-1 ring-line/45 md:flex-row md:items-center md:gap-6"
+			>
+				<div className="min-w-0 md:flex-1">
+					<h2
+						id="favorite-countdown"
+						className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider"
+					>
+						<Star
+							className="size-4 shrink-0 fill-favorite-strong text-favorite-strong"
+							aria-hidden="true"
+						/>
+						Tus tickets
+					</h2>
+					<p className="mt-1 text-sm text-pretty text-muted-foreground">
+						Elige tu equipo y verás aquí su cuenta regresiva. Márcalo con
+						“Agregar a favoritos”.
+					</p>
+				</div>
+				<div className="flex gap-2 md:w-80">
+					<label htmlFor="favorites-search" className="sr-only">
+						Buscar equipo
+					</label>
+					<input
+						id="favorites-search"
+						type="text"
+						name="equipo"
+						enterkeyhint="search"
+						autoComplete="off"
+						spellcheck={false}
+						placeholder="Buscar equipo…"
+						className="h-11 min-w-0 flex-1 rounded-md border-2 border-line bg-background px-3 text-base font-bold uppercase tracking-wider placeholder:font-normal placeholder:normal-case placeholder:text-muted-foreground"
+					/>
+					<button
+						type="submit"
+						className="h-11 cursor-pointer rounded-md bg-foreground px-4 text-sm font-bold uppercase tracking-wider text-background transition-[opacity] hover:opacity-90"
+					>
+						Buscar
+					</button>
+				</div>
+			</form>
+		</section>
+	);
+}
+
+/**
  * Cuenta regresiva al próximo partido de los equipos favoritos. Los favoritos
  * sólo existen en localStorage, así que el servidor manda el próximo partido de
  * cada equipo y aquí se filtra el que le toca a esta persona.
@@ -55,6 +114,7 @@ export default function FavoriteCountdown({
 	matchesByTeam: Record<string, NextTeamMatch>;
 }) {
 	const [matches, setMatches] = useState<NextTeamMatch[]>([]);
+	const [hasFavorites, setHasFavorites] = useState<boolean>();
 	const [now, setNow] = useState(() => Date.now());
 	const [frontId, setFrontId] = useState<string>();
 	const [dragX, setDragX] = useState(0);
@@ -93,6 +153,7 @@ export default function FavoriteCountdown({
 			.toSorted((a, b) => a.startsAt - b.startsAt);
 
 		setMatches(next);
+		setHasFavorites(favorites.length > 0);
 		// El siguiente frame ya tiene la tarjeta pintada y el alto definitivo;
 		// en una pestaña en segundo plano rAF no corre, de ahí el respaldo.
 		requestAnimationFrame(settle);
@@ -109,7 +170,11 @@ export default function FavoriteCountdown({
 	}, [matches.length]);
 
 	const pending = matches.filter((match) => match.startsAt > now);
-	if (pending.length === 0) return null;
+	// Sin ningún favorito se invita a elegir uno; con favoritos que ya no tienen
+	// partido próximo no hay nada que mostrar.
+	if (pending.length === 0) {
+		return hasFavorites === false ? <FavoritesPrompt /> : null;
+	}
 
 	// Se guarda el partido del frente (no un índice): `pending` se encoge solo
 	// cuando un partido empieza.
@@ -185,10 +250,10 @@ export default function FavoriteCountdown({
 			<div className="mb-6 flex items-center justify-between gap-4">
 				<h2
 					id="favorite-countdown"
-					className="flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground"
+					className={`flex items-center gap-2 whitespace-nowrap ${SECTION_HEADING_CLASS}`}
 				>
 					<Star
-						className="size-4 shrink-0 fill-favorite-strong text-favorite-strong"
+						className="size-5 shrink-0 fill-favorite-strong text-favorite-strong"
 						aria-hidden="true"
 					/>
 					Tus tickets
@@ -197,7 +262,7 @@ export default function FavoriteCountdown({
 				{total > 1 ? (
 					<div className="flex items-center gap-2">
 						<span
-							className="mr-1 font-mono text-xs font-bold tabular-nums text-muted-foreground"
+							className="mr-1 whitespace-nowrap font-mono text-xs font-bold tabular-nums text-muted-foreground max-sm:hidden"
 							aria-hidden="true"
 						>
 							{frontIndex + 1} / {total}
@@ -297,7 +362,7 @@ export default function FavoriteCountdown({
 												<div className="font-pixel text-2xl font-bold tabular-nums @md:text-3xl @xl:text-5xl">
 													{String(part.value).padStart(2, "0")}
 												</div>
-												<div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+												<div className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
 													{part.label}
 												</div>
 											</div>
@@ -348,10 +413,7 @@ export default function FavoriteCountdown({
 								</div>
 
 								{/* Talón de color: arriba como banda en móvil, a la izquierda en escritorio. */}
-								<div
-									aria-hidden="true"
-									className="order-first flex items-center justify-center gap-2 border-dashed border-background bg-primary px-4 text-xs font-bold uppercase tracking-wider text-highlight-foreground max-md:border-b-2 md:flex-col md:border-r-2"
-								>
+								<div aria-hidden="true" className={TICKET_STUB}>
 									<Star className="size-4 shrink-0 fill-current" />
 									<span className="md:rotate-180 md:[writing-mode:vertical-rl]">
 										Favorito

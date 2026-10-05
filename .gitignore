@@ -39,3 +39,6 @@ __pycache__/
 *.py[cod]
 .venv/
 .ruff_cache/
+
+# impeccable generated critiques
+.impeccable/critique/

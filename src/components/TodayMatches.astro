@@ -1,6 +1,7 @@
 ---
 import FavoriteCountdown from "@/components/favorite-countdown.tsx";
 import MatchDaySection from "@/components/MatchDaySection.astro";
+import { SECTION_HEADING_CLASS } from "@/constants/typography";
 
 import { getNextMatchByTeam, getNextMatches } from "@/utils/get-next-matches";
 import { getTodayMatches } from "@/utils/get-today-matches";
@@ -19,8 +20,7 @@ const todayMatches = await getTodayMatches();
 const nextMatchByTeam = await getNextMatchByTeam();
 const nextMatches = todayMatches.length > 0 ? [] : await getNextMatches();
 
-const sectionTitle =
-  "font-mono text-sm font-bold uppercase tracking-wider text-muted-foreground";
+const emptyTitle = "font-mono text-lg font-bold uppercase tracking-wider";
 ---
 
 {
@@ -28,7 +28,7 @@ const sectionTitle =
     favoritos se envuelve en un <astro-island> inline que no recibiría el
     margen, y además desaparece cuando no hay favoritos. */
 }
-<div class="mt-4">
+<div>
   <FavoriteCountdown matchesByTeam={nextMatchByTeam} client:load />
 
   {
@@ -53,7 +53,7 @@ const sectionTitle =
       </section>
     ) : nextMatches.length > 0 ? (
       <section aria-labelledby="next-matches">
-        <h2 id="next-matches" class={sectionTitle}>
+        <h2 id="next-matches" class:list={["mb-2", SECTION_HEADING_CLASS]}>
           Próximos partidos
         </h2>
         <div class="space-y-12">
@@ -75,7 +75,7 @@ const sectionTitle =
         aria-labelledby="no-matches"
         class="rounded-md bg-surface p-6 shadow-xs"
       >
-        <h2 id="no-matches" class={sectionTitle}>
+        <h2 id="no-matches" class={emptyTitle}>
           Sin partidos programados
         </h2>
         <p class="mt-2 text-sm">

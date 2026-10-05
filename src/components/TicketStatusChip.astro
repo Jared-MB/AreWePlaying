@@ -1,4 +1,8 @@
 ---
+import CircleCheck from "@lucide/astro/icons/circle-check";
+import Clock from "@lucide/astro/icons/clock";
+import Radio from "@lucide/astro/icons/radio";
+
 import type { TicketStatus } from "@/utils/build-ticket";
 
 interface Props {
@@ -7,16 +11,24 @@ interface Props {
 }
 
 const { status, class: className } = Astro.props;
+
+// El estado no depende sólo del color: cada uno lleva su ícono junto al texto.
+const Icon = {
+  "EN CURSO": Radio,
+  "NO INICIADO": Clock,
+  COMPLETADO: CircleCheck,
+}[status];
 ---
 
 <span
   class:list={[
-    "inline-block rounded-md border border-line/70 px-2.5 py-1 text-xs font-bold uppercase tracking-wider group-data-[active=true]:border-highlight-foreground/20",
+    "inline-flex items-center gap-1.5 rounded-md border border-line/70 px-2.5 py-1 text-xs font-bold uppercase tracking-wider group-data-[active=true]:border-highlight-foreground/20",
     status === "NO INICIADO"
       ? "bg-muted text-muted-foreground group-data-[active=true]:bg-highlight-chip group-data-[active=true]:text-highlight-chip-foreground"
-      : "bg-primary text-primary-foreground group-data-[active=true]:bg-highlight-chip-strong group-data-[active=true]:text-highlight-chip-strong-foreground",
+      : "bg-primary text-highlight-foreground group-data-[active=true]:bg-highlight-chip-strong group-data-[active=true]:text-highlight-chip-strong-foreground",
     className,
   ]}
 >
+  <Icon aria-hidden="true" class="size-3.5 shrink-0" />
   {status}
 </span>
