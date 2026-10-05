@@ -250,7 +250,7 @@ export default function FavoriteCountdown({
 			<div className="mb-6 flex items-center justify-between gap-4">
 				<h2
 					id="favorite-countdown"
-					className={`flex items-center gap-2 ${SECTION_HEADING_CLASS}`}
+					className={`flex items-center gap-2 whitespace-nowrap ${SECTION_HEADING_CLASS}`}
 				>
 					<Star
 						className="size-5 shrink-0 fill-favorite-strong text-favorite-strong"
@@ -262,7 +262,7 @@ export default function FavoriteCountdown({
 				{total > 1 ? (
 					<div className="flex items-center gap-2">
 						<span
-							className="mr-1 font-mono text-xs font-bold tabular-nums text-muted-foreground"
+							className="mr-1 whitespace-nowrap font-mono text-xs font-bold tabular-nums text-muted-foreground max-sm:hidden"
 							aria-hidden="true"
 						>
 							{frontIndex + 1} / {total}

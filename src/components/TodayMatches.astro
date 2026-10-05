@@ -28,7 +28,7 @@ const emptyTitle = "font-mono text-lg font-bold uppercase tracking-wider";
     favoritos se envuelve en un <astro-island> inline que no recibiría el
     margen, y además desaparece cuando no hay favoritos. */
 }
-<div class="mt-4">
+<div>
   <FavoriteCountdown matchesByTeam={nextMatchByTeam} client:load />
 
   {

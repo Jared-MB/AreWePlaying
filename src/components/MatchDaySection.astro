@@ -6,6 +6,7 @@ import type { Match } from "@/types/match";
 import type { Tournament } from "@/types/tournament";
 import type { Week } from "@/types/week";
 import { getTournamentSlug } from "@/utils/tournament-slug";
+import { SECTION_LINK_CLASS } from "@/constants/typography";
 
 interface Props {
   tournament: Tournament;
@@ -43,7 +44,7 @@ const titleProps = isNested ? {} : { href: `/${tournamentSlug}/` };
 
 <section aria-labelledby={headingId} class="relative">
   <header
-    class="sticky top-(--page-header-h,0px) z-15 mb-6 -mx-3 flex items-baseline justify-between gap-4 bg-background px-4 py-4"
+    class="sticky top-(--page-header-h,0px) z-15 mb-6 -mx-3 flex items-center justify-between gap-4 bg-background px-4 py-4"
   >
     <Heading
       id={headingId}
@@ -62,7 +63,7 @@ const titleProps = isNested ? {} : { href: `/${tournamentSlug}/` };
     </Heading>
     <a
       href={`/${tournamentSlug}/`}
-      class="touch-hitbox shrink-0 whitespace-nowrap hover:underline"
+      class={SECTION_LINK_CLASS}
     >
       Ver más
       {

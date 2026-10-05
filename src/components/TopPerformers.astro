@@ -5,6 +5,7 @@ import { teamInitials } from "@/utils/get-match-card";
 import { getTopTeams } from "@/utils/get-top-teams";
 import { getTournamentSlug } from "@/utils/tournament-slug";
 import { getTeamSlug } from "@/utils/team-slug";
+import { SECTION_LINK_CLASS } from "@/constants/typography";
 
 const topTeams = await getTopTeams();
 
@@ -36,7 +37,7 @@ const CREST_SIZE = ["size-14", "size-11", "size-11"];
             </h3>
             <a
               href={`/${tournamentSlug}/teams/`}
-              class="shrink-0 touch-hitbox text-xs font-bold uppercase tracking-wider text-foreground hover:underline dark:text-primary"
+              class={SECTION_LINK_CLASS}
             >
               Tabla →
             </a>
