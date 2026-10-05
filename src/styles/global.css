@@ -14,8 +14,8 @@
 	--primary-foreground: oklch(1 0 0);
 	--secondary: oklch(0.9276 0.0058 264.5313);
 	--secondary-foreground: oklch(0 0 0);
-	--muted: oklch(0.967 0.0029 264.5419);
-	--muted-foreground: oklch(0.551 0.0234 264.3637);
+	--muted: oklch(0.972 0 0);
+	--muted-foreground: oklch(0.48 0 0);
 	--accent: oklch(0.9299 0.0334 272.7879);
 	--accent-foreground: oklch(0.2781 0.0296 256.848);
 	--destructive: oklch(0.6368 0.2078 25.3313);
@@ -37,9 +37,9 @@
 	--sidebar-border: oklch(0.3458 0.1698 302.0685);
 	--sidebar-ring: oklch(1 0 0);
 	/* Superficies neutras (tarjetas, botones secundarios) y sus bordes. */
-	--surface: oklch(97.913% 0.00011 271.152);
-	--surface-hover: oklch(0.92 0.004 286.32);
-	--line: oklch(0.705 0.015 286.067);
+	--surface: oklch(0.975 0 0);
+	--surface-hover: oklch(0.945 0 0);
+	--line: oklch(0.7 0 0);
 	/* Contenido sobre la tarjeta resaltada (partido del equipo favorito, fondo primary). */
 	--highlight-foreground: oklch(0.141 0.005 285.823);
 	--highlight-chip: oklch(1 0 0);
@@ -155,7 +155,7 @@
 }
 
 .dark {
-	--background: oklch(0.141 0.005 285.823);
+	--background: oklch(0.15 0.012 50);
 	--foreground: oklch(0.985 0 0);
 	--card: oklch(0.21 0.016 293.756);
 	--card-foreground: oklch(0.985 0 0);
@@ -165,8 +165,8 @@
 	--primary-foreground: oklch(1 0 0);
 	--secondary: oklch(0.274 0.006 286.033);
 	--secondary-foreground: oklch(0.985 0 0);
-	--muted: oklch(0.274 0.006 286.033);
-	--muted-foreground: oklch(0.705 0.015 286.067);
+	--muted: oklch(0.28 0.02 50);
+	--muted-foreground: oklch(0.73 0.025 60);
 	--accent: oklch(0.3 0.04 272.788);
 	--accent-foreground: oklch(0.93 0.033 272.788);
 	--destructive: oklch(0.5771 0.2152 27.325);
@@ -187,9 +187,9 @@
 	--sidebar-accent-foreground: oklch(0.985 0 0);
 	--sidebar-border: oklch(0.274 0.006 286.033);
 	--sidebar-ring: oklch(0.6056 0.2189 292.7172);
-	--surface: oklch(0.21 0.006 285.885);
-	--surface-hover: oklch(0.274 0.006 286.033);
-	--line: oklch(0.442 0.017 285.786);
+	--surface: oklch(0.22 0.014 50);
+	--surface-hover: oklch(0.28 0.025 48);
+	--line: oklch(0.45 0.03 50);
 	--highlight-foreground: oklch(0.141 0.005 285.823);
 	--highlight-chip: oklch(0.985 0 0);
 	--highlight-chip-foreground: oklch(0.274 0.006 286.033);
