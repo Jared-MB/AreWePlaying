@@ -11,6 +11,30 @@ const VARIANTS = {
 		"items-center rounded-full border-2 border-current px-4 py-2 font-mono text-sm font-bold uppercase tracking-wider hover:bg-primary-foreground hover:text-banner",
 };
 
+const ACTION_PARAM = "action";
+const ADD_TO_FAVORITE_ACTION = "addToFavorite";
+
+/**
+ * Los equipos ponen `?action=addToFavorite` en el enlace de su perfil. Sólo
+ * agrega (nunca quita) para que abrir el enlace dos veces no deshaga nada, y
+ * limpia el parámetro para que recargar o compartir la URL no lo repita.
+ * Devuelve true si el equipo quedó agregado por esta acción.
+ */
+function consumeAddToFavoriteAction(id: string): boolean {
+	const url = new URL(window.location.href);
+	if (url.searchParams.get(ACTION_PARAM) !== ADD_TO_FAVORITE_ACTION) {
+		return false;
+	}
+
+	url.searchParams.delete(ACTION_PARAM);
+	window.history.replaceState(window.history.state, "", url);
+
+	const favorites = readFavorites();
+	if (favorites.includes(id)) return false;
+
+	return writeFavorites([...favorites, id]);
+}
+
 export default function FavoriteButton({
 	id,
 	variant = "surface",
@@ -19,6 +43,11 @@ export default function FavoriteButton({
 	variant?: keyof typeof VARIANTS;
 }) {
 	const [isFavorite, setIsFavorite] = useState(false);
+
+	const notifyAdded = () =>
+		toast(<span>Se agregó a favoritos</span>, {
+			icon: <Star className="fill-favorite-strong size-4" />,
+		});
 
 	const toggleFavorite = () => {
 		// Se relee el almacenamiento en vez de confiar en el estado: otra pestaña
@@ -36,23 +65,18 @@ export default function FavoriteButton({
 		}
 
 		setIsFavorite(next);
-		toast(
-			next ? (
-				<span>Se agregó a favoritos</span>
-			) : (
-				<span>Se quitó de favoritos</span>
-			),
-			{
-				icon: next ? (
-					<Star className="fill-favorite-strong size-4" />
-				) : (
-					<StarOff className="fill-favorite-strong size-4" />
-				),
-			},
-		);
+		if (next) {
+			notifyAdded();
+			return;
+		}
+
+		toast(<span>Se quitó de favoritos</span>, {
+			icon: <StarOff className="fill-favorite-strong size-4" />,
+		});
 	};
 
 	useEffect(() => {
+		if (consumeAddToFavoriteAction(id)) notifyAdded();
 		setIsFavorite(readFavorites().includes(id));
 	}, []);
 
