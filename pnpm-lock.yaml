@@ -34,6 +34,9 @@ importers:
       '@tailwindcss/vite':
         specifier: 4.3.3
         version: 4.3.3(vite@8.2.2(@types/node@20.19.22)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.20.6))
+      '@vercel/analytics':
+        specifier: 2.0.1
+        version: 2.0.1(@preact/compat@18.3.2(preact@10.29.8))
       astro:
         specifier: 7.2.8
         version: 7.2.8(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@20.19.22)(@vercel/functions@3.9.5(ws@8.21.0))(jiti@2.7.0)(tsx@4.20.6)
