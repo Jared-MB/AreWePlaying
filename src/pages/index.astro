@@ -12,9 +12,22 @@ import TeamsMenu from "@/components/TeamsMenu.astro";
 import { Toaster } from "@/components/sonner";
 import DivisionLabel from "@/components/DivisionLabel.astro";
 import ExternalLink from "@lucide/astro/icons/external-link";
-import { SECTION_HEADING_CLASS } from "@/constants/typography";
+import {
+  SECTION_HEADING_CLASS,
+  SECTION_LINK_CLASS,
+} from "@/constants/typography";
+import FavoriteAnswer, {
+  FAVORITE_ANSWER_DETAIL_ID,
+  TEAM_ANSWERS_DATA_ID,
+} from "@/components/favorite-answer";
+import { getTeamAnswers } from "@/utils/get-team-answers";
 
 const tournaments = getTournaments();
+// `<` escapado para que ningún nombre pueda cerrar el <script> que lo lleva.
+const teamAnswersJson = JSON.stringify(await getTeamAnswers()).replaceAll(
+  "<",
+  "\\u003c",
+);
 
 // Los datos son una copia: se muestra la fecha de la más reciente para no
 // aparentar que los marcadores son en vivo.
@@ -53,7 +66,35 @@ const snapshotDate = Number.isFinite(snapshotTime)
     <div
       class="container mx-auto px-6 md:px-4 pt-8 md:pt-12 flex flex-col gap-6 md:gap-12"
     >
-      <AreWePlaying />
+      <div id="favorite-answer" class="flex flex-col gap-5">
+        <AreWePlaying>
+          <FavoriteAnswer slot="answer" client:load />
+        </AreWePlaying>
+        <div
+          id={FAVORITE_ANSWER_DETAIL_ID}
+          class="flex flex-col items-start gap-4 empty:hidden"
+        />
+      </div>
+      <script
+        is:inline
+        type="application/json"
+        id={TEAM_ANSWERS_DATA_ID}
+        set:html={teamAnswersJson}
+      />
+      <script is:inline>
+        // Antes del primer pintado: si hay favoritos, la isla reserva el lugar
+        // de la respuesta junto al H1 para que no brinque al hidratar. La llave
+        // debe coincidir con LOCAL_STORAGE_FAVORITES_KEY.
+        try {
+          const favorites = JSON.parse(
+            localStorage.getItem("favorites") || "[]",
+          );
+          if (Array.isArray(favorites) && favorites.length > 0) {
+            document.getElementById("favorite-answer").dataset.hasFavorites =
+              "";
+          }
+        } catch {}
+      </script>
       <hr />
     </div>
     <main
@@ -66,26 +107,24 @@ const snapshotDate = Number.isFinite(snapshotTime)
           aria-label="Divisiones"
           class="scroll-mt-(--page-header-h,0px)"
         >
-          {
-            (
-              // biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista
-              <ul
-                role="list"
-                class="grid md:grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4"
-              >
-                {tournaments.map((t) => (
-                  <li class="ticket-edge">
-                    <a
-                      href={`/${getTournamentSlug(t)}`}
-                      class="ticket-notch-x flex h-full min-h-20 overflow-hidden rounded-md bg-surface transition-[background-color] [--notch:8px] hover:bg-surface-hover focus-visible:outline-offset-[-3px]"
-                    >
-                      <DivisionLabel tournament={t} size="lg" class="w-full" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )
-          }
+          <ul
+            // biome-ignore lint/a11y/noRedundantRoles: sin bullets Safari deja de anunciar la lista
+            role="list"
+            class="grid md:grid-cols-2 gap-3 md:gap-6 lg:grid-cols-4"
+          >
+            {
+              tournaments.map((t) => (
+                <li class="ticket-edge">
+                  <a
+                    href={`/${getTournamentSlug(t)}`}
+                    class="ticket-notch-x flex h-full min-h-20 overflow-hidden rounded-md bg-surface transition-[background-color] [--notch:8px] hover:bg-surface-hover focus-visible:outline-offset-[-3px]"
+                  >
+                    <DivisionLabel tournament={t} size="lg" class="w-full" />
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
         </nav>
         <p class="text-sm text-muted-foreground text-pretty">
           {snapshotDate ? `Datos de la Liga ABE al ${snapshotDate}. ` : null}{
@@ -139,7 +178,7 @@ const snapshotDate = Number.isFinite(snapshotTime)
               href="https://2025-2026.areweplaying.com"
               target="_blank"
               rel="noreferrer noopener"
-              class="touch-hitbox inline-flex items-center gap-1.5 text-sm hover:underline"
+              class:list={[SECTION_LINK_CLASS, "inline-flex items-center gap-1.5"]}
               >Ver temporada anterior<ExternalLink
                 aria-hidden="true"
                 class="size-4"
