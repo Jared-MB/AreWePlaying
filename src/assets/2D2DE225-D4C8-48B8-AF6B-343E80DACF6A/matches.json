@@ -167,7 +167,7 @@
 				"localTeamPosition": "(12)",
 				"localTeamWR": "0-1",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "1-0"
+				"visitingTeamWR": "2-0"
 			},
 			{
 				"matchId": "4604548e-e5b5-4230-9fe3-047835a0d521",
@@ -189,7 +189,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(7)",
-				"localTeamWR": "0-1",
+				"localTeamWR": "0-2",
 				"visitingTeamPosition": "(6)",
 				"visitingTeamWR": "1-0"
 			}
@@ -206,21 +206,21 @@
 				"visitingTeam": "BUAP",
 				"visitingTeamId": "4b95f88b-ec91-40d7-b2d0-08c9485b3183",
 				"date": "06/10/2026 14:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
+				"startTime": "06/10/2026 14:00",
+				"endTime": "06/10/2026 16:00",
+				"localTeamPoints": "89",
+				"visitingTeamPoints": "49",
+				"period": "CUARTO 4",
 				"name": "PARTIDO 9 UNIVERSIDAD ANÁHUAC CAMPUS PUEBLA vs BENEMERITA UNIVERSIDAD AUTÓNOMA DE PUEBLA",
-				"started": 1,
+				"started": 0,
 				"location": "-",
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "1-0",
+				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "0-1"
+				"visitingTeamWR": "0-2"
 			},
 			{
 				"matchId": "7605dcfb-29ba-453c-b2fd-0dd98de09f73",
@@ -439,7 +439,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(7)",
-				"localTeamWR": "0-1",
+				"localTeamWR": "0-2",
 				"visitingTeamPosition": "(11)",
 				"visitingTeamWR": "0-1"
 			},
@@ -513,7 +513,7 @@
 				"localTeamPosition": "(4)",
 				"localTeamWR": "1-0",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "1-0"
+				"visitingTeamWR": "2-0"
 			},
 			{
 				"matchId": "f68a3774-ff19-4a12-9d96-da70b677a318",
@@ -588,7 +588,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "1-0",
+				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "0-0"
 			},
@@ -662,7 +662,7 @@
 				"localTeamPosition": "(12)",
 				"localTeamWR": "0-1",
 				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "0-1"
+				"visitingTeamWR": "0-2"
 			},
 			{
 				"matchId": "007939a1-7a3c-4e06-bc79-257738c45c53",
@@ -859,7 +859,7 @@
 				"localTeamPosition": "(2)",
 				"localTeamWR": "1-0",
 				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "0-1"
+				"visitingTeamWR": "0-2"
 			},
 			{
 				"matchId": "1b5df22c-19e2-4033-85f7-a447cebea1ac",
@@ -958,7 +958,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "1-0",
+				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "1-0"
 			},
@@ -1006,7 +1006,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(7)",
-				"localTeamWR": "0-1",
+				"localTeamWR": "0-2",
 				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "1-0"
 			},
@@ -1253,7 +1253,7 @@
 				"localTeamPosition": "(5)",
 				"localTeamWR": "1-0",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "1-0"
+				"visitingTeamWR": "2-0"
 			}
 		],
 		"id": "30c472ff-eb28-4a89-a2b7-4a0849b06243"
@@ -1280,7 +1280,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "1-0",
+				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "0-1"
 			},
@@ -1328,7 +1328,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(7)",
-				"localTeamWR": "0-1",
+				"localTeamWR": "0-2",
 				"visitingTeamPosition": "(16)",
 				"visitingTeamWR": "0-0"
 			},
@@ -1479,7 +1479,7 @@
 				"localTeamPosition": "(13)",
 				"localTeamWR": "0-0",
 				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "0-1"
+				"visitingTeamWR": "0-2"
 			},
 			{
 				"matchId": "5dedf1b3-2b63-4694-a566-ed293ba89f32",
@@ -1551,7 +1551,7 @@
 				"localTeamPosition": "(16)",
 				"localTeamWR": "0-0",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "1-0"
+				"visitingTeamWR": "2-0"
 			}
 		],
 		"id": "e15f46c2-8846-45b7-9b24-c10f21722fe8"
@@ -1609,7 +1609,7 @@
 				"localTeamPosition": "(3)",
 				"localTeamWR": "1-0",
 				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "0-1"
+				"visitingTeamWR": "0-2"
 			},
 			{
 				"matchId": "35e79f64-3dcb-462d-abd7-ab9cf0228d78",
@@ -1705,7 +1705,7 @@
 				"localTeamPosition": "(10)",
 				"localTeamWR": "0-1",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "1-0"
+				"visitingTeamWR": "2-0"
 			}
 		],
 		"id": "24d28a38-0781-4b5c-a17c-68201ac0585f"
@@ -1732,7 +1732,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "1-0",
+				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "0-0"
 			},
@@ -1931,7 +1931,7 @@
 				"localTeamPosition": "(15)",
 				"localTeamWR": "0-0",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "1-0"
+				"visitingTeamWR": "2-0"
 			},
 			{
 				"matchId": "7c8025dc-6e96-4658-99e3-defcccff9b0c",
@@ -2003,7 +2003,7 @@
 				"localTeamPosition": "(8)",
 				"localTeamWR": "0-1",
 				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "0-1"
+				"visitingTeamWR": "0-2"
 			},
 			{
 				"matchId": "15d5ebc3-cce3-423d-929b-3ce9bc140871",
@@ -2102,7 +2102,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "1-0",
+				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "0-1"
 			},
@@ -2150,7 +2150,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(7)",
-				"localTeamWR": "0-1",
+				"localTeamWR": "0-2",
 				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "0-1"
 			},
@@ -2397,7 +2397,7 @@
 				"localTeamPosition": "(14)",
 				"localTeamWR": "0-0",
 				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "0-1"
+				"visitingTeamWR": "0-2"
 			},
 			{
 				"matchId": "e6891532-8b36-415b-b3e7-a82f2da7c25a",
@@ -2445,7 +2445,7 @@
 				"localTeamPosition": "(6)",
 				"localTeamWR": "1-0",
 				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "1-0"
+				"visitingTeamWR": "2-0"
 			},
 			{
 				"matchId": "619c7601-1131-4ffa-8ee7-7aaae6a40f90",
@@ -2568,7 +2568,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "1-0",
+				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "1-0"
 			},
@@ -2592,7 +2592,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(7)",
-				"localTeamWR": "0-1",
+				"localTeamWR": "0-2",
 				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-0"
 			},
@@ -2712,7 +2712,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(7)",
-				"localTeamWR": "0-1",
+				"localTeamWR": "0-2",
 				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "1-0"
 			},
@@ -2789,7 +2789,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(1)",
-				"localTeamWR": "1-0",
+				"localTeamWR": "2-0",
 				"visitingTeamPosition": "(11)",
 				"visitingTeamWR": "0-1"
 			},
@@ -2911,7 +2911,7 @@
 				"localTeamPosition": "(9)",
 				"localTeamWR": "0-1",
 				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "0-1"
+				"visitingTeamWR": "0-2"
 			},
 			{
 				"matchId": "1937b690-010c-4e8a-8e80-79ee68d3cdbb",
