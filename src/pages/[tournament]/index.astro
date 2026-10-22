@@ -11,6 +11,7 @@ import {
 } from "@/utils/tournament-slug";
 import { getWeeks } from "@/utils/get-weeks";
 import { getWeekSlug } from "@/utils/week-slug";
+import { getTournamentSearchLabel, pageTitle } from "@/utils/seo";
 
 export function getStaticPaths() {
   return getTournaments().map((t) => ({
@@ -31,12 +32,20 @@ const [matches, weeks] = await Promise.all([
 
 const week = getCurrentWeek(weeks) ?? weeks[0];
 const weekMatches = matches.find((m) => m.id === week?.id)?.data ?? [];
+
+const searchLabel = getTournamentSearchLabel(tournament);
+const title = pageTitle(
+  "Calendario y resultados de básquetbol",
+  `Liga ABE ${searchLabel}`,
+);
+const description = `Horarios, sedes y resultados de básquetbol de la liga ABE ${searchLabel}, temporada ${tournament.season}: ${week ? `${week.week.toLowerCase()}, ` : ""}todas las jornadas y tabla de posiciones.`;
 ---
 
 <TournamentLayout
   tournament={tournament}
   weekSlug={week && getWeekSlug(week)}
-  description={`Partidos de la ${week.week.toLowerCase()}`}
+  title={title}
+  description={description}
 >
   <WeekMatches
     matches={weekMatches}

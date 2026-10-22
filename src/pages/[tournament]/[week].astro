@@ -11,6 +11,8 @@ import {
 import { getMatches } from "@/utils/get-matches";
 import { getWeeks } from "@/utils/get-weeks";
 import { getWeekBySlug, getWeekSlug } from "@/utils/week-slug";
+import { formatLeagueDay, leagueDateToEpoch } from "@/utils/league-date";
+import { getTournamentSearchLabel, pageTitle } from "@/utils/seo";
 
 export async function getStaticPaths() {
   const params = getTournaments().map(async (t) => {
@@ -43,12 +45,37 @@ const weekMatches = matches.find((m) => m.id === week?.id)?.data ?? [];
 // respaldo que la portada del torneo: antes de que arranque, cuenta la primera.
 const currentWeek = getCurrentWeek(weeks) ?? weeks[0];
 const isCurrentWeek = !!week && currentWeek?.id === week.id;
+
+// "SEMANA 5" → "Semana 5", como se escribe en un buscador.
+const weekLabel = week
+  ? week.week.charAt(0) + week.week.slice(1).toLowerCase()
+  : undefined;
+const searchLabel = getTournamentSearchLabel(tournament);
+// La fecha de inicio va en el título: es lo que se busca ("liga abe 28 sep").
+const weekStart =
+  week &&
+  new Intl.DateTimeFormat("es-MX", {
+    timeZone: "America/Mexico_City",
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  })
+    .format(leagueDateToEpoch(week.date))
+    .replaceAll(".", "");
+const title = pageTitle(
+  weekLabel ? `${weekLabel} (${weekStart})` : "",
+  `Liga ABE ${searchLabel}`,
+);
+const description = week
+  ? `Partidos de la ${week.week.toLowerCase()} (desde el ${formatLeagueDay(week.date)}) de la liga ABE de básquetbol ${searchLabel}: calendario, horarios, sedes y resultados de cada partido.`
+  : undefined;
 ---
 
 <TournamentLayout
   tournament={tournament}
   weekSlug={weekSlug}
-  description={week && `Partidos de la ${week.week.toLowerCase()}`}
+  title={title}
+  description={description}
 >
   <WeekMatches
     matches={weekMatches}

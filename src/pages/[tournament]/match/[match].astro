@@ -28,6 +28,11 @@ import { es } from "date-fns/locale";
 import MatchHeroCourt from "@/components/MatchHeroCourt.astro";
 import { getLogoBackground } from "@/utils/get-logo-background";
 import type { MatchHero } from "@/utils/match-hero";
+import {
+  buildMatchJsonLd,
+  getTournamentSearchLabel,
+  pageTitle,
+} from "@/utils/seo";
 
 export async function getStaticPaths() {
   const perTournament = getTournaments().map(async (t) => {
@@ -187,15 +192,48 @@ const hero: MatchHero = {
   visiting: heroVisiting,
 };
 
-const title = `${match.localTeam} vs ${match.visitingTeam}${hasScore ? ` ${match.localTeamPoints}-${match.visitingTeamPoints}` : ""} | Are We Playing?`;
-const description = `${match.localTeam} vs ${match.visitingTeam} · ${longDate}${rawTime ? ` a las ${rawTime}` : ""} · ${venue}. ${tournamentLabel}.`;
+const matchup = `${match.localTeam} vs ${match.visitingTeam}`;
+const score = hasScore
+  ? ` ${match.localTeamPoints}-${match.visitingTeamPoints}`
+  : "";
+const searchLabel = getTournamentSearchLabel(tournament);
+// La fecha distingue la ida de la vuelta: mismos equipos, mismo torneo.
+const title = pageTitle(`${matchup}${score}`, card.dateLabel, searchLabel);
+const lead =
+  status === "finished"
+    ? `Resultado final: ${match.localTeam} ${match.localTeamPoints}-${match.visitingTeamPoints} ${match.visitingTeam}.`
+    : `${matchup}: horario, sede y resultado.`;
+const hasVenue = venue !== "Por definir";
+const description = `${lead} Liga ABE de básquetbol ${searchLabel}${week ? `, ${week.week.toLowerCase()}` : ""}: ${longDate}${rawTime ? `, ${rawTime} h` : ""} · ${hasVenue ? venue : "sede por definir"}.`;
+
+const image = `/${tournamentSlug}/match/${Astro.params.match}/og.png`;
+const jsonLd = buildMatchJsonLd({
+  match,
+  tournament,
+  url: new URL(Astro.url.pathname.replace(/\/$/, ""), Astro.site).href,
+  image: new URL(image, Astro.site).href,
+  venue: hasVenue ? venue : null,
+  venueUrl,
+  home: {
+    name: match.localTeam,
+    fullName: localStats?.name,
+    url: new URL(heroLocal.href, Astro.site).href,
+  },
+  away: {
+    name: match.visitingTeam,
+    fullName: visitingStats?.name,
+    url: new URL(heroVisiting.href, Astro.site).href,
+  },
+});
 ---
 
 <Layout
   tournamentSlug={tournamentSlug}
   title={title}
   description={description}
-  image={`/${tournamentSlug}/match/${Astro.params.match}/og.png`}
+  image={image}
+  imageAlt={`Tarjeta del partido ${matchup}${score}: ${card.tournamentLabel}, ${card.dateLabel}.`}
+  jsonLd={jsonLd}
 >
   <div class="mx-auto w-full max-w-5xl">
     <BackLink

@@ -9,21 +9,15 @@ import { getCurrentWeek } from "@/utils/get-current-week";
 import type { Tournament } from "@/types/tournament";
 import AreWePlaying from "@/components/AreWePlaying.astro";
 import SelectDivision from "@/components/SelectDivision.astro";
+import type { Props as HeadProps } from "./HeadlessLayout.astro";
 
-interface Props {
+interface Props extends HeadProps {
   tournament: Tournament;
   /** Slug de la jornada activa, p. ej. "semana-1". */
   weekSlug?: string;
-  title?: string;
-  description?: string;
-  image?: string;
-  icon?: {
-    href?: string;
-    type?: string;
-  };
 }
 
-const { tournament, weekSlug, description, title, image, icon } = Astro.props;
+const { tournament, weekSlug, ...headProps } = Astro.props;
 
 // Las URLs usan el slug; los archivos de datos siguen indexados por UUID.
 const tournamentSlug = getTournamentSlug(tournament);
@@ -46,21 +40,9 @@ const menTournament = tournamentsByConference.find(
 );
 
 const weeks = await getWeeks(tournamentId);
-
-// Se arma aquí y no en el template para no meter "undefined" en la descripción
-// cuando la página no manda `description` o el torneo no existe.
-const tournamentLabel = `División ${tournament.division} - ${tournament.category}${tournament.conference ? ` (${tournament.conference})` : ""}`;
-const pageDescription =
-  [description, tournamentLabel].filter(Boolean).join(" | ") || undefined;
 ---
 
-<Layout
-  tournamentSlug={tournamentSlug}
-  title={title}
-  description={pageDescription}
-  image={image}
-  icon={icon}
->
+<Layout tournamentSlug={tournamentSlug} {...headProps}>
   <AreWePlaying />
   <div>
     <div class="space-y-6 mb-6">

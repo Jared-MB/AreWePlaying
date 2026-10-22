@@ -21,6 +21,8 @@ import FavoriteAnswer, {
   TEAM_ANSWERS_DATA_ID,
 } from "@/components/favorite-answer";
 import { getTeamAnswers } from "@/utils/get-team-answers";
+import { SITE_URL } from "@/constants/site";
+import { SITE_NAME, buildWebSiteJsonLd } from "@/utils/seo";
 
 const tournaments = getTournaments();
 // `<` escapado para que ningún nombre pueda cerrar el <script> que lo lleva.
@@ -42,7 +44,10 @@ const snapshotDate = Number.isFinite(snapshotTime)
   : null;
 ---
 
-<HeadlessLayout>
+<HeadlessLayout
+  title={`${SITE_NAME} | Calendario y resultados de básquetbol de la liga ABE`}
+  jsonLd={buildWebSiteJsonLd(`${SITE_URL}/`)}
+>
   <div class="flex flex-col">
     <header
       data-page-header

@@ -4,14 +4,15 @@ import Search from "@lucide/astro/icons/search";
 import Layout from "@/layouts/Layout.astro";
 import { getTeamsByTournament } from "@/utils/get-teams-by-tournament";
 import { normalizeSearch } from "@/utils/normalize-search";
+import { CURRENT_SEASON } from "@/constants/season";
+import { pageTitle } from "@/utils/seo";
 
 // Directorio de todos los equipos de la temporada, una sección por torneo, al
 // estilo de la página de equipos de la NBA.
 const groups = await getTeamsByTournament();
 
-const title = "Equipos | Are We Playing?";
-const description =
-  "Todos los equipos de la liga ABE en esta temporada, agrupados por división y rama.";
+const title = pageTitle("Equipos de la liga ABE");
+const description = `Todos los equipos de básquetbol de la liga ABE en la temporada ${CURRENT_SEASON}, por división y rama: calendario, resultados y estadísticas de cada uno.`;
 ---
 
 <Layout title={title} description={description}>

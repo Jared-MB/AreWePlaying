@@ -15,6 +15,14 @@ import ShareButton from "@/components/share-button.tsx";
 import { getTeamLogo } from "@/utils/get-team-logo";
 import { getLogoColor } from "@/utils/get-logo-color";
 import { getTeamStats, type TeamStats } from "@/utils/team-stats";
+import {
+  buildTeamJsonLd,
+  getTournamentSearchLabel,
+  pageTitle,
+  toTitleCase,
+} from "@/utils/seo";
+import { getUpcomingMatches } from "@/utils/get-upcoming-matches";
+import { formatLeagueDay, leagueDateToEpoch } from "@/utils/league-date";
 
 export async function getStaticPaths() {
   const params = getTournaments().map(async (t) => {
@@ -49,6 +57,31 @@ if (!team) {
 }
 
 const stats = getTeamStats(team);
+const searchLabel = getTournamentSearchLabel(tournament);
+const fullName =
+  team.name && team.name !== team.shortName ? toTitleCase(team.name) : null;
+// Antes de su primer partido el récord 0-0 no dice nada.
+const hasPlayed = team.wins + team.losses > 0;
+// El sitio se reconstruye cada noche, así que el próximo partido sigue vigente.
+const [nextMatch] = (
+  await getUpcomingMatches({ tournamentId, teamId: team.id })
+).toSorted((a, b) => leagueDateToEpoch(a.date) - leagueDateToEpoch(b.date));
+const nextRival =
+  nextMatch &&
+  (nextMatch.localTeamId === team.id
+    ? nextMatch.visitingTeam
+    : nextMatch.localTeam);
+const description = [
+  `Calendario, horarios y resultados de ${team.shortName}${fullName ? ` (${fullName})` : ""} en la liga ABE de básquetbol ${searchLabel}.`,
+  hasPlayed
+    ? `Récord de ${team.wins}-${team.losses}, lugar #${team.position} en la tabla.`
+    : null,
+  nextMatch
+    ? `Próximo partido: vs ${nextRival}, ${formatLeagueDay(nextMatch.date.split(" ")[0])}.`
+    : null,
+]
+  .filter(Boolean)
+  .join(" ");
 const logo = getTeamLogo({ tournamentId, teamId: team.id });
 // El color del escudo es el primario de toda la página del equipo (encabezado,
 // boletos, filtros); sin escudo (o sin color en él) se queda el color de la marca.
@@ -123,8 +156,20 @@ const statColumns = [
 
 <Layout
   tournamentSlug={tournamentSlug}
-  title={`Calendario | ${team.shortName} | Are We Playing?`}
-  description={`Calendario de partidos de basketball de ${team.shortName} en la liga ABE ${tournament.category} División ${tournament.division} ${tournament.conference ? `(${tournament.conference})` : ""}.`}
+  title={pageTitle(
+    team.shortName,
+    "Calendario y resultados",
+    `Liga ABE ${searchLabel}`,
+  )}
+  description={description}
+  jsonLd={buildTeamJsonLd({
+    tournament,
+    name: team.shortName,
+    fullName: team.name,
+    url: new URL(`/${tournamentSlug}/teams/${Astro.params.team}`, Astro.site)
+      .href,
+    logo: logo && new URL(logo, Astro.site).href,
+  })}
   icon={{
     href: `/logos/${tournamentId.toUpperCase()}/${team.id}.avif`,
     type: "image/avif",

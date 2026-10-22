@@ -12,33 +12,21 @@ import { getTournaments } from "@/utils/get-tournaments";
 import { getTournamentSlug } from "@/utils/tournament-slug";
 
 import HeadlessLayout from "./HeadlessLayout.astro";
+import type { Props as HeadProps } from "./HeadlessLayout.astro";
 
-interface Props {
+interface Props extends HeadProps {
   /** Slug del torneo activo, p. ej. "division-ii-femenil-centro". */
   tournamentSlug?: string;
-  title?: string;
-  description?: string;
-  /** Imagen de la tarjeta social. Ruta relativa al sitio o URL absoluta. */
-  image?: string;
-  icon?: {
-    href?: string;
-    type?: string;
-  };
 }
 
-const { tournamentSlug, title, description, image, icon } = Astro.props;
+const { tournamentSlug, ...headProps } = Astro.props;
 
 // Fuera de un torneo (p. ej. /teams) el enlace apunta al primer torneo de la temporada.
 const [firstTournament] = getTournaments();
 const tournamentHref = `/${tournamentSlug ?? (firstTournament && getTournamentSlug(firstTournament))}`;
 ---
 
-<HeadlessLayout
-  title={title}
-  description={description}
-  image={image}
-  icon={icon}
->
+<HeadlessLayout {...headProps}>
   <div class="min-h-screen bg-background">
     <header class="border-b border-line/70 bg-background sticky top-0 z-20">
       <div class="container mx-auto px-4">

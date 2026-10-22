@@ -4,13 +4,14 @@ import Layout from "@/layouts/Layout.astro";
 import { CONTACT_EMAIL, ISSUES_URL, REPO_URL } from "@/constants/site";
 import { getTournaments } from "@/utils/get-tournaments";
 import { getTournamentSlug } from "@/utils/tournament-slug";
+import { pageTitle } from "@/utils/seo";
 
 // Página en lenguaje llano: la versión del README para quien llega desde el
 // aviso del footer y sólo quiere saber de qué va el sitio y si puede confiar
 // en los datos.
 const tournaments = getTournaments();
 
-const title = "Acerca del proyecto | Are We Playing?";
+const title = pageTitle("Acerca del proyecto");
 const description =
   "Qué es Are We Playing?, de dónde salen los datos de la liga ABE, cada cuándo se actualizan y por qué este sitio no es oficial.";
 ---

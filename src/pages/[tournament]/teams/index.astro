@@ -5,6 +5,7 @@ import StandingsLadder from "@/components/StandingsLadder.astro";
 import { getTournamentLabel } from "@/utils/get-match-card";
 import { getStandings } from "@/utils/get-standings";
 import { getTournaments } from "@/utils/get-tournaments";
+import { getTournamentSearchLabel, pageTitle } from "@/utils/seo";
 import {
   getTournamentSlug,
   requireTournamentBySlug,
@@ -24,12 +25,14 @@ const tournamentId = tournament.id.toLowerCase();
 const tournamentLabel = getTournamentLabel(tournament);
 
 const { teams, hasStarted } = await getStandings(tournament);
+
+const searchLabel = getTournamentSearchLabel(tournament);
 ---
 
 <Layout
   tournamentSlug={tournamentSlug}
-  title={`Tabla | ${tournamentLabel} | Are We Playing?`}
-  description={`Tabla de posiciones de la liga ABE: ${tournamentLabel}.`}
+  title={pageTitle("Tabla de posiciones", `Liga ABE ${searchLabel}`)}
+  description={`Tabla de posiciones de la liga ABE de básquetbol ${searchLabel}, temporada ${tournament.season}: victorias, derrotas, porcentaje y lugar de cada equipo.`}
 >
   <div class="mx-auto flex w-full max-w-7xl flex-col gap-6 md:gap-8">
     <div class="flex flex-wrap items-center gap-3 md:hidden">
