@@ -54,6 +54,18 @@ test.describe("URLs viejas con UUID", () => {
 	});
 });
 
+test("un torneo de la temporada pasada redirige a su subdominio", async ({
+	request,
+}) => {
+	const path =
+		"/1a38224c-1577-43eb-b69e-158d80024029/teams/1a4e4b05-4a74-47fd-ad9e-6ca20b4b55a5";
+
+	expect(await redirect(request, path)).toEqual({
+		status: 301,
+		location: `https://2025-2026.areweplaying.com${path}`,
+	});
+});
+
 test("una ruta desconocida responde 404 con la página de no encontrado", async ({
 	page,
 }) => {

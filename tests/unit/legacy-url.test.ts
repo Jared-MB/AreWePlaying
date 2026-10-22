@@ -3,6 +3,8 @@ import { resolveLegacyPath } from "@/utils/legacy-url";
 import { MATCH, T1, T2, T3_OTHER_SEASON, TEAM, WEEK } from "../fixtures";
 
 const UNKNOWN = "deadbeef-0000-4000-8000-000000000000";
+/** Division I Varonil 2025-2026: ya no está en los datos de este despliegue. */
+const PAST_T = "1a38224c-1577-43eb-b69e-158d80024029";
 
 test.each([
 	// Torneo, en cualquier capitalización y con o sin slash final.
@@ -34,6 +36,17 @@ test.each([
 	[`/${T3_OTHER_SEASON}`, null],
 	[`/${UNKNOWN}`, null],
 	[`/${T1}/teams/${TEAM.tec}/extra`, null],
+	// Torneos de temporadas pasadas: el subdominio de la temporada los resuelve.
+	[`/${PAST_T}`, `https://2025-2026.areweplaying.com/${PAST_T}`],
+	[
+		`/${PAST_T.toLowerCase()}/teams/${TEAM.tec}`,
+		`https://2025-2026.areweplaying.com/${PAST_T.toLowerCase()}/teams/${TEAM.tec}`,
+	],
+	[
+		`/${PAST_T}/match/${MATCH(6)}`,
+		`https://2025-2026.areweplaying.com/${PAST_T}/match/${MATCH(6)}`,
+	],
+	[`/${PAST_T}/teams/${TEAM.tec}/extra`, null],
 	// Un torneo de T1 no resuelve equipos de T2.
 	[`/${T1}/teams/${TEAM.uagro}`, null],
 ])("%s → %s", async (pathname, expected) => {
