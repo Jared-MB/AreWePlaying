@@ -37,6 +37,9 @@ export default defineConfig({
 	adapter: vercel({ includeFiles: wasmFiles }),
 	// Base absoluta para las URLs canónicas y de las tarjetas sociales (og/twitter).
 	site: SITE_URL,
+	// Los enlaces internos van sin "/" final; así la canónica, el sitemap y la
+	// URL servida son la misma y Vercel redirige la variante con "/".
+	trailingSlash: "never",
 	// El sitio no usa <Image>, pero con el adaptador `/_image` queda expuesto como
 	// función: sin optimizador no procesa (ni decodifica) imágenes de nadie.
 	image: { service: passthroughImageService() },

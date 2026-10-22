@@ -11,7 +11,7 @@ exports[`MatchDaySection con subtítulo y h3 1`] = `
       "I"
       "Varonil"
       "sábado 26 de septiembre"
-    <a href="/division-i-varonil/">
+    <a href="/division-i-varonil">
       "Ver más"
       [sr-only]
         "de División IVaronil"
@@ -384,7 +384,7 @@ exports[`TodayMatches con partidos hoy 1`] = `
         "DIV."
         "I"
         "Varonil"
-      <a href="/division-i-varonil/">
+      <a href="/division-i-varonil">
         "Ver más"
         [sr-only]
           "de División IVaronil"
@@ -528,7 +528,7 @@ exports[`TodayMatches sin partidos hoy cae a la próxima jornada 1`] = `
         "Femenil"
         "Centro"
         "martes 29 de septiembre"
-      <a href="/division-ii-femenil-centro/">
+      <a href="/division-ii-femenil-centro">
         "Ver más"
         [sr-only]
           "de División IIFemenil"
@@ -616,7 +616,7 @@ exports[`TodayMatches sin partidos hoy cae a la próxima jornada 1`] = `
         "I"
         "Varonil"
         "sábado 3 de octubre"
-      <a href="/division-i-varonil/">
+      <a href="/division-i-varonil">
         "Ver más"
         [sr-only]
           "de División IVaronil"
@@ -671,7 +671,7 @@ exports[`TopPerformers 1`] = `
       "DIV."
       "I"
       "Varonil"
-    <a href="/division-i-varonil/teams/">
+    <a href="/division-i-varonil/teams">
       "Tabla →"
   <ol>
     <li>
@@ -707,7 +707,7 @@ exports[`TopPerformers 1`] = `
       "II"
       "Femenil"
       "· Centro"
-    <a href="/division-ii-femenil-centro/teams/">
+    <a href="/division-ii-femenil-centro/teams">
       "Tabla →"
   "Sin tabla disponible"
 "
