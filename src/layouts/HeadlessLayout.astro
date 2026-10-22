@@ -49,6 +49,19 @@ const socialImageUrl = new URL(icon?.href ?? image, Astro.site ?? Astro.url);
       type={icon?.type ?? "image/svg+xml"}
       href={icon?.href ?? "/favicon.svg"}
     />
+    {
+      // Respaldo raster para navegadores sin favicon SVG y para Google, que pide
+      // múltiplos de 48 px. Las páginas con icono propio (escudo) no lo llevan.
+      icon ? null : (
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="48x48"
+          href="/favicon-48.png"
+        />
+      )
+    }
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalUrl} />
     <title>{title}</title>
 
