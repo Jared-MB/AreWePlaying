@@ -1,0 +1,60 @@
+---
+import Info from "@lucide/astro/icons/info";
+import X from "@lucide/astro/icons/x";
+import { CURRENT_SEASON, LATEST_SEASON } from "@/constants/season";
+import { CURRENT_SEASON_URL } from "@/constants/site";
+---
+
+<aside
+  data-season-banner
+  aria-label="Aviso de temporada archivada"
+  class="relative border-b border-primary/30 bg-primary/10 text-sm"
+>
+  <a
+    href={CURRENT_SEASON_URL}
+    class="group flex min-h-11 items-center justify-center gap-2 px-12 py-2 text-center outline-none focus-visible:ring-[3px] focus-visible:ring-inset focus-visible:ring-ring/50"
+  >
+    <Info class="size-4 shrink-0 text-primary" aria-hidden="true" />
+    <span class="text-pretty">
+      Estás viendo la temporada {CURRENT_SEASON}, que ya terminó.{" "}
+      <span
+        class="font-bold underline decoration-2 underline-offset-4 group-hover:text-primary"
+      >
+        Ir a la temporada {LATEST_SEASON}
+      </span>
+    </span>
+  </a>
+  <button
+    type="button"
+    data-season-banner-dismiss
+    aria-label="Cerrar aviso"
+    class="cursor-pointer absolute right-1 top-1/2 inline-flex size-11 -translate-y-1/2 items-center justify-center rounded-md outline-none hover:bg-primary/20 focus-visible:ring-[3px] focus-visible:ring-ring/50 transition-colors touch-manipulation"
+  >
+    <X class="size-4" aria-hidden="true" />
+  </button>
+</aside>
+
+<script is:inline>
+  // Se cierra por sesión. El ClientRouter vuelve a pintar el banner en cada
+  // navegación, así que este script (inline, se re-ejecuta tras el swap) lo
+  // quita antes del primer pintado; el listener se registra una sola vez.
+  (() => {
+    const KEY = "season-banner-dismissed";
+    const banner = () => document.querySelector("[data-season-banner]");
+    let dismissed = false;
+    try {
+      dismissed = sessionStorage.getItem(KEY) === "1";
+    } catch {}
+    if (dismissed) banner()?.remove();
+
+    if (window.seasonBannerBound) return;
+    window.seasonBannerBound = true;
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest?.("[data-season-banner-dismiss]")) return;
+      try {
+        sessionStorage.setItem(KEY, "1");
+      } catch {}
+      banner()?.remove();
+    });
+  })();
+</script>
