@@ -1,6 +1,9 @@
 import { expect, test } from "@playwright/test";
 import { all, first, matchSlug, teamSlug } from "./data";
 
+const escapeRegExp = (value: string) =>
+	value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 test.beforeEach(({ page }) => {
 	// Una excepción sin atrapar en cualquier página es un fallo.
 	page.on("pageerror", (error) => {
@@ -12,7 +15,7 @@ test("home: título, una entrada por torneo y secciones principales", async ({
 	page,
 }) => {
 	await page.goto("/");
-	await expect(page).toHaveTitle("Are We Playing?");
+	await expect(page).toHaveTitle(/^Are We Playing\? \| .*liga ABE/);
 
 	const divisions = page
 		.getByRole("navigation", { name: "Divisiones" })
@@ -60,7 +63,9 @@ test("home → torneo → tabla → equipo → partido", async ({ page }) => {
 		`/${first.slug}/teams/${teamSlug(team.shortName)}`,
 	);
 	await expect(page).toHaveTitle(
-		`Calendario | ${team.shortName} | Are We Playing?`,
+		new RegExp(
+			`^${escapeRegExp(team.shortName)} · Calendario y resultados · .+ \\| Are We Playing\\?$`,
+		),
 	);
 	// La posición en la tabla va bajo el nombre, junto al récord.
 	await expect(page.getByRole("heading", { level: 1 })).toHaveText(
@@ -106,7 +111,9 @@ test("página de partido: marcador en el título si ya se jugó", async ({
 
 	await page.goto(`/${first.slug}/match/${matchSlug(match)}`);
 	await expect(page).toHaveTitle(
-		`${match.localTeam} vs ${match.visitingTeam} ${match.localTeamPoints}-${match.visitingTeamPoints} | Are We Playing?`,
+		new RegExp(
+			`^${escapeRegExp(`${match.localTeam} vs ${match.visitingTeam} ${match.localTeamPoints}-${match.visitingTeamPoints} · `)}.+ \\| Are We Playing\\?$`,
+		),
 	);
 	await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
 		"content",
@@ -117,4 +124,44 @@ test("página de partido: marcador en el título si ya se jugó", async ({
 test("acerca", async ({ page }) => {
 	await page.goto("/acerca");
 	await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+});
+
+test('SEO: canónica sin "/" final, tarjeta social PNG y datos estructurados', async ({
+	page,
+}) => {
+	const team = first.table[0];
+	await page.goto(`/${first.slug}/teams/${teamSlug(team.shortName)}`);
+
+	await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+		"href",
+		new RegExp(`/${first.slug}/teams/${teamSlug(team.shortName)}$`),
+	);
+	// El escudo es el favicon, pero la tarjeta social sigue siendo la PNG.
+	await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+		"content",
+		/\/og\.png$/,
+	);
+	await expect(page).toHaveTitle(
+		new RegExp(`^${escapeRegExp(team.shortName)} · `),
+	);
+
+	const match = first.matches[0];
+	await page.goto(`/${first.slug}/match/${matchSlug(match)}`);
+	const jsonLd = JSON.parse(
+		(await page.locator('script[type="application/ld+json"]').textContent()) ??
+			"{}",
+	);
+	expect(jsonLd).toMatchObject({
+		"@type": "SportsEvent",
+		name: `${match.localTeam} vs ${match.visitingTeam}`,
+	});
+});
+
+test("SEO: el 404 no se indexa", async ({ page }) => {
+	await page.goto("/esto-no-existe");
+	await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+		"content",
+		"noindex",
+	);
+	await expect(page.locator('link[rel="canonical"]')).toHaveCount(0);
 });
