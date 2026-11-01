@@ -22,7 +22,7 @@
 				"url": "",
 				"localTeamPosition": "(3)",
 				"localTeamWR": "5-1",
-				"visitingTeamPosition": "(12)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "2-3"
 			},
 			{
@@ -44,8 +44,8 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "2-2",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "4-0"
 			},
@@ -98,30 +98,6 @@
 				"visitingTeamWR": "3-3"
 			},
 			{
-				"matchId": "765b6701-b990-4626-ac31-49f7ad6541a6",
-				"matchNumber": 4,
-				"localTeam": "UAGRO",
-				"localTeamId": "db1bb373-e964-4d34-8f52-12f2c3c3b753",
-				"visitingTeam": "IES UNIVERSIDAD",
-				"visitingTeamId": "17d02e28-9d31-4386-9e38-a02fa31899e0",
-				"date": "18/09/2026 19:00",
-				"startTime": "18/09/2026 19:00",
-				"endTime": "18/09/2026 21:00",
-				"localTeamPoints": "86",
-				"visitingTeamPoints": "82",
-				"period": "CUARTO 4",
-				"name": "PARTIDO 4 UNIVERSIDAD AUTÓNOMA DE GUERRERO vs INSTITUTO DE ESTUDIOS SUPERIORES DE LA SIERRA",
-				"started": 0,
-				"location": "GIMNASIO SAUL JIMENEZ SILVERIO",
-				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "4-2",
-				"visitingTeamPosition": "(9)",
-				"visitingTeamWR": "3-3"
-			},
-			{
 				"matchId": "5e5b6702-6369-420c-9c61-266529d82228",
 				"matchNumber": 5,
 				"localTeam": "UNAM",
@@ -144,6 +120,30 @@
 				"localTeamWR": "4-3",
 				"visitingTeamPosition": "(16)",
 				"visitingTeamWR": "1-4"
+			},
+			{
+				"matchId": "765b6701-b990-4626-ac31-49f7ad6541a6",
+				"matchNumber": 4,
+				"localTeam": "UAGRO",
+				"localTeamId": "db1bb373-e964-4d34-8f52-12f2c3c3b753",
+				"visitingTeam": "IES UNIVERSIDAD",
+				"visitingTeamId": "17d02e28-9d31-4386-9e38-a02fa31899e0",
+				"date": "18/09/2026 19:00",
+				"startTime": "18/09/2026 19:00",
+				"endTime": "18/09/2026 21:00",
+				"localTeamPoints": "86",
+				"visitingTeamPoints": "82",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 4 UNIVERSIDAD AUTÓNOMA DE GUERRERO vs INSTITUTO DE ESTUDIOS SUPERIORES DE LA SIERRA",
+				"started": 0,
+				"location": "GIMNASIO SAUL JIMENEZ SILVERIO",
+				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(6)",
+				"localTeamWR": "4-2",
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "3-3"
 			},
 			{
 				"matchId": "04aea827-4ab3-40bf-b560-82c8b015b936",
@@ -188,8 +188,8 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "1-3",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(19)",
 				"visitingTeamWR": "1-6"
 			}
@@ -289,7 +289,7 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2796262803,-99.1745924950",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(17)",
 				"visitingTeamWR": "1-5"
@@ -582,8 +582,8 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "1-3",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "3-3"
 			}
@@ -635,8 +635,8 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "2-2",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(18)",
 				"visitingTeamWR": "1-5"
 			},
@@ -661,32 +661,8 @@
 				"url": "",
 				"localTeamPosition": "(5)",
 				"localTeamWR": "3-0",
-				"visitingTeamPosition": "(12)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "2-3"
-			},
-			{
-				"matchId": "85575dec-08a2-41ab-999f-4ff51a7574d1",
-				"matchNumber": 29,
-				"localTeam": "IES UNIVERSIDAD",
-				"localTeamId": "17d02e28-9d31-4386-9e38-a02fa31899e0",
-				"visitingTeam": "UAEMÉX",
-				"visitingTeamId": "fb4903ff-db4c-4b60-bfd8-0f3d72ac2af9",
-				"date": "09/10/2026 19:00",
-				"startTime": "09/10/2026 19:02",
-				"endTime": "09/10/2026 21:00",
-				"localTeamPoints": "99",
-				"visitingTeamPoints": "67",
-				"period": "CUARTO 4",
-				"name": "PARTIDO 29 INSTITUTO DE ESTUDIOS SUPERIORES DE LA SIERRA vs UNIVERSIDAD AUTÓNOMA DEL ESTADO DE MÉXICO",
-				"started": 0,
-				"location": "POLIDEPORTIVO MEXICO",
-				"locationUrl": "http://maps.google.com/maps?daddr=18.7496596078,-98.1019174959",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(9)",
-				"localTeamWR": "3-3",
-				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "3-2"
 			},
 			{
 				"matchId": "895c2608-88ce-40bf-ac47-7e12984a375a",
@@ -737,6 +713,30 @@
 				"visitingTeamWR": "5-1"
 			},
 			{
+				"matchId": "85575dec-08a2-41ab-999f-4ff51a7574d1",
+				"matchNumber": 29,
+				"localTeam": "IES UNIVERSIDAD",
+				"localTeamId": "17d02e28-9d31-4386-9e38-a02fa31899e0",
+				"visitingTeam": "UAEMÉX",
+				"visitingTeamId": "fb4903ff-db4c-4b60-bfd8-0f3d72ac2af9",
+				"date": "09/10/2026 19:00",
+				"startTime": "09/10/2026 19:02",
+				"endTime": "09/10/2026 21:00",
+				"localTeamPoints": "99",
+				"visitingTeamPoints": "67",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 29 INSTITUTO DE ESTUDIOS SUPERIORES DE LA SIERRA vs UNIVERSIDAD AUTÓNOMA DEL ESTADO DE MÉXICO",
+				"started": 0,
+				"location": "POLIDEPORTIVO MEXICO",
+				"locationUrl": "http://maps.google.com/maps?daddr=18.7496596078,-98.1019174959",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(9)",
+				"localTeamWR": "3-3",
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "3-2"
+			},
+			{
 				"matchId": "ec606fd3-2e25-4740-8c89-f8e47c1a78a8",
 				"matchNumber": 32,
 				"localTeam": "UNIVERSIDAD LA SALLE MÉXICO",
@@ -781,8 +781,8 @@
 				"url": "",
 				"localTeamPosition": "(4)",
 				"localTeamWR": "5-1",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-3"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "9f7bd48d-7255-4451-8b42-81c565b3c268",
@@ -805,8 +805,8 @@
 				"url": "",
 				"localTeamPosition": "(14)",
 				"localTeamWR": "1-4",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "2-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "09db5948-19c2-4247-b95b-d1eb4f6e204b",
@@ -928,7 +928,7 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2796262803,-99.1745924950",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(16)",
 				"visitingTeamWR": "1-4"
@@ -1002,8 +1002,8 @@
 				"url": "",
 				"localTeamPosition": "(15)",
 				"localTeamWR": "1-4",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "2-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "ebae38b6-d327-42a7-8233-3a1936d77ce1",
@@ -1024,8 +1024,8 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "1-3",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(1)",
 				"visitingTeamWR": "6-0"
 			}
@@ -1083,30 +1083,6 @@
 				"visitingTeamWR": "1-4"
 			},
 			{
-				"matchId": "bdb07a79-c7a6-476c-b29f-6c7b9e4e0055",
-				"matchNumber": 49,
-				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
-				"localTeamId": "dcb54516-af3c-400c-8ef4-ec13b97f515f",
-				"visitingTeam": "UIC",
-				"visitingTeamId": "75d38f1f-1213-4019-b259-b26de4fa9830",
-				"date": "23/10/2026 19:00",
-				"startTime": "23/10/2026 19:03",
-				"endTime": "23/10/2026 20:48",
-				"localTeamPoints": "87",
-				"visitingTeamPoints": "82",
-				"period": "CUARTO 4",
-				"name": "PARTIDO 49 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD INTERCONTINENTAL",
-				"started": 0,
-				"location": "-",
-				"locationUrl": "-",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(19)",
-				"localTeamWR": "1-6",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "2-3"
-			},
-			{
 				"matchId": "951d21da-0ab6-4d28-818e-2ad8ac0d0142",
 				"matchNumber": 47,
 				"localTeam": "IES UNIVERSIDAD",
@@ -1129,6 +1105,30 @@
 				"localTeamWR": "3-3",
 				"visitingTeamPosition": "(17)",
 				"visitingTeamWR": "1-5"
+			},
+			{
+				"matchId": "bdb07a79-c7a6-476c-b29f-6c7b9e4e0055",
+				"matchNumber": 49,
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"localTeamId": "dcb54516-af3c-400c-8ef4-ec13b97f515f",
+				"visitingTeam": "UIC",
+				"visitingTeamId": "75d38f1f-1213-4019-b259-b26de4fa9830",
+				"date": "23/10/2026 19:00",
+				"startTime": "23/10/2026 19:03",
+				"endTime": "23/10/2026 20:48",
+				"localTeamPoints": "87",
+				"visitingTeamPoints": "82",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 49 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD INTERCONTINENTAL",
+				"started": 0,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(19)",
+				"localTeamWR": "1-6",
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "6405b3b3-2cce-48b9-a6ae-2bf1e0d3f8d2",
@@ -1221,8 +1221,8 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "2-2",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(6)",
 				"visitingTeamWR": "4-2"
 			}
@@ -1298,7 +1298,7 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2796262803,-99.1745924950",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "3-3"
@@ -1328,30 +1328,6 @@
 				"visitingTeamWR": "1-5"
 			},
 			{
-				"matchId": "86198b76-63c6-4495-ab82-18cf81b8fc79",
-				"matchNumber": 57,
-				"localTeam": "UAGRO",
-				"localTeamId": "db1bb373-e964-4d34-8f52-12f2c3c3b753",
-				"visitingTeam": "BUAP",
-				"visitingTeamId": "91776a12-0c6a-4adb-92ca-5908e412816d",
-				"date": "30/10/2026 18:00",
-				"startTime": "30/10/2026 18:00",
-				"endTime": "30/10/2026 20:00",
-				"localTeamPoints": "77",
-				"visitingTeamPoints": "44",
-				"period": "CUARTO 4",
-				"name": "PARTIDO 57 UNIVERSIDAD AUTÓNOMA DE GUERRERO vs BENEMERITA UNIVERSIDAD AUTÓNOMA DE PUEBLA",
-				"started": 0,
-				"location": "GIMNASIO SAUL JIMENEZ SILVERIO",
-				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(6)",
-				"localTeamWR": "4-2",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "1-4"
-			},
-			{
 				"matchId": "65e1c379-1eec-4878-bd5a-6b4603882d92",
 				"matchNumber": 58,
 				"localTeam": "UNAM",
@@ -1376,6 +1352,30 @@
 				"visitingTeamWR": "4-0"
 			},
 			{
+				"matchId": "86198b76-63c6-4495-ab82-18cf81b8fc79",
+				"matchNumber": 57,
+				"localTeam": "UAGRO",
+				"localTeamId": "db1bb373-e964-4d34-8f52-12f2c3c3b753",
+				"visitingTeam": "BUAP",
+				"visitingTeamId": "91776a12-0c6a-4adb-92ca-5908e412816d",
+				"date": "30/10/2026 18:00",
+				"startTime": "30/10/2026 18:00",
+				"endTime": "30/10/2026 20:00",
+				"localTeamPoints": "77",
+				"visitingTeamPoints": "44",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 57 UNIVERSIDAD AUTÓNOMA DE GUERRERO vs BENEMERITA UNIVERSIDAD AUTÓNOMA DE PUEBLA",
+				"started": 0,
+				"location": "GIMNASIO SAUL JIMENEZ SILVERIO",
+				"locationUrl": "http://maps.google.com/maps?daddr=17.5567282157,-99.5056307316",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(6)",
+				"localTeamWR": "4-2",
+				"visitingTeamPosition": "(14)",
+				"visitingTeamWR": "1-4"
+			},
+			{
 				"matchId": "bfdbfc1b-452b-491f-80e8-b5ec7216eac4",
 				"matchNumber": 60,
 				"localTeam": "UNIVERSIDAD MARISTA CD. DE MÉXICO",
@@ -1383,21 +1383,21 @@
 				"visitingTeam": "UVM CENTRO",
 				"visitingTeamId": "458b349f-ebc9-42c2-a1d7-23b6553e9240",
 				"date": "31/10/2026 17:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
+				"startTime": "31/10/2026 17:00",
+				"endTime": "31/10/2026 19:00",
+				"localTeamPoints": "65",
+				"visitingTeamPoints": "58",
+				"period": "CUARTO 4",
 				"name": "PARTIDO 60 UNIVERSIDAD MARISTA CAMPUS CIUDAD DE MÉXICO vs UNIVERSIDAD DEL VALLE DE MÉXICO CAMPUS CENTRO",
-				"started": 1,
+				"started": 0,
 				"location": "DEPORTIVO MOCTEZUMA",
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "1-3",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "2-2"
+				"localTeamPosition": "(11)",
+				"localTeamWR": "2-3",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "2-3"
 			}
 		],
 		"id": "791b196c-3383-41fb-bf68-1543a6d9cbcc"
@@ -1447,8 +1447,8 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "2-2",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "4-3"
 			},
@@ -1521,7 +1521,7 @@
 				"url": "",
 				"localTeamPosition": "(10)",
 				"localTeamWR": "3-3",
-				"visitingTeamPosition": "(12)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "2-3"
 			},
 			{
@@ -1569,8 +1569,8 @@
 				"url": "",
 				"localTeamPosition": "(14)",
 				"localTeamWR": "1-4",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-3"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "2ed6ff26-fcb3-4fba-b7a0-d0043d68c2c0",
@@ -1668,8 +1668,8 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "1-3",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(18)",
 				"visitingTeamWR": "1-5"
 			},
@@ -1692,7 +1692,7 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2796262803,-99.1745924950",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "5-1"
@@ -1742,8 +1742,8 @@
 				"url": "",
 				"localTeamPosition": "(7)",
 				"localTeamWR": "3-2",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "2-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "cc3ffe30-276d-4ae9-a80a-ac091020dcb8",
@@ -1915,7 +1915,7 @@
 				"url": "",
 				"localTeamPosition": "(1)",
 				"localTeamWR": "6-0",
-				"visitingTeamPosition": "(12)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "2-3"
 			},
 			{
@@ -1937,8 +1937,8 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "2-2",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "5-1"
 			},
@@ -1963,8 +1963,8 @@
 				"url": "",
 				"localTeamPosition": "(15)",
 				"localTeamWR": "1-4",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-3"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "5c0f520b-f6c3-4adb-add7-2efc8dc93ac2",
@@ -2160,8 +2160,8 @@
 				"url": "",
 				"localTeamPosition": "(17)",
 				"localTeamWR": "1-5",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "2-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "9011e8a3-ee02-4275-bf79-c3e833aaa6e1",
@@ -2182,7 +2182,7 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2796262803,-99.1745924950",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "4-0"
@@ -2278,8 +2278,8 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "1-3",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(6)",
 				"visitingTeamWR": "4-2"
 			}
@@ -2333,8 +2333,8 @@
 				"url": "",
 				"localTeamPosition": "(2)",
 				"localTeamWR": "4-0",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-3"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "cca8aff5-3eec-4729-ba4b-b96c001c8ec6",
@@ -2429,8 +2429,8 @@
 				"url": "",
 				"localTeamPosition": "(9)",
 				"localTeamWR": "3-3",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-3"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "2-3"
 			}
 		],
 		"id": "99b1f2b3-21d2-4e52-8f33-76091b7014be"
@@ -2486,30 +2486,6 @@
 				"visitingTeamWR": "1-5"
 			},
 			{
-				"matchId": "faa4ea04-02c1-4530-b2c7-c057eae406ba",
-				"matchNumber": 103,
-				"localTeam": "UPAV TEZIUTLÁN",
-				"localTeamId": "b5d92120-1a4e-4e87-b210-32c95a31a1c5",
-				"visitingTeam": "UAEMÉX",
-				"visitingTeamId": "fb4903ff-db4c-4b60-bfd8-0f3d72ac2af9",
-				"date": "05/02/2027 18:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 103 UNIVERSIDAD POPULAR AUTÓNOMA DE VERACRUZ SEDE TEZIUTLÁN vs UNIVERSIDAD AUTÓNOMA DEL ESTADO DE MÉXICO",
-				"started": 1,
-				"location": "-",
-				"locationUrl": "-",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "1-4",
-				"visitingTeamPosition": "(7)",
-				"visitingTeamWR": "3-2"
-			},
-			{
 				"matchId": "433c39d7-f553-4892-9d69-b4e0d42e55b0",
 				"matchNumber": 102,
 				"localTeam": "UAGRO",
@@ -2532,6 +2508,30 @@
 				"localTeamWR": "4-2",
 				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "4-3"
+			},
+			{
+				"matchId": "faa4ea04-02c1-4530-b2c7-c057eae406ba",
+				"matchNumber": 103,
+				"localTeam": "UPAV TEZIUTLÁN",
+				"localTeamId": "b5d92120-1a4e-4e87-b210-32c95a31a1c5",
+				"visitingTeam": "UAEMÉX",
+				"visitingTeamId": "fb4903ff-db4c-4b60-bfd8-0f3d72ac2af9",
+				"date": "05/02/2027 18:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 103 UNIVERSIDAD POPULAR AUTÓNOMA DE VERACRUZ SEDE TEZIUTLÁN vs UNIVERSIDAD AUTÓNOMA DEL ESTADO DE MÉXICO",
+				"started": 1,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(15)",
+				"localTeamWR": "1-4",
+				"visitingTeamPosition": "(7)",
+				"visitingTeamWR": "3-2"
 			},
 			{
 				"matchId": "7c22e167-c958-4b03-8717-7c73a68eb731",
@@ -2655,8 +2655,8 @@
 				"url": "",
 				"localTeamPosition": "(5)",
 				"localTeamWR": "3-0",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "2-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "13399210-a3a3-49d2-a2df-eb94a8b67d74",
@@ -2725,7 +2725,7 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2796262803,-99.1745924950",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "1-4"
@@ -2751,32 +2751,8 @@
 				"url": "",
 				"localTeamPosition": "(8)",
 				"localTeamWR": "4-3",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-3"
-			},
-			{
-				"matchId": "c25b4f1a-7c80-41d7-ba14-4a5b34cc68e0",
-				"matchNumber": 114,
-				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
-				"localTeamId": "dcb54516-af3c-400c-8ef4-ec13b97f515f",
-				"visitingTeam": "ANÁHUAC PUEBLA",
-				"visitingTeamId": "6e247cb0-f7eb-467d-bbd1-7cb750502a10",
-				"date": "12/02/2027 19:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 114 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD ANÁHUAC CAMPUS PUEBLA",
-				"started": 1,
-				"location": "-",
-				"locationUrl": "-",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(19)",
-				"localTeamWR": "1-6",
-				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "6-0"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "9aaa3400-8a67-403d-959d-6454b395dcb2",
@@ -2801,6 +2777,30 @@
 				"localTeamWR": "1-4",
 				"visitingTeamPosition": "(2)",
 				"visitingTeamWR": "4-0"
+			},
+			{
+				"matchId": "c25b4f1a-7c80-41d7-ba14-4a5b34cc68e0",
+				"matchNumber": 114,
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"localTeamId": "dcb54516-af3c-400c-8ef4-ec13b97f515f",
+				"visitingTeam": "ANÁHUAC PUEBLA",
+				"visitingTeamId": "6e247cb0-f7eb-467d-bbd1-7cb750502a10",
+				"date": "12/02/2027 19:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 114 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD ANÁHUAC CAMPUS PUEBLA",
+				"started": 1,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(19)",
+				"localTeamWR": "1-6",
+				"visitingTeamPosition": "(1)",
+				"visitingTeamWR": "6-0"
 			},
 			{
 				"matchId": "8a7a634d-080a-447d-92ba-091a56405f1f",
@@ -2876,7 +2876,7 @@
 				"url": "",
 				"localTeamPosition": "(18)",
 				"localTeamWR": "1-5",
-				"visitingTeamPosition": "(12)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "2-3"
 			},
 			{
@@ -2898,8 +2898,8 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "2-2",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(16)",
 				"visitingTeamWR": "1-4"
 			},
@@ -3018,8 +3018,8 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "1-3",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "3-2"
 			},
@@ -3071,9 +3071,9 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "2-2",
-				"visitingTeamPosition": "(12)",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "2-3",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "2-3"
 			},
 			{
@@ -3097,8 +3097,8 @@
 				"url": "",
 				"localTeamPosition": "(3)",
 				"localTeamWR": "5-1",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-3"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "faffe0f9-4472-468b-8504-f990c9ba9297",
@@ -3191,7 +3191,7 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2796262803,-99.1745924950",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "1-4"
@@ -3221,30 +3221,6 @@
 				"visitingTeamWR": "4-3"
 			},
 			{
-				"matchId": "953b2e74-335d-4e77-857f-b3ab9528aa35",
-				"matchNumber": 133,
-				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
-				"localTeamId": "dcb54516-af3c-400c-8ef4-ec13b97f515f",
-				"visitingTeam": "UVM CENTRO",
-				"visitingTeamId": "458b349f-ebc9-42c2-a1d7-23b6553e9240",
-				"date": "26/02/2027 19:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 133 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD DEL VALLE DE MÉXICO CAMPUS CENTRO",
-				"started": 1,
-				"location": "-",
-				"locationUrl": "-",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(19)",
-				"localTeamWR": "1-6",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "2-2"
-			},
-			{
 				"matchId": "fbc4ed4a-b272-45c4-b845-cdadd5137bd0",
 				"matchNumber": 132,
 				"localTeam": "IPN",
@@ -3267,6 +3243,30 @@
 				"localTeamWR": "1-4",
 				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "1-4"
+			},
+			{
+				"matchId": "953b2e74-335d-4e77-857f-b3ab9528aa35",
+				"matchNumber": 133,
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"localTeamId": "dcb54516-af3c-400c-8ef4-ec13b97f515f",
+				"visitingTeam": "UVM CENTRO",
+				"visitingTeamId": "458b349f-ebc9-42c2-a1d7-23b6553e9240",
+				"date": "26/02/2027 19:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 133 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD DEL VALLE DE MÉXICO CAMPUS CENTRO",
+				"started": 1,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(19)",
+				"localTeamWR": "1-6",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "03d07aa7-33e8-48a9-8c2c-a604b99c927b",
@@ -3364,8 +3364,8 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "2-2",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "3-3"
 			},
@@ -3462,7 +3462,7 @@
 				"url": "",
 				"localTeamPosition": "(6)",
 				"localTeamWR": "4-2",
-				"visitingTeamPosition": "(12)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "2-3"
 			},
 			{
@@ -3484,8 +3484,8 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "1-3",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(17)",
 				"visitingTeamWR": "1-5"
 			},
@@ -3609,34 +3609,10 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2796262803,-99.1745924950",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "2-3",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-3"
-			},
-			{
-				"matchId": "8e14dccf-caf8-4d8a-8ad5-f94865278dcf",
-				"matchNumber": 149,
-				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
-				"localTeamId": "dcb54516-af3c-400c-8ef4-ec13b97f515f",
-				"visitingTeam": "UVM LOMAS VERDES",
-				"visitingTeamId": "3f8f3f8b-bcc6-45f2-9b52-83eaa9ed1207",
-				"date": "12/03/2027 19:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 149 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD DEL VALLE DE MÉXICO CAMPUS LOMAS VERDES",
-				"started": 1,
-				"location": "-",
-				"locationUrl": "-",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(19)",
-				"localTeamWR": "1-6",
-				"visitingTeamPosition": "(18)",
-				"visitingTeamWR": "1-5"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "7b74a34c-dae0-4719-bcad-7240b3a1c959",
@@ -3661,6 +3637,30 @@
 				"localTeamWR": "1-4",
 				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "1-4"
+			},
+			{
+				"matchId": "8e14dccf-caf8-4d8a-8ad5-f94865278dcf",
+				"matchNumber": 149,
+				"localTeam": "UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"localTeamId": "dcb54516-af3c-400c-8ef4-ec13b97f515f",
+				"visitingTeam": "UVM LOMAS VERDES",
+				"visitingTeamId": "3f8f3f8b-bcc6-45f2-9b52-83eaa9ed1207",
+				"date": "12/03/2027 19:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 149 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD DEL VALLE DE MÉXICO CAMPUS LOMAS VERDES",
+				"started": 1,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(19)",
+				"localTeamWR": "1-6",
+				"visitingTeamPosition": "(18)",
+				"visitingTeamWR": "1-5"
 			},
 			{
 				"matchId": "e47018a8-7d63-49b0-8ba9-dfe29928494c",
@@ -3707,8 +3707,8 @@
 				"url": "",
 				"localTeamPosition": "(10)",
 				"localTeamWR": "3-3",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "2-2"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "5b0701f7-fbe0-4f72-a32f-57471aaf2a18",
@@ -3806,8 +3806,8 @@
 				"locationUrl": "-",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(11)",
-				"localTeamWR": "2-2",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "5-1"
 			},
@@ -3904,7 +3904,7 @@
 				"url": "",
 				"localTeamPosition": "(8)",
 				"localTeamWR": "4-3",
-				"visitingTeamPosition": "(12)",
+				"visitingTeamPosition": "(13)",
 				"visitingTeamWR": "2-3"
 			},
 			{
@@ -3950,8 +3950,8 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.4336442828,-99.0974432130",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "1-3",
+				"localTeamPosition": "(11)",
+				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "3-0"
 			},
@@ -4005,32 +4005,8 @@
 				"url": "",
 				"localTeamPosition": "(1)",
 				"localTeamWR": "6-0",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "2-2"
-			},
-			{
-				"matchId": "b1d62485-cd9b-4359-b725-fe106cfbe0af",
-				"matchNumber": 165,
-				"localTeam": "ANÁHUAC NORTE",
-				"localTeamId": "39b2a280-b8cb-4e49-9561-43c5e6fcfa11",
-				"visitingTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
-				"visitingTeamId": "c9a882a2-e421-4492-8222-21fec963de45",
-				"date": "02/04/2027 14:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 165 UNIVERSIDAD ANÁHUAC MÉXICO NORTE vs UNIVERSIDAD ANÁHUAC VERACRUZ, CAMPUS CÓRDOBA - ORIZABA",
-				"started": 1,
-				"location": "-",
-				"locationUrl": "-",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(17)",
-				"localTeamWR": "1-5",
-				"visitingTeamPosition": "(3)",
-				"visitingTeamWR": "5-1"
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "8f3fd357-db06-4951-832b-dbfb8a8c2366",
@@ -4057,6 +4033,30 @@
 				"visitingTeamWR": "4-3"
 			},
 			{
+				"matchId": "b1d62485-cd9b-4359-b725-fe106cfbe0af",
+				"matchNumber": 165,
+				"localTeam": "ANÁHUAC NORTE",
+				"localTeamId": "39b2a280-b8cb-4e49-9561-43c5e6fcfa11",
+				"visitingTeam": "UNIVERSIDAD ANÁHUAC CÓRDOBA",
+				"visitingTeamId": "c9a882a2-e421-4492-8222-21fec963de45",
+				"date": "02/04/2027 14:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 165 UNIVERSIDAD ANÁHUAC MÉXICO NORTE vs UNIVERSIDAD ANÁHUAC VERACRUZ, CAMPUS CÓRDOBA - ORIZABA",
+				"started": 1,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(17)",
+				"localTeamWR": "1-5",
+				"visitingTeamPosition": "(3)",
+				"visitingTeamWR": "5-1"
+			},
+			{
 				"matchId": "8292d918-f946-42b5-b83c-a8c993329781",
 				"matchNumber": 166,
 				"localTeam": "UIC",
@@ -4075,7 +4075,7 @@
 				"locationUrl": "http://maps.google.com/maps?daddr=19.2796262803,-99.1745924950",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
+				"localTeamPosition": "(13)",
 				"localTeamWR": "2-3",
 				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "3-2"
@@ -4101,8 +4101,8 @@
 				"url": "",
 				"localTeamPosition": "(16)",
 				"localTeamWR": "1-4",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-3"
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "2-3"
 			},
 			{
 				"matchId": "0adc6b2a-9886-4a84-8906-e5c037f5c5fd",
