@@ -4,7 +4,7 @@
 		"division": "I",
 		"category": "Femenil",
 		"finished": false,
-		"updated_at": "2026-11-09T15:17:13.637774+00:00",
+		"updated_at": "2026-11-11T13:37:38.899667+00:00",
 		"season": "2026-2027"
 	},
 	{
@@ -12,7 +12,7 @@
 		"division": "I",
 		"category": "Varonil",
 		"finished": false,
-		"updated_at": "2026-11-09T15:17:14.541967+00:00",
+		"updated_at": "2026-11-11T13:37:39.941270+00:00",
 		"season": "2026-2027"
 	},
 	{
@@ -21,7 +21,7 @@
 		"category": "Femenil",
 		"conference": "Centro",
 		"finished": false,
-		"updated_at": "2026-11-09T15:17:15.700272+00:00",
+		"updated_at": "2026-11-11T13:37:40.615914+00:00",
 		"season": "2026-2027"
 	},
 	{
@@ -30,7 +30,7 @@
 		"category": "Varonil",
 		"conference": "Centro",
 		"finished": false,
-		"updated_at": "2026-11-09T15:17:16.797135+00:00",
+		"updated_at": "2026-11-11T13:37:41.489902+00:00",
 		"season": "2026-2027"
 	}
 ]
