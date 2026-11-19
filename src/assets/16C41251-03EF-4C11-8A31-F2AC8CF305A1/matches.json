@@ -26,30 +26,6 @@
 				"visitingTeamWR": "0-10"
 			},
 			{
-				"matchId": "a6fa638e-8dd9-44cf-8427-69863a7ccdc1",
-				"matchNumber": 6,
-				"localTeam": "UPAEP",
-				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
-				"visitingTeam": "CETYS TIJUANA",
-				"visitingTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
-				"date": "18/09/2026 13:00",
-				"startTime": "18/09/2026 13:30",
-				"endTime": "18/09/2026 15:21",
-				"localTeamPoints": "60",
-				"visitingTeamPoints": "89",
-				"period": "CUARTO 4",
-				"name": "PARTIDO 6 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA",
-				"started": 0,
-				"location": "GIMNASIO \"EL NIDO\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(9)",
-				"localTeamWR": "6-6",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
-			},
-			{
 				"matchId": "cd6ceaca-2363-4b55-862f-4710a796013b",
 				"matchNumber": 7,
 				"localTeam": "INTERAMERICANA",
@@ -74,28 +50,28 @@
 				"visitingTeamWR": "7-3"
 			},
 			{
-				"matchId": "c970c5fe-ccdf-4083-a2e3-fe78628155c6",
-				"matchNumber": 2,
-				"localTeam": "TEC HIDALGO",
-				"localTeamId": "cabd406f-5a61-4453-8a54-640766b87506",
-				"visitingTeam": "ANÁHUAC NORTE",
-				"visitingTeamId": "1fd01df7-224f-49f1-bede-d7493262cc8f",
-				"date": "18/09/2026 16:00",
-				"startTime": "18/09/2026 16:00",
-				"endTime": "18/09/2026 18:00",
+				"matchId": "a6fa638e-8dd9-44cf-8427-69863a7ccdc1",
+				"matchNumber": 6,
+				"localTeam": "UPAEP",
+				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
+				"visitingTeam": "CETYS TIJUANA",
+				"visitingTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
+				"date": "18/09/2026 13:00",
+				"startTime": "18/09/2026 13:30",
+				"endTime": "18/09/2026 15:21",
 				"localTeamPoints": "60",
-				"visitingTeamPoints": "77",
+				"visitingTeamPoints": "89",
 				"period": "CUARTO 4",
-				"name": "PARTIDO 2 TECNOLÓGICO DE MONTERREY CAMPUS HIDALGO vs UNIVERSIDAD ANÁHUAC MÉXICO NORTE",
+				"name": "PARTIDO 6 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA",
 				"started": 0,
-				"location": "ARENA BORREGOS \"AZUL\" HIDALGO",
-				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
+				"location": "GIMNASIO \"EL NIDO\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
-				"visitingTeamPosition": "(4)",
-				"visitingTeamWR": "8-3"
+				"localTeamPosition": "(9)",
+				"localTeamWR": "6-6",
+				"visitingTeamPosition": "(2)",
+				"visitingTeamWR": "8-1"
 			},
 			{
 				"matchId": "608c2e2f-9663-4c0e-8cdc-7d8772cb8e7e",
@@ -119,6 +95,30 @@
 				"localTeamPosition": "(7)",
 				"localTeamWR": "7-5",
 				"visitingTeamPosition": "(3)",
+				"visitingTeamWR": "8-3"
+			},
+			{
+				"matchId": "c970c5fe-ccdf-4083-a2e3-fe78628155c6",
+				"matchNumber": 2,
+				"localTeam": "TEC HIDALGO",
+				"localTeamId": "cabd406f-5a61-4453-8a54-640766b87506",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"visitingTeamId": "1fd01df7-224f-49f1-bede-d7493262cc8f",
+				"date": "18/09/2026 16:00",
+				"startTime": "18/09/2026 16:00",
+				"endTime": "18/09/2026 18:00",
+				"localTeamPoints": "60",
+				"visitingTeamPoints": "77",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 2 TECNOLÓGICO DE MONTERREY CAMPUS HIDALGO vs UNIVERSIDAD ANÁHUAC MÉXICO NORTE",
+				"started": 0,
+				"location": "ARENA BORREGOS \"AZUL\" HIDALGO",
+				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(13)",
+				"localTeamWR": "1-10",
+				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "8-3"
 			},
 			{
@@ -191,7 +191,7 @@
 				"localTeamPosition": "(11)",
 				"localTeamWR": "4-8",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
 			},
 			{
 				"matchId": "71110efd-107c-4f2f-8e3a-c5effa1f390d",
@@ -213,33 +213,9 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "8-3"
-			},
-			{
-				"matchId": "fc54066f-50fb-488b-ae47-c5bca563900d",
-				"matchNumber": 10,
-				"localTeam": "TEC MONTERREY",
-				"localTeamId": "9ca7c63c-1626-4848-8ef2-d7c650af99b8",
-				"visitingTeam": "ANÁHUAC SUR",
-				"visitingTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
-				"date": "19/09/2026 14:00",
-				"startTime": "19/09/2026 14:00",
-				"endTime": "19/09/2026 16:00",
-				"localTeamPoints": "83",
-				"visitingTeamPoints": "30",
-				"period": "CUARTO 4",
-				"name": "PARTIDO 10 TECNOLÓGICO DE MONTERREY CAMPUS MONTERREY vs UNIVERSIDAD ANÁHUAC MÉXICO SUR",
-				"started": 0,
-				"location": "GIMNASIO WELLNESS CENTER",
-				"locationUrl": "http://maps.google.com/maps?daddr=25.6531123000,-100.2878091000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(1)",
-				"localTeamWR": "9-1",
-				"visitingTeamPosition": "(15)",
-				"visitingTeamWR": "0-10"
 			},
 			{
 				"matchId": "e1a13d4b-eaf0-4895-8f4e-f9ddeb62878a",
@@ -264,6 +240,30 @@
 				"localTeamWR": "5-5",
 				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "7-3"
+			},
+			{
+				"matchId": "fc54066f-50fb-488b-ae47-c5bca563900d",
+				"matchNumber": 10,
+				"localTeam": "TEC MONTERREY",
+				"localTeamId": "9ca7c63c-1626-4848-8ef2-d7c650af99b8",
+				"visitingTeam": "ANÁHUAC SUR",
+				"visitingTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
+				"date": "19/09/2026 14:00",
+				"startTime": "19/09/2026 14:00",
+				"endTime": "19/09/2026 16:00",
+				"localTeamPoints": "83",
+				"visitingTeamPoints": "30",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 10 TECNOLÓGICO DE MONTERREY CAMPUS MONTERREY vs UNIVERSIDAD ANÁHUAC MÉXICO SUR",
+				"started": 0,
+				"location": "GIMNASIO WELLNESS CENTER",
+				"locationUrl": "http://maps.google.com/maps?daddr=25.6531123000,-100.2878091000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(1)",
+				"localTeamWR": "9-1",
+				"visitingTeamPosition": "(15)",
+				"visitingTeamWR": "0-10"
 			},
 			{
 				"matchId": "0c620ac2-d1dd-4ba2-815d-d58724036940",
@@ -295,30 +295,6 @@
 	{
 		"data": [
 			{
-				"matchId": "da1bc32a-291e-4dd3-9cc4-8cc8cfb97f48",
-				"matchNumber": 18,
-				"localTeam": "UANL",
-				"localTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
-				"visitingTeam": "INTERAMERICANA",
-				"visitingTeamId": "9ea22708-a1af-4f68-97e6-958985ca7803",
-				"date": "25/09/2026 12:00",
-				"startTime": "25/09/2026 12:05",
-				"endTime": "25/09/2026 13:54",
-				"localTeamPoints": "56",
-				"visitingTeamPoints": "55",
-				"period": "CUARTO 4",
-				"name": "PARTIDO 18 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs UNIVERSIDAD INTERAMERICANA DE PUEBLA",
-				"started": 0,
-				"location": "GIMNASIO \"LUIS E. TODD\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(10)",
-				"localTeamWR": "5-5",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "4-8"
-			},
-			{
 				"matchId": "d618a37f-0ee7-4de2-98b2-a1476127f464",
 				"matchNumber": 16,
 				"localTeam": "UDEM",
@@ -341,6 +317,30 @@
 				"localTeamWR": "3-7",
 				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "8-3"
+			},
+			{
+				"matchId": "da1bc32a-291e-4dd3-9cc4-8cc8cfb97f48",
+				"matchNumber": 18,
+				"localTeam": "UANL",
+				"localTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
+				"visitingTeam": "INTERAMERICANA",
+				"visitingTeamId": "9ea22708-a1af-4f68-97e6-958985ca7803",
+				"date": "25/09/2026 12:00",
+				"startTime": "25/09/2026 12:05",
+				"endTime": "25/09/2026 13:54",
+				"localTeamPoints": "56",
+				"visitingTeamPoints": "55",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 18 UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN vs UNIVERSIDAD INTERAMERICANA DE PUEBLA",
+				"started": 0,
+				"location": "GIMNASIO \"LUIS E. TODD\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=25.7270386000,-100.3134005000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(10)",
+				"localTeamWR": "5-5",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "4-8"
 			},
 			{
 				"matchId": "b4dec5e5-04b1-4c23-b10e-21d50ecbe83b",
@@ -439,30 +439,6 @@
 				"visitingTeamWR": "6-6"
 			},
 			{
-				"matchId": "814c1c18-e935-4fc8-a35e-898975d4135d",
-				"matchNumber": 20,
-				"localTeam": "ANÁHUAC SUR",
-				"localTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
-				"visitingTeam": "UVAQ",
-				"visitingTeamId": "53456a3c-f31c-44e7-9437-7fb8e8a68b78",
-				"date": "26/09/2026 14:00",
-				"startTime": "26/09/2026 14:03",
-				"endTime": "26/09/2026 15:48",
-				"localTeamPoints": "45",
-				"visitingTeamPoints": "54",
-				"period": "CUARTO 4",
-				"name": "PARTIDO 20 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD VASCO DE QUIROGA",
-				"started": 0,
-				"location": "-",
-				"locationUrl": "-",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-10",
-				"visitingTeamPosition": "(14)",
-				"visitingTeamWR": "1-10"
-			},
-			{
 				"matchId": "8527bc6d-0815-4151-9c82-35fff169ee35",
 				"matchNumber": 22,
 				"localTeam": "TEC MONTERREY",
@@ -487,6 +463,30 @@
 				"visitingTeamWR": "4-8"
 			},
 			{
+				"matchId": "814c1c18-e935-4fc8-a35e-898975d4135d",
+				"matchNumber": 20,
+				"localTeam": "ANÁHUAC SUR",
+				"localTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
+				"visitingTeam": "UVAQ",
+				"visitingTeamId": "53456a3c-f31c-44e7-9437-7fb8e8a68b78",
+				"date": "26/09/2026 14:00",
+				"startTime": "26/09/2026 14:03",
+				"endTime": "26/09/2026 15:48",
+				"localTeamPoints": "45",
+				"visitingTeamPoints": "54",
+				"period": "CUARTO 4",
+				"name": "PARTIDO 20 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs UNIVERSIDAD VASCO DE QUIROGA",
+				"started": 0,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(15)",
+				"localTeamWR": "0-10",
+				"visitingTeamPosition": "(14)",
+				"visitingTeamWR": "1-10"
+			},
+			{
 				"matchId": "bccdc127-d17c-447c-b128-5bf64cf1200b",
 				"matchNumber": 15,
 				"localTeam": "TEC HIDALGO",
@@ -506,7 +506,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "5-4"
 			},
@@ -559,7 +559,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
+				"localTeamWR": "8-1",
 				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "1-10"
 			},
@@ -633,7 +633,7 @@
 				"localTeamPosition": "(12)",
 				"localTeamWR": "3-7",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
+				"visitingTeamWR": "1-10"
 			},
 			{
 				"matchId": "97bdecad-1a1a-4aab-88b9-2ceef8d171b4",
@@ -732,7 +732,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
+				"localTeamWR": "8-1",
 				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "8-3"
 			},
@@ -758,7 +758,7 @@
 				"localTeamPosition": "(10)",
 				"localTeamWR": "5-5",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
+				"visitingTeamWR": "1-10"
 			},
 			{
 				"matchId": "f2126fb6-ecdd-49b0-a3eb-bfd050309e00",
@@ -878,7 +878,7 @@
 				"localTeamPosition": "(1)",
 				"localTeamWR": "9-1",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
+				"visitingTeamWR": "1-10"
 			},
 			{
 				"matchId": "d63ab89f-618c-4f91-97b2-6e7b6ef478c5",
@@ -900,7 +900,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
+				"localTeamWR": "8-1",
 				"visitingTeamPosition": "(4)",
 				"visitingTeamWR": "8-3"
 			},
@@ -1025,7 +1025,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-10"
 			},
@@ -1147,7 +1147,7 @@
 				"localTeamPosition": "(5)",
 				"localTeamWR": "7-3",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
+				"visitingTeamWR": "1-10"
 			},
 			{
 				"matchId": "d852c68a-d839-41a0-904d-ac4c1133b3c1",
@@ -1246,7 +1246,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "6-6"
 			},
@@ -1270,7 +1270,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
+				"localTeamWR": "8-1",
 				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "7-3"
 			},
@@ -1294,7 +1294,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(11)",
 				"visitingTeamWR": "4-8"
 			},
@@ -1366,7 +1366,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
+				"localTeamWR": "8-1",
 				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-10"
 			},
@@ -1762,7 +1762,7 @@
 				"localTeamPosition": "(7)",
 				"localTeamWR": "7-5",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
 			},
 			{
 				"matchId": "a12ba12d-31db-4149-b9d3-367ac865328f",
@@ -1808,7 +1808,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(6)",
 				"visitingTeamWR": "7-3"
 			},
@@ -1892,21 +1892,21 @@
 				"visitingTeam": "CETYS TIJUANA",
 				"visitingTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
 				"date": "14/11/2026 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
+				"startTime": "14/11/2026 13:00",
+				"endTime": "14/11/2026 15:00",
+				"localTeamPoints": "79",
+				"visitingTeamPoints": "86",
+				"period": "PRÓRROGA 5",
 				"name": "PARTIDO 76 TECNOLÓGICO DE MONTERREY CAMPUS HIDALGO vs CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA",
-				"started": 1,
+				"started": 0,
 				"location": "ARENA BORREGOS \"AZUL\" HIDALGO",
 				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
 			},
 			{
 				"matchId": "c7d8c55f-d1d1-468e-8c75-be57d7d2af66",
@@ -1986,30 +1986,6 @@
 				"visitingTeamWR": "7-3"
 			},
 			{
-				"matchId": "163d1bc1-a5fd-435a-adb2-e109efa37ab1",
-				"matchNumber": 82,
-				"localTeam": "UPAEP",
-				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
-				"visitingTeam": "MODELO DE MÉRIDA",
-				"visitingTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
-				"date": "20/11/2026 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 82 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs UNIVERSIDAD MODELO DE MÉRIDA",
-				"started": 1,
-				"location": "GIMNASIO \"EL NIDO\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(9)",
-				"localTeamWR": "6-6",
-				"visitingTeamPosition": "(8)",
-				"visitingTeamWR": "5-4"
-			},
-			{
 				"matchId": "c9b183f6-9b1d-43cc-b05e-ca6db2d54042",
 				"matchNumber": 84,
 				"localTeam": "TEC TOLUCA",
@@ -2032,6 +2008,30 @@
 				"localTeamWR": "7-3",
 				"visitingTeamPosition": "(12)",
 				"visitingTeamWR": "3-7"
+			},
+			{
+				"matchId": "163d1bc1-a5fd-435a-adb2-e109efa37ab1",
+				"matchNumber": 82,
+				"localTeam": "UPAEP",
+				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
+				"visitingTeam": "MODELO DE MÉRIDA",
+				"visitingTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
+				"date": "20/11/2026 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 82 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs UNIVERSIDAD MODELO DE MÉRIDA",
+				"started": 1,
+				"location": "GIMNASIO \"EL NIDO\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(9)",
+				"localTeamWR": "6-6",
+				"visitingTeamPosition": "(8)",
+				"visitingTeamWR": "5-4"
 			},
 			{
 				"matchId": "70291bc7-12df-411e-8417-07f8443d79ea",
@@ -2079,7 +2079,7 @@
 				"localTeamPosition": "(1)",
 				"localTeamWR": "9-1",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
 			},
 			{
 				"matchId": "8aa895c5-593a-4c36-ba2a-497a25078594",
@@ -2103,7 +2103,7 @@
 				"localTeamPosition": "(10)",
 				"localTeamWR": "5-5",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
 			},
 			{
 				"matchId": "4abcd2df-6bc6-456f-8f16-cc805a2d24f0",
@@ -2197,7 +2197,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(14)",
 				"visitingTeamWR": "1-10"
 			}
@@ -2206,30 +2206,6 @@
 	},
 	{
 		"data": [
-			{
-				"matchId": "4e721802-bbbe-49d4-aef2-0ab7df7de417",
-				"matchNumber": 94,
-				"localTeam": "CETYS TIJUANA",
-				"localTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
-				"visitingTeam": "UDEM",
-				"visitingTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
-				"date": "27/11/2026 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 94 CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA vs UNIVERSIDAD DE MONTERREY",
-				"started": 1,
-				"location": "GIMNASIO \"RODRIGO VALLE HERNÁNDEZ\" TIJUANA",
-				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "3-7"
-			},
 			{
 				"matchId": "988c1247-5cd3-4772-b7e6-9d4b28d1250b",
 				"matchNumber": 90,
@@ -2253,6 +2229,30 @@
 				"localTeamWR": "7-3",
 				"visitingTeamPosition": "(3)",
 				"visitingTeamWR": "8-3"
+			},
+			{
+				"matchId": "4e721802-bbbe-49d4-aef2-0ab7df7de417",
+				"matchNumber": 94,
+				"localTeam": "CETYS TIJUANA",
+				"localTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
+				"visitingTeam": "UDEM",
+				"visitingTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
+				"date": "27/11/2026 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 94 CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA vs UNIVERSIDAD DE MONTERREY",
+				"started": 1,
+				"location": "GIMNASIO \"RODRIGO VALLE HERNÁNDEZ\" TIJUANA",
+				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(2)",
+				"localTeamWR": "8-1",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "3-7"
 			},
 			{
 				"matchId": "270726a8-4322-4c8a-8ddc-0e7f48ccbed9",
@@ -2473,7 +2473,7 @@
 				"localTeamPosition": "(7)",
 				"localTeamWR": "7-5",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
+				"visitingTeamWR": "1-10"
 			},
 			{
 				"matchId": "ae7c3332-22ee-461f-bea5-6fba7c25bc72",
@@ -2543,7 +2543,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
+				"localTeamWR": "8-1",
 				"visitingTeamPosition": "(6)",
 				"visitingTeamWR": "7-3"
 			}
@@ -2577,30 +2577,6 @@
 				"visitingTeamWR": "4-8"
 			},
 			{
-				"matchId": "e298eee7-59e3-4de9-8563-eadd67cdade3",
-				"matchNumber": 117,
-				"localTeam": "CETYS TIJUANA",
-				"localTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
-				"visitingTeam": "UPAEP",
-				"visitingTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
-				"date": "05/02/2027 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 117 CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA vs UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA",
-				"started": 1,
-				"location": "GIMNASIO \"RODRIGO VALLE HERNÁNDEZ\" TIJUANA",
-				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
-				"visitingTeamPosition": "(9)",
-				"visitingTeamWR": "6-6"
-			},
-			{
 				"matchId": "ce3e2241-6be4-4a12-899b-39a92813fc9d",
 				"matchNumber": 109,
 				"localTeam": "TEC TOLUCA",
@@ -2623,6 +2599,30 @@
 				"localTeamWR": "7-3",
 				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "5-5"
+			},
+			{
+				"matchId": "e298eee7-59e3-4de9-8563-eadd67cdade3",
+				"matchNumber": 117,
+				"localTeam": "CETYS TIJUANA",
+				"localTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
+				"visitingTeam": "UPAEP",
+				"visitingTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
+				"date": "05/02/2027 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 117 CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA vs UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA",
+				"started": 1,
+				"location": "GIMNASIO \"RODRIGO VALLE HERNÁNDEZ\" TIJUANA",
+				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(2)",
+				"localTeamWR": "8-1",
+				"visitingTeamPosition": "(9)",
+				"visitingTeamWR": "6-6"
 			},
 			{
 				"matchId": "40d7e94a-bafe-4a0e-bdb4-37f330975ffc",
@@ -2694,7 +2694,7 @@
 				"localTeamPosition": "(3)",
 				"localTeamWR": "8-3",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
+				"visitingTeamWR": "1-10"
 			},
 			{
 				"matchId": "d1370965-9c29-4cd2-8e9d-eabd962aa590",
@@ -2814,7 +2814,7 @@
 				"localTeamPosition": "(4)",
 				"localTeamWR": "8-3",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
+				"visitingTeamWR": "1-10"
 			},
 			{
 				"matchId": "1af4e813-4865-4e1e-abf8-7606e5f93742",
@@ -2915,7 +2915,7 @@
 				"localTeamPosition": "(8)",
 				"localTeamWR": "5-4",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
+				"visitingTeamWR": "1-10"
 			},
 			{
 				"matchId": "c36dd809-ce7b-4fc5-b7c3-098baa0a8952",
@@ -3158,7 +3158,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(12)",
 				"visitingTeamWR": "3-7"
 			},
@@ -3331,7 +3331,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
+				"localTeamWR": "8-1",
 				"visitingTeamPosition": "(11)",
 				"visitingTeamWR": "4-8"
 			},
@@ -3357,37 +3357,13 @@
 				"localTeamPosition": "(8)",
 				"localTeamWR": "5-4",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
 			}
 		],
 		"id": "41f38bdb-e3fb-4a06-8cb6-dec954039a70"
 	},
 	{
 		"data": [
-			{
-				"matchId": "ded6feac-a48c-4aaf-9f47-0fd55d770b9d",
-				"matchNumber": 140,
-				"localTeam": "TEC HIDALGO",
-				"localTeamId": "cabd406f-5a61-4453-8a54-640766b87506",
-				"visitingTeam": "TEC MONTERREY",
-				"visitingTeamId": "9ca7c63c-1626-4848-8ef2-d7c650af99b8",
-				"date": "05/03/2027 16:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 140 TECNOLÓGICO DE MONTERREY CAMPUS HIDALGO vs TECNOLÓGICO DE MONTERREY CAMPUS MONTERREY",
-				"started": 1,
-				"location": "ARENA BORREGOS \"AZUL\" HIDALGO",
-				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
-				"visitingTeamPosition": "(1)",
-				"visitingTeamWR": "9-1"
-			},
 			{
 				"matchId": "d527b07d-a021-481b-91f6-6f7c48a91d00",
 				"matchNumber": 142,
@@ -3410,7 +3386,31 @@
 				"localTeamPosition": "(4)",
 				"localTeamWR": "8-3",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
+			},
+			{
+				"matchId": "ded6feac-a48c-4aaf-9f47-0fd55d770b9d",
+				"matchNumber": 140,
+				"localTeam": "TEC HIDALGO",
+				"localTeamId": "cabd406f-5a61-4453-8a54-640766b87506",
+				"visitingTeam": "TEC MONTERREY",
+				"visitingTeamId": "9ca7c63c-1626-4848-8ef2-d7c650af99b8",
+				"date": "05/03/2027 16:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 140 TECNOLÓGICO DE MONTERREY CAMPUS HIDALGO vs TECNOLÓGICO DE MONTERREY CAMPUS MONTERREY",
+				"started": 1,
+				"location": "ARENA BORREGOS \"AZUL\" HIDALGO",
+				"locationUrl": "http://maps.google.com/maps?daddr=20.0952289000,-98.7696671000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(13)",
+				"localTeamWR": "1-10",
+				"visitingTeamPosition": "(1)",
+				"visitingTeamWR": "9-1"
 			},
 			{
 				"matchId": "be9bb897-916b-414e-8271-a7a7f1665101",
@@ -3437,30 +3437,6 @@
 				"visitingTeamWR": "5-5"
 			},
 			{
-				"matchId": "c33c1bdd-b342-4874-9ef0-ee580cb75e50",
-				"matchNumber": 141,
-				"localTeam": "TEC CEM",
-				"localTeamId": "bea107fe-6c11-4cc0-918f-6b8c1de567a5",
-				"visitingTeam": "TEC GUADALAJARA",
-				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
-				"date": "05/03/2027 19:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 141 TECNOLÓGICO DE MONTERREY CAMPUS ESTADO DE MÉXICO vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
-				"started": 1,
-				"location": "ARENA BOREGOS CEM",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(3)",
-				"localTeamWR": "8-3",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "7-3"
-			},
-			{
 				"matchId": "7174a749-ea60-4b63-b8e8-025c48055035",
 				"matchNumber": 144,
 				"localTeam": "UDEM",
@@ -3485,19 +3461,19 @@
 				"visitingTeamWR": "4-8"
 			},
 			{
-				"matchId": "8b472f04-22ab-4d36-b01d-472ec5a6bb6e",
-				"matchNumber": 147,
+				"matchId": "c33c1bdd-b342-4874-9ef0-ee580cb75e50",
+				"matchNumber": 141,
 				"localTeam": "TEC CEM",
 				"localTeamId": "bea107fe-6c11-4cc0-918f-6b8c1de567a5",
-				"visitingTeam": "CETYS TIJUANA",
-				"visitingTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
-				"date": "06/03/2027 13:00",
+				"visitingTeam": "TEC GUADALAJARA",
+				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
+				"date": "05/03/2027 19:00",
 				"startTime": "-",
 				"endTime": "-",
 				"localTeamPoints": "-",
 				"visitingTeamPoints": "-",
 				"period": "-",
-				"name": "PARTIDO 147 TECNOLÓGICO DE MONTERREY CAMPUS ESTADO DE MÉXICO vs CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA",
+				"name": "PARTIDO 141 TECNOLÓGICO DE MONTERREY CAMPUS ESTADO DE MÉXICO vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
 				"started": 1,
 				"location": "ARENA BOREGOS CEM",
 				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
@@ -3505,8 +3481,8 @@
 				"url": "",
 				"localTeamPosition": "(3)",
 				"localTeamWR": "8-3",
-				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "7-3"
 			},
 			{
 				"matchId": "7a87a1d1-09e0-4a7b-a55f-f6a680d22029",
@@ -3528,9 +3504,33 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "5-5"
+			},
+			{
+				"matchId": "8b472f04-22ab-4d36-b01d-472ec5a6bb6e",
+				"matchNumber": 147,
+				"localTeam": "TEC CEM",
+				"localTeamId": "bea107fe-6c11-4cc0-918f-6b8c1de567a5",
+				"visitingTeam": "CETYS TIJUANA",
+				"visitingTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
+				"date": "06/03/2027 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 147 TECNOLÓGICO DE MONTERREY CAMPUS ESTADO DE MÉXICO vs CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA",
+				"started": 1,
+				"location": "ARENA BOREGOS CEM",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.5932625000,-99.2291557000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(3)",
+				"localTeamWR": "8-3",
+				"visitingTeamPosition": "(2)",
+				"visitingTeamWR": "8-1"
 			},
 			{
 				"matchId": "fd9e274c-999f-4260-97e4-f5069de53b60",
@@ -3677,33 +3677,9 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
+				"localTeamWR": "8-1",
 				"visitingTeamPosition": "(8)",
 				"visitingTeamWR": "5-4"
-			},
-			{
-				"matchId": "e3d5d793-3030-4248-baeb-b781cf3b03bc",
-				"matchNumber": 152,
-				"localTeam": "UPAEP",
-				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
-				"visitingTeam": "ANÁHUAC NORTE",
-				"visitingTeamId": "1fd01df7-224f-49f1-bede-d7493262cc8f",
-				"date": "12/03/2027 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 152 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs UNIVERSIDAD ANÁHUAC MÉXICO NORTE",
-				"started": 1,
-				"location": "GIMNASIO \"EL NIDO\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(9)",
-				"localTeamWR": "6-6",
-				"visitingTeamPosition": "(4)",
-				"visitingTeamWR": "8-3"
 			},
 			{
 				"matchId": "f0357be5-6188-40d4-b0b9-82dbd444c11f",
@@ -3730,6 +3706,30 @@
 				"visitingTeamWR": "8-3"
 			},
 			{
+				"matchId": "e3d5d793-3030-4248-baeb-b781cf3b03bc",
+				"matchNumber": 152,
+				"localTeam": "UPAEP",
+				"localTeamId": "ffb62e29-86a4-4870-96f4-6c2de75bf143",
+				"visitingTeam": "ANÁHUAC NORTE",
+				"visitingTeamId": "1fd01df7-224f-49f1-bede-d7493262cc8f",
+				"date": "12/03/2027 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 152 UNIVERSIDAD POPULAR AUTÓNOMA DEL ESTADO DE PUEBLA vs UNIVERSIDAD ANÁHUAC MÉXICO NORTE",
+				"started": 1,
+				"location": "GIMNASIO \"EL NIDO\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.0479853000,-98.2161428000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(9)",
+				"localTeamWR": "6-6",
+				"visitingTeamPosition": "(4)",
+				"visitingTeamWR": "8-3"
+			},
+			{
 				"matchId": "ef62fc44-49e3-4da4-b88a-de0be35c5a29",
 				"matchNumber": 151,
 				"localTeam": "TEC HIDALGO",
@@ -3749,7 +3749,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(5)",
 				"visitingTeamWR": "7-3"
 			},
@@ -3869,7 +3869,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-10"
 			},
@@ -3927,30 +3927,6 @@
 				"visitingTeamWR": "7-5"
 			},
 			{
-				"matchId": "58e653d8-a0ca-4b7f-a3cf-d4c86c8c5327",
-				"matchNumber": 167,
-				"localTeam": "TEC TOLUCA",
-				"localTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
-				"visitingTeam": "TEC GUADALAJARA",
-				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
-				"date": "19/03/2027 13:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 167 TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
-				"started": 1,
-				"location": "ARENA BORREGOS \"CUBO DE HIELO\" TOLUCA",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(5)",
-				"localTeamWR": "7-3",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "7-3"
-			},
-			{
 				"matchId": "089461ce-80c7-4ad2-b6a9-669b49caf864",
 				"matchNumber": 162,
 				"localTeam": "INTERAMERICANA",
@@ -3996,7 +3972,31 @@
 				"localTeamPosition": "(9)",
 				"localTeamWR": "6-6",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
+				"visitingTeamWR": "1-10"
+			},
+			{
+				"matchId": "58e653d8-a0ca-4b7f-a3cf-d4c86c8c5327",
+				"matchNumber": 167,
+				"localTeam": "TEC TOLUCA",
+				"localTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
+				"visitingTeam": "TEC GUADALAJARA",
+				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
+				"date": "19/03/2027 13:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 167 TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
+				"started": 1,
+				"location": "ARENA BORREGOS \"CUBO DE HIELO\" TOLUCA",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(5)",
+				"localTeamWR": "7-3",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "7-3"
 			},
 			{
 				"matchId": "ecb1deb9-5f62-4ac2-8468-d07f410afff2",
@@ -4044,7 +4044,7 @@
 				"localTeamPosition": "(15)",
 				"localTeamWR": "0-10",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
 			},
 			{
 				"matchId": "5d494cca-9211-4297-98db-3d3a963ebd59",
@@ -4092,31 +4092,7 @@
 				"localTeamPosition": "(11)",
 				"localTeamWR": "4-8",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
-			},
-			{
-				"matchId": "cdb0ce66-0676-4788-9fda-d6f262f02490",
-				"matchNumber": 172,
-				"localTeam": "ANÁHUAC SUR",
-				"localTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
-				"visitingTeam": "TEC GUADALAJARA",
-				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
-				"date": "20/03/2027 12:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 172 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
-				"started": 1,
-				"location": "-",
-				"locationUrl": "-",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(15)",
-				"localTeamWR": "0-10",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "7-3"
+				"visitingTeamWR": "1-10"
 			},
 			{
 				"matchId": "a419f2e0-31a7-4429-a930-7826a55b67b8",
@@ -4143,6 +4119,30 @@
 				"visitingTeamWR": "1-10"
 			},
 			{
+				"matchId": "cdb0ce66-0676-4788-9fda-d6f262f02490",
+				"matchNumber": 172,
+				"localTeam": "ANÁHUAC SUR",
+				"localTeamId": "a643f690-adb5-4691-ac34-5d0aae92a199",
+				"visitingTeam": "TEC GUADALAJARA",
+				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
+				"date": "20/03/2027 12:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 172 UNIVERSIDAD ANÁHUAC MÉXICO SUR vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
+				"started": 1,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(15)",
+				"localTeamWR": "0-10",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "7-3"
+			},
+			{
 				"matchId": "95276f45-28ae-4d77-a270-a77e1770b732",
 				"matchNumber": 171,
 				"localTeam": "TEC TOLUCA",
@@ -4164,7 +4164,7 @@
 				"localTeamPosition": "(5)",
 				"localTeamWR": "7-3",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
 			},
 			{
 				"matchId": "8ee7cf13-a101-4ad4-a609-5582914cbcc3",
@@ -4220,28 +4220,28 @@
 				"visitingTeamWR": "7-5"
 			},
 			{
-				"matchId": "a4a5c025-579e-449b-a516-bae6ffc9f27f",
-				"matchNumber": 178,
-				"localTeam": "TEC TOLUCA",
-				"localTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
-				"visitingTeam": "INTERAMERICANA",
-				"visitingTeamId": "9ea22708-a1af-4f68-97e6-958985ca7803",
+				"matchId": "631af0f9-fbf3-40e4-8368-a9135eec813b",
+				"matchNumber": 173,
+				"localTeam": "CETYS TIJUANA",
+				"localTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
+				"visitingTeam": "TEC HIDALGO",
+				"visitingTeamId": "cabd406f-5a61-4453-8a54-640766b87506",
 				"date": "02/04/2027 13:00",
 				"startTime": "-",
 				"endTime": "-",
 				"localTeamPoints": "-",
 				"visitingTeamPoints": "-",
 				"period": "-",
-				"name": "PARTIDO 178 TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA vs UNIVERSIDAD INTERAMERICANA DE PUEBLA",
+				"name": "PARTIDO 173 CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA vs TECNOLÓGICO DE MONTERREY CAMPUS HIDALGO",
 				"started": 1,
-				"location": "ARENA BORREGOS \"CUBO DE HIELO\" TOLUCA",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
+				"location": "GIMNASIO \"RODRIGO VALLE HERNÁNDEZ\" TIJUANA",
+				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(5)",
-				"localTeamWR": "7-3",
-				"visitingTeamPosition": "(11)",
-				"visitingTeamWR": "4-8"
+				"localTeamPosition": "(2)",
+				"localTeamWR": "8-1",
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "1-10"
 			},
 			{
 				"matchId": "615275e7-3a62-4942-88bc-9ca7707a0d4e",
@@ -4268,28 +4268,28 @@
 				"visitingTeamWR": "3-7"
 			},
 			{
-				"matchId": "631af0f9-fbf3-40e4-8368-a9135eec813b",
-				"matchNumber": 173,
-				"localTeam": "CETYS TIJUANA",
-				"localTeamId": "b1dd64e2-580c-4f27-bff9-fb3cb1394aa7",
-				"visitingTeam": "TEC HIDALGO",
-				"visitingTeamId": "cabd406f-5a61-4453-8a54-640766b87506",
+				"matchId": "a4a5c025-579e-449b-a516-bae6ffc9f27f",
+				"matchNumber": 178,
+				"localTeam": "TEC TOLUCA",
+				"localTeamId": "3c0f83ea-1cc1-4f99-b3c4-950019d1ecff",
+				"visitingTeam": "INTERAMERICANA",
+				"visitingTeamId": "9ea22708-a1af-4f68-97e6-958985ca7803",
 				"date": "02/04/2027 13:00",
 				"startTime": "-",
 				"endTime": "-",
 				"localTeamPoints": "-",
 				"visitingTeamPoints": "-",
 				"period": "-",
-				"name": "PARTIDO 173 CENTRO DE ENSEÑANZA TÉCNICA Y SUPERIOR TIJUANA vs TECNOLÓGICO DE MONTERREY CAMPUS HIDALGO",
+				"name": "PARTIDO 178 TECNOLÓGICO DE MONTERREY CAMPUS TOLUCA vs UNIVERSIDAD INTERAMERICANA DE PUEBLA",
 				"started": 1,
-				"location": "GIMNASIO \"RODRIGO VALLE HERNÁNDEZ\" TIJUANA",
-				"locationUrl": "http://maps.google.com/maps?daddr=32.5069020000,-116.9250600000",
+				"location": "ARENA BORREGOS \"CUBO DE HIELO\" TOLUCA",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.2671251000,-99.7057513000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
+				"localTeamPosition": "(5)",
+				"localTeamWR": "7-3",
+				"visitingTeamPosition": "(11)",
+				"visitingTeamWR": "4-8"
 			},
 			{
 				"matchId": "af0ba6ec-6c0a-487e-b9cd-9c6b56848b32",
@@ -4361,31 +4361,7 @@
 				"localTeamPosition": "(6)",
 				"localTeamWR": "7-3",
 				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
-			},
-			{
-				"matchId": "1af5d361-83ab-4e78-b1db-62ab20943374",
-				"matchNumber": 182,
-				"localTeam": "TEC MONTERREY",
-				"localTeamId": "9ca7c63c-1626-4848-8ef2-d7c650af99b8",
-				"visitingTeam": "UDEM",
-				"visitingTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
-				"date": "03/04/2027 12:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 182 TECNOLÓGICO DE MONTERREY CAMPUS MONTERREY vs UNIVERSIDAD DE MONTERREY",
-				"started": 1,
-				"location": "GIMNASIO WELLNESS CENTER",
-				"locationUrl": "http://maps.google.com/maps?daddr=25.6531123000,-100.2878091000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(1)",
-				"localTeamWR": "9-1",
-				"visitingTeamPosition": "(12)",
-				"visitingTeamWR": "3-7"
+				"visitingTeamWR": "1-10"
 			},
 			{
 				"matchId": "61e4aae6-9d51-4576-9f4f-70bf28bae2cb",
@@ -4410,6 +4386,30 @@
 				"localTeamWR": "0-10",
 				"visitingTeamPosition": "(11)",
 				"visitingTeamWR": "4-8"
+			},
+			{
+				"matchId": "1af5d361-83ab-4e78-b1db-62ab20943374",
+				"matchNumber": 182,
+				"localTeam": "TEC MONTERREY",
+				"localTeamId": "9ca7c63c-1626-4848-8ef2-d7c650af99b8",
+				"visitingTeam": "UDEM",
+				"visitingTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
+				"date": "03/04/2027 12:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 182 TECNOLÓGICO DE MONTERREY CAMPUS MONTERREY vs UNIVERSIDAD DE MONTERREY",
+				"started": 1,
+				"location": "GIMNASIO WELLNESS CENTER",
+				"locationUrl": "http://maps.google.com/maps?daddr=25.6531123000,-100.2878091000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(1)",
+				"localTeamWR": "9-1",
+				"visitingTeamPosition": "(12)",
+				"visitingTeamWR": "3-7"
 			},
 			{
 				"matchId": "5cf16c3c-a91f-41a0-b27e-174d0c51639b",
@@ -4455,7 +4455,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
+				"localTeamWR": "8-1",
 				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "7-5"
 			},
@@ -4532,7 +4532,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
+				"localTeamWR": "8-1",
 				"visitingTeamPosition": "(10)",
 				"visitingTeamWR": "5-5"
 			},
@@ -4561,6 +4561,30 @@
 				"visitingTeamWR": "8-3"
 			},
 			{
+				"matchId": "9539f69b-a34a-4b9b-9900-f10001118561",
+				"matchNumber": 185,
+				"localTeam": "UVAQ",
+				"localTeamId": "53456a3c-f31c-44e7-9437-7fb8e8a68b78",
+				"visitingTeam": "TEC HIDALGO",
+				"visitingTeamId": "cabd406f-5a61-4453-8a54-640766b87506",
+				"date": "09/04/2027 18:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 185 UNIVERSIDAD VASCO DE QUIROGA vs TECNOLÓGICO DE MONTERREY CAMPUS HIDALGO",
+				"started": 1,
+				"location": "AUDITORIO UNIVERSITARIO \"ING. CÉSAR NAVA MIRANDA\"",
+				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(14)",
+				"localTeamWR": "1-10",
+				"visitingTeamPosition": "(13)",
+				"visitingTeamWR": "1-10"
+			},
+			{
 				"matchId": "1d5f82ea-dff1-47d6-ad83-92e361151360",
 				"matchNumber": 188,
 				"localTeam": "MODELO DE MÉRIDA",
@@ -4583,30 +4607,6 @@
 				"localTeamWR": "5-4",
 				"visitingTeamPosition": "(9)",
 				"visitingTeamWR": "6-6"
-			},
-			{
-				"matchId": "9539f69b-a34a-4b9b-9900-f10001118561",
-				"matchNumber": 185,
-				"localTeam": "UVAQ",
-				"localTeamId": "53456a3c-f31c-44e7-9437-7fb8e8a68b78",
-				"visitingTeam": "TEC HIDALGO",
-				"visitingTeamId": "cabd406f-5a61-4453-8a54-640766b87506",
-				"date": "09/04/2027 18:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 185 UNIVERSIDAD VASCO DE QUIROGA vs TECNOLÓGICO DE MONTERREY CAMPUS HIDALGO",
-				"started": 1,
-				"location": "AUDITORIO UNIVERSITARIO \"ING. CÉSAR NAVA MIRANDA\"",
-				"locationUrl": "http://maps.google.com/maps?daddr=19.6754924000,-101.1796440000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(14)",
-				"localTeamWR": "1-10",
-				"visitingTeamPosition": "(13)",
-				"visitingTeamWR": "1-9"
 			},
 			{
 				"matchId": "e411013a-605e-415a-917d-2aa9810d612c",
@@ -4700,7 +4700,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(2)",
-				"localTeamWR": "7-1",
+				"localTeamWR": "8-1",
 				"visitingTeamPosition": "(1)",
 				"visitingTeamWR": "9-1"
 			},
@@ -4782,30 +4782,6 @@
 				"visitingTeamWR": "1-10"
 			},
 			{
-				"matchId": "97802b16-ae37-4672-983a-67da0783fab4",
-				"matchNumber": 197,
-				"localTeam": "MODELO DE MÉRIDA",
-				"localTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
-				"visitingTeam": "UANL",
-				"visitingTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
-				"date": "16/04/2027 18:00",
-				"startTime": "-",
-				"endTime": "-",
-				"localTeamPoints": "-",
-				"visitingTeamPoints": "-",
-				"period": "-",
-				"name": "PARTIDO 197 UNIVERSIDAD MODELO DE MÉRIDA vs UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN",
-				"started": 1,
-				"location": "UNIDAD DEPORTIVA FRANCISCO DE MONTEJO",
-				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
-				"live": 0,
-				"url": "",
-				"localTeamPosition": "(8)",
-				"localTeamWR": "5-4",
-				"visitingTeamPosition": "(10)",
-				"visitingTeamWR": "5-5"
-			},
-			{
 				"matchId": "77547a5f-8b05-46c1-80b5-e68020cef74d",
 				"matchNumber": 196,
 				"localTeam": "ANÁHUAC NORTE",
@@ -4830,28 +4806,28 @@
 				"visitingTeamWR": "7-3"
 			},
 			{
-				"matchId": "8dc2e366-00eb-43e3-bb15-eb0fc1752eda",
-				"matchNumber": 199,
-				"localTeam": "UDEM",
-				"localTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
-				"visitingTeam": "TEC GUADALAJARA",
-				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
-				"date": "16/04/2027 19:00",
+				"matchId": "97802b16-ae37-4672-983a-67da0783fab4",
+				"matchNumber": 197,
+				"localTeam": "MODELO DE MÉRIDA",
+				"localTeamId": "ad606dcd-488d-4d6e-9c0a-3537898aba87",
+				"visitingTeam": "UANL",
+				"visitingTeamId": "28dfdbf8-1c78-4e39-8ff4-06f7b4c1d2d9",
+				"date": "16/04/2027 18:00",
 				"startTime": "-",
 				"endTime": "-",
 				"localTeamPoints": "-",
 				"visitingTeamPoints": "-",
 				"period": "-",
-				"name": "PARTIDO 199 UNIVERSIDAD DE MONTERREY vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
+				"name": "PARTIDO 197 UNIVERSIDAD MODELO DE MÉRIDA vs UNIVERSIDAD AUTÓNOMA DE NUEVO LEÓN",
 				"started": 1,
-				"location": "-",
-				"locationUrl": "-",
+				"location": "UNIDAD DEPORTIVA FRANCISCO DE MONTEJO",
+				"locationUrl": "http://maps.google.com/maps?daddr=21.0442326000,-89.6358203000",
 				"live": 0,
 				"url": "",
-				"localTeamPosition": "(12)",
-				"localTeamWR": "3-7",
-				"visitingTeamPosition": "(6)",
-				"visitingTeamWR": "7-3"
+				"localTeamPosition": "(8)",
+				"localTeamWR": "5-4",
+				"visitingTeamPosition": "(10)",
+				"visitingTeamWR": "5-5"
 			},
 			{
 				"matchId": "c4e1b2bd-159f-4201-917f-1f5738e379a1",
@@ -4876,6 +4852,30 @@
 				"localTeamWR": "8-3",
 				"visitingTeamPosition": "(15)",
 				"visitingTeamWR": "0-10"
+			},
+			{
+				"matchId": "8dc2e366-00eb-43e3-bb15-eb0fc1752eda",
+				"matchNumber": 199,
+				"localTeam": "UDEM",
+				"localTeamId": "17d80011-c03f-41e7-a10a-6d491f2f6b9c",
+				"visitingTeam": "TEC GUADALAJARA",
+				"visitingTeamId": "b0f81ef1-5e11-4d0d-905c-c5e8438f81c2",
+				"date": "16/04/2027 19:00",
+				"startTime": "-",
+				"endTime": "-",
+				"localTeamPoints": "-",
+				"visitingTeamPoints": "-",
+				"period": "-",
+				"name": "PARTIDO 199 UNIVERSIDAD DE MONTERREY vs TECNOLÓGICO DE MONTERREY CAMPUS GUADALAJARA",
+				"started": 1,
+				"location": "-",
+				"locationUrl": "-",
+				"live": 0,
+				"url": "",
+				"localTeamPosition": "(12)",
+				"localTeamWR": "3-7",
+				"visitingTeamPosition": "(6)",
+				"visitingTeamWR": "7-3"
 			},
 			{
 				"matchId": "9a4c2ca0-f6bd-44d6-bddc-23ba73775900",
@@ -4995,7 +4995,7 @@
 				"localTeamPosition": "(12)",
 				"localTeamWR": "3-7",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
 			}
 		],
 		"id": "7cbdc429-ed6e-44f9-838d-fa2f85bf71e6"
@@ -5072,7 +5072,7 @@
 				"localTeamPosition": "(14)",
 				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
 			},
 			{
 				"matchId": "0ea34e8b-7e9c-4624-b6df-7e6e5765e96d",
@@ -5096,7 +5096,7 @@
 				"localTeamPosition": "(6)",
 				"localTeamWR": "7-3",
 				"visitingTeamPosition": "(2)",
-				"visitingTeamWR": "7-1"
+				"visitingTeamWR": "8-1"
 			},
 			{
 				"matchId": "92f0f692-e23d-43bd-9ec7-d677b3f558f9",
@@ -5142,7 +5142,7 @@
 				"live": 0,
 				"url": "",
 				"localTeamPosition": "(13)",
-				"localTeamWR": "1-9",
+				"localTeamWR": "1-10",
 				"visitingTeamPosition": "(7)",
 				"visitingTeamWR": "7-5"
 			}
